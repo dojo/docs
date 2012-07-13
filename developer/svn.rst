@@ -219,6 +219,7 @@ Add the following entries below [auto-props]:
     *.phps = svn:eol-style=native
     *.inc = svn:eol-style=native
     *.sh = svn:eol-style=native
+    *.less = svn:eol-style=native
     Makefile = svn:eol-style=native
     README = svn:eol-style=native
     CHANGELOG = svn:eol-style=native
