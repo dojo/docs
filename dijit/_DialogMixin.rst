@@ -21,5 +21,3 @@ See also
 * :ref:`dijit/Dialog <dijit/Dialog>`
 * :ref:`dijit/TooltipDialog <dijit/TooltipDialog>`
 
-.. api-inline :: dijit._DialogMixin
-

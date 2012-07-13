@@ -9,8 +9,6 @@ The FeedViewer actually defines several sample dojox.atom widgets that show how 
 .. contents ::
   :depth: 2
 
-.. api-inline :: dojox.atom.widget.FeedViewer
-
 ======================
 Example - in isolation
 ======================

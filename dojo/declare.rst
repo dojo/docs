@@ -844,8 +844,6 @@ Every instance created by ``dojo.declare``'d class has a special property called
 
 Every method mixed in by ``dojo.declare`` or :ref:`dojo.safeMixin <dojo/safeMixin>` is annotated: a special property called ``nom`` is added. It contains a name of the method in question and used by `inherited()`_ and `getInherited()`_ to deduce the name of a superclass method. See :ref:`dojo.safeMixin <dojo/safeMixin>` for more details.
 
-.. api-inline :: dojo.declare
-
 See Also
 ========
 

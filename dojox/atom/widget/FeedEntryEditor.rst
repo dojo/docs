@@ -9,8 +9,6 @@ The FeedEntryEditor sample extends the FeedEntryViewer sample to show how to RES
 .. contents ::
   :depth: 2
 
-.. api-inline :: dojox.atom.widget.FeedEntryEditor
-
 ============================
 Example with FeedEntryEditor
 ============================

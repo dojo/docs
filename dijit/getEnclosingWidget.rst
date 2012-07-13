@@ -7,8 +7,6 @@ dijit.getEnclosingWidget
 .. contents ::
     :depth: 2
     
-.. api-inline :: dijit.getEnclosingWidget
-
 Example
 =======
 

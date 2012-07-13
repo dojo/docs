@@ -44,6 +44,3 @@ Usage
             }
         });
     });
-
-.. api-link :: dijit.Destroyable
-

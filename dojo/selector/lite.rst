@@ -21,5 +21,3 @@ Examples
 See also
 ========
 
-.. api-link :: dojo.selector.lite
-

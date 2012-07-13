@@ -74,8 +74,6 @@ Creating subclasses
 
 TODO
 
-.. api-inline :: dojo.rpc.RpcService
-
 See also
 ========
 

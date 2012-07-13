@@ -7,8 +7,6 @@ dojox.widget.Wizard
 .. contents ::
   :depth: 2
 
-.. api-inline :: dojox.widget.Wizard
-
 .. dojox.widget.Wizard creates a wizard interface with customizable Next, Previous, and Done buttons.
 
 The Wizard widget also contains and defines dojox.widget.WizardPane, an extension of dijit.layout.ContentPane with hooks for the button controls.

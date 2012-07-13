@@ -42,5 +42,3 @@ There is also possible to unregister adapter from registry however there are per
       reg.unregister("handleArr");
   });
 
-
-.. api-inline :: dojo.AdapterRegistry

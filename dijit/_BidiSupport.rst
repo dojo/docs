@@ -56,5 +56,3 @@ Declarative example
 See also
 ========
 
-.. api-link :: dojo.
-

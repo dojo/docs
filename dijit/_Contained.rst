@@ -19,8 +19,6 @@ regardless of whether or not they implement dijit/_Contained.   Thus it's usuall
 extend this class.
 
 
-.. api-link :: dijit._Contained
-
 
 See also
 ========

@@ -10,5 +10,3 @@ Adds several experimental methods to the :ref:`dojox/html <dojox/html>` namespac
 
 .. contents ::
     :depth: 2
-    
-.. api-inline :: dojox.html.styles

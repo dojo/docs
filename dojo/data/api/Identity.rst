@@ -133,8 +133,3 @@ Obtaining the list of attributes that comprise the identity of an item
 
   // Invoke the lookup. This is an async call as it may have to call back to a server to get data.
   itemStore.fetchItemByIdentity({identity: "sv", onItem: gotItem, onError: failed});
-
-API Info
-========
-
-.. api-link :: dojo.data.api.Identity

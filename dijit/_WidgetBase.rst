@@ -151,8 +151,6 @@ get()/set() make use of custom setters/getters, which can map a widget attribute
 DOMNode attribute, or perform any arbitrary code.
 For details, see the :ref:`Writing Widgets QuickStart <quickstart/writingWidgets>` guide.
 
-.. api-inline :: dijit._WidgetBase
-
 See also
 ========
 

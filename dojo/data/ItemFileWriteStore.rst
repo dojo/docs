@@ -591,8 +591,3 @@ is displayed in an alert.
       .dojoxGrid table {
           margin: 0;
       }
-
-API Info
-========
-
-.. api-link :: dojo.data.ItemFileWriteStore

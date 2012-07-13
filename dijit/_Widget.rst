@@ -23,8 +23,6 @@ In addition, you may want to require these modules:
   * :ref:`dojo.uacss <dojo/uacss>` - for widgets that have browser specific CSS
   * :ref:`dijit.hccss <dijit/hccss>` - for widgets that have high-contrast mode specific CSS or layout
 
-.. api-inline :: dijit._Widget
-
 See Also
 ========
 * :ref:`dijit._WidgetBase <dijit/_WidgetBase>`
