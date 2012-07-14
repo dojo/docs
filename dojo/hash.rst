@@ -14,7 +14,7 @@ dojo/hash
 Introduction
 ============
 
-``dojo/hash`` is designed to make it easier to manage the browser history (hash) as well a provide cross-browser ways to support dynamics backwards and forwards navigation and *bookmarkability*.  This allows for creating of dynamic web applications that can be navigable both in a non-linear fashion, but allows for you to provide your users with a "URL" to be able to return to a particular point in the application without actually doing a full page reload.
+``dojo/hash`` is designed to make it easier to manage the browser history (hash) as well a provide cross-browser ways to support dynamic backwards and forwards navigation and *bookmarkability*.  This allows for creating of dynamic web applications that can be navigable both in a non-linear fashion, but allows for you to provide your users with a "URL" to be able to return to a particular point in the application without actually doing a full page reload.
 
 HTML5 defines an ``onhashchange`` event that fires when the value of the hash segment of the URL changes. See `HTML5 History <http://www.w3.org/TR/html5/history.html#history-traversal>`_.  ``dojo/hash`` uses the native ``onhashchange`` event if the browser supports it, and emulates this support for older browsers using a polling loop.
 
@@ -27,7 +27,7 @@ Running code when the browser hash changes works by loading the ``dojo/hash`` mo
 
   require(["dojo/hash", "dojo/topic"], function(hash, topic){
     topic.subscribe("/dojo/hashchange", function(changedHash){
-      // Handle the has change publish
+      // Handle the hash change publish
     });
   });
 
@@ -144,12 +144,12 @@ For browsers that do not support the ``onhashchange`` event natively, a polling 
 Encoding/Decoding
 -----------------
 
-``dojo/hash`` does not attempt to do any encoding or decoding.  There are many cases where consumers of ``dojo/hash`` want unencoded slashes, etc, so it is up to the consumer to encode and decode where appropriate. Anything with HTML encoding (e.g. ``&amp;``) must be encoded with ``encodeURIComponent`` before being passed into ``dojo/hash`` due to discrepancies between browsers.  For example Firefox decodes HTML encoding automatically before setting the URL, IE does not.
+``dojo/hash`` does not attempt to do any encoding or decoding.  There are many cases where consumers of ``dojo/hash`` want unencoded slashes, etc, so it is up to the consumer to encode and decode where appropriate. Anything with HTML encoding (e.g. ``&``) must be encoded with ``encodeURIComponent`` before being passed into ``dojo/hash`` due to discrepancies between browsers.  For example Firefox decodes HTML encoding automatically before setting the URL, IE does not.
 
 .. js ::
 
   require(["dojo/hash"], function(hash){
-    hash(encodeURIComponent("hash with &amp; HTML encoding"));
+    hash(encodeURIComponent("hash with & HTML encoding"));
   });
 
 See Also
