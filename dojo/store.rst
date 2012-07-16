@@ -289,3 +289,6 @@ See Also
 ========
 
 * `SitePen Blog Post on Object Stores <http://www.sitepen.com/blog/2011/02/15/dojo-object-stores/>`_
+
+* `Dojo Store Tutorial <http://dojotoolkit.org/documentation/tutorials/1.7/intro_dojo_store/>`_
+
