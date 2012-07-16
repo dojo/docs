@@ -31,11 +31,11 @@ of Dojo might include fixes to support future releases of these browsers, but we
 
 * iOS 4.x, 5.x (Mobile Safari) (including all Dijit widgets except Editor, Dialog)
 
-* Android 2.2-2.3, 3.1-3.2, 4.0
+* Android 2.2-2.3, 3.1-3.2, 4.0-4.1
 
 * Blackberry 6-7
 
-* Mobile compatibility on desktop browsers: IE 8-9, Firefox 4-11, Safari 5-6, Chrome 13-18
+* Mobile compatibility on desktop browsers: IE 8-9, Firefox 4-12, Safari 5-6, Chrome 13-19
 
 TODO: Link to page with specific vendor device models tested on
 
