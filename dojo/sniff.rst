@@ -1,112 +1,157 @@
 .. _dojo/sniff:
 
-=============================
-Browser (User Agent) Sniffing
-=============================
+==========
+dojo/sniff
+==========
 
 :Authors: Peter Higgins, Ben Lowery
 
 .. contents ::
     :depth: 2
 
-You should always try to use feature detection (See general overview `Using Capability Detection <http://dev.opera.com/articles/view/using-capability-detection/>`_) whenever possible to write forward-compatible code branches.  The `dojo/has <dojo/has>`_ API is designed to help in this endeavor.
+**dojo/sniff** is the main Dojo module for browser feature detection.  Feature detection is an important consideration 
+when writing code.  It allows more maintainable code, better user experience, forward-compatibility and more 
+performant code.  The :ref:`dojo/has <dojo/has>` API is the main Dojo mechanism for accomplishing this and 
+``dojo/sniff`` leverages this.
 
-For when feature detection is not an option, Dojo provides dojo provides user agent sniffing code in the module, ``dojo/sniff``.   The sniff module augments the basic set of has() tests (see :ref:`dojo/has <dojo/has>`) with additional user agent based tests, so you can use the base has() api to test for browser environment and versions, just like you do for other features.  Using this approach in conjunction with an optimizing compiler at build time, it is possible to optimize out unwanted code paths for specific browsers.
+When leveraged with :ref:`Dojo's Builder <build/index>` unused code, for non-targeted browsers, can be removed and 
+decrease the size and increase the performance of your code.
 
-The sniff module defines the following has-features:
+Usage
+=====
 
-* has("host-browser")
-* has("ie")
-* has("mozilla")
-* has("ff")
-* has("opera")
-* has("safari")
-* has("khtml")
-* has("air") - true if running within the Adobe AIR environment
-* has("quirks") - is the browser in Quirks-Mode
-* has("host-browser") (not typically needed when only targeting browsers)
-* has("webkit") (1.3+)
-* has("chrome") (1.3+)
-
-Each variable is only defined if the specified browser is being used. For example, if you're using Internet Explorer, only dojo.isIE is defined; all the other variables are undefined. The variable holds the browser version number as a Number, so you can easily perform version checks. Additionally, since undefined always results in a false result in greater-than or less-than comparisons, you can use code like this to check for a certain browser version:
+The module can be used two ways, because the module add features to ``dojo/has`` and it also returns ``dojo/has`` as 
+the return value of the module.  Both the examples below are functionally the same:
 
 .. js ::
 
-  require(["dojo/has", "dojo/_base/sniff"], function(has){
-    if(has("ie") <= 6){ // only IE6 and below
-      ...
-    }
+  require(["dojo/sniff"], function(sniff){
+    if(sniff("ie"){
+      // Do something specific for IE.
+    });
+  });
 
-    if(has("ff") < 3){ // only Firefox 2.x and lower
-      ...
-    }
+.. js ::
 
-    if(has("ie") == 7){ // only IE7
-      ...
+  require(["dojo/has", "dojo/sniff"], function(has){
+    if(has("ie")){
+      // Do something specific for IE.
     }
   });
 
+The module defines the following has-features:
 
-Example 1 - UA sniffing in Dojo 1.7 with AMD and the has API
-============================================================
+=========== ============================================
+Feature     Notes
+=========== ============================================
+``air``     Detects Adobe AIR Environments
+``khtml``
+``webkit``  Detects Webkit based environments 1.3+
+``chrome``  Detects Google Chrome 1.3+
+``safari``
+``mac``     Detects if the platform is Mac OSX
+``quirks``  If the browser is running in "quirks" mode
+``ios``     Detects iOS based devices [1]_
+``android`` Detects Android based devices [1]_
+``opera``
+``mozilla``
+``ff``
+``ie``
+``wii``     Detects if running on a Nintendo Wii
+=========== ============================================
 
-Here's a live sample to show how it works, when using AMD and minimal base dependencies rather than all modules that get implicitly loaded by the dojo package, so that we can show how the sniff module's return values can be mapped to has() to detect the current browser with a small amount of loaded code:
+.. [1] See :ref:`dojox/mobile/sniff <dojox/mobile/sniff>` for additional mobile platform detection.
+
+Each feature will only return a truthy value if the specified browser is being used.  For example if you are using 
+Internet Explorer ``has("ie")`` will only return a truthy value, where as ``has("chrome")`` will return false.
+
+The value returned, where appropriate, will provide the version number of the browser, so specific code checks and be 
+done for versions.  For example:
+
+.. js ::
+
+  require(["dojo/has", "dojo/sniff"], function(has){
+    if(has("ie") <= 6){ // only IE6 and below
+      // ...
+    }
+
+    if(has("ff") < 3){ // only Firefox 2.x and lower
+      // ...
+    }
+
+    if(has("ie") == 7){ // only IE7
+      // ...
+    }
+  });
+
+Examples
+========
 
 .. code-example ::
   :djConfig: async: true, parseOnLoad: false
 
+  Basic browser detection example.
+
   .. js ::
 
-      require(["dojo/has", // alias has API to "has"
-              "dojo/_base/array", // alias array api to "arrayUtil"
-              "dojo/dom", // alias DOM api to "dom"
-              "dojo/_base/sniff", // load browser-related has feature tests
-              "dojo/domReady!"], // wait until DOM is loaded
-           function(has, arrayUtil, dom){
+    require(["dojo/has", // alias has API to "has"
+        "dojo/_base/array", // alias array api to "arrayUtil"
+        "dojo/dom", // alias DOM api to "dom"
+        "dojo/_base/sniff", // load browser-related has feature tests
+        "dojo/domReady!" // wait until DOM is loaded
+    ], function(has, array, dom){
 
-        function makeFancyAnswer(who){
-          if(has(who)){
-            return "Yes, it's version " + has(who);
-          }else{
-            return "No";
-          }
+      function makeFancyAnswer(who){
+        if(has(who)){
+          return "Yes, it's version " + has(who);
+        }else{
+          return "No";
         }
+      }
 
-        function makeAtLeastAnswer(who, version){
-          var answer = (has(who) >= version) ? "Yes" : "No";
-          dom.byId("isAtLeast" + who + version).innerHTML = answer;
-        }
+      function makeAtLeastAnswer(who, version){
+        var answer = (has(who) >= version) ? "Yes" : "No";
+        dom.byId("isAtLeast" + who + version).innerHTML = answer;
+      }
 
-        arrayUtil.forEach(["ie", "mozilla", "ff", "opera", "webkit", "chrome"], function(n){
-          dom.byId("answerIs" + n).innerHTML = makeFancyAnswer(n);
-        });
-        makeAtLeastAnswer("ie", 7);
-        makeAtLeastAnswer("ff", 3);
-        makeAtLeastAnswer("opera", 9);
-
+      array.forEach(["ie", "mozilla", "ff", "opera", "webkit", "chrome"], function(n){
+        dom.byId("answerIs" + n).innerHTML = makeFancyAnswer(n);
       });
+
+      makeAtLeastAnswer("ie", 7);
+      makeAtLeastAnswer("ff", 3);
+      makeAtLeastAnswer("opera", 9);
+
+    });
 
   .. html ::
 
-      <dl>
-        <dt>Is this Internet Explorer?</dt>
-        <dd id="answerIsie"></dd>
-        <dt>Is this Firefox?</dt>
-        <dd id="answerIsff"></dd>
-        <dt>Is this Mozilla?</dt>
-        <dd id="answerIsmozilla"></dd>
-        <dt>Is this Opera?</dt>
-        <dd id="answerIsopera"></dd>
-        <dt>Is this WebKit? (Dojo 1.3)</dt>
-        <dd id="answerIswebkit"></dd>
-        <dt>Is this Chrome? (Dojo 1.3)</dt>
-        <dd id="answerIschrome"></dd>
-      </dl>
-      <dl>
-        <dt>Is this at least IE 7?</dt>
-        <dd id="isAtLeastie7"></dd>
-        <dt>Is this at least Firefox 3?</dt>
-        <dd id="isAtLeastff3"></dd>
-        <dt>Is this at least Opera 9?</dt>
-        <dd id="isAtLeastopera9"></dd>
-      </dl>
+    <dl>
+      <dt>Is this Internet Explorer?</dt>
+      <dd id="answerIsie"></dd>
+      <dt>Is this Firefox?</dt>
+      <dd id="answerIsff"></dd>
+      <dt>Is this Mozilla?</dt>
+      <dd id="answerIsmozilla"></dd>
+      <dt>Is this Opera?</dt>
+      <dd id="answerIsopera"></dd>
+      <dt>Is this WebKit? (Dojo 1.3)</dt>
+      <dd id="answerIswebkit"></dd>
+      <dt>Is this Chrome? (Dojo 1.3)</dt>
+      <dd id="answerIschrome"></dd>
+    </dl>
+    <dl>
+      <dt>Is this at least IE 7?</dt>
+      <dd id="isAtLeastie7"></dd>
+      <dt>Is this at least Firefox 3?</dt>
+      <dd id="isAtLeastff3"></dd>
+      <dt>Is this at least Opera 9?</dt>
+      <dd id="isAtLeastopera9"></dd>
+    </dl>
+
+See Also
+========
+
+* :ref:`dojo/has <dojo/has>` - The main feature detection module of Dojo.
+
+* :ref:`dojox/mobile/sniff <dojox/mobile/sniff>` - Additional feature detection for mobile platforms.
