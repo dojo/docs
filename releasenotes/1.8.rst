@@ -1004,6 +1004,14 @@ Dijit
 - Connecting to ``dijit/Menu::_openMyself()``: If you have menus on Trees etc. where you have connected to the private 
   method ``dojo/Menu::_openMyself()``, you should switch to the pattern shown above in the Menu section.
 
+- In the event passed to ``dijit/MenuItem::onClick(evt)``, ``evt.currentTarget`` now refers to the ``Menu.domNode``,
+  rather than the ``MenuItem.domNode``.  You can access the ``MenuItem`` via ``this``, assuming that you haven't
+  overridden the value of ``this``, or alternately ``registry.getEnclosingWidget(evt.target)``.
+
+- Likewise, in the event passed to ``dijit/Tree::onClick(item, node, evt)``, and
+  ``dijit/Tree::onDblClick(item, node, evt)``, ``evt.currentTarget`` now refers to the
+  ``Tree.domNode``, rather than the ``TreeNode.domNode``.   You can access the ``TreeNode`` via the ``node`` parameter.
+
 - Due to the event delegation performance improvements, if you have custom templates for TreeNode, MenuItem, or 
   TabButton, you should edit your templates to remove the ``data-dojo-attach-event="..."`` attributes.
 
