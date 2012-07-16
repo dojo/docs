@@ -256,6 +256,9 @@ Auto Require
 clear, you may have a harder time isolating where your issue is, because the parser is automatically loading modules 
 that you may not be consciously aware of.
 
+By setting ``isDebug`` to ``true`` in your ``dojoConfig``, the ``dojo/parser`` will log to the console warnings 
+whenever it attempts to auto-load modules, so this feature is not used unintentionally.
+
 .. code-example ::
 
   Here is an example of the feature in action.  Notice how no modules are required.

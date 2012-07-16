@@ -236,12 +236,15 @@ demonstrates that feature:
 While this feature does provide a fair amount of flexibility, developers should be consciously aware when they are not
 being explicit about their requirements, as this can have unintended consequences. For example, because the code will
 "just work", it does mean that if a build profile is not configured properly, you find yourself in a situation where
-your code it requiring in modules that are not part of a layer and reducing the performance of your deployed application
-or your deployed code will not work because it is missing modules that were being auto-required in your development
-environment. Because of the asynchronous nature of require, debugging information is severely limited compounding the
-challenges of finding an issue when it occurs.
+your code it requiring in modules that are not part of a layer and reducing the performance of your deployed 
+application or your deployed code will not work because it is missing modules that were being auto-required in your 
+development environment.
 
-So developers should give due consideration when they choose to use declarative syntax and not be explicit about their
+To assist in ensuring that this feature is not used accidently, when ``isDebug`` is set to ``true`` in your 
+``dojoConfig``, the ``dojo/parser`` will log warning messages to the console, identifying which modules are being auto-
+required.
+
+Developers should give due consideration when they choose to use declarative syntax and not be explicit about their
 requirements before invoking ``.parse()``.
 
 Declarative Require
@@ -311,9 +314,9 @@ put into the ``data-dojo-props`` field. For example:
 Boolean parameters
 ~~~~~~~~~~~~~~~~~~
 
-Due to HTML subtleties, for boolean parameters that have a coressponding HTML attribute that are false, it's best not to
-specify the attribute at all. For example, to specify an enabled button (where the ``disabled`` property is ``false``),
-simply do not specify anything for ``disabled``:
+Due to HTML subtleties, for boolean parameters that have a coressponding HTML attribute that are false, it's best not 
+to specify the attribute at all. For example, to specify an enabled button (where the ``disabled`` property is 
+``false``), simply do not specify anything for ``disabled``:
 
 .. html ::
 
