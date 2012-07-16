@@ -58,7 +58,7 @@ The created models are avaible on the view instance trough the loadedModels prop
   define([], function(){
     return {
       init: function(){
-         var mvcModel = this.oadedModels["model1"];
+         var mvcModel = this.loadedModels["model1"];
       }
     }
   );
