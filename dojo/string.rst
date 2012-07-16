@@ -1,41 +1,157 @@
 .. _dojo/string:
 
-=========================
-dojo.string (dojo/string)
-=========================
+===========
+dojo/string
+===========
 
 
 .. contents ::
    :depth: 2
 
-dojo.string provides some simple string manipulation utilities
+**dojo/string** is a module that provides some simple string manipulation utilities.
 
-Introduction
-============
+Usage
+=====
 
-String utilities for the Dojo toolkit include trim, pad, rep, and substitute.  This common functionality is used often in applications, so performance was carefully considered when implementing these methods.
+.. js ::
 
-trim() trims whitespace off both ends of a string using an efficient regular expression.  It now passes through to native String.prototype.trim defined by EcmaScript-5, if one is provided. See :ref:`dojo.string.trim <dojo/string/trim>` and :ref:`dojo.trim <dojo/trim>` for more details.
+  require(["dojo/string"], function(string){
+    var a = string.pad("pad me", 10);
+    var b = string.rep("dup", 10);
+    var c = string.substitute("${replace} - ${me}", { replace: "foo", me: "bar" });
+    var d = string.trim("  trim me  ");
+  });
 
-pad() and rep() help construct strings.  pad() can extend a string to a certain length by padding at the front or end, using a character of your choice.  rep() simply constructs a string by replicating a sequence n times.
+pad()
+-----
 
-substitute() is a workhorse and the basis for dijit's templating.  It performs parameterized substitution in the form of ${name} with a variety of advanced options.  An object is provided as the hashtable to lookup when doing these substitutions. The expression in the curly braces may be a simple property, like 'name' or a dotted expression like 'data.employee.name'.  The expression may be further qualified by a colon and the name of a format function, to run the output each lookup through a property, such as mylib.formatName.   A 'this' reference may be provided for the format function, otherwise it will be scoped to the global namespace.  Lastly, an optional transform function can be run on all properties just prior to substitution, such as one to escape HTML entities.
+Pad a string to guarantee that it is at least ``size`` length by filling with the character ``ch`` at either the start 
+or end of the string. Pads at the start, by default.  The signature of the method is:
 
+.. api-doc :: dojo/string
+  :methods: pad
+  :no-headers:
+  :sig:
+
+rep()
+-----
+
+Repeats a string a certain number of times.  The signature of the method is:
+
+.. api-doc :: dojo/string
+  :methods: rep
+  :no-headers:
+  :sig:
+
+substitute()
+------------
+
+``substitute()`` is a workhorse and the basis for Dijit's templating.  It performs parameterized substitution in the 
+form of ``${name}`` with a variety of advanced options.  An object is provided as the hashtable to lookup when doing 
+these substitutions. The expression in the curly braces may be a simple property, like ``name`` or a dotted expression 
+like ``data.employee.name``.  The expression may be further qualified by a colon and the name of a format function, to 
+run the output each lookup through a property, such as ``mylib.formatName``.   A ``this`` reference may be provided 
+for the format function, otherwise it will be scoped to the global namespace.  Lastly, an optional transform function 
+can be run on all properties just prior to substitution, such as one to escape HTML entities.
+
+The signature of the method is:
+
+.. api-doc :: dojo/string
+  :methods: substitute
+  :no-headers:
+  :sig:
+
+trim()
+------
+
+``trim()`` trims whitespace off both ends of a string.
+
+This will default to the ES5 String.prototpye.trim if available, otherwise it will utilise a more performant, but not 
+very compact version of the ``trim()``, which is different than the ``trim()`` which is included in 
+:ref:`dojo/_base/lang`.
+
+The signature of the method is:
+
+.. api-doc :: dojo/string
+  :methods: trim
+  :no-headers:
+  :sig:
+
+Examples
+========
 
 .. code-example ::
-  
+  :djConfig: async: true, parseOnLoad: false
+
+  An example of ``pad()``.
+
   .. js ::
 
-        dojo.ready(function(){
-            console.log(dojo.string.trim(dojo.byId("foo").innerHTML));
-        });
+    require(["dojo/string", "dojo/dom", "dojo/domReady!"],
+    function(string, dom){
+      dom.byId("output").innerHTML = string.pad(dom.byId("input").innerHTML, 6);
+    });
 
   .. html ::
 
-    <div id="foo">  Hi dojo.beercamp </div>
+    <div id="input">123</div>
+    <div id="output"></div>
+
+.. code-example ::
+  :djConfig: async: true, parseOnLoad: false
+
+  An example of ``rep()``.
+
+  .. js ::
+
+    require(["dojo/string", "dojo/dom", "dojo/domReady!"],
+    function(string, dom){
+      dom.byId("output").innerHTML = string.rep("Pete and Repeat went out in a boat, Pete fell in. ", 5);
+    });
+
+  .. html ::
+
+    <div id="output"></div>
+
+.. code-example ::
+  :djConfig: async: true, parseOnLoad: false
+
+  An example of ``substitute()``.
+
+  .. js ::
+
+    require(["dojo/string", "dojo/dom", "dojo/domReady!"],
+    function(string, dom){
+      dom.byId("output").innerHTML = string.substitute(dom.byId("input").innerHTML, { replace: "foo", me: "bar" });
+    });
+
+  .. html ::
+
+    <div id="input">${replace} has the hots for ${me}</div>
+    <div id="output"></div>
+
+.. code-example ::
+  :djConfig: async: true, parseOnLoad: false
+
+  An example of ``trim()``.
+
+  .. js ::
+
+    require(["dojo/string", "dojo/dom", "dojo/domReady!"],
+    function(string, dom){
+      dom.byId("output").innerHTML = string.trim(dom.byId("input").innerHTML);
+    });
+
+  .. html ::
+
+    <pre id="input">   I got space!   </pre><br /><br />
+    <pre id="output"></pre>
 
   .. css ::
 
-      #foo {
-          color: red;
-      }
+    pre { border: 2px solid black; display: inline; padding: 3px; }
+
+See Also
+========
+
+* :ref:`dojo/_base/lang::trim() <dojo/_base/lang#trim>` - Base Dojo ``trim()``
