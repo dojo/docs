@@ -238,8 +238,11 @@ Module                                                                          
                                                                                 mblAndroid3Workaround
 :ref:`dojox/mobile/scrollable <dojox/mobile/scrollable>`                        translate3d
 :ref:`dojox/mobile/sniff <dojox/mobile/sniff>`                                  bb
+
                                                                                 android
+
                                                                                 iphone
+
                                                                                 touch
 :ref:`dojox/mvc/_InlineTemplateMixin <dojox/mvc/_InlineTemplateMixin>`          dom-qsa
 :ref:`dojox/mvc/parserExtension <dojox/mvc/parserExtension>`                    dom-qsa
