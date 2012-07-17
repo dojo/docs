@@ -24,9 +24,9 @@ Examples
 
 .. js ::
 
- require(["dojo/store/JsonRest"], function(JsonRestStore){
+ require(["dojo/store/JsonRest"], function(JsonRest){
 
-   var store = new JsonRestStore({target: "/Table/" });
+   var store = new JsonRest({target: "/Table/" });
 
    store.get(3).then(function(object){
      // use the object with the identity of 3
@@ -94,24 +94,27 @@ When a query request is made that includes a ``sort`` option in the ``options`` 
 For example, given the following store and request:
 
 .. js ::
+
+  require(["dojo/store/JsonRest"], function(JsonRest){
  
-  var store = new JsonRestStore({
-    target: "/FooObject/",
-    sortParam: "sortBy"
+    var store = new JsonRest({
+      target: "/FooObject/",
+      sortParam: "sortBy"
+    });
+
+    store.query({ foo: "value1" }, {
+      sort: [
+        { attribute: "foo" },
+        { attribute: "bar", descending: true }
+      ]
+    });
   });
 
-  store.query({ foo: "value1" }, {
-    sort: [
-      { attribute: "foo" },
-      { attribute: "bar", descending: true }
-    ]
-  });
-
-The resulting request to the server would be:
+The resulting request to the server would be::
 
   /FooObject/?foo=value1&sortBy=+foo,-bar
 
-If ``sortParam`` is not set, the sort value is appended without a key-value pair, surrounded by "sort()":
+If ``sortParam`` is not set, the sort value is appended without a key-value pair, surrounded by "sort()"::
 
   /FooObject/?foo=value1&sort(+foo,-bar)
 
