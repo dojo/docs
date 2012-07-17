@@ -53,44 +53,51 @@ at function is typically used as a mixin property of a widget (data-dojo-props o
 Basic examples
 --------------
 
-In below example, two seconds later, the text box changes from "Foo" to "Bar" as the "value" property in model changes:
+In below example, two seconds later, the text box changes from "Foo" to "Bar" as the "value" property in model changes.
 
 .. code-example::
+  :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
+  :toolbar: versions, themes
+  :version: 1.8-2.0
   :width: 320
   :height: 60
 
   .. js ::
 
     require([
-        "dojo/parser", "dojo/Stateful", "dojo/domReady!"
-    ], function(parser, Stateful){
-        model = new Stateful({value: "Foo"});
+        "dojo/parser", "dojo/domReady!"
+    ], function(parser){
+        parser.parse();
         setTimeout(function(){ model.set("value", "Bar"); }, 2000);
     });
 
   .. html ::
 
     <script type="dojo/require">at: "dojox/mvc/at"</script>
+    <span data-dojo-id="model" data-dojo-type="dojo/Stateful" data-dojo-props="value: 'Foo'"></span>
     <input type="text" data-dojo-type="dijit/form/TextBox" data-dojo-props="value: at(model, 'value')">
 
 In below example, edit in text box is reflected to the text next to it:
 
 .. code-example::
+  :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
+  :toolbar: versions, themes
+  :version: 1.8-2.0
   :width: 480
   :height: 60
 
   .. js ::
 
     require([
-        "dojo/parser", "dojo/Stateful", "dojo/domReady!"
-    ], function(parser, Stateful){
-        model = new Stateful({value: "Foo"});
+        "dojo/parser", "dojo/domReady!"
+    ], function(parser){
         parser.parse();
     });
 
   .. html ::
 
     <script type="dojo/require">at: "dojox/mvc/at"</script>
+    <span data-dojo-id="model" data-dojo-type="dojo/Stateful" data-dojo-props="value: 'Foo'"></span>
     <input type="text" data-dojo-type="dijit/form/TextBox" data-dojo-props="value: at(model, 'value')">
     <span data-dojo-type="dijit/_WidgetBase" data-dojo-props="_setValueAttr: {node: 'domNode', type: 'innerText'}, value: at(model, 'value')"></span>
 
