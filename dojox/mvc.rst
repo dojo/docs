@@ -220,7 +220,7 @@ Basic example two, input-output sync: Anything typed into the input fields will 
         <button id="reset" type="button" data-dojo-type="dijit/form/Button" 
                 data-dojo-props="onClick: function(){ require('dijit/registry').byId('ctrl').reset(); }">Reset</button>
         <button id="fromModel" type="button" data-dojo-type="dijit/form/Button"
-                data-dojo-props="onClick: function(){ require('dijit/registry').byId('ctrl').set('First','Updated in Model'); }">Update First from Model</button>
+                data-dojo-props="onClick: function(){ require('dijit/registry').byId('ctrl').set('First', 'Updated in Model'); }">Update First from Model</button>
         <button id="fromWidget" type="button" data-dojo-type="dijit/form/Button"
-                data-dojo-props="onClick: function(){ require('dijit/registry').byId('firstId').set('value','Updated Widget'); }">Update First from Widget</button>
+                data-dojo-props="onClick: function(){ require('dijit/registry').byId('firstId').set('value', 'Updated Widget'); }">Update First from Widget</button>
     </div>
