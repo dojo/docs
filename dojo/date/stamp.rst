@@ -17,8 +17,6 @@ Methods of ``dojo/date/stamp`` module use a profile of the ISO8601 as defined by
 independent, fast, and easily machine readable. The format is ``yyyy-MM-ddTHH:mm:ss.SSS`` where the fields do
 not all need to be specified, and either local time, GMT offset or "Zulu" may be used.
 
-.. api-link :: dojo.date.stamp
-
 Usage
 =====
 

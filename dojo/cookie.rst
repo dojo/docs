@@ -50,8 +50,6 @@ got set.
     <button id="setCookie">Set Cookie</button>
     <button id="getCookie">Get Cookie</button>
 
-.. api-inline :: dojo.cookie
-
 See also
 ========
 

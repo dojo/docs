@@ -120,5 +120,3 @@ In order to identify the button description to the screen reader, all buttons sh
 Even though the dropdown buttons are marked with the ARIA haspopup property, the screen readers do not indicate this to the user in Firefox 2.
 In Firefox 3 the dropdown and combo buttons are announced as "menu button".
 
-
-.. api-inline :: dijit.form.DropDownButton

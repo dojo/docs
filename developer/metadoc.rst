@@ -670,7 +670,9 @@ Creating reference guide for Web site
    default!)
 
 4. Go into each of ``_static/{dojo,dijit,dojox,util}`` and ``git checkout 1.7.1`` (or whatever the latest RELEASE 
-   version of DTK is; rstwiki tracks some version of trunk by default!)
+   version of DTK is; rstwiki tracks some version of trunk by default!)  Also it maybe more appropriate to copy in 
+   an SVN copy of DTK, as ``svn:external`` links are not mirrored on GitHub.  In particular, you will not have certain
+   parts of DojoX available in version 1.8 and later if you just use the GitHub mirror.
 
 5. ``cd export``
 

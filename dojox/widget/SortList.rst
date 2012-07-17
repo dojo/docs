@@ -9,8 +9,6 @@ dojox.widget.SortList
 
 Converts an unordered-list into a sortable scrollable pane. 
 
-.. api-inline :: dojox.widget.SortList
-
 Examples
 ========
 

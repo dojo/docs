@@ -43,9 +43,6 @@ Example
         });
 
 
-.. api-link :: dijit._Container
-
-
 See also
 ========
 * :ref:`dijit/_Contained <dijit/_Contained>`

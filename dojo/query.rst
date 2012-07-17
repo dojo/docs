@@ -403,7 +403,3 @@ until the selector engine is pulled in asynchronously.  In this case, it will be
 
 Again, this issue *only* affects use of legacy APIs when a selector engine is used which is not
 baked into ``dojo.js``.
-
-
-.. api-inline :: dojo.query
-

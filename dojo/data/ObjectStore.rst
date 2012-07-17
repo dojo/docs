@@ -41,8 +41,3 @@ ObjectStore's logic for the ``fetch`` function assumes that if the given query i
 
 * it must be capable of handling values in the object as regular expressions (e.g. ``dojo.store.Memory`` by way of ``dojo.store.util.SimpleQueryEngine``)
 * (or) it must call toString (perhaps implicitly) on each value (e.g. ``dojo.store.JsonRest`` by way of ``encodeURIComponent``).
-
-API Info
-========
-
-.. api-link :: dojo.data.ObjectStore

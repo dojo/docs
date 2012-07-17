@@ -14,7 +14,7 @@ dojox.mvc
 Introduction
 ============
 
-Enterprise Rich Internet Applications (RIAs) often focus more on rich data vs. the rich media aspects of RIAs more typical of consumer applications. For example, such RIAs depend on implementing the well-known CRUD operations on data stored in back-end systems. The dojox/mvc package focuses on View to Model data binding (eg. View Controller) concerns on the client, easing development of data-rich UI’s which Create, Read, Update, and Delete data. dojox.mvc deals with data binding/controller concerns within a View, but does not deal with application level concerns that span multiple Views (such as navigation), see dojox/app for Application-level Controller concerns.
+Enterprise Rich Internet Applications (RIAs) often focus more on rich data vs. the rich media aspects of RIAs more typical of consumer applications. For example, such RIAs depend on implementing the well-known CRUD operations on data stored in back-end systems. The dojox/mvc package focuses on View to Model data binding (eg. View Controller) concerns on the client, easing development of data-rich UI‚Äôs which Create, Read, Update, and Delete data. dojox.mvc deals with data binding/controller concerns within a View, but does not deal with application level concerns that span multiple Views (such as navigation), see dojox/app for Application-level Controller concerns.
 
 How it works
 ============
@@ -48,7 +48,7 @@ Features
 
 * Though some applications use all of these features, many applications do not.
 
-  * As 1.8 dojox/mvc supports binding any stateful attribute, dojox/mvc/StatefulModel’s unique approach of converting non-object value to dojox/mvc/StatefulModel (with “value” attribute) is no longer needed. Regular dojo/Stateful can be used as data model, in many cases.
+  * As 1.8 dojox/mvc supports binding any stateful attribute, dojox/mvc/StatefulModel‚Äôs unique approach of converting non-object value to dojox/mvc/StatefulModel (with ‚Äúvalue‚Äù attribute) is no longer needed. Regular dojo/Stateful can be used as data model, in many cases.
 
   * Some applications do not use array in data model at all.
 

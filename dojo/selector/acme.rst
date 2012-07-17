@@ -20,6 +20,3 @@ Examples
 
 See also
 ========
-
-.. api-link :: dojo.selector.acme
-

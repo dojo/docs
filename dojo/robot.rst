@@ -1,14 +1,14 @@
 .. _dojo/robot:
 
-
+==========
 dojo/robot
-=============
-
+==========
 
 .. contents ::
     :depth: 2
 
-Users who use doh+dojo get the added convenience of dojo.mouseMoveAt instead of computing the absolute coordinates of their elements themselves
+**dojo/robot** provides developers who use D.O.H. and Dojo the added convenience of ``mouseMoveAt()`` instead of computing the 
+absolute coordinates of their elements themselves.
 
 Features
 ========

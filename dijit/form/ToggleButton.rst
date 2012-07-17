@@ -11,8 +11,6 @@ dijit/form/ToggleButton
 .. contents ::
     :depth: 2
 
-.. api-inline :: dijit.form.ToggleButton
-
 ToggleButton widgets are a cross between :ref:`Button <dijit/form/Button>` and :ref:`Checkbox <dijit/form/CheckBox>` widgets.
 They are created like Button widgets, but like CheckBox widgets, they maintain a *checked* boolean attribute (settable/gettable) that toggles on each click action.
 Unlike CheckBox widgets however, ToggleButton widgets do not submit any value on FORM submit.

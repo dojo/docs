@@ -49,3 +49,17 @@ Sample application configuration for ``dojox/app/model``:
   }
 
 When the ``dojox/app/utils/mvcModel`` model loader is used, ``dojox/mvc`` models are created otherwise simple models are created.
+
+The created models are avaible on the view instance trough the loadedModels property. For example you can access them in the controller of your view:
+
+
+.. js ::
+
+  define([], function(){
+    return {
+      init: function(){
+         var mvcModel = this.loadedModels["model1"];
+      }
+    }
+  );
+

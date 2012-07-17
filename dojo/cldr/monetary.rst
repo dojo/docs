@@ -36,8 +36,6 @@ The following example prints out the monetary data (places and round) for EUR (E
     <div id="places"></div>
     <div id="round"></div>
 
-.. api-inline :: dojo.cldr.monetary
-
 See also
 ========
 

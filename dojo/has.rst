@@ -121,6 +121,8 @@ Module                                                                          
 :ref:`dojo/_base/connect <dojo/_base/connect>`                                  events-keypress-typed
 :ref:`dojo/_base/kernel <dojo/_base/kernel>`                                    extend-dojo
 
+                                                                                dojo-config-require
+
                                                                                 dojo-guarantee-console
 
                                                                                 dojo-debug-messages
@@ -130,6 +132,9 @@ Module                                                                          
                                                                                 dojo-moduleUrl
 :ref:`dojo/_base/lang <dojo/_base/lang>`                                        bug-for-in-skips-shadowed
 :ref:`dojo/_base/loader <dojo/_base/loader>`                                    config-publishRequireResult
+:ref:`dojo/_base/window <dojo/_base/window>`                                    quirks
+
+                                                                                ie
 :ref:`dojo/dojo <dojo/dojo>`                                                    host-node
 
                                                                                 host-rhino
@@ -170,7 +175,6 @@ Module                                                                          
 :ref:`dojo/json <dojo/json>`                                                    json-parse
 
                                                                                 json-stringify
-:ref:`dojo/_base/kernel <dojo/_base/kernel>`                                    dojo-config-require
 :ref:`dojo/mouse <dojo/mouse>`                                                  dom-quirks
 
                                                                                 events-mouseenter
@@ -180,9 +184,15 @@ Module                                                                          
 
                                                                                 event-orientationchange
 
-                                                                                event-stopimmediatepropogation
+                                                                                event-stopimmediatepropagation
 :ref:`dojo/query <dojo/query>`                                                  array-extensible
 :ref:`dojo/ready <dojo/ready>`                                                  dojo-config-addOnLoad
+:ref:`dojo/request/handlers <dojo/request/handlers>`                            activex
+:ref:`dojo/request/script <dojo/request/script>`                                script-readystatechange
+:ref:`dojo/request/xhr <dojo/request/xhr>`                                      native-xhr
+                                                                                dojo-force-activex-xhr
+                                                                                native-xhr2
+                                                                                native-formdata
 :ref:`dojo/selector/_loader <dojo/selector/_loader>`                            dom-qsa2.1
 
                                                                                 dom-qsa3
@@ -216,10 +226,30 @@ Module                                                                          
                                                                                 ie
 
                                                                                 wii
+:ref:`dojox/form/uploader/Base <dojox/form/uploader/Base>`                      FormData
+
+                                                                                xhr-sendAsBinary
+
+                                                                                file-multiple
 :ref:`dojox/app/main <dojox/app/main>`                                          app-log-api
 :ref:`dojox/mobile/Audio <dojox/mobile/Audio>`                                  mobile-embed-audio-video-support
+:ref:`dojox/mobile/common <dojox/mobile/common>`                                mblAndroidWorkaround
+
+                                                                                mblAndroid3Workaround
 :ref:`dojox/mobile/scrollable <dojox/mobile/scrollable>`                        translate3d
+:ref:`dojox/mobile/sniff <dojox/mobile/sniff>`                                  bb
+
+                                                                                android
+
+                                                                                iphone
+
+                                                                                touch
+:ref:`dojox/mvc/_InlineTemplateMixin <dojox/mvc/_InlineTemplateMixin>`          dom-qsa
 :ref:`dojox/mvc/parserExtension <dojox/mvc/parserExtension>`                    dom-qsa
+
+                                                                                dojo-parser
+
+                                                                                dojo-mobile-parser
 :ref:`dojox/mvc/sync <dojox/mvc/sync>`                                          mvc-bindings-log-api
 :ref:`util/build/main <util/build/main>`                                        is-windows
 =============================================================================== =================================

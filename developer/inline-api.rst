@@ -23,8 +23,8 @@ The format of the directives is as the following::
     :properties: baz qux
     :events: onCorge onGrault
     :no-headers:
-    :all:
     :no-inherited:
+    :extensions:
     :privates:
     :summary:
     :description:
@@ -52,9 +52,10 @@ Option             Description
                    only those events will be output in the order supplied.  If there are none specified, all events 
                    will be output, based on the ``:privates:`` argument.
 ``:no-headers:``   If not using tables, do not output a header for each method, property or event.
-``:all:``          If outputting methods, properties or events, include those that are declared by other modules, but 
-                   not inherited.
 ``:no-inherited:`` If outputting methods, properties or events, do not include those that are inherited.
+``:no-base:``      If outputting methods, properties or events, do not include those that are declared within the 
+                   class itself.
+``:extensions:``   If outputting methods, properties or events, include those that
 ``:privates:``     If outputting methods, properties or events, include those that are marked as private.
 ``:summary:``      Output the summary for each method, property or event.
 ``:description:``  Output the description for each method, property or event.
@@ -89,6 +90,7 @@ dijit/_WidgetBase Properties
 
 .. api-doc :: dijit/_WidgetBase
   :properties:
+  :privates:
   :table:
   :summary:
 

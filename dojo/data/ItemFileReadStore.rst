@@ -1025,12 +1025,6 @@ Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
     <div data-dojo-type="dijit/form/ComboBox" data-dojo-props="store:reloadableStore2, searchAttr:'name'"></div>
     <div id="reloadButton2" data-dojo-type="dijit/form/Button">Reload DataStore</div>
 
-
-API Info
-========
-
-.. api-link :: dojo.data.ItemFileReadStore
-
 See Also
 ========
 

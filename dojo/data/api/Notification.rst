@@ -74,10 +74,3 @@ This example shows, how to override the onNew function of a datastore with a cus
   };
   // An alert should be thrown when this completes
   var newItem = store.newItem({foo:"bar"});
-
-
-
-API Info
-========
-
-.. api-link :: dojo.data.api.Notification

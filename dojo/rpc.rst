@@ -1,30 +1,26 @@
 .. _dojo/rpc:
 
 ========
-dojo.rpc
+dojo/rpc
 ========
-
-:Project owner: ?--
-:since: V0.9
 
 .. contents ::
    :depth: 2
 
-dojo.rpc offers methods to communicate via Remote Procedure Calls (RPC) with Backend Servers.
-
+**dojo/rpc** is a sub-package that offers methods to communicate via Remote Procedure Calls (RPC) with Backend Servers.
 
 Available Services
 ==================
 
-* :ref:`dojo.rpc.JsonpService <dojo/rpc/JsonpService>`
+* :ref:`dojo/rpc/JsonpService <dojo/rpc/JsonpService>`
 
   A Generic JSONP service
 
-* :ref:`dojo.rpc.JsonService <dojo/rpc/JsonService>`
+* :ref:`dojo/rpc/JsonService <dojo/rpc/JsonService>`
 
   JSON RPC service
 
-* :ref:`dojo.rpc.RpcService <dojo/rpc/RpcService>`
+* :ref:`dojo/rpc/RpcService <dojo/rpc/RpcService>`
 
   RPC service class
 
@@ -32,18 +28,18 @@ Available Services
 See also
 ========
 
-* :ref:`dojox.rpc <dojox/rpc>`
+* :ref:`dojox/rpc <dojox/rpc>`
 
   Extended classes to communicate via Remote Procedure Calls (RPC) with Backend Servers
 
-* :ref:`dojox.rpc.Service <dojox/rpc/Service>`
+* :ref:`dojox/rpc/Service <dojox/rpc/Service>`
 
   The foundation of most dojox.RPC transportation
 
-* :ref:`dojox.rpc.Rest <dojox/rpc/Rest>`
+* :ref:`dojox/rpc/Rest <dojox/rpc/Rest>`
 
   Provides a HTTP REST service with full range REST verbs include GET, PUT, POST and DELETE
 
-* :ref:`dojox.rpc.OfflineRest <dojox/rpc/OfflineRest>`
+* :ref:`dojox/rpc/OfflineRest <dojox/rpc/OfflineRest>`
 
   Provides automatic offline capabilities to the JsonRest/JsonRestStore modules

@@ -65,5 +65,3 @@ See also
 ========
 
 * :ref:`dojo.date.locale <dojo/date/locale>`
-
-.. api-link :: dojo.date.locale.isWeekend

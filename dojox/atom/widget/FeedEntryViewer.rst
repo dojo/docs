@@ -9,8 +9,6 @@ The FeedEntryViewer defines a sample dojox.atom widget that shows how to display
 .. contents ::
   :depth: 2
 
-.. api-inline :: dojox.atom.widget.FeedEntryViewer
-
 =======================
 Example with FeedViewer
 =======================

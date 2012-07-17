@@ -4,9 +4,6 @@
 dojo.cldr.supplemental
 ======================
 
-.. api-inline :: dojo.cldr.supplemental
-
-
 See also
 ========
 
