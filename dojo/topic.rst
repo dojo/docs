@@ -71,7 +71,8 @@ It is not practical to support this on the client side.
 Migration
 =========
 
-``dojo/topic`` replaces the old ``dojo.publish()`` and ``dojo.subscribe()`` API.  There are some things to note about the migration from old API.
+``dojo/topic`` replaces the old ``dojo.publish()`` and ``dojo.subscribe()`` API.  There are some things to note about 
+the migration from old API.
 
 Passing Arguments
 -----------------
@@ -92,7 +93,10 @@ topic will receive: a single argument which is an array.
 Unsubscribe Handlers
 --------------------
 
-Whereas ``dojo.subscribe()`` returns a handle which can be later passed to ``dojo.unsubscribe()`` but is otherwise somewhat opaque, ``dojo/topic::subscribe()`` returns a simple object containing a ``remove()`` method, which can be called to unsubscribe the listener.  This is akin to the ``remove()`` method available on objects returned by ``dojo/on`` functions:
+Whereas ``dojo.subscribe()`` returns a handle which can be later passed to ``dojo.unsubscribe()`` but is otherwise 
+somewhat opaque, ``dojo/topic::subscribe()`` returns a simple object containing a ``remove()`` method, which can be 
+called to unsubscribe the listener.  This is akin to the ``remove()`` method available on objects returned by 
+``dojo/on`` functions:
 
 .. js ::
 
