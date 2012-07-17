@@ -157,7 +157,6 @@ Basic example two, input-output sync: Anything typed into the input fields will 
 
 .. code-example::
   :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
-  :version: local
   :toolbar: versions, themes
   :version: 1.8-2.0
 
