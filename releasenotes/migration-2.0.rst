@@ -252,7 +252,8 @@ dojo.eval                                           dojo/json                   
 dojo/_base/array
 ~~~~~~~~~~~~~~~~
 
-*To be determined* - Dojo 2.0 may have ``dojo/array``, or ``dojo/each``, or just shim ``Array`` prototype on IE to match behavior of modern browsers.
+*To be determined* - Dojo 2.0 may have ``dojo/array``, or ``dojo/each``, or just shim ``Array`` prototype on IE to 
+match behavior of modern browsers.
 
 In 1.7 and later, use "dojo/_base/array" module to get ``forEach()``, ``map()``, etc:
 
@@ -271,7 +272,8 @@ Browser/Device Sniffing
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 If your code uses browser sniffing, you should load :ref:`dojo/sniff <dojo/sniff>` or 
-:ref:`dojox/mobile/sniff <dojox/mobile/sniff>`.  Both these modules leverage the :ref:`dojo/has <dojo/has>` API for feature detection.
+:ref:`dojox/mobile/sniff <dojox/mobile/sniff>`.  Both these modules leverage the :ref:`dojo/has <dojo/has>` API for 
+feature detection.
 
 For example, old code like:
 
@@ -285,7 +287,7 @@ should be changed to:
 
 .. js ::
 
-  require(["dojo/hase", "dojo/sniff"], function(has){
+  require(["dojo/has", "dojo/sniff"], function(has){
     if(has("ie") < 6){
       // ...
     }
@@ -361,7 +363,8 @@ Note that:
 
 * the "handle" has a remove() method, rather than there being a function like dojo.disconnect()
 
-The NodeList objects returned from ``dojo/query`` also works with an ``.on()`` method rather than a ``.connect()`` method.
+The NodeList objects returned from ``dojo/query`` also works with an ``.on()`` method rather than a ``.connect()`` 
+method.
 
 Old code like:
 
@@ -437,7 +440,8 @@ loaded and can be accessed like this:
 onkeypress
 ~~~~~~~~~~
 
-The Dojo ``onkeypress`` normalization to Firefox behavior has been desupported.  For portable applications, you must use ``keypress`` for monitoring printable characters (e.g. A-Z, 1-9):
+The Dojo ``onkeypress`` normalization to Firefox behavior has been desupported.  For portable applications, you must 
+use ``keypress`` for monitoring printable characters (e.g. A-Z, 1-9):
 
 .. js ::
 
@@ -637,7 +641,8 @@ dojo.unsubscribe(handle)                                                        
 DOM Manipulation
 ----------------
 
-The Dojo DOM related functions previously available as part of ``dojo/dojo.js`` are now in a number of modules which must each be explicitly loaded.  These modules are:
+The Dojo DOM related functions previously available as part of ``dojo/dojo.js`` are now in a number of modules which 
+must each be explicitly loaded.  These modules are:
 
 * :ref:`dojo/dom <dojo/dom>`: general functions
 
@@ -938,9 +943,11 @@ store.fetch(...)                   store.query() returns Deferred
 
 In order to aid transistion, there are two modules that are available:
 
-* :ref:`dojo/store/DataStore <dojo/store/DataStore>` - Can convert a legacy ``dojo.data`` API store and make it appear to be a native ``dojo/store``.
+* :ref:`dojo/store/DataStore <dojo/store/DataStore>` - Can convert a legacy ``dojo.data`` API store and make it appear 
+  to be a native ``dojo/store``.
 
-* :ref:`dojo.data.ObjectStore <dojo/data/ObjectStore>` - Wraps a ``dojo/store`` API store and makes it appear to be a legacy ``dojo.data`` store.
+* :ref:`dojo.data.ObjectStore <dojo/data/ObjectStore>` - Wraps a ``dojo/store`` API store and makes it appear to be a 
+  legacy ``dojo.data`` store.
 
 Many Dijits are now directly ``dojo/store`` aware, including: :ref:`dijit/form/ComboBox <dijit/form/ComboBox>`, 
 :ref:`dijit/form/FilteringSelect <dijit/form/FilteringSelect>`, and :ref:`dijit/Tree <dijit/Tree>`.
@@ -996,7 +1003,8 @@ simply declare it as a variable. For example:
 FX
 --
 
-The base FX features of ``dojo/dojo.js`` have been moved to :ref:`dojo/_base/fx <dojo/_base/fx>` and the additional features of the ``dojo.fx`` module are now in :ref:`dojo/fx <dojo/fx>`.
+The base FX features of ``dojo/dojo.js`` have been moved to :ref:`dojo/_base/fx <dojo/_base/fx>` and the additional 
+features of the ``dojo.fx`` module are now in :ref:`dojo/fx <dojo/fx>`.
 
 =================================================   ============================   ====================================
 1.x syntax                                          2.0 module                     2.0 syntax
@@ -1063,7 +1071,8 @@ dojo.DeferredList([...], true).then(...)            dojo/promise/first          
 XHR and IO Requests
 -------------------
 
-``dojo.xhr*`` and ``dojo.io.*`` have been deprecated and replaced with :ref:`dojo/request <dojo/request>`.  The legacy XHR functionality has been moved to :ref:`dojo/_base/xhr`.
+``dojo.xhr*`` and ``dojo.io.*`` have been deprecated and replaced with :ref:`dojo/request <dojo/request>`.  The legacy 
+XHR functionality has been moved to :ref:`dojo/_base/xhr`.
 
 Old code like:
 
@@ -1094,7 +1103,8 @@ Should be refactored as:
     });
   });
 
-``dojo.io.script`` is deprecated by :ref:`dojo/request/script <dojo/request/script>` and ``dojo.io.iframe`` is deprecated by :ref:`dojo/request/iframe` and operate in a similiar fashion to the base ``dojo/request`` module.
+``dojo.io.script`` is deprecated by :ref:`dojo/request/script <dojo/request/script>` and ``dojo.io.iframe`` is 
+deprecated by :ref:`dojo/request/iframe` and operate in a similiar fashion to the base ``dojo/request`` module.
 
 Note that ``dojo/request`` utilises the new ``dojo/promise`` modules.
 
