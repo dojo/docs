@@ -4,6 +4,9 @@
 dojo/text
 =========
 
+.. contents ::
+   :depth: 2
+
 **dojo/text** is an AMD plugin that loads arbitrary string data from a file and returns it.  It is the replacement for 
 :ref:`dojo/cache() <dojo/cache>` from earlier versions of Dojo.  Essentially the :ref:`loader <loader/index>` will 
 load a text resource and return it as an argument to the callback function of a ``define()`` or ``require()``.
