@@ -171,7 +171,7 @@ Basic example two, input-output sync: Anything typed into the input fields will 
 
   .. js ::
 
-		var ctrl; 
+		var model;
 		require([
 			'dojo/Stateful',
 			'dojo/parser',
