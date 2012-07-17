@@ -14,8 +14,10 @@ The Dojo Toolkit Reference Guide is designed to be an in-depth resource regardin
 is a community effort and can be contributed to by anyone who has a `CLA <http://dojofoundation.org/about/cla>`_ in
 place with the Dojo Foundation.
 
-If you are looking for an introduction to the Dojo Toolkit, it is better to utilize the tutorials, and then use this
-reference guide.
+If you are looking for an introduction to the Dojo Toolkit, it is better to utilize the 
+`tutorials <http://dojotoolkit.org/documentation>`_, and then use this reference guide.  If you are looking for 
+detailed information on properties, methods and events of specific modules, it is better to utilize the 
+`API reference <http://dojotoolkit.org/api/>`_.
 
 The Dojo Toolkit
 ================
@@ -49,8 +51,8 @@ Reference Guide Structure
 This guide not only covers of the main packages of the toolkit, it also provides a few other areas of reference
 information:
 
-* :ref:`Release Notes <releasenotes/index>` - The release notes for the Dojo Toolkit and a couple of other release related
-  transition notes.
+* :ref:`Release Notes <releasenotes/index>` - The release notes for the Dojo Toolkit and a couple of other release 
+  related transition notes.
 
 * :ref:`Developer Notes <developer/index>` - Several documents that are used to document Dojo contributor and committer
   guidelines.
