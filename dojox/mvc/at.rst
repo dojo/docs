@@ -65,8 +65,9 @@ In below example, two seconds later, the text box changes from "Foo" to "Bar" as
   .. js ::
 
     require([
-        "dojo/parser", "dojo/domReady!"
-    ], function(parser){
+        "dojo/parser", "dojo/Stateful", "dojo/domReady!"
+    ], function(parser, Stateful){
+        model = new Stateful({value: "Foo"});
         parser.parse();
         setTimeout(function(){ model.set("value", "Bar"); }, 2000);
     });
@@ -74,7 +75,6 @@ In below example, two seconds later, the text box changes from "Foo" to "Bar" as
   .. html ::
 
     <script type="dojo/require">at: "dojox/mvc/at"</script>
-    <span data-dojo-id="model" data-dojo-type="dojo/Stateful" data-dojo-props="value: 'Foo'"></span>
     <input type="text" data-dojo-type="dijit/form/TextBox" data-dojo-props="value: at(model, 'value')">
 
 In below example, edit in text box is reflected to the text next to it:
