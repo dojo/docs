@@ -11,8 +11,8 @@ dojox/mvc/EditStoreRefController
 .. contents ::
   :depth: 2
 
-dojox/mvc/EditStoreRefController is an inheritance of dojox/mvc/EditModelRefController and dojox/mvc/StoreRefController.
-In addition to what dojox/mvc/EditModelRefController and dojox/mvc/StoreRefController do, the commit() method sends the data model as well as the removed entries in array to the data store.
+dojox/mvc/EditStoreRefController is an inheritance of :ref:`dojox/mvc/EditModelRefController <dojox/mvc/EditModelRefController>` and :ref:`dojox/mvc/StoreRefController <dojox/mvc/StoreRefController>`.
+In addition to what :ref:`dojox/mvc/EditModelRefController <dojox/mvc/EditModelRefController>` and :ref:`dojox/mvc/StoreRefController <dojox/mvc/StoreRefController>` do, the commit() method sends the data model as well as the removed entries in array to the data store.
 
 =====
 Usage
@@ -21,7 +21,7 @@ Usage
 In below example, the check box refers to "value" property in the controller (with "ctrl" ID).
 The controller provides the "value" property, from the data coming from data store ("store" property in the controller), using the first one in array.
 Two seconds later, the check box changes from unchecked to checked.
-The change is committed to the data store, which is reflected to dojo/store/Observable callback. 
+The change is committed to the data store, which is reflected to :ref:`dojo/store/Observable <dojo/store/Observable>` callback. 
 
 .. code-example::
   :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
