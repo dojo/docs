@@ -11,7 +11,7 @@ dojox/mvc/EditModelRefController
 .. contents ::
   :depth: 2
 
-dojox/mvc/EditModelRefController is an inheritance of dojox/mvc/ModelRefController, which keeps a copy (an attribute named by this._refOriginalModelProp, default "originalModel") of given data model (an attribute named by this._refSourceModelProp, default "sourceModel") so that it can manage the data model of before/after the edit.
+dojox/mvc/EditModelRefController is an inheritance of :ref:`dojox/mvc/ModelRefController <dojox/mvc/ModelRefController>`, which keeps a copy (an attribute named by this._refOriginalModelProp, default "originalModel") of given data model (an attribute named by this._refSourceModelProp, default "sourceModel") so that it can manage the data model of before/after the edit.
 It has two modes:
 
 * Directly reflect the edits to sourceModel (this.holdModelUntilCommit=false)
