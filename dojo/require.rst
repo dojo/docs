@@ -4,7 +4,7 @@
 dojo.require
 ============
 
-*Deprecated*.   Use require() instead.
+*Deprecated*.   Use ``require()`` instead.
 
 Old code:
 
@@ -25,8 +25,7 @@ New code:
 
 Notice how the dots (ex: dijit.form.Button) have been changed to slashes (ex: "dijit/form/Button").
 
-
 See Also
 ========
 
-* `The Dojo Loader </loader/amd>`_ - Further information on the loading process
+* :ref:`The Dojo Loader <loader/amd>`_ - Further information on the loading process
