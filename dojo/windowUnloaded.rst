@@ -4,15 +4,6 @@
 dojo.windowUnloaded
 ===================
 
-:since: V?
+*Deprecated*, see :ref:`dojo/_base/unload::addOnWindowUnload() <dojo/_base/unload#addonwindowunload>`.
 
-.. contents ::
-   :depth: 2
-
-Signal fired by impending window destruction. Favor using :ref:`dojo.addOnWindowUnload <dojo/addOnWindowUnload>` instead of this method directly.
-
-See also
-========
-
- * :ref:`dojo.addOnWindowUnload <dojo/addOnWindowUnload>`
- * :ref:`dojo.addOnUnload <dojo/addOnUnload>` - similar to addOnWindowUnload but for the onbeforeunload event.
+In addition, this was an alias to a browser specific event handler and was not very portable in the first place.
