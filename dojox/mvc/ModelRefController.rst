@@ -31,29 +31,28 @@ In below example, the text box refers to "value" property in the controller (wit
 The controller provides the "value" property on behalf of the model ("model" property in the controller).
 Two seconds later, the text box changes from "Foo" to "Bar" as the controller changes the data model it refers to:
 
+.. code-example::
+  :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
+  :toolbar: versions, themes
+  :version: 1.8-2.0
+
+.. js ::
+
+  require([
+      "dojo/parser", "dojo/Stateful", "dijit/registry",
+      "dijit/form/TextBox", "dojox/mvc/ModelRefController", "dojo/domReady!"
+  ], function(parser, Stateful, registry){
+      modelFoo = new Stateful({value: "Foo"});
+      modelBar = new Stateful({value: "Bar"});
+      setTimeout(function(){ registry.byId("ctrl").set("model", modelBar); }, 2000);
+      parser.parse();
+  });
+
 .. html ::
 
-  <html>
-      <head>
-          <script src="/path/to/dojo-toolkit/dojo/dojo.js" type="text/javascript" data-dojo-config="parseOnLoad: 0"></script>
-          <script type="text/javascript">
-              require([
-                  "dojo/parser", "dojo/Stateful", "dijit/registry",
-                  "dijit/form/TextBox", "dojox/mvc/ModelRefController", "dojo/domReady!"
-              ], function(parser, Stateful, registry){
-                  modelFoo = new Stateful({value: "Foo"});
-                  modelBar = new Stateful({value: "Bar"});
-                  setTimeout(function(){ registry.byId("ctrl").set("model", modelBar); }, 2000);
-                  parser.parse();
-              });
-          </script>
-      </head>
-      <body>
-          <script type="dojo/require">at: "dojox/mvc/at"</script>
-          <span id="ctrl" data-dojo-type="dojox/mvc/ModelRefController" data-dojo-props="model: modelFoo"></span>
-          <input type="text" data-dojo-type="dijit/form/TextBox" data-dojo-props="value: at('widget:ctrl', 'value')">
-      </body>
-  </html>
+  <script type="dojo/require">at: "dojox/mvc/at"</script>
+  <span id="ctrl" data-dojo-type="dojox/mvc/ModelRefController" data-dojo-props="model: modelFoo"></span>
+  <input type="text" data-dojo-type="dijit/form/TextBox" data-dojo-props="value: at('widget:ctrl', 'value')">
 
 In below example, it runs a custom method (lookup) when there is a change in "Zip" or "Country" attributes in the controller:
 
