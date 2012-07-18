@@ -21,7 +21,7 @@ Usage
 =====
 
 As with the rest of ``dojo/_base`` modules, if you are running the Dojo loader in legacy mode (``async: false``) this 
-module is automatically loaded.  If if it automatically loaded, you should require it in to have access to its 
+module is automatically loaded.  Even if it is automatically loaded, you should require it in to have access to its 
 features:
 
 .. js ::
