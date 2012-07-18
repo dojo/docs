@@ -33,7 +33,7 @@ The change is committed to the data store, which is reflected to dojo/store/Obse
   .. js ::
 
     require([
-        "dojo/dom", "dojo/parser", "dojo/when", "dojo/store/Observable", "dojo/store/Memory", "dijit/registry", "dojox/mvc/ListController", "dojo/domReady!"
+        "dojo/dom", "dojo/parser", "dojo/when", "dojo/store/Observable", "dojo/store/Memory", "dijit/registry", "dojo/domReady!"
     ], function(ddom, parser, when, Observable, Memory, registry){
         store = Observable(new Memory({data: [{id: "Foo", value: false}]}));
         when(parser.parse(), function(){
@@ -51,7 +51,12 @@ The change is committed to the data store, which is reflected to dojo/store/Obse
 
 .. html ::
 
+    <!--
     <script type="dojo/require">at: "dojox/mvc/at"</script>
     <span id="ctrl" data-dojo-type="dojox/mvc/EditStoreRefController" data-dojo-mixins="dojox/mvc/ListController"
      data-dojo-props="store: store, cursorIndex: 0"></span>
     <input id="check" type="checkbox" data-dojo-type="dijit/form/CheckBox" data-dojo-props="checked: at('widget:ctrl', 'value')">
+    -->
+    <script type="dojo/require">at: "dojox/mvc/at"</script>
+    <span id="ctrl" data-dojo-type="dojox/mvc/StoreRefController" data-dojo-props="store: store"></span>
+    <input type="text" data-dojo-type="dijit/form/TextBox" data-dojo-props="value: at('widget:ctrl', 'value')">
