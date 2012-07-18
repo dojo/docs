@@ -7,7 +7,8 @@ dojo/_base/event
 .. contents ::
   :depth: 2
 
-**dojo/_base/event** contains the legacy API for managing DOM events and is *deprecated*.  For handling DOM events, you should use :ref:`dojo/on <dojo/on>` instead.
+**dojo/_base/event** contains the legacy API for managing DOM events and is *deprecated*.  For handling DOM events, 
+you should use :ref:`dojo/on <dojo/on>` instead.
 
 Usage
 =====
@@ -44,6 +45,10 @@ fix()
   :description:
   :sig:
   :no-headers:
+
+*Note*: ``fix()`` also invokes :ref:`dojo/dom-geometry::normalizeEvent() <dojo/dom-geometry#normalizeevent>` in 
+addition to normal event fixing that is performaned by :ref:`dojo/on <dojo/on>`.  This is because it is expensive and 
+can be handled directly if needed.
 
 See also
 ========
