@@ -17,8 +17,8 @@ It has two modes:
 * Directly reflect the edits to sourceModel (this.holdModelUntilCommit=false)
 * Don't reflect the edits to sourceModel, until commit() is called (this.holdModelUntilCommit=true)
 
-For the 1st case, dojo.Stateful get()/set()/watch() interfaces will work with sourceModel.
-For the 2nd case, dojo.Stateful get()/set()/watch() interfaces will work with a copy of sourceModel, and sourceModel will be replaced with such copy when commit() is called.
+For the 1st case, :ref:`dojo/Stateful <dojo/Stateful>` get()/set()/watch() interfaces will work with sourceModel.
+For the 2nd case, :ref:`dojo/Stateful <dojo/Stateful>` get()/set()/watch() interfaces will work with a copy of sourceModel, and sourceModel will be replaced with such copy when commit() is called.
 
 =====
 Usage
