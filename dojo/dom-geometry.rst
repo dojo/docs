@@ -64,6 +64,10 @@ Please see the following pages for each of the following features.
 
   Returns true if the current language is left-to-right, and false otherwise.
 
+* :ref:`dojo/dom-geometry::normalizeEvent() <dojo/dom-geometry/normalizeEvent>`
+
+  Normalizes the geometry of a DOM event.
+
 * :ref:`dojo/dom-geometry::docScroll() <dojo/dom-geometry/docScroll>`
 
   Returns an object with {node, x, y} with corresponding offsets.

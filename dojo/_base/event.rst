@@ -46,7 +46,7 @@ fix()
   :sig:
   :no-headers:
 
-*Note*: ``fix()`` also invokes :ref:`dojo/dom-geometry::normalizeEvent() <dojo/dom-geometry#normalizeevent>` in 
+*Note*: ``fix()`` also invokes :ref:`dojo/dom-geometry::normalizeEvent() <dojo/dom-geometry/normalizeEvent>` in 
 addition to normal event fixing that is performaned by :ref:`dojo/on <dojo/on>`.  This is because it is expensive and 
 can be handled directly if needed.
 
