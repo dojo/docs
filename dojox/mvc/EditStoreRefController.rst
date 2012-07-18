@@ -24,7 +24,7 @@ Two seconds later, the check box changes from unchecked to checked.
 The change is committed to the data store, which is reflected to dojo/store/Observable callback. 
 
 .. code-example::
-  :djConfig: parseOnLoad: false, async: false, mvc: {debugBindings: true}
+  :djConfig: parseOnLoad: true, async: false, mvc: {debugBindings: true}
   :toolbar: versions, themes
   :version: 1.8-2.0
   :width: 320
