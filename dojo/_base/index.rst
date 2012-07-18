@@ -7,12 +7,17 @@ dojo/_base
 .. contents ::
     :depth: 2
 
-**dojo/_base** contains a number of modules that provide basic functionality, such as array operations and AJAX functionality.  Typically, if a function or class exists within the dojo namespace directly (e.g. ``dojo.forEach()``) then it is defined in dojo/_base.
+**dojo/_base** contains what formally constituted the "base" of Dojo when you required in ``dojo/dojo.js`` into your 
+project.  Currently, this is not entirely accurate and ``dojo/_base`` contains a mixture of configuration modules, 
+limited amounts of functionality that haven't been moved out to the Dojo Core and a lot of "stubs" which add "base" 
+functionality to Dojo when it is running in legacy mode.
 
-However, the modules in ``dojo/_base`` are being phased out in favor of top level modules in the ``dojo/`` directory.  The ``dojo/_base`` files will be maintained until the 2.0 release.
+If you run ``dojo/dojo.js`` in async mode (``async: true``) then the loader will only load the modules as they are 
+needed.  Also, if you do a custom build, what modules and when they are loaded are dependent upon how Dojo is built.  
+If you run in "legacy" mode, then the APIs that are part of the Dojo Base are automatically loaded and made available.
 
 Modules
--------
+=======
 
 * :ref:`dojo/_base/array <dojo/_base/array>`
 
@@ -60,7 +65,7 @@ Modules
 
 * :ref:`dojo/_base/kernel <dojo/_base/kernel>`
 
-  Defines some key parts of the Dojo API
+  Defines some key parts of the Dojo API.
 
 * :ref:`dojo/_base/lang <dojo/_base/lang>`
 
@@ -76,11 +81,11 @@ Modules
 
 * :ref:`dojo/_base/query <dojo/_base/query>`
 
-  The swiss army knife of DOM node manipulation in Dojo.
+  *Deprecated* The swiss army knife of DOM node manipulation in Dojo. Moved to :ref:`dojo/query <dojo/query>`.
 
 * :ref:`dojo/_base/sniff <dojo/sniff>`
 
-  Used for browser feature detection, deprecated and moved to ``dojo/sniff``.
+  Used for browser feature detection, deprecated and moved to :ref:`dojo/sniff`.
 
 * :ref:`dojo/_base/unload <dojo/_base/unload>`
 
@@ -96,7 +101,12 @@ Modules
 
 * :ref:`dojo/_base/xhr <dojo/_base/xhr>`
 
-  The core AJAX I/O transports and utility methods for Dojo.
+  *Deprecated* The core AJAX I/O transports and utility methods for Dojo.  New code should use 
+  :ref:`dojo/request <dojo/request>`.
 
-See also
---------
+See Also
+========
+
+* :ref:`Dojo Core Overview <dojo/index>`
+
+* :ref:`Dojo Loader <loader/amd>`
