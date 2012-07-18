@@ -131,4 +131,4 @@ Examples
 See Also
 ========
 
-* `The Dojo Loader <loader/amd>`_ - Further information on the loading process
+* :ref:`The Dojo Loader <loader/amd>`_ - Further information on the loading process
