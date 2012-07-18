@@ -11,7 +11,7 @@ dojox/mvc/ModelRefController
 .. contents ::
   :depth: 2
 
-dojox/mvc/ModelRefController is a controller that keeps a reference to dojo.Stateful-based data model.
+dojox/mvc/ModelRefController is a controller that keeps a reference to :ref:`dojo/Stateful <dojo/Stateful>`-based data model.
 Useful for:
 
 * Having a way to replace a data model with another, and making widgets respond to that
@@ -19,9 +19,9 @@ Useful for:
 
 To help above, it does the following on behalf of such model:
 
-* Provides data from model via dojo.Stateful get() interface
-* Stores data to model via dojo.Stateful set() interface
-* Watches for change in model (the attribute named by this._refModelProp, "model" is the default) via dojo.Stateful watch() interface (The callback is called when there is a change in data model, as well as when the data model itself is replaced with different one)
+* Provides data from model via :ref:`dojo/Stateful <dojo/Stateful>` get() interface
+* Stores data to model via :ref:`dojo/Stateful <dojo/Stateful>` set() interface
+* Watches for change in model (the attribute named by this._refModelProp, "model" is the default) via :ref:`dojo/Stateful <dojo/Stateful>` watch() interface (The callback is called when there is a change in data model, as well as when the data model itself is replaced with different one)
 
 =====
 Usage
