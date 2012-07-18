@@ -26,37 +26,36 @@ Usage
 
 In below example, the controller with "ctrlSource" ID specifies holding changes until commit() is called (by setting true to holdModelUntilCommit). As the change in the second check box is committed two seconds later from the change, the first check box is checked at then (when the change is committed).
 
-.. html ::
+.. code-example::
+  :djConfig: parseOnLoad: true, async: true, mvc: {debugBindings: true}
+  :version: local
+  :toolbar: versions, themes
 
-  <html>
-      <head>
-          <script src="/path/to/dojo-toolkit/dojo/dojo.js" type="text/javascript" data-dojo-config="parseOnLoad: 0"></script>
-          <script type="text/javascript">
-              require([
-                  "dojo/dom", "dojo/parser", "dojo/Stateful", "dijit/registry",
-                  "dijit/form/CheckBox", "dojox/mvc/ModelRefController", "dojox/mvc/EditModelRefController", "dojo/domReady!"
-              ], function(ddom, parser, Stateful, registry){
-                  model = new Stateful({value: false});
-                  setTimeout(function(){
-                      ddom.byId("checkEdit").click();
-                      setTimeout(function(){
-                          registry.byId("ctrlEdit").commit();
-                      }, 2000);
-                  }, 2000);
-                  parser.parse();
-              });
-          </script>
-      </head>
-      <body>
-          <script type="dojo/require">at: "dojox/mvc/at"</script>
-          <span id="ctrlSource" data-dojo-type="dojox/mvc/ModelRefController" data-dojo-props="model: model"></span>
-          <span id="ctrlEdit" data-dojo-type="dojox/mvc/EditModelRefController"
-           data-dojo-props="sourceModel: at('widget:ctrlSource', 'model'), holdModelUntilCommit: true"></span>
-          Source:
-          <input id="checkSource" type="checkbox" data-dojo-type="dijit/form/CheckBox"
-           data-dojo-props="checked: at('widget:ctrlSource', 'value')">
-          Edit:
-          <input id="checkEdit" type="checkbox" data-dojo-type="dijit/form/CheckBox"
-           data-dojo-props="checked: at('widget:ctrlEdit', 'value')">
-      </body>
-  </html>
+  .. js ::
+
+    require([
+        "dojo/dom", "dojo/parser", "dojo/Stateful", "dijit/registry",
+        "dijit/form/CheckBox", "dojox/mvc/ModelRefController", "dojox/mvc/EditModelRefController", "dojo/domReady!"
+    ], function(ddom, parser, Stateful, registry){
+        model = new Stateful({value: false});
+        setTimeout(function(){
+            ddom.byId("checkEdit").click();
+            setTimeout(function(){
+                registry.byId("ctrlEdit").commit();
+            }, 2000);
+        }, 2000);
+        parser.parse();
+    });
+
+  .. html ::
+
+    <script type="dojo/require">at: "dojox/mvc/at"</script>
+    <span id="ctrlSource" data-dojo-type="dojox/mvc/ModelRefController" data-dojo-props="model: model"></span>
+    <span id="ctrlEdit" data-dojo-type="dojox/mvc/EditModelRefController"
+     data-dojo-props="sourceModel: at('widget:ctrlSource', 'model'), holdModelUntilCommit: true"></span>
+    Source:
+    <input id="checkSource" type="checkbox" data-dojo-type="dijit/form/CheckBox"
+     data-dojo-props="checked: at('widget:ctrlSource', 'value')">
+    Edit:
+    <input id="checkEdit" type="checkbox" data-dojo-type="dijit/form/CheckBox"
+     data-dojo-props="checked: at('widget:ctrlEdit', 'value')">
