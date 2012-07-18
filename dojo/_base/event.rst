@@ -7,41 +7,45 @@ dojo/_base/event
 .. contents ::
   :depth: 2
 
-**dojo._base.event** contains methods to handle DOM events.
+**dojo/_base/event** contains the legacy API for managing DOM events and is *deprecated*.  For handling DOM events, you should use :ref:`dojo/on <dojo/on>` instead.
 
-As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including ``dojo.js`` in your page.
+Usage
+=====
 
-See :ref:`Dojo's Event System <quickstart/events>` for information on the event system.
-
-stop()
-======
-
-Prevents propagation and clobbers the default action of the passed event. The same as calling ``event.preventDefault()`` and ``event.stopPropagation()`` on some passed event.
+As with the rest of ``dojo/_base`` modules, if you are running the Dojo loader in legacy mode (``async: false``) this 
+module is automatically loaded.  Even if it is automatically loaded, you should require it in to have access to its 
+features:
 
 .. js ::
 
-    require(["dojo/ready", "dojo/dom", "dojo/_base/connect", "dojo/_base/event"], function(ready, dom, connect, event){
-        ready(function(){
-            var node = dom.byId("delete");
-            connect.connect(node, "onclick", function(e){
-                event.stop(e); // prevents default link execution
-                // some code custom execution
-            });
-        });
-    });
+  require(["dojo/_base/event"], function(event){
+    // event now contains the modules features
+  });
 
-.. html ::
+Features
+========
 
-    <a href="/delete" id="delete">Delete</a>
+stop()
+------
+
+.. api-doc :: dojo/_base/event
+  :methods: stop
+  :summary:
+  :description:
+  :sig:
+  :no-headers:
 
 fix()
-=====
+-----
 
-TODOC
-
+.. api-doc :: dojo/_base/event
+  :methods: fix
+  :summary:
+  :description:
+  :sig:
+  :no-headers:
 
 See also
 ========
 
-* :ref:`Dojo's Event System <quickstart/events>`
-* :ref:`dojo.behavior with Events <dojo/behavior>`
+* :ref:`dojo/on <dojo/on>` - Dojo's event API.
