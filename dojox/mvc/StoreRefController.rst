@@ -30,26 +30,27 @@ In below example, the text box refers to "value" property in the controller (wit
 The controller provides the "value" property, from the data coming from data store ("store" property in the controller).
 Two seconds later, the text box changes from "Foo" to "Bar" as the controller gets new data from data store.
 
-.. html ::
+.. code-example::
+  :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
+  :toolbar: versions, themes
+  :version: 1.8-2.0
+  :width: 320
+  :height: 60
 
-  <html>
-      <head>
-          <script src="/path/to/dojo-toolkit/dojo/dojo.js" type="text/javascript" data-dojo-config="parseOnLoad: 0"></script>
-          <script type="text/javascript">
-              require([
-                  "dojo/parser", "dojo/store/Memory", "dijit/registry",
-                  "dijit/form/TextBox", "dojox/mvc/StoreRefController", "dojo/domReady!"
-              ], function(parser, Memory, registry){
-                  store = new Memory({data: [{id: "Foo", value: "Foo"}, {id: "Bar", value: "Bar"}]});
-                  parser.parse();
-                  registry.byId("ctrl").getStore("Foo");
-                  setTimeout(function(){ registry.byId("ctrl").getStore("Bar"); }, 2000);
-              });
-          </script>
-      </head>
-      <body>
-          <script type="dojo/require">at: "dojox/mvc/at"</script>
-          <span id="ctrl" data-dojo-type="dojox/mvc/StoreRefController" data-dojo-props="store: store"></span>
-          <input type="text" data-dojo-type="dijit/form/TextBox" data-dojo-props="value: at('widget:ctrl', 'value')">
-      </body>
-  </html>
+  .. js ::
+
+    require([
+        "dojo/parser", "dojo/store/Memory", "dijit/registry",
+        "dijit/form/TextBox", "dojox/mvc/StoreRefController", "dojo/domReady!"
+    ], function(parser, Memory, registry){
+        store = new Memory({data: [{id: "Foo", value: "Foo"}, {id: "Bar", value: "Bar"}]});
+        parser.parse();
+        registry.byId("ctrl").getStore("Foo");
+        setTimeout(function(){ registry.byId("ctrl").getStore("Bar"); }, 2000);
+    });
+
+  .. html ::
+
+    <script type="dojo/require">at: "dojox/mvc/at"</script>
+    <span id="ctrl" data-dojo-type="dojox/mvc/StoreRefController" data-dojo-props="store: store"></span>
+    <input type="text" data-dojo-type="dijit/form/TextBox" data-dojo-props="value: at('widget:ctrl', 'value')">
