@@ -30,6 +30,8 @@ In below example, the controller with "ctrlSource" ID specifies holding changes 
   :djConfig: parseOnLoad: true, async: true, mvc: {debugBindings: true}
   :version: local
   :toolbar: versions, themes
+  :width: 320
+  :height: 60
 
   .. js ::
 
