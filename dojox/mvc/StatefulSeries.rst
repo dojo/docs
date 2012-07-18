@@ -20,7 +20,7 @@ In below example, the chart changes from 25%/25%/50% to 10%/10%/80%, as the data
   :toolbar: versions, themes
   :version: 1.8-2.0
   :width: 320
-  :height: 240
+  :height: 320
 
   .. js ::
 
