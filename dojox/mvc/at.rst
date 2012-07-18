@@ -15,7 +15,7 @@ dojox/mvc/at
 dojox/mvc/at API
 ================
 
-The module's value is an at function that can be directly called to create a pointer (called at handle) to a dojo.Stateful property.
+The module's value is an at function that can be directly called to create a pointer (called at handle) to a :ref:`dojo/Stateful <dojo/Stateful>` property.
 The at function is in below form, which returns an at handle:
 
 .. js ::
@@ -24,8 +24,8 @@ The at function is in below form, which returns an at handle:
 
 The following parameters should be provided to the at function:
 
-* target - This is the dojo.Stateful to point to, or a string either in "rel:target" or in "widget:widgetid" format. "rel:target" format looks for a particular property in parent widget (see `Relative data binding`_ for more details). "widget:widgetid" format looks for a widget with widgetid ID.
-* targetProp - This is the dojo.Stateful property name in target, or "*". Using "*" means "all properties". (See :ref:`dojox/mvc/sync:Wildcard syntax <dojox/mvc/sync#wildcard-syntax>` for more details)
+* target - This is the :ref:`dojo/Stateful <dojo/Stateful>` to point to, or a string either in "rel:target" or in "widget:widgetid" format. "rel:target" format looks for a particular property in parent widget (see `Relative data binding`_ for more details). "widget:widgetid" format looks for a widget with widgetid ID.
+* targetProp - This is the :ref:`dojo/Stateful <dojo/Stateful>` property name in target, or "*". Using "*" means "all properties". (See :ref:`dojox/mvc/sync:Wildcard syntax <dojox/mvc/sync#wildcard-syntax>` for more details)
 
 -------------------------------
 at function syntax with widgets

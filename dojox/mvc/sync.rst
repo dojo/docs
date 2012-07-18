@@ -15,7 +15,7 @@ dojox/mvc/sync
 dojox/mvc/sync API
 ==================
 
-The module's value is a sync function that can be directly called to synchronize two dojo.Stateful properties.
+The module's value is a sync function that can be directly called to synchronize two :ref:`dojo/Stateful <dojo/Stateful>` properties.
 The sync function is in below form:
 
 .. js ::
@@ -24,10 +24,10 @@ The sync function is in below form:
 
 The following parameters should be provided to the sync function:
 
-* source - This is the dojo.Stateful to get one of its properties, or its all properties, to be in sync.
-* sourceProp - This is the dojo.Stateful property name in source, or "*". Using "*" means to get all properties in sync. (See `Wildcard syntax`_ section fore more details)
-* target - This is the dojo.Stateful to get one of its properties, or its all properties, to be in sync.
-* targetProp - This is the dojo.Stateful property name in target, or "*". Using "*" means to get all properties in sync. (See `Wildcard syntax`_ section fore more details)
+* source - This is the :ref:`dojo/Stateful <dojo/Stateful>` to get one of its properties, or its all properties, to be in sync.
+* sourceProp - This is the :ref:`dojo/Stateful <dojo/Stateful>` property name in source, or "*". Using "*" means to get all properties in sync. (See `Wildcard syntax`_ section fore more details)
+* target - This is the :ref:`dojo/Stateful <dojo/Stateful>` to get one of its properties, or its all properties, to be in sync.
+* targetProp - This is the :ref:`dojo/Stateful <dojo/Stateful>` property name in target, or "*". Using "*" means to get all properties in sync. (See `Wildcard syntax`_ section fore more details)
 * options - The optional list of options. (See `Data binding direction`_ section and `Data converter`_ section for more details)
 
 The basic usage looks like below, where target.foo will become "fooValue" as it synchronizes with source.foo:
