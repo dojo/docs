@@ -93,7 +93,8 @@ Basic example, input-output sync: Anything typed into the input fields will be u
     var model;
     require([
         "dojo/parser",
-        "dojo/Stateful"
+        "dojo/Stateful",
+        "dojo/domReady!"
     ], function(parser, Stateful){
         // For this test we can use a simple dojo/Stateful as our model
         model = new Stateful({First: "John", Last: "Doe", Email: "jdoe@example.com"});
@@ -161,7 +162,8 @@ Basic example two, input-output sync: Anything typed into the input fields will 
     var model;
     require([
         "dojo/parser",
-        "dojo/Stateful"
+        "dojo/Stateful",
+        "dojo/domReady!"
     ], function(parser, Stateful){
         model = new Stateful({First: "John", Last: "Doe", Email: "jdoe@example.com"});
         parser.parse();
