@@ -35,6 +35,8 @@ Two seconds later, the text box changes from "Foo" to "Bar" as the controller ch
   :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
   :toolbar: versions, themes
   :version: 1.8-2.0
+  :width: 320
+  :height: 60
 
   .. js ::
 
