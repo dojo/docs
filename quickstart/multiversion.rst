@@ -10,6 +10,8 @@ Multiple Versions of Dojo on a Page
 .. contents ::
    :depth: 3
 
+*Deprecated*  The information contained in this document is deprecated and not up to date.
+
 Dojo has some special configuration and build options to allow more than one version of Dojo to be used on a web page.
 
 Introduction

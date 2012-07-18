@@ -4,10 +4,4 @@
 OOP with Dojo
 =============
 
-``TODOC``
-
-See Also
---------
-
-  * :ref:`dojo.declare <dojo/declare>`
-  * :ref:`Writing Widgets <quickstart/writingWidgets>`
+*Deprecated*, this document has been deprecated.  Please see `Classy JavaScript with dojo/_base/declare Tutorial <http://dojotoolkit.org/documentation/tutorials/1.7/declare/>`_ instead.

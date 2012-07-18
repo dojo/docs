@@ -8,6 +8,8 @@ Implementing a RESTful Service Server-Side
 .. contents ::
     :depth: 3
 
+*Deprecated*  The information contained in this document is deprecated and likely out of date.
+
 You find yourself banging your head against the wall, because you hear all the "cool kids" are using REST and you see
 there is quite an extensive implementation of RESTful clients in dojo, and your boss says "I want some of that".  Well,
 hopefully this tutorial can help you out.

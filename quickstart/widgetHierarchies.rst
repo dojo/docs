@@ -8,6 +8,8 @@ Widget Hierarchies: containers, dijit._Container, and startup()
 .. contents ::
     :depth: 2
 
+*Deprecated* This document is deprecated.  The information contained in here maybe out of date.
+
 Often developers will build a hierarchy of widgets.  For example, a :ref:`dijit.Menu <dijit/Menu>` will contain :ref:`dijit.MenuItem <dijit/MenuItem>`'s, or a :ref:`dijit.layout.BorderContainer <dijit/layout/BorderContainer>` will contain multiple :ref:`dijit.layout.ContentPane <dijit/layout/ContentPane>`'s, each of which contains some other widgets like :ref:`dijit.form.TextBox <dijit/form/TextBox>` and :ref:`dijit.form.Button <dijit/form/Button>`.
 
 
