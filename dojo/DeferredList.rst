@@ -7,6 +7,10 @@ dojo/DeferredList
 .. contents ::
   :depth: 2
 
+*Deprecated*  You should migrate to the new :ref:`dojo/promise <dojo/promise>` API.  
+:ref:`dojo/promise/all <dojo/promise/all>` and :ref:`dojo/promise/first <dojo/promise/first>` replace the 
+functionality provided by ``dojo/DeferredList``.
+
 Introduction
 ============
 
