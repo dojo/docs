@@ -36,23 +36,23 @@ Two seconds later, the text box changes from "Foo" to "Bar" as the controller ch
   :toolbar: versions, themes
   :version: 1.8-2.0
 
-.. js ::
+  .. js ::
 
-  require([
-      "dojo/parser", "dojo/Stateful", "dijit/registry",
-      "dijit/form/TextBox", "dojox/mvc/ModelRefController", "dojo/domReady!"
-  ], function(parser, Stateful, registry){
-      modelFoo = new Stateful({value: "Foo"});
-      modelBar = new Stateful({value: "Bar"});
-      setTimeout(function(){ registry.byId("ctrl").set("model", modelBar); }, 2000);
-      parser.parse();
-  });
+    require([
+        "dojo/parser", "dojo/Stateful", "dijit/registry",
+        "dijit/form/TextBox", "dojox/mvc/ModelRefController", "dojo/domReady!"
+    ], function(parser, Stateful, registry){
+        modelFoo = new Stateful({value: "Foo"});
+        modelBar = new Stateful({value: "Bar"});
+        setTimeout(function(){ registry.byId("ctrl").set("model", modelBar); }, 2000);
+        parser.parse();
+    });
 
-.. html ::
+  .. html ::
 
-  <script type="dojo/require">at: "dojox/mvc/at"</script>
-  <span id="ctrl" data-dojo-type="dojox/mvc/ModelRefController" data-dojo-props="model: modelFoo"></span>
-  <input type="text" data-dojo-type="dijit/form/TextBox" data-dojo-props="value: at('widget:ctrl', 'value')">
+    <script type="dojo/require">at: "dojox/mvc/at"</script>
+    <span id="ctrl" data-dojo-type="dojox/mvc/ModelRefController" data-dojo-props="model: modelFoo"></span>
+    <input type="text" data-dojo-type="dijit/form/TextBox" data-dojo-props="value: at('widget:ctrl', 'value')">
 
 In below example, it runs a custom method (lookup) when there is a change in "Zip" or "Country" attributes in the controller:
 
