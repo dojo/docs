@@ -240,7 +240,7 @@ Profile Resources
 
 A profile resource is a Javascript resource that defines the variable ``profile``, which must be a Javascript
 object. Typically, a profile resource is given the file type
-".profile.js". /util/build/examples/simple-profile1.profile.js contains a trivial example; here are the contents of that
+".profile.js". /util/build/examples/simple1.profile.js contains a trivial example; here are the contents of that
 resource:
 
 .. js ::
