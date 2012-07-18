@@ -17,35 +17,35 @@ A widget that creates child widgets repeatedly based on the children attribute (
 Parameters
 ======================
 
-+------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
-|Parameter         |Type         |Default   |Description                                                                                             |
-+------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
-|children          |StatefulArray|          |The array of data model that is used to render child nodes.                                             |
-+------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
-|childClz          |Function     |          |The class of the child widget. Takes precedence over childType/childMixins.                             |
-|                  |             |          |                                                                                                        |
-+------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
-|childType         |String       |          |The module ID of child widget. childClz takes precedence over this/childMixins.                         |
-|                  |             |          |Can be specified via data-mvc-child-type attribute of widget declaration.                               |
-+------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
-|childMixins       |String       |          |The list of module IDs, separated by comma, of the classes that will be mixed into child widget.        |
-|                  |             |          |childClz takes precedence over childType/this.Can be specified via data-mvc-child-mixins attribute of   |
-|                  |             |          |widget declaration.                                                                                     |
-+------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
-|childParams       |Object       |          |The mixin properties for child widget. Can be specified via data-mvc-child-props attribute of widget    |
-|                  |             |          |declaration. "this" in data-mvc-child-props will have the following properties:                         |
-|                  |             |          |- this.parent - This widget's instance.                                                                 |
-|                  |             |          |- this.target - The data item in children.                                                              |
-+------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
-|childBindings     |Object       |          |Data bindings for child widget.                                                                         |
-|                  |             |          |                                                                                                        |
-+------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
-|templateString    |String       |          |The template string for each child items. templateString in child widgets take precedence over this.    |
-|                  |             |          |                                                                                                        |
-+------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
-|partialRebuild    |Boolean      |false     |If true, only rebuild repeat items for changed elements. Otherwise, rebuild everything if there is a    |
-|                  |             |          |change in children.                                                                                     |
-+------------------+-------------+----------+--------------------------------------------------------------------------------------------------------+
++------------------+----------------------------------------------+----------+--------------------------------------------------------------------------------------------------------+
+|Parameter         |Type                                          |Default   |Description                                                                                             |
++------------------+----------------------------------------------+----------+--------------------------------------------------------------------------------------------------------+
+|children          |:ref:`StatefulArray <dojox/mvc/StatefulArray>`|          |The array of data model that is used to render child nodes.                                             |
++------------------+----------------------------------------------+----------+--------------------------------------------------------------------------------------------------------+
+|childClz          |Function                                      |          |The class of the child widget. Takes precedence over childType/childMixins.                             |
+|                  |                                              |          |                                                                                                        |
++------------------+----------------------------------------------+----------+--------------------------------------------------------------------------------------------------------+
+|childType         |String                                        |          |The module ID of child widget. childClz takes precedence over this/childMixins.                         |
+|                  |                                              |          |Can be specified via data-mvc-child-type attribute of widget declaration.                               |
++------------------+----------------------------------------------+----------+--------------------------------------------------------------------------------------------------------+
+|childMixins       |String                                        |          |The list of module IDs, separated by comma, of the classes that will be mixed into child widget.        |
+|                  |                                              |          |childClz takes precedence over childType/this.Can be specified via data-mvc-child-mixins attribute of   |
+|                  |                                              |          |widget declaration.                                                                                     |
++------------------+----------------------------------------------+----------+--------------------------------------------------------------------------------------------------------+
+|childParams       |Object                                        |          |The mixin properties for child widget. Can be specified via data-mvc-child-props attribute of widget    |
+|                  |                                              |          |declaration. "this" in data-mvc-child-props will have the following properties:                         |
+|                  |                                              |          |- this.parent - This widget's instance.                                                                 |
+|                  |                                              |          |- this.target - The data item in children.                                                              |
++------------------+----------------------------------------------+----------+--------------------------------------------------------------------------------------------------------+
+|childBindings     |Object                                        |          |Data bindings for child widget.                                                                         |
+|                  |                                              |          |                                                                                                        |
++------------------+----------------------------------------------+----------+--------------------------------------------------------------------------------------------------------+
+|templateString    |String                                        |          |The template string for each child items. templateString in child widgets take precedence over this.    |
+|                  |                                              |          |                                                                                                        |
++------------------+----------------------------------------------+----------+--------------------------------------------------------------------------------------------------------+
+|partialRebuild    |Boolean                                       |false     |If true, only rebuild repeat items for changed elements. Otherwise, rebuild everything if there is a    |
+|                  |                                              |          |change in children.                                                                                     |
++------------------+----------------------------------------------+----------+--------------------------------------------------------------------------------------------------------+
 
 
 Examples
