@@ -48,7 +48,7 @@ Features
 
 * Though some applications use all of these features, many applications do not.
 
-  * As 1.8 dojox/mvc supports binding any stateful attribute, dojox/mvc/StatefulModel‚Äôs unique approach of converting non-object value to dojox/mvc/StatefulModel (with ‚Äúvalue‚Äù attribute) is no longer needed. Regular dojo/Stateful can be used as data model, in many cases.
+  * As 1.8 dojox/mvc supports binding any stateful attribute, dojox/mvc/StatefulModel's unique approach of converting non-object value to dojox/mvc/StatefulModel (with "value" attribute) is no longer needed. Regular dojo/Stateful can be used as data model, in many cases.
 
   * Some applications do not use array in data model at all.
 
