@@ -57,7 +57,7 @@ Create multiple instances of dijit/TextBox based on the data in array, and
 create multiple instances a label and a Textbox using dojox/mvc/InlineTemplate.
 
 .. code-example::
-  :djConfig: parseOnLoad: true, async: true, mvc: {debugBindings: true}
+  :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
   :version: local
   :toolbar: versions, themes
 
@@ -106,6 +106,8 @@ create multiple instances a label and a Textbox using dojox/mvc/InlineTemplate.
 
         // The getStateful call will take json data and create make it Stateful
         searchRecords = getStateful(data);
+
+        parser.parse();
     });
 
   .. css ::
@@ -153,7 +155,7 @@ Programmatic example 1:
 Create multiple instances a label and a Textbox with the First and Last name using two types of programmatic creation of a WidgetList.
 
 .. code-example::
-  :djConfig: parseOnLoad: true, async: true, mvc: {debugBindings: true}
+  :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
   :version: local
   :toolbar: versions, themes
 
