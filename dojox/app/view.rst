@@ -53,14 +53,14 @@ For example:
 		init: function(){
 			registry.byId("mywidget").on("widgetEvent", lang.hitch(this, function(evt){
 				// save the value back to the model
-				this.loadedModel.myModel.value = ...;
+				this.loadedModels.myModel.value = ...;
 			}));
 		},
 
 		beforeActivate: function(){
 			// set the model value on the view
 			var widget = registry.byId("mywidget");
-			widget.set("value", this.loadedModel.myModel.value);
+			widget.set("value", this.loadedModels.myModel.value);
 		},
 
 		destroy: function(){
