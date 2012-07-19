@@ -149,7 +149,7 @@ An example of using ``dojo/date/locale`` as data converter is like below:
   .. js ::
 
     require(["dojo/Stateful", "dojo/date/locale", "dojox/mvc/sync"], function(Stateful, dateLocale, sync){
-      var source = new Stateful({date: new Date()}),
+      var source = new Stateful({date: new Date(1970, 0, 1, 0, 0, 0, 0)}),
        target = new Stateful();
       sync(source, "date", target, "date", {converter: dateLocale}); // Start synchronization between source.date and target.date
       alert(target.get("date")); // target shows formatted date
