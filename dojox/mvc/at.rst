@@ -105,13 +105,13 @@ In below example, edit in text box is reflected to the text next to it:
 Data binding direction
 ----------------------
 
-By default, ``at`` function used with widget watches for changes both at ``target.targetProp`` and the property (attribute) in widget and reflects one change to another. ``at`` function allows to specify the direction via direction function of at handle, which takes one of the following at its first argument:
+By default, ``at`` function used with widget watches for changes both at ``target.targetProp`` and the property (attribute) in widget and reflects one change to another. ``at`` function allows to specify the direction via ``direction`` function of at handle, which takes one of the following at its first argument:
 
 * ``at.from`` - Only reflect changes in ``target.targetProp`` to the property (attribute) in widget
 * ``at.to`` - Only reflect changes in the property (attribute) in widget to ``target.targetProp``
 * ``at.both`` - Reflect changes in each other (Default)
 
-The basic usage of direction function is in below form, where change in ``target.targetProp`` will be reflected to value in TextBox, but not in the opposite direction:
+The basic usage of ``direction`` function is in below form, where change in ``target.targetProp`` will be reflected to value in TextBox, but not in the opposite direction:
 
 .. code-example::
   :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
@@ -145,7 +145,7 @@ See :ref:`dojox/mvc/sync:Data binding direction <dojox/mvc/sync#data-binding-dir
 Data converter
 --------------
 
-``at`` function used with widget allows ``target.targetProp`` and property (attribute) in widget to have different format as they are synchronized, for example, ``target.targetProp`` to have Number 2 and property (attribute) in widget to have String "2". It's done via ``transform`` function of at handle, in below form:
+``at`` function used with widget allows ``target.targetProp`` and property (attribute) in widget to have different format as they are synchronized, for example, ``target.targetProp`` to have Number ``2`` and property (attribute) in widget to have String ``"2"``. It's done via ``transform`` function of at handle, in below form:
 
 .. html ::
 
