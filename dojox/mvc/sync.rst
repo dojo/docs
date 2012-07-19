@@ -44,9 +44,9 @@ The basic usage looks like below, where ``target.foo`` will become "fooValue0" a
     require(["dojo/Stateful", "dojox/mvc/sync"], function(Stateful, sync){
       var source = new Stateful({foo: "fooValue0"}),
        target = new Stateful();
-      sync(source, "foo", target, "foo");
+      sync(source, "foo", target, "foo"); // Start synchronization between source.foo and target.foo
       alert(target.get("foo"));
-      target.set("foo", "fooValue1");
+      target.set("foo", "fooValue1"); // The change is reflected to source.foo, too, as source.foo is in sync with target.foo by sync function
       alert(source.get("foo"));
     });
 
@@ -64,7 +64,7 @@ The basic usage looks like below, where ``target.foo`` will become "fooValue0" a
     require(["dojo/Stateful", "dojox/mvc/sync"], function(Stateful, sync){
       var source = new Stateful({foo: "fooValue0"}),
        target = new Stateful();
-      var handle = sync(source, "foo", target, "foo");
+      var handle = sync(source, "foo", target, "foo"); // Start synchronization between source.foo and target.foo
       alert(target.get("foo"));
       handle.remove(); // Stop synchronization between source.foo and target.foo
       target.set("foo", "fooValue1");
