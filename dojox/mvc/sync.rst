@@ -66,7 +66,7 @@ The basic usage looks like below, where ``target.foo`` will become "fooValue0" a
        target = new Stateful();
       var handle = sync(source, "foo", target, "foo");
       alert(target.get("foo"));
-      handle.remove();
+      handle.remove(); // Stop synchronization between source.foo and target.foo
       target.set("foo", "fooValue1");
       alert(source.get("foo")); // Still "fooValue0" as synchronization had been stopped before "fooValue1" is set to target.foo
     });
