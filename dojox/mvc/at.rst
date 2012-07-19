@@ -167,7 +167,7 @@ transform function can be used with any objects having format/parse functions, l
   :toolbar: versions, themes
   :version: 1.8-2.0
   :width: 480
-  :height: 60
+  :height: 320
 
   .. js ::
 
@@ -188,7 +188,7 @@ transform function can be used with any objects having format/parse functions, l
     <input data-dojo-type="dijit/form/DateTextBox" 
      data-dojo-props="value: at(model, 'value')">
 
-The constraints attribute in the non-editable UI showing date is passed as the 2nd parameter of format/parse functions.
+The constraints attribute in the non-editable UI showing date is passed as the 2nd parameter to format/parse functions.
 
 See :ref:`dojox/mvc/sync:Data converter <dojox/mvc/sync#data-converter>` for more details.
 
