@@ -183,9 +183,12 @@ transform function can be used with any objects having format/parse functions, l
     <span data-dojo-id="model" data-dojo-type="dojo/Stateful" data-dojo-props="value: new Date"></span>
     <span data-dojo-type="dijit/_WidgetBase"
      data-dojo-props="_setValueAttr: {node: 'domNode', type: 'innerText'},
+                      constraints: {selector: 'date'},
                       value: at(model, 'value').transform(dateLocale)"></span>
     <input data-dojo-type="dijit/form/DateTextBox" 
      data-dojo-props="value: at(model, 'value')">
+
+The constraints attribute in the non-editable UI showing date is passed as the 2nd parameter of format/parse functions.
 
 See :ref:`dojox/mvc/sync:Data converter <dojox/mvc/sync#data-converter>` for more details.
 
