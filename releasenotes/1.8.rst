@@ -716,6 +716,17 @@ dojox/dgauges
   allowing you to create your own gauges as well as predefined, ready to use gauge widgets. Both circular and 
   rectangular gauges (horizontal and vertical) are supported. See :ref:`dojox/dguages <dojox/dgauges>`.
 
+dojox/gantt
+-------------
+
+- Updated source code to AMD, and refactored to use recent advances to the Dojo APIs.
+
+dojox/widget/Calendar
+---------------------
+
+- Updated source code to AMD, and refactored to use recent advances to the Dojo APIs, for dojox/widget/Calendar 
+  and associated widgets.
+
 dojox/data/LightstreamerStore
 -----------------------------
 
