@@ -46,7 +46,7 @@ The basic usage looks like below, where ``target.foo`` will become "fooValue0" a
        target = new Stateful();
       sync(source, "foo", target, "foo"); // Start synchronization between source.foo and target.foo
       alert(target.get("foo"));
-      target.set("foo", "fooValue1"); // The change is reflected to source.foo, too, as source.foo is in sync with target.foo by sync function
+      target.set("foo", "fooValue1"); // This change is reflected to source.foo, too, as source.foo is in sync with target.foo by sync function
       alert(source.get("foo"));
     });
 
@@ -91,6 +91,28 @@ By default, ``sync`` function watches for changes both at ``target.targetProp`` 
 * ``sync.to`` - Only reflect changes in ``target.targetProp`` to ``source.sourceProp``
 * ``sync.both`` - Reflect changes in each other (Default)
 
+The basic usage of data binding direction looks like below, where change in ``source.foo`` is reflected to ``target.foo``, but not the way around:
+
+.. code-example::
+  :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
+  :toolbar: versions, themes
+  :version: 1.8-2.0
+  :width: 480
+  :height: 80
+
+  .. js ::
+
+    require(["dojo/Stateful", "dojox/mvc/sync"], function(Stateful, sync){
+      var source = new Stateful({foo: "fooValue0"}),
+       target = new Stateful();
+      sync(source, "foo", target, "foo", {bindDirection: sync.from}); // Start one-way synchronization from source.foo to target.foo
+      alert(target.get("foo"));
+      source.set("foo", "fooValue1"); // This change is reflected to target.foo, too, as target.foo reflects the change in source.foo by sync function
+      alert(target.get("foo"));
+      target.set("foo", "fooValue2"); // This change won't be reflect to source.foo, as the data binding is only from source.foo to target.foo, not the other way around
+      alert(source.get("foo")); // source.foo still is "fooValue1"
+    });
+
 --------------
 Data converter
 --------------
@@ -114,3 +136,23 @@ The basic usage of ``options.converter`` is like below:
       }
     }
   });
+
+An example of using ``dojo/date/locale`` as data converter is like below:
+
+.. code-example::
+  :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
+  :toolbar: versions, themes
+  :version: 1.8-2.0
+  :width: 480
+  :height: 80
+
+  .. js ::
+
+    require(["dojo/Stateful", "dojo/date/locale", "dojox/mvc/sync"], function(Stateful, dateLocale, sync){
+      var source = new Stateful({date: new Date()}),
+       target = new Stateful();
+      sync(source, "date", target, "date", {converter: dateLocale}); // Start synchronization between source.date and target.date
+      alert(target.get("date")); // target shows formatted date
+      source.set("date", new Date()); // This change is reflected to target.date, target.date will be formatted version of newer date
+      alert(target.get("date"));
+    });
