@@ -133,6 +133,9 @@ The basic usage of direction function is in below form, where change in target.t
   .. html ::
 
     <script type="dojo/require">at: "dojox/mvc/at"</script>
+    <span data-dojo-type="dijit/_WidgetBase"
+     data-dojo-props="_setValueAttr: {node: 'domNode', type: 'innerText'},
+                      value: at(model, 'value')"></span>
     <input data-dojo-type="dijit/form/TextBox" 
      data-dojo-props="value: at(model, 'value').direction(at.from)">
 
@@ -180,7 +183,7 @@ transform function can be used with any objects having format/parse functions, l
     <span data-dojo-id="model" data-dojo-type="dojo/Stateful" data-dojo-props="value: new Date"></span>
     <span data-dojo-type="dijit/_WidgetBase"
      data-dojo-props="_setValueAttr: {node: 'domNode', type: 'innerText'},
-                      value: at(model, 'value').transform(dateLocale)"
+                      value: at(model, 'value').transform(dateLocale)"></span>
     <input data-dojo-type="dijit/form/DateTextBox" 
      data-dojo-props="value: at(model, 'value')">
 
