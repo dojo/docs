@@ -53,7 +53,7 @@ at function syntax with widgets
 Basic examples
 --------------
 
-In below example, two seconds later, the text box changes from "Foo" to "Bar" as the ``value`` property in model changes.
+In below example, two seconds later, the text box changes from "Foo" to "Bar" as the ``value`` property in ``model`` changes.
 
 .. code-example::
   :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
@@ -107,8 +107,8 @@ Data binding direction
 
 By default, ``at`` function used with widget watches for changes both at ``target.targetProp`` and the property (attribute) in widget and reflects one change to another. ``at`` function allows to specify the direction via direction function of at handle, which takes one of the following at its first argument:
 
-* ``at.from`` - Only reflect changes in target.targetProp to the property (attribute) in widget
-* ``at.to`` - Only reflect changes in the property (attribute) in widget to target.targetProp
+* ``at.from`` - Only reflect changes in ``target.targetProp`` to the property (attribute) in widget
+* ``at.to`` - Only reflect changes in the property (attribute) in widget to ``target.targetProp``
 * ``at.both`` - Reflect changes in each other (Default)
 
 The basic usage of direction function is in below form, where change in ``target.targetProp`` will be reflected to value in TextBox, but not in the opposite direction:
