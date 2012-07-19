@@ -50,6 +50,27 @@ The basic usage looks like below, where ``target.foo`` will become "fooValue0" a
       alert(source.get("foo"));
     });
 
+``sync`` function returns a handle that allows stopping synchronization at some point in the future. For example:
+
+.. code-example::
+  :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
+  :toolbar: versions, themes
+  :version: 1.8-2.0
+  :width: 480
+  :height: 80
+
+  .. js ::
+
+    require(["dojo/Stateful", "dojox/mvc/sync"], function(Stateful, sync){
+      var source = new Stateful({foo: "fooValue0"}),
+       target = new Stateful();
+      var handle = sync(source, "foo", target, "foo");
+      alert(target.get("foo"));
+      handle.remove();
+      target.set("foo", "fooValue1");
+      alert(source.get("foo")); // Still "fooValue0" as synchronization had been stopped before "fooValue1" is set to target.foo
+    });
+
 ---------------
 Wildcard syntax
 ---------------
