@@ -377,7 +377,7 @@ The above example won't work. If we want to access this.foo, we need to have 'me
 
 mixin()
 =======
-mixin() is a simple utility function for mixing objects together. Mixin combines two objects from right to left, overwriting the left-most object, and returning the newly mixed object for use. mixin() is very similar to ``extend()`` but only works on objects, whereas extend explicitly extends an object.prototype. Merging two objects
+mixin() is a simple utility function for mixing objects together. Mixin combines two objects from right to left, overwriting the left-most object, and returning the newly mixed object for use. mixin() is very similar to ``extend()`` but only works on objects, whereas extend explicitly extends an object.prototype.
 
 
 Simple Mixes
