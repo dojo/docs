@@ -15,8 +15,8 @@ dojox/mvc/at
 dojox/mvc/at API
 ================
 
-The module's value is an at function that can be directly called to create a pointer (called at handle) to a :ref:`dojo/Stateful <dojo/Stateful>` property.
-The at function is in below form, which returns an at handle:
+The module's value is an ``at`` function that can be directly called to create a pointer (called at handle) to a :ref:`dojo/Stateful <dojo/Stateful>` property.
+The ``at`` function is in below form, which returns an at handle:
 
 .. js ::
 
@@ -24,14 +24,14 @@ The at function is in below form, which returns an at handle:
 
 The following parameters should be provided to the at function:
 
-* target - This is the :ref:`dojo/Stateful <dojo/Stateful>` to point to, or a string either in "rel:target" or in "widget:widgetid" format. "rel:target" format looks for a particular property in parent widget (see `Relative data binding`_ for more details). "widget:widgetid" format looks for a widget with widgetid ID.
-* targetProp - This is the :ref:`dojo/Stateful <dojo/Stateful>` property name in target, or "*". Using "*" means "all properties". (See :ref:`dojox/mvc/sync:Wildcard syntax <dojox/mvc/sync#wildcard-syntax>` for more details)
+* ``target`` - This is the :ref:`dojo/Stateful <dojo/Stateful>` to point to, or a string either in ``rel:target`` or in ``widget:widgetid`` format. ``rel:target`` format looks for a particular property in parent widget (see `Relative data binding`_ for more details). ``widget:widgetid`` format looks for a widget with ``widgetid`` ID.
+* ``targetProp`` - This is the :ref:`dojo/Stateful <dojo/Stateful>` property name in target, or ``*``. Using ``*`` means "all properties". (See :ref:`dojox/mvc/sync:Wildcard syntax <dojox/mvc/sync#wildcard-syntax>` for more details)
 
 -------------------------------
 at function syntax with widgets
 -------------------------------
 
-at function is typically used as a mixin property of a widget (data-dojo-props or the first parameter of widget's constructor), in below forms, where in both cases the value property in above TextBox is synchronized with target.targetProp:
+``at`` function is typically used as a mixin property of a widget (``data-dojo-props`` or the first parameter of widget's constructor), in below forms, where in both cases the value property in above TextBox is synchronized with ``target.targetProp``:
 
 .. html ::
 
@@ -53,7 +53,7 @@ at function is typically used as a mixin property of a widget (data-dojo-props o
 Basic examples
 --------------
 
-In below example, two seconds later, the text box changes from "Foo" to "Bar" as the "value" property in model changes.
+In below example, two seconds later, the text box changes from "Foo" to "Bar" as the ``value`` property in model changes.
 
 .. code-example::
   :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
@@ -105,13 +105,13 @@ In below example, edit in text box is reflected to the text next to it:
 Data binding direction
 ----------------------
 
-By default, at function used with widget watches for changes both at target.targetProp and the property (attribute) in widget and reflects one change to another. at function allows to specify the direction via direction function of at handle, which takes one of the following at its first argument:
+By default, ``at`` function used with widget watches for changes both at ``target.targetProp`` and the property (attribute) in widget and reflects one change to another. ``at`` function allows to specify the direction via direction function of at handle, which takes one of the following at its first argument:
 
-* at.from - Only reflect changes in target.targetProp to the property (attribute) in widget
-* at.to - Only reflect changes in the property (attribute) in widget to target.targetProp
-* at.both - Reflect changes in each other (Default)
+* ``at.from`` - Only reflect changes in target.targetProp to the property (attribute) in widget
+* ``at.to`` - Only reflect changes in the property (attribute) in widget to target.targetProp
+* ``at.both`` - Reflect changes in each other (Default)
 
-The basic usage of direction function is in below form, where change in target.targetProp will be reflected to value in TextBox, but not in the opposite direction:
+The basic usage of direction function is in below form, where change in ``target.targetProp`` will be reflected to value in TextBox, but not in the opposite direction:
 
 .. code-example::
   :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
@@ -145,7 +145,7 @@ See :ref:`dojox/mvc/sync:Data binding direction <dojox/mvc/sync#data-binding-dir
 Data converter
 --------------
 
-at function used with widget allows target.targetProp and property (attribute) in widget to have different format as they are synchronized, for example, target.targetProp to have Number 2 and property (attribute) in widget to have String "2". It's done via transform function of at handle, in below form:
+``at`` function used with widget allows ``target.targetProp`` and property (attribute) in widget to have different format as they are synchronized, for example, ``target.targetProp`` to have Number 2 and property (attribute) in widget to have String "2". It's done via ``transform`` function of at handle, in below form:
 
 .. html ::
 
@@ -160,7 +160,7 @@ at function used with widget allows target.targetProp and property (attribute) i
                       }
                     })">
 
-transform function can be used with any objects having format/parse functions, like dojo/number and dojo/date/locale. For example, dojo/date/locale can be used with transform function, in below form:
+``transform`` function can be used with any objects having ``format``/``parse`` functions, like ``dojo/number`` and ``dojo/date/locale``. For example, ``dojo/date/locale`` can be used with ``transform`` function, in below form:
 
 .. code-example::
   :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
@@ -188,7 +188,7 @@ transform function can be used with any objects having format/parse functions, l
     <input data-dojo-type="dijit/form/DateTextBox" 
      data-dojo-props="value: at(model, 'value')">
 
-The constraints attribute in the non-editable UI showing date is passed as the 2nd parameter to format/parse functions.
+The ``constraints`` attribute in the non-editable UI showing date is passed as the 2nd parameter to ``format``/``parse`` functions.
 
 See :ref:`dojox/mvc/sync:Data converter <dojox/mvc/sync#data-converter>` for more details.
 
@@ -196,5 +196,5 @@ See :ref:`dojox/mvc/sync:Data converter <dojox/mvc/sync#data-converter>` for mor
 Relative data binding
 ---------------------
 
-When "rel:propInParent" format (propInParent can be omitted here) is specified in the first argument of at function, it goes up DOM hierarchy to find a widget meeting the following criteria: The property in widget pointed by widget[widget._relTargetProp] (or widget.target as the default) exists, or such property is defined in the widget.
-Then widget[widget._relTargetProp || "target"].propInParent (or simply widget[widget._relTargetProp || "target"] if propInParent is omitted) will be used as data binding target, which the property in widget specified in data binding syntax will be in sync with. When binding target changes, data binding will be reestablished with the newer target.
+When ``rel:propInParent`` format (``propInParent`` can be omitted here) is specified in the first argument of ``at`` function, it goes up DOM hierarchy to find a widget meeting the following criteria: The property in widget pointed by ``widget[widget._relTargetProp]`` (or ``widget.target`` as the default) exists, or such property is defined in the widget.
+Then ``widget[widget._relTargetProp || "target"].propInParent`` (or simply ``widget[widget._relTargetProp || "target"]`` if ``propInParent`` is omitted) will be used as data binding target, which the property in widget specified in data binding syntax will be in sync with. When binding target changes, data binding will be reestablished with the newer target.
