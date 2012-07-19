@@ -168,7 +168,7 @@ Example: extend() vs mixin()
 
 .. js ::
   
-    require(["dojo/_base/lang", "json()"], function(lang, json){
+    require(["dojo/_base/lang", "dojo/json"], function(lang, json){
         // define a class
         var myClass = function(){
             this.defaultProp = "default value";
