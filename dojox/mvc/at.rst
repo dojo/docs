@@ -113,11 +113,28 @@ By default, at function used with widget watches for changes both at target.targ
 
 The basic usage of direction function is in below form, where change in target.targetProp will be reflected to value in TextBox, but not in the opposite direction:
 
-.. html ::
+.. code-example::
+  :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
+  :toolbar: versions, themes
+  :version: 1.8-2.0
+  :width: 480
+  :height: 60
 
-  <script type="dojo/require">at: "dojox/mvc/at"</script>
-  <input data-dojo-type="dijit/form/TextBox" 
-   data-dojo-props="value: at(target, 'targetProp').direction(at.from)">
+  .. js ::
+
+    require([
+        "dojo/parser", "dojo/Stateful", "dojo/domReady!"
+    ], function(parser, Stateful){
+        model = new Stateful({value: "Foo"});
+        parser.parse();
+        setTimeout(function(){ model.set("value", "Bar"); }, 2000);
+    });
+
+  .. html ::
+
+    <script type="dojo/require">at: "dojox/mvc/at"</script>
+    <input data-dojo-type="dijit/form/TextBox" 
+     data-dojo-props="value: at(model, 'value').direction(at.from)">
 
 See :ref:`dojox/mvc/sync:Data binding direction <dojox/mvc/sync#data-binding-direction>` for more details.
 
@@ -139,6 +156,33 @@ at function used with widget allows target.targetProp and property (attribute) i
                         return value - 0;
                       }
                     })">
+
+transform function can be used with any objects having format/parse functions, like dojo/number and dojo/date/locale. For example, dojo/date/locale can be used with transform function, in below form:
+
+.. code-example::
+  :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
+  :toolbar: versions, themes
+  :version: 1.8-2.0
+  :width: 480
+  :height: 60
+
+  .. js ::
+
+    require([
+        "dojo/parser", "dojo/domReady!"
+    ], function(parser){
+        parser.parse();
+    });
+
+  .. html ::
+
+    <script type="dojo/require">at: "dojox/mvc/at", dateLocale: "dojo/date/locale"</script>
+    <span data-dojo-id="model" data-dojo-type="dojo/Stateful" data-dojo-props="value: new Date"></span>
+    <span data-dojo-type="dijit/_WidgetBase"
+     data-dojo-props="_setValueAttr: {node: 'domNode', type: 'innerText'},
+                      value: at(model, 'value').transform(dateLocale)"
+    <input data-dojo-type="dijit/form/DateTextBox" 
+     data-dojo-props="value: at(model, 'value')">
 
 See :ref:`dojox/mvc/sync:Data converter <dojox/mvc/sync#data-converter>` for more details.
 
