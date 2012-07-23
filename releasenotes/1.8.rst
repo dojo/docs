@@ -1029,6 +1029,19 @@ Dijit
 - Due to the event delegation performance improvements, if you have custom templates for TreeNode, MenuItem, or 
   TabButton, you should edit your templates to remove the ``data-dojo-attach-event="..."`` attributes.
 
+- If you have a custom popup widget with a ``handleKey()`` method, and it is accessing ``evt.charOrCode`` or ``evt.charCode``,
+  you should change it to access ``evt.keyCode`` instead.   Change ``evt.charOrCode == " "`` to ``evt.keyCode == keys.SPACE``.
+
+  Details: Some widgets used as dropdowns have a ``handleKey()`` method; ``handleKey()`` is called from ``_HasDropDown``
+  when the focus is on the ``_HasDropDown`` widget but the dropdown is open, and the user types a key.  This delegates
+  the keystroke to be processed by the dropdown widget.
+  An example is ComboBox, where focus stays in the INPUT, but the up/down arrow keys affect which choice is shown
+  in the drop down menu.
+
+  The event passed to ``handleKey()`` is now a keydown event, rather than a synthetic keypress event generated from
+  ``dojo.connect()``.
+
+
 dojox/charting
 --------------
 

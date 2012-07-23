@@ -149,7 +149,7 @@ Package/Module                                                                  
 ================================================================================== ============ ==============================================================
 :ref:`dojox/charting <dojox/charting>`                                             Mature       Charting capabilities built on top of ``dojox/gfx``.
 :ref:`dojox/dgauges <dojox/dgauges>`                                               Mature       Gauges widget framework, deprecates ``dojox/gauges``.
-:ref:`dojox/gantt <dojox/gantt>`                                                   Abandoned    A gantt type charting widget.
+:ref:`dojox/gantt <dojox/gantt>`                                                   Maintained   A gantt type charting widget.
 :ref:`dojox/gauges <dojox/gauges>`                                                 Deprecated   Replaced by ``dojox/dgauges``.
 :ref:`dojox/geo/charting <dojox/geo/charting>`                                     Experimental Map based ``dojox/charting`` type widgets.
 :ref:`dojox/geo/openlayers <dojox/geo/openlayers>`                                 Experimental Modules for using OpenLayers mapping APIs.

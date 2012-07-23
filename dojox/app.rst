@@ -42,6 +42,8 @@ The main dojox/app modules
 
 :ref:`dojox/app/model <dojox/app/model>`, depending on the application models configuration, is creating either simple or MVC models for the views to bind their widgets to.
 
+:ref:`dojox/app/module <dojox/app/module>` a package containing various modules than can be used in the configuration file to be mixed into the Application object.
+
 The Configuration Object
 ========================
 
