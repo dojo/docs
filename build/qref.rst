@@ -299,9 +299,9 @@ Transform: writeDojo
      not provided.
 
 ``userConfig`` (default = ``"this.dojoConfig || this.djConfig || this.require || {}"``)
-  * [*string*] The explit text to write for the user configuration applied to the loader factory.
+  * [*string*] The explicit text to write for the user configuration applied to the loader factory.
 
-  * [*object*] The object to user for the user configuration applied to the loader factory. The object need not be a
+  * [*object*] The object to use for the user configuration applied to the loader factory. The object need not be a
     strict JSON object.
 
   **Warning**: When a user configuration is given by providing a value of for the profile property ``userConfig``, the
