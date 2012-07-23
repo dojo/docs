@@ -18,7 +18,7 @@ Usage
 .. html ::
 
   <li data-dojo-type="dojox/mobile/ListItem"
-    data-dojo-props="iconPos:'0,0,29,29', clickable: true, transitionOptions: {target:'main,second', url: '#main,second'}">
+    data-dojo-props="iconPos:'0,0,29,29', clickable: true, transitionOptions: {target:'main,second', url: '#main,second', params : {'cursor':index}}">
     Main Scene::Second View
   </li>
 
@@ -35,6 +35,10 @@ url
 ---
 String.  The url that will be used to update the location value in
 browser's address bar after the transition.
+
+params
+------
+Object. Application data to be passed to the view on the transition, it can be referenced in the view with ``this.params["paramName"]``.
 
 title
 -----
