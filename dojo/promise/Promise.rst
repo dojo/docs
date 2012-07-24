@@ -99,7 +99,7 @@ isCanceled()
 Should return ``true`` if the promise has been cancelled, otherwise ``false``.
 
 otherwise()
-------
+-----------
 
 Adds an error callback to a promise and should return a promise with the error callback applied. It takes a single
 argument:
@@ -111,7 +111,7 @@ errback  Function? The function that should be called when the promise is reject
 ======== ========= ================================================================
 
 always()
-------
+--------
 
 Adds a single callback to operate in the case of resolution or rejection.  It takes a single argument:
 
