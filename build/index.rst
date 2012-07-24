@@ -76,9 +76,6 @@ for complete documentation.
 :ref:`writeAmd <build/transforms/writeAmd>`
   Writes an AMD module to the file system.
 
-:ref:`writeCss <build/transforms/writeCss>`
-  Writes a CSS style sheet to the file system
-
 :ref:`writeDojo <build/transforms/writeDojo>`
   Outputs a module that includes the dojo loader; this transform is responsible for writing dojo.js.
 
