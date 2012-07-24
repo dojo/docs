@@ -54,7 +54,7 @@ Examples
 
 Declarative example 1:
 ----------------------
-Create multiple instances of :ref:`dijit/TextBox <dijit/TextBox>` based on the data in array, and 
+Create multiple instances of :ref:`dijit/form/TextBox <dijit/form/TextBox>` based on the data in array, and 
 create multiple instances a label and a Textbox using ``dojox/mvc/InlineTemplate``.
 
 .. code-example::
