@@ -19,8 +19,6 @@ Features
 
 .. _dojo/dom#byid:
 
-.. _dojo/dom#byId:
-
 byId()
 ------
 

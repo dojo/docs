@@ -78,6 +78,7 @@ Note that you can only set the ``async`` flag *before* dojo.js is loaded, and th
 other library is automatically loaded** - it is entirely up to the application to decide which modules/libraries to
 load.
 
+.. _loader/amd#configuration:
 
 Configuration
 =============

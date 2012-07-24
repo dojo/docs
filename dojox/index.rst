@@ -103,7 +103,7 @@ Package/Module                                                                  
 :ref:`dojox/av <dojox/av>`                                                         Experimental Audio and video capabilities to the Open Web. Wraps common
                                                                                                 media types (Flash and Quicktime) and provides easy to use 
                                                                                                 objects to accomplish basic A/V tasks.
-:ref:`dojox/drawing <dojox/drawing>`                                               Experimental    A package that builds on top of ``dojox/gfx`` to be able to 
+:ref:`dojox/drawing <dojox/drawing>`                                               Experimental A package that builds on top of ``dojox/gfx`` to be able to 
                                                                                                 create and save vector based drawings.
 :ref:`dojox/flash <dojox/flash>`                                                   Experimental Infrastructure for high-performance Flash/JavaScript 
                                                                                                 communication
