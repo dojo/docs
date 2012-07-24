@@ -296,12 +296,12 @@ scopeMap would look like this:
 Notice that a build is required to make this all work, and scopeMap is a configuration variable set up by the build
 application.
 
-As we said in `Relocating Module Namespaces`_, this complexity is not needed when loading multiple instances of AMD packages. If fact, the new
+As we said in :ref:`Relocating Module Namespaces <loader/amd#relocating-module-namespaces>`, this complexity is not needed when loading multiple instances of AMD packages. If fact, the new
 loader can relocate trees of modules by simply setting a configuration variable, and the trees can be built, unbuilt, or
 mixed. This feature solves many interoperability problems when mixing and matching several libraries. No other loader
 can do this and we're quite proud of this feature.
 
-That concludes a fast and furious review of legacy mode. I devoted more than a chapter to this system in :ref:`my book` if
+That concludes a fast and furious review of legacy mode. I devoted more than a chapter to this system in :ref:`my book <http://amzn.com/1934356115>` if
 you want a more-gentle presentation.
 
 Modes of Operation
