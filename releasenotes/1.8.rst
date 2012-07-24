@@ -296,8 +296,8 @@ dojo/promise
   * ``dojo/promise/Promise`` - Promise base class. All promises will be instances of this class. See  
     :ref:`dojo/promise/Promise <dojo/promise/Promise>`.
 
-  * ``dojo/promise/CancelError`` - Default error if a promise is canceled without a reason. See 
-    :ref:`dojo/promise/CancelError <dojo/promise/CancelError>`.
+  * ``dojo/errors/CancelError`` - Default error if a promise is canceled without a reason. See 
+    :ref:`dojo/errors/CancelError <dojo/errors/CancelError>`.
 
   * ``dojo/promise/all`` - Takes multiple promises and returns a new promise that is fulfilled when all promises have 
     been fulfilled. This essentially replaces ``dojo/DeferredList``. See :ref:`dojo/promise/all <dojo/promise/all>`.

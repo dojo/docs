@@ -16,7 +16,7 @@ Introduction
 ============
 
 Promises are the programming concept that allow easier programming of non-blocking asynchronous code. The ``dojo/promise`` module is Dojo's implementation of the concept. The module is made up ``dojo/promise/Promise`` and two helper modules ``dojo/promise/all`` and
-``dojo/promise/first``. Related modules are ``dojo/Deferred``, ``dojo/when`` and ``dojo/promise/CancelError``.
+``dojo/promise/first``. Related modules are ``dojo/Deferred``, ``dojo/when`` and ``dojo/errors/CancelError``.
 
 * :ref:`dojo/promise/Promise <dojo/promise/Promise>`
 
@@ -40,4 +40,4 @@ See also
 
 * :ref:`dojo/when <dojo/when>` - The module that allows seamless management of promises and other arbitrary values.
 
-* :ref:`dojo/promise/CancelError <dojo/promise/CancelError>` - Defines the default error that will be raised if a promise is canceled without a reason.
+* :ref:`dojo/errors/CancelError <dojo/errors/CancelError>` - Defines the default error that will be raised if a promise is canceled without a reason.
