@@ -82,28 +82,28 @@ For easy conversion of plain objects/arrays from/to :ref:`dojo/Stateful <dojo/St
 * :ref:`dojox/mvc/getStateful <dojox/mvc/getStateful>` creates :ref:`dojo/Stateful <dojo/Stateful>` and :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>` from plain objects/arrays.
 * :ref:`dojox/mvc/getPlainValue <dojox/mvc/getPlainValue>` creates plain objects/arrays from :ref:`dojo/Stateful <dojo/Stateful>` and :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>`.
 
-Deprecated APIs
----------------
+Deprecated APIs and their successors
+------------------------------------
 
 :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` has been deprecated. :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` had several different features, such as:
 
-  * Support for array (Notifying removals/additions of elements to watchers)
-  * Conversion of :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` from/to plain objects/values
-  * Bridge to Dojo Object Store
+* Support for array (Notifying removals/additions of elements to watchers)
+* Conversion of :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` from/to plain objects/values
+* Bridge to :ref:`Dojo Object Store <dojo/store>`
 
 Though some applications use all of these features, many applications do not. For example:
 
-  * As 1.8 ``dojox/mvc`` supports binding any stateful attribute, :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>`'s unique approach of converting non-object value to :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` (with "value" attribute) is no longer needed. Regular :ref:`dojo/Stateful <dojo/Stateful>` can be used as data model, in many cases.
-  * Some applications do not use array in data model at all.
-  * Some applications use arrays in data model in a static manner (No notification is needed for removals/additions of elements for such kind of applications).
-  * Some applications would implement getters/setters in its data models to work with more complex data (e.g. XML from REST call, whose request for data item tends to be served by XPath).
+* As 1.8 ``dojox/mvc`` supports binding any :ref:`dojo/Stateful <dojo/Stateful>` properties, :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>`'s unique approach of converting non-object value to :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` (with "value" attribute) is no longer needed. Regular :ref:`dojo/Stateful <dojo/Stateful>` can be used as data model, in many cases.
+* Some applications do not use array in data model at all.
+* Some applications use arrays in data model in a static manner (No notification is needed for removals/additions of elements for such kind of applications).
+* Some applications would implement getters/setters in its data models to work with more complex data (e.g. XML from REST call, whose request for data item tends to be served by XPath).
 
 To be able to support these different needs :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` is being separated into to classes that support each item:
 
-  * :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>` works as a successor of ``add()``/``remove()`` functions as well as their notification system.
-  * :ref:`dojox/mvc/getStateful <dojox/mvc/getStateful>` works as a successor of ``newStatefulModel()`` in ``dojox/mvc``.
-  * :ref:`dojox/mvc/getPlainValue <dojox/mvc/getPlainValue>` works as a successor of ``toPlainObject()``.
-  * :ref:`dojox/mvc/EditStoreRefController <dojox/mvc/EditStoreRefController>` works as a successor of data store integration feature in :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>`, such as ``commit()`` and ``_saveToStore()``.
+* :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>` works as a successor of ``add()``/``remove()`` functions as well as their notification system.
+* :ref:`dojox/mvc/getStateful <dojox/mvc/getStateful>` works as a successor of ``newStatefulModel()`` in ``dojox/mvc``.
+* :ref:`dojox/mvc/getPlainValue <dojox/mvc/getPlainValue>` works as a successor of ``toPlainObject()``.
+* :ref:`dojox/mvc/EditStoreRefController <dojox/mvc/EditStoreRefController>` works as a successor of data store integration feature in :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>`, such as ``commit()`` and ``_saveToStore()``.
 
 :ref:`dojox/mvc/_DataBindingMixin <dojox/mvc/_DataBindingMixin>` has been deprecated.
 
