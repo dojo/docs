@@ -75,7 +75,7 @@ Examples
         setTimeout(function(){
           deferred.resolve("foo");
         }, 500);
-        return deferred;
+        return deferred.promise;
       }
       
       function bingRequest(){
@@ -83,7 +83,7 @@ Examples
         setTimeout(function(){
           deferred.resolve("bar");
         }, 750);
-        return deferred;
+        return deferred.promise;
       }
       
       function baiduRequest(){
@@ -91,7 +91,7 @@ Examples
         setTimeout(function(){
           deferred.resolve("baz");
         }, 1000);
-        return deferred;
+        return deferred.promise;
       }
       
       on(dom.byId("startButton"), "click", function(){
@@ -124,7 +124,7 @@ Examples
         setTimeout(function(){
           deferred.resolve("foo");
         }, 500);
-        return deferred;
+        return deferred.promise;
       }
 
       function bingRequest(){
@@ -132,7 +132,7 @@ Examples
         setTimeout(function(){
           deferred.resolve("bar");
         }, 750);
-        return deferred;
+        return deferred.promise;
       }
 
       function baiduRequest(){
@@ -140,7 +140,7 @@ Examples
         setTimeout(function(){
           deferred.resolve("baz");
         }, 1000);
-        return deferred;
+        return deferred.promise;
       }
 
       on(dom.byId("startButton"), "click", function(){

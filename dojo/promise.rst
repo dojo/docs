@@ -15,18 +15,12 @@ dojo/promise
 Introduction
 ============
 
-Promises are the programming concept that allow programming of non-blocking asynchronous code in order to reduce program
-latency. The ``dojo/promise`` module is Dojo's implementation of the concept. The module is made up of two main classes
-``dojo/promise/Promise`` and ``dojo/promise/CancelError`` and three helper modules ``dojo/promise/all``,
-``dojo/promise/first`` and ``dojo/promise/tracer``.
+Promises are the programming concept that allow easier programming of non-blocking asynchronous code. The ``dojo/promise`` module is Dojo's implementation of the concept. The module is made up ``dojo/promise/Promise`` and two helper modules ``dojo/promise/all`` and
+``dojo/promise/first``. Related modules are ``dojo/Deferred``, ``dojo/when`` and ``dojo/errors/CancelError``.
 
 * :ref:`dojo/promise/Promise <dojo/promise/Promise>`
 
   The abstract base class that defines Dojo Promises.
-
-* :ref:`dojo/promise/CancelError <dojo/promise/CancelError>`
-
-  Defines the default error that will be raised if a promise is cancelled without a reason.
 
 * :ref:`dojo/promise/all <dojo/promise/all>`
 
@@ -37,10 +31,6 @@ latency. The ``dojo/promise`` module is Dojo's implementation of the concept. Th
   Takes multiple promises and returns a new promise that is fulfilled when the first of the promises have been 
   fulfilled.
 
-* :ref:`dojo/promise/tracer <dojo/promise/tracer>`
-
-  Trace promise fulfillment. Traced promises will emit events.
-
 See also
 ========
 
@@ -49,3 +39,5 @@ See also
 * :ref:`dojo/Deferred <dojo/Deferred>` - The class for managing asynchronous threads.
 
 * :ref:`dojo/when <dojo/when>` - The module that allows seamless management of promises and other arbitrary values.
+
+* :ref:`dojo/errors/CancelError <dojo/errors/CancelError>` - Defines the default error that will be raised if a promise is canceled without a reason.
