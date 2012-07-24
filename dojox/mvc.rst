@@ -1,7 +1,7 @@
 .. _dojox/mvc:
 
 =========
-dojox.mvc
+dojox/mvc
 =========
 
 :Authors: Akira Sudoh, Ed Chatelain, Rahul Akolkar
