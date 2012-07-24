@@ -33,6 +33,8 @@ Requiring in the module is all that is needed to leverage the functionality:
       topic.publish("some/topic", "one", "two");
   });
 
+.. _dojo/topic#subscribe:
+
 subscribe()
 -----------
 
@@ -44,6 +46,8 @@ Subscribes to a particular topic.  It has a signature of:
   :sig:
 
 ``subscribe()`` returns a handle that has a ``remove()`` method that can be used to remove the listener.
+
+.. _dojo/topic#publish:
 
 publish()
 ---------

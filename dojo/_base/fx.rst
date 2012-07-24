@@ -9,6 +9,8 @@ dojo/_base/fx
 
 **dojo/_base/fx** contains basic animation functions.
 
+.. _dojo/_base/fx#anim:
+
 anim()
 ======
 A simpler interface to `animateProperty()`.
@@ -25,6 +27,8 @@ The :ref:`dojo/Animation <dojo/Animation>` object returned from `anim()` will be
    require(['dojo/_base/fx'], function(fx){
      fx.anim(node, properties, duration, easing, onEnd, delay);
    });
+
+.. _dojo/_base/fx#animateproperty:
 
 animateProperty()
 =================
@@ -202,6 +206,8 @@ To change the framerate you use the rate attribute which defines the pause betwe
      </p>
      <div id="animateProperty">This will be animated</div>
 
+.. _dojo/_base/fx#animation:
+
 Animation
 =========
 
@@ -284,6 +290,8 @@ _Line
 =====
 
 A private class object that is used to generate values from a start value to an end value
+
+.. _dojo/_base/fx#fadein:
 
 fadeIn()
 ========
@@ -397,6 +405,7 @@ Example 3:  Fade in a dom node with an easing function
     <button id="basicFadeButton3">Fade It In Slow with Expo Easing!</button>
     <div id="basicFadeNode3" style="width: 100px; height: 100px; background-color: red;"></div>
 
+.. _dojo/_base/fx#fadeout:
 
 fadeOut()
 =========

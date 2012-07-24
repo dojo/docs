@@ -1,5 +1,7 @@
 .. _dojo/window/scrollIntoView:
 
+.. _dojo/window#scrollintoview:
+
 =============================
 dojo/window::scrollIntoView()
 =============================

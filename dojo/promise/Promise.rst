@@ -49,6 +49,8 @@ Since it is an abstract class, direct usage doesn't make sense.  Developers want
 
 The API is defined below:
 
+.. _dojo/promise/Promise#then:
+
 then()
 ------
 

@@ -176,6 +176,28 @@ You should try to use the package/module name when linking to a package or modul
 
     :ref:`dojo/parser <dojo/parser>`
 
+If you want to link to a arbitrary section of another document, you need to add another label.  But if you also want it to work with rstWiki (a.k.a. livedocs), then you need to create a label that maps to a hash target.  So lets say you wanted to link to ``forEach()`` in ``dojo/_base/array``.  You would need to have a created a header:
+
+  ::
+
+    forEach()
+    =========
+
+Which will create a hash target of ``#foreach`` on the page, which you would then create reference of:
+
+  ::
+
+    :ref:`dojo/_base/array::forEach() <dojo/_base/array#foreach>`
+
+And then before the header in the target document you would need to add the label:
+
+  ::
+
+    .. _dojo/_base/array#foreach:
+
+    forEach()
+    =========
+
 It is possible to cross-reference sections internally. If the section heading is a single word, you can simply 
 add a trailing underscore to the word:
 

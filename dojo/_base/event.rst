@@ -26,6 +26,10 @@ features:
 Features
 ========
 
+.. _dojo/_base/event#stop:
+
+.. _dojo/_base/event#dojo-stopevent:
+
 stop()
 ------
 
@@ -35,6 +39,8 @@ stop()
   :description:
   :sig:
   :no-headers:
+
+.. _dojo/_base/event#fix:
 
 fix()
 -----

@@ -25,6 +25,8 @@ automatically loaded, you should require it in to have access to its features:
 Features
 ========
 
+.. _dojo/_base/kernel#deprecated:
+
 deprecated()
 ------------
 
@@ -45,6 +47,8 @@ The signature of the method is:
   :no-headers:
   :sig:
 
+.. _dojo/_base/kernel#experimental:
+
 experimental()
 --------------
 
@@ -63,6 +67,8 @@ The signature of the method is:
   :methods: experimental
   :no-headers:
   :sig:
+
+.. _dojo/_base/kernel#global:
 
 global
 ------
@@ -86,6 +92,8 @@ are ensuring the code will run in any other environments with a defined host env
 
 See also :ref:`dojo/_base/window::withGlobal <dojo/_base/window#withglobal>`.
 
+.. _dojo/_base/kernel#locale:
+
 locale
 ------
 
@@ -98,6 +106,8 @@ A simple reference of locale:
   require(["dojo/_base/kernel"], function(kernel){
     var currentLocale = kernel.locale;
   });
+
+.. _dojo/_base/kernel#version:
 
 version
 -------

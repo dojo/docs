@@ -19,6 +19,8 @@ part of a URL.
 Usage
 =====
 
+.. _dojo/io-query#objecttoquery:
+
 objectToQuery()
 ---------------
 
@@ -48,6 +50,8 @@ return the query string.
     // The uri should look like:
     // http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte
   });
+
+.. _dojo/io-query#querytoobject:
 
 queryToObject()
 ===============

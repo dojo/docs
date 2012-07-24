@@ -338,6 +338,7 @@ The ``dependencies`` and ``callback`` parameters in the ``require`` function wor
 difference between these two calls is that the latter is expected to also provide a value of its own, whereas the former
 simply loads modules.
 
+.. _loader/amd#module-identifiers:
 
 Module Identifiers
 ==================
@@ -867,6 +868,7 @@ This design replaces the so-called "multi-version" design in dojo v1.6- and elim
 implemented in RequireJS. Notice that, unlike the multi-version design, no build is required to deploy a relocated
 package. It's all a matter of simple configuration. This is a very powerful feature and only dojo has it.
 
+.. _loader/amd#utility-functions:
 
 Utility Functions
 =================

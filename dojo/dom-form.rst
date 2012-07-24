@@ -17,6 +17,8 @@ The *deprecated* legacy features are set in :ref:`dojo/_base/xhr <dojo/_base/xhr
 Features
 ========
 
+.. _dojo/dom-form#fieldtoobject:
+
 fieldToObject()
 ---------------
 
@@ -25,7 +27,7 @@ function takes a HTML form field and converts the field's value to a string or a
 elements and unchecked radio and checkboxes are skipped. Multi-select elements are returned as an array of string
 values.
 
-This function is used internally by :ref:`formToObject() <dojo/dom-form#formtoobject>` to convert each form field to a
+This function is used internally by `toObject()`_ to convert each form field to a
 value.
 
 Usage
@@ -88,6 +90,8 @@ This example uses ``fieldToObject()`` to get field values.
     <br><br>
     <b>The form as an object:</b>
     <pre id="output"></pre>
+
+.. _dojo/dom-form#toobject:
 
 toObject()
 ----------
@@ -155,6 +159,8 @@ This example creates an object version of a form.
     </form>
     <p>The form as an object:</p>
     <pre id="output"></pre>
+
+.. _dojo/dom-form#toquery:
 
 toQuery()
 ---------
@@ -226,6 +232,8 @@ This example uses ``toQuery()`` to create an query string version of a form.
     <br><br>
     <b>The form as a query string:</b>
     <pre id="output"></pre>
+
+.. _dojo/dom-form#tojson:
 
 toJson()
 --------

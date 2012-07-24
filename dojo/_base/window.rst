@@ -20,6 +20,7 @@ dojo/_base/window
 Accessing the Current Document
 ==============================
 
+.. _dojo/_base/window#body:
 
 body()
 ------
@@ -56,7 +57,7 @@ There are several utility functions in Dojo to do common tasks on DOMNodes, and 
         ctr.place("foo", win.body(), "first");
     });
 
-
+.. _dojo/_base/window#doc:
 
 doc
 ---
@@ -80,6 +81,8 @@ Use this variable in place of window.document.
 
 Changing the Current Document
 =============================
+
+.. _dojo/_base/window#setcontext:
 
 setContext()
 ------------
@@ -124,6 +127,7 @@ Here is a simple example that counts the links in the current page as well as th
     };
   });
 
+.. _dojo/_base/window#withdoc:
 
 withDoc()
 ---------
@@ -157,6 +161,8 @@ The example below demonstrates how to use it against an iframe document to query
     <br><br>
     <iframe id="simpleFrame" name="simpleFrame" src="{{dataUrl}}dojox/data/tests/stores/books.html" style="width: 500px; height: 500px;">
     </iframe>
+
+.. _dojo/_base/window#withglobal:
 
 withGlobal()
 ------------

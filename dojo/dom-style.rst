@@ -19,6 +19,8 @@ Legacy features are set in :ref:`dojo/_base/html <dojo/_base/html>`.
 Features
 ========
 
+.. _dojo/dom-style#getcomputedstyle:
+
 getComputedStyle()
 ------------------
 
@@ -90,6 +92,8 @@ The following example computes the style for a node and outputs some of its valu
       width: 200px;
       height: 100px;
     }
+
+.. _dojo/dom-style#get:
 
 get()
 -----
@@ -165,6 +169,8 @@ Examples
       width: 200px;
       height: 100px;
     }
+
+.. _dojo/dom-style#set:
 
 set()
 -----

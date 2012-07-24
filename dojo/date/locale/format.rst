@@ -39,6 +39,8 @@ and you may decide to use your own custom datePattern or timePattern.
     });
   })
 
+.. _dojo/date/locale/format#attributes:
+
 Attributes
 ==========
 
