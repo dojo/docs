@@ -11,14 +11,14 @@ dojox/mvc/ListController
 .. contents ::
   :depth: 2
 
-dojox/mvc/ListController is a controller working with an array as the model.
-It maintains its current position (cursorIndex or cursorId) so that widgets referring to this controller can update their UI just by changing the position in this controller.
+``dojox/mvc/ListController`` is a controller working with an array as the model.
+It maintains its current position (``cursorIndex`` or ``cursorId``) so that widgets referring to this controller can update their UI just by changing the position in this controller.
 
 =====
 Usage
 =====
 
-In below example, the dojox/mvc/ListController refers to an instance of dojox/mvc/StatefulArray as the model, and the cursorIndex is updated every two seconds. As the result, text box changes its value every two seconds:
+In below example, the ``dojox/mvc/ListController`` refers to an instance of :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>` as the model, and the ``cursorIndex`` is updated every two seconds. As the result, text box changes its value every two seconds:
 
 .. code-example::
   :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
@@ -30,17 +30,22 @@ In below example, the dojox/mvc/ListController refers to an instance of dojox/mv
   .. js ::
 
     require([
-        "dojo/parser", "dijit/registry", "dojox/mvc/StatefulArray",
+        "dojo/parser", "dojo/when", "dijit/registry", "dojox/mvc/StatefulArray",
         "dijit/form/TextBox", "dojox/mvc/ListController", "dojo/domReady!"
-    ], function(parser, registry, StatefulArray){
+    ], function(parser, when, registry, StatefulArray){
         var count = 0;
         model = new StatefulArray([{value: "First"}, {value: "Second"}, {value: "Third"}, {value: "Fourth"}, {value: "Fifth"}]);
-        setInterval(function(){ registry.byId("ctrl").set("cursorIndex", ++count % 5); }, 2000);
-        parser.parse();
+        when(parser.parse(), function(){
+            setInterval(function(){ registry.byId("ctrl").set("cursorIndex", ++count % 5); }, 2000);
+        });
     });
 
   .. html ::
 
     <script type="dojo/require">at: "dojox/mvc/at"</script>
-    <span id="ctrl" data-dojo-type="dojox/mvc/ListController" data-dojo-props="model: model"></span>
-    <input type="text" data-dojo-type="dijit/form/TextBox" data-dojo-props="value: at('widget:ctrl', 'value')">
+    <span id="ctrl"
+     data-dojo-type="dojox/mvc/ListController"
+     data-dojo-props="model: model"></span>
+    <input type="text"
+     data-dojo-type="dijit/form/TextBox"
+     data-dojo-props="value: at('widget:ctrl', 'value')">
