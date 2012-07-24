@@ -96,7 +96,7 @@ isCanceled()
 
 Should return ``true`` if the promise has been cancelled, otherwise ``false``.
 
-fail()
+otherwise()
 ------
 
 Adds an error callback to a promise and should return a promise with the error callback applied. It takes a single
@@ -108,7 +108,7 @@ Argument Type      Description
 errback  Function? The function that should be called when the promise is rejected.
 ======== ========= ================================================================
 
-both()
+always()
 ------
 
 Adds a single callback to operate in the case of resolution or rejection.  It takes a single argument:
