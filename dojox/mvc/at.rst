@@ -83,11 +83,19 @@ In below example, two seconds later, the text box changes from "Foo" to "Bar" as
 In below example, edit in text box is reflected to the text next to it:
 
 .. code-example::
-  :djConfig: parseOnLoad: true, async: true, mvc: {debugBindings: true}
+  :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
   :toolbar: versions, themes
   :version: 1.8-2.0
   :width: 480
   :height: 60
+
+  .. js ::
+
+    require([
+        "dojo/parser", "dojo/domReady!"
+    ], function(parser){
+        parser.parse();
+    });
 
   .. html ::
 
@@ -164,13 +172,19 @@ Data converter
 ``transform`` function can be used with any objects having ``format``/``parse`` functions, like ``dojo/number`` and ``dojo/date/locale``. For example, ``dojo/date/locale`` can be used with ``transform`` function, in below form:
 
 .. code-example::
-  :djConfig: parseOnLoad: true, async: true, mvc: {debugBindings: true}
+  :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
   :toolbar: versions, themes
   :version: 1.8-2.0
   :width: 480
   :height: 320
 
   .. js ::
+
+    require([
+        "dojo/parser", "dojo/domReady!"
+    ], function(parser){
+        parser.parse();
+    });
 
   .. html ::
 
