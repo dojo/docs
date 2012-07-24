@@ -32,9 +32,31 @@ dojox/mvc has the following properties:
 Features
 ========
 
-:ref:`dojox/mvc/sync <dojox/mvc/sync>` a simple data binding layer which support one-way or two-way binding and a converter.
+There are two APIs supporting data binding:
 
-:ref:`dojox/mvc/at <dojox/mvc/at>` typically used in in data-dojo-props so that a widget can synchronize its attribute with another dojo.Stateful.
+* :ref:`dojox/mvc/sync <dojox/mvc/sync>` provides a simple way for data binding, by keeping two :ref:`dojo/Stateful <dojo/Stateful>` objects in sync.
+* :ref:`dojox/mvc/at <dojox/mvc/at>` typically is used in ``data-dojo-props`` for declarative way of data binding, where a widget can synchronize its attribute with another :ref:`dojo/Stateful <dojo/Stateful>`. It can also be used in the first parameter of widget constructor (list of initial property values) for programmatic way of data binding.
+
+Both APIs above support:
+
+* Optional one-way sync (the default is two-way sync). See :ref:`dojox/mvc/sync:Data binding direction <dojox/mvc/sync#data-binding-direction>` for details.
+* Optional data conversion as data goes from model to widget, and vise versa. See :ref:`dojox/mvc/sync:Data converter <dojox/mvc/sync#data-converter>` for details.
+
+Above APIs use :ref:`dojo/Stateful <dojo/Stateful>` as the endpoints of data binding, including widgets that inherit :ref:`dojo/Stateful <dojo/Stateful>`. There are also some helper classes, also based on :ref:`dojo/Stateful <dojo/Stateful>`, that typically work in-between such endpoints:
+
+* :ref:`dojox/mvc/ModelRefController <dojox/mvc/ModelRefController>` has a way to replace its data model with another. Widgets, etc. watching for properties in :ref:`dojox/mvc/ModelRefController <dojox/mvc/ModelRefController>` will be notified of such replacement of model.
+* :ref:`dojox/mvc/EditModelRefController <dojox/mvc/EditModelRefController>` is an inheritance of :ref:`dojox/mvc/ModelRefController <dojox/mvc/ModelRefController>`. which keeps a copy of given data model so that it can manage the data model of before/after the edit.
+* :ref:`dojox/mvc/StoreRefController <dojox/mvc/StoreRefController>` is an inheritance of :ref:`dojox/mvc/ModelRefController <dojox/mvc/ModelRefController>`. which keeps a reference to :ref:`Dojo Object Store <dojo/store>`. It has several methods to work with the store, and arrival of data will be notified to watching widgets, etc. via :ref:`dojox/mvc/ModelRefController <dojox/mvc/ModelRefController>` interface.
+* :ref:`dojox/mvc/EditStoreRefController <dojox/mvc/EditStoreRefController>` is an inheritance of :ref:`dojox/mvc/EditModelRefController <dojox/mvc/EditModelRefController>` and :ref:`dojox/mvc/StoreRefController <dojox/mvc/StoreRefController>`. In addition to what :ref:`dojox/mvc/EditModelRefController <dojox/mvc/EditModelRefController>` and :ref:`dojox/mvc/StoreRefController <dojox/mvc/StoreRefController>` do, the commit() method sends the data model as well as the removed entries in array to the data store.
+* :ref:`dojox/mvc/ListController <dojox/mvc/ListController>` is an inheritance of :ref:`dojox/mvc/ModelRefController <dojox/mvc/ModelRefController>`, working with an array as the model. It maintains its current position\ so that widgets referring to this controller can update their UI just by changing the position in this controller.
+
+A number of widgets and MVC containers are also available, including:
+
+* :ref:`dojox/mvc/Output <dojox/mvc/Output>` A data-bound output widget.
+* :ref:`dojox/mvc/Group <dojox/mvc/Group>` An aggregation of widgets with the same parent data binding context.
+* :ref:`dojox/mvc/WidgetList <dojox/mvc/WidgetList>` A model-bound widget that creates child widgets repeatedly based on a data collection.
+* :ref:`dojox/mvc/Repeat <dojox/mvc/Repeat>` A model-bound repeater widget that binds to a data collection.
+* :ref:`dojox/mvc/Generate <dojox/mvc/Generate>` A simple example of UI generation from a supplied data model.
 
 :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` has been deprecated.
 
@@ -58,7 +80,6 @@ Features
 
 * To be able to support these different needs dojox/mvc/StatefulModel is being separated into to classes that support each item:
 
-
   * :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>` A class that supports handling array, which can notify removals/additions of elements.
 
   * :ref:`dojox/mvc/getStateful <dojox/mvc/getStateful>` A function that creates stateful objects from plain objects/values (Will work as a successor of dojox.mvc.newStatefulModel()).
@@ -67,17 +88,8 @@ Features
 
   * :ref:`dojox/mvc/EditStoreRefController <dojox/mvc/EditStoreRefController>` Components to work with Dojo Object Store (Something that does dojox.mvc.StatefulModel.commit(), dojox.mvc.StatefulModel._commit() and dojox.mvc.StatefulModel._saveToStore()).
 
-
-* A number of widgets and MVC containers are also available, including:
-
-  * :ref:`dojox/mvc/Output <dojox/mvc/Output>` A data-bound output widget.
-  * :ref:`dojox/mvc/Group <dojox/mvc/Group>` An aggregation of widgets with the same parent data binding context.
-  * :ref:`dojox/mvc/WidgetList <dojox/mvc/WidgetList>` A model-bound widget that creates child widgets repeatedly based on a data collection.
-  * :ref:`dojox/mvc/Repeat <dojox/mvc/Repeat>` A model-bound repeater widget that binds to a data collection.
-  * :ref:`dojox/mvc/Generate <dojox/mvc/Generate>` A simple example of UI generation from a supplied data model.
-
 * :ref:`dojox/mvc/_DataBindingMixin <dojox/mvc/_DataBindingMixin>` has been deprecated.
- 
+
 Examples
 ========
 
