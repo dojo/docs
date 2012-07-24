@@ -34,6 +34,7 @@ Parameters
 +------------------+----------------------------------------------+----------+------------------------------------------------------------------------------------------------------------------+
 |``childParams``   |``Object``                                    |          |The mixin properties for child widget. Can be specified via ``data-mvc-child-props`` attribute of widget          |
 |                  |                                              |          |declaration. ``this`` in ``data-mvc-child-props`` will have the following properties:                             |
+|                  |                                              |          |                                                                                                                  |
 |                  |                                              |          |- ``this.parent`` - This widget's instance.                                                                       |
 |                  |                                              |          |- ``this.target`` - The data item in children.                                                                    |
 +------------------+----------------------------------------------+----------+------------------------------------------------------------------------------------------------------------------+
