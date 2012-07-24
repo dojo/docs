@@ -18,6 +18,8 @@ The *deprecated* legacy features are set in :ref:`dojo/_base/html <dojo/_base/ht
 Features
 ========
 
+.. _dojo/dom-prop#get:
+
 get()
 -----
 
@@ -66,6 +68,8 @@ The following code gets the ``innerHTML`` property of a DOM node.
     <button id="execute" type="button">domProp.get()</button>
     <div id="example">Hello World!</div>
     <pre id="output"></pre>
+
+.. _dojo/dom-prop#set:
 
 set()
 -----

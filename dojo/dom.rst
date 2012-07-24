@@ -17,6 +17,8 @@ The *deprecated* legacy features are set in :ref:`dojo/_base/html <dojo/_base/ht
 Features
 ========
 
+.. _dojo/dom#byid:
+
 byId()
 ------
 

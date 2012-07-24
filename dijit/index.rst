@@ -7,7 +7,7 @@ Dijit Overview
 .. contents ::
    :depth: 2
 
-**Dijit** is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires :ref:`Dojo Core <dojo/#dojo-core>` and :ref:`Dojo Base <dojo/_base>`.
+**Dijit** is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires :ref:`Dojo Core <dojo/index>` and :ref:`Dojo Base <dojo/_base/index>`.
 
 Each of the widgets and functionality provided by Dijit are described in the following sections, though the
 :ref:`Getting Started <quickstart/index>` guides and the `Tutorials <http://dojotoolkit.org/documentation/>`_ cover some basics.

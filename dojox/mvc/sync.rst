@@ -71,6 +71,8 @@ The basic usage can be seen in the example below, where ``target.foo`` will beco
       alert(source.get("foo")); // Still "fooValue0" as synchronization had been stopped before "fooValue1" is set to target.foo
     });
 
+.. _dojox/mvc/sync#wildcard-syntax:
+
 ---------------
 Wildcard syntax
 ---------------
@@ -80,6 +82,8 @@ When ``sourceProp`` and ``targetProp`` are ``*``, ``sync`` function tries to syn
 * If ``target.get("properties")`` is there, use it. Otherwise ``sync`` function enumerates properties in ``target``, except ``_watchCallbacks`` function.
 * If ``target.get("excludes")`` is there, ``sync`` function removes the property names in it, from above list.
 * If ``source.get("properties")`` is there, ``sync`` function removes the property names that are not in it, from above list.
+
+.. _dojox/mvc/sync#data-binding-direction:
 
 ----------------------
 Data binding direction
@@ -112,6 +116,8 @@ The basic usage of data binding direction can be seen in the example below, wher
       target.set("foo", "fooValue2"); // This change won't be reflect to source.foo, as the data binding is only from source.foo to target.foo, not the other way around
       alert(source.get("foo")); // source.foo still is "fooValue1"
     });
+
+.. _dojox/mvc/sync#data-converter:
 
 --------------
 Data converter

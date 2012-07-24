@@ -27,6 +27,8 @@ features:
 Features
 ========
 
+.. _dojo/_base/lang#clone:
+
 clone()
 -------
 
@@ -93,6 +95,8 @@ concerns.
 
 *TODOC* clone and event objects.
 
+.. _dojo/_base/lang#delegate:
+
 delegate()
 ----------
 
@@ -133,6 +137,8 @@ Usage
     anOldObject.bar = "thonk";
     myNewObject.bar == "thonk"; // still delegated to anOldObject's bar
   });
+
+.. _dojo/_base/lang#exists:
 
 exists()
 --------
@@ -178,6 +184,8 @@ The signature of the method is:
   :no-headers:
   :sig:
   :returns:
+
+.. _dojo/_base/lang#extend:
 
 extend()
 --------
@@ -259,6 +267,8 @@ extend() vs. mixin()
     console.log("the instance (modified with lang.mixin):", json.stringify(t));
   });
 
+.. _dojo/_base/lang#getobject:
+
 getObject()
 -----------
 
@@ -320,6 +330,8 @@ The signature of the method is:
   :no-headers:
   :sig:
   :returns:
+
+.. _dojo/_base/lang#hitch:
 
 hitch()
 -------
@@ -432,6 +444,8 @@ Arguments can also be passed to the function that is being called:
 
 The output in the console should be ``baz bar``. Any arguments provided after the first two will be passed to the 
 function.
+
+.. _dojo/_base/lang#mixin:
 
 mixin()
 -------
@@ -554,6 +568,8 @@ If you want to mix in some methods into an instance using two previous technique
 :ref:`dojo/_base/declare::safeMixin() <dojo/_base/declare#safemixin>`, which correctly handles all properties in 
 ``dojo/_base/declare``-compatible way.
 
+.. _dojo/_base/lang#partial:
+
 partial()
 ---------
 
@@ -618,6 +634,8 @@ Example
     
     <button type="button" id="myButton">Click me to append in a preset value!</button>
     <div id="appendLocation"></div>
+
+.. _dojo/_base/lang#replace:
 
 replace()
 ---------
@@ -889,6 +907,8 @@ In this example we are going to format numbers as fixed or exponential with opti
     <p id="output1"></p>
     <p id="output2"></p>
 
+.. _dojo/_base/lang#setobject:
+
 setObject()
 -----------
 
@@ -921,6 +941,8 @@ The signature of the function is:
   :methods: setObject
   :no-headers:
   :sig:
+
+.. _dojo/_base/lang#trim:
 
 trim()
 ------

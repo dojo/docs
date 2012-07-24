@@ -202,6 +202,8 @@ If the ``data-dojo-type`` is not a class based on :ref:`dojo/_base/declare <dojo
 for an ``extend()`` method on the ``data-dojo-type`` class object and call it with the list of mixins as parameters in
 order to build the composed object. This makes this mechanism compatible with ComposeJS.
 
+.. _dojo/parser#auto-require:
+
 Auto Require
 ~~~~~~~~~~~~
 
@@ -246,6 +248,8 @@ required.
 
 Developers should give due consideration when they choose to use declarative syntax and not be explicit about their
 requirements before invoking ``.parse()``.
+
+.. _dojo/parser#declarative-require:
 
 Declarative Require
 -------------------
@@ -292,6 +296,8 @@ wrapping it in double quotes(``"``) like the following:
     "app.registry": "dijit/registry",
     "app.Button": "dijit/form/Button"
   </script>
+
+.. _dojo/parser#parser-parameters:
 
 Parser Parameters
 -----------------

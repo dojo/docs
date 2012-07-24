@@ -6,6 +6,6 @@
 
 :Message Number: 217
 :Message: cleanRemoved
-:Text: the clean action has been removed; use rm (*nix) or rmdir (Windows)
+:Text: the clean action has been removed; use rm (\*nix) or rmdir (Windows)
 :Type: Warning
 

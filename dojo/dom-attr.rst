@@ -19,6 +19,8 @@ The *deprecated* legacy features are set in :ref:`dojo/_base/html <dojo/_base/ht
 Features
 ========
 
+.. _dojo/dom-attr#has:
+
 has()
 -----
 
@@ -81,6 +83,8 @@ Checking to see if a particular node as an attribute.
     <input id="model" name="model" type="text" baz="foo" /> &mdash; our model node
     <div id="output"></div>
 
+.. _dojo/dom-attr#get:
+
 get()
 -----
 
@@ -133,6 +137,10 @@ Getting some values from a node.
 
     <input id="model" name="model" type="text" baz="foo" /> &mdash; our model node
     <div id="output"></div>
+
+.. _dojo/dom-attr#set:
+
+.. _dojo/dom-attr#set-function:
 
 set()
 -----
@@ -209,6 +217,8 @@ Here is an example of using an object to set multiple attribute values:
 
     <input id="model" name="model" type="text" baz="foo" /> &mdash; our model node
     <div id="output"></div>
+
+.. _dojo/dom-attr#remove:
 
 remove()
 --------

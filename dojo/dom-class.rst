@@ -17,6 +17,10 @@ The *deprecated* legacy features are set in :ref:`dojo/_base/html <dojo/_base/ht
 Features
 ========
 
+.. _dojo/dom-class#contains:
+
+.. _dojo/dom-class#contains-function:
+
 contains()
 ----------
 
@@ -87,6 +91,8 @@ A basic example of checking a node to see if it contains a CSS class.
       font-weight: bold;
     }
 
+.. _dojo/dom-class#add:
+
 add()
 -----
 
@@ -144,6 +150,10 @@ Here is an example of how to add a class to a node:
 
     <div id="example1">This node will be changed.</div>
     <button id="button1" type="button">Add class</button>
+
+.. _dojo/dom-class#remove:
+
+.. _dojo/dom-class#remove-function:
 
 remove()
 --------
@@ -317,6 +327,8 @@ This feature is exposed as ``removeClass`` for :ref:`NodeLists <dojo/NodeList>`,
     </div>
     <button id="button3" type="button">Remove from multiple nodes</button>
 
+.. _dojo/dom-class#replace:
+
 replace()
 ---------
 
@@ -371,6 +383,8 @@ The following example removes the class "oldStyle" from the node "example" and r
 
     <div id="example" class="oldStyle">This node will be changed.</div>
     <button id="button1" type="button">Replace class</button>
+
+.. _dojo/dom-class#toggle:
 
 toggle()
 --------

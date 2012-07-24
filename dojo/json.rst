@@ -18,6 +18,8 @@ The module provides two functions, ``parse()`` and ``stringify()``.
 Usage
 =====
 
+.. _dojo/json#parse:
+
 parse()
 -------
 
@@ -37,6 +39,8 @@ If no native parsing is available, ``dojo/json`` will use ``eval()`` to parse th
 JSON is safe before evaluating it. Performing this verification is slower than directly evaluating, and secure parsing 
 should only be used if the JSON is from an unsecure source. The second argument has no effect on browsers with native 
 parsing, since native parsing is always secure.
+
+.. _dojo/json#stringify:
 
 stringify()
 -----------

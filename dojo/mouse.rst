@@ -34,6 +34,8 @@ To gain utility out of the module, you must utilize one of three extension event
     });
   });
 
+.. _dojo/mouse#enter:
+
 enter
 -----
 
@@ -46,6 +48,8 @@ The ``dojo/mouse::enter`` event is an extension event for being notified of when
       // handle mouse enter event
     });
   });
+
+.. _dojo/mouse#leave:
 
 leave
 -----

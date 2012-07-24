@@ -189,6 +189,8 @@ Dojo Core
 Basic functions
 ---------------
 
+.. _releasenotes/migration-2.0#testing-object-types:
+
 Testing object types
 ~~~~~~~~~~~~~~~~~~~~
 

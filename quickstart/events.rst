@@ -449,6 +449,8 @@ Most of the events start with "on" in their name.
 Finally, note that you can connect to/override any method in a widget, not just the ones that are considered
 "events".   However, note the caveats listed above about connecting vs. overriding.
 
+.. _quickstart/events#widget-events-published-to-the-dom:
+
 Widget events published to the DOM
 ----------------------------------
 Starting in version 1.8, widget events are published to the DOM tree and can be monitored by setting up listeners

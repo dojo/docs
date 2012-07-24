@@ -97,6 +97,8 @@ event    Object This is an object with the properties of the event to be dispatc
 ``emit()`` returns the event object unless the event is cancelable and is cancelled by one of the listeners, in which 
 case it will return ``false``.
 
+.. _dojo/on#selector-function:
+
 selector()
 ----------
 

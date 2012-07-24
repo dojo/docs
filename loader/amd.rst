@@ -78,6 +78,7 @@ Note that you can only set the ``async`` flag *before* dojo.js is loaded, and th
 other library is automatically loaded** - it is entirely up to the application to decide which modules/libraries to
 load.
 
+.. _loader/amd#configuration:
 
 Configuration
 =============
@@ -338,6 +339,7 @@ The ``dependencies`` and ``callback`` parameters in the ``require`` function wor
 difference between these two calls is that the latter is expected to also provide a value of its own, whereas the former
 simply loads modules.
 
+.. _loader/amd#module-identifiers:
 
 Module Identifiers
 ==================
@@ -867,6 +869,7 @@ This design replaces the so-called "multi-version" design in dojo v1.6- and elim
 implemented in RequireJS. Notice that, unlike the multi-version design, no build is required to deploy a relocated
 package. It's all a matter of simple configuration. This is a very powerful feature and only dojo has it.
 
+.. _loader/amd#utility-functions:
 
 Utility Functions
 =================

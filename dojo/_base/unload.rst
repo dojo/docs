@@ -12,6 +12,7 @@ Introduction
 
 Contains addOnUnload() and addOnWindowUnload() methods.
 
+.. _dojo/_base/unload#addonunload:
 
 addOnUnload()
 -------------
@@ -60,6 +61,7 @@ Usage
      baseUnload.addOnUnload(window, "unLoad");
    });
 
+.. _dojo/_base/unload#addonwindowunload:
 
 addOnWindowUnload()
 ===================

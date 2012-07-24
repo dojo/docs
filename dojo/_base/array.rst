@@ -25,6 +25,8 @@ features:
     // array contains the features
   });
 
+.. _dojo/_base/array#indexof:
+
 indexOf()
 ---------
 
@@ -73,6 +75,8 @@ Examples
     <div>The content of our test array is <code>["foo", "hoo", "zoo"]</code>.</div>
     <button id="refButton1" type="button">Show the index of the word 'zoo' within the array.</button>
     <div id="result1"></div>
+
+.. _dojo/_base/array#lastIndexOf:
 
 lastIndexOf()
 -------------
@@ -123,6 +127,10 @@ Examples
     <div>The content of our test array is <code>["foo", "hoo", "zoo", "shoe", "zoo", "nuu"]</code>.</div>
     <button id="refButton2" type="button">Show the last index of the word 'zoo' within the array.</button>
     <div id="result2"></div>
+
+.. _dojo/_base/array#foreach:
+
+.. _dojo/_base/array#forEach:
 
 forEach()
 ---------
@@ -230,6 +238,8 @@ To break the forEach-Loop you should use `some()`_:
 
     <button id="start" type="button">Start Testloops</button>
 
+.. _dojo/_base/array#filter:
+
 filter()
 --------
 
@@ -307,6 +317,8 @@ Examples
 
       </ul>
     </div>
+
+.. _dojo/_base/array#map:
 
 map()
 -----
@@ -435,6 +447,7 @@ Examples
       <ul id="unFilteredSalary-items"></ul>
     </div>
 
+.. _dojo/_base/array#some:
 
 some()
 ------
@@ -494,6 +507,8 @@ Examples
     <div>The content of our test array is <code>[200000, 500000, 350000, 1000000, 75, 3]</code>.</div>
     <button id="refButton6" type="button">Are there some items >=1000000 within the array?</button>
     <div id="result6"></div>
+
+.. _dojo/_base/array#every:
 
 every()
 -------

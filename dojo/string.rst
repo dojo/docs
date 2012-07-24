@@ -61,6 +61,8 @@ The signature of the method is:
   :no-headers:
   :sig:
 
+.. _dojo/string#trim:
+
 trim()
 ------
 

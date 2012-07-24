@@ -1,5 +1,7 @@
 .. _dojo/window/get:
 
+.. _dojo/window#get:
+
 ==================
 dojo/window::get()
 ==================

@@ -16,8 +16,10 @@ The dojo/aspect module provides aspect oriented programming facilities to attach
 dojo/aspect API
 ===============
 
-after
------
+.. _dojo/aspect#after:
+
+after()
+-------
 
 The module includes an after function that provides after advice to a method. The provided advising function will be called after the main method is called. The after function's signature is:
 
@@ -66,8 +68,8 @@ The advisory function can also be called with the original arguments of the meth
     // now we have access to the original arguments
   }, true);
 
-before
-------
+before()
+--------
 
 The module also includes a before function that provides before advice to a method. The provided advising function will be called before the main method is called. The before function's signature is:
 
@@ -93,8 +95,8 @@ The target is the object with the method. The methodName is the name of the meth
     dojo.xhr("PUT", {...});
   });
 
-around
-------
+around()
+--------
 
 The module finally includes an around function that provides around advice to a method. The provided advising function will be called in place of the main method, and the advising function will be passed a chaining function that can be used to continue to call execution to the next advice or original method. The around function's signature is:
 

@@ -144,6 +144,8 @@ Finally, there's a watch() method to detect when attribute values change:
       console.log("pane is now " + (newVal ? "opened" : "closed"));
    })
 
+.. _dijit/_WidgetBase#custom-setters-getters:
+
 Custom setters/getters
 ----------------------
 

@@ -300,6 +300,8 @@ The signature of ``dojo/declare()`` is:
   :no-headers:
   :sig:
 
+.. _dojo/_base/declare#safemixin:
+
 safeMixin()
 ===========
 

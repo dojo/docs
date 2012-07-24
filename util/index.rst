@@ -9,7 +9,7 @@ The util/ directory is different than dojo/dijit/dojox in that it doesn't contai
 :ref:`Dojo Build System <build/index>`
 --------------------------------------
 
-The Dojo build system is used to create efficient optimized packages of JavaScript and CSS, customized for a given application or website. You can take advantage of this powerful tool to help structure your development and speed up your applications.
+:ref:`The Dojo build system <build/index>` is used to create efficient optimized packages of JavaScript and CSS, customized for a given application or website. You can take advantage of this powerful tool to help structure your development and speed up your applications.
 
 See also the documentation on :ref:`custom builds <quickstart/custom-builds>`, about how to make optimized builds based on which dojo modules you are using.
 

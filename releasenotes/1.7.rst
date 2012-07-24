@@ -159,6 +159,7 @@ dojo/data/ObjectStore
 ---------------------
 This module has been updated to broadcast notifications originating from the underlying object store if that store is "Observable". If the underlying object store provides an observe() method on results (usually be wrapping with dojo.store.Observable), than the dojo/data/ObjectStore wrapper can listen to changes in the object store and send out dojo.data notification events.
 
+.. _releasenotes/1.7#parser:
 
 Parser
 ------

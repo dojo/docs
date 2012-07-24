@@ -180,6 +180,8 @@ For example:
 
 This would set a style height property.
 
+.. _dijit/registry#byid:
+
 registry.byId()
 ---------------
 

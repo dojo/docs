@@ -20,6 +20,8 @@ The *deprecated* legacy features are set in :ref:`dojo/_base/html <dojo/_base/ht
 Features
 ========
 
+.. _dojo/dom-construct#todom:
+
 toDom()
 -------
 
@@ -79,6 +81,8 @@ This example adds a row to a table.  This is somewhat contrived, since ``place()
         <tr><td>foo</td><td>Foo is good</td></tr>
       </tbody>
     </table>
+
+.. _dojo/dom-construct#place:
 
 place()
 -------
@@ -385,6 +389,8 @@ it allows to set complex attributes and styles dynamically without messy string 
      domConstruct.create("div", null, win.body(), "first");
   });
 
+.. _dojo/dom-construct#create:
+
 create()
 --------
 
@@ -530,6 +536,8 @@ While you can use ``create()`` to set attributes on the existing node without pl
     domAttr.set(node, "innerHTML", "<p>hi</p>");
   });
 
+.. _dojo/dom-construct#empty:
+
 empty()
 -------
 
@@ -643,6 +651,8 @@ applying ``empty()``.
         border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px;
         float: left; background-color: red; padding: 2px }
     #panel { clear: both }
+
+.. _dojo/dom-construct#destroy:
 
 destroy()
 ---------
