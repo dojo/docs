@@ -17,7 +17,7 @@ Useful for:
 * Having a way to replace a data model with another, and making widgets respond to that
 * Adding custom methods that work between model and widgets
 
-To help above, it does the following on behalf of such model:
+To help with the above, it does the following on behalf of such a model:
 
 * Provides data from model via :ref:`dojo/Stateful <dojo/Stateful>` ``get()`` interface
 * Stores data to model via :ref:`dojo/Stateful <dojo/Stateful>` ``set()`` interface
@@ -27,9 +27,9 @@ To help above, it does the following on behalf of such model:
 Usage
 =====
 
-In below example, the text box refers to ``value`` property in the controller (with ``ctrl`` ID).
+In the example below, the text box refers to the ``value`` property in the controller (with ``ctrl`` ID).
 The controller provides the ``value`` property on behalf of the model (``model`` property in the controller).
-Two seconds later, the text box changes from "Foo" to "Bar" as the controller changes the data model it refers to:
+After two seconds, the text box changes from "Foo" to "Bar" as the controller changes the data model it refers to:
 
 .. code-example::
   :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
@@ -64,7 +64,7 @@ Two seconds later, the text box changes from "Foo" to "Bar" as the controller ch
      data-dojo-type="dijit/form/TextBox"
      data-dojo-props="value: at('widget:ctrl', 'value')">
 
-In below example, it runs a custom method (lookup) when there is a change in "Zip" or "Country" attributes in the controller:
+In the example below, it runs a custom method (lookup) when there is a change in "Zip" or "Country" attributes in the controller:
 
 .. html ::
 

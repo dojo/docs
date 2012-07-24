@@ -26,9 +26,9 @@ It has several methods to work with the store:
 Usage
 =====
 
-In below example, the text box refers to ``value`` property in the controller (with ``ctrl`` ID).
+In the example below, the text box refers to ``value`` property in the controller (with ``ctrl`` ID).
 The controller provides the ``value`` property, from the data coming from data store (``store`` property in the controller).
-Two seconds later, the text box changes from ``Foo`` to ``Bar`` as the controller gets new data from data store.
+After two seconds, the text box changes from ``Foo`` to ``Bar`` as the controller gets new data from data store.
 
 .. code-example::
   :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}

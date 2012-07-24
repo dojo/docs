@@ -24,7 +24,7 @@ For the 2nd case, :ref:`dojo/Stateful <dojo/Stateful>` ``get()``/``set()``/``wat
 Usage
 =====
 
-In below example, the controller with ``ctrlSource`` ID specifies holding changes until ``commit()`` is called (by setting ``true`` to ``holdModelUntilCommit``). As the change in the second check box is committed two seconds later from the change, the first check box is checked at then (when the change is committed).
+In the example below, the controller with ``ctrlSource`` ID specifies holding changes until ``commit()`` is called (by setting ``true`` to ``holdModelUntilCommit``). As the change in the second check box is committed two seconds later from the change, the first check box is checked at then (when the change is committed).
 
 .. code-example::
   :djConfig: parseOnLoad: true, async: true, mvc: {debugBindings: true}

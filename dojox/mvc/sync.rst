@@ -16,7 +16,7 @@ dojox/mvc/sync API
 ==================
 
 The module's value is a ``sync`` function that can be directly called to synchronize two :ref:`dojo/Stateful <dojo/Stateful>` properties.
-The ``sync`` function is in below form:
+The ``sync`` function is in the form shown below:
 
 .. js ::
 
@@ -30,7 +30,7 @@ The following parameters should be provided to the ``sync`` function:
 * ``targetProp`` - This is the :ref:`dojo/Stateful <dojo/Stateful>` property name in ``target``, or ``*``. Using ``*`` means to get all properties in sync. (See `Wildcard syntax`_ section fore more details)
 * ``options`` - The optional list of options. (See `Data binding direction`_ section and `Data converter`_ section for more details)
 
-The basic usage looks like below, where ``target.foo`` will become "fooValue0" as soon as ``sync`` function is called (as it's copied from ``source.foo``), and ``source.foo`` will become "fooValue1" as soon as "fooValue1" is set to ``target.foo``:
+The basic usage can be seen in the example below, where ``target.foo`` will become "fooValue0" as soon as ``sync`` function is called (as it's copied from ``source.foo``), and ``source.foo`` will become "fooValue1" as soon as "fooValue1" is set to ``target.foo``:
 
 .. code-example::
   :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
@@ -91,7 +91,7 @@ By default, ``sync`` function watches for changes both at ``target.targetProp`` 
 * ``sync.to`` - Only reflect changes in ``target.targetProp`` to ``source.sourceProp``
 * ``sync.both`` - Reflect changes in each other (Default)
 
-The basic usage of data binding direction looks like below, where change in ``source.foo`` is reflected to ``target.foo``, but not the way around:
+The basic usage of data binding direction can be seen in the example below, where change in ``source.foo`` is reflected to ``target.foo``, but not the way around:
 
 .. code-example::
   :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
@@ -122,7 +122,7 @@ Data converter
 * ``format`` - A function that converts ``source.sourceProp`` to ``target.targetProp``. When an error is thrown here, ``target.targetProp`` won't be set. It has optional 2nd parameter (``options``), which is passed in if ``constraints`` property exists in ``source`` or ``target`` passed into ``sync`` function.
 * ``parse`` - A function that converts ``target.targetProp`` to ``source.sourceProp``. When an error is thrown here, ``source.sourceProp`` won't be set. It has optional 2nd parameter (``options``), which is passed in if ``constraints`` property exists in ``source`` or ``target`` passed into ``sync`` function.
 
-The basic usage of ``options.converter`` is like below:
+The basic usage of ``options.converter`` is shown below:
 
 .. js ::
 
@@ -137,7 +137,7 @@ The basic usage of ``options.converter`` is like below:
     }
   });
 
-An example of using ``dojo/date/locale`` as data converter is like below:
+An example of using ``dojo/date/locale`` as data converter is shown below:
 
 .. code-example::
   :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}

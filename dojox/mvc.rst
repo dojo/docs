@@ -40,14 +40,14 @@ Data binding API
 There are two data binding APIs:
 
 * :ref:`dojox/mvc/sync <dojox/mvc/sync>` provides a simple way for data binding, by keeping two :ref:`dojo/Stateful <dojo/Stateful>` objects in sync.
-* :ref:`dojox/mvc/at <dojox/mvc/at>` typically is used in :ref:`data-dojo-props <dojo/parser#parser-parameters>` for declarative way of data binding, where a widget can synchronize its attribute with another :ref:`dojo/Stateful <dojo/Stateful>`. It can also be used in the first parameter of widget constructor (list of initial property values) for programmatic way of data binding.
+* :ref:`dojox/mvc/at <dojox/mvc/at>` typically is used in :ref:`data-dojo-props <dojo/parser#parser-parameters>` for declarative data binding, where a widget can synchronize its attribute with another :ref:`dojo/Stateful <dojo/Stateful>`. It can also be used in the first parameter of widget constructor (list of initial property values) for programmatic data binding.
 
 Both APIs above support:
 
 * Optional one-way sync (the default is two-way sync). See :ref:`dojox/mvc/sync:Data binding direction <dojox/mvc/sync#data-binding-direction>` for details.
 * Optional data conversion as data goes from model to widget, and vise versa. See :ref:`dojox/mvc/sync:Data converter <dojox/mvc/sync#data-converter>` for details.
 
-Above APIs use :ref:`dojo/Stateful <dojo/Stateful>` as the endpoints of data binding, including :ref:`widgets <dijit/_WidgetBase>` that inherit :ref:`dojo/Stateful <dojo/Stateful>`.
+Both APIs above use :ref:`dojo/Stateful <dojo/Stateful>` as the endpoints of data binding, including :ref:`widgets <dijit/_WidgetBase>` that inherit :ref:`dojo/Stateful <dojo/Stateful>`.
 
 Components in-between data binding endpoints
 --------------------------------------------
@@ -55,7 +55,7 @@ Components in-between data binding endpoints
 There are also some helper classes (below), also based on :ref:`dojo/Stateful <dojo/Stateful>`, that typically work in-between such endpoints:
 
 * :ref:`dojox/mvc/ModelRefController <dojox/mvc/ModelRefController>` has a way to replace its data model with another, with such replacement being notified to widgets, etc.
-* :ref:`dojox/mvc/EditModelRefController <dojox/mvc/EditModelRefController>` is an inheritance of :ref:`dojox/mvc/ModelRefController <dojox/mvc/ModelRefController>`, which manages the data model of before/after the edit.
+* :ref:`dojox/mvc/EditModelRefController <dojox/mvc/EditModelRefController>` is an inheritance of :ref:`dojox/mvc/ModelRefController <dojox/mvc/ModelRefController>`, which manages the data model of before/after the edit and has support to allow the model to be reset to its last saved state.
 * :ref:`dojox/mvc/StoreRefController <dojox/mvc/StoreRefController>` is an inheritance of :ref:`dojox/mvc/ModelRefController <dojox/mvc/ModelRefController>`, which keeps a reference of :ref:`Dojo Object Store <dojo/store>` and has several methods to work with the store whose arrival will be notified to watching widgets, etc..
 * :ref:`dojox/mvc/EditStoreRefController <dojox/mvc/EditStoreRefController>` is an inheritance of :ref:`dojox/mvc/EditModelRefController <dojox/mvc/EditModelRefController>` and :ref:`dojox/mvc/StoreRefController <dojox/mvc/StoreRefController>`. In addition to what :ref:`dojox/mvc/EditModelRefController <dojox/mvc/EditModelRefController>` and :ref:`dojox/mvc/StoreRefController <dojox/mvc/StoreRefController>` do, the ``commit()`` method sends the data model as well as the removed entries in array to the data store.
 * :ref:`dojox/mvc/ListController <dojox/mvc/ListController>` is an inheritance of :ref:`dojox/mvc/ModelRefController <dojox/mvc/ModelRefController>`, working with an array as the model, and maintains its current position so that widgets referring to this controller can update their UI just by changing the position in this controller.
@@ -76,7 +76,7 @@ A number of widgets and MVC containers, etc. are also available, including:
 Advanced data model as well as its helper
 -----------------------------------------
 
-:ref:`dojox/mvc/WidgetList <dojox/mvc/WidgetList>`, :ref:`dojox/mvc/ListController <dojox/mvc/ListController>`, etc. work with array of data. For those components react to change in array, such as adds/removals, etc., :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>`, which is mostly interface-compatible to native ``Array``, is available.
+:ref:`dojox/mvc/WidgetList <dojox/mvc/WidgetList>`, :ref:`dojox/mvc/ListController <dojox/mvc/ListController>`, etc. work with an array of data. For those components to react to changes in the array, such as adds/removals, etc., :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>` is available.   :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>` is mostly interface-compatible to native ``Array``.
 
 For easy conversion of plain objects/arrays from/to :ref:`dojo/Stateful <dojo/Stateful>` and :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>`, the following APIs are available:
 

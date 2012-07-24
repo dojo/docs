@@ -18,7 +18,7 @@ It reads ``data-mvc-bindings`` attribute in DOM node, so that properties in DOM 
 Usage
 =====
 
-In below example, the CSS class of ``<span>`` changes when user clicks on check box, as:
+In the example below, the CSS class of ``<span>`` changes when user clicks on check box, as:
 
 * CSS class of ``<span>`` is bound to ``checked`` property in a :ref:`dojo/Stateful <dojo/Stateful>` (``boldTextModel``) that is boolean. It is one-way sync from data model to DOM node. When the value is true, the CSS class becomes ``boldText``. Otherwise, the CSS class becomes empty.
 * Checked/unchecked state of the check box is bound do the same ``checked`` property in the :ref:`dojo/Stateful <dojo/Stateful>` (``boldTextModel``).

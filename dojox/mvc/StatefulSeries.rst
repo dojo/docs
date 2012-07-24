@@ -13,7 +13,7 @@ dojox/mvc/StatefulSeries
 Usage
 =====
 
-In below example, the chart changes from 25%/25%/50% to 10%/10%/80%, as the data model changes:
+In the example below, the chart changes from 25%/25%/50% to 10%/10%/80%, as the data model changes:
 
 .. code-example::
   :djConfig: async: true, mvc: {debugBindings: true}

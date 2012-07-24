@@ -18,7 +18,7 @@ It maintains its current position (``cursorIndex`` or ``cursorId``) so that widg
 Usage
 =====
 
-In below example, the ``dojox/mvc/ListController`` refers to an instance of :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>` as the model, and the ``cursorIndex`` is updated every two seconds. As the result, text box changes its value every two seconds:
+In the example below, the ``dojox/mvc/ListController`` refers to an instance of :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>` as the model, and the ``cursorIndex`` is updated every two seconds. As the result, text box changes its value every two seconds:
 
 .. code-example::
   :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
