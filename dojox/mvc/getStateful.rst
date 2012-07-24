@@ -24,7 +24,7 @@ The ``getStateful`` function is in below form:
 
 The following parameters should be provided to the getStateful function:
 
-* ``value`` - The plain object to convert to dojo.Stateful object hierarchy.
+* ``value`` - The plain object to convert to :ref:`dojo/Stateful <dojo/Stateful>`l object hierarchy.
 * ``options`` - Optional object to specify conversion options. (See `Conversion options`_ section for details)
 
 ------------------
