@@ -301,7 +301,7 @@ loader can relocate trees of modules by simply setting a configuration variable,
 mixed. This feature solves many interoperability problems when mixing and matching several libraries. No other loader
 can do this and we're quite proud of this feature.
 
-That concludes a fast and furious review of legacy mode. I devoted more than a chapter to this system in `my book <http://amzn.com/1934356115>` if
+That concludes a fast and furious review of legacy mode. I devoted more than a chapter to this system in `my book <http://amzn.com/1934356115>`_ if
 you want a more-gentle presentation.
 
 Modes of Operation
