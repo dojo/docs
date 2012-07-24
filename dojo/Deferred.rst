@@ -68,6 +68,8 @@ Because ``.then()`` returns a new promise that is fulfilled when the callback co
     });
   });
 
+``dojo/Deferred`` contains the following properties:
+
 ================================= ======================================================================================
 Property                          Description
 ================================= ======================================================================================
