@@ -65,41 +65,41 @@ In below example, two seconds later, the text box changes from "Foo" to "Bar" as
   .. js ::
 
     require([
-        "dojo/parser", "dojo/Stateful", "dojo/domReady!"
-    ], function(parser, Stateful){
+        "dojo/parser", "dojo/when", "dojo/Stateful", "dojo/domReady!"
+    ], function(parser, when, Stateful){
         model = new Stateful({value: "Foo"});
-        parser.parse();
-        setTimeout(function(){ model.set("value", "Bar"); }, 2000);
+        when(parser.parse(), function(){
+            setTimeout(function(){ model.set("value", "Bar"); }, 2000);
+        });
     });
 
   .. html ::
 
     <script type="dojo/require">at: "dojox/mvc/at"</script>
-    <input type="text" data-dojo-type="dijit/form/TextBox" data-dojo-props="value: at(model, 'value')">
+    <input type="text"
+     data-dojo-type="dijit/form/TextBox"
+     data-dojo-props="value: at(model, 'value')">
 
 In below example, edit in text box is reflected to the text next to it:
 
 .. code-example::
-  :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
+  :djConfig: parseOnLoad: true, async: true, mvc: {debugBindings: true}
   :toolbar: versions, themes
   :version: 1.8-2.0
   :width: 480
   :height: 60
 
-  .. js ::
-
-    require([
-        "dojo/parser", "dojo/domReady!"
-    ], function(parser){
-        parser.parse();
-    });
-
   .. html ::
 
     <script type="dojo/require">at: "dojox/mvc/at"</script>
-    <span data-dojo-id="model" data-dojo-type="dojo/Stateful" data-dojo-props="value: 'Foo'"></span>
-    <input type="text" data-dojo-type="dijit/form/TextBox" data-dojo-props="value: at(model, 'value')">
-    <span data-dojo-type="dijit/_WidgetBase" data-dojo-props="_setValueAttr: {node: 'domNode', type: 'innerText'}, value: at(model, 'value')"></span>
+    <span data-dojo-id="model"
+     data-dojo-type="dojo/Stateful"
+     data-dojo-props="value: 'Foo'"></span>
+    <input type="text"
+     data-dojo-type="dijit/form/TextBox"
+     data-dojo-props="value: at(model, 'value')">
+    <span data-dojo-type="dijit/_WidgetBase"
+     data-dojo-props="_setValueAttr: {node: 'domNode', type: 'innerText'}, value: at(model, 'value')"></span>
 
 ----------------------
 Data binding direction
@@ -123,11 +123,12 @@ The basic usage of ``direction`` function is in below form, where change in ``ta
   .. js ::
 
     require([
-        "dojo/parser", "dojo/Stateful", "dojo/domReady!"
-    ], function(parser, Stateful){
+        "dojo/parser", "dojo/when", "dojo/Stateful", "dojo/domReady!"
+    ], function(parser, when, Stateful){
         model = new Stateful({value: "Foo"});
-        parser.parse();
-        setTimeout(function(){ model.set("value", "Bar"); }, 2000);
+        when(parser.parse(), function(){
+            setTimeout(function(){ model.set("value", "Bar"); }, 2000);
+        });
     });
 
   .. html ::
@@ -163,19 +164,13 @@ Data converter
 ``transform`` function can be used with any objects having ``format``/``parse`` functions, like ``dojo/number`` and ``dojo/date/locale``. For example, ``dojo/date/locale`` can be used with ``transform`` function, in below form:
 
 .. code-example::
-  :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
+  :djConfig: parseOnLoad: true, async: true, mvc: {debugBindings: true}
   :toolbar: versions, themes
   :version: 1.8-2.0
   :width: 480
   :height: 320
 
   .. js ::
-
-    require([
-        "dojo/parser", "dojo/domReady!"
-    ], function(parser){
-        parser.parse();
-    });
 
   .. html ::
 
@@ -196,5 +191,38 @@ See :ref:`dojox/mvc/sync:Data converter <dojox/mvc/sync#data-converter>` for mor
 Relative data binding
 ---------------------
 
-When ``rel:propInParent`` format (``propInParent`` can be omitted here) is specified in the first argument of ``at`` function, it goes up DOM hierarchy to find a widget meeting the following criteria: The property in widget pointed by ``widget[widget._relTargetProp]`` (or ``widget.target`` as the default) exists, or such property is defined in the widget.
+When ``rel:propInParent`` format (``propInParent`` can be omitted here) is specified in the first argument of ``at`` function, it goes up DOM hierarchy to find a widget meeting the following criteria:
+
+* The property in widget pointed by ``widget[widget._relTargetProp]`` (or ``widget.target`` as the default) exists -OR-
+* Such property is defined in the widget class
+
 Then ``widget[widget._relTargetProp || "target"].propInParent`` (or simply ``widget[widget._relTargetProp || "target"]`` if ``propInParent`` is omitted) will be used as data binding target, which the property in widget specified in data binding syntax will be in sync with. When binding target changes, data binding will be reestablished with the newer target.
+
+The basic usage of relative data binding is in below form, where two seconds later, the text box changes from "Foo" to "Bar" as the parent widget for relative data binding (having ``target`` property) changes its ``target`` property from the one having "Foo" to the one having "Bar":
+
+.. code-example::
+  :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}
+  :toolbar: versions, themes
+  :version: 1.8-2.0
+  :width: 480
+  :height: 60
+
+  .. js ::
+
+    require([
+        "dojo/parser", "dojo/when", "dojo/Stateful", "dojo/domReady!"
+    ], function(parser, when, Stateful){
+        model = new Stateful({child: {value: "Foo"}});
+        when(parser.parse(), function(){
+            setTimeout(function(){ model.set("child", new Stateful({value: "Bar"})); }, 2000);
+        });
+    });
+
+  .. html ::
+
+    <script type="dojo/require">at: "dojox/mvc/at"</script>
+    <div data-dojo-type="dijit/_WidgetBase"
+     data-dojo-props="target: at(model, 'child')">
+        <input data-dojo-type="dijit/form/TextBox" 
+         data-dojo-props="value: at('rel:', 'value')">
+    </div>
