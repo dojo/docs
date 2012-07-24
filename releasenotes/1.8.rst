@@ -305,10 +305,6 @@ dojo/promise
   * ``dojo/promise/first`` - Takes multiple promises and returns a new promise that is fulfilled when the first of 
     these promises is fulfilled. See :ref:`dojo/promise/first <dojo/promise/first>`.
 
-  * ``dojo/promise/tracer`` - A mixin that allows tracing of promise fulfilment. Calling ``.trace()`` or 
-    ``.traceError()`` on a promise enables tracing. Will emit ``resolved``, ``rejected`` or ``progress`` events. See 
-    :ref:`dojo/promise/tracer <dojo/promise/tracer>`.
-
 dojo/request
 ------------
 

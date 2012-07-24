@@ -17,8 +17,8 @@ Introduction
 
 Promises are the programming concept that allow programming of non-blocking asynchronous code in order to reduce program
 latency. The ``dojo/promise`` module is Dojo's implementation of the concept. The module is made up of two main classes
-``dojo/promise/Promise`` and ``dojo/promise/CancelError`` and three helper modules ``dojo/promise/all``,
-``dojo/promise/first`` and ``dojo/promise/tracer``.
+``dojo/promise/Promise`` and ``dojo/promise/CancelError`` and two helper modules ``dojo/promise/all`` and
+``dojo/promise/first``.
 
 * :ref:`dojo/promise/Promise <dojo/promise/Promise>`
 
@@ -36,10 +36,6 @@ latency. The ``dojo/promise`` module is Dojo's implementation of the concept. Th
 
   Takes multiple promises and returns a new promise that is fulfilled when the first of the promises have been 
   fulfilled.
-
-* :ref:`dojo/promise/tracer <dojo/promise/tracer>`
-
-  Trace promise fulfillment. Traced promises will emit events.
 
 See also
 ========
