@@ -11,15 +11,15 @@ dojox/mvc/EditStoreRefController
 .. contents ::
   :depth: 2
 
-dojox/mvc/EditStoreRefController is an inheritance of :ref:`dojox/mvc/EditModelRefController <dojox/mvc/EditModelRefController>` and :ref:`dojox/mvc/StoreRefController <dojox/mvc/StoreRefController>`.
-In addition to what :ref:`dojox/mvc/EditModelRefController <dojox/mvc/EditModelRefController>` and :ref:`dojox/mvc/StoreRefController <dojox/mvc/StoreRefController>` do, the commit() method sends the data model as well as the removed entries in array to the data store.
+``dojox/mvc/EditStoreRefController`` is an inheritance of :ref:`dojox/mvc/EditModelRefController <dojox/mvc/EditModelRefController>` and :ref:`dojox/mvc/StoreRefController <dojox/mvc/StoreRefController>`.
+In addition to what :ref:`dojox/mvc/EditModelRefController <dojox/mvc/EditModelRefController>` and :ref:`dojox/mvc/StoreRefController <dojox/mvc/StoreRefController>` do, the ``commit()`` method sends the data model as well as the removed entries in array to the data store.
 
 =====
 Usage
 =====
 
-In below example, the check box refers to "value" property in the controller (with "ctrl" ID).
-The controller provides the "value" property, from the data coming from data store ("store" property in the controller), using the first one in array.
+In below example, the check box refers to ``value`` property in the controller (with ``ctrl`` ID).
+The controller provides the ``value`` property, from the data coming from data store (``store`` property in the controller), using the first one in array.
 Two seconds later, the check box changes from unchecked to checked.
 The change is committed to the data store, which is reflected to :ref:`dojo/store/Observable <dojo/store/Observable>` callback. 
 
@@ -52,6 +52,10 @@ The change is committed to the data store, which is reflected to :ref:`dojo/stor
   .. html ::
 
     <script type="dojo/require">at: "dojox/mvc/at"</script>
-    <span id="ctrl" data-dojo-type="dojox/mvc/EditStoreRefController" data-dojo-mixins="dojox/mvc/ListController"
+    <span id="ctrl"
+     data-dojo-type="dojox/mvc/EditStoreRefController"
+     data-dojo-mixins="dojox/mvc/ListController"
      data-dojo-props="store: store, cursorIndex: 0"></span>
-    <input id="check" type="checkbox" data-dojo-type="dijit/form/CheckBox" data-dojo-props="checked: at('widget:ctrl', 'value')">
+    <input id="check" type="checkbox"
+     data-dojo-type="dijit/form/CheckBox"
+     data-dojo-props="checked: at('widget:ctrl', 'value')">
