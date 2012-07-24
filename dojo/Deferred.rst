@@ -120,7 +120,7 @@ Examples
           deferred.resolve("success");
         }, 1000);
         
-        return deferred;
+        return deferred.promise;
       }
       
       on(dom.byId("startButton"), "click", function(){
@@ -156,7 +156,7 @@ Examples
           deferred.resolve(msg);
         }, 1000);
         
-        return deferred;
+        return deferred.promise;
       }
       
       on(dom.byId("startButton"), "click", function(){
@@ -204,7 +204,7 @@ Examples
           deferred.reject("ooops");
         }, 1500);
         
-        return deferred;
+        return deferred.promise;
       }
       
       on(dom.byId("startButton"), "click", function(){
@@ -248,7 +248,7 @@ Examples
           deferred.resolve("finished");
         }, 2000);
         
-        return deferred;
+        return deferred.promise;
       }
       
       on(dom.byId("startButton"), "click", function(){

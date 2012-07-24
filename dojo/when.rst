@@ -66,7 +66,7 @@ Examples
           deferred.resolve("async");
         }, 1000);
         
-        return deferred;
+        return deferred.promise;
       }
       
       function syncProcess(){
