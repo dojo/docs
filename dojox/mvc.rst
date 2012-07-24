@@ -58,7 +58,7 @@ There are also some helper classes (below), also based on :ref:`dojo/Stateful <d
 * :ref:`dojox/mvc/ModelRefController <dojox/mvc/ModelRefController>` has a way to replace its data model with another, with such replacement begin notified to widgets, etc.
 * :ref:`dojox/mvc/EditModelRefController <dojox/mvc/EditModelRefController>` is an inheritance of :ref:`dojox/mvc/ModelRefController <dojox/mvc/ModelRefController>`, which manages the data model of before/after the edit.
 * :ref:`dojox/mvc/StoreRefController <dojox/mvc/StoreRefController>` is an inheritance of :ref:`dojox/mvc/ModelRefController <dojox/mvc/ModelRefController>`, which keeps a reference to :ref:`Dojo Object Store <dojo/store>` and has several methods to work with the store whose arrival will be notified to watching widgets, etc..
-* :ref:`dojox/mvc/EditStoreRefController <dojox/mvc/EditStoreRefController>` is an inheritance of :ref:`dojox/mvc/EditModelRefController <dojox/mvc/EditModelRefController>` and :ref:`dojox/mvc/StoreRefController <dojox/mvc/StoreRefController>`. In addition to what :ref:`dojox/mvc/EditModelRefController <dojox/mvc/EditModelRefController>` and :ref:`dojox/mvc/StoreRefController <dojox/mvc/StoreRefController>` do, the commit() method sends the data model as well as the removed entries in array to the data store.
+* :ref:`dojox/mvc/EditStoreRefController <dojox/mvc/EditStoreRefController>` is an inheritance of :ref:`dojox/mvc/EditModelRefController <dojox/mvc/EditModelRefController>` and :ref:`dojox/mvc/StoreRefController <dojox/mvc/StoreRefController>`. In addition to what :ref:`dojox/mvc/EditModelRefController <dojox/mvc/EditModelRefController>` and :ref:`dojox/mvc/StoreRefController <dojox/mvc/StoreRefController>` do, the ``commit()`` method sends the data model as well as the removed entries in array to the data store.
 * :ref:`dojox/mvc/ListController <dojox/mvc/ListController>` is an inheritance of :ref:`dojox/mvc/ModelRefController <dojox/mvc/ModelRefController>`, working with an array as the model, and maintains its current position so that widgets referring to this controller can update their UI just by changing the position in this controller.
 
 Widgets, etc.
@@ -76,9 +76,9 @@ A number of widgets and MVC containers, etc. are also available, including:
 Advanced data model as well as its helper
 -----------------------------------------
 
-`dojox/mvc/WidgetList <dojox/mvc/WidgetList>`, :ref:`dojox/mvc/ListController <dojox/mvc/ListController>`, etc. work with array of data. For those components react to change in array, such as adds/removals, etc., :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>`, which is mostly interface-compatible to native Array, is available to use.
+:ref:`dojox/mvc/WidgetList <dojox/mvc/WidgetList>`, :ref:`dojox/mvc/ListController <dojox/mvc/ListController>`, etc. work with array of data. For those components react to change in array, such as adds/removals, etc., :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>`, which is mostly interface-compatible to native Array, is available to use.
 
-For each conversion of plain objects/arrays from/to :ref:`dojo/Stateful <dojo/Stateful>` and :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>`, the following APIs are available:
+For easy conversion of plain objects/arrays from/to :ref:`dojo/Stateful <dojo/Stateful>` and :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>`, the following APIs are available:
 
 * :ref:`dojox/mvc/getStateful <dojox/mvc/getStateful>` creates :ref:`dojo/Stateful <dojo/Stateful>` and :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>` from plain objects/arrays.
 * :ref:`dojox/mvc/getPlainValue <dojox/mvc/getPlainValue>` creates plain objects/arrays from :ref:`dojo/Stateful <dojo/Stateful>` and :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>`.
@@ -89,15 +89,20 @@ Deprecated APIs
 :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` has been deprecated.
 
 * :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` had several different features:
+
   * Support for array (Notifying removals/additions of elements to watchers)
   * Conversion of :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` from/to plain objects/values
   * Bridge to Dojo Object Store
+
 * Though some applications use all of these features, many applications do not.
+
   * As 1.8 dojox/mvc supports binding any stateful attribute, :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>`'s unique approach of converting non-object value to :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` (with "value" attribute) is no longer needed. Regular dojo/Stateful can be used as data model, in many cases.
   * Some applications do not use array in data model at all.
   * Some applications use arrays in data model in a static manner (No notification is needed for removals/additions of elements for such kind of applications).
   * Some applications would implement getters/setters in its data models to work with more complex data (e.g. XML from REST call, whose request for data item tends to be served by XPath).
+
 * To be able to support these different needs :ref:`dojox/mvc/StatefulModel <dojox/mvc/StatefulModel>` is being separated into to classes that support each item:
+
   * :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>` works as a successor of ``add()``/``remove()`` functions as well as their notification system.
   * :ref:`dojox/mvc/getStateful <dojox/mvc/getStateful>` works as a successor of ``newStatefulModel()`` in ``dojox/mvc``.
   * :ref:`dojox/mvc/getPlainValue <dojox/mvc/getPlainValue>` works as a successor of ``toPlainObject()``.
