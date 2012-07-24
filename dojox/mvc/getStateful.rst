@@ -15,8 +15,8 @@ dojox.mvc.getStateful
 dojox/mvc/getStateful API
 =========================
 
-The module's value is a getStateful function that can be directly called to create dojo.Stateful object hierarchy from a plain object.
-The getStateful function is in below form:
+The module's value is a ``getStateful`` function that can be directly called to create :ref:`dojo/Stateful <dojo/Stateful>` object hierarchy from a plain object.
+The ``getStateful`` function is in below form:
 
 .. js ::
 
@@ -24,8 +24,8 @@ The getStateful function is in below form:
 
 The following parameters should be provided to the getStateful function:
 
-* value - The plain object to convert to dojo.Stateful object hierarchy.
-* options - Optional object to specify conversion options. (See `Conversion options`_ section for details)
+* ``value`` - The plain object to convert to dojo.Stateful object hierarchy.
+* ``options`` - Optional object to specify conversion options. (See `Conversion options`_ section for details)
 
 ------------------
 Conversion options
@@ -33,14 +33,14 @@ Conversion options
 
 By default, getStateful function does the following:
 
-* Convert plain objects to dojo.Stateful
-* Convert arrays to dojox.mvc.StatefulArray
+* Convert plain objects to :ref:`dojo/Stateful <dojo/Stateful>`
+* Convert arrays to :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>`
 * Keep others intact
 
 By providing the optional second argument to getStateful function, above behavior can be changed. The optional second argument should be an object, having the following functions as properties:
 
-* getType - Returns what category of type the given value has.
-* getStatefulXXX - Returns the converted value of given one. XXX here is what getType function returns, with the first character capitalized.
+* ``getType()`` - Returns what category of type the given value has.
+* ``getStatefulXXX()`` - Returns the converted value of given one. XXX here is what ``getType`` function returns, with the first character capitalized.
 
 Below is an example of the optional second argument:
 
@@ -85,4 +85,3 @@ Below is an example of the optional second argument:
         return v; // Anything
     }
  }
-
