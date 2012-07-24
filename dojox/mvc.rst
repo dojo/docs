@@ -40,7 +40,7 @@ Data binding API
 There are two data binding APIs:
 
 * :ref:`dojox/mvc/sync <dojox/mvc/sync>` provides a simple way for data binding, by keeping two :ref:`dojo/Stateful <dojo/Stateful>` objects in sync.
-* :ref:`dojox/mvc/at <dojox/mvc/at>` typically is used in ``data-dojo-props`` for declarative way of data binding, where a widget can synchronize its attribute with another :ref:`dojo/Stateful <dojo/Stateful>`. It can also be used in the first parameter of widget constructor (list of initial property values) for programmatic way of data binding.
+* :ref:`dojox/mvc/at <dojox/mvc/at>` typically is used in :ref:`data-dojo-props <dojo/parser#parser-parameters>` for declarative way of data binding, where a widget can synchronize its attribute with another :ref:`dojo/Stateful <dojo/Stateful>`. It can also be used in the first parameter of widget constructor (list of initial property values) for programmatic way of data binding.
 
 Both APIs above support:
 
