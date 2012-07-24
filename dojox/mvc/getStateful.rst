@@ -1,7 +1,7 @@
 .. _dojox/mvc/getStateful:
 
 =====================
-dojox.mvc.getStateful
+dojox/mvc/getStateful
 =====================
 
 :Authors: Akira Sudoh, Ed Chatelain
@@ -40,7 +40,7 @@ By default, getStateful function does the following:
 By providing the optional second argument to getStateful function, above behavior can be changed. The optional second argument should be an object, having the following functions as properties:
 
 * ``getType()`` - Returns what category of type the given value has.
-* ``getStatefulXXX()`` - Returns the converted value of given one. XXX here is what ``getType`` function returns, with the first character capitalized.
+* ``getStatefulXXX()`` - Returns the converted value of given one. ``XXX`` here is what ``getType`` function returns, with the first character capitalized.
 
 Below is an example of the optional second argument:
 
