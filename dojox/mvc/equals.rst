@@ -1,7 +1,7 @@
 .. _dojox/mvc/equals:
 
 ================
-dojox.mvc.equals
+dojox/mvc/equals
 ================
 
 :Authors: Akira Sudoh, Ed Chatelain
@@ -15,34 +15,34 @@ dojox.mvc.equals
 dojox/mvc/equals API
 ====================
 
-The module's value is a equals function that can be directly called to compare two dojo.Stateful objects.
-The equals function is in below form:
+The module's value is a ``equals`` function that can be directly called to compare two :ref:`dojo/Stateful <dojo/Stateful>` objects.
+The ``equals`` function is in below form:
 
 .. js ::
 
   equals(dst, src, options);
 
-The following parameters should be provided to the equals function:
+The following parameters should be provided to the ``equals`` function:
 
-* dst - The value to compare with the second argument (src).
-* src - The value to compare with the first argument (dst).
-* options - Optional object to specify comparison options. (See `Comparison options`_ section for details)
+* ``dst`` - The value to compare with the second argument (``src``).
+* ``src`` - The value to compare with the first argument (``dst``).
+* ``options`` - Optional object to specify comparison options. (See `Comparison options`_ section for details)
 
 ------------------
 Comparison options
 ------------------
 
-By default, equals function does the following:
+By default, ``equals`` function does the following:
 
-* Iterate properties in dojo.Stateful or plain object
-* Iterate elements in dojox.mvc.StatefulArray or plain array
+* Iterate properties in :ref:`dojo/Stateful <dojo/Stateful>` or plain object
+* Iterate elements in :ref:`dojox/mvc/StatefulArray <dojox/mvc/StatefulArray>` or plain array
 * Compare Epoch time for date object
 * Do normal comparison for others
 
 By providing the optional second argument to equals function, above behavior can be changed. The optional second argument should be an object, having the following functions as properties:
 
-* getType - Returns what category of type the given value has.
-* equalsXXX - Returns the comparison result for the given two values. XXX here is what getType function returns, with the first character capitalized.
+* ``getType`` - Returns what category of type the given value has.
+* ``equalsXXX`` - Returns the comparison result for the given two values. ``XXX`` here is what ``getType`` function returns, with the first character capitalized.
 
 Below is an example of the optional second argument:
 
