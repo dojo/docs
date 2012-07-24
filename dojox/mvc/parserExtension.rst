@@ -23,7 +23,7 @@ In below example, the CSS class of ``<span>`` changes when user clicks on check 
 * CSS class of ``<span>`` is bound to ``checked`` property in a :ref:`dojo/Stateful <dojo/Stateful>` (``boldTextModel``) that is boolean. It is one-way sync from data model to DOM node. When the value is true, the CSS class becomes ``boldText``. Otherwise, the CSS class becomes empty.
 * Checked/unchecked state of the check box is bound do the same ``checked`` property in the :ref:`dojo/Stateful <dojo/Stateful>` (``boldTextModel``).
 
-Also, the text in <span> changes when user makes a selection in combo box, as:
+Also, the text in ``<span>`` changes when user makes a selection in combo box, as:
 
 * The text in ``<span>`` is bound to ``value`` property in a :ref:`dojo/Stateful <dojo/Stateful>` (``titleModel``).
 * The selected value of combo box is bound to the same ``value`` property in the :ref:`dojo/Stateful <dojo/Stateful>` (``titleModel``).
