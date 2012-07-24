@@ -54,8 +54,7 @@ The change is committed to the data store, which is reflected to :ref:`dojo/stor
     <script type="dojo/require">at: "dojox/mvc/at"</script>
     <span id="ctrl"
      data-dojo-type="dojox/mvc/EditStoreRefController"
-     data-dojo-mixins="dojox/mvc/ListController"
-     data-dojo-props="store: store, cursorIndex: 0"></span>
+     data-dojo-props="store: store"></span>
     <input id="check" type="checkbox"
      data-dojo-type="dijit/form/CheckBox"
      data-dojo-props="checked: at('widget:ctrl', 'value')">
