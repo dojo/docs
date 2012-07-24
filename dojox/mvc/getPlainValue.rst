@@ -1,7 +1,7 @@
 .. _dojox/mvc/getPlainValue:
 
 =======================
-dojox.mvc.getPlainValue
+dojox/mvc/getPlainValue
 =======================
 
 :Authors: Akira Sudoh, Ed Chatelain
