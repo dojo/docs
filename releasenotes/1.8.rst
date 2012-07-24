@@ -42,6 +42,15 @@ TODO: Link to page with specific vendor device models tested on
 Dojo
 ====
 
+dojo/dojo (the dojo AMD loader)
+-------------------------------
+
+- ``packageMap`` was *deprecated* in lieu of the proposed AMD standard ``map`` configuration; see `AMD map <http://https://github.com/amdjs/amdjs-api/wiki/Common-Config>`_
+
+- module-level configuration as per the proposed `AMD standard <http://https://github.com/amdjs/amdjs-api/wiki/Common-Config>`_
+
+- legacy asynchronous performance has been improved.
+
 dojo/_base/Deferred
 -------------------
 
