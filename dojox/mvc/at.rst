@@ -31,7 +31,7 @@ The following parameters should be provided to the at function:
 at function syntax with widgets
 -------------------------------
 
-``at`` function is typically used as a mixin property of a widget (``data-dojo-props`` or the first parameter of widget's constructor), in below forms, where in both cases the value property in above TextBox is synchronized with ``target.targetProp``:
+``at`` function is typically used as a mixin property of a widget (:ref:`data-dojo-props <dojo/parser#parser-parameters>` or the first parameter of widget's constructor), in below forms, where in both cases the value property in above TextBox is synchronized with ``target.targetProp``:
 
 .. html ::
 
