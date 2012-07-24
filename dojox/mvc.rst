@@ -71,6 +71,7 @@ A number of widgets and MVC containers, etc. are also available, including:
 * :ref:`dojox/mvc/Repeat <dojox/mvc/Repeat>` A model-bound repeater widget that binds to a data collection.
 * :ref:`dojox/mvc/Generate <dojox/mvc/Generate>` A simple example of UI generation from a supplied data model.
 * :ref:`dojox/mvc/StatefulSeries <dojox/mvc/StatefulSeries>` A chart data plugin ("series") class that watches for properties specified in :ref:`dojox/mvc/at <dojox/mvc/at>` handles in the given data.
+* :ref:`dojox/mvc/parserExtension <dojox/mvc/parserExtension>` A module to extend :ref:`dojo/parser <dojo/parser>` and/or ``dojox/mobile/parser`` so that data binding can be done for non-widgets.
 
 Advanced data model as well as its helper
 -----------------------------------------
