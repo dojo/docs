@@ -7,7 +7,7 @@ dojox/mvc/StatefulSeries
 .. contents ::
   :depth: 2
 
-dojox/mvc/StatefulSeries is a chart data plugin ("series") class that watches for properties specified in :ref:`dojox/mvc/at <dojox/mvc/at>` handles in the given data. At initialization, and when the properties are updated, creates the data from data given and updates the chart.
+``dojox/mvc/StatefulSeries`` is a chart data plugin ("series") class that watches for properties specified in :ref:`dojox/mvc/at <dojox/mvc/at>` handles in the given data. At initialization, and when the properties are updated, creates the data from data given and updates the chart.
 
 =====
 Usage
