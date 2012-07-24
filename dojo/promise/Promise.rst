@@ -122,14 +122,12 @@ callbackOrErrback Function? The function that should be called on resolution or 
 trace()
 -------
 
-Trace the promise. Any supplied arguments are emitted in trace events. It returns the original promise. The
-:ref:`dojo/promise/tracer <dojo/promise/tracer>` module will extend ``dojo/promise/Promise`` to enable this feature.
+Trace the promise. Any supplied arguments are emitted in trace events. It returns the original promise.
 
 traceRejected()
 ---------------
 
-Trace rejection of the promise. Any supplied arguments are emitted in trace events. It returns the original promise. The
-:ref:`dojo/promise/tracer <dojo/promise/tracer>` module will extend ``dojo/promise/Promise`` to enable this feature.
+Trace rejection of the promise. Any supplied arguments are emitted in trace events. It returns the original promise.
 
 See also
 ========
