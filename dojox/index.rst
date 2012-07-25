@@ -83,7 +83,7 @@ Language/Programming
 ================================================================================== ============ ==============================================================
 Package/Module                                                                     Status       Description
 ================================================================================== ============ ==============================================================
-:ref:`dojox/lang <dojox/lang>`                                                     Maintained   Various language extensions.
+:ref:`dojox/lang <dojox/lang/index>`                                               Maintained   Various language extensions.
 :ref:`dojox/lang/aspect <dojox/lang/aspect>`                                       Maintained   More full featured aspect based programming not covered in 
                                                                                                 ``dojo/aspect``.
 :ref:`dojox/lang/async <dojox/lang/async>`                                         Maintained   Helpers for event driven programming
@@ -135,9 +135,9 @@ Package/Module                                                                  
 :ref:`dojox/image/LightBoxNano <dojox/image/LightBoxNano>`                         Experimental A simple "nano" version of the lightbox.
 :ref:`dojox/image/Magnifier <dojox/image/Magnifier>`                               Maintained   Adds magnification on a portion of an image element, using 
                                                                                                 ``dojox/gfx``
-:ref:`dojox/image/MaginfierLite <dojox/image/MaginfierLite>`                       Experimental Adds magnification on a portion of an image element
+:ref:`dojox/image/MaginfierLite <dojox/image/MagnifierLite>`                       Experimental Adds magnification on a portion of an image element
 :ref:`dojox/image/SlideShow <dojox/image/SlideShow>`                               Abandoned    A Slideshow Widget
-:ref:`dojox/image/TumbnailPicker <dojox/image/TumbnailPicker>`                     Abandoned    A scrolling Thumbnail Picker widget
+:ref:`dojox/image/TumbnailPicker <dojox/image/ThumbnailPicker>`                    Abandoned    A scrolling Thumbnail Picker widget
 :ref:`dojox/sketch <dojox/sketch>`                                                 Experimental A cross-browser drawing editor based on ``dojox/gfx``
 ================================================================================== ============ ==============================================================
 
@@ -185,7 +185,7 @@ Package/Module                                                                  
                                                                                                 file system type objects.
 :ref:`dojox/data/FlickrRestStore <dojox/data/FlickrRestStore>`                     Deprecated
 :ref:`dojox/data/FlickrStore <dojox/data/FlickrStore>`                             Deprecated   Data store driven by Flickr.com public API.
-:ref:`dojox/data/GoogleFeedStore <dojox/data/GooleFeedStore>`                      Deprecated
+:ref:`dojox/data/GoogleFeedStore <dojox/data/GoogleFeedStore>`                     Deprecated
 :ref:`dojox/data/GoogleSearchStore <dojox/data/GoogleSearchStore>`                 Deprecated   Datastore that interfaces to Google's AJAX search services
 :ref:`dojox/data/HtmlStore <dojox/data/HtmlStore>`                                 Deprecated   Reads arbitrary HTML to be used as a datastore, including 
                                                                                                 tables, ordered and un-ordered lists and lists of ``<div>`` 
@@ -232,7 +232,7 @@ Package/Module                                                                  
 :ref:`dojox/io/scriptFrame <dojox/io/scriptFrame>`                                 Deprecated   Replaced with ``dojo/request``
 :ref:`dojox/io/windowName <dojox/io/windowName>`                                   Deprecated   Replaced with ``dojo/request``
 :ref:`dojox/io/xhrMultiPart <dojox/io/xhrMultiPart>`                               Deprecated   Replaced with ``dojo/request``
-:ref:`dojox/io/xhrPlugins <dojox/io/xhrPuligins>`                                  Deprecated   Functionality now covered in ``dojo/request/registry``
+:ref:`dojox/io/xhrPlugins <dojox/io/xhrPlugins>`                                   Deprecated   Functionality now covered in ``dojo/request/registry``
 :ref:`dojox/io/proxy/xip <dojox/io/proxy/xip>`                                     Maintained   XHR IFrame Proxy
 :ref:`dojox/rpc <dojox/rpc>`                                                       Maintained   Extra utilities for ``dojo/rpc``
 :ref:`dojox/socket/Reconnect <dojox/socket/Reconnect>`                             Abandoned    Provides a WebSocket with fallback to HTTP long-polling
@@ -283,7 +283,7 @@ Package/Module                                                                  
                                                                                                 optional multi-file selection, using only HTML elements.
 :ref:`dojox/form/YearTextBox <dojox/form/YearTextBox>`                             Experimental A validating, serializable, range-bound date text box with a 
                                                                                                 popup calendar that contains only years.
-:ref:`dojox/grid <dojox/grid>`                                                     Deprecated   A grid widget package.  Replaced by ``dgrid``.
+:ref:`dojox/grid <dojox/grid/index>`                                               Deprecated   A grid widget package.  Replaced by ``dgrid``.
 :ref:`dojox/layout/BorderContainer <dojox/layout/BorderContainer>`                 Deprecated   Covered by ``dijit/layout/BorderContainer``
 :ref:`dojox/layout/ContentPane <dojox/layout/ContentPane>`                         Maintained   An extended version of ``dijit/layout/ContentPane`` that 
                                                                                                 supports running infile JavaScript.
@@ -310,66 +310,66 @@ Package/Module                                                                  
 :ref:`dojox/layout/ToggleSplitter <dojox/layout/ToggleSplitter>`                   Experimental A draggable and clickable spacer between two items in a 
                                                                                                 ``dijit.layout.BorderContainer``.
 :ref:`dojox/widget <dojox/widget>`                                                 Maintained   [desc]
-:ref:`dojox/widget/AnalogGauge <dojo/widget/AnalogGauge>`                          Abandoned    Replaced with ``dojox/dgauges``
-:ref:`dojox/widget/AutoRotator <dojo/widget/AutoRotator>`                          Maintained   A rotator that automatically transitions between child nodes.
-:ref:`dojox/widget/BarGauge <dojo/widget/BarGauge>`                                Abandoned    Replaced with ``dojox/dgauges``
-:ref:`dojox/widget/Calendar <dojo/widget/Calendar>`                                Maintained   The standard Calendar. It includes day and month/year views.
-:ref:`dojox/widget/Calendar2Pane <dojo/widget/Calendar2Pane>`                      Maintained   A Calendar with two panes, the second one containing both 
+:ref:`dojox/widget/AnalogGauge <dojox/widget/AnalogGauge>`                         Abandoned    Replaced with ``dojox/dgauges``
+:ref:`dojox/widget/AutoRotator <dojox/widget/AutoRotator>`                         Maintained   A rotator that automatically transitions between child nodes.
+:ref:`dojox/widget/BarGauge <dojox/widget/BarGauge>`                               Abandoned    Replaced with ``dojox/dgauges``
+:ref:`dojox/widget/Calendar <dojox/widget/Calendar>`                               Maintained   The standard Calendar. It includes day and month/year views.
+:ref:`dojox/widget/Calendar2Pane <dojox/widget/Calendar2Pane>`                     Maintained   A Calendar with two panes, the second one containing both 
                                                                                                 month and year.
-:ref:`dojox/widget/Calendar3Pane <dojo/widget/Calendar3Pane>`                      Maintained   A Calendar with three panes, includes day, month, and year 
+:ref:`dojox/widget/Calendar3Pane <dojox/widget/Calendar3Pane>`                     Maintained   A Calendar with three panes, includes day, month, and year 
                                                                                                 views.
-:ref:`dojox/widget/CalendarFisheye <dojo/widget/CalendarFisheye>`                  Maintained   The standard Calendar. It includes day, month and year views.
+:ref:`dojox/widget/CalendarFisheye <dojox/widget/CalendarFisheye>`                 Maintained   The standard Calendar. It includes day, month and year views.
                                                                                                 FisheyeLite effects are included.
-:ref:`dojox/widget/CalendarFx <dojo/widget/CalendarFx>`                            Maintained   The visual effects extensions for ``dojox/widget/Calendar``.
-:ref:`dojox/widget/ColorPicker <dojo/widget/ColorPicker>`                          Experimental A HSV color picker
-:ref:`dojox/widget/DailyCalendar <dojo/widget/DailyCalendar>`                      Maintained   A calendar with only a daily view.
-:ref:`dojox/widget/DataPresentation <dojo/widget/DataPresentation>`                Abandoned    A widget that connects to a data store in a simple manner and
+:ref:`dojox/widget/CalendarFx <dojox/widget/CalendarFx>`                           Maintained   The visual effects extensions for ``dojox/widget/Calendar``.
+:ref:`dojox/widget/ColorPicker <dojox/widget/ColorPicker>`                         Experimental A HSV color picker
+:ref:`dojox/widget/DailyCalendar <dojox/widget/DailyCalendar>`                     Maintained   A calendar with only a daily view.
+:ref:`dojox/widget/DataPresentation <dojox/widget/DataPresentation>`               Abandoned    A widget that connects to a data store in a simple manner and
                                                                                                 visualizes data.
-:ref:`dojox/widget/Dialog <dojo/widget/Dialog>`                                    Maintained   An enhanced version of ``dijit/Dialog``.
-:ref:`dojox/widget/DialogSimple <dojo/widget/DialogSimple>`                        Maintained   An simple enhancements of ``dijit/Dialog``.
-:ref:`dojox/widget/DocTester <dojo/widget/DocTester>`                              Abandoned    A widget to run DocTests inside an HTML page.
-:ref:`dojox/widget/DynamicTooltip <dojo/widget/DynamicTooltip>`                    Abandoned    Extension of ``dijit/Tooltip`` providing content set via XHR 
+:ref:`dojox/widget/Dialog <dojox/widget/Dialog>`                                   Maintained   An enhanced version of ``dijit/Dialog``.
+:ref:`dojox/widget/DialogSimple <dojox/widget/DialogSimple>`                       Maintained   An simple enhancements of ``dijit/Dialog``.
+:ref:`dojox/widget/DocTester <dojox/widget/DocTester>`                             Abandoned    A widget to run DocTests inside an HTML page.
+:ref:`dojox/widget/DynamicTooltip <dojox/widget/DynamicTooltip>`                   Abandoned    Extension of ``dijit/Tooltip`` providing content set via XHR 
                                                                                                 request via ``href`` param.
-:ref:`dojox/widget/FeedPortlet <dojo/widget/FeedPortlet>`                          Abandoned    A Portlet that loads a XML feed.
-:ref:`dojox/widget/FilePicker <dojo/widget/FilePicker>`                            Abandoned    A pane to display the information for the currently-selected 
+:ref:`dojox/widget/FeedPortlet <dojox/widget/FeedPortlet>`                         Abandoned    A Portlet that loads a XML feed.
+:ref:`dojox/widget/FilePicker <dojox/widget/FilePicker>`                           Abandoned    A pane to display the information for the currently-selected 
                                                                                                 file
-:ref:`dojox/widget/FisheyeList <dojo/widget/FisheyeList>`                          Maintained   Menu similar to the fish eye menu on the Mac OS.
-:ref:`dojox/widget/FisheyeListItem <dojo/widget/FisheyeListItem>`                  Maintained   Menu item inside of a FisheyeList.
-:ref:`dojox/widget/FisheyeLite <dojo/widget/FisheyeLite>`                          Experimental A Light-weight Fisheye Component, or an enhanced version of 
+:ref:`dojox/widget/FisheyeList <dojox/widget/FisheyeList>`                         Maintained   Menu similar to the fish eye menu on the Mac OS.
+:ref:`dojox/widget/FisheyeListItem <dojox/widget/FisheyeListItem>`                 Maintained   Menu item inside of a FisheyeList.
+:ref:`dojox/widget/FisheyeLite <dojox/widget/FisheyeLite>`                         Experimental A Light-weight Fisheye Component, or an enhanced version of 
                                                                                                 ``dojo/fx/Toggler``.
-:ref:`dojox/widget/Iterator <dojo/widget/Iterator>`                                Abandoned    A widget that iterates the contents of a datastore.
-:ref:`dojox/widget/Loader <dojo/widget/Loader>`                                    Abandoned    A configurable global XHR-listener to display a loading 
+:ref:`dojox/widget/Iterator <dojox/widget/Iterator>`                               Abandoned    A widget that iterates the contents of a datastore.
+:ref:`dojox/widget/Loader <dojox/widget/Loader>`                                   Abandoned    A configurable global XHR-listener to display a loading 
                                                                                                 message during running XHRs or to simply provide base-level 
                                                                                                 topic to subscribe to for custom loading messages.
-:ref:`dojox/widget/MonthAndYearlyCalendar <dojo/widget/MonthAndYearlyCalendar>`    Maintained   A calendar with only a daily view.
-:ref:`dojox/widget/MonthlyCalendar <dojo/widget/MonthlyCalendar>`                  Maintained   A calendar with only a month view.
-:ref:`dojox/widget/MultiSelectCalendar <dojo/widget/MultiSelectCalendar>`          Experimental A simple GUI for choosing several dates in the context of a 
+:ref:`dojox/widget/MonthAndYearlyCalendar <dojox/widget/MonthAndYearlyCalendar>`   Maintained   A calendar with only a daily view.
+:ref:`dojox/widget/MonthlyCalendar <dojox/widget/MonthlyCalendar>`                 Maintained   A calendar with only a month view.
+:ref:`dojox/widget/MultiSelectCalendar <dojox/widget/MultiSelectCalendar>`         Experimental A simple GUI for choosing several dates in the context of a 
                                                                                                 monthly calendar.
-:ref:`dojox/widget/Pager <dojo/widget/Page>`                                       Experimental A Pager, displaying a list of sized nodes
-:ref:`dojox/widget/PlaceholderMenuItem <dojo/widget/PlaceholderMenuItem>`          Experimental A menu item that can be used as a placeholder.
-:ref:`dojox/widget/Portlet <dojo/widget/Portlet>`                                  Maintained   A container widget that is designed to be contained in a 
+:ref:`dojox/widget/Pager <dojox/widget/Page>`                                      Experimental A Pager, displaying a list of sized nodes
+:ref:`dojox/widget/PlaceholderMenuItem <dojox/widget/PlaceholderMenuItem>`         Experimental A menu item that can be used as a placeholder.
+:ref:`dojox/widget/Portlet <dojox/widget/Portlet>`                                 Maintained   A container widget that is designed to be contained in a 
                                                                                                 ``dojox/layout/GridContainer``.
-:ref:`dojox/widget/PortletDialogSettings <dojo/widget/PortletDialogSettings>`      Maintained   A settings widget to be used with a ``dojox/widget/Portlet``.
-:ref:`dojox/widget/PortletSettings <dojo/widget/PortletSettings>`                  Maintained   A settings widget to be used with a ``dojox/widget/Portlet``.
-:ref:`dojox/widget/Roller <dojo/widget/Roller>`                                    Maintained   A simple widget to take an unordered-list of Text and roll 
+:ref:`dojox/widget/PortletDialogSettings <dojox/widget/PortletDialogSettings>`     Maintained   A settings widget to be used with a ``dojox/widget/Portlet``.
+:ref:`dojox/widget/PortletSettings <dojox/widget/PortletSettings>`                 Maintained   A settings widget to be used with a ``dojox/widget/Portlet``.
+:ref:`dojox/widget/Roller <dojox/widget/Roller>`                                   Maintained   A simple widget to take an unordered-list of Text and roll 
                                                                                                 through them.
-:ref:`dojox/widget/RollingList <dojo/widget/RollingList>`                          Abandoned    A rolling list that can be tied to a data store with children.
-:ref:`dojox/widget/Rotator <dojo/widget/Rotator>`                                  Abandoned    A widget for rotating through child nodes using transitions.
-:ref:`dojox/widget/Selection <dojo/widget/Selection>`                              Maintained   Base class for widgets that manage a list of selected data 
+:ref:`dojox/widget/RollingList <dojox/widget/RollingList>`                         Abandoned    A rolling list that can be tied to a data store with children.
+:ref:`dojox/widget/Rotator <dojox/widget/Rotator>`                                 Abandoned    A widget for rotating through child nodes using transitions.
+:ref:`dojox/widget/Selection <dojox/widget/Selection>`                             Maintained   Base class for widgets that manage a list of selected data 
                                                                                                 items.
-:ref:`dojox/widget/SortList <dojo/widget/SortList>`                                Abandoned    A sortable unordered-list with a fixed header.
-:ref:`dojox/widget/Standby <dojo/widget/Standby>`                                  Experimental A widget designed to act as a Standby/Busy/Disable/Blocking 
+:ref:`dojox/widget/SortList <dojox/widget/SortList>`                               Abandoned    A sortable unordered-list with a fixed header.
+:ref:`dojox/widget/Standby <dojox/widget/Standby>`                                 Experimental A widget designed to act as a Standby/Busy/Disable/Blocking 
                                                                                                 widget to indicate a particular DOM node is processing and 
                                                                                                 cannot be clicked on at this time.
-:ref:`dojox/widget/TitleGroup <dojo/widget/TitleGroup>`                            Maintained   A container which controls a series of ``dijit/TitlePane``, 
+:ref:`dojox/widget/TitleGroup <dojox/widget/TitleGroup>`                           Maintained   A container which controls a series of ``dijit/TitlePane``, 
                                                                                                 allowing one to be visible and hiding siblings.
-:ref:`dojox/widget/Toaster <dojo/widget/Toaster>`                                  Maintained   Message that slides in from the corner of the screen, used 
+:ref:`dojox/widget/Toaster <dojox/widget/Toaster>`                                 Maintained   Message that slides in from the corner of the screen, used 
                                                                                                 for notifications like "new email".
-:ref:`dojox/widget/UpgradeBar <dojo/widget/UpgradeBar>`                            Experimental Shows a bar at the top of the screen when the user is to be 
+:ref:`dojox/widget/UpgradeBar <dojox/widget/UpgradeBar>`                           Experimental Shows a bar at the top of the screen when the user is to be 
                                                                                                 notified that they should upgrade their browser or a plugin.
-:ref:`dojox/widget/Wizard <dojo/widget/Wizard>`                                    Maintained   A set of panels that display sequentially, typically notating
+:ref:`dojox/widget/Wizard <dojox/widget/Wizard>`                                   Maintained   A set of panels that display sequentially, typically notating
                                                                                                 a step-by-step procedure like an install.
-:ref:`dojox/widget/YearlyCalendar <dojo/widget/YearlyCalendar>`                    Maintained   A calendar with only a year view.
+:ref:`dojox/widget/YearlyCalendar <dojox/widget/YearlyCalendar>`                   Maintained   A calendar with only a year view.
 ================================================================================== ============ ==============================================================
 
 Utility Modules
