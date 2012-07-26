@@ -39,6 +39,10 @@ of Dojo might include fixes to support future releases of these browsers, but we
 
 TODO: Link to page with specific vendor device models tested on
 
+**Server-Side Platforms**
+
+* While not a browser, Dojo 1.8 also works inside Node 0.6.x and 0.8.x.
+
 Dojo
 ====
 
