@@ -990,7 +990,7 @@ dojo/parser
   auto-require or declarative require features.  If the results of `parse()` are needed, utilise the returned promise.  
   Also any errors encountered during the parse will be raised as a promise errback.
 
-Dijit
+dijit
 -----
 
 - Constructor Parameters: Execution of custom setters during widget construction has slightly changed.
@@ -1045,6 +1045,14 @@ Dijit
 
   The event passed to ``handleKey()`` is now a keydown event, rather than a synthetic keypress event generated from
   ``dojo.connect()``.
+
+- If you have a custom ``StackController`` or ``TabController`` subclass where
+  the buttons for each pane have nested close buttons (like TabContainer itself, with the [x] on the right of each tab),
+  you need to either:
+
+       1. In your subclass's definition, set ``buttonWidgetCloseClass`` to the CSS class set on your close button.
+       2. If your subclass extends TabController, set the ``dijitTabCloseButton`` CSS class on your close button,
+          otherwise set ``dijitStackCloseButton``.
 
 
 dojox/charting
