@@ -95,7 +95,7 @@ By default, ``sync`` function watches for changes both at ``target.targetProp`` 
 * ``sync.to`` - Only reflect changes in ``target.targetProp`` to ``source.sourceProp``
 * ``sync.both`` - Reflect changes in each other (Default)
 
-The basic usage of data binding direction can be seen in the example below, where change in ``source.foo`` is reflected to ``target.foo``, but not the way around:
+The basic usage of data binding direction can be seen in the example below, where change in ``source.foo`` is reflected to ``target.foo``, but not the other way around:
 
 .. code-example::
   :djConfig: parseOnLoad: false, async: true, mvc: {debugBindings: true}

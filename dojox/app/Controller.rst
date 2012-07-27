@@ -15,8 +15,9 @@ Several controllers required by the framework are implemented in ``dojox/app/con
 * :ref:`dojox/app/controllers/History <dojox/app/controllers/History>` controller: maintain application's history. This is based on HTML5 history APIs and will not work on platforms that do not support it like IE, Android 3 & 4, iOS4, etc.
 * :ref:`dojox/app/controllers/HistoryHash <dojox/app/controllers/History>` controller: maintain application's history. This is based on URL hash and has limitation if refresh the browser and back to an URL which out of current application's history stack.
 
-The first three controllers are automatically loaded by the ``dojox/app/main`` module. The other controllers needs to be
-listed in the controllers section of the configuration file to be loaded.
+If the ``noAutoLoadControllers`` configuration option is set to false (or not set) the first three controllers are automatically loaded by the ``dojox/app/main`` module.
+If the ``noAutoLoadControllers`` configuration option is set to true, a Load, Transition, and Layout controller should be listed in the controllers section of the configuration file to be loaded.
+Any other controllers would always need to be listed in the controllers section of the configuration file to be loaded.
 
 A developer using the dojox/app framework can define additional custom controller by extending the base class (``dojox/app/Controller``)
 and specifying them in the application configuration file. The events binding to application's root domNode is done by default.
