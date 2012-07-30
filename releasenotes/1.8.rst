@@ -1058,6 +1058,8 @@ dijit
        2. If your subclass extends TabController, set the ``dijitTabCloseButton`` CSS class on your close button,
           otherwise set ``dijitStackCloseButton``.
 
+- If selected ``TreeNodes`` are highlighted strangely, you've probably created the Tree
+  programatically and forgotten to call ``startup()`` on it.
 
 dojox/charting
 --------------
