@@ -403,7 +403,8 @@ Inline Commented-Out Code
 
 There are some instances where you might want an object or function to appear in documentation, but not in Dojo, nor in your build. To do this, start a comment block with ``/*=====``. The number of ``=`` can be 5 or more.
 
-The parser simply replaces the ``/*=====`` and ``=====*/`` with whitespace at the very start, so you must be very careful about your syntax.
+The documentation parser simply removes the ``/*=====`` and ``=====*/`` characters at the start of parsing,
+so you must be very careful about your syntax.
 
 .. js ::
 
@@ -431,32 +432,69 @@ The trade-off is that it's harder to maintain documentation-only files. It's a g
 Documenting a kwArg
 ===================
 
-A lot of Dojo uses keyword-style arguments (kwArg). It's difficult to describe how to use them sometimes. One option is to provide a pseudo-object describing its behavior. So we'll create ``module/_arg.js`` and do the following:
+A lot of Dojo uses keyword-style arguments (kwArg). It's difficult to describe how to use them sometimes.
+One option is to provide a pseudo-object describing its behavior.
+The pseudo-object can be a local variable, or if it's used in multiple places, part of a return value from a module.
+Usually, it's wrapped in doc-comment characters so that it affects documentation without bloating the code.
+For example:
 
 .. js ::
 
-    dojo.provide("module._arg");
-    module._arg.myFuncArgs = function(/*Object*/ kwArgs){
+    /*=====
+    var __Options = {
         // url: String
         //      Location of the thing to use
         // mimeType: String
         //      Mimetype to return data as
-        this.url = kwArgs.url;
-        this.mimeType = kwArgs.mimeType;
-    }
-
-This describes a real object that mimics the functionality of the generic object you would normally pass, but also provides documentation of what fields it has and what they do.
+    };
+    =====*/
 
 To associate this object with the originating function, do this:
 
 .. js ::
 
-    var myFunc = function(/*module._arg.myFuncArgs*/  kwArgs){
+    var myFunc = function(/*__Options*/  kwArgs){
         console.log(kwArgs.url);
         console.log(kwArgs.mimeType);
     }
 
-Since we didn't do a ``dojo.require`` on module._arg, it won't get included, but the documentation parser will still provide a link to it, allowing the user to see its functionality. This pseudo object may also be included in-line using the ``/*===== =====*/`` syntax. For an example of how to do this inline, see "dojo.__FadeArgs" pseudo code in dojo/_base/fx.js, used to document ``dojo.fadeIn()`` and ``dojo.fadeOut()``
+If you have a kwargs definition which extends another kwargs definition,
+then you should use dojo/_base/declare to define both of the definitions.
+Here's an example defining a superclass kwargs object, and exporting it
+from a module:
+
+.. js ::
+
+    define([...], function(...){
+        ...
+        /*=====
+        ret.__Options = declare(null, {
+            // format: String
+            //      Description of format
+        });
+        =====*/
+
+       ...
+       return ret;
+    }
+
+and then an example of subclassing that definition from another module:
+
+.. js ::
+
+    define([...], function(...){
+        ...
+        /*=====
+        ret.__SubOptions = declare(origModule.__Options, {
+            // duration: Number
+            //      Description of duration
+        });
+        =====*/
+
+       ...
+       return ret;
+    }
+
 
 Which Documentation-Specific Syntax To Use
 ==========================================
