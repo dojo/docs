@@ -17,7 +17,8 @@ See also the documentation on :ref:`custom builds <quickstart/custom-builds>`, a
 :ref:`ShrinkSafe <util/shrinksafe/index>`
 -----------------------------------------
 
-A standalone utility for compressing JavaScript, used by the Dojo Build System as an optional compression step, though can be used on individual files manually.
+:ref:`ShrinkSafe <util/shrinksafe/index>` is a standalone utility for compressing JavaScript,
+used by the Dojo Build System as an optional compression step, though can be used on individual files manually.
 
 DOH
 ---
@@ -40,7 +41,8 @@ However, this is now deprecated and will be removed in 2.0.
 :ref:`Checkstyle <util/checkstyle>`
 -----------------------------------
 
-A standalone utility for checking JavaScript files for violations of the Dojo style guide. Also includes an online tool for automatically fixing the majority of style guide violations.
+:ref:`Checkstyle <util/checkstyle>` is a standalone utility for checking JavaScript files for violations of
+the Dojo style guide. Also includes an online tool for automatically fixing the majority of style guide violations.
 
 
 Migration
