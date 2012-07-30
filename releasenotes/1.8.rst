@@ -997,6 +997,9 @@ dojo/parser
 dijit
 -----
 
+_WidgetBase
+~~~~~~~~~~~
+
 - Constructor Parameters: Execution of custom setters during widget construction has slightly changed.
   This may affect custom widgets that adjust widget parameters in ``postMixInProperties()``.
 
@@ -1024,6 +1027,8 @@ dijit
 
   ``_setXyzAttr("cat")`` would be called, rather than ``_setXyzAttr("dog")`` as before.
 
+Menu
+~~~~
 - Connecting to ``dijit/Menu::_openMyself()``: If you have menus on Trees etc. where you have connected to the private 
   method ``dojo/Menu::_openMyself()``, you should switch to the pattern shown above in the Menu section.
 
@@ -1031,13 +1036,11 @@ dijit
   rather than the ``MenuItem.domNode``.  You can access the ``MenuItem`` via ``this``, assuming that you haven't
   overridden the value of ``this``, or alternately ``registry.getEnclosingWidget(evt.target)``.
 
-- Likewise, in the event passed to ``dijit/Tree::onClick(item, node, evt)``, and
-  ``dijit/Tree::onDblClick(item, node, evt)``, ``evt.currentTarget`` now refers to the
-  ``Tree.domNode``, rather than the ``TreeNode.domNode``.   You can access the ``TreeNode`` via the ``node`` parameter.
+- Due to the event delegation performance improvements, if you have a custom template for MenuItem,
+  remove the ``data-dojo-attach-event="..."`` attribute.
 
-- Due to the event delegation performance improvements, if you have custom templates for TreeNode, MenuItem, or 
-  TabButton, you should edit your templates to remove the ``data-dojo-attach-event="..."`` attributes.
-
+Popup widgets
+~~~~~~~~~~~~~
 - If you have a custom popup widget with a ``handleKey()`` method, and it is accessing ``evt.charOrCode`` or ``evt.charCode``,
   you should change it to access ``evt.keyCode`` instead.   Change ``evt.charOrCode == " "`` to ``evt.keyCode == keys.SPACE``.
 
@@ -1050,6 +1053,8 @@ dijit
   The event passed to ``handleKey()`` is now a keydown event, rather than a synthetic keypress event generated from
   ``dojo.connect()``.
 
+StackContainer, TabContainer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - If you have a custom ``StackController`` or ``TabController`` subclass where
   the buttons for each pane have nested close buttons (like TabContainer itself, with the [x] on the right of each tab),
   you need to either:
@@ -1058,8 +1063,22 @@ dijit
        2. If your subclass extends TabController, set the ``dijitTabCloseButton`` CSS class on your close button,
           otherwise set ``dijitStackCloseButton``.
 
+- Due to the event delegation performance improvements, if you have a custom template for TabButton,
+  remove the ``data-dojo-attach-event="..."`` attribute.
+
+
+Tree
+~~~~
+- Like with ``Menu``, in the event passed to ``dijit/Tree::onClick(item, node, evt)``, and
+  ``dijit/Tree::onDblClick(item, node, evt)``, ``evt.currentTarget`` now refers to the
+  ``Tree.domNode``, rather than the ``TreeNode.domNode``.   You can access the ``TreeNode`` via the ``node`` parameter.
+
 - If selected ``TreeNodes`` are highlighted strangely, you've probably created the Tree
   programatically and forgotten to call ``startup()`` on it.
+
+- Due to the event delegation performance improvements, if you have a custom template for TreeNode,
+  remove the ``data-dojo-attach-event="..."`` attribute.
+
 
 dojox/charting
 --------------
