@@ -10,6 +10,8 @@ Dojo API Documentation Tools
 .. contents ::
    :depth: 2
 
+Deprecated, see https://github.com/wkeese/api-viewer/blob/master/README.rst for latest instructions.
+
 Dojo uses a specially crafted, highly readable inline documentation format and distributes the PHP-based code parser used
 to collect the information.
 

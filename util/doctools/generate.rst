@@ -10,6 +10,8 @@ Generating API Documentation
 .. contents ::
    :depth: 2
 
+Deprecated, see https://github.com/wkeese/api-viewer/blob/master/README.rst for latest instructions.
+
 Running the doctools parser to extract API documentation data
 
 Introduction

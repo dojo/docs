@@ -25,12 +25,17 @@ DOH
 
 The util/doh/ directory also contains :ref:`DOH Robot <util/dohrobot>`, an API used in conjunction with DOH for automated keyboard/mouse testing.
 
-:ref:`The Dojo API Doc System <util/doctools>`
-----------------------------------------------
+The Dojo API doc system
+-----------------------
 
-Dojo uses a custom inline comment syntax which produces well structured xml, and powers the official `API Docs <http://dojotoolkit.org/api/>`_ .
+Dojo uses a custom inline comment syntax which produces well structured xml,
+and powers the official `API Docs <http://dojotoolkit.org/api/>`_ .
 
-The doc system is powered by the docscripts/ directory, where generate.php extracts the inline documentation into an api.xml file, and the jsdoc/ directory, which generates web pages to display the doc.
+The doc system is powered by js-doc-parse.    See https://github.com/wkeese/api-viewer/blob/master/README.rst
+for documentation.
+
+Previously, it was powered by the :ref:`doctools <util/doctools>` directory.
+However, this is now deprecated and will be removed in 2.0.
 
 :ref:`Checkstyle <util/checkstyle>`
 -----------------------------------

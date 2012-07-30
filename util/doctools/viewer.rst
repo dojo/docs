@@ -10,6 +10,8 @@ Viewing the Generated API Docs
 .. contents ::
    :depth: 2
 
+Deprecated, see https://github.com/wkeese/api-viewer/blob/master/README.rst for latest instructions.
+
 Setup and population of the viewer app with API data
 
 Introduction
