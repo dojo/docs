@@ -415,7 +415,7 @@ Markup Guidelines
 -----------------
 
 Dojo's API documentation is written inline in the code, similar to JavaDoc.
-See the :ref:`Dojo Inline Documentation <util/doctools/markup>` for information on dojo's proprietary format.
+See the :ref:`Dojo Inline Documentation <developer/markup>` for information on dojo's proprietary format.
 
 CSS
 ---

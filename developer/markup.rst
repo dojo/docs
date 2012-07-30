@@ -1,4 +1,4 @@
-.. _util/doctools/markup:
+.. _developer/markup:
 
 =========================
 Dojo Inline Documentation
@@ -10,12 +10,23 @@ Dojo Inline Documentation
 .. contents ::
    :depth: 2
 
-Syntax, keywords and guidelines for Dojo's inline API documentation format
+Syntax, keywords and guidelines for Dojo's inline API documentation format.
 
 Introduction
 ============
 
-API documentation takes the form of comment blocks, typically with one or more keywords. Function parameters may also be hinted inline and return values also indicated inline.
+The Dojo JavaScript codebase makes use of a consistent commenting style to facilitate generated API documentation, which
+gives developers an outline of what methods are defined and how to use them.  This is analogous to
+`Javadoc <http://en.wikipedia.org/wiki/Javadoc>`_ and similar conventions used in most programming languages today.
+
+The documentation
+parser collects the information from the JavaScript files and produces output in json or XML format.  This can be further
+transformed for use by editors and IDEs for example, or fed into a viewer application for a handy browsable interface to
+the API.  These pages describe the parts of the system and how to use them to generate your own documentation of both
+Dojo and custom code.
+
+API documentation takes the form of comment blocks, typically with one or more keywords.
+Function parameters may also be hinted inline and return values also indicated inline.
 
 Using a Key
 ===========

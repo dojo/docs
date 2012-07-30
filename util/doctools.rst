@@ -24,7 +24,7 @@ transformed for use by editors and IDEs for example, or fed into a viewer applic
 the API.  These pages describe the parts of the system and how to use them to generate your own documentation of both
 Dojo and custom code.
 
-* :ref:`API doc syntax <util/doctools/markup>` - how to markup API documentation in your code
+* :ref:`API doc syntax <developer/markup>` - how to markup API documentation in your code
 
 * :ref:`Running the generation tools <util/doctools/generate>` - directories setup, defining custom namespaces,
   configuring and running the generation tools

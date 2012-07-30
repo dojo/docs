@@ -9,7 +9,7 @@ Dojo Developer Notebook
 
 This section contains links to information useful to contributors or committers to Dojo:
 
-* :ref:`Style guide <developer/styleguide>`
+* :ref:`Style guide <developer/styleguide>` and :ref:`Dojo Inline Documentation Format <developer/markup>`
 
 * :ref:`Contributor list <developer/contributors>` - list of people that have signed the `CLA form <http://dojofoundation.org/cla/>`_ to contribute to Dojo
 

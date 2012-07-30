@@ -114,5 +114,5 @@ See Also
 ========
 
 - :ref:`Dojo documentation tools overview <util/doctools>`
-- :ref:`API doc syntax <util/doctools/markup>` - how to markup API documentation in your code
+- :ref:`API doc syntax <developer/markup>` - how to markup API documentation in your code
 - :ref:`Running the generation tools <util/doctools/generate>` - directories setup, defining custom namespaces, configuring and running the generation tools
