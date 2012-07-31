@@ -1073,8 +1073,8 @@ Tree
   ``dijit/Tree::onDblClick(item, node, evt)``, ``evt.currentTarget`` now refers to the
   ``Tree.domNode``, rather than the ``TreeNode.domNode``.   You can access the ``TreeNode`` via the ``node`` parameter.
 
-- If selected ``TreeNodes`` are highlighted strangely, you've probably created the Tree
-  programatically and forgotten to call ``startup()`` on it.
+- If selected ``TreeNodes`` are highlighted strangely, you've probably created the Tree programatically without calling
+  startup().   You need to call ``startup()`` on it after it's been attached to the DOM.
 
 - Due to the event delegation performance improvements, if you have a custom template for TreeNode,
   remove the ``data-dojo-attach-event="..."`` attribute.
