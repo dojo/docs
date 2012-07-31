@@ -220,6 +220,7 @@ But the tree will display and work properly regardless, and for simple markup, e
                     }
                 });
                 tree.placeAt(win.body());
+                tree.startup();
             });
         });
 
@@ -265,6 +266,6 @@ This example shows you how to use a tree to build a navigation menu.
                         // Get the URL from the item, and navigate to it
                         location.href = item.url;
                     }
-                })).placeAt(win.body());
+                })).placeAt(win.body()).startup();
             });
        });

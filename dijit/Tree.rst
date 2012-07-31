@@ -145,6 +145,7 @@ Creating a programmatic tree is very simple:
                     model: myModel
                 });
                 tree.placeAt(win.body());
+                tree.startup();
             });
         });
 
@@ -529,10 +530,11 @@ and set the Tree's dndController to ``dijit.tree.dndSource``.
 
             // After DOM is loaded and dijit infrastructure has finished initializing, create Tree
             ready(function(){
-                new Tree({
+                (new Tree({
                     model: myModel,
                     dndController: dndSource
-                }).placeAt(win.body());
+                })).placeAt(win.body()).startup();
+
             });
         });
 
@@ -631,11 +633,11 @@ This is useful for when a user can control the order of the children of the chil
 
             // After DOM is loaded and dijit infrastructure has finished initializing, create Tree
             ready(function(){
-                new Tree({
+                (new Tree({
                     model: myModel,
                     dndController: dndSource,
                     betweenThreshold: 5
-                }).placeAt(win.body());
+                })).placeAt(win.body()).startup();
             });
         });
 
