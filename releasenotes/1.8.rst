@@ -688,7 +688,7 @@ dojox/charting
 --------------
 
 - A new dropLabels mode was introduced on axis. It is true by default and allows to drop superfluous labels on the 
-  axis. Note that in some cases this might slow down a bit the initial computation of the chart. You can avoid that by:
+  axis. Note that in some cases this might slow down a bit the initial computation of the chart. You can avoid that or come back to the previous behavior by:
 
    * setting dropLabels to false (but then you don't get the automatic drop labels)
    * setting minorLabels to false if you know minorLabels won't show up anyway
@@ -1083,8 +1083,11 @@ Tree
 dojox/charting
 --------------
 
-- ``dojox/charting/Theme`` used to be automatically required by ``dojox/charting/Chart``. This is not the case anymore, 
-  if you use it, you need to explicitly require it in your application.
+- ``dojox/charting/Theme`` used to be automatically required by ``dojox/charting/Chart``. This is not the case anymore, if you use it, you need to explicitly require it in your application.
+- The new dropLabels mode of the axis is set to true by default if you experience missing labels and want to get back to previous behavior you might try to:
+
+   * set dropLabels to false 
+   * set minorLabels to false if there are minorLabels that appear and were not previously
 
 dojox/mobile
 ------------
