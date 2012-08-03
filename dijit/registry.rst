@@ -150,7 +150,7 @@ includes array iterator methods (forEach, filter, byClass, map, every, and some)
 However, AMD code should not expect these functions to be available in the Object returned from
 require(["dijit/registry"]).
 
-data-dojo-id, dijit/regsitry.byId() and dojo/dom.byId()
+data-dojo-id, dijit/registry.byId() and dojo/dom.byId()
 =======================================================
 
 ``registry.byId`` and ``dom.byId`` are often confused, particularly by first time users. ``registry.byId`` function should be used when you wish to obtain a direct reference to the JavaScript object instance of your widget and access functions of that widget. ``dom.byId`` should be used when you want to directly access a DOM node.
