@@ -165,42 +165,40 @@ the name of the feature test.
  :ref:`dojo/request/xhr <dojo/request/xhr>`, native-formdata, "Browser has a native FormData implementation, letting user compile set of key/value pairs to send using XMLHttpRequest"
  :ref:`dojo/selector/_loader <dojo/selector/_loader>`, dom-qsa2.1, "Browser supports the DOM QuerySelectorAll method available, with Level 2.1 CSS selectors"
  :ref:`dojo/selector/_loader <dojo/selector/_loader>`, dom-qsa3, "Browser supports DOM QuerySelectorAll method, with Level 3 CSS selectors"
- :ref:`dojo/selector/lite <dojo/selector/lite>`, dom-matches-selector
- :ref:`dojo/selector/lite <dojo/selector/lite>`, dom-qsa
- :ref:`dojo/sniff <dojo/sniff>`, air
- :ref:`dojo/sniff <dojo/sniff>`, khtml
- :ref:`dojo/sniff <dojo/sniff>`, webkit
- :ref:`dojo/sniff <dojo/sniff>`, chrome
- :ref:`dojo/sniff <dojo/sniff>`, safari
- :ref:`dojo/sniff <dojo/sniff>`, mac
- :ref:`dojo/sniff <dojo/sniff>`, quirks
- :ref:`dojo/sniff <dojo/sniff>`, ios
- :ref:`dojo/sniff <dojo/sniff>`, android
- :ref:`dojo/sniff <dojo/sniff>`, opera
- :ref:`dojo/sniff <dojo/sniff>`, mozilla
- :ref:`dojo/sniff <dojo/sniff>`, ff
- :ref:`dojo/sniff <dojo/sniff>`, ie
- :ref:`dojo/sniff <dojo/sniff>`, wii
- :ref:`dijit/_WidgetBase <dijit/_WidgetBase>`, dijit-legacy-requires, 
- :ref:`dijit/form/_ExpandingTextAreaMixin <dijit/form/_ExpandingTextAreaMixin>`,  textarea-needs-help-shrinking
- :ref:`dojox/form/uploader/Base <dojox/form/uploader/Base>`, FormData
- :ref:`dojox/form/uploader/Base <dojox/form/uploader/Base>`, xhr-sendAsBinary
- :ref:`dojox/form/uploader/Base <dojox/form/uploader/Base>`, file-multiple
- :ref:`dojox/app/main <dojox/app/main>`, app-log-api
- :ref:`dojox/mobile/Audio <dojox/mobile/Audio>`, mobile-embed-audio-video-support
- :ref:`dojox/mobile/common <dojox/mobile/common>`, mblAndroidWorkaround
- :ref:`dojox/mobile/common <dojox/mobile/common>`, mblAndroid3Workaround
- :ref:`dojox/mobile/scrollable <dojox/mobile/scrollable>`, translate3d
- :ref:`dojox/mobile/sniff <dojox/mobile/sniff>`, bb
- :ref:`dojox/mobile/sniff <dojox/mobile/sniff>`, android
- :ref:`dojox/mobile/sniff <dojox/mobile/sniff>`, iphone
- :ref:`dojox/mobile/sniff <dojox/mobile/sniff>`, touch
- :ref:`dojox/mvc/_InlineTemplateMixin <dojox/mvc/_InlineTemplateMixin>`, dom-qsa
- :ref:`dojox/mvc/parserExtension <dojox/mvc/parserExtension>`, dom-qsa
- :ref:`dojox/mvc/parserExtension <dojox/mvc/parserExtension>`, dojo-parser
- :ref:`dojox/mvc/parserExtension <dojox/mvc/parserExtension>`, dojo-mobile-parser
- :ref:`dojox/mvc/sync <dojox/mvc/sync>`, mvc-bindings-log-api
- :ref:`util/build/main <util/build/main>`, is-windows
+ :ref:`dojo/selector/lite <dojo/selector/lite>`, dom-matches-selector, "Browser supports the *matchesSelector* method for testing selector queries directly against DOM nodes.
+ :ref:`dojo/selector/lite <dojo/selector/lite>`, dom-qsa, "Browsers supports the DOM QuerySelectorAll method."
+ :ref:`dojo/sniff <dojo/sniff>`, air, "Environment is running on the Adobe Air platform"
+ :ref:`dojo/sniff <dojo/sniff>`, khtml, "Environment is running on the Konqueror-based platform"
+ :ref:`dojo/sniff <dojo/sniff>`, webkit, "Environment is running on the WebKit rendering engine platform"
+ :ref:`dojo/sniff <dojo/sniff>`, chrome, "Environment is running on the Chrome browser platform"
+ :ref:`dojo/sniff <dojo/sniff>`, safari, "Environment is running on the Safari browser platform"
+ :ref:`dojo/sniff <dojo/sniff>`, mac, "Environment is running on the Mac OS X platform"
+ :ref:`dojo/sniff <dojo/sniff>`, quirks, "Browser is running in *Quirks-Mode*"
+ :ref:`dojo/sniff <dojo/sniff>`, ios, "Environment is running on the iOS mobile operating system"
+ :ref:`dojo/sniff <dojo/sniff>`, android, "Environment is running on the Android mobile operating system"
+ :ref:`dojo/sniff <dojo/sniff>`, opera, "Environment is running on the Opera browser platform"
+ :ref:`dojo/sniff <dojo/sniff>`, mozilla, "Environment is running on the Mozilla browser platform"
+ :ref:`dojo/sniff <dojo/sniff>`, ff, "Environment is running on the Firefox browser platform"
+ :ref:`dojo/sniff <dojo/sniff>`, ie, "Environment is running on the Microsoft Internet Explorer browser platform"
+ :ref:`dojo/sniff <dojo/sniff>`, wii, "Environment is running on the Nintendo Wii browser platform"
+ :ref:`dijit/_WidgetBase <dijit/_WidgetBase>`, dijit-legacy-requires, "Make dijit load modules the application didn't explicitly require, e.g. dijit/_base/manager, backwards compatibility in non-async mode."
+ :ref:`dijit/form/_ExpandingTextAreaMixin <dijit/form/_ExpandingTextAreaMixin>`,  textarea-needs-help-shrinking, "Browser platform's <textarea> element needs manual help to shrink as content changes."
+ :ref:`dojox/form/uploader/Base <dojox/form/uploader/Base>`, FormData, "Browser has a native FormData implementation, letting user compile set of key/value pairs to send using XMLHttpRequest"
+ :ref:`dojox/form/uploader/Base <dojox/form/uploader/Base>`, xhr-sendAsBinary, "Browser's native XHR implementation supports the *sendAsBinary* method, for sending binary data over XHR."
+ :ref:`dojox/form/uploader/Base <dojox/form/uploader/Base>`, file-multiple, "Browser supports file input DOM element with multiple file selection attribute, allowing user to select more than one file."
+ :ref:`dojox/mobile/Audio <dojox/mobile/Audio>`, mobile-embed-audio-video-support, "Platform supports creating embed tags with audio and video elements."
+ :ref:`dojox/mobile/common <dojox/mobile/common>`, mblAndroidWorkaround, "Test for Android 2.X transition animation flicker issue"
+ :ref:`dojox/mobile/common <dojox/mobile/common>`, mblAndroid3Workaround, "Test for Android 3.X transition animation flicker issue"
+ :ref:`dojox/mobile/scrollable <dojox/mobile/scrollable>`, translate3d, "Browser supports the WebKit-specific CSS transform property, translate3d."
+ :ref:`dojox/mobile/sniff <dojox/mobile/sniff>`, bb, "Environment is running on the RIM Blackberry mobile browser platform"
+ :ref:`dojox/mobile/sniff <dojox/mobile/sniff>`, android, "Environment is running on the Android mobile browser platform"
+ :ref:`dojox/mobile/sniff <dojox/mobile/sniff>`, iphone, "Environment is running on the iPhone mobile browser platform"
+ :ref:`dojox/mobile/sniff <dojox/mobile/sniff>`, touch, "Touch events are supported on the current platform"
+ :ref:`dojox/mvc/_InlineTemplateMixin <dojox/mvc/_InlineTemplateMixin>`, dom-qsa, "Browser supports the DOM QuerySelectorAll method"
+ :ref:`dojox/mvc/parserExtension <dojox/mvc/parserExtension>`, dom-qsa, "Browser supports the DOM QuerySelectorAll method"
+ :ref:`dojox/mvc/parserExtension <dojox/mvc/parserExtension>`, dojo-parser, "Browser has loaded the dojo/parser module"
+ :ref:`dojox/mvc/parserExtension <dojox/mvc/parserExtension>`, dojo-mobile-parser, "Browser has loaded the dojox/mobile/parser module"
+ :ref:`dojox/mvc/sync <dojox/mvc/sync>`, mvc-bindings-log-api, Enable debugging messages for MVC module.
 
 Examples
 ========
