@@ -8,8 +8,8 @@ Dojo 1.x to 2.0 migration guide
    :depth: 3
 
 Currently, many parts of Dojo 2.0 are under development.  As with any major software that is under-development, it is 
-hard to predict that the final solution will look like.  These notes provide guidence though on how to try to "future 
-proof" your application to make it easier to transistion to Dojo 2.0 when it release.
+hard to predict that the final solution will look like.  These notes provide guidance though on how to try to "future
+proof" your application to make it easier to transition to Dojo 2.0 when it release.
 
 Since Dojo 1.X is backwards compatible with previous Dojo 1.x releases, none of these changes are necessary until Dojo 
 2.0, but refactoring your code earlier will not only make future porting easier, but also can deliver performance and 
@@ -555,7 +555,7 @@ dojo.isCopyKey                                          ?                       
 Advice
 ------
 
-``dojo.connect()`` could be used to perform after advice (based on the conecpts of Aspect Oriented Programming) on a 
+``dojo.connect()`` could be used to perform after advice (based on the concepts of Aspect Oriented Programming) on a
 method.  In 2.0 that has been replaced by the ``dojo/aspect`` package.
 
 Old code:
@@ -939,7 +939,7 @@ dojo.data                          dojo/store
 ================================   =================================
 store.getValue(item, "foo")        item.foo
 store.getLabel(item)               item.label
-store.getItemByIdentitfier(id)     store.byId(id) returns Deferred
+store.getItemByIdentifier(id)      store.byId(id) returns Deferred
 store.fetch(...)                   store.query() returns Deferred
 ================================   =================================
 
@@ -1435,13 +1435,13 @@ Use BorderContainer instead.   (TODO: examples)
 Miscellaneous changes
 ---------------------
 
-_Widget --> _WidgetBase
+_Widget --> _WidgetBase  (TODO: will probably rename again, to Widget)
 
 DojoX
 =====
 
 The ``dojox`` namespace will be removed in Dojo 2.0.  Some of the mature sub-packages will like migrate into Dojo Core 
-or into Dijit.  The remaining code will be "spun off" into seperate packages that will be available via package 
+or into Dijit.  The remaining code will be "spun off" into separate packages that will be available via package
 management tools and a repository of packages.
 
 In order to ensure your code can be easily migrated, refactoring it to fully leverage AMD and not relay upon the
