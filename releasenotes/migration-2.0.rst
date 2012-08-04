@@ -1242,6 +1242,10 @@ waiState="selected-false,haspopup-true"             templates                   
 attributeMap:{foo:a,bar:b}                          widget definitions             _fooSetter:a, _barSetter:b (NB: in 1.8, _setFooAttr and _setBarAttr)
 _setFooAttr:...                                     widget definitions             _fooSetter:... (NB: in 1.8, it's still _setFooAttr)
 this._focused                                       widget definitions             this.focused
+this._supportingWidgets.push(...)                   widget definitions             this.own(...)
+this.connect(node, "onclick", "myMethod")           widget definitions             this.own(on(node, "click", lang.hitch(this, "myMethod")))
+this.connect(obj, func, "myMethod")                 widget definitions             this.own(aspect.after(obj, func, lang.hitch(this, "myMethod")))
+this.subscribe(topicName, "myMethod")               widget definitions             this.own(topic(topicName, lang.hitch(this, "myMethod"))) but note that arguments to myMethod are passed as varargs not array
 =================================================   ============================   ====================================
 
 set(), get()
@@ -1380,6 +1384,28 @@ The code above would be expressed as:
 
   _tabIndexSetter: "focusNode",
   _styleSetter: "domNode"
+
+this.connect(), this.subscribe(), this._supportingWidgets
+---------------------------------------------------------
+The ways to make a widget listen to DOMNode events, do advice on a regular function, subscribe to topics, and
+to register a supporting widget have changed.
+
+The new interface is to use the standard dojo methods dojo/on, dojo/aspect, dojo/topic, etc., and call this.own() to
+register the handle to be released when the widget is destroyed.   this.own() can be called multiple times, each with
+one or more handles specified:
+
+.. js ::
+
+      this.own(
+        // setup an event handler (automatically remove() when I'm destroyed)
+        on(this.domNode, "click", function(){ ... }),
+
+        // watch external object (automatically unwatch() when I'm destroyed)
+        aStatefulObject.watch("x", function(name, oVal, nVal){ ... }),
+
+        // create a supporting (internal) widget, to be destroyed when I'm destroyed
+        new MySupportingWidget(...)
+      );
 
 Base Functionality
 ------------------
