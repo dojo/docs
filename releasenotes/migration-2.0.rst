@@ -18,7 +18,7 @@ code maintenance benefits early.
 AMD
 ===
 
-Dojo has been upgraded to use the Asynronous Module Definition (AMD) standard for all of its modules.  This changes 
+Dojo has been upgraded to use the Asynchronous Module Definition (AMD) standard for all of its modules.  This changes
 the way you load, access, and define modules.
 
 Loading dojo.js
@@ -62,7 +62,7 @@ into a single require statement:
 
 Notice how the dots (e.g. ``dijit.form.Button``) have been changed to slashes (e.g. ``dijit/form/Button``).  This is 
 dot notation represented a global scope object where as the slash notation represent a Module ID (MID).  While these 
-are similiar in naming, there are actually wholly different concepts.
+are similar in naming, there are actually wholly different concepts.
 
 Also, be careful to never load a module using a ``<script>`` tag.  This will not work; it causes "multiply defined" 
 errors from the loader.
@@ -656,7 +656,7 @@ must each be explicitly loaded.  These modules are:
 
 * :ref:`dojo/dom-form <dojo/dom-form>`: form related
 
-* :ref:`dojo/io-query <dojo/io-query>`: query conversion fucntions
+* :ref:`dojo/io-query <dojo/io-query>`: query conversion functions
 
 * :ref:`dojo/dom-geometry <dojo/dom-geometry>`: node sizing
 
@@ -764,7 +764,7 @@ Invalid:
 
   { foo: 1, bar: 2 }
 
-TODO: IIRC single quotes are also invalid.
+Also, single quotes are invalid, you must use double quotes for keys and string values.
 
 Parser
 ------
@@ -943,7 +943,7 @@ store.getItemByIdentitfier(id)     store.byId(id) returns Deferred
 store.fetch(...)                   store.query() returns Deferred
 ================================   =================================
 
-In order to aid transistion, there are two modules that are available:
+In order to aid transition, there are two modules that are available:
 
 * :ref:`dojo/store/DataStore <dojo/store/DataStore>` - Can convert a legacy ``dojo.data`` API store and make it appear 
   to be a native ``dojo/store``.
@@ -1025,8 +1025,8 @@ Promises and Deferreds
 ----------------------
 
 ``dojo.Deferred`` and ``dojo.when`` have been replaced with ``dojo/promise``, ``dojo/Deferred`` and ``dojo/when``.  
-The "legacy" style Deferred's and promises are available under ``dojo/_base/Deferred``.  The functionality in ``dojo.
-DeferredList`` has been deprecated and ``dojo/promise/all`` and ``dojo/promise/first`` provide similiar functionality.
+The functionality in ``dojo.
+DeferredList`` has been replaced by ``dojo/promise/all`` and ``dojo/promise/first``.
 
 Old code like:
 
@@ -1073,8 +1073,7 @@ dojo.DeferredList([...], true).then(...)            dojo/promise/first          
 XHR and IO Requests
 -------------------
 
-``dojo.xhr*`` and ``dojo.io.*`` have been deprecated and replaced with :ref:`dojo/request <dojo/request>`.  The legacy 
-XHR functionality has been moved to :ref:`dojo/_base/xhr`.
+``dojo.xhr*`` and ``dojo.io.*`` have been replaced with :ref:`dojo/request <dojo/request>`.
 
 Old code like:
 
@@ -1105,8 +1104,8 @@ Should be refactored as:
     });
   });
 
-``dojo.io.script`` is deprecated by :ref:`dojo/request/script <dojo/request/script>` and ``dojo.io.iframe`` is 
-deprecated by :ref:`dojo/request/iframe` and operate in a similiar fashion to the base ``dojo/request`` module.
+``dojo.io.script`` is replaced by :ref:`dojo/request/script <dojo/request/script>` and ``dojo.io.iframe`` is
+replaced by :ref:`dojo/request/iframe` and operate in a similar fashion to the base ``dojo/request`` module.
 
 Note that ``dojo/request`` utilises the new ``dojo/promise`` modules.
 
@@ -1445,5 +1444,5 @@ The ``dojox`` namespace will be removed in Dojo 2.0.  Some of the mature sub-pac
 or into Dijit.  The remaining code will be "spun off" into seperate packages that will be available via package 
 management tools and a repository of packages.
 
-In order to ensure your code is easily migrateable, refactoring it to fully leverage AMD and not relay upon the 
+In order to ensure your code can be easily migrated, refactoring it to fully leverage AMD and not relay upon the
 ``dojox`` global variable is critically important.
