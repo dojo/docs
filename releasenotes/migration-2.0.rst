@@ -1239,7 +1239,8 @@ dojoAttachPoint                                     templates                   
 dojoAttachEvent                                     templates                      data-dojo-attach-event
 waiRole="button"                                    templates                      role="button"
 waiState="selected-false,haspopup-true"             templates                      aria-selected="false" aria-haspopup="true"
-attributeMap:{foo:a,bar:b}                          widget definitions             _setFooAttr:a,_setBarAttr:b
+attributeMap:{foo:a,bar:b}                          widget definitions             _fooSetter:a, _barSetter:b (NB: in 1.8, _setFooAttr and _setBarAttr)
+_setFooAttr:...                                     widget definitions             _fooSetter:... (NB: in 1.8, it's still _setFooAttr)
 this._focused                                       widget definitions             this.focused
 =================================================   ============================   ====================================
 
@@ -1352,6 +1353,10 @@ With:
   <span role="treeitem" aria-selected="false" aria-haspopup="true"></span>
 
 
+custom setters
+--------------
+In 1.8 customer setters for attributes have names like _setXxxAttr().   In 2.0 the name will be changed to _xxxSetter().
+
 attributeMap
 ------------
 
@@ -1364,16 +1369,17 @@ attributeMap in 1.x was a hash mapping widget attributes to DOM nodes.   For exa
     "style": "domNode"
   }
 
-Currently, this is achieved by making separate ``_setXXXAttr`` attribute for each attribute to map. Originally 
-``_setXXXAttr`` was a function to set a widget attribute.   It can still be a function, but now it can also be an 
-object like one of the values from ``attributeMap``.
+Currently, this is achieved by making separate ``_xxxSetter`` attribute for each attribute to map. Originally
+``_xxxSetter`` was a function to set a widget attribute.   It can still be a function, but now it can also be an
+object like one of the values from ``attributeMap``.    (NB: In 1.8, it's _setXxxAttr() not _xxxSetter().   This will
+change for 2.0.)
 
 The code above would be expressed as:
 
 .. js ::
 
-  _setTabIndexAttr: "focusNode",
-  _setStyleAttr: "domNode"
+  _tabIndexSetter: "focusNode",
+  _styleSetter: "domNode"
 
 Base Functionality
 ------------------
