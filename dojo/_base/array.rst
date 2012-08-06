@@ -324,7 +324,7 @@ map()
 -----
 
 ``map()`` interates all the elements in an array, passing them to the ``callback`` function and then returning a new 
-array with any of the modify results.
+array with any of the modified results.
 
 .. js ::
 

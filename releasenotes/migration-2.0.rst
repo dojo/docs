@@ -8,8 +8,8 @@ Dojo 1.x to 2.0 migration guide
    :depth: 3
 
 Currently, many parts of Dojo 2.0 are under development.  As with any major software that is under-development, it is 
-hard to predict that the final solution will look like.  These notes provide guidence though on how to try to "future 
-proof" your application to make it easier to transistion to Dojo 2.0 when it release.
+hard to predict that the final solution will look like.  These notes provide guidance though on how to try to "future
+proof" your application to make it easier to transition to Dojo 2.0 when it release.
 
 Since Dojo 1.X is backwards compatible with previous Dojo 1.x releases, none of these changes are necessary until Dojo 
 2.0, but refactoring your code earlier will not only make future porting easier, but also can deliver performance and 
@@ -18,7 +18,7 @@ code maintenance benefits early.
 AMD
 ===
 
-Dojo has been upgraded to use the Asynronous Module Definition (AMD) standard for all of its modules.  This changes 
+Dojo has been upgraded to use the Asynchronous Module Definition (AMD) standard for all of its modules.  This changes
 the way you load, access, and define modules.
 
 Loading dojo.js
@@ -62,7 +62,7 @@ into a single require statement:
 
 Notice how the dots (e.g. ``dijit.form.Button``) have been changed to slashes (e.g. ``dijit/form/Button``).  This is 
 dot notation represented a global scope object where as the slash notation represent a Module ID (MID).  While these 
-are similiar in naming, there are actually wholly different concepts.
+are similar in naming, there are actually wholly different concepts.
 
 Also, be careful to never load a module using a ``<script>`` tag.  This will not work; it causes "multiply defined" 
 errors from the loader.
@@ -555,7 +555,7 @@ dojo.isCopyKey                                          ?                       
 Advice
 ------
 
-``dojo.connect()`` could be used to perform after advice (based on the conecpts of Aspect Oriented Programming) on a 
+``dojo.connect()`` could be used to perform after advice (based on the concepts of Aspect Oriented Programming) on a
 method.  In 2.0 that has been replaced by the ``dojo/aspect`` package.
 
 Old code:
@@ -656,7 +656,7 @@ must each be explicitly loaded.  These modules are:
 
 * :ref:`dojo/dom-form <dojo/dom-form>`: form related
 
-* :ref:`dojo/io-query <dojo/io-query>`: query conversion fucntions
+* :ref:`dojo/io-query <dojo/io-query>`: query conversion functions
 
 * :ref:`dojo/dom-geometry <dojo/dom-geometry>`: node sizing
 
@@ -764,7 +764,7 @@ Invalid:
 
   { foo: 1, bar: 2 }
 
-TODO: IIRC single quotes are also invalid.
+Also, single quotes are invalid, you must use double quotes for keys and string values.
 
 Parser
 ------
@@ -939,11 +939,11 @@ dojo.data                          dojo/store
 ================================   =================================
 store.getValue(item, "foo")        item.foo
 store.getLabel(item)               item.label
-store.getItemByIdentitfier(id)     store.byId(id) returns Deferred
+store.getItemByIdentifier(id)      store.byId(id) returns Deferred
 store.fetch(...)                   store.query() returns Deferred
 ================================   =================================
 
-In order to aid transistion, there are two modules that are available:
+In order to aid transition, there are two modules that are available:
 
 * :ref:`dojo/store/DataStore <dojo/store/DataStore>` - Can convert a legacy ``dojo.data`` API store and make it appear 
   to be a native ``dojo/store``.
@@ -1025,8 +1025,8 @@ Promises and Deferreds
 ----------------------
 
 ``dojo.Deferred`` and ``dojo.when`` have been replaced with ``dojo/promise``, ``dojo/Deferred`` and ``dojo/when``.  
-The "legacy" style Deferred's and promises are available under ``dojo/_base/Deferred``.  The functionality in ``dojo.
-DeferredList`` has been deprecated and ``dojo/promise/all`` and ``dojo/promise/first`` provide similiar functionality.
+The functionality in ``dojo.
+DeferredList`` has been replaced by ``dojo/promise/all`` and ``dojo/promise/first``.
 
 Old code like:
 
@@ -1073,8 +1073,7 @@ dojo.DeferredList([...], true).then(...)            dojo/promise/first          
 XHR and IO Requests
 -------------------
 
-``dojo.xhr*`` and ``dojo.io.*`` have been deprecated and replaced with :ref:`dojo/request <dojo/request>`.  The legacy 
-XHR functionality has been moved to :ref:`dojo/_base/xhr`.
+``dojo.xhr*`` and ``dojo.io.*`` have been replaced with :ref:`dojo/request <dojo/request>`.
 
 Old code like:
 
@@ -1105,8 +1104,8 @@ Should be refactored as:
     });
   });
 
-``dojo.io.script`` is deprecated by :ref:`dojo/request/script <dojo/request/script>` and ``dojo.io.iframe`` is 
-deprecated by :ref:`dojo/request/iframe` and operate in a similiar fashion to the base ``dojo/request`` module.
+``dojo.io.script`` is replaced by :ref:`dojo/request/script <dojo/request/script>` and ``dojo.io.iframe`` is
+replaced by :ref:`dojo/request/iframe` and operate in a similar fashion to the base ``dojo/request`` module.
 
 Note that ``dojo/request`` utilises the new ``dojo/promise`` modules.
 
@@ -1240,8 +1239,13 @@ dojoAttachPoint                                     templates                   
 dojoAttachEvent                                     templates                      data-dojo-attach-event
 waiRole="button"                                    templates                      role="button"
 waiState="selected-false,haspopup-true"             templates                      aria-selected="false" aria-haspopup="true"
-attributeMap:{foo:a,bar:b}                          widget definitions             _setFooAttr:a,_setBarAttr:b
+attributeMap:{foo:a,bar:b}                          widget definitions             _fooSetter:a, _barSetter:b (NB: in 1.8, _setFooAttr and _setBarAttr)
+_setFooAttr:...                                     widget definitions             _fooSetter:... (NB: in 1.8, it's still _setFooAttr)
 this._focused                                       widget definitions             this.focused
+this._supportingWidgets.push(...)                   widget definitions             this.own(...)
+this.connect(node, "onclick", "myMethod")           widget definitions             this.own(on(node, "click", lang.hitch(this, "myMethod")))
+this.connect(obj, func, "myMethod")                 widget definitions             this.own(aspect.after(obj, func, lang.hitch(this, "myMethod")))
+this.subscribe(topicName, "myMethod")               widget definitions             this.own(topic(topicName, lang.hitch(this, "myMethod"))) but note that arguments to myMethod are passed as varargs not array
 =================================================   ============================   ====================================
 
 set(), get()
@@ -1353,6 +1357,10 @@ With:
   <span role="treeitem" aria-selected="false" aria-haspopup="true"></span>
 
 
+custom setters
+--------------
+In 1.8 customer setters for attributes have names like _setXxxAttr().   In 2.0 the name will be changed to _xxxSetter().
+
 attributeMap
 ------------
 
@@ -1365,16 +1373,39 @@ attributeMap in 1.x was a hash mapping widget attributes to DOM nodes.   For exa
     "style": "domNode"
   }
 
-Currently, this is achieved by making separate ``_setXXXAttr`` attribute for each attribute to map. Originally 
-``_setXXXAttr`` was a function to set a widget attribute.   It can still be a function, but now it can also be an 
-object like one of the values from ``attributeMap``.
+Currently, this is achieved by making separate ``_xxxSetter`` attribute for each attribute to map. Originally
+``_xxxSetter`` was a function to set a widget attribute.   It can still be a function, but now it can also be an
+object like one of the values from ``attributeMap``.    (NB: In 1.8, it's _setXxxAttr() not _xxxSetter().   This will
+change for 2.0.)
 
 The code above would be expressed as:
 
 .. js ::
 
-  _setTabIndexAttr: "focusNode",
-  _setStyleAttr: "domNode"
+  _tabIndexSetter: "focusNode",
+  _styleSetter: "domNode"
+
+this.connect(), this.subscribe(), this._supportingWidgets
+---------------------------------------------------------
+The ways to make a widget listen to DOMNode events, do advice on a regular function, subscribe to topics, and
+to register a supporting widget have changed.
+
+The new interface is to use the standard dojo methods dojo/on, dojo/aspect, dojo/topic, etc., and call this.own() to
+register the handle to be released when the widget is destroyed.   this.own() can be called multiple times, each with
+one or more handles specified:
+
+.. js ::
+
+      this.own(
+        // setup an event handler (automatically remove() when I'm destroyed)
+        on(this.domNode, "click", function(){ ... }),
+
+        // watch external object (automatically unwatch() when I'm destroyed)
+        aStatefulObject.watch("x", function(name, oVal, nVal){ ... }),
+
+        // create a supporting (internal) widget, to be destroyed when I'm destroyed
+        new MySupportingWidget(...)
+      );
 
 Base Functionality
 ------------------
@@ -1436,14 +1467,14 @@ Use BorderContainer instead.   (TODO: examples)
 Miscellaneous changes
 ---------------------
 
-_Widget --> _WidgetBase
+_Widget --> _WidgetBase  (TODO: will probably rename again, to Widget)
 
 DojoX
 =====
 
 The ``dojox`` namespace will be removed in Dojo 2.0.  Some of the mature sub-packages will like migrate into Dojo Core 
-or into Dijit.  The remaining code will be "spun off" into seperate packages that will be available via package 
+or into Dijit.  The remaining code will be "spun off" into separate packages that will be available via package
 management tools and a repository of packages.
 
-In order to ensure your code is easily migrateable, refactoring it to fully leverage AMD and not relay upon the 
+In order to ensure your code can be easily migrated, refactoring it to fully leverage AMD and not relay upon the
 ``dojox`` global variable is critically important.

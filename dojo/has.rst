@@ -112,147 +112,93 @@ Feature Names
 The following feature tests are available in Dojo.  This table shows the module in which the feature test is added, and 
 the name of the feature test.
 
-=============================================================================== =================================
-Module                                                                          Feature
-=============================================================================== =================================
-:ref:`dijit/_WidgetBase <dijit/_WidgetBase>`                                    dijit-legacy-requires
-:ref:`dijit/form/_ExpandingTextAreaMixin <dijit/form/_ExpandingTextAreaMixin>`  textarea-needs-help-shrinking
-:ref:`dojo/_base/browser <dojo/_base/browser>`                                  config-selectorEngine
-:ref:`dojo/_base/connect <dojo/_base/connect>`                                  events-keypress-typed
-:ref:`dojo/_base/kernel <dojo/_base/kernel>`                                    extend-dojo
+.. csv-table:: 
+ :header: "Module", "Feature", "Description"
+ :widths: 15, 10, 30
 
-                                                                                dojo-config-require
-
-                                                                                dojo-guarantee-console
-
-                                                                                dojo-debug-messages
-
-                                                                                dojo-modulePaths
-
-                                                                                dojo-moduleUrl
-:ref:`dojo/_base/lang <dojo/_base/lang>`                                        bug-for-in-skips-shadowed
-:ref:`dojo/_base/loader <dojo/_base/loader>`                                    config-publishRequireResult
-:ref:`dojo/_base/window <dojo/_base/window>`                                    quirks
-
-                                                                                ie
-:ref:`dojo/dojo <dojo/dojo>`                                                    host-node
-
-                                                                                host-rhino
-
-                                                                                dojo-xhr-factory
-
-                                                                                dojo-force-activex-xhr
-
-                                                                                native-xhr
-
-                                                                                dojo-gettext-api
-
-                                                                                dojo-loader-eval-hint-url
-
-                                                                                ie-event-behavior
-:ref:`dojo/dom-class <dojo/dom-class>`                                          dom-classList
-:ref:`dojo/has <dojo/has>`                                                      host-browser
-
-                                                                                dom
-
-                                                                                dojo-dom-ready-api
-
-                                                                                dojo-sniff
-
-                                                                                dom-addeventlistener
-
-                                                                                touch
-
-                                                                                device-width
-
-                                                                                dom-attributes-explicit
-
-                                                                                dom-attributes-specified-flag
-:ref:`dojo/hccss <dojo/hccss>`                                                  highcontrast
-:ref:`dojo/i18n <dojo/i18n>`                                                    dojo-preload-i18n-Api
-
-                                                                                dojo-v1x-i18n-Api
-:ref:`dojo/json <dojo/json>`                                                    json-parse
-
-                                                                                json-stringify
-:ref:`dojo/mouse <dojo/mouse>`                                                  dom-quirks
-
-                                                                                events-mouseenter
-
-                                                                                events-mousewheel
-:ref:`dojo/on <dojo/on>`                                                        jscript
-
-                                                                                event-orientationchange
-
-                                                                                event-stopimmediatepropagation
-:ref:`dojo/query <dojo/query>`                                                  array-extensible
-:ref:`dojo/ready <dojo/ready>`                                                  dojo-config-addOnLoad
-:ref:`dojo/request/handlers <dojo/request/handlers>`                            activex
-:ref:`dojo/request/script <dojo/request/script>`                                script-readystatechange
-:ref:`dojo/request/xhr <dojo/request/xhr>`                                      native-xhr
-                                                                                dojo-force-activex-xhr
-                                                                                native-xhr2
-                                                                                native-formdata
-:ref:`dojo/selector/_loader <dojo/selector/_loader>`                            dom-qsa2.1
-
-                                                                                dom-qsa3
-:ref:`dojo/selector/lite <dojo/selector/lite>`                                  dom-matches-selector
-
-                                                                                dom-qsa
-:ref:`dojo/sniff <dojo/sniff>`                                                  air
-
-                                                                                khtml
-
-                                                                                webkit
-
-                                                                                chrome
-
-                                                                                safari
-
-                                                                                mac
-
-                                                                                quirks
-
-                                                                                ios
-
-                                                                                android
-
-                                                                                opera
-
-                                                                                mozilla
-
-                                                                                ff
-
-                                                                                ie
-
-                                                                                wii
-:ref:`dojox/form/uploader/Base <dojox/form/uploader/Base>`                      FormData
-
-                                                                                xhr-sendAsBinary
-
-                                                                                file-multiple
-:ref:`dojox/app/main <dojox/app/main>`                                          app-log-api
-:ref:`dojox/mobile/Audio <dojox/mobile/Audio>`                                  mobile-embed-audio-video-support
-:ref:`dojox/mobile/common <dojox/mobile/common>`                                mblAndroidWorkaround
-
-                                                                                mblAndroid3Workaround
-:ref:`dojox/mobile/scrollable <dojox/mobile/scrollable>`                        translate3d
-:ref:`dojox/mobile/sniff <dojox/mobile/sniff>`                                  bb
-
-                                                                                android
-
-                                                                                iphone
-
-                                                                                touch
-:ref:`dojox/mvc/_InlineTemplateMixin <dojox/mvc/_InlineTemplateMixin>`          dom-qsa
-:ref:`dojox/mvc/parserExtension <dojox/mvc/parserExtension>`                    dom-qsa
-
-                                                                                dojo-parser
-
-                                                                                dojo-mobile-parser
-:ref:`dojox/mvc/sync <dojox/mvc/sync>`                                          mvc-bindings-log-api
-:ref:`util/build/main <util/build/main>`                                        is-windows
-=============================================================================== =================================
+ :ref:`dojo/_base/browser <dojo/_base/browser>`,config-selectorEngine,"Pre-configured selector engine to use in dojo/query, defaults to dojo/selector/acme."
+ :ref:`dojo/_base/connect <dojo/_base/connect>`,events-keypress-typed, Keypresses should only occur a printable character is hit
+ :ref:`dojo/_base/kernel <dojo/_base/kernel>`,extend-dojo, "Defined Dojo modules should push their definitions into the dojo object. In 2.0, it will likely be unusual to augment another object as a result of defining a module. This has feature gives a way to force 2.0 behavior as the code is migrated." 
+ :ref:`dojo/_base/kernel <dojo/_base/kernel>`, dojo-guarantee-console, "Ensure that console.log, console.warn, etc. methods are defined"
+ :ref:`dojo/_base/kernel <dojo/_base/kernel>`, dojo-debug-messages, "Log internal debug messages generated by Dojo, these include deprecated/experimental warnings along with parser auto-required module names."
+ :ref:`dojo/_base/kernel <dojo/_base/kernel>`, dojo-modulePaths, "Consume module paths defined in config.modulePaths."
+ :ref:`dojo/_base/kernel <dojo/_base/kernel>`, dojo-moduleUrl, "Expose dojo.moduleUrl method, returns a URL relative to a module. Deprecated in 2.0, should use require.toUrl()"
+ :ref:`dojo/_base/lang <dojo/_base/lang>`, bug-for-in-skips-shadowed, Test for bug where the for-in iterator skips object properties that exist in Object's prototype (IE6 - ?).
+ :ref:`dojo/_base/loader <dojo/_base/loader>`, dojo-fast-sync-require, "All dojoRequireCallbacks can be released when all *non-dojo/require!, dojo/loadInit!* modules are either executed, not requested, or arrived. Potential weakness of this algorithm is that dojo/require will not execute callbacks until *all* dependency trees are ready." 
+ :ref:`dojo/_base/loader <dojo/_base/loader>`, config-publishRequireResult, "Publish resolved module values, resulting from a require call, as JavaScript objects referenced by module identifiers in the global namespace."
+ :ref:`dojo/_base/window <dojo/_base/window>`, quirks, Browser is running in *Quirks-Mode*
+ :ref:`dojo/dojo <dojo/dojo>`, host-node, Environment is running on the the NodeJS platform
+ :ref:`dojo/dojo <dojo/dojo>`, host-rhino, Environment is running on the Rhino platform
+ :ref:`dojo/dojo <dojo/dojo>`, dojo-xhr-factory, 
+ :ref:`dojo/dojo <dojo/dojo>`, dojo-force-activex-xhr, Force XHR provider to use ActiveX API (MSXMLHTTP).
+ :ref:`dojo/dojo <dojo/dojo>`,native-xhr, "Browser has native XHR API, XMLHttpRequest."
+ :ref:`dojo/dojo <dojo/dojo>`,dojo-gettext-api, Dojo provides API for retrieving text resource contents from a URL.
+ :ref:`dojo/dojo <dojo/dojo>`,dojo-loader-eval-hint-url, Module location should be used as source hint during eval rather than module identifier.
+ :ref:`dojo/dojo <dojo/dojo>`,ie-event-behavior, Browser supports legacy IE event behaviour API (attachEvent versus attachEventListener).
+ :ref:`dojo/has <dojo/has>`, host-browser, Environment is running on the browser platform
+ :ref:`dojo/has <dojo/has>`, dom, Document Object Module API supported on the current platform
+ :ref:`dojo/has <dojo/has>`, dojo-dom-ready-api, "DOMReady API supported on the current platform, allowing listeners to be notified when the DOM has loaded"
+ :ref:`dojo/has <dojo/has>`, dojo-sniff, User-agent sniffing support on the current platform
+ :ref:`dojo/has <dojo/has>`, dom-addeventlistener, Standard DOM event API (addEventListener) supported on the current platform.
+ :ref:`dojo/has <dojo/has>`, touch, Touch events are supported on the current platform 
+ :ref:`dojo/has <dojo/has>`, device-width, Amount of horizontal space in pixels available on the window
+ :ref:`dojo/has <dojo/has>`, dom-attributes-explicit, "DOM node attributes array only lists explicitly user specified attributes, (W3C standard)"
+ :ref:`dojo/has <dojo/has>`, dom-attributes-specified-flag, "DOM node attribute values provide *specified* flag to skip attributes user didn't specify, (IE8)"
+ :ref:`dojo/hccss <dojo/hccss>`, highcontrast, "Browser is in 'high-contrast' mode"
+ :ref:`dojo/i18n <dojo/i18n>`, dojo-preload-i18n-Api, "Define the preload localizations machinery, allow loading of special rollup modules which contain one or more flattened, localized bundles."
+ :ref:`dojo/i18n <dojo/i18n>`, dojo-v1x-i18n-Api, "Define legacy (v1.x) i18n functions"
+ :ref:`dojo/json <dojo/json>`, json-parse, Platform supports parsing JSON text to JavaScript objects through native API
+ :ref:`dojo/json <dojo/json>`, json-stringify, "Platform supports 'stringify' method on native JSON API, allowing serialisation of JavaScript objects to JSON text."
+ :ref:`dojo/mouse <dojo/mouse>`, dom-quirks, Browser is running in *Quirks-Mode*
+ :ref:`dojo/mouse <dojo/mouse>`, events-mouseenter, Browser supports the *onmouseenter* DOM event
+ :ref:`dojo/mouse <dojo/mouse>`, events-mousewheel, Browser supports the *onmousewheel* DOM event
+ :ref:`dojo/on <dojo/on>`, jscript, "JavaScript environment provided by the JScript platform, dialect of ECMAScript standard that is used in Microsoft's Internet Explorer."
+ :ref:`dojo/on <dojo/on>`, event-orientationchange, "Browser supports the *orientationchange* DOM event, used to detect orientation changes in the target device."
+ :ref:`dojo/on <dojo/on>`, event-stopimmediatepropagation, "Browser supports the *stopImmediatePropagation* method on DOM events, used to prevent other event listeners being called."
+ :ref:`dojo/query <dojo/query>`, array-extensible, "Native array implementation supports manual extension (not supported in older versions of IE)."
+ :ref:`dojo/ready <dojo/ready>`, dojo-config-addOnLoad, "Consume *addOnLoad* configuration property."
+ :ref:`dojo/request/handlers <dojo/request/handlers>`, activex, "Browser platform has ActiveX API methods, provided by Internet Explorer"
+ :ref:`dojo/request/script <dojo/request/script>`, script-readystatechange, "DOM supports *onreadystatechange* event, fired when document.readyState changes"
+ :ref:`dojo/request/xhr <dojo/request/xhr>`, native-xhr, "Browser has native XHR API, XMLHttpRequest"
+ :ref:`dojo/request/xhr <dojo/request/xhr>`, dojo-force-activex-xhr, "Force XHR provider to use ActiveX API (MSXMLHTTP)."
+ :ref:`dojo/request/xhr <dojo/request/xhr>`, native-xhr2, "Browser's native XHR implementation supports XHR Level 2 API"
+ :ref:`dojo/request/xhr <dojo/request/xhr>`, native-formdata, "Browser has a native FormData implementation, letting user compile set of key/value pairs to send using XMLHttpRequest"
+ :ref:`dojo/selector/_loader <dojo/selector/_loader>`, dom-qsa2.1, "Browser supports the DOM QuerySelectorAll method available, with Level 2.1 CSS selectors"
+ :ref:`dojo/selector/_loader <dojo/selector/_loader>`, dom-qsa3, "Browser supports DOM QuerySelectorAll method, with Level 3 CSS selectors"
+ :ref:`dojo/selector/lite <dojo/selector/lite>`, dom-matches-selector, "Browser supports the *matchesSelector* method for testing selector queries directly against DOM nodes.
+ :ref:`dojo/selector/lite <dojo/selector/lite>`, dom-qsa, "Browsers supports the DOM QuerySelectorAll method."
+ :ref:`dojo/sniff <dojo/sniff>`, air, "Environment is running on the Adobe Air platform"
+ :ref:`dojo/sniff <dojo/sniff>`, khtml, "Environment is running on the Konqueror-based platform"
+ :ref:`dojo/sniff <dojo/sniff>`, webkit, "Environment is running on the WebKit rendering engine platform"
+ :ref:`dojo/sniff <dojo/sniff>`, chrome, "Environment is running on the Chrome browser platform"
+ :ref:`dojo/sniff <dojo/sniff>`, safari, "Environment is running on the Safari browser platform"
+ :ref:`dojo/sniff <dojo/sniff>`, mac, "Environment is running on the Mac OS X platform"
+ :ref:`dojo/sniff <dojo/sniff>`, quirks, "Browser is running in *Quirks-Mode*"
+ :ref:`dojo/sniff <dojo/sniff>`, ios, "Environment is running on the iOS mobile operating system"
+ :ref:`dojo/sniff <dojo/sniff>`, android, "Environment is running on the Android mobile operating system"
+ :ref:`dojo/sniff <dojo/sniff>`, opera, "Environment is running on the Opera browser platform"
+ :ref:`dojo/sniff <dojo/sniff>`, mozilla, "Environment is running on the Mozilla browser platform"
+ :ref:`dojo/sniff <dojo/sniff>`, ff, "Environment is running on the Firefox browser platform"
+ :ref:`dojo/sniff <dojo/sniff>`, ie, "Environment is running on the Microsoft Internet Explorer browser platform"
+ :ref:`dojo/sniff <dojo/sniff>`, wii, "Environment is running on the Nintendo Wii browser platform"
+ :ref:`dijit/_WidgetBase <dijit/_WidgetBase>`, dijit-legacy-requires, "Make dijit load modules the application didn't explicitly require, e.g. dijit/_base/manager, backwards compatibility in non-async mode."
+ :ref:`dijit/form/_ExpandingTextAreaMixin <dijit/form/_ExpandingTextAreaMixin>`,  textarea-needs-help-shrinking, "Browser platform's <textarea> element needs manual help to shrink as content changes."
+ :ref:`dojox/form/uploader/Base <dojox/form/uploader/Base>`, FormData, "Browser has a native FormData implementation, letting user compile set of key/value pairs to send using XMLHttpRequest"
+ :ref:`dojox/form/uploader/Base <dojox/form/uploader/Base>`, xhr-sendAsBinary, "Browser's native XHR implementation supports the *sendAsBinary* method, for sending binary data over XHR."
+ :ref:`dojox/form/uploader/Base <dojox/form/uploader/Base>`, file-multiple, "Browser supports file input DOM element with multiple file selection attribute, allowing user to select more than one file."
+ :ref:`dojox/mobile/Audio <dojox/mobile/Audio>`, mobile-embed-audio-video-support, "Platform supports creating embed tags with audio and video elements."
+ :ref:`dojox/mobile/common <dojox/mobile/common>`, mblAndroidWorkaround, "Test for Android 2.X transition animation flicker issue"
+ :ref:`dojox/mobile/common <dojox/mobile/common>`, mblAndroid3Workaround, "Test for Android 3.X transition animation flicker issue"
+ :ref:`dojox/mobile/scrollable <dojox/mobile/scrollable>`, translate3d, "Browser supports the WebKit-specific CSS transform property, translate3d."
+ :ref:`dojox/mobile/sniff <dojox/mobile/sniff>`, bb, "Environment is running on the RIM Blackberry mobile browser platform"
+ :ref:`dojox/mobile/sniff <dojox/mobile/sniff>`, android, "Environment is running on the Android mobile browser platform"
+ :ref:`dojox/mobile/sniff <dojox/mobile/sniff>`, iphone, "Environment is running on the iPhone mobile browser platform"
+ :ref:`dojox/mobile/sniff <dojox/mobile/sniff>`, touch, "Touch events are supported on the current platform"
+ :ref:`dojox/mvc/_InlineTemplateMixin <dojox/mvc/_InlineTemplateMixin>`, dom-qsa, "Browser supports the DOM QuerySelectorAll method"
+ :ref:`dojox/mvc/parserExtension <dojox/mvc/parserExtension>`, dom-qsa, "Browser supports the DOM QuerySelectorAll method"
+ :ref:`dojox/mvc/parserExtension <dojox/mvc/parserExtension>`, dojo-parser, "Browser has loaded the dojo/parser module"
+ :ref:`dojox/mvc/parserExtension <dojox/mvc/parserExtension>`, dojo-mobile-parser, "Browser has loaded the dojox/mobile/parser module"
+ :ref:`dojox/mvc/sync <dojox/mvc/sync>`, mvc-bindings-log-api, Enable debugging messages for MVC module.
 
 Examples
 ========

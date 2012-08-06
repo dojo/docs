@@ -632,9 +632,9 @@ Following CSS classes are used to style the avatar:
 Manager
 -------
 
-``Manager`` is a class which implements a business logic of DnD and orchestrates the visualization of this process. It
+``Manager`` is a class which implements a business logic of DnD and orchestrates the visualization of this process. (It is the replacement for the deprecated ``dojo.dnd.manager`` singleton in 1.6.)  It
 accepts events from sources/targets, creates the Avatar_, and checks the validity of the drop. At any given moment there
-is only one instance of this class (the singleton pattern), which can be accessed by ``dojo/dnd::manager()`` function.
+is only one instance of this class (the singleton pattern), which can be accessed by ``Manager.manager()`` function.
 You do not need to instantiate this object explicitly. It is done automatically when DnD modules are required.
 
 This class or its instance can be monkey patched or replaced completely, if you want to change its functionality.
