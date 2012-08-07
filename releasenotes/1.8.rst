@@ -475,6 +475,10 @@ See :ref:`Widget events published to the DOM <quickstart/events#widget-events-pu
     _setValueAttr: "focusNode",
   });
 
+- childWidget.placeAt(parentWidgetId) now works correctly, even when the parent is a container widget.  I.e. placeAt()
+  calls parentWidget.addChild().  Note that you will have problems if there is a DOMNode outside of the
+  parent widget with the same ID as the parent widget.   In that case, the id argument becomes ambiguous.
+
 dijit/Calendar
 --------------
 
