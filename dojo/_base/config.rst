@@ -50,7 +50,7 @@ A common way to populate dojo.config is via the data-dojo-config="..." attribute
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Dojo dojo.config Tutorial</title>
       <script type="text/javascript"
-              src="http://ajax.googleapis.com/ajax/libs/dojo/1.7/dojo/dojo.js"
+              src="//ajax.googleapis.com/ajax/libs/dojo/1.8/dojo/dojo.js"
               data-dojo-config="parseOnLoad: true, isDebug: true"></script>
   </head>
   <body>
@@ -84,7 +84,7 @@ In cases where lots of attributes must be set in the dojo.config object, or for 
               extraLocale: ['ja-jp']
           };
       </script>
-      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.7/dojo/dojo.js"></script>
+      <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/dojo/1.8/dojo/dojo.js"></script>
   </head>
   <body>
       <p>...</p>
