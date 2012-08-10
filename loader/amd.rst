@@ -80,8 +80,11 @@ load.
 
 .. _loader/amd#configuration:
 
+Configuration/Feature Detection
+===============================
+
 Configuration
-=============
+-------------
 
 There are three ways to pass configuration data to the loader:
 
@@ -147,9 +150,8 @@ The "config" event passes two arguments to any listeners:
 The various configuration variables that apply to the loader are discussed in detail in their relevant sections. The
 section `Configuration Reference`_ includes a list of all reserved configuration variables.
 
-
-has.js
-======
+Feature Detection
+-----------------
 
 :ref:`has.js <dojo/has>` is a standard API that allows feature detection to be separated from feature-dependent code
 branching and enables the build system to create platform-optimized versions of applications.
@@ -232,6 +234,42 @@ to all configuration variables it receives, prefixing the configuration variable
   <script data-dojo-config="tlmSiblingOfDojo:0" src="path/to/dojo/dojo.js"></script>
 
 This code will result in a has test named "config-tlmSiblingOfDojo" with a value of 0.
+
+Options/Features
+----------------
+
+The following table provides a list of options that are leveraged within the loader.  The first column is the Option/Feature as defined within the loader, the second options is whether this is a detected feature (via ``has.add()``) or if it is just an option and its default value.  With "unbuilt" source, all the features and options are available.  If the loader has been built, then some of these features may have been set as ``staticHasFeatures`` and not be configurable anymore.
+
+.. csv-table:: 
+  :header: "Feature", "Default Value", "Description"
+  :widths: 12, 7, 30
+
+  dojo-trace-api, True
+  dojo-sync-loader, True
+  dojo-config-api, True
+  dojo-cdn, False
+  dojo-requirejs-api, False
+  dojo-test-sniff, True
+  dojo-combo-api, False
+  dojo-undef-api, False
+  config-tlmSiblingOfDojo, True
+  config-dojo-loader-catches, True
+  dojo-inject-api, True
+  config-stripStrict, False
+  dojo-timeout-api, True
+  dojo-log-api, True
+  dojo-amd-factory-scan, True
+  dojo-publish-privates, True
+  dojo-built, False
+  dojo-loader, True
+  host-node, *Detected*, Environment is running on the the NodeJS platform
+  host-rhino, *Detected*, Environment is running on the Rhino platform
+  dojo-xhr-factory,  *Detected*
+  dojo-force-activex-xhr, *Detected*, Force XHR provider to use ActiveX API (MSXMLHTTP).
+  native-xhr, *Detected*, "Browser has native XHR API, XMLHttpRequest."
+  dojo-gettext-api, *Detected*, Dojo provides API for retrieving text resource contents from a URL.
+  dojo-loader-eval-hint-url, *Detected*, Module location should be used as source hint during eval rather than module identifier.
+  ie-event-behavior, *Detected*, Browser supports legacy IE event behaviour API (attachEvent versus attachEventListener).
 
 The AMD API
 ===========
