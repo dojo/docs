@@ -958,6 +958,8 @@ array of a layer and tag them as declarative:
     }
   };
 
+See :ref:`depsDeclarative <build/transforms/depsDeclarative>` for more information.
+
 Demos
 =====
 

@@ -905,6 +905,9 @@ tags:
 ``amd``
   The resource is an AMD module.
 
+``declarative``
+  The resource should be scanned for declarative dependencies, pending inclusion in a layer.
+
 ``miniExclude``
   The resource should not be copied to the destination if the profile property "mini" is truthy.
 
@@ -915,6 +918,8 @@ The Dojo Toolkit includes the deployment optimization transforms listed below. S
 for complete documentation.
 
 * :ref:`copy <build/transforms/copy>`: Copies a resource from a source location to a destination location.
+
+* :ref:`depsDeclarative <build/transforms/depsDeclarative>`: Scans declarative resrouces for dependencies and replaces the resource in any layer with any discovered dependencies.
 
 * :ref:`depsDump <build/transforms/depsDump>`: Prints the module dependency graph of one or more modules.
 
