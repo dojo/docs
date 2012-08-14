@@ -10,15 +10,16 @@ dojo/request/handlers
 .. contents ::
     :depth: 2
 
-**dojo/request/handlers** is a module that provides handlers that deal with the data that is returned in a response to a
-request.
+**dojo/request/handlers** is a module that provides handlers that deal with the data that is returned in a
+response to a request.
 
 Introduction
 ============
 
-``dojo/request/handlers`` provides handlers that will convert the response payload and convert it into a data object. By
-setting the ``handleAs`` option to one of the handlers, the responses ``.data`` property will be populated with the
-results of the handler. The standard handlers are:
+``dojo/request/handlers`` provides handlers that will convert the response payload into a data object. By
+setting the ``handleAs`` option to a request, the returned promise will resolve to the resulting data object
+rather than the text of the response payload. The returned promise's ``response`` property will resolve to an
+object with a ``data`` property that is converted data object. The standard handlers are:
 
 * ``json`` - Will attempt to parse the response as a JSON string.
 
@@ -34,26 +35,27 @@ Usage
 register()
 ----------
 
-Normally, ``dojo/request/handlers`` is not used directly, except when you want to register a new handler type. In that
-case, usage would look like this:
+Normally, ``dojo/request/handlers`` is not used directly, except when you want to register a new handler type. In
+that case, usage would look like this:
 
 .. js ::
 
   require(["dojo/request/handlers", "dojo/request"], require(handlers, request){
-    handlers.register("something", function(response){
-      // Do something with response
-      return something;
+    handlers.register("split", function(response){
+      // Do something with response.text
+      return response.text.split(",");
     });
     
     request("http://example.com/something", {
-      handleAs: "something"
-    }).then(function(response){
-      // response.data contains handled response
+      handleAs: "split"
+    }).then(function(data){
+      // data contains an array of strings
     });
   });
 
-Whatever a customer handler returns, when used as the handler, will be put into the ``response.data`` property. The
-payload of the un-handled response is in ``response.text``.
+Whatever a handler returns, when used as the handler, will be what the returned promise resolves to and will be put
+into the ``data`` property of the object the ``response`` promise resolves to. The payload of the un-handled
+response is in the ``text`` property of the object the ``response`` promise resolves to.
 
 ``.register()`` takes two arguments:
 
@@ -61,7 +63,7 @@ payload of the un-handled response is in ``response.text``.
 Argument Type     Description
 ======== ======== ===================================================================================
 name     String   The name that will be matched when ``handleAs`` option is specified in a a request.
-handler  Function The function that returns the handled response.
+handler  Function The function that handles the response and returns the converted object.
 ======== ======== ===================================================================================
 
 Examples
@@ -70,8 +72,8 @@ Examples
 .. code-example ::
   :djConfig: async: true, parseOnLoad: false
 
-  This example retrieves a JSON resource, which is set to be handled as ``json`` and outputs the ``response.data``,
-  which will be a JavaScript object that has been converted from the JSON.
+  This example retrieves a JSON resource, which is set to be handled as ``json`` and outputs ``data``, which will
+  be a JavaScript object that has been converted from the JSON.
 
   .. js ::
 
@@ -81,8 +83,8 @@ Examples
         domConst.place("<p>Requesting...</p>", "output");
         request("./helloworld.json", {
           handleAs: "json"
-        }).then(function(response){
-          domConst.place("<p>response.data: <code>" + JSON.stringify(response.data) + "</code>", "output");
+        }).then(function(data){
+          domConst.place("<p>data: <code>" + JSON.stringify(data) + "</code>", "output");
         });
       });
     });
@@ -96,8 +98,8 @@ Examples
 .. code-example ::
   :djConfig: async: true, parseOnLoad: false
 
-  This example retrieves an XML resource, which is set to be handled as ``xml`` and outputs the ``response.data``, which
-  will be a JavaScript object that has been converted from the XML.
+  This example retrieves an XML resource, which is set to be handled as ``xml`` and outputs ``data``, which will be
+  an XML document object created from the XML text.
 
   .. js ::
 
@@ -107,8 +109,8 @@ Examples
         domConst.place("<p>Requesting...</p>", "output");
         request("./helloworld.xml",{
           handleAs: "xml"
-        }).then(function(response){
-          domConst.place("<p>response.data: <code>" + JSON.stringify(response.data) + "</code>", "output");
+        }).then(function(xmldoc){
+          domConst.place("<p>xmldoc: <code>" + JSON.stringify(xmldoc) + "</code>", "output");
         });
       });
     });
@@ -122,9 +124,8 @@ Examples
 .. code-example ::
   :djConfig: async: true, parseOnLoad: false
 
-  This example retrieves an JavaScript resource, which is set to be handled as ``javascript`` and outputs the
-  ``response.data``, which will be a JavaScript object that was retrieved. Any retrieved JavaScript is ``eval()``\ed in
-  the global scope.
+  This example retrieves a JavaScript resource, which is set to be handled as ``javascript`` and outputs ``data``,
+  which will be the result of calling ``eval()`` in the global scope on the text of the response.
 
   .. js ::
 
@@ -134,8 +135,8 @@ Examples
         domConst.place("<p>Requesting...</p>", "output");
         request("./helloworld.js",{
           handleAs: "javascript"
-        }).then(function(response){
-          domConst.place("<p>response.data: <code>" + JSON.stringify(response.data) + "</code>", "output");
+        }).then(function(data){
+          domConst.place("<p>data: <code>" + JSON.stringify(data) + "</code>", "output");
         });
       });
     });
@@ -166,8 +167,8 @@ Examples
         domConst.place("<p>Requesting...</p>", "output");
         request("./helloworld.json", {
           handleAs: "custom"
-        }).then(function(response){
-          domConst.place("<p>repsonse.data: <code>" + JSON.stringify(response.data) + "</code>", "output");
+        }).then(function(data){
+          domConst.place("<p>data: <code>" + JSON.stringify(data) + "</code>", "output");
         });
       });
     });

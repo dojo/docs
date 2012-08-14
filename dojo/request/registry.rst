@@ -10,79 +10,92 @@ dojo/request/registry
 .. contents ::
     :depth: 2
 
-**dojo/request/registry** is a module that provides the ability to register different providers to handle different URL
-patterns.
+**dojo/request/registry** is a module that provides the ability to register providers to handle requests based on
+criteria such as the URL of the request.
 
 Introduction
 ============
 
-``dojo/request/registry`` allows for the registration of different providers against a URL pattern, which is then
-matched against when a request is made. This allows for the ability for example to use ``dojo/request/xhr`` for same
-domain requests and ``dojo/request/script`` for cross domain requests, allowing the same code path, irrespective of the
-target of the request.
+``dojo/request/registry`` allows for the registration of providers against a URL pattern or other criteria, which
+is then matched when a request is made. This allows using the same API call across an application while using
+multiple providers. An example of this would be using ``dojo/request/xhr`` for same domain requests and
+``dojo/request/script`` for cross domain requests, but only ever calling ``dojo/request``.
 
 Usage
 =====
 
-To use the module, you need to require it in and register different providers by URL and then make your requests:
+To use the registry, you need to require it, register providers, and make your requests:
 
 .. js ::
 
   require(["dojo/request/registry", "dojo/request/xhr", "dojo/request/script"], function(request, xhr, script){
-    // Maps via a regex
+    // Register with a regex
     request.register(/^foo/, xhr);
     
-    // Maps via a string
+    // Register with a string
     request.register("bar", script);
     
-    // Maps via a function
+    // Register with a function and add to the beginning
+    // of the list of providers using a truthy third argument
     request.register(function(url, options){
       // Return a truthy value if this provider should be matched, otherwise
-      return false;
-    }, xhr);
+      // return a falsey value
+      return !!options.useXHR;
+    }, xhr, true);
     
     // Will match the first registration
-    request.get("foobar.html").then(function(response){
+    request.get("foobar.html").then(function(text){
       // Do something with the response
     });
     
     // Will match the second registration
-    request.get("bar").then(function(response){
+    request.get("bar").then(function(text){
+      // Do something with the response
+    });
+
+    // Will match the third registration because
+    // it was added to the beginning of the provider
+    // list and will match before the first registration
+    request.get("foo.html", {
+      useXHR: true
+    }).then(function(text){
       // Do something with the response
     });
     
-    // Will use the fallback provider
+    // Will use the fallback provider (the platform default unless explicitly set)
     request.get("somethingelse").then(function(response){
       // Do something with the response
     });
   });
 
-As matches are registered, they get pushed onto the stack, whereby the first match is used. There is the optional third
-argument to ``register()`` that will put that registration at the top of the stack. If there are no matches, the
-registry will fallback to the platform default provider.
+As providers are registered, they are pushed onto the registry stack, whereby the first positive match encountered
+is used. There is an optional third argument to ``register()`` which, if truthy, will put the provider being
+registered at the top of the stack. If there are no matches, the registry will fallback to the platform default
+provider.
 
-The base function of the module is like other providers and will equivalent to the ``get()`` method.
+The base function of the module conforms to the Request API and will use the default HTTP method of the matching
+provider.
 
 register()
 ----------
 
-This method maps a URL to a provider.  It takes up to three arguments:
+This registers a provider.  It takes up to three arguments:
 
-======== ====================== ========================================================================================
+======== ====================== ===================================================================================
 Argument Type                   Description
-======== ====================== ========================================================================================
-url      String|RegExp|Function What the registry should use to match against requests made to find the appropriate 
-                                provider.  If a function, it should take two argument and return true if the provider 
-                                should handle the request:
+======== ====================== ===================================================================================
+url      String|RegExp|Function The criteria the registry should use to determine if ``provider`` should be used
+                                to make a request. If this is a function, it should take two arguments and return
+                                a truthy value if the provider should handle the request:
                                 
                                 * ``url`` - The URL being requested
                                 
                                 * ``options`` - The options being set on the request
                                 
 provider Function               The provider that should handle the request if matched.
-first    Boolean?               *Optional* If true, it will be unshifted onto the stack of matchers, thereby overriding 
-                                previously registered matches.
-======== ====================== ========================================================================================
+first    Boolean?               *Optional* If truthy, the provider will be added to the beginning of the list of
+                                providers, possibly overriding previously registered providers.
+======== ====================== ===================================================================================
 
 ``register()`` returns a handle that can be used to remove the matcher from the stack:
 
@@ -125,8 +138,8 @@ Examples
 .. code-example ::
 
   This example will register a regular expression that will route anything that ends in ``.jsonp.js`` to the
-  ``dojo/request/script`` provider, where everything else will will go to the platform default provider
-  ``dojo/request/xhr``.
+  ``dojo/request/script`` provider; all other requests will go through the platform default provider (in the
+  case of the browser, ``dojo/request/xhr``).
 
   .. js ::
 
@@ -140,14 +153,14 @@ Examples
         domConst.place("<p>request: 'helloworld.jsonp.js'</p>", "output");
         request.get("helloworld.jsonp.js", {
           jsonp: "callback"
-        }).then(function(response){
-          domConst.place("<p>script repsonse.data: <code>" + JSON.stringify(response.data) + "</code></p>", "output");
+        }).then(function(data){
+          domConst.place("<p>script data: <code>" + JSON.stringify(data) + "</code></p>", "output");
         });
         domConst.place("<p>request: 'helloworld.json'</p>", "output");
         request.get("helloworld.json", {
           handleAs: "json"
-        }).then(function(response){
-          domConst.place("<p>xhr repsonse.data: <code>" + JSON.stringify(response.data) + "</code></p>", "output");
+        }).then(function(data){
+          domConst.place("<p>xhr data: <code>" + JSON.stringify(data) + "</code></p>", "output");
         });
       });
     });

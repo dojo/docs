@@ -10,29 +10,29 @@ dojo/request
 .. contents ::
     :depth: 2
 
-**dojo/request** is a package which provides asynchronous requests in a cross platform way. This is commonly referred to
-as AJAX.
+**dojo/request** is a package which provides asynchronous requests in a cross platform way. This is commonly
+referred to as AJAX.
 
 Introduction
 ============
 
-**dojo/request** is comprised of several modules that provide functionality around asynchronous requests. It leverages
-the :ref:`dojo/promise <dojo/promise>` API to manage the asynchronous communication. The concept is that a *request* has
-a *provider*. The providers behave in similar way and have the same core API, but may add additional interfaces as
-needed to fully support the functionality of the particular type of provider. The following providers are available in
-``dojo/request``:
+**dojo/request** is comprised of several modules that provide functionality around asynchronous requests. It
+leverages the :ref:`dojo/promise <dojo/promise>` API to manage the asynchronous communication. The concept is
+that a *request* has a *provider*. The providers behave in similar way and have the same core API, but may add
+additional interfaces as needed to fully support the functionality of the particular type of provider. The
+following providers are available in ``dojo/request``:
 
-* :ref:`dojo/request/xhr <dojo/request/xhr>` - Provides a cross browser compatible ``XmlHttpRequest``. It is the default
-  provider for browser platforms.
+* :ref:`dojo/request/xhr <dojo/request/xhr>` - Provides a cross browser compatible ``XmlHttpRequest``. It is
+  the default provider for browser platforms.
 
-* :ref:`dojo/request/node <dojo/request/node>` - Provides an asynchronous request for `node.js <http://nodejs.org/>`_.
-  It is the default provider for node.js.
+* :ref:`dojo/request/node <dojo/request/node>` - Provides an asynchronous request for
+  `node.js <http://nodejs.org/>`_. It is the default provider for node.js.
 
-* :ref:`dojo/request/iframe <dojo/request/iframe>` - Provides an IFrame transport for the asynchronous request. This is
-  useful in situations where files need to be submitted or certain cross domain situations.
+* :ref:`dojo/request/iframe <dojo/request/iframe>` - Provides an IFrame transport for the asynchronous request.
+  This is useful in situations where files need to be submitted or certain cross domain situations.
 
-* :ref:`dojo/request/script <dojo/request/script>` - Provides a transport where the return payload is expected to be
-  embedded in a ``<script>`` tag.
+* :ref:`dojo/request/script <dojo/request/script>` - Provides a transport where the return payload is expected
+  to be embedded in a ``<script>`` tag.
 
 By requiring the ``dojo/request`` module, it will return the default provider for the current platform.
 
@@ -45,12 +45,13 @@ handlers as a default:
 
 * ``javascript`` - The response is expected to be JavaScript and ``eval()`` is used against the response.
 
-In addition, :ref:`dojo/request/handlers <dojo/request/handlers>` provides a mechanism to register additional handlers
-that then can be used to deal with different types of responses.
+In addition, :ref:`dojo/request/handlers <dojo/request/handlers>` provides a mechanism to register additional
+handlers that then can be used to deal with different types of responses.
 
 There are a few modules as part of the package which assist in managing requests:
 
-* :ref:`dojo/request/notify <dojo/request/notify>` - Publishes the ``dojo/request`` topic for requests.
+* :ref:`dojo/request/notify <dojo/request/notify>` - Provides an :ref:`dojo/Evented <dojo/Evented>` interface
+  for global request event notification.
 
 * :ref:`dojo/request/registry <dojo/request/registry>` - Allows registering different providers by a URI pattern, so
   that different providers can be used based on the target URI without the user having to code separate code paths.
@@ -64,8 +65,8 @@ require that module and specify the resource you need. The most basic usage woul
 .. js ::
 
   require(["dojo/request"], function(request){
-    request("request.html").then(function(response){
-      // do something with results
+    request("request.html").then(function(data){
+      // do something with handled data
     }, function(err){
       // handle an error condition
     }, function(evt){
@@ -73,8 +74,8 @@ require that module and specify the resource you need. The most basic usage woul
     });
   });
 
-If the above was on a browser, ``dojo/request/xhr`` would have been used and if it was on node.js, ``dojo/request/node``
-would have been used.
+If the above was on a browser, ``dojo/request/xhr`` would have been used and if it was on node.js,
+``dojo/request/node`` would have been used.
 
 Providers take two arguments:
 
@@ -87,32 +88,38 @@ options  Object? *Optional* A hash of any options for the provider.
 
 The ``options`` argument is dependent upon the provider, but some common options are:
 
-============ ============= ========= ===================================================================================
+============ ============= ========= =============================================================================
 Property     Type          Default   Description
-============ ============= ========= ===================================================================================
+============ ============= ========= =============================================================================
 data         String|Object ``null``  Data, if any, that should be sent with the request.
 query        String|Object ``null``  The query string, if any, that should be sent with the request.
 preventCache Boolean       ``false`` If ``true`` will send an extra query parameter to ensure the the server won't
                                      supply cached values.
 method       String        ``GET``   The HTTP method that should be used to send the request.
-headers      Object                  A hash of the custom headers to be sent with the request.
-============ ============= ========= ===================================================================================
+timeout      Integer       ``null``  The number of milliseconds to wait for the response. If this time passes the
+                                     request is canceled and the promise rejected.
+handleAs     String        ``text``  The content handler to process the response payload with.
+============ ============= ========= =============================================================================
 
-The provider returns a deferred promise (see :ref:`dojo/Deferred <dojo/Deferred>`) that is fulfilled with the results of
-the request. Provider will also error out by calling the errorback function and provide progress by calling the progback
-functions if provided.
+The provider returns a promise (see :ref:`dojo/promise/Promise <dojo/promise/Promise>`) that is fulfilled with the
+handled data of the response. The provider will also error out by calling the errorback function if provided.
+Progress data will be given to the progress handler if it is provided and if the platform supports progress events
+(any browser supporting XHR2 or node.js).
 
-The response that is returned when the promise is fulfilled will be and object that will contain:
+The promise returned by the provider has an extra property not on standard promises: ``response``. This property
+is a standard promise that is fulfilled with an object representing the response from the server. This object
+will contain the following properties:
 
-======== =================================================================
+====================== =================================================================
 Property Description
-======== =================================================================
-url      The URL that was originally requested.
-options  Any options that were originally requested.
-data     Contains the data of the response if appropriate.
-text     Contains the text of the response if appropriate.
-status   Contains the status of the request as returned from the provider.
-======== =================================================================
+====================== =================================================================
+url                    The URL that was originally requested.
+options                Any options that were originally requested.
+data                   Contains the data of the response if appropriate.
+text                   Contains the text of the response if appropriate.
+status                 Contains the status of the request as returned from the provider.
+getHeaders(headerName) A function to retrieve headers sent from the server.
+====================== =================================================================
 
 Examples
 ========
@@ -128,8 +135,8 @@ Examples
     function(request, dom, domConst, JSON, on){
       on(dom.byId("startButton"), "click", function(){
         domConst.place("<p>Requesting...</p>", "output");
-        request("request/helloworld.json").then(function(response){
-          domConst.place("<p>response: <code>" + JSON.stringify(response) + "</code>", "output");
+        request("request/helloworld.json").then(function(text){
+          domConst.place("<p>response: <code>" + text + "</code>", "output");
         });
       });
     });
