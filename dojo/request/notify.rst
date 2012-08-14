@@ -33,8 +33,10 @@ Requiring the module will enable the emission of and subscription to the events:
       // Do something when the request queue has started
       // This event won't fire again until "stop" has fired
     });
-    notify.on("send", function(response){
+    notify.on("send", function(response, cancel){
       // Do something before a request has been sent
+      // Calling cancel() will prevent the request from
+      // being sent
     });
     notify.on("load", function(response){
       // Do something when a request has succeeded
@@ -59,16 +61,17 @@ Requiring the module will enable the emission of and subscription to the events:
 
 The events supported are:
 
-====== ========= ============================================================
-Event  Argument             Description
-====== ========= ============================================================
-start  None      In-flight requests have started
-send   Response  Emitted prior to a provider sending data
-load   Response  A request successfully completed
-error  Response  A request failed
-done   Response  A request has finished (regardless of success or failure)
-stop   None      All in-flight requests have finished
-====== ========= ============================================================
+====== =========================== ============================================================
+Event  Arguments                   Description
+====== =========================== ============================================================
+start  None                        In-flight requests have started
+send   Response, Cancel function   Emitted prior to a provider sending data; calling cancel
+                                   prevents the request from being sent
+load   Response                    A request successfully completed
+error  Response                    A request failed
+done   Response                    A request has finished (regardless of success or failure)
+stop   None                        All in-flight requests have finished
+====== =========================== ============================================================
 
 Examples
 ========
@@ -87,7 +90,9 @@ Examples
       notify.on("start", function(){
         domConst.place("<p>start</p>", "output");
       });
-      notify.on("send", function(response){
+      notify.on("send", function(response, cancel){
+        // cancel() can be called to prevent the request from
+        // being sent
         domConst.place("<p>send: <code>" + JSON.stringify(response) + "</code></p>", "output");
       });
       notify.on("load", function(response){
