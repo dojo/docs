@@ -10,62 +10,65 @@ dojo/request/notify
 .. contents ::
     :depth: 2
 
-**dojo/request/notify** is a module, when loaded, will cause providers to publish topics related to requests that can be
-subscribed to.
+**dojo/request/notify** is a module, that provides a :ref:`dojo/Evented <dojo/Evented>` object for subscribing
+to global events emitted by the Request API.
 
 Introduction
 ============
 
-Loading the ``dojo/request/notify`` module will cause providers to publish topic events. Subscribing to these events can
+Loading the ``dojo/request/notify`` module will cause providers to emit events. Subscribing to these events can
 then allow code to be notified when events happen within providers.
 
-See :ref:`dojo/topic <dojo/topic>` for general information on subscribing to topics.
+See :ref:`dojo/Evented <dojo/Evented>` for general information on subscribing to events.
 
 Usage
 =====
 
-Just requiring in the module will enable the publications of the topics:
+Requiring the module will enable the emission of and subscription to the events:
 
 .. js ::
 
-  require(["dojo/request", "dojo/topic", "dojo/request/notify"], function(request, topic){
-    topic.subscribe("dojo/request/start", function(data){
-      // Do something on "dojo/request/start"
+  require(["dojo/request", "dojo/request/notify"], function(request, notify){
+    notify.on("start", function(){
+      // Do something when the request queue has started
+      // This event won't fire again until "stop" has fired
     });
-    topic.subscripe("dojo/request/send", function(data){
-      // Do something on "dojo/request/send"
+    notify.on("send", function(response){
+      // Do something before a request has been sent
     });
-    topic.subscribe("dojo/request/load", function(data){
-      // Do something on "dojo/request/load"
+    notify.on("load", function(response){
+      // Do something when a request has succeeded
     });
-    topic.subscribe("dojo/request/error", function(data){
-      // Do something on "dojo/request/error"
+    notify.on("error", function(error){
+      // Do something when a request has failed
     });
-    topic.subscribe("dojo/request/done", function(data){
-      // Do something on "dojo/request/done"
+    notify.on("done", function(responseOrError){
+      // Do something whether a request has succeeded or failed
+      if(responseOrError instanceof Error){
+        // Do something when a request has failed
+      }else{
+        // Do something when a request has succeeded
+      }
     });
-    topic.subscribe("dojo/request/stop", function(data){
-      // Do something on "dojo/request/stop"
+    notify.on("stop", function(){
+      // Do something when all in-flight requests have finished
     });
     
     request.get("something.json");
   });
 
-The topics supported are:
+The events supported are:
 
-================== ============================================================
-Topic              Description
-================== ============================================================
-dojo/request/start Called once when the provider starts a request
-dojo/request/send  Called every time a provider sends
-dojo/request/load  Called when a provider load event occurs
-dojo/request/error Called when a provider error event occurs
-dojo/request/done  Called every time a provider finishes a request
-dojo/request/stop  Called once once when all the requests have published a done
-================== ============================================================
-
-Each topic publish contains a single argument. The contents of the argument will vary based on the capabilities of the
-provider.
+====== ========= ============================================================
+Event  Argument             Description
+====== ========= ============================================================
+start  None      In-flight requests have started
+send   Response  Emitted prior to a provider sending data
+load   Response  A request successfully completed
+error  Response  A request failed
+done   Response  A request has finished (regardless of success or failure)
+stop   None      All in-flight requests have finished
+====== ========= ============================================================
 
 Examples
 ========
@@ -73,38 +76,38 @@ Examples
 .. code-example ::
   :djConfig: async: true, parseOnLoad: false
 
-  This example subscribes to all the topics supported and then makes a request to retrieve some JSON and displays the
+  This example listens to all the events supported and then makes a request to retrieve some JSON and displays the
   results.
 
   .. js ::
 
-    require(["dojo/request/xhr", "dojo/topic", "dojo/on", "dojo/dom", "dojo/dom-construct", "dojo/json",
-        "dojo/request/notify", "dojo/domReady!"],
-    function(xhr, topic, on, dom, domConst, JSON){
-      topic.subscribe("dojo/request/start", function(data){
-        domConst.place("<p>dojo/request/start: <code>" + JSON.stringify(data) + "</code>", "output");
+    require(["dojo/request/xhr", "dojo/request/notify", "dojo/on", "dojo/dom", "dojo/dom-construct",
+        "dojo/json", "dojo/domReady!"],
+    function(xhr, notify, on, dom, domConst, JSON){
+      notify.on("start", function(){
+        domConst.place("<p>start</p>", "output");
       });
-      topic.subscribe("dojo/request/send", function(data){
-        domConst.place("<p>dojo/request/send: <code>" + JSON.stringify(data) + "</code>", "output");
+      notify.on("send", function(response){
+        domConst.place("<p>send: <code>" + JSON.stringify(response) + "</code></p>", "output");
       });
-      topic.subscribe("dojo/request/load", function(data){
-        domConst.place("<p>dojo/request/load: <code>" + JSON.stringify(data) + "</code>", "output");
+      notify.on("load", function(response){
+        domConst.place("<p>load: <code>" + JSON.stringify(response) + "</code></p>", "output");
       });
-      topic.subscribe("dojo/request/error", function(data){
-        domConst.place("<p>dojo/request/error: <code>" + JSON.stringify(data) + "</code>", "output");
+      notify.on("error", function(response){
+        domConst.place("<p>error: <code>" + JSON.stringify(response) + "</code></p>", "output");
       });
-      topic.subscribe("dojo/request/done", function(data){
-        domConst.place("<p>dojo/request/done: <code>" + JSON.stringify(data) + "</code>", "output");
+      notify.on("done", function(response){
+        domConst.place("<p>done: <code>" + JSON.stringify(response) + "</code></p>", "output");
       });
-      topic.subscribe("dojo/request/stop", function(data){
-        domConst.place("<p>dojo/request/stop: <code>" + JSON.stringify(data) + "</code>", "output");
+      notify.on("stop", function(){
+        domConst.place("<p>stop</p>", "output");
       });
     
       on(dom.byId("startButton"), "click", function(){
         xhr.get("helloworld.json", {
           handleAs: "json"
-        }).then(function(response){
-          domConst.place("<p>request response.data: <code>" + JSON.stringify(response.data) + "</code>", "output");
+        }).then(function(data){
+          domConst.place("<p>request data: <code>" + JSON.stringify(data) + "</code></p>", "output");
         });
       });
     });
@@ -119,6 +122,8 @@ See also
 ========
 
 * :ref:`dojo/request <dojo/request>` - The Request API package
+
+* :ref:`dojo/Evented <dojo/Evented>` - The Evented API package
 
 * :ref:`dojo/request/xhr <dojo/request/xhr>` - The default provider for browser platforms
 

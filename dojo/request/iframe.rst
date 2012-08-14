@@ -10,23 +10,25 @@ dojo/request/iframe
 .. contents ::
     :depth: 2
 
-**dojo/request/iframe** is a provider that uses the an IFrame to provide asynchronous request/responses.
+**dojo/request/iframe** is a provider that uses an IFrame to provide asynchronous requests and responses.
 
 Introduction
 ============
 
-``dojo/request/iframe`` deprecates :ref:`dojo/io/iframe <dojo/io/iframe>` and is part of Dojo's Request API. It is designed to handle complex request/response scenarios which cannot be handled by the standard :ref:`dojo/request/xhr <dojo/request/xhr>`.  The two main scenarios are:
+``dojo/request/iframe`` deprecates :ref:`dojo/io/iframe <dojo/io/iframe>` and is part of Dojo's Request API. It is
+designed to handle complex request/response scenarios which cannot be handled by the standard
+:ref:`dojo/request/xhr <dojo/request/xhr>`.  The two main scenarios are:
 
-* Calling a service on a server other than the one that originated the calling page (cross-domain request). Note that in
-  this case, the response body cannot be read. So you can send data, but not get any replies. If you need access to the
-  return data, see :ref:`dojo/request/script <dojo/request/script>`.
+* Calling a service on a server other than the one that originated the calling page (cross-domain request).
+  Note that in this case, the response body cannot be read: you can send data, but not get any replies. If you
+  need access to the return data, see :ref:`dojo/request/script <dojo/request/script>`.
 
-* Uploading files from a form (e.g. file input controls). The normal XHR mechanism cannot access file data referenced by
-  file selection tags as a security measure. ``dojo/request/iframe``, however, can by proxying those calls through an
-  IFrame make it possible to still do file uploads in an asynchronous manner.
+* Uploading files from a form (e.g. file input controls). The normal XHR mechanism cannot access file data
+  referenced by file selection tags as a security measure. ``dojo/request/iframe`` can by proxying those calls
+  through an IFrame, making it possible to still do file uploads in an asynchronous manner.
 
-``dojo/request/iframe`` works similar to other providers, but it has some specific caveats because of the nature of the
-mechanism.
+``dojo/request/iframe`` works similar to other providers, but it has some specific caveats because of the nature of
+the iframe mechanism.
 
 Usage
 =====
@@ -38,13 +40,12 @@ An example of making a request to retrieve some XML would look like:
   require(["dojo/request/iframe"], function(iframe){
     iframe("something.xml", {
       handleAs: "xml"
-    }).then(function(response){
-      // Do something with the response
+    }).then(function(xmldoc){
+      // Do something with the XML document
     }, function(err){
       // Handle the error condition
-    }, function(evt){
-      // Handle a progress event from the request
     });
+    // Progress events are not supported using the iframe provider
   });
 
 ``dojo/request/iframe`` takes two arguments:
@@ -58,21 +59,24 @@ options  Object? *Optional* A hash of options.
 
 The ``options`` argument supports the following:
 
-============ ============== ========= ==================================================================================
+============ ============== ========= =============================================================================
 Property     Type           Default   Description
-============ ============== ========= ==================================================================================
+============ ============== ========= =============================================================================
 data         String|Object  ``null``  Data, if any, that should be sent with the request.
 query        String|Object  ``null``  The query string, if any, that should be sent with the request.
 form         String|DomNode ``null``  The form, if any, that should be sent with the request.
 preventCache Boolean        ``false`` If ``true`` will send an extra query parameter to ensure the browser and the 
                                       server won't supply cached values.
-method       String         ``POST``  The HTTP method that should be used to send the request.  ``dojo/request/iframe``
-                                      only supports ``POST`` and ``GET`` methods.
-headers      Object         ``null``  A hash of the custom headers to be sent with the request.
-============ ============== ========= ==================================================================================
+timeout      Integer        ``null``  The number of milliseconds to wait for the response. If this time passes the
+                                      request is canceled and the promise rejected.
+handleAs     String         ``html``  The content handler to process the response payload with. By default, the
+                                      HTML document of the iframe is returned as the response's data.
+method       String         ``POST``  The HTTP method that should be used to send the request.
+                                      ``dojo/request/iframe`` only supports ``POST`` and ``GET`` methods.
+============ ============== ========= =============================================================================
 
-``dojo/request/iframe()`` returns a promise that is fulfilled with the response. Errors will be directed to the errback
-and progress to the progback if supplied.
+``dojo/request/iframe()`` returns a promise that is fulfilled with the handled data of the response. Errors will be
+directed to the errback if supplied. Progress events are not supported by iframe.
 
 get()
 -----
@@ -87,14 +91,14 @@ Same as the base function, but the ``method`` is set to ``POST``.
 create()
 --------
 
-Creates an IFrame for handling requests and returns a reference to the IFrame. Normally this function does not need to
-be called to use the provider.
+Creates an IFrame for handling requests and returns a reference to the IFrame. This function is used internally
+and provided for backwards compatibility reasons.
 
 doc()
 -----
 
-Returns a reference to the document for the supplied ``iframeNode``. Normally this function does not need to be called
-to use the provider.
+Returns a reference to the document for the supplied ``iframeNode``. This function is used internally and provided
+for backwards compatibility reasons.
 
 setSrc()
 --------
@@ -109,12 +113,15 @@ src      String   The new source.
 replace  Boolean? Should the new source be set our replaced.  Defaults to ``false``.
 ======== ======== ==================================================================
 
-Normally this function does not need to be called to use the provider.
+This function is used internally and provided for backwards compatibility reasons.
   
 Content Handling
 ----------------
 
-**Important** If your payload is something other than *html* or *xml* (e.g. *text*, *JSON*) the server response needs to enclose the content in a ``<textarea>`` tag.  This is because this is the only cross-browser way for this provider to know when the content has been successfully loaded.  Therefore the server response should look something like this:
+**Important** If your payload is something other than *html* or *xml* (e.g. *text*, *JSON*) the server response
+needs to enclose the content in a ``<textarea>`` tag.  This is because this is the only cross-browser way for this
+provider to know when the content has been successfully loaded. Therefore the server response should look something
+like this:
 
 .. html ::
 
@@ -144,8 +151,8 @@ Examples
         domConst.place("<p>Requesting...</p>", "output");
         iframe.get("helloworld.json.html", {
           handleAs: "json"
-        }).then(function(response){
-          domConst.place("<p>response: <code>" + JSON.stringify(response.data) + "</code></p>", "output");
+        }).then(function(data){
+          domConst.place("<p>data: <code>" + JSON.stringify(data) + "</code></p>", "output");
         });
       });
     });
@@ -159,8 +166,8 @@ Examples
 .. code-example ::
   :djConfig: async: true, parseOnLoad: false
 
-  This example intentionally attempts to retrieve a resource that doesn't exist in order to demonstrate how the error
-  handling works.
+  This example intentionally attempts to retrieve a resource that doesn't exist in order to demonstrate how the
+  error handling works.
 
   .. js ::
 
@@ -168,8 +175,8 @@ Examples
     function(iframe, dom, domConst, JSON, on){
       on(dom.byId("startButton"), "click", function(){
         domConst.place("<p>Requesting...</p>", "output");
-        iframe("nothing.xml").then(function(response){
-          domConst.place("<p>response: <code>" + JSON.stringify(response) + "</code></p>", "output");
+        iframe("nothing.xml").then(function(data){
+          domConst.place("<p>data: <code>" + JSON.stringify(data) + "</code></p>", "output");
         }, function(err){
           domConst.place("<p>error: <p>" + err.response.text + "</p></p>", "output");
         });
@@ -196,8 +203,8 @@ Examples
         iframe("helloworld.json.html",{ 
           form: "theForm",
           handleAs: "json"
-        }).then(function(response){
-          domConst.place("<p>response: <code>" + JSON.stringify(response.data) + "</code></p>", "output");
+        }).then(function(data){
+          domConst.place("<p>data: <code>" + JSON.stringify(data) + "</code></p>", "output");
         });
       });
     });

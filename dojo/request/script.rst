@@ -10,34 +10,44 @@ dojo/request/script
 .. contents ::
     :depth: 2
 
-**dojo/request/script** is a provider that uses dynamic ``<script>`` tags to makes requests and received responses.  It is typically used when cross-domain requests need to be made.
+**dojo/request/script** is a provider that uses dynamic ``<script>`` tags to make requests and receive responses.
+It is typically used when cross-domain requests need to be made.
 
 Introduction
 ============
 
-``dojo/request/script`` deprecates :ref:`dojo/io/script <dojo/io/script>` and is part of Dojo's Request API. This is
-typically used in the scenario where a request needs to be made cross-domain (where the target domain is different than
-the domain that was used to serve the requesting code). This is accomplished by dynamically inserting ``<script>`` tags
-into the body of the requesting document.
+``dojo/request/script`` deprecates :ref:`dojo/io/script <dojo/io/script>` and is part of Dojo's Request API. It is
+typically used in the scenario where a request needs to be made cross-domain (where the target domain is different
+than the domain that was used to serve the requesting code). This is accomplished by dynamically inserting
+``<script>`` tags into the body of the requesting document.
 
-Because of the nature of the requests, inherently JSONP is supported (see: `Wikipedia Article on JSON <http://en.wikipedia.org/wiki/JSONP>`_). This essentially a JSON payload that is wrapped with a callback function that
-is executed by the provider in order to evaluate the JSON.
+Because of the nature of the requests, JSONP is inherently supported (see:
+`Wikipedia Article on JSON <http://en.wikipedia.org/wiki/JSONP>`_). This is essentially a JSON payload that is
+wrapped with a callback function that is set up by the provider and executed once the server has completed its
+response.
 
 There are a couple of limitations to note with ``dojo/request/script``:
 
-* It can only make requests that are essentially ``GET`` requests. Therefore the other HTTP methods are not supported
-  (``POST``, ``PUT`` and ``DELETE``).
+* It can only make requests that are ``GET`` requests. All other HTTP methods are not supported (``POST``,
+  ``PUT`` and ``DELETE``).
 
-* It cannot be used in a synchronous mode, like :ref:`dojo/request/xhr <dojo/request/xhr>`. This means that code using
-  it must be asynchronous aware.
+* It cannot be used in synchronous mode like :ref:`dojo/request/xhr <dojo/request/xhr>`. This means that code using
+  it **must** handle request asynchronously (which is easily done with the
+  :ref:`dojo/promise/Promise <dojo/promise/Promise>` API).
 
 Usage
 =====
 
-There are two main ways of retrieving data with ``dojo/request/script``. There is the JSONP method and there is the
-"check string" method. When using JSONP, set the ``jsonp`` option to the name of the appropriate callback function in
-the loaded JavaScript file that will return the data structure. With "check string", set the ``checkString`` property to
-the name of a variable that is defined in the JavaScript file that would indicate that the file is properly loaded.  If there is neither ``jsonp`` or ``checkString`` set, the provider will simply load and execute the script.
+There are two main ways of retrieving data with ``dojo/request/script``: JSONP and "check string". To use JSONP
+(which is recommended), set the ``jsonp`` option to the name of the query parameter the server is expecting the
+name of the callback function to appear in. For instance, Yahoo! expects the name of the callback to use to
+appear in the "callback" query parameter, so the ``jsonp`` option would need to be set to ``"callback"``. "Check
+string" is a method in which a global variable will be populated with the data from the server; after injecting the
+dynamic ``<script>`` element, the global variable is checked to see if it has been assigned to. To use "check
+string", set the ``checkString`` option to the name of the global variable that is defined in the response from the
+server. If either ``jsonp`` or ``checkString`` is not set, the provider will simply load and execute the script.
+Note that for both ``jsonp`` and ``checkString``, data is not run through a resopnse handler since both return
+JavaScript objects; this means the ``handleAs`` option is ignored.
 
 Making a JSONP request would look like this:
 
@@ -46,16 +56,15 @@ Making a JSONP request would look like this:
   require(["dojo/request/script"], function(script){
     script.get("something.js", {
       jsonp: "callback"
-    }).then(function(response){
-      // Do something with the response
+    }).then(function(data){
+      // Do something with the response data
     }, function(err){
       // Handle the error condition
-    }, function(evt){
-      // Handle a progress event from the request
     });
+    // Progress events are not supported
   });
 
-**Note** ``dojo/request/script()`` and ``dojo/request/script::get()`` are exactly the same function, but the ``.get()``
+**Note** ``dojo/request/script()`` and ``dojo/request/script::get()`` are exactly the same function, but ``.get()``
 is provided to make this provider API compatible with other providers.
 
 The provider takes two arguments:
@@ -69,20 +78,22 @@ options  Object? *Optional* A hash of options.
 
 The ``options`` argument supports the following:
 
-============ ============== ========= ==================================================================================
+============ ============== ========= =============================================================================
 Property     Type           Default   Description
-============ ============== ========= ==================================================================================
-checkString  String         ``null``  The name of something that is defined in the loaded script that will determine 
-                                      that it has been loaded properly.
-jsonp        String         ``null``  The name of the callback function that should be called once the script is loaded
-                                      that will return the requested JSON data.
+============ ============== ========= =============================================================================
+checkString  String         ``null``  The name of a variable that is defined in the loaded script that will
+                                      determine if the request has finished.
+jsonp        String         ``null``  The name of the query parameter the server expects the name of the callback
+                                      function to appear in.
 query        String|Object  ``null``  The query string, if any, that should be sent with the request.
 preventCache Boolean        ``false`` If ``true`` will send an extra query parameter to ensure the browser and the 
                                       server won't supply cached values.
-============ ============== ========= ==================================================================================
+timeout      Integer        ``null``  The number of milliseconds to wait for the response. If this time passes the
+                                      request is canceled and the promise rejected.
+============ ============== ========= =============================================================================
 
-``dojo/request/script()`` returns a promise that is fulfilled with the response. Errors will be directed to the errback
-and progress to the progback if supplied.
+``dojo/request/script()`` returns a promise that is fulfilled with the response. Errors will be directed to the
+error callack if it is supplied. Progress events are unsupported.
 
 get()
 -----
@@ -105,8 +116,8 @@ Examples
         domConst.place("<p>Requesting...</p>", "output");
         script.get("helloworld.jsonp.js", {
           jsonp: "callback"
-        }).then(function(response){
-          domConst.place("<p>response: <code>" + JSON.stringify(response.data) + "</code></p>", "output");
+        }).then(function(data){
+          domConst.place("<p>response data: <code>" + JSON.stringify(data) + "</code></p>", "output");
         });
       });
     });
@@ -128,15 +139,10 @@ See also
 
 * :ref:`dojo/request/iframe <dojo/request/iframe>` - A provider that uses IFrame for transport
 
-* :ref:`dojo/request/handlers <dojo/request/handlers>` - Handles the data from a response as designated in the
-  ``handleAs`` request option. Also provides the ability to register additional types of handlers.
-
 * :ref:`dojo/request/registry <dojo/request/registry>` - Allows for registration of different providers against
   different URIs.
 
 * :ref:`dojo/request/notify <dojo/request/notify>` - Publishes the ``dojo/request`` topics for requests.
-
-* :ref:`dojo/request/watch <dojo/request/watch>` - Allows the watching of inflight requests.
 
 * :ref:`dojo/Deferred <dojo/Deferred>` - The base class for managing asynchronous processes.
 

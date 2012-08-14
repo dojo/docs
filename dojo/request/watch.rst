@@ -10,7 +10,9 @@ dojo/request/watch
 .. contents ::
     :depth: 2
 
-**dojo/request/watch** is a module that is used internally within the ``dojo/request`` package to manage IO requests (typically inflight ``XMLHttpRequest``\s).
+**dojo/request/watch** is an internal module that is used within the ``dojo/request`` package to manage in-flight
+requests. It prevents memory leaks on older browsers and handles and tracks if a request has timed out if a
+``timeout`` option has been specified.
 
 See also
 ========
