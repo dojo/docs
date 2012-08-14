@@ -16,8 +16,8 @@ dojo/request/default
 .. js ::
 
   require(["dojo/request"], function(request){
-    request("request.html").then(function(response){
-      // do something with results
+    request("request.html").then(function(data){
+      // do something with the handled data
     }, function(err){
       // handle an error condition
     }, function(evt){

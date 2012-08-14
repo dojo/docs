@@ -16,10 +16,10 @@ perform an asynchronous request. It is the default provider for *node* based pla
 Introduction
 ============
 
-``dojo/request/node`` provides a consistent API interface for making requests within a *node* environment, which can
-make it easier to manage your code both client side and server side. Once you have bootstrapped Dojo within node, you
-can easily require in :ref:`dojo/request <dojo/request>` to return this module to handle your requests, or of course you
-can require it in directly.
+``dojo/request/node`` provides a consistent API interface for making requests within a *node* environment, which
+can make it easier to manage your code on both the client side and the server side. Once you have bootstrapped
+Dojo within node, you can easily require :ref:`dojo/request <dojo/request>` to return this module to handle your
+requests, or you can require it in directly.
 
 Usage
 =====
@@ -31,8 +31,8 @@ Usage follows the client side API:
   require(["dojo/request/node"], function(nodeRequest){
     nodeRequest("http://localhost/example.json", {
       handleAs: "json"
-    }).then(function(response){
-      // Do something with the response
+    }).then(function(data){
+      // Do something with the handled data
     }, function(err){
       // Handle the error condition
     }, function(evt){
@@ -40,16 +40,16 @@ Usage follows the client side API:
     });
   });
 
-But it is preferred to require in the ``dojo/request`` module like the following, also specifying the method you intend
-to use:
+But it is preferred to require the ``dojo/request`` module like the following, also specifying the method you
+intend to use:
 
 .. js ::
 
   require(["dojo/request"], function(request){
     request.get("http://localhost/example.json", {
       handleAs: "json"
-    }).then(function(response){
-      // Do something with the response
+    }).then(function(data){
+      // Do something with the handled data
     }, function(err){
       // Handle the error condition
     }, function(evt){
@@ -57,8 +57,8 @@ to use:
     });
   });
 
-The progress event will contain any chunks of data (as a string) that have been returned as they are returned to the
-request.
+The progress event will contain any chunks of data (as a string) that have been returned as they are returned to
+the request.
 
 ``dojo/request/node`` takes two arguments:
 
@@ -71,16 +71,19 @@ options  Object? *Optional* A hash of options.
 
 The ``options`` argument supports the following:
 
-============ ============= ========= ===================================================================================
+============ ============= ========= ==============================================================================
 Property     Type          Default   Description
-============ ============= ========= ===================================================================================
+============ ============= ========= ==============================================================================
 data         String|Object ``null``  Data, if any, that should be sent with the request.
 query        String|Object ``null``  The query string, if any, that should be sent with the request.
-preventCache Boolean       ``false`` If ``true`` will send an extra query parameter to ensure the browser and the server 
-                                     won't supply cached values.
+preventCache Boolean       ``false`` If ``true`` will send an extra query parameter to ensure the browser and the
+                                     server won't supply cached values.
 method       String        ``GET``   The HTTP method that should be used to send the request.
+timeout      Integer       ``null``  The number of milliseconds to wait for the response. If this time passes the
+                                     request is canceled and the promise rejected.
+handleAs     String        ``text``  The content handler to process the response payload with.
 headers      Object                  A hash of the custom headers to be sent with the request.  Defaults to none.
-============ ============= ========= ===================================================================================
+============ ============= ========= ==============================================================================
 
 The provider defaults to ``GET`` but the ``method`` option can be used to expressly set the method. Also there are
 helper functions for common methods:
@@ -136,8 +139,8 @@ module. Here is a basic example of creating a server and then making a request o
         handleAs: 'json',
         headers: { 'Range': '1-2' },
         timeout: 1000
-      }).then(function(response){
-        console.log(response.data);
+      }).then(function(data){
+        console.log(data);
         server.close();
       }, function(err){
         console.log(err);

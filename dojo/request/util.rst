@@ -11,7 +11,8 @@ dojo/request/util
     :depth: 2
 
 **dojo/request/util** is an internal module that contains utility functions that are used by the rest of the
-``dojo/request`` package. Generally there is no need to directly require this module or use any of its features.
+``dojo/request`` package. Unless you are writing your own provider, there is no need to directly require this
+module or use any of its features.
 
 See also
 ========
