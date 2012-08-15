@@ -10,41 +10,39 @@ dojo/request/notify
 .. contents ::
     :depth: 2
 
-**dojo/request/notify** is a module, that provides a :ref:`dojo/Evented <dojo/Evented>` object for subscribing
-to global events emitted by the Request API.
+**dojo/request/notify** is a module that provides an interface for listening for global events emitted by the
+Request API.
 
 Introduction
 ============
 
-Loading the ``dojo/request/notify`` module will cause providers to emit events. Subscribing to these events can
-then allow code to be notified when events happen within providers.
-
-See :ref:`dojo/Evented <dojo/Evented>` for general information on subscribing to events.
+As part of the Request API, providers will emit events during certain operations. ``dojo/request/notify`` is an 
+interface for listening for these events.
 
 Usage
 =====
 
-Requiring the module will enable the emission of and subscription to the events:
+An example of listening for provider events:
 
 .. js ::
 
   require(["dojo/request", "dojo/request/notify"], function(request, notify){
-    notify.on("start", function(){
+    notify("start", function(){
       // Do something when the request queue has started
       // This event won't fire again until "stop" has fired
     });
-    notify.on("send", function(response, cancel){
+    notify("send", function(response, cancel){
       // Do something before a request has been sent
       // Calling cancel() will prevent the request from
       // being sent
     });
-    notify.on("load", function(response){
+    notify("load", function(response){
       // Do something when a request has succeeded
     });
-    notify.on("error", function(error){
+    notify("error", function(error){
       // Do something when a request has failed
     });
-    notify.on("done", function(responseOrError){
+    notify("done", function(responseOrError){
       // Do something whether a request has succeeded or failed
       if(responseOrError instanceof Error){
         // Do something when a request has failed
@@ -52,12 +50,21 @@ Requiring the module will enable the emission of and subscription to the events:
         // Do something when a request has succeeded
       }
     });
-    notify.on("stop", function(){
+    notify("stop", function(){
       // Do something when all in-flight requests have finished
     });
     
     request.get("something.json");
   });
+
+``dojo/request/notify()`` takes two arguments:
+
+======== ======== ==================================================
+Argument Type     Description
+======== ======== ==================================================
+event    String   The event to be notified of.
+listener Function A function to be called when the event is emitted.
+======== ======== ==================================================
 
 The events supported are:
 
@@ -73,6 +80,9 @@ done   Response                    A request has finished (regardless of success
 stop   None                        All in-flight requests have finished
 ====== =========================== ============================================================
 
+``dojo/request/notify()`` returns an object with a ``remove()`` method. When ``remove()`` is called, the listener
+will no longer be called when the event it was registered for is emitted.
+
 Examples
 ========
 
@@ -87,24 +97,24 @@ Examples
     require(["dojo/request/xhr", "dojo/request/notify", "dojo/on", "dojo/dom", "dojo/dom-construct",
         "dojo/json", "dojo/domReady!"],
     function(xhr, notify, on, dom, domConst, JSON){
-      notify.on("start", function(){
+      notify("start", function(){
         domConst.place("<p>start</p>", "output");
       });
-      notify.on("send", function(response, cancel){
+      notify("send", function(response, cancel){
         // cancel() can be called to prevent the request from
         // being sent
         domConst.place("<p>send: <code>" + JSON.stringify(response) + "</code></p>", "output");
       });
-      notify.on("load", function(response){
+      notify("load", function(response){
         domConst.place("<p>load: <code>" + JSON.stringify(response) + "</code></p>", "output");
       });
-      notify.on("error", function(response){
+      notify("error", function(response){
         domConst.place("<p>error: <code>" + JSON.stringify(response) + "</code></p>", "output");
       });
-      notify.on("done", function(response){
+      notify("done", function(response){
         domConst.place("<p>done: <code>" + JSON.stringify(response) + "</code></p>", "output");
       });
-      notify.on("stop", function(){
+      notify("stop", function(){
         domConst.place("<p>stop</p>", "output");
       });
     
@@ -127,8 +137,6 @@ See also
 ========
 
 * :ref:`dojo/request <dojo/request>` - The Request API package
-
-* :ref:`dojo/Evented <dojo/Evented>` - The Evented API package
 
 * :ref:`dojo/request/xhr <dojo/request/xhr>` - The default provider for browser platforms
 
