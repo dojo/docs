@@ -1130,6 +1130,7 @@ dojo.string                                         dojo/string                 
 dojo.Stateful                                       dojo/Stateful                  Stateful
 dojo.window.*                                       dojo/window                    window.*
 dojo.config                                         dojo/_base/config              config
+dojo.back.*                                         dojo/hash                      see :ref:`dojo/hash <dojo/hash>` reference doc
 =================================================   ============================   ====================================
 
 Dijit
