@@ -510,7 +510,7 @@ connectPublisher()
 
 Which became:
 
-.. code-block :: javascript
+.. js ::
 
   dojo.connectPublisher("/some/topic/name", myObject, "myEvent");
 
