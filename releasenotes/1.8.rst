@@ -1085,6 +1085,13 @@ Tree
 - Due to the event delegation performance improvements, if you have a custom template for TreeNode,
   remove the ``data-dojo-attach-event="..."`` attribute.
 
+ContentPane
+~~~~~~~~~~~
+
+- Because of the asynchronous nature of the ``dojo/parser``, when setting content (``.set("content", content)``) and that 
+  content is required to be parsed, the function can behave in an asynchronous way.  Utilise the returned promise from the 
+  function to detect when the content is fully set.  This function already returned a Deferred promise, because of the 
+  asynchronous nature XHR requests, but could still behave synchronously when not setting a URL.
 
 dojox/charting
 --------------
