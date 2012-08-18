@@ -181,8 +181,7 @@ pattern ubiquitously.
 See also
 ========
 
-* `The Deferred Tutorial <http://dojotoolkit.org/documentation/tutorials/1.7/deferreds/>`_
-
+* `The Deferred Tutorial <http://dojotoolkit.org/documentation/tutorials/1.8/deferreds/>`_
+* `The Promises Tutorial <http://dojotoolkit.org/documentation/tutorials/1.8/promises/>`_
 * :ref:`dojo/_base/Deferred <dojo/_base/Deferred>`
-
 * :ref:`dojo/_base/xhr <dojo/_base/xhr>`
