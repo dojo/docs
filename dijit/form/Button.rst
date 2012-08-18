@@ -1,7 +1,7 @@
 .. _dijit/form/Button:
 
 =================
-dijit.form.Button
+dijit/form/Button
 =================
 
 :Authors: Becky Gibson, Doug Hays, Bill Keese, Nikolai Onken, Marcus Reimann
@@ -15,7 +15,7 @@ dijit.form.Button
 Introduction
 ============
 
-The dijit.form.Button widget is a representation of a normal <button> or <input type="submit/reset/button"/>.
+The dijit/form/Button widget is a representation of a normal <button> or <input type="submit/reset/button"/>.
 The default value for the `type` attribute is `button`.
 
 **When creating dijit Buttons declaratively from a <button> element, you *must* specify a type attribute or it will not work consistently across browsers (in IE8, the type will incorrectly default to "submit").**
@@ -102,7 +102,9 @@ Following example toggles the icon if the button:
 
   .. js ::
 
-    require(["dojo/parser", "dijit/form/Button"]);
+    require(["dojo/parser", "dijit/form/Button"], function(parser){
+        parser.parse();
+    });
     
     var toggled = false;
     function toggle(){
@@ -113,6 +115,30 @@ Following example toggles the icon if the button:
   .. html ::
 
     <button data-dojo-type="dijit/form/Button" data-dojo-id="myToggleButton" onClick="toggle();" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut'" type="button">
+        Click me!
+    </button>
+
+Event Handlers outside the widget instance 
+------------------------------------------
+
+To bind an event handler to a non-global JavaScript object, it is simplest to use dojo/connect to connect to the onClick method of the widget instance.
+
+  .. js ::
+
+    require(["dojo/parser", "dojo/_base/connect", "dijit/registry", "dijit/form/Button"],
+    function(parser, connect, registry){
+        parser.parse();
+        var toggled = false;
+        registry.byId("toggleButton").connect("onClick", function toggle(){
+           this.set("iconClass", toggled ? "dijitEditorIcon dijitEditorIconCut" : "dijitEditorIcon dijitEditorIconPaste");
+            toggled = !toggled;
+        });
+
+    });    
+
+  .. html ::
+
+    <button data-dojo-type="dijit/form/Button" id="toggleButton" data-dojo-id="myToggleButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut'" type="button">
         Click me!
     </button>
 
