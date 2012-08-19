@@ -185,7 +185,7 @@ This would set a style height property.
 registry.byId()
 ---------------
 
-regsitry.byId() is a little different.
+registry.byId() is a little different.
 First off, it only works on parsed dijits either declared in markup with a data-dojo-type attribute or programmatically.
 The same id attribute is used as a parameter, but what is returned in this case is an object that was created
 by the dojo widget system when the markup is parsed and transformed into a dijit.
@@ -195,7 +195,7 @@ For example, we can set the content of the ContentPane via set("content", value)
 
 .. js ::
 
- regsitry.byId("myDivId").set("content", "Hello World!");
+ registry.byId("myDivId").set("content", "Hello World!");
 
 You could also change the style like we did with dom.byId() above using the domNode property of the ContentPane.
 (Actually, domNode is defined higher up the inheritance tree so every dijit has a domNode property.  Very convenient!)
