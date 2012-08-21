@@ -28,4 +28,8 @@ Notice how the dots (ex: dijit.form.Button) have been changed to slashes (ex: "d
 See Also
 ========
 
-* :ref:`The Dojo Loader <loader/amd>`_ - Further information on the loading process
+* `Modern Dojo Tutorial <http://dojotoolkit.org/documentation/tutorials/1.8/modern_dojo/>`_
+
+* `Hello Dojo Tutorial <http://dojotoolkit.org/documentation/tutorials/1.8/hello_dojo/>`_
+
+* :ref:`The Dojo Loader <loader/amd>` - Further information on the loading process
