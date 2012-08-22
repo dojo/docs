@@ -104,7 +104,7 @@ And here comes an example:
         titleFontColor: "orange"
       });
     }
-  });
+  }));
 
 Working with Plots
 ==================
@@ -705,7 +705,7 @@ Now take a look at these options in action using our above example:
 
 TODO: Example Series Options
 
-The data array, is just an array of data. All plot types can accept a one dimensional array, but there are some additional format options available based on the type of chart. With a one-dimensional array for line type graphs the X axis will be integers; 1,2,3… and the data will be the Y axis. For bar type plots the data is the length of the bar and the choice between column or bar type determines the orientation. And for pie type charts the sum of the array is your whole pie. All the plot types except pie can have multiple series.
+The data array, is just an array of data. All plot types can accept a one dimensional array, but there are some additional format options available based on the type of chart. With a one-dimensional array for line type graphs the X axis will be integers; 1,2,3�� and the data will be the Y axis. For bar type plots the data is the length of the bar and the choice between column or bar type determines the orientation. And for pie type charts the sum of the array is your whole pie. All the plot types except pie can have multiple series.
 
 .. js ::
   
@@ -975,7 +975,7 @@ Highlight supports one additional parameter:
 |           |                                   |                                  | element.                                                          |
 +-----------+-----------------------------------+----------------------------------+-------------------------------------------------------------------+
 
-The parameter can be any valid value for a color, e.g., "red", "#FF0000″, "#F00″, [255, 0, 0], {r: 255, g: 0, b: 0}, and so on. In this case this color will be used to fill an element.
+The parameter can be any valid value for a color, e.g., "red", "#FF0000��, "#F00��, [255, 0, 0], {r: 255, g: 0, b: 0}, and so on. In this case this color will be used to fill an element.
 
 If the parameter is a function, it receives a charting event object (see the previous article for details), and should return a valid color.
 
@@ -1053,7 +1053,7 @@ Tooltip supports the following keyword parameters:
 |text      |Function    |The default text function    |The function to produce a Tooltip text.                                        |
 +----------+------------+-----------------------------+-------------------------------------------------------------------------------+
 
-The default text function checks if a data point is an object, and uses an optional "Tooltip" member if available — this is a provision for custom Tooltips. Otherwise, it uses a numeric value. Tooltip text can be any valid HTML, so you can specify rich text multi-line Tooltips if desired.
+The default text function checks if a data point is an object, and uses an optional "Tooltip" member if available �� this is a provision for custom Tooltips. Otherwise, it uses a numeric value. Tooltip text can be any valid HTML, so you can specify rich text multi-line Tooltips if desired.
 
 The picture below demonstrates Tooltip action.
 
@@ -1303,7 +1303,7 @@ One of the easiest ways to use Dojo Charting is to use the dojox/charting/widget
     <div class="action" type="MoveSlice" shift="2"></div>
   </div>
 
-Yes, it is that simple! just define a <div> with the class "action" and supply the type. If you want to specify a plot's name, use the "plot" parameter: plot="Plot1″. By default it will connect to the plot named "default". If you want to change default keyword parameters, just add them to the <div>, e.g., duration="500″.
+Yes, it is that simple! just define a <div> with the class "action" and supply the type. If you want to specify a plot's name, use the "plot" parameter: plot="Plot1��. By default it will connect to the plot named "default". If you want to change default keyword parameters, just add them to the <div>, e.g., duration="500��.
 
 The Chart Legend Widget
 -----------------------
