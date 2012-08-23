@@ -67,7 +67,7 @@ Accessibility
 Are applications using Dojo Mobile accessible?
 ----------------------------------------------
 
-Some Dojo Mobile widgets are accessible. For example, the ScrollableView can only be scrolled by using touch gestures. You must develop alternative ways, ex. buttons for scrolling, to ensure accessibility. Other examples requiring alternatives are SwapView flip and ListItems editing.
+Some Dojo Mobile widgets are not accessible. For example, the ScrollableView can only be scrolled by using touch gestures. You must develop alternative ways, ex. buttons for scrolling, to ensure accessibility. Other examples requiring alternatives are SwapView flip and ListItems editing.
 
 Is there a way to set an alternative text to images and DOM buttons?
 --------------------------------------------------------------------
