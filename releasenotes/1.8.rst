@@ -960,6 +960,15 @@ array of a layer and tag them as declarative:
 
 See :ref:`depsDeclarative <build/transforms/depsDeclarative>` for more information.
 
+util/docscripts
+---------------
+
+While docscripts is still included in our releases, it's deprecated, and no longer used to generate dojo's own
+documentation.    Nor is it expected to work well with AMD modules.
+
+The documentation is now generated using https://github.com/wkeese/js-doc-parse.git.   See
+https://github.com/wkeese/api-viewer/blob/master/README.rst for detailed instructions.
+
 Demos
 =====
 
