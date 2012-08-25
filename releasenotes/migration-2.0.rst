@@ -939,7 +939,7 @@ dojo.data                          dojo/store
 ================================   =================================
 store.getValue(item, "foo")        item.foo
 store.getLabel(item)               item.label
-store.getItemByIdentifier(id)      store.byId(id) returns Deferred
+store.getItemByIdentifier(id)      store.get(id) returns Deferred
 store.fetch(...)                   store.query() returns Deferred
 ================================   =================================
 
