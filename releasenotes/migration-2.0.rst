@@ -448,7 +448,7 @@ use ``keypress`` for monitoring printable characters (e.g. A-Z, 1-9):
 .. js ::
 
   on(node, "keypress", function(evt){
-    if(e.charCode <= 32){
+    if(evt.charCode <= 32){
       // Avoid duplicate events on firefox (this is an arrow key etc. that will be handled by keydown handler)
       return;
     }
