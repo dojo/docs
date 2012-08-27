@@ -81,7 +81,7 @@ The example below defines a widget named "HideButton" that will hide itself when
  
     <div data-dojo-type="dijit/Declaration" data-dojo-props="widgetClass:'HideButton'">
         XXX<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>XXX
-       <script type='dojo/method' data-dojo-event='myClickHandler'>
+       <script type="dojo/method" data-dojo-event="myClickHandler">
            this.domNode.style.display="none";
        </script>
     </div>
@@ -91,8 +91,13 @@ The example below defines a widget named "HideButton" that will hide itself when
 
 A few things to note here:
 
-   * using the <script type='dojo/method'> tag, you can define methods in the widget
+   * using the <script type="dojo/method"> tag, you can define methods in the widget
    * data-dojo-attach-event and data-dojo-attach-point work the same as in :ref:`dijit._Templated <dijit/_Templated>`
+
+
+So in the above example, the data-dojo-attach-event="onclick: myClickHandler" will call myClickHandler()
+whenever the button is clicked, and then myClickHandler() will hide the widget.
+
 
 Extending Other Widgets
 -----------------------
@@ -111,7 +116,7 @@ Here we define HideButton2 and then create two HideButton2's:
 
     <div data-dojo-type="dijit/Declaration" data-dojo-props="widgetClass:'HideButton'">
         XXX<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>XXX
-       <script type='dojo/method' data-dojo-event='myClickHandler'>
+       <script type="dojo/method" data-dojo-event="myClickHandler">
            this.domNode.style.display="none";
        </script>
     </div>
@@ -127,28 +132,28 @@ You can include more than one class here - each separated by commas.
 The first class is not technically a mixin - it's the parent class of this new widget.
 
 
-dojo/connect
+dojo/aspect
 ------------
 
-As an alternate to <script type="dojo/method">, you can use <script type="dojo/connect">.
+As an alternate to <script type="dojo/method">, you can use <script type="dojo/aspect">.
 The latter will additional code rather than overriding an already defined method.
 
 However, you can get the same effect using <script type="dojo/method"> and calling this.inherited(arguments).
 
-An example of dojo/connect is:
+An example of dojo/aspect is:
 
 .. html ::
  
-    <div data-dojo-type="dijit/Declaration" data-dojo-props="widgetClass:'simpleConnectedWidget'">
+    <div data-dojo-type="dijit/Declaration" data-dojo-props="widgetClass:'simpleAdvisedWidget'">
         Just a plain ol' piece of text
-        <script type="dojo/connect" data-dojo-event="dblclick">
-            console.debug("Ouch!  I've been double-clicked");
+        <script type="dojo/aspect" data-dojo-method="startup">
+            console.debug("being started");
         </script>
     </div>
 
-Every widget declared with class simpleConnectedWidget will have the handler connected to it.
+Every widget declared with class simpleAdvisedWidget will have the handler connected to it.
 
-Note that dojo/connect is not suitable for methods that need to return a value.
+Note that dojo/aspect is not suitable for methods that need to return a value.
 
 Notes
 =====

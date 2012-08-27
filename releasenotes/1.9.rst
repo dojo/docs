@@ -50,6 +50,18 @@ Dojo
 Dijit
 =====
 
+Declaration
+-----------
+Declaration now supports <script type="dojo/aspect">, in addition to the <script type="dojo/connect"> syntax
+which is now deprecated (and will be removed for 2.0).   Ex:
+
+.. js ::
+
+	<div data-dojo-type="dijit/Declaration" data-dojo-props='widgetClass:"MyWidget"'>
+		<script type="dojo/aspect" data-dojo-method="startup" data-dojo-advice="before">
+			...
+		</script>
+
 
 DojoX
 =====
