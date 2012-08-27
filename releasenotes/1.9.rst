@@ -1,0 +1,68 @@
+.. _releasenotes/1.9:
+
+======================
+Dojo 1.9 Release Notes
+======================
+
+.. contents ::
+   :depth: 3
+
+
+Browser Support
+===============
+
+The following browsers have been tested and are supported in this release. If a browser version is not listed as
+supported, it still may work, especially on browsers with rapid release cycles (Chrome, Firefox). Future minor releases
+of Dojo might include fixes to support future releases of these browsers, but we cannot guarantee it.
+
+**Desktop**
+
+* Firefox 3.6-12
+
+* Safari 5-6
+
+* Chrome 13-21
+
+* IE 6-9
+
+* Opera 10.50-12 (Dojo core only)
+
+**Mobile (dojox/mobile)**
+
+* iOS 4.x, 5.x (Mobile Safari) (including all Dijit widgets except Editor)
+
+* Android 2.2-2.3, 3.1-3.2, 4.0-4.1
+
+* Blackberry 6-7
+
+* Mobile compatibility on desktop browsers: IE 8-9, Firefox 4-12, Safari 5-6, Chrome 13-19
+
+TODO: Link to page with specific vendor device models tested on
+
+**Server-Side Platforms**
+
+* While not a browser, Dojo 1.8 also works inside Node 0.6.x and 0.8.x.
+
+Dojo
+====
+
+
+Dijit
+=====
+
+
+DojoX
+=====
+
+
+Util
+====
+
+
+Demos
+=====
+
+
+Migration Notes
+===============
+
