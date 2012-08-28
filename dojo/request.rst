@@ -110,16 +110,16 @@ The promise returned by the provider has an extra property not on standard promi
 is a standard promise that is fulfilled with an object representing the response from the server. This object
 will contain the following properties:
 
-====================== =================================================================
-Property Description
-====================== =================================================================
-url                    The URL that was originally requested.
-options                Any options that were originally requested.
-data                   Contains the data of the response if appropriate.
-text                   Contains the text of the response if appropriate.
-status                 Contains the status of the request as returned from the provider.
-getHeaders(headerName) A function to retrieve headers sent from the server.
-====================== =================================================================
+===================== =================================================================
+Property              Description
+===================== =================================================================
+url                   The URL that was originally requested.
+options               Any options that were originally requested.
+data                  Contains the data of the response if appropriate.
+text                  Contains the text of the response if appropriate.
+status                Contains the status of the request as returned from the provider.
+getHeader(headerName) A function to retrieve headers sent from the server.
+===================== =================================================================
 
 Examples
 ========
