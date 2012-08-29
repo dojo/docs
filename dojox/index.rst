@@ -131,8 +131,8 @@ Package/Module                                                                  
 :ref:`dojox/image/FlickrBadge <dojox/image/FlickrBadge>`                           Maintained   A simple grid of Images that loops through thumbnails from a 
                                                                                                 Flickr account
 :ref:`dojox/image/Gallery <dojox/image/Gallery>`                                   Abandoned    A gallery widget
-:ref:`dojox/image/LightBox <dojox/image/LightBox>`                                 Experimental A dojo-based Lightbox implementation.
-:ref:`dojox/image/LightBoxNano <dojox/image/LightBoxNano>`                         Experimental A simple "nano" version of the lightbox.
+:ref:`dojox/image/Lightbox <dojox/image/Lightbox>`                                 Experimental A dojo-based Lightbox implementation.
+:ref:`dojox/image/LightboxNano <dojox/image/LightboxNano>`                         Experimental A simple "nano" version of the lightbox.
 :ref:`dojox/image/Magnifier <dojox/image/Magnifier>`                               Maintained   Adds magnification on a portion of an image element, using 
                                                                                                 ``dojox/gfx``
 :ref:`dojox/image/MaginfierLite <dojox/image/MagnifierLite>`                       Experimental Adds magnification on a portion of an image element
