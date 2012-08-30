@@ -10,7 +10,7 @@ Multiple Versions of Dojo on a Page
 .. contents ::
    :depth: 3
 
-*Deprecated*  The information contained in this document is deprecated and not up to date. Check out :ref:`relocating module namespaces <<dojo/amd#relocating-module-namespaces>> :ref:` for updated information.
+*Deprecated*  The information contained in this document is deprecated and not up to date. Check out :ref:`relocating module namespaces <loader/amd#relocating-module-namespaces>` for updated information.
 
 Dojo has some special configuration and build options to allow more than one version of Dojo to be used on a web page.
 
