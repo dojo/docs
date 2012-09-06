@@ -36,7 +36,8 @@ Constructor Parameters
 +--------------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |halo                |String    | 8pt          |Size of padding around the Slider widget that can receive touch events in order to interact with Slider.   |
 +--------------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|intermediateChanges |Boolean   | false        |Whether onChange fires on each value change or only once at the end while slider's handle is moved.            |
+|intermediateChanges |Boolean   | false        |Whether onChange fires on each value change or only once at the
+end while slider's handle is moved.        |
 +--------------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 
 Examples
