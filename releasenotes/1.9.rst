@@ -66,6 +66,11 @@ which is now deprecated (and will be removed for 2.0).   Ex:
 DojoX
 =====
 
+dojox/app
+---------
+
+
+
 
 Util
 ====
