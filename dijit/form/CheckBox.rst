@@ -38,12 +38,14 @@ Let's create a checkbox programmatically, initially unchecked:
   .. js ::
 
     require(["dojo/ready", "dijit/form/CheckBox"], function(ready, CheckBox){
-        var checkBox = new dijit.form.CheckBox({
-            name: "checkBox",
-            value: "agreed",
-            checked: false,
-            onChange: function(b){ alert('onChange called with parameter = ' + b + ', and widget value = ' + this.get('value') ); }
-        }, "checkBox");
+        ready(function(){
+            var checkBox = new dijit.form.CheckBox({
+                name: "checkBox",
+                value: "agreed",
+                checked: false,
+                onChange: function(b){ alert('onChange called with parameter = ' + b + ', and widget value = ' + this.get('value') ); }
+            }, "checkBox");
+        });
     });
 
   .. html ::
