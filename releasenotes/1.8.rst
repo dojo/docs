@@ -727,7 +727,7 @@ dojox/dgauges
 
 - A new gauges package is introduced in ``dojox/dgauges`` package. It provides a fully extensible gauges framework 
   allowing you to create your own gauges as well as predefined, ready to use gauge widgets. Both circular and 
-  rectangular gauges (horizontal and vertical) are supported. See :ref:`dojox/dguages <dojox/dgauges>`.
+  rectangular gauges (horizontal and vertical) are supported. See :ref:`dojox/dgauges <dojox/dgauges>`.
 
 dojox/gantt
 -------------
