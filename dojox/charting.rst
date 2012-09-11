@@ -1479,7 +1479,7 @@ See also
 * `Dojo Charting: Event Support Has Landed! <http://www.sitepen.com/blog/2008/05/27/dojo-charting-event-support-has-landed/>`_
 * `Zooming, Scrolling, and Panning in Dojo Charting <http://www.sitepen.com/blog/2008/05/15/zooming-scrolling-and-panning-in-dojo-charting/>`_
 * `Dojo Charting Reorganization <http://www.sitepen.com/blog/2008/05/07/dojo-charting-reorganization/>`_
-* `Customizing charts using Dojo <http://www.ibm.com/developerworks/web/library/wa-moredojocharts/?ca=drs-%20-%3E%20dojo%20doc%20%28doh%20also%29>`_
+* `Customizing charts using Dojo <http://www.ibm.com/developerworks/web/library/wa-moredojocharts/>`_
 
 Credits
 =======
