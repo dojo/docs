@@ -468,4 +468,10 @@ Example of a custom horizontal gauge
     });
   });
 
+========
+See also
+========
+
+
+* `Creating Bullet Graphs in Dojo with the gauges package  <https://www.ibm.com/developerworks/mydeveloperworks/blogs/94e7fded-7162-445e-8ceb-97a2140866a9/entry/creating_bullet_graphs_in_dojo_with_the_gauges_package195?lang=en>`_
   
