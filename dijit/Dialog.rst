@@ -82,7 +82,7 @@ Simply create your dialog but separate the dialog contents from the buttons like
 
             <div class="dijitDialogPaneActionBar">
                 <button data-dojo-type="dijit/form/Button" type="submit" id="ok">OK</button>
-                <button data-dojo-type="dijit/form/Button" type="button" data-dojo-attach-event="onClick:myDialog.onCancel"
+                <button data-dojo-type="dijit/form/Button" type="button" data-dojo-props="onClick:function(){myDialog.hide();}"
                         id="cancel">Cancel</button>
             </div>
         </div>
