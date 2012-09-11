@@ -68,8 +68,16 @@ DojoX
 
 dojox/app
 ---------
+In 1.8 dojox/app would automatically require a model and mvc controller if it was listed in the config and not included in the list of dependencies.  In 1.9 the model and mvc controller will need to be listed in the dependencies.
 
+.. js ::
 
+	<div data-dojo-type="dijit/Declaration" data-dojo-props='widgetClass:"MyWidget"'>
+	"dependencies": [
+		"dojox/app/utils/simpleModel",
+		"dojox/app/utils/mvcModel",
+		"dojox/mvc/EditStoreRefListController",
+		: : :
 
 
 Util
