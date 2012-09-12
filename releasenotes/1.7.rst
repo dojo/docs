@@ -122,6 +122,20 @@ Some existing Dojo <1.7 modules were designed such that they only work in sync l
   |                              | upper, urlencode, urlize, urlizetrunc, wordcount, wordwrap                                        |
   +------------------------------+---------------------------------------------------------------------------------------------------+
 
+**Note** Also because of the way the dependencies are done for Dijit, if you do a build of code that includes a legacy layer that includes Dijits, you must explressly include ``dijit._base``.  For example, your layer should look something like this:
+
+.. js ::
+
+  layers: [
+    {
+      name: "../somelayer/layer.js",
+      dependencies: [
+        "simpletest.layer",
+        "dijit._base"
+      ]
+    }
+  ],
+
 has.js
 ------
 Dojo 1.7 introduces support for the :ref:`has() feature detection api <dojo/has>`.  Most Dojo core and dijit modules have been converted to use feature detection.  This work will continue for 1.8.
