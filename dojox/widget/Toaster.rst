@@ -1,7 +1,7 @@
 .. _dojox/widget/Toaster:
 
 ====================
-dojox.widget.Toaster
+dojox/widget/Toaster
 ====================
 
 .. contents ::
@@ -10,17 +10,19 @@ dojox.widget.Toaster
 About
 =====
     
-A toaster is an unobtrusive mechanism for displaying messages, and has become popular in recent years. Like toast, the message "pops up" in the window corner, temporarily overlaying any content there. The message stays up for a certain duration, or until the user clicks on it.
+A toaster is an unobtrusive mechanism for displaying messages. Like toast, the message "pops up" in the window corner, temporarily overlaying any content there. The message stays up for a certain duration, or until the user clicks on it.
 
 Toasters are preferable to alert() boxes. Alert() must always be modal, meaning all action on the page stops until the user clicks "OK". Toasters are non-modal, so the user can continue working and finish their thought before responding.
 
-You can either set the message programmatically, or use dojo's publish/subscribe event feature. Publish/subscribe allows you to have several toasters, or several controls besides toasters, respond to a particular event.
+You can either set the message programmatically, or use dojo/topic's publish/subscribe event feature. Publish/subscribe allows you to have several toasters, or several controls besides toasters, respond to a particular event.
 
 To load a Toaster, issue the call:
 
 .. js ::
   
-  dojo.require("dojox.widget.Toaster");
+  require(["dojox/widget/Toaster"], function(Toaster){
+    // Do something with the Toaster
+  });
 
 And include the CSS somewhere in your page:
 
@@ -46,21 +48,25 @@ The first example uses setContent() and show() to vary the message and display i
 
   .. js ::
 
-       dojo.require("dojox.widget.Toaster");
+       require(["dojox/widget/Toaster", "dijit/Registry", "dojo/parser", "dojo/on", "dojo/dom", "dojo/domReady!"],
+       function(Toaster, registry, parser, on, dom){
+         parser.parse();
+         on(dom.byId("surprise"), "click", lang.hitch(this, "surpriseMe")); 
+         var surpriseMe = function(){
+           registry.byId('first_toaster').setContent('Twinkies are now being served in the vending machine!', 'fatal');
+           registry.byId('first_toaster').show();
+         }
+       });
 
-       function surpriseMe(){
-          dijit.byId('first_toaster').setContent('Twinkies are now being served in the vending machine!', 'fatal');
-          dijit.byId('first_toaster').show();
-       }
 
   The html is very simple
 
   .. html ::
 
-    <div data-dojo-type="dojox.widget.Toaster" data-dojo-props="positionDirection:'br-left'"
+    <div data-dojo-type="dojox/widget/Toaster" data-dojo-props="positionDirection:'br-left'"
          id="first_toaster">
     </div>
-    <input type="button" onclick="surpriseMe()" value="Click here to see Toaster"/>
+    <input type="button" id="surprise" value="Click here to see Toaster"/>
 
 The next example does the same thing, but uses the publish/subscribe model.  The message coming over the topic must be of the form:
 
@@ -86,27 +92,31 @@ The next example does the same thing, but uses the publish/subscribe model.  The
 
   .. js ::
 
-      dojo.require("dojox.widget.Toaster");
-      function surpriseMe(){
-        dojo.publish("testMessageTopic",
-          [
+       require(["dojox/widget/Toaster", "dijit/Registry", "dojo/parser", "dojo/topic", "dojo/on", "dojo/dom", "dojo/domReady!"],
+       function(Toaster, registry, parser, topic, on, dom){
+         parser.parse();
+         topic.publish("testMessageTopic", [
             {
               message: "Twinkies are now being served in the vending machine!",
               type: "fatal",
               duration: 500
             }
-          ]
-        );
-      }
+         ]);
+         on(dom.byId("surprise"), "click", lang.hitch(this, "surpriseMe")); 
+         var surpriseMe = function(){
+           registry.byId('first_toaster').setContent('Twinkies are now being served in the vending machine!', 'fatal');
+           registry.byId('first_toaster').show();
+         }
+       });
 
   .. html ::
 
-    <div data-dojo-type="dojox.widget.Toaster"
+    <div data-dojo-type="dojox/widget/Toaster"
          data-dojo-props="positionDirection:'br-left', duration:0, messageTopic:'testMessageTopic'"
          id="publish_subscribe_toaster"
          >
     </div>
-    <input type="button" onclick="surpriseMe()" value="Click here for Publish Subscribe toaster"/>
+    <input type="button" value="Click here for Publish Subscribe toaster"/>
 
 This example builds a Toaster programmatically and lets you set params.
 
@@ -122,25 +132,26 @@ This example builds a Toaster programmatically and lets you set params.
 
   .. js ::
 
-       dojo.require("dojox.widget.Toaster");
+       require(["dojox/widget/Toaster", "dijit/Registry", "dojo/topic", "dojo/on", "dojo/dom", "dojo/domReady!"],
+       function(Toaster, registry, topic, on, dom){
+         parser.parse();
 
-       function showMyToaster(){
-          toaster = dijit.byId('myToaster');
-          pos_fld = dojo.byId('myPosition');
-          pos = pos_fld.options[pos_fld.selectedIndex].value;
-          type_fld = dojo.byId('myMessageType');
-          msg_type = type_fld.options[type_fld.selectedIndex].value;
+         var showMyToaster = function(){
+           toaster = registry.byId('myToaster');
+           pos_fld = dom.byId('myPosition');
+           pos = pos_fld.options[pos_fld.selectedIndex].value;
+           type_fld = dom.byId('myMessageType');
+           msg_type = type_fld.options[type_fld.selectedIndex].value;
 
-          toaster.positionDirection = pos;
-          toaster.setContent(dojo.byId('myToasterMsg').value, msg_type, dojo.byId('myDuration').value);
-          toaster.show();
-       }
+           toaster.positionDirection = pos;
+           toaster.setContent(dom.byId('myToasterMsg').value, msg_type, dom.byId('myDuration').value);
+           toaster.show();
+         }
 
-       dojo.ready(function(){
           // create a toaster
-          var myToaster = new dojox.widget.Toaster({
-             id: 'myToaster',
-          }, dojo.byId('ToasterPane'));
+          var myToaster = new Toaster({id: 'myToaster'}, dom.byId('ToasterPane'));
+
+          on(dom.byId("showToaster"), "click", lang.hitch(this, "showMyToaster")); 
        });
 
   The html creates an empty div to place the new Toaster instance into.  The rest is basic form stuff to parameterize the toaster.
@@ -185,7 +196,7 @@ This example builds a Toaster programmatically and lets you set params.
      </tr>
      <tr>
        <td></td>
-       <td><input type="button" onclick="showMyToaster()" value="Click here to see YOUR Toaster"/></td>
+       <td><input type="button" id="showToaster" value="Click here to see YOUR Toaster"/></td>
      </tr>
    </table>
 
