@@ -1111,6 +1111,8 @@ dojox/charting
    * set dropLabels to false 
    * set minorLabels to false if there are minorLabels that appear and were not previously
 
+- ``dojox/charting/plot2d/Pie`` now by default display 0 sized slices labels. You can set ``omitLabels`` to true to avoid that.
+
 dojox/mobile
 ------------
 
