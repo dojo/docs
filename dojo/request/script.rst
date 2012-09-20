@@ -46,7 +46,7 @@ string" is a method in which a global variable will be populated with the data f
 dynamic ``<script>`` element, the global variable is checked to see if it has been assigned to. To use "check
 string", set the ``checkString`` option to the name of the global variable that is defined in the response from the
 server. If either ``jsonp`` or ``checkString`` is not set, the provider will simply load and execute the script.
-Note that for both ``jsonp`` and ``checkString``, data is not run through a resopnse handler since both return
+Note that for both ``jsonp`` and ``checkString``, data is not run through a response handler since both return
 JavaScript objects; this means the ``handleAs`` option is ignored.
 
 Making a JSONP request would look like this:
