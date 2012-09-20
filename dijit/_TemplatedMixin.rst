@@ -25,12 +25,14 @@ but rather that it's a mixin, rather than a widget.
 Usage
 =====
 
-Mixin dijit._TemplatedMixin when you declare your widget:
+Mixin dijit/_TemplatedMixin when you declare your widget:
 
 .. js ::
  
-   dojo.declare("MyWidget", [dijit._WidgetBase, dijit._TemplatedMixin], {
-       templateString: "<div>hello world</div>"
+   require(["dijit/_WidgetBase", "dijit/_TemplatedMixin"], function(_WidgetBase, _TemplatedMixin)
+      dojo.declare("MyWidget", [_WidgetBase, _TemplatedMixin], {
+         templateString: "<div>hello world</div>"
+      });
    });
 
 and then instead of defining buildRendering(), define a ``templateString``.
@@ -46,8 +48,10 @@ It can either be specified as a literal string:
 
 .. js ::
  
-   dojo.declare("MyWidget", [dijit._WidgetBase, dijit._TemplatedMixin], {
-       templateString: "<div>hello world</div>"
+   require(["dojo/declare", "dijit/_WidgetBase", "dijit/_TemplatedMixin"], function(_WidgetBase, _TemplatedMixin)
+      declare("MyWidget", [_WidgetBase, _TemplatedMixin], {
+         templateString: "<div>hello world</div>"
+      });
    });
 
 
@@ -57,7 +61,7 @@ or pulled in from a file using the :ref:`dojo/text! <dojo/text>` plugin.
  
     require([
         "dojo/declare",
-        "dijit/_WidgetBase", "dijit._TemplatedMixin", "dojo/text!myNameSpace/templates/MyWidget.html"
+        "dijit/_WidgetBase", "dijit/_TemplatedMixin", "dojo/text!myNameSpace/templates/MyWidget.html"
     ], function(declare, _WidgetBase, _TemplatedMixin, template){
         declare("MyWidget", [_WidgetBase, _TemplatedMixin], {
             templateString: template,
@@ -110,12 +114,12 @@ Here's an example of data-dojo-attach-point and data-dojo-attach-event:
 
   .. js ::
 
-        dojo.require("dijit._WidgetBase");
-        dojo.require("dijit._TemplatedMixin");
-        dojo.require("dojo.parser");
-
-        dojo.ready(function(){
-            dojo.declare("FancyCounter", [dijit._WidgetBase, dijit._TemplatedMixin], {
+    require([
+        "dojo/declare", "dojo/parser",
+        "dijit/_WidgetBase", "dijit/_TemplatedMixin", "dojo/domReady!"
+    ], function(declare, parser, _WidgetBase, _TemplatedMixin){
+         parser.parse();
+         return declare("FancyCounter", [dijit._WidgetBase, dijit._TemplatedMixin], {
                 // counter
                 _i: 0,
 
@@ -128,9 +132,8 @@ Here's an example of data-dojo-attach-point and data-dojo-attach-event:
                  increment: function(evt){
                      this.counter.innerHTML = ++this._i;
                  }
-            });
-            dojo.parser.parse();
-        });
+         });
+   });
 
   .. html ::
 
@@ -147,7 +150,7 @@ For example:
 
 .. html ::
 
-  <button data-dojo-type="dijit.form.Button">press me</button>
+  <button data-dojo-type="dijit/form/Button">press me</button>
 
 If the template defines data-dojo-attach-point="containerNode", the children from the srcNodeRef will be copied to this node.
 
@@ -161,19 +164,18 @@ For example:
 
   .. js ::
 
-        dojo.require("dijit._WidgetBase");
-        dojo.require("dijit._TemplatedMixin");
-        dojo.require("dojo.parser");
-
-        dojo.ready(function(){
-            dojo.declare("MyButton", [dijit._WidgetBase, dijit._TemplatedMixin], {
+    require([
+        "dojo/declare", "dojo/parser",
+        "dijit/_WidgetBase", "dijit/_TemplatedMixin", "dojo/domReady!"
+    ], function(declare, parser, _WidgetBase, _TemplatedMixin){
+         parser.parse();
+         return declare("MyButton", [dijit._WidgetBase, dijit._TemplatedMixin], {
                 templateString:
                     "<button data-dojo-attach-point='containerNode' data-dojo-attach-event='onclick: onClick'></button>",
                 onClick: function(evt){
                         alert("Awesome!!");
                 }
             });
-            dojo.parser.parse();
         });
 
   .. html ::
