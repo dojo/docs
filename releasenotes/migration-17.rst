@@ -145,7 +145,7 @@ Most commonly used with ``dijit._Templated``, dojo.cache reads local resources f
 
 .. js ::
 
-    dojo.proide("a.b.C");
+    dojo.provide("a.b.C");
     dojo.declare("a.b.C", null, {
         templateString: dojo.cache("a.b", "templates/C.html")
     });
