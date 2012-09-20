@@ -1,7 +1,7 @@
 .. _dijit/_TemplatedMixin:
 
 =====================
-dijit._TemplatedMixin
+dijit/_TemplatedMixin
 =====================
 
 :Authors: Peter Higgins, Bill Keese, Nikolai Onken
