@@ -15,7 +15,7 @@ dijit._TemplatedMixin
 Introduction
 ============
 
-dijit._TemplatedMixin is a mixin for most widgets in dijit.
+dijit/_TemplatedMixin is a mixin for most widgets in dijit.
 It takes an HTML template, and creates the widget's DOM tree according to that template.
 In other words, it implements buildRendering() for you.
 
