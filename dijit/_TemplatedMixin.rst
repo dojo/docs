@@ -29,8 +29,8 @@ Mixin dijit/_TemplatedMixin when you declare your widget:
 
 .. js ::
  
-   require(["dijit/_WidgetBase", "dijit/_TemplatedMixin"], function(_WidgetBase, _TemplatedMixin)
-      dojo.declare("MyWidget", [_WidgetBase, _TemplatedMixin], {
+   require(["dojo/declare", "dijit/_WidgetBase", "dijit/_TemplatedMixin"], function(_WidgetBase, _TemplatedMixin)
+      declare("MyWidget", [_WidgetBase, _TemplatedMixin], {
          templateString: "<div>hello world</div>"
       });
    });
