@@ -48,8 +48,8 @@ It can either be specified as a literal string:
 
 .. js ::
  
-   require(["dijit/_WidgetBase", "dijit/_TemplatedMixin"], function(_WidgetBase, _TemplatedMixin)
-      dojo.declare("MyWidget", [_WidgetBase, _TemplatedMixin], {
+   require(["dojo/declare", "dijit/_WidgetBase", "dijit/_TemplatedMixin"], function(_WidgetBase, _TemplatedMixin)
+      declare("MyWidget", [_WidgetBase, _TemplatedMixin], {
          templateString: "<div>hello world</div>"
       });
    });
