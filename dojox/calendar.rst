@@ -572,26 +572,28 @@ The calendar is the source of specific events.
 
 The following table is listing these events:
 
-======================= =========================================================== ===============
-Event                   Description                                                 Main Properties
-======================= =========================================================== ===============
-itemClick               A renderer of an event has been clicked                     item
-itemDoubleClick         A renderer of an event has been double-clicked              item
-itemContextMenu         A renderer of an event has been context-clicked             item
-gridClick               The grid (background of the calendar) has been clicked      date
-gridDoubleClick         The grid has been double-clicked                            date
-change                  The selection has changed                                   item
-rowHeaderClick          (Matrix view) a cell of the row header has been clicked     index, date
-expandRendererClick     (Matrix view) a expand renderer has been clicked 	    rowIndex, columnIndex
-columnHeaderClick       (Matrix view) a cell of the column header has been clicked  index, date
-onExpandAnimationEnd    (Matrix view) an expand or collapse row animation has ended null
-onItemEditBegin         The event is entering in editing mode item                  null
-onItemEditBeginGesture  An editing gesture of an event is beginning item            editKind
-onItemEditMoveGesture   An event is being moved                                     item
-onItemEditResizeGesture	An event is being resized                                   item
-onItemEditEndGesture    An editing gesture has been finished                        item, editKind
-onItemEditEnd           The event is leaving editing mode                           item, completed
-======================= =========================================================== ===============
+======================= =========================================================== ===================== ===========
+Event                   Description                                                 Main Properties       Mobile support
+======================= =========================================================== ===================== ===========
+itemClick               A renderer of an event has been clicked                     item                  Yes
+itemDoubleClick         A renderer of an event has been double-clicked              item                  Yes
+itemRollOver            The mouse cursor has entered in a renderer of an event      item                  No
+itemRollOut             The mouse cursor has left in a renderer of an event         item                  No
+itemContextMenu         A renderer of an event has been context-clicked             item                  No
+gridClick               The grid (background of the calendar) has been clicked      date                  Yes
+gridDoubleClick         The grid has been double-clicked                            date                  Yes
+change                  The selection has changed                                   item                  Yes
+rowHeaderClick          (Matrix view) a cell of the row header has been clicked     index, date           Yes
+expandRendererClick     (Matrix view) a expand renderer has been clicked 	    rowIndex, columnIndex Yes
+columnHeaderClick       (Matrix view) a cell of the column header has been clicked  index, date           Yes
+onExpandAnimationEnd    (Matrix view) an expand or collapse row animation has ended null                  Yes
+onItemEditBegin         The event is entering in editing mode item                  null                  Yes
+onItemEditBeginGesture  An editing gesture of an event is beginning item            editKind              Yes
+onItemEditMoveGesture   An event is being moved                                     item                  Yes
+onItemEditResizeGesture	An event is being resized                                   item                  Yes
+onItemEditEndGesture    An editing gesture has been finished                        item, editKind        Yes
+onItemEditEnd           The event is leaving editing mode                           item, completed       Yes
+======================= =========================================================== ===================== ===========
 	
 Note: The change event is different than the itemClick event:
   * A change event with a null item value is sent if the grid is clicked. 
