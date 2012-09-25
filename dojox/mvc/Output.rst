@@ -59,3 +59,13 @@ In the above example, since the span is empty the output widget displays the val
     </span>
 
 In the above example, the output widget being data-bound, if the  balance changes in the model, the content of ${this.value} within the <span> will be updated accordingly.
+
+Programmatic example
+--------------------
+
+.. javascript :: 
+
+  var output = new Output({value: at(model, "balance", templateString: "Your balance is ${this.value}")});
+  output.startup();
+  domConstruct.place(output.domNode, parentNode);
+
