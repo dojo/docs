@@ -81,6 +81,10 @@ In 1.8 dojox/app would automatically require a model and mvc controller if it wa
 dojox/calendar
 --------------
 
+In dojo 1.8, the Date constructor was used as last resort to decode a Date string. 
+In dojo 1.9, as it is not reliable, the Date constructor is not used, and time.newDate() will throw an error if parameter is string and it cannot be decoded using ISO decoder (dojo/date/stamp).
+
+
 Util
 ====
 
