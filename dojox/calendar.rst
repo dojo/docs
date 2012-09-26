@@ -143,7 +143,11 @@ The property names can be configured by setting the "startTimeAttr" and "endTime
   }, "someId");
 
 The value retrieved can be a date directly usable by the calendar or must converted into a date.
-In the latter case, the decodeDate() and encodeDate() functions must be set to respectively decode the object into a date and encore the date into a custom object after an editing.
+In the latter case, the **decodeDate()** and **encodeDate()** functions must be set to respectively decode the object into a date and encode the date into a custom object after an editing.
+
+In the following example, the date ISO format is used in the model to communicate with a distant server.
+The decodeDate() will allow the calendar to manipulate Date instances.
+The encodeDate() will allow to sent back a date in the ISO format after an event editing.
 
 .. js ::
 
