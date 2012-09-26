@@ -78,6 +78,8 @@ In 1.8 dojox/app would automatically require a model and mvc controller if it wa
 		"dojox/mvc/EditStoreRefListController",
 		: : :
 
+dojox/calendar
+--------------
 
 Util
 ====
