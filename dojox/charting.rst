@@ -583,8 +583,8 @@ Defining the step between ticks can be specified as follows.
   minorTickStep: 2
   microTickStep: 1
 
-Axis Colors and Styles
-----------------------
+Axis Colors and Ticks Styles
+----------------------------
 
 The color of the axis, the color and length of your tick marks and the font and color of your labels can be specified as follows.
 
@@ -600,7 +600,20 @@ The color of the axis, the color and length of your tick marks and the font and 
     minorTick: {stroke: "black", length: 3}
   });
 
-TODO: Axis Properties Example
+
+To render the axis ticks inside the plot area instead of outside of the chart negative length for the ticks can be used.
+
+.. js ::
+  
+  chart.addAxis("other y", {vertical: true,
+    leftBottom: false,
+    max: 7,
+    stroke: "green",
+    font: "normal normal bold 14pt Tahoma",
+    fontColor: "red",
+    majorTick: {color: "red", length: -10}
+  });
+
 
 Axis Labels
 -----------
