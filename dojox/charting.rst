@@ -162,6 +162,7 @@ Available 2D chart types include:
    * **Scatter** - Similar to MarkerOnly, yet capable to chart using gradient fields.
    * **Bubble** - Similar to scatter but with bubbles elements which sizes vary depending on the data.
    * **Grid** - For adding a grid layer to your chart.
+   * **Indicator** - For adding vertical or horizontal indicator threshold on the chart.
 
 Lines, Areas and Markers Plots
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -385,36 +386,87 @@ minor axis tick marks.
 
 .. js ::
 
-  require(["dojox/charting/plot2d/Grid", ...], function(Grid, ...){
-    chart.addPlot("default", { type: "Grid",
-          hMajorLines: true,
-          hMinorLines: false,
-          vMajorLines: true,
-          vMinorLines: false });
-  });
+require(["dojox/charting/plot2d/Grid", ...], function(Grid, ...){
+ chart.addPlot("default", { type: Grid,
+	   hMajorLines: true,
+	   hMinorLines: false,
+	   vMajorLines: true,
+	   vMinorLines: false });
+});
 
 If you need the grid to be aligned with alternate axes you can do the following:
 
 .. js ::
 
-  require(["dojox/charting/plot2d/Grid", ...], function(Grid, ...){
-    chart1.addPlot("Grid", { type: Grid,
-      hAxis: "other x",
-      vAxis: "other y",
-    });
-  });
+require(["dojox/charting/plot2d/Grid", ...], function(Grid, ...){
+ chart1.addPlot("Grid", { type: Grid,
+   hAxis: "other x",
+   vAxis: "other y",
+ });
+});
 
 Similarly to the axis if your grid is changing often you can use the enableCache option to improve further renderings:
 
 .. js ::
 
-  require(["dojox/charting/plot2d/Grid", ...], function(Grid, ...){
-    chart.addPlot("Grid", { type: Grid,
-      hAxis: "other x",
-      vAxis: "other y",
-      enableCache: true
-    });
+require(["dojox/charting/plot2d/Grid", ...], function(Grid, ...){
+ chart.addPlot("Grid", { type: Grid,
+   hAxis: "other x",
+   vAxis: "other y",
+   enableCache: true
+ });
+});
+
+Indicator Plot
+~~~~~~~~~~~~~~
+
+The indicator plot type will draw horizontal or vertical lines on the chart at a given position. Optionally a label as
+well as markers can also be drawn on the indicator line. These indicators are typically used as threshold indicators
+showing the data displayed by the chart are reaching particular threshold values.
+
+To display a horizontal threshold dashed line at data coordinate 15 on the vertical axis you can do the following:
+
+.. js ::
+
+  require(["dojox/charting/plot2d/Indicator", ...], function(Indicator, ...){
+    chart.addPlot("threshold", { type: Indicator,
+	  vertical: false,
+	  lineStroke: { color: "red", style: "ShortDash"},
+	  stroke: null,
+	  outline: null,
+	  fill: null,
+	  offset: { y: -7, x: -10 },
+	  values: 15});
   });
+
+The offset property allows to adjust the position of the label with respect to its default position (that is the end of
+the threshold line). To hide the label, set the labels property to "none":
+
+.. js ::
+
+  require(["dojox/charting/plot2d/Indicator", ...], function(Indicator, ...){
+    chart.addPlot("threshold", { type: Indicator,
+	  vertical: false,
+	  lineStroke: { color: "red", style: "ShortDash"},
+	  labels: "none",
+	  values: 15});
+  });
+
+
+If you want to display markers on the indicator line you can specify a series for the indicator which will contain
+the marker coordinates. In the following example a vertical indicator is rendered data coordinate 15 on the horizontal axis
+and on the threshold line markers are rendered at coordinates 8, 17 and 30 along the vertical axis.
+
+.. js ::
+
+  require(["dojox/charting/plot2d/Indicator", "dojox/charting/Series", ...], function(Indicator, Series, ...){
+    chart.addPlot("threshold", { type: Indicator,
+	  lineStroke: { color: "red", style: "ShortDash"},
+	  labels: "none",
+	  values: 15});
+	chart.addSeries("markers", [ 8, 17, 30 ], { plot: "threshold" });
+  });
+
 
 
 Multiple Plots
@@ -484,8 +536,8 @@ The first option is vertical, this determines if the axis is vertical or horizon
 
 .. js ::
 
-  require(["dojox/charting/plot2d/Lines", ...], function(Columns, ...){
-    chart.addPlot("default", {type: "Lines", hAxis: "x", vAxis: "y"});
+  require(["dojox/charting/plot2d/Lines", ...], function(Lines, ...){
+    chart.addPlot("default", {type: Lines, hAxis: "x", vAxis: "y"});
     chart.addAxis("x");
     chart.addAxis("y", {vertical: true});
   });
@@ -505,7 +557,7 @@ Now let's examine the leftBottom option. This option defaults to true, and along
     // ...
     var chart = new Chart("simplechart");
     chart.addPlot("default", {type: Lines});
-    chart.addPlot("other", {type: "Areas", hAxis: "other x", vAxis: "other y"});
+    chart.addPlot("other", {type: Areas, hAxis: "other x", vAxis: "other y"});
     chart.addAxis("x");
     chart.addAxis("y", {vertical: true});
     chart.addAxis("other x", {leftBottom: false});
@@ -1076,7 +1128,7 @@ The picture below demonstrates Tooltip action.
     "dojox/charting/action2d/Tooltip"],
     function(Chart, Default, Columns, Tooltip){
       var chart = new Chart("test");
-      chart.addAxis("x", {type : Default, enableCache: true});
+      chart.addAxis("x", {type: Default, enableCache: true});
       chart.addAxis("y", {vertical: true});
       chart.addPlot("default", {type: Columns, enableCache: true});
       chart.addSeries("Series A", [ ... ]);
@@ -1118,7 +1170,7 @@ Here is an example showing how to attach a MouseZoomAndPan action to the chart a
     "dojox/charting/action2d/MouseZoomAndPan", ...],
     function(Chart, Default, Columns, MouseZoomAndPan, ...){
     var chart = new Chart("test");
-    chart.addAxis("x", {type : Default, enableCache: true});
+    chart.addAxis("x", {type: Default, enableCache: true});
     chart.addAxis("y", {vertical: true});
     chart.addPlot("default", {type: Columns, enableCache: true});
     chart.addSeries("Series A", [ ... ]);
@@ -1147,7 +1199,8 @@ MouseIndicator supports several additional parameters:
 +---------------------+----------+-------------+-------------------------------------------------------------------------------+
 |vertical             |Number    |0            |The precision at which to round values for display                             |
 +---------------------+----------+-------------+-------------------------------------------------------------------------------+
-
+|mouseOver            |Boolean   |false        |Whether the mouse indicator is enabled on mouse over or on mouse drag          |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
 It also includes several styling additional parameters that allows to change the color if the indicator test, background, line... These style properties can also be set on the Chart theme.
 
 Here is an example showing how to attach a MouseIndicator action to the chart and configure it:
@@ -1158,7 +1211,7 @@ Here is an example showing how to attach a MouseIndicator action to the chart an
     "dojox/charting/action2d/MouseIndicator", ...],
     function(Chart, Default, Columns, MouseIndicator, ...){
     var chart = new Chart("test");
-    chart.addAxis("x", {type : Default, enableCache: true});
+    chart.addAxis("x", {type: Default, enableCache: true});
     chart.addAxis("y", {vertical: true});
     chart.addPlot("default", {type: Columns, enableCache: true});
     chart.addSeries("Series A", [ ... ]);
@@ -1202,9 +1255,9 @@ Here is an example showing how to attach a TouchZoomAndPan action to the chart a
     "dojox/charting/action2d/TouchZoomAndPan", ...],
     function(Chart, Default, Columns, TouchZoomAndPan, ...){
     var chart = new Chart("test");
-    chart.addAxis("x", {type : "Default", enableCache: true});
+    chart.addAxis("x", {type: Default, enableCache: true});
     chart.addAxis("y", {vertical: true});
-    chart.addPlot("default", {type: "Columns", enableCache: true});
+    chart.addPlot("default", {type: Columns, enableCache: true});
     chart.addSeries("Series A", [ ... ]);
     new TouchZoomAndPan(chart, "default", { axis: "x" });
     chart.render();
@@ -1244,7 +1297,7 @@ Here is an example showing how to attach a TouchIndicator action to the chart an
     "dojox/charting/action2d/TouchIndicator", ...],
     function(Chart, Default, Columns, TouchIndicator, ...){
   	var chart = new Chart("test");
-  	chart.addAxis("x", {type : Default, enableCache: true});
+  	chart.addAxis("x", {type: Default, enableCache: true});
   	chart.addAxis("y", {vertical: true});
   	chart.addPlot("default", {type: Columns, enableCache: true});
   	chart.addSeries("Series A", [ ... ]);
