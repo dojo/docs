@@ -518,17 +518,55 @@ Example (using older HTML (non-validating) and mobile parser)
 Programmer's Guide
 ==================
 
+Dynamic Content Loading
+-----------------------
+
 * :ref:`Dynamic Content Loading <dojox/mobile/dynamic-content-loading>`
+
+Listening to Transition Events
+------------------------------
+
 * :ref:`Listening to Transition Events <dojox/mobile/transition-events>`
+
+Cross-browser Support
+---------------------
+
 * :ref:`Cross-browser Support <dojox/mobile/cross-browser-support>`
+
+Internationalization (i18n)
+---------------------------
+
 * :ref:`Internationalization (i18n) <dojox/mobile/internationalization>`
+
+Build
+-----
+
 * :ref:`Build <dojox/mobile/build>`
+
+View Navigation History Management
+----------------------------------
+
 * :ref:`View Navigation History Management <dojox/mobile/bookmarkable>`
+
+Data Handlers
+-------------
+
 * :ref:`Data Handlers <dojox/mobile/data-handlers>`
 
 Appendix
 ========
 
+Frequently Asked Questions
+--------------------------
+
 * :ref:`Frequently Asked Questions <dojox/mobile/faq>`
+
+Differences between 1.6 and 1.7
+-------------------------------
+
 * :ref:`Differences between 1.6 and 1.7 <dojox/mobile/differences-16-17>`
+
+Differences between 1.7 and 1.8
+-------------------------------
+
 * :ref:`Differences between 1.7 and 1.8 <dojox/mobile/differences-17-18>`
