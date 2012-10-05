@@ -73,7 +73,7 @@ Mobile
 ================================================================================== ============ ==============================================================
 Package/Module                                                                     Status       Description
 ================================================================================== ============ ==============================================================
-:ref:`dojox/mobile <dojox/mobile>`                                                 Experimental A mobile framework built on top of Dojo and Dijit
+:ref:`dojox/mobile <dojox/mobile>`                                                 Mature       A mobile framework built on top of Dojo and Dijit
 :ref:`dojox/mobile/app <dojox/mobile/app>`                                         Deprecated   Use ``dojox/app`` instead.
 ================================================================================== ============ ==============================================================
 
