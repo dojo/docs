@@ -130,12 +130,12 @@ To run DOH unit tests with Rhino, create a config file something like this:
 
 .. code-block :: javascript
 
-require({
-    paths: {
-        "org/myorg" : "../../../mycode/org/myorg",
-        "com/mycom" : "../../../x/com/mycom"
-    }
-});
+  require({
+      paths: {
+          "org/myorg" : "../../../mycode/org/myorg",
+          "com/mycom" : "../../../x/com/mycom"
+      }
+  });
 
 And use a script something like this:
 
