@@ -1356,8 +1356,10 @@ As of v1.7, the Dojo loader supports Rhino and node.js out of the box. Loading t
 
 And like this with Rhino:
 
-XXX TODOC command-line arguments, etc.
+.. code-block :: bash
 
+  #!/bin/bash
+  java -jar util/shrinksafe/js.jar dojo/dojo.js baseUrl=file:///full/path/to/dojo/dojo load=config load=doh
 
 The Legacy API
 ==============
