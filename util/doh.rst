@@ -79,9 +79,9 @@ The following files structure shows the files important to the usage of the fram
   * **doh**
     
     * **runner.js**:  The main JavaScript file that defines environment agnostic D.O.H APIs.
-    * **_browserRunner.js**:  An additional JavaScript file that augments the objects defined by runner.js to execute in a browser environment.
-    * **_nodeRunner.js**: An additional JavaScript file that augments the objects defined by runner.js to execute in the node.js environment.
-    * **_rhinoRunner.js**: An additional JavaScript file that augments the objects defined by runner.js to execute in the rhino environment.
+    * **_browserRunner.js**:  Additional file that augments the definitions in runner.js for a web browser.
+    * **_nodeRunner.js**: Additional file that augments the definitions in runner.js for a node.js environment.
+    * **_rhinoRunner.js**: Additional file that augments the definitions in runner.js for a Rhino environment.
     * **runner.html**: HTML bootstrap file used to load D.O.H. in the browser and execute tests.
     * **runner.sh**: UNIX shell script to launch D.O.H. under Rhino.
     * **Robot.html**:  HTML file used to bootstrap in the D.O.H Robot for tests that require synthetic user input.
