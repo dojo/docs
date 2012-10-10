@@ -86,7 +86,9 @@ The easiest tests to get running in DOH are those that are built into Dojo itsel
 
 Ensure your web server or equivalent is running, so you can see the dojo files in your web browser, and navigate to the URL "util/doh/runner.html".  You should type the full URL into your browser's address bar, which might be something like:
 
-``http://localhost/dojo/util/doh/runner.html`` or 
+``http://localhost/dojo/util/doh/runner.html``
+
+or 
 
 ``http://localhost:8181/dojo/util/doh/runner.html``
 
@@ -118,6 +120,32 @@ The *paths* argument tells Dojo to look in "../../../mycode/org/myorg" whenever 
 If your code consists of several modules in different locations you can provide all of them within *paths* by separating them with semi-colons, for example:
 
 ``util/doh/runner.html?paths=org/myorg,../../../mycode/org/myorg;com/mycom,../../../x/com/mycom&test=com/mycom/tests``
+
+On the command line (with Rhino)
+---------------------------
+
+Rhino is a JavaScript interpreter, written in Java, that is included with Dojo's source distribution.
+
+To run DOH unit tests with Rhino, create a config file something like this:
+
+.. code-block :: javascript
+
+require({
+    paths: {
+        "org/myorg" : "../../../mycode/org/myorg",
+        "com/mycom" : "../../../x/com/mycom"
+    }
+});
+
+And use a script something like this:
+
+.. code-block :: bash
+
+  java -jar util/shrinksafe/js.jar dojo/dojo.js baseUrl=file:///full/path/to/dojo/dojo load=file://full/path/to/config.js load=doh test=com/mycom/tests
+
+And cd into the directory containing the "dijit", "dojo", "dojox" and "util" directories before you run it.  You can modify the paths to js.jar and dojo.js to make them absolute if you want to run from elsewhere.
+
+You can also use a module-style path to your config module such as "load=org/myorg/config" if it is accessible that way.
 
 Creating tests
 ==============
@@ -516,3 +544,4 @@ See also
 
 * The numerous unit tests in dojo itself!  For example: dojo/tests/\*, dijit/tests/module.js, dojox/\*/ tests/\*, and so on.
 * `D.O.H tutorial by IBM <http://www.ibm.com/developerworks/web/library/wa-aj-doh/index.html>`_  *(Has example code)*
+* `Running Dojo 1.7+ DOH unit tests on the command line with Rhino <http://www.artificialworlds.net/blog/2012/10/09/running-dojo-doh-unit-tests-on-the-command-line-with-rhino/>` - A fuller explanation of running DOH tests using Rhino
