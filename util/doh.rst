@@ -68,24 +68,6 @@ For a quick list of the features of D.O.H. see below:
 * The ability to load separate HTML pages into an iframe, where the iframe contains a D.O.H. instance and register tests.
   This allows D.O.H. to test HTML widgets in a separate frame from the D.O.H. framework, which avoids cross-contamination.
 
-Structure
----------
-D.O.H. resides in the utils project of the dojo toolkit.
-Users can find it explicitly at: **utils/doh**.
-The following files structure shows the files important to the usage of the framework:
-
-* **utils**
-
-  * **doh**
-    
-    * **runner.js**:  The main JavaScript file that defines environment agnostic D.O.H APIs.
-    * **_browserRunner.js**:  Additional file that augments the definitions in runner.js for a web browser.
-    * **_nodeRunner.js**: Additional file that augments the definitions in runner.js for a node.js environment.
-    * **_rhinoRunner.js**: Additional file that augments the definitions in runner.js for a Rhino environment.
-    * **runner.html**: HTML bootstrap file used to load D.O.H. in the browser and execute tests.
-    * **runner.sh**: UNIX shell script to launch D.O.H. under Rhino.
-    * **Robot.html**:  HTML file used to bootstrap in the D.O.H Robot for tests that require synthetic user input.
-    * **LICENSE**: The license that governs D.O.H.
 
 That's great, but how do I use it?
 ==================================
@@ -94,10 +76,9 @@ It's a unit test environment that's flexible.
 So ... how the heck does someone use it?
 Well, let's start small.
 The first thing we can do is look at using the browser runner to run a small set of unit tests in dojo.
-This is done just by loading runner.html in a web browser.
-What runner.html does is load runner.js and _browserRunner.js.
-This defines a global object, 'doh', that has numerous test registration and assertion functions that can be used by unit tests.
-Runner.html also does something else, if no module URL was provided for it to load tests from,
+This is done just by loading util/doh/runner.html in a web browser.
+What runner.html does is load the DOH test registration and assertion functions, and run some tests.
+If no module URL was provided for it to load tests from,
 the runner.html will automatically load the file: *dojo/tests/module.js*.
 All that file does is use the dojo module loading system to load in all the test files for core dojo.
 It then just executes all the currently registered tests and displays the results in the browser.
@@ -238,6 +219,25 @@ Reference
 
 This section is intended for documentation on the various aspects of D.O.H.,
 such as what registration functions there are and what they do, to information on test formats.
+
+File Structure
+--------------
+D.O.H. resides in the utils project of the dojo toolkit.
+Users can find it explicitly at: **utils/doh**.
+The following files structure shows the files important to the usage of the framework:
+
+* **utils**
+
+  * **doh**
+    
+    * **runner.js**:  The main JavaScript file that defines environment agnostic D.O.H APIs.
+    * **_browserRunner.js**:  Additional file that augments the definitions in runner.js for a web browser.
+    * **_nodeRunner.js**: Additional file that augments the definitions in runner.js for a node.js environment.
+    * **_rhinoRunner.js**: Additional file that augments the definitions in runner.js for a Rhino environment.
+    * **runner.html**: HTML bootstrap file used to load D.O.H. in the browser and execute tests.
+    * **runner.sh**: UNIX shell script to launch D.O.H. under Rhino.
+    * **Robot.html**:  HTML file used to bootstrap in the D.O.H Robot for tests that require synthetic user input.
+    * **LICENSE**: The license that governs D.O.H.
 
 Registration Functions
 ----------------------
