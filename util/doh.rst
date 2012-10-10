@@ -4,7 +4,7 @@
 D.O.H.: Dojo Objective Harness
 ==============================
 
-:Authors: Alex Russell, Pete Higgins, Dustin Machi, Jared Jurkiewicz
+:Authors: Alex Russell, Pete Higgins, Dustin Machi, Jared Jurkiewicz, Andy Balaam
 
 .. contents ::
   :depth: 3
