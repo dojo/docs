@@ -12,7 +12,7 @@ D.O.H.: Dojo Objective Harness
 Overview
 ========
 
-Usually when people think of a scripting language, it's often in context of ease of use, simple syntax,
+Usually when people think of a scripting language, it's often in the context of ease of use, simple syntax,
 and something those without traditional computer science educations can grasp and use.
 JavaScript unfortunately falls into this category.
 For a scripting language, though, is difficult to fully master.
@@ -38,7 +38,7 @@ Furthermore, most Unit Test Frameworks end up with specific dependencies on cert
 Again, D.O.H. tries not to limit itself in this manner, it's both flexible, extendable,
 and runs in many environments from browsers to JS runtime environments such as Rhino.
 
-It's main purpose is a framework for developers (both dojo committers and others),
+Its main purpose is a framework for developers (both dojo committers and others),
 to unit test out JavaScript functions and custom widgets.
 Its goal isn't so much as a way to test a full-blown web application as it is to test the parts
 that make up the applications in a cross-browser (and even non-browser), compatible manner.
