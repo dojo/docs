@@ -546,4 +546,4 @@ See also
 
 * The numerous unit tests in dojo itself!  For example: dojo/tests/\*, dijit/tests/module.js, dojox/\*/ tests/\*, and so on.
 * `D.O.H tutorial by IBM <http://www.ibm.com/developerworks/web/library/wa-aj-doh/index.html>`_  *(Has example code)*
-* `Running Dojo 1.7+ DOH unit tests on the command line with Rhino <http://www.artificialworlds.net/blog/2012/10/09/running-dojo-doh-unit-tests-on-the-command-line-with-rhino/>` - A fuller explanation of running DOH tests using Rhino
+* `Running Dojo 1.7+ DOH unit tests on the command line with Rhino <http://www.artificialworlds.net/blog/2012/10/09/running-dojo-doh-unit-tests-on-the-command-line-with-rhino/>`_ - A fuller explanation of running DOH tests using Rhino
