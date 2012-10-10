@@ -69,8 +69,8 @@ For a quick list of the features of D.O.H. see below:
   This allows D.O.H. to test HTML widgets in a separate frame from the D.O.H. framework, which avoids cross-contamination.
 
 
-That's great, but how do I use it?
-==================================
+Running tests
+=============
 Okay, that's wonderful!
 It's a unit test environment that's flexible.
 So ... how the heck does someone use it?
@@ -102,8 +102,9 @@ You can also note that dojox/data/tests has a runTests.html.
 All that runTests.html does is redirect back to util/doh/runner.html and set the testModule parameter.
 It's a simple helper file that module owners use to quick-launch their unit tests.
 
-What is a test module?
-----------------------
+Creating tests
+==============
+
 Okay, whee!
 The runner.html can be told what test module to load.
 So ... what the heck is a test module!?
