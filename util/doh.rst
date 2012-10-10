@@ -122,7 +122,7 @@ If your code consists of several modules in different locations you can provide 
 ``util/doh/runner.html?paths=org/myorg,../../../mycode/org/myorg;com/mycom,../../../x/com/mycom&test=com/mycom/tests``
 
 On the command line (with Rhino)
----------------------------
+--------------------------------
 
 Rhino is a JavaScript interpreter, written in Java, that is included with Dojo's source distribution.
 
