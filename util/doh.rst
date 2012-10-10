@@ -71,36 +71,53 @@ For a quick list of the features of D.O.H. see below:
 
 Running tests
 =============
-Okay, that's wonderful!
-It's a unit test environment that's flexible.
-So ... how the heck does someone use it?
-Well, let's start small.
-The first thing we can do is look at using the browser runner to run a small set of unit tests in dojo.
-This is done just by loading util/doh/runner.html in a web browser.
+
+Before you start writing your own tests you should confirm you can run some existing tests.  We'll be using the tests that come as part of Dojo, confirming that Dojo itself works as it should, and then looking at how to run your own tests.
+
+In a browser
+------------
+
+There are several ways to run DOH tests, but the simplest way is inside a web browser.
+
+Testing parts of Dojo
+~~~~~~~~~~~~~~~~~~~~~
+
+The easiest tests to get running in DOH are those that are built into Dojo itself, so let's start there.
+
+Ensure your web server or equivalent is running, so you can see the dojo files in your web browser, and navigate to the URL "util/doh/runner.html".  You should type the full URL into your browser's address bar, which might be something like:
+
+``http://localhost/dojo/util/doh/runner.html`` or 
+
+``http://localhost:8181/dojo/util/doh/runner.html``
+
 What runner.html does is load the DOH test registration and assertion functions, and run some tests.
 If no module URL was provided for it to load tests from,
 the runner.html will automatically load the file: *dojo/tests/module.js*.
 All that file does is use the dojo module loading system to load in all the test files for core dojo.
 It then just executes all the currently registered tests and displays the results in the browser.
 
-Okay, so starting up D.O.H. is as simple as running runner.html ...
-but now you may be asking how do I load *my* tests?
-Simple!  You pass it as a query parameter to the runner.html.
-For example, say you just want to run the dojo.date tests, you would load the following in your browser:
+When you navigate to this page you should see lots of tests running, and eventually a green bar across the whole screen indicating that they all passed.  If this doesn't happen, you may have a version of Dojo that doesn't contain DOH, or doesn't contain the tests - download a "-src.zip" version from http://download.dojotoolkit.org/ and you should be fine.
 
-``util/doh/runner.html?testModule=dojo/tests/date``
+To run one or more individual tests, rather than all of the Dojo core tests at once, you need an extra URL parameter, like this:
 
-What this does is instruct the runner to look in dojo/tests and load the date.js file.
-Please note here that you do not have to put your unit tests in dojo/tests!
-The browser runner just has a default search path to look in dojo/ for a module
-in addition to looking at the assumed path of tests/date.js.
+``util/doh/runner.html?test=dojo/tests/date``
 
-What most developers do is define their own tests in their module's directory under tests/.
-you can see this as a common pattern in dojox.
-For example, dojox/data/tests have all the dojox.data unit tests.
-You can also note that dojox/data/tests has a runTests.html.
-All that runTests.html does is redirect back to util/doh/runner.html and set the testModule parameter.
-It's a simple helper file that module owners use to quick-launch their unit tests.
+This instructs the runner to look in dojo/tests and run the tests inside the file date.js.
+
+Testing your own code
+~~~~~~~~~~~~~~~~~~~~~
+
+If you want to run your own tests, one option is to put them inside dojo's own directory, and run them as in the previous section, but a more normal approach is to put them somewhere else.
+
+If your tests are accessible via a url such as mycode/org/myorg/mymodule/tests/alltests.js on your web browser, you can run them in the DOH runner by navigating to a URL like this:
+
+``util/doh/runner.html?paths=org/myorg,../../../mycode/org/myorg&test=org/myorg/mymodule/tests/alltests``
+
+The *paths* argument tells Dojo to look in "../../../mycode/org/myorg" whenever it seems a reference to a module starting with "org/myorg".  The *test* argument gives the module name (not the URL) of the test file you want to run.  Note that there is no ".js" at the end.
+
+If your code consists of several modules in different locations you can provide all of them within *paths* by separating them with semi-colons, for example:
+
+``util/doh/runner.html?paths=org/myorg,../../../mycode/org/myorg;com/mycom,../../../x/com/mycom&test=com/mycom/tests``
 
 Creating tests
 ==============
