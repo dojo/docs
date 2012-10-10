@@ -24,7 +24,7 @@ Usage is creating a new instance of the class, passing at least the DOMNode that
 
   require(["dojo/fx/Toggler"], function(Toggler),{
     // Create a new Toggler with default options
-    var toggler = new Togger({
+    var toggler = new Toggler({
       node: "someId"
     });
     
