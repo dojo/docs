@@ -57,7 +57,7 @@ For a quick list of the features of D.O.H. see below:
  * Opera 9.x and 10.x
  * <and others!>
 
-* Support for Non-Browser environments, such as Rhino.
+* Support for Non-Browser environments, such as Rhino and node.js.
 * Modular loading of unit test files.
 * Asynchronous test support (such as testing functions that ultimately use XHR)
 * A simple browser-based graphical front end and runner file.
