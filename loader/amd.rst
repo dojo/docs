@@ -1359,7 +1359,7 @@ And like this with Rhino:
 .. code-block :: bash
 
   #!/bin/bash
-  java -jar util/shrinksafe/js.jar dojo/dojo.js baseUrl=file:///full/path/to/dojo/dojo load=config load=doh
+  java -jar util/shrinksafe/js.jar dojo/dojo.js baseUrl=file:///full/path/to/dojo/dojo load=config load=main
 
 The Legacy API
 ==============
