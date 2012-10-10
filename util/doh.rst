@@ -145,6 +145,8 @@ And use a script something like this:
 
 And cd into the directory containing the "dijit", "dojo", "dojox" and "util" directories before you run it.  You can modify the paths to js.jar and dojo.js to make them absolute if you want to run from elsewhere.
 
+baseUrl should be a URL (not relative path) to the directory that contains dojo.js.
+
 You can also use a module-style path to your config module such as "load=org/myorg/config" if it is accessible that way.
 
 Creating tests
