@@ -115,7 +115,7 @@ before D.O.H. executes the test run.
 For example, the following code snippet is a test module:
 
 Example Test Module: Simple test registration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------------
 
 .. js ::
 
@@ -147,7 +147,7 @@ Example Test Module: Simple test registration
   });
 
 Example Test Module: Module that loads other modules
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------------
 
 .. js ::
 
