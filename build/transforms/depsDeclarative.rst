@@ -24,7 +24,8 @@ Using the auto-require feature, but not building your dependencies into a layer 
     <button type="button" data-dojo-type="dijit/form/Button">Click Me!</button>
   </div>
 
-The ``dojo/parser`` will automatically load ``dijit/layout/ContentPane`` and ``dijit/form/Button`` if they are not already loaded.  If you then, in your build profile, tag the resource as declarative:
+The ``dojo/parser`` will automatically load ``dijit/layout/ContentPane`` and ``dijit/form/Button`` if they are not 
+already loaded.  If you then, in your build profile, tag the resource as declarative:
 
 .. js ::
 
@@ -46,9 +47,30 @@ And then include it in a layer (like your ``dojo/dojo`` one):
     }
   }
 
-Then you will get a built layer that includes ``dijit/layout/ContentPane`` and ``dijit/form/Button`` plus all the necessary dependencies.
+Then you will get a built layer that includes ``dijit/layout/ContentPane`` and ``dijit/form/Button`` plus all the 
+necessary dependencies.  The name of the file to be scanned for dependencies needs to be a resolvable Module ID (MID) 
+by the builder, which usually means that the file is within a package and identified in your package map within the 
+build profile, for example, in the above situation, you might have a ``packages`` property of:
 
-It is worthy to note that the builder will not "build" your resource into the layer, like if you used the ``dojo/text`` plugin, where the resource would be loaded and in-lined into the layer, it simply scans the resource for dependencies.
+.. js ::
+
+  packages:[{
+    name: "dojo",
+    location: "../dojo"
+  },{
+    name: "dijit",
+    location: "../dijit"
+  },{
+    name: "dojox",
+    location: "../dojox"
+  },{
+    name: "app",
+    location: "./app"
+  }]
+
+It is worthy to note that the builder will not "build" your resources into the layer, like if you used the 
+``dojo/text`` plugin, where the resource would be loaded and in-lined into the layer, it simply scans the resource for 
+dependencies.
 
 The transform also supports the declarative require syntax.  Therefore if you have something like:
 
