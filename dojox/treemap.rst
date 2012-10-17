@@ -506,6 +506,6 @@ One can listen to this events and react to them. For example, the following code
 See also
 ========
 
- * A demo is leveraging the Dojo treemap to explore Dojo Trac bug base. Check it out `here <http://archive.dojotoolkit.org/nightly/checkout/demos/tracTreemap/demo.html>`_.
+ * A demo is leveraging the Dojo treemap to explore Dojo Trac bug base. Check it out `here <http://demos.dojotoolkit.org/demos/tracTreemap/>`_.
 
 
