@@ -1219,3 +1219,9 @@ All the editing events have an item property which is an object that contains th
 When the item is moved or resized, new start and end time values are computed and put these properties.
 
 The itemEditMoveGesture and itemEditResizeGesture default event handlers are then manipulating these properties to apply snapping, limits etc according to the editing properties values.
+
+
+See also
+========
+
+ * A demo is leveraging the Dojo calendar. Check it out `here <http://demos.dojotoolkit.org/demos/calendar/>`_.
