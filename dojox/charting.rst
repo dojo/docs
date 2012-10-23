@@ -386,36 +386,34 @@ minor axis tick marks.
 
 .. js ::
 
-require(["dojox/charting/plot2d/Grid", ...], function(Grid, ...){
- chart.addPlot("default", { type: Grid,
-	   hMajorLines: true,
-	   hMinorLines: false,
-	   vMajorLines: true,
-	   vMinorLines: false });
-});
+  require(["dojox/charting/plot2d/Grid", ...], function(Grid, ...){
+    chart.addPlot("default", { type: Grid,
+  	   hMajorLines: true,
+  	   hMinorLines: false,
+  	   vMajorLines: true,
+  	   vMinorLines: false });
+  });
 
 If you need the grid to be aligned with alternate axes you can do the following:
 
 .. js ::
 
-require(["dojox/charting/plot2d/Grid", ...], function(Grid, ...){
- chart1.addPlot("Grid", { type: Grid,
-   hAxis: "other x",
-   vAxis: "other y",
- });
-});
+  require(["dojox/charting/plot2d/Grid", ...], function(Grid, ...){
+    chart1.addPlot("Grid", { type: Grid,
+      hAxis: "other x",
+      vAxis: "other y" });
+  });
 
 Similarly to the axis if your grid is changing often you can use the enableCache option to improve further renderings:
 
 .. js ::
 
-require(["dojox/charting/plot2d/Grid", ...], function(Grid, ...){
- chart.addPlot("Grid", { type: Grid,
-   hAxis: "other x",
-   vAxis: "other y",
-   enableCache: true
- });
-});
+  require(["dojox/charting/plot2d/Grid", ...], function(Grid, ...){
+    chart.addPlot("Grid", { type: Grid,
+      hAxis: "other x",
+      vAxis: "other y",
+      enableCache: true });
+  });
 
 Indicator Plot
 ~~~~~~~~~~~~~~
