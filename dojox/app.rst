@@ -6,8 +6,6 @@ dojox/app
 
 :since: V1.7
 
-*Foreword*: ``dojox/app`` is an experimental module and its architecture is still evolving. In particular it was greatly improved between 1.7 and 1.8. It is for now only fully-functional with Webkit-based browsers.
-
 ``dojox/app`` is an application framework designed to allow simple configuration of potentially nested views and to facilitate the transitioning between these views. Its main current targets are mobile (phone & tablet) devices but it is not restricted to this and can be used for desktop applications as well. Thanks to ``dojox/app`` the applications are easily configurable and buildable for easy and fast deployment.
 There are two core modules that will need to work together to accomplish these goals:
 
@@ -106,6 +104,11 @@ Array of AMD modules identifiers. When defined at the top level dependencies of 
     "dojox/mobile/Heading"
   ]
 
+These are typically modules that are not required by the JavaScript module of the application or the view but that are still
+needed by the application or the view. Examples are the store or MVC modules or the modules needed by the markup of the view.
+If the application is using the full Dojo parser it does not necessarily need to list the markup dependencies as the parser
+will auto-require them.
+
 modules
 -------
 
@@ -116,6 +119,8 @@ Array of AMD modules identifiers. Modules for the application. Used as the mixin
   "modules": [
     "mypackage/custom/module"
   ]
+
+There are automatically added to the list of dependencies and as such do not need to be listed in the dependencies property.
 
 controllers
 -----------
@@ -128,6 +133,8 @@ Array of AMD modules identifiers. Controllers for the application. All the contr
     "dojox/app/controllers/History",
     "mypackage/custom/appController"
   ]
+
+There are automatically added to the list of dependencies and as such do not need to be listed in the dependencies property.
 
 stores
 ------
@@ -150,6 +157,8 @@ Object. Dojo stores which are used by ``dojox/app`` to setup data models. A stor
       }
     }
   }
+
+All stores modules that are used must also be explicitly listed in the dependencies property.
 
 template
 --------
@@ -183,6 +192,7 @@ Object. Models and their instantiation parameters. A model item is an object wit
     }
   }
 
+All model modules that are used must also be explicitly listed in the dependencies property.
 
 defaultView
 -----------
