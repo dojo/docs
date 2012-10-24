@@ -120,7 +120,7 @@ Array of AMD modules identifiers. Modules for the application. Used as the mixin
     "mypackage/custom/module"
   ]
 
-There are automatically added to the list of dependencies and as such do not need to be listed in the dependencies property.
+They are automatically added to the list of dependencies and as such do not need to be listed in the dependencies property.
 
 controllers
 -----------
@@ -134,7 +134,7 @@ Array of AMD modules identifiers. Controllers for the application. All the contr
     "mypackage/custom/appController"
   ]
 
-There are automatically added to the list of dependencies and as such do not need to be listed in the dependencies property.
+They are automatically added to the list of dependencies and as such do not need to be listed in the dependencies property.
 
 stores
 ------
