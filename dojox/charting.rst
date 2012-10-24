@@ -381,8 +381,8 @@ Grid Plot
 ~~~~~~~~~
 
 One other type with unique options is the grid. This plot type will draw grid lines along the tick marks and supports
-the following four boolean options to determine if lines will be displayed at the horizontal or vertical and major or
-minor axis tick marks.
+four boolean options to determine if lines will be displayed at the horizontal or vertical and major or
+minor axis tick marks. There are also options to determine the stroke used to draw the lines.
 
 .. js ::
 
@@ -391,7 +391,22 @@ minor axis tick marks.
   	   hMajorLines: true,
   	   hMinorLines: false,
   	   vMajorLines: true,
-  	   vMinorLines: false });
+  	   vMinorLines: false,
+  	   majorHLine: { color: "green", width: 3 },
+  	   majorVLine: { color: "red", width: 3 } });
+  });
+
+There are also options to enable stripes between the grid lines as well as pick the color/fill used to render them.
+By default no stripes are rendered.
+
+.. js ::
+
+  require(["dojox/charting/plot2d/Grid", ...], function(Grid, ...){
+    chart.addPlot("default", { type: Grid,
+  	   hStripes: true,
+  	   vStripes: false,
+  	   hFill: "red",
+  	   vFill: "blue" });
   });
 
 If you need the grid to be aligned with alternate axes you can do the following:
@@ -414,6 +429,17 @@ Similarly to the axis if your grid is changing often you can use the enableCache
       vAxis: "other y",
       enableCache: true });
   });
+
+Finally to avoid a grid line to be rendered on the axis lines you can set the renderOnAxis option to false:
+
+.. js ::
+
+  require(["dojox/charting/plot2d/Grid", ...], function(Grid, ...){
+    chart.addPlot("Grid", { type: Grid,
+      renderOnAxis: false });
+  });
+
+
 
 Indicator Plot
 ~~~~~~~~~~~~~~
