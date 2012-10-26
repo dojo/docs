@@ -1326,16 +1326,16 @@ Here is an example showing how to attach a TouchIndicator action to the chart an
   	chart.addPlot("default", {type: Columns, enableCache: true});
   	chart.addSeries("Series A", [ ... ]);
   	new TouchIndicator(chart, "default", {
-     series: "Series A", dualIndicator : true, font: "normal normal bold 16pt Tahoma",
-     fillFunc: function(v1, v2){
-       if(v2){
-        return v2.y>v1.y?"green":"red";
-       }else{
-        return "white";
-       }
-     }
-    });
-    chart.render();
+            series: "Series A", dualIndicator : true, font: "normal normal bold 16pt Tahoma",
+            fillFunc: function(v1, v2){
+              if(v2){
+                return v2.y>v1.y?"green":"red";
+              }else{
+                return "white";
+              }
+           }     
+       });
+       chart.render();
   });
 
 
