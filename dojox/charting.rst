@@ -854,11 +854,11 @@ Once instantiated the StoreSeries and DataSeries are not supposed to be manipula
 
 The "value" argument allows to supply complex values for some charts (OHLC, candle stick), and additional values for customization purposes (text labels, tooltips, and so on).
 
-The following example shows a function that can be used to extract the values:
+The following example shows a function that can be used to extract the values. It is meant to be used with StoreSeries, for DataSeries you need to invert the item & store parameters.
 
 .. js ::
   
-  function getValueObject(store, item){
+  function getValueObject(item, store){
     // let's create our object
     var o = {
       x: item["order"],
@@ -884,7 +884,7 @@ The effect will be the same as the following function was applied to extract val
 
 .. js ::
   
-  function getValueObect(store, item){
+  function getValueObect(item, store){
     var o = {
       x: item["order"],
       y: item["value"],
@@ -900,7 +900,7 @@ If a field name is specified, it is used to pull one (numeric) value. The effect
 .. js ::
   
   var field = "abc";
-  function getValueObject(store, item){
+  function getValueObject(item, store){
     return item[field];
   }
 
