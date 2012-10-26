@@ -1148,7 +1148,7 @@ The picture below demonstrates Tooltip action.
 
 .. js ::
 
-  require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns",
+  require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Columns",
     "dojox/charting/action2d/Tooltip"],
     function(Chart, Default, Columns, Tooltip){
       var chart = new Chart("test");
@@ -1190,7 +1190,7 @@ Here is an example showing how to attach a MouseZoomAndPan action to the chart a
 
 .. js ::
 
-  require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns",
+  require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Columns",
     "dojox/charting/action2d/MouseZoomAndPan", ...],
     function(Chart, Default, Columns, MouseZoomAndPan, ...){
     var chart = new Chart("test");
@@ -1231,7 +1231,7 @@ Here is an example showing how to attach a MouseIndicator action to the chart an
 
 .. js ::
 
-  require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns",
+  require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Columns",
     "dojox/charting/action2d/MouseIndicator", ...],
     function(Chart, Default, Columns, MouseIndicator, ...){
     var chart = new Chart("test");
@@ -1275,7 +1275,7 @@ Here is an example showing how to attach a TouchZoomAndPan action to the chart a
 
 .. js ::
 
-  require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns",
+  require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Columns",
     "dojox/charting/action2d/TouchZoomAndPan", ...],
     function(Chart, Default, Columns, TouchZoomAndPan, ...){
     var chart = new Chart("test");
@@ -1317,7 +1317,7 @@ Here is an example showing how to attach a TouchIndicator action to the chart an
 
 .. js ::
 
-  require(["dojox/charting/Chart", "dojox/charting/plot2d/Default", "dojox/charting/plot2d/Columns",
+  require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Columns",
     "dojox/charting/action2d/TouchIndicator", ...],
     function(Chart, Default, Columns, TouchIndicator, ...){
   	var chart = new Chart("test");
