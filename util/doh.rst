@@ -84,7 +84,21 @@ Testing parts of Dojo
 
 The easiest tests to get running in DOH are those that are built into Dojo itself, so let's start there.
 
-Ensure your web server or equivalent is running[#pywebserver]_, so you can see the dojo files in your web browser, and navigate to the URL "util/doh/runner.html".  You should type the full URL into your browser's address bar, which might be something like:
+Ensure your web server or equivalent is running [*]_, so you can see the dojo files in your web browser, and navigate to the URL "util/doh/runner.html".  You should type the full URL into your browser's address bar, which might be something like:
+
+.. [*] If you don't yet have a web server running, but you do have Python installed, you can get the tests running in a browser by ensuring you are in the directory that contains the dojo directory, then running:
+
+   ``python -m SimpleHTTPServer &``
+
+   or if you have Python 3:
+
+   ``python3 -m http.server &``
+
+   This starts a temporary web server, serving all the files in the current directory.
+
+   You can then launch your browser to http://localhost:8000/util/doh.runner.html to see the tests running.
+
+   Note, however, that some tests will fail because they rely on PHP scripts, which are not supported in this simple web server.
 
 ``http://localhost/dojo/util/doh/runner.html``
 
@@ -105,20 +119,6 @@ To run one or more individual tests, rather than all of the Dojo core tests at o
 ``util/doh/runner.html?test=dojo/tests/date``
 
 This instructs the runner to look in dojo/tests and run the tests inside the file date.js.
-
-.. [#pywebserver] If you don't yet have a web server running, but you do have Python installed, you can get the tests running in a browser by ensuring you are in the directory that contains the dojo directory, then running:
-
-  ``python -m SimpleHTTPServer &``
-
-  or if you have Python 3:
-
-  ``python3 -m http.server &``
-
-  This starts a temporary web server, serving all the files in the current directory.
-
-  You can then launch your browser to http://localhost:8000/util/doh.runner.html to see the tests running.
-
-  Note, however, that some tests will fail because they rely on PHP scripts, which are not supported in this simple web server.
 
 Testing your own code
 ~~~~~~~~~~~~~~~~~~~~~
