@@ -105,7 +105,7 @@ To run one or more individual tests, rather than all of the Dojo core tests at o
 ``util/doh/runner.html?test=dojo/tests/date``
 
 This instructs the runner to look in dojo/tests and run the tests inside the file date.js.
-
+<sub>
 \* If you don't yet have a web server running, but you do have Python installed, you can get the tests running in a browser by ensuring you are in the directory that contains the dojo directory, then running:
 
 ``python -m SimpleHTTPServer &``
@@ -118,7 +118,7 @@ This starts a temporary web server, serving all the files in the current directo
 
 You can then launch your browser to http://localhost:8000/util/doh.runner.html to see the tests running.
 
-Note, however, that some tests will fail because they rely on PHP scripts, which are not supported in this simple web server.
+Note, however, that some tests will fail because they rely on PHP scripts, which are not supported in this simple web server.</sub>
 
 Testing your own code
 ~~~~~~~~~~~~~~~~~~~~~
