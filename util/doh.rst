@@ -86,6 +86,13 @@ The easiest tests to get running in DOH are those that are built into Dojo itsel
 
 Ensure your web server or equivalent is running [*]_, so you can see the dojo files in your web browser, and navigate to the URL "util/doh/runner.html".  You should type the full URL into your browser's address bar, which might be something like:
 
+``http://localhost/dojo/util/doh/runner.html``
+
+or 
+
+``http://localhost:8181/dojo/util/doh/runner.html``
+
+
 .. [*] If you don't yet have a web server running, but you do have Python installed, you can get the tests running in a browser by ensuring you are in the directory that contains the dojo directory, then running:
 
    ``python -m SimpleHTTPServer &``
@@ -99,12 +106,6 @@ Ensure your web server or equivalent is running [*]_, so you can see the dojo fi
    You can then launch your browser to http://localhost:8000/util/doh.runner.html to see the tests running.
 
    Note, however, that some tests will fail because they rely on PHP scripts, which are not supported in this simple web server.
-
-``http://localhost/dojo/util/doh/runner.html``
-
-or 
-
-``http://localhost:8181/dojo/util/doh/runner.html``
 
 What runner.html does is load the DOH test registration and assertion functions, and run some tests.
 If no module URL was provided for it to load tests from,
