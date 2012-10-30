@@ -84,7 +84,7 @@ Testing parts of Dojo
 
 The easiest tests to get running in DOH are those that are built into Dojo itself, so let's start there.
 
-Ensure your web server or equivalent is running#pywebserver, so you can see the dojo files in your web browser, and navigate to the URL "util/doh/runner.html".  You should type the full URL into your browser's address bar, which might be something like:
+Ensure your web server or equivalent is running[#pywebserver]_, so you can see the dojo files in your web browser, and navigate to the URL "util/doh/runner.html".  You should type the full URL into your browser's address bar, which might be something like:
 
 ``http://localhost/dojo/util/doh/runner.html``
 
