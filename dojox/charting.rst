@@ -1142,9 +1142,9 @@ Tooltip supports the following keyword parameters:
 |text      |Function    |The default text function    |The function to produce a Tooltip text.                                        |
 +----------+------------+-----------------------------+-------------------------------------------------------------------------------+
 
-The default text function checks if a data point is an object, and uses an optional "Tooltip" member if available �� this is a provision for custom Tooltips. Otherwise, it uses a numeric value. Tooltip text can be any valid HTML, so you can specify rich text multi-line Tooltips if desired.
+The default text function checks if a data point is an object, and uses an optional "Tooltip" member if available, this is a provision for custom Tooltips. Otherwise, it uses a numeric value. Tooltip text can be any valid HTML, so you can specify rich text multi-line Tooltips if desired.
 
-The picture below demonstrates Tooltip action.
+The example below demonstrates Tooltip action.
 
 .. js ::
 
@@ -1159,6 +1159,8 @@ The picture below demonstrates Tooltip action.
       new Tooltip(chart, "default");
       chart.render()
   });
+
+The Tooltip action is internally using a dijit/Tooltip object, as such it is required to import dijit.css in your application for the tooltip to be correctly displayed. In addition to that a Dijit theme like claro.css can be imported to further style the tooltip display.
 
 
 MouseZoomAndPan
