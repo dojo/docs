@@ -130,8 +130,8 @@ script tag as follows.
 .. html ::
 
   <script src="dojox/mobile/deviceTheme.js"
-     djConfig="mblThemeFiles:['base','Button']"></script>
-  <script src="dojo/dojo.js" djConfig="parseOnLoad: true"></script>
+     data-dojo-config="mblThemeFiles:['base','Button']"></script>
+  <script src="dojo/dojo.js" data-dojo-config="parseOnLoad: true"></script>
 
 In this case, if the detected device is an iPhone, for example, the following files will be loaded by the deviceTheme.
 
@@ -140,7 +140,7 @@ In this case, if the detected device is an iPhone, for example, the following fi
   dojox/mobile/themes/iphone/base.css
   dojox/mobile/themes/iphone/Button.css
 
-Using the script tag as above is the recommended way to load the deviceTheme in 1.8. One drawback, however, is that the deviceTheme.js cannot be included in a build.
+Using the script tag as above is the recommended way to load the deviceTheme in 1.8; trying to load using the AMD loader can lead to styles being applied incorrectly. One drawback, however, is that the deviceTheme.js cannot be included in a build.
 
 Overriding the theme styles
 ---------------------------
