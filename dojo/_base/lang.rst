@@ -242,7 +242,7 @@ any widget within a BorderContainer can specify a ``region``:
 
 The side-effect of this is a documentation nightmare. Now *every* widget appears to have a region variable, when in 
 fact it is just there for the benefit of BorderContainer.  As a side note, this has been addressed in the API Viewer 
-and other documentation as "extension" properties, methods and events and can easily identified and filter out.
+and other documentation as "extension" properties, methods and events and can be easily identified and filtered out.
 
 extend() vs. mixin()
 ~~~~~~~~~~~~~~~~~~~~
