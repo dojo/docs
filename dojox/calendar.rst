@@ -408,9 +408,10 @@ See Advanced configuration for more advanced properties like layout properties a
 Interactions
 ============
 
-**Important note** There are two widget classes:
+There are two widget classes:
    * Calendar: allows mouse and keyboard interactions,
    * MobileCalendar: allows touch interactions.
+For advanced developer, views (see class diagram) can be mixed with Mouse and Keyboard or Touch classes to enable respective interactions.
 
 Selection
 ---------
