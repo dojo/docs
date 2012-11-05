@@ -411,6 +411,7 @@ Interactions
 There are two widget classes:
    * Calendar: allows mouse and keyboard interactions,
    * MobileCalendar: allows touch interactions.
+
 For advanced developer, views (see class diagram) can be mixed with Mouse and Keyboard or Touch classes to enable respective interactions.
 
 Selection
@@ -632,6 +633,8 @@ Class                    Description
 ViewBase                 The base class of calendar views.
 CalendarBase             The base calendar class that is managing a set of calendar views and exposes time range definition properties.
 Calendar                 The desktop specific calendar that defines a column view and a matrix view with keyboard and mouse interactions enabled and default renderers
+MobileCalendar           The mobile specific calendar that defines a column view and a matrix view with touch interactions enabled and specific default renderers.
+
 ======================== ===========
 
 
@@ -643,7 +646,6 @@ Calendar                 The desktop specific calendar that defines a column vie
 ======================== ===========
 Class                    Description
 ======================== ===========
-MobileCalendar           The mobile specific calendar that defines a column view and a matrix view with touch interactions enabled and specific default renderers.
 MatrixView               The view that displays days as a matrix of days.
 SimpleColumnView         The view that displays each day as a column.
 ColumnView               A SimpleColumnView with a secondary sheet that is showing all day events.
