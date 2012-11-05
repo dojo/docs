@@ -50,8 +50,8 @@ Dojo
 Dijit
 =====
 
-Declaration
------------
+dijit/Declaration
+-----------------
 Declaration now supports <script type="dojo/aspect">, in addition to the <script type="dojo/connect"> syntax
 which is now deprecated (and will be removed for 2.0).   Ex:
 
@@ -106,3 +106,7 @@ Demos
 Migration Notes
 ===============
 
+Dijit Calendar
+--------------
+To avoid accessibility violations the Calendar template changed so that the month name and arrows, plus the
+previous/current/next year, are not contained within the TABLE node.   CSS was correspondingly changed.
