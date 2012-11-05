@@ -408,10 +408,9 @@ See Advanced configuration for more advanced properties like layout properties a
 Interactions
 ============
 
-**Important note**: There are two widget classes:
+**Important note** There are two widget classes:
    * Calendar: allows mouse and keyboard interactions,
-   * MobileCalendar: allow touch interactions.
-
+   * MobileCalendar: allows touch interactions.
 
 Selection
 ---------
