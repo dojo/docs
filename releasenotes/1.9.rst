@@ -50,6 +50,21 @@ Dojo
 Dijit
 =====
 
+dijit/BackgroundIframe
+----------------------
+There's now a "bgIframe" has() flag that can be used to explicitly turn on/off the background iframe behind popups
+that's useful when a page contains applets, and also for older versions of IE with the bleed through select problem.
+Usage is:
+
+.. html ::
+
+	<script type="text/javascript" src="../../dojo/dojo.js"
+		data-dojo-config="has: {bgIframe: true}"></script>
+
+It can also be specified as a build parameter in the staticHasFlags section.
+
+By default it's turned on for desktop pages, but turned off for mobile.
+
 dijit/Declaration
 -----------------
 Declaration now supports <script type="dojo/aspect">, in addition to the <script type="dojo/connect"> syntax
