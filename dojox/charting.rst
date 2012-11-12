@@ -1141,6 +1141,8 @@ Tooltip supports the following keyword parameters:
 +----------+------------+-----------------------------+-------------------------------------------------------------------------------+
 |text      |Function    |The default text function    |The function to produce a Tooltip text.                                        |
 +----------+------------+-----------------------------+-------------------------------------------------------------------------------+
+|mouseOver |Boolean     |true                         |Whether the tooltip (default) is enabled on mouse over or click event          |
++----------+------------+-----------------------------+-------------------------------------------------------------------------------+
 
 The default text function checks if a data point is an object, and uses an optional "Tooltip" member if available, this is a provision for custom Tooltips. Otherwise, it uses a numeric value. Tooltip text can be any valid HTML, so you can specify rich text multi-line Tooltips if desired.
 
