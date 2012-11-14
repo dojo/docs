@@ -440,7 +440,6 @@ Finally to avoid a grid line to be rendered on the axis lines you can set the re
   });
 
 
-
 Indicator Plot
 ~~~~~~~~~~~~~~
 
@@ -492,11 +491,12 @@ and on the threshold line markers are rendered at coordinates 8, 17 and 30 along
   });
 
 
-
 Multiple Plots
 ~~~~~~~~~~~~~~
 
-One last feature I'd like to touch on is adding multiple plots to the same chart. Multiple plots can be of differing types and can all be configured separately. Each plot you add with addPlot() will be layered behind the previous plot. In addition, plots can have their own axes or share them with other plots on the chart. Now, if we add an areas plot to our lines example, we can create the following effect.
+Multiple plots can be added to the chart and associated to various series. They can be of differing types and can all be
+configured separately. Each plot you add with addPlot() will be layered behind the previous plot. In addition, plots can
+have their own axes or share them with other plots on the chart.
 
 .. js ::
 
@@ -513,7 +513,8 @@ One last feature I'd like to touch on is adding multiple plots to the same chart
     chart.render();
   });
 
-The charting library is also very flexible in terms of combining chart types, as well as multiple axes. You can set up custom labels for a specific axis, you can set up custom markers for points on a number of different types of charts, and you can even create your own themes for a chart!
+To associate a given series to a particular plot you should use the plot parameter when adding the series passing the
+plot name for the value as "other" in the example adobe.
 
 Smart Label for Pie
 -------------------
@@ -904,17 +905,20 @@ If a field name is specified, it is used to pull one (numeric) value. The effect
     return item[field];
   }
 
-Changing Color Themes
-=====================
+Changing Themes
+===============
 
-Under dojox.charting.themes, you will find a variety of predefined color themes for use with Dojo Charting.  Just make
+Under dojox/charting/themes, you will find a variety of predefined color themes for use with Dojo Charting.  Just make
 sure to require the theme you want to use, and then set the theme on your chart as follows:
 
 .. js ::
 
   require(["dojox/charting/themes/PlotKit/blue", ...], function(blue, ...){
+    // ..
     chart.setTheme(blue);
   });
+
+You can also create your own theme similarly to the predefined theme are done.
 
 There are two categories of themes:
    * SimpleTheme that do not support gradient but are lighter.
