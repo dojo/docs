@@ -40,7 +40,10 @@ that case, usage would look like this:
 
 .. js ::
 
-  require(["dojo/request/handlers", "dojo/request"], require(handlers, request){
+  require([
+    "dojo/request/handlers",
+    "dojo/request"
+  ], function(handlers, request){
     handlers.register("split", function(response){
       // Do something with response.text
       return response.text.split(",");
