@@ -10,8 +10,7 @@ dojo/dom-attr
 .. contents ::
     :depth: 2
 
-This module defines the core Dojo DOM attributes API. This module will eventually be retired and wholly superseded by
-the :ref:`dojo/dom-prop <dojo/dom-prop>` module in the future. The standard return variable for this module is
+This module defines the core Dojo DOM attributes API. The standard return variable for this module is
 ``domAttr``.
 
 Features
