@@ -463,7 +463,7 @@ This example shows how to create a simple Grid programmatically.
         @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
 
         /*Grid needs an explicit height by default*/
-        #grid {
+        #gridDiv {
             height: 20em;
         }
 
@@ -573,7 +573,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
         @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
 
         /*Grid needs an explicit height by default*/
-        #grid {
+        #gridDiv {
             height: 15em;
         }
 
@@ -660,7 +660,7 @@ First, you have to set a editor for each cell, you would like to edit:
         @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
 
         /*Grid needs an explicit height by default*/
-        #grid {
+        #gridDiv {
             height: 20em;
         }
 
@@ -771,7 +771,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
         @import '{{baseUrl}}dojox/grid/resources/claroGrid.css';
 
         /*Grid needs an explicit height by default*/
-        #grid {
+        #gridDiv {
             height: 15em;
         }
 
@@ -868,7 +868,7 @@ The Grid offers a filter() method, to filter data from the current query (client
         @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
 
         /*Grid needs an explicit height by default*/
-        #grid {
+        #gridDiv {
             height: 15em;
         }
 
@@ -954,7 +954,7 @@ To use it, you just have to override default behavior by yours.
         @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
 
         /*Grid needs an explicit height by default*/
-        #grid {
+        #gridDiv {
             height: 20em;
         }
 
