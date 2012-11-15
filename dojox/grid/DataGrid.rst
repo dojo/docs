@@ -16,7 +16,7 @@ A visual grid/table much like a spreadsheet.
 Introduction
 ============
 
-Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.
+Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.  This document covers the ``dojox/grid/DataGrid``.  Beginning with Dojo 1.7, you should use the ``dgrid``, a next-generation grid component that takes full advantage of modern browsers and object stores.
 
 
 .. code-example ::
@@ -75,7 +75,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
         @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
 
         /*Grid needs an explicit height by default*/
-        #grid {
+        #gridDiv {
             height: 20em;
         }
 
@@ -1397,7 +1397,7 @@ Adding a summary attribute to grid is feasible in Dojo 1.8+
 
   var grid = new DataGrid({
       store: store,
-      structure: layout，
+      structure: layout,
       summary: "A customized grid summary"
   });
 
@@ -1472,8 +1472,10 @@ See also
 
 * :ref:`Demos on how to display and edit date value in grid cells <dojox/grid/griddate>`
 
-* `Introducing the 1.2 DataGrid <http://www.sitepen.com/blog/2008/07/14/dojo-12-grid/>`_
-* `New Features in Dojo Grid 1.2 <http://www.sitepen.com/blog/2008/10/22/new-features-in-dojo-grid-12/>`_
+* `Introduction to the DataGrid <http://dojotoolkit.org/documentation/tutorials/1.8/datagrid/>`_
+* `Populating your Grid using dojo/data <http://dojotoolkit.org/documentation/tutorials/1.8/populating_datagrid/>`_
+* `Connecting a Store to a DataGrid <http://dojotoolkit.org/documentation/tutorials/1.8/store_driven_grid/>`_
 * `Dojo Grids: Diving Deeper <http://www.sitepen.com/blog/2007/11/13/dojo-grids-diving-deeper/>`_
 * `Simple Dojo Grids <http://www.sitepen.com/blog/2007/11/06/simple-dojo-grids/>`_
 * `Dojo Grid Widget Updated. Data Integration and Editing Improvements. <http://ajaxian.com/archives/dojo-grid-widget-updated-data-integration-and-editing-improvements>`_
+* `Decruft. Delight. dgrid Beta Is Here! <http://www.sitepen.com/blog/2012/04/23/dgrid_beta/>`_
