@@ -1401,7 +1401,7 @@ One of the easiest ways to use Dojo Charting is to use the dojox/charting/widget
     <div class="action" type="MoveSlice" shift="2"></div>
   </div>
 
-Yes, it is that simple! just define a <div> with the class "action" and supply the type. If you want to specify a plot's name, use the "plot" parameter: plot="Plot1��. By default it will connect to the plot named "default". If you want to change default keyword parameters, just add them to the <div>, e.g., duration="500��.
+Yes, it is that simple! just define a <div> with the class "action" and supply the type. If you want to specify a plot's name, use the "plot" parameter: plot="Plot1". By default it will connect to the plot named "default". If you want to change default keyword parameters, just add them to the <div>, e.g., duration="500".
 
 The Chart Legend Widget
 -----------------------
