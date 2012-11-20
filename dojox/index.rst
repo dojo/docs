@@ -283,7 +283,7 @@ Package/Module                                                                  
                                                                                                 optional multi-file selection, using only HTML elements.
 :ref:`dojox/form/YearTextBox <dojox/form/YearTextBox>`                             Experimental A validating, serializable, range-bound date text box with a 
                                                                                                 popup calendar that contains only years.
-:ref:`dojox/grid <dojox/grid/index>`                                               Deprecated   A grid widget package.  Replaced by ``dgrid``.
+:ref:`dojox/grid <dojox/grid/index>`                                               Deprecated   A grid widget package.  Replaced by ``dgrid`` or ``gridx``.
 :ref:`dojox/layout/BorderContainer <dojox/layout/BorderContainer>`                 Deprecated   Covered by ``dijit/layout/BorderContainer``
 :ref:`dojox/layout/ContentPane <dojox/layout/ContentPane>`                         Maintained   An extended version of ``dijit/layout/ContentPane`` that 
                                                                                                 supports running infile JavaScript.
