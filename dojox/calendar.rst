@@ -595,8 +595,8 @@ gridDoubleClick         The grid has been double-clicked                        
 change                  The selection has changed                                   item                  Yes
 rowHeaderClick          (Matrix view) a cell of the row header has been clicked     index, date           Yes
 expandRendererClick     (Matrix view) a expand renderer has been clicked 	    rowIndex, columnIndex Yes
-columnHeaderClick       (Matrix view) a cell of the column header has been clicked  index, date           Yes
 onExpandAnimationEnd    (Matrix view) an expand or collapse row animation has ended null                  Yes
+columnHeaderClick       (Column/Month Column views) a cell of the column header has been clicked  index, date           Yes
 onItemEditBegin         The event is entering in editing mode item                  null                  Yes
 onItemEditBeginGesture  An editing gesture of an event is beginning item            editKind              Yes
 onItemEditMoveGesture   An event is being moved                                     item                  Yes
@@ -1205,6 +1205,8 @@ Editing handlers
 ````````````````
 
 In some advanced use cases, the editing properties are not sufficient, the editing events are used to have a specific behavior.
+
+To prevent the default behavior, call in your handler of the item editing event e.preventDefault().
 
 One example is preventing moving an event in the 11:30am - 2:00pm interval.
 
