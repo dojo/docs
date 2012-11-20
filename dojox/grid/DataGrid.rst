@@ -16,7 +16,7 @@ A visual grid/table much like a spreadsheet.
 Introduction
 ============
 
-Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.  This document covers the ``dojox/grid/DataGrid``.  Beginning with Dojo 1.7, you should use the ``dgrid``, a next-generation grid component that takes full advantage of modern browsers and object stores.
+Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.  This document covers the ``dojox/grid/DataGrid``.  Beginning with Dojo 1.7, you should use ``dgrid`` or ``gridx``, next-generation grid components that take full advantage of modern browsers and object stores.
 
 
 .. code-example ::
@@ -271,7 +271,7 @@ Data for the grid comes from a data store.  The data can be specified declarativ
 
 Programmatically, a store can be assigned to a DataGrid with the ``setStore(myStore)`` method call.
 
-It should be noted that as of grid 1.3.1, the grid searched your datastore and converts all < to &lt; to avoid a cross-site scripting attack. Site developers who can guarantee that their data is safe can add a formatter function to convert all &lt; back to < if they need the datastore information parsed by the browser.
+It should be noted that as of grid 1.3.1, the grid searched your datastore and converts all < to < to avoid a cross-site scripting attack. Site developers who can guarantee that their data is safe can add a formatter function to convert all < back to < if they need the datastore information parsed by the browser.
 
 
 Locking columns from horizontal scrolling
@@ -394,7 +394,7 @@ Preventing cross-site scripting (XSS) attacks
 
 To avoid cross-site scripting (XSS) attacks, the grid will escape any HTML data that comes from an external source (datastore).  This escaping also applies to any values that are returned from a custom get function on a cell.  If you would like to format your data using HTML, you should create a custom formatter function for the cell and apply your formatting there instead.
 
-Site developers who can guarantee that their data is safe can add a formatter function to convert all &lt; back to < if they need the datastore information parsed by the browser.
+Site developers who can guarantee that their data is safe can add a formatter function to convert all < back to < if they need the datastore information parsed by the browser.
 
 Finally, you can use the escapeHTMLInData option - however, this is `VERY HIGHLY DISCOURAGED` as it opens your application up to XSS attacks.
 
@@ -1479,3 +1479,4 @@ See also
 * `Simple Dojo Grids <http://www.sitepen.com/blog/2007/11/06/simple-dojo-grids/>`_
 * `Dojo Grid Widget Updated. Data Integration and Editing Improvements. <http://ajaxian.com/archives/dojo-grid-widget-updated-data-integration-and-editing-improvements>`_
 * `Decruft. Delight. dgrid Beta Is Here! <http://www.sitepen.com/blog/2012/04/23/dgrid_beta/>`_
+* `Gridx 1.0 on GitHub <github.com/oria/gridx/>`_
