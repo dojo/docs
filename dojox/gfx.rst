@@ -202,7 +202,7 @@ is equivalent to
 
   shape.setStroke({color: "black"}).
 
-Implementation note: Canvas ignores the line style. All lines are drawn solid.
+Implementation note: From 1.9, Canvas supports the line style property using either the new HTML5 setLineDash() method if the browser implements it, or via a gfx custom implementation. In the latter case, the join property is ignored.
 
 Fill property
 -------------
