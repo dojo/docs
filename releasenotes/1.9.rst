@@ -110,6 +110,11 @@ In 1.9, as it is not reliable, the Date constructor is not used, and time.newDat
 
 In dojo 1.8, the renderers life cycle events (onRendererXXXX) have the renderer as parameter. In 1.9, an event is passed as parameter. This event will provide the renderer but also the view where this renderer is used and for "rendererCreated" and "rendererReused" events the data item displayed by this renderer.
 
+dojox/gfx
+---------
+
+   * Add dashed stroke support to canvas renderer. If the browser implements the (new) HTML5 dash api (context2d.setLineDash()) then the gfx renderer uses it. Otherwise, it relies on a custom (canvas- specific) implementation.
+
 Util
 ====
 
