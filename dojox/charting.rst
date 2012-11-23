@@ -109,9 +109,6 @@ And here comes an example:
 Working with Plots
 ==================
 
-Adding Plots
-------------
-
 The addPlot() call is used to determine what type of chart you are going to produce, and there are a variety of options to select. Here are a few examples:
 
 TODO: Examples of Different Chart Plot Types
@@ -165,7 +162,7 @@ Available 2D chart types include:
    * **Indicator** - For adding vertical or horizontal indicator threshold on the chart.
 
 Lines, Areas and Markers Plots
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------
 
 With any of the lines, areas or markers types you have five specific options. First, there are three options for controlling aspects of **lines**, **areas**, and **markers**. These are often defined by the chosen plot type, but can be changed to get other behaviors. The lines option determines whether or not lines are used to connect data points. If the areas type is selected, the area below the data line will be filled. The markers option will determine if markers are placed at data points. 
 
@@ -209,7 +206,7 @@ The markers are fixed size symbols retrieved from the chart theme. To change the
 
 
 Bars, Columns, Candle Stick Plots
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------
 
 Bar, column, and candle stick graph types have some unique option to control width of columns:
 
@@ -244,8 +241,8 @@ For any chart type that supports axes, you can also define custom names to your 
   });
 
 
-Bubble Plots
-~~~~~~~~~~~~
+Bubble Plot
+-----------
 
 Tne bubble plot provides several options including bubble fill, stroke and shadow.
 
@@ -263,7 +260,7 @@ With size corresponding to the size of the bubble for a given data point.
 
 
 Pie Plot
-~~~~~~~~
+--------
 
 Pie charts have a separate list of parameters. Here are the parameters for the pie chart, from Pie.js:
 
@@ -285,7 +282,7 @@ Pie charts have a separate list of parameters. Here are the parameters for the p
   }
 
 Style on Lines, Areas, Bars, Columns, Bubble & Pie plots
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------------------
 
 These plots support a common set of style properties that when provided override the style taken from the chart theme.
 This includes for example **fill** property to specify with fill is used by the plot.
@@ -339,9 +336,8 @@ An example of a column plot with outside labels:
   });
 
 
-
 Spider Plot
-~~~~~~~~~~~
+-----------
 
 Spider chart also keeps a separate list of parameters. Here comes the parameters of spider chart.
 
@@ -399,9 +395,8 @@ The Spider plot contains as many axes as the number of dimensions in its data (5
  
 Note that all the parameters supported for Cartesian plots except min and max are not support here.
 
-
 Grid Plot
-~~~~~~~~~
+---------
 
 One other type with unique options is the grid. This plot type will draw grid lines along the tick marks and supports
 four boolean options to determine if lines will be displayed at the horizontal or vertical and major or
@@ -462,9 +457,8 @@ Finally to avoid a grid line to be rendered on the axis lines you can set the re
       renderOnAxis: false });
   });
 
-
 Indicator Plot
-~~~~~~~~~~~~~~
+--------------
 
 The indicator plot type will draw horizontal or vertical lines on the chart at a given position. Optionally a label as
 well as markers can also be drawn on the indicator line. These indicators are typically used as threshold indicators
@@ -515,7 +509,7 @@ and on the threshold line markers are rendered at coordinates 8, 17 and 30 along
 
 
 Multiple Plots
-~~~~~~~~~~~~~~
+--------------
 
 Multiple plots can be added to the chart and associated to various series. They can be of differing types and can all be
 configured separately. Each plot you add with addPlot() will be layered behind the previous plot. In addition, plots can
