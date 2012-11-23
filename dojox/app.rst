@@ -6,46 +6,193 @@ dojox/app
 
 :since: V1.7
 
-``dojox/app`` is an application framework designed to allow simple configuration of potentially nested views and to facilitate the transitioning between these views. Its main current targets are mobile (phone & tablet) devices but it is not restricted to this and can be used for desktop applications as well. Thanks to ``dojox/app`` the applications are easily configurable and buildable for easy and fast deployment.
-There are two core modules that will need to work together to accomplish these goals:
+.. contents ::
+   :depth: 2
+
+Introduction
+============
+
+``dojox/app`` is an application framework designed to allow simple configuration of potentially nested views and to
+facilitate the transitioning between these views based on a configuration file. Its main current targets are mobile
+(phone & tablet) devices but it is not restricted to this and can be used for desktop applications as well. Thanks
+to ``dojox/app`` the applications are easily configurable and buildable for easy and fast deployment. There are two
+core modules that will need to work together to accomplish these goals:
 
 * ``dojox/app`` - A library that provides high-level application controllers, defined by metadata which describes the overall structure and navigation of the application and it's views.
 * ``dojox/mvc`` – An optional library that provides the ability to have view concerns separated from model or data concerns by using simple binding between them so that they can be kept in sync.
 
-Overview
-========
+If ``dojox/app`` is mandatory, ``dojox/mvc`` can be used or not based on your data binding requirements.
 
-The following diagram represents the high level architecture of ``dojox/app``:
+Creating an Application
+=======================
 
-.. image :: ./app/AppDiagram.png
+As with any Dojo-based web application, it's important to create your HTML page with a script tag referencing the Dojo
+loader dojo. Once done you require the ``dojox/app`` main module and provide it with the application JSON configuration file as follows:
 
-The main dojox/app modules
-==========================
+.. js ::
 
-``dojox/app`` is built around the following focused core modules:
+  require(["dojox/app/main", "dojox/json/ref", "dojo/text!./config.json"],
+      function(Application, json, config){
+    // startup the application
+    Application(json.fromJson(config));
+  });
 
-:ref:`dojox/app/main <dojox/app/main>` is used to create a ``dojox/app`` Application object from the JSON configuration. The main responsibilities of ``dojox/app/main`` include loading the various controllers & data stores as well as managing the application lifecycle.
+Upon loading the configuration, the views, stores and models described in the configuration are created and the application
+lifecycle is started.
 
-:ref:`dojox/app/View <dojox/app/view>` provides a view object in charge of the view rendering and lifecycle. It contains a template string which will be rendered.  A view can itself have nested View objects.
+Here is an excerpt of a typical configuration file:
 
-:ref:`dojox/app/Controller <dojox/app/Controller>` a base class for the various application controllers:
+.. js ::
 
-* ``dojox/app/controllers/Layout`` a controller that performs nested view layout
+	{
+		"id": "todoApp",
+		"name": "ToDo App",
+		"description": "These is a ToDo sample application based on the Dojo Toolkit and provided under Dojo license.",
+		"loaderConfig": {
+			"paths": {
+				"todoApp": "../demos/todoApp"
+			}
+		},
+		"dependencies": [
+			"dojox/mobile/TabBar",
+			// ...
+			"dojox/mvc/at"
+		],
+		"modules": [
+			"todoApp/todoApp"
+		],
+		"controllers": [
+			"dojox/app/controllers/History"
+		],
+		"stores": {
+			"listsDataStore":{
+			   "type": "dojo/data/ItemFileWriteStore",
+			   "params": {
+					"url": "./resources/data/lists.json"
+			   }
+			},
+			// ...
+		},
+		"models": {
+			"listsmodel": {
+				"modelLoader": "dojox/app/utils/mvcModel",
+				"type": "dojox/mvc/EditStoreRefListController",
+				"params":{
+					"datastore": {"$ref":"#stores.listsDataStore"}
+				}
+			},
 
-* ``dojox/app/controllers/Load`` a controller that loads the view templates and view definition modules
+			"allitemlistmodel": {
+				"modelLoader": "dojox/app/utils/mvcModel",
+				"type": "dojox/mvc/EditStoreRefListController",
+				"params":{
+					"datastore": {"$ref":"#stores.allitemlistStore"}
+				}
+			}
+		},
+		"defaultView": "items,ViewListTodoItemsByPriority",
+		"defaultTransition": "fade",
+		"views": {
+			"configuration": {
+				"defaultView": "SelectTodoList",
+				"defaultTransition": "fade",
+				"definition": "none",
 
-* ``dojox/app/controllers/History`` a controller that maintains application history using HTM5 history API. This will not work on platforms that don’t support it like IE, Android 3 & 4, iOS 4.
+				"views": {
+					"SelectTodoList": {
+						"template": "todoApp/templates/configuration/SelectTodoList.html"
+					},
 
-* ``dojox/app/controllers/HistoryHash`` an alternate  controller that maintains application history using URL hash. It works on all browsers but has limitations with regard to browser refresh and going back to an URL out of application’s history stack.
+					"ModifyTodoLists": {
+						"template": "todoApp/templates/configuration/ModifyTodoLists.html"
+					},
 
-:ref:`dojox/app/model <dojox/app/model>`, depending on the application models configuration, is creating either simple or MVC models for the views to bind their widgets to.
+					"EditTodoList": {
+						"template": "todoApp/templates/configuration/EditTodoList.html"
+					}
+				}
+			},
+			// ...
+		}
+	}
 
-:ref:`dojox/app/module <dojox/app/module>` a package containing various modules than can be used in the configuration file to be mixed into the Application object.
+You can find the entire configuration file for this typical application `here <https://github.com/cjolif/dojo-todo-app/blob/master/config-phone.json>`_
 
-The Configuration Object
-========================
+Once started the corresponding application looks like the following:
 
-Configuration comes in the form of a basic JSON-like object with several key, pre-defined properties:
+.. image :: ./app/AppExample.png
+
+See the todoApp example in Dojo demos installation directory for the full application.
+
+Building an Application
+=======================
+
+Once you have created your configuration file and the application you might want to build the application for production.
+For that ``dojox/app`` comes with extensions to the Dojo build system in order to help you build your application from the
+configuration file.
+
+In order to achieve that you will need to create a simple Dojo build system profile that will contain the key
+information of your build and import the ``dojox/app`` extensions into the build process.
+
+.. js::
+
+	// import the dojox/app extension to the build system
+	require(["dojox/app/build/buildControlApp"], function(bc){
+	});
+
+	var profile = {
+		basePath: "..",
+		releaseDir: "./layoutApp/release",
+		action: "release",
+		cssOptimize: "comments",
+	/*	multipleAppConfigLayers: true,*/
+		packages:[{
+			name: "dojo",
+			location: "../../../dojo"
+		},{
+			name: "dijit",
+			location: "../../../dijit"
+		},{
+			name: "dojox",
+			location: "../../../dojox"
+		},{
+			name: "myApp",
+			location: "../../../myApp",
+		}],
+		layers: {
+			"myApp/myApp": {
+				include: [ "myApp/index.html" ]
+			}
+		}
+	};
+
+
+You will then need to reference that profile as well as your configuration file when running the Dojo build tool. For example:
+
+.. ::
+
+    node ../../dojo/dojo.js load=build --profile ../../dojox/app/tests/layoutApp/build.profile.js --appConfigFile layoutApp/config.json
+
+
+By default the extension uses the first layer in the profile (here "myApp/myApp") to bundle all the modules for the
+application. You can specify an alternate layer you want to target by passing -appConfigLayer "layer/name" on the command line.
+
+Alternatively, you can make sure a layer per-view is built instead of a single layer for all the app by having the
+multipleAppConfigLayers: true set to true in your profile. This is useful if you have a lot of views that won't get
+navigated to in a typical usage of your application. In that case you might not want to load everything upfront. In this
+case the definition file of each view will be used as the layer for the view.
+
+**Limitation**
+
+This extension does not support the "./" shortcut notation to reference the modules in the config file and default
+definition file. You have to explicitly list your definition file and use absolute module paths. You can very easily
+do that by creating an "myApp" module that you should instead of "." to reference your modules.
+
+
+The Configuration File
+======================
+
+The configuration comes in the form of a JSON-like object of the following keys and property values:
 
 id
 --
@@ -223,7 +370,7 @@ By default if no definition module is specified for a view it is looked up autom
 .. js ::
 
   "views": {
-    // simple view without any children views 
+    // simple view without any children views
     // views can has its own dependencies which will be loaded
     // before the view is first initialized.
     "home": {
@@ -278,182 +425,38 @@ By default if no definition module is specified for a view it is looked up autom
     }
   }
 
-This configuration serves two purposes: configuring the application within the client and acting as a map for building the application for production.
+This configuration serves two purposes configuring the application within the client without having to do it by code
+and help building the application for production.
 
-How to use ``dojox/app``
-========================
+The main dojox/app modules
+==========================
 
-As with any Dojo-based web application, it's important to create your HTML page with a script tag referencing the Dojo loader dojo. Once done you load the main module and provide it with the configuration file as follows:
+``dojox/app`` is built around the following focused core modules that can be used in the configuration file:
 
-.. js ::
+:ref:`dojox/app/main <dojox/app/main>` is used to create a ``dojox/app`` Application object from the JSON configuration. The main responsibilities of ``dojox/app/main`` include loading the various controllers & data stores as well as managing the application lifecycle.
 
-  require(["dojox/app/main", "dojox/json/ref", "dojo/text!./config.json"],
-      function(Application, json, config){
-    // startup the application
-    Application(json.fromJson(config));
-  });
+:ref:`dojox/app/View <dojox/app/view>` provides a view object in charge of the view rendering and lifecycle. It contains a template string which will be rendered.  A view can itself have nested View objects.
 
-Upon loading the ``dojox/app`` views, stores and models are created and the application lifecycle is started.
-Here is a full example of a configuration file:
+:ref:`dojox/app/Controller <dojox/app/Controller>` a base class for the various application controllers:
 
-.. js ::
+* ``dojox/app/controllers/Layout`` a controller that performs nested view layout
 
-	{
-		"id": "todoApp",
-		"name": "ToDo App",
-		"description": "These is a ToDo sample application based on the Dojo Toolkit and provided under Dojo license.",
-		"splash": "splash",
+* ``dojox/app/controllers/Load`` a controller that loads the view templates and view definition modules
 
-		"dependencies": [
-			"dojox/mobile/TabBar",
-			"dojox/mobile/RoundRect",
-			"dojox/mobile/TabBarButton",
-			"dojox/mobile/TextBox",
-			"dojox/mobile/TextArea",
-			"dojox/mobile/CheckBox",
-			"dojox/mobile/ExpandingTextArea",
-			"dojox/mobile/Button",
-			"dojox/mobile/RoundRect",
-			"dojox/mobile/Heading",
-			"dojox/mobile/ListItem",
-			"dojox/mobile/RoundRectList",
-			"dojox/mobile/RoundRectCategory",
-			"dojox/mobile/Switch",
-			"dojox/mobile/SimpleDialog",
-			"dojox/mobile/DatePicker",
-			"dojox/mobile/Opener",
-			"dojo/date/stamp",
-			"dojox/app/widgets/Container",
-			"dojo/data/ItemFileWriteStore",
-			"dojox/mvc/EditStoreRefListController",
-			"dojox/mvc/Repeat",
-			"dojox/mvc/Group",
-			"dojox/mvc/Output",
-			"dojox/mvc/at"
-		],
+* ``dojox/app/controllers/History`` a controller that maintains application history using HTM5 history API. This will not work on platforms that don’t support it like IE, Android 3 & 4, iOS 4.
 
-		"modules": [],
+* ``dojox/app/controllers/HistoryHash`` an alternate  controller that maintains application history using URL hash. It works on all browsers but has limitations with regard to browser refresh and going back to an URL out of application’s history stack.
 
-		"controllers": [
-			"dojox/app/controllers/History"
-		],
+:ref:`dojox/app/model <dojox/app/model>`, depending on the application models configuration, is creating either simple or MVC models for the views to bind their widgets to.
 
-		"stores": {
-			"listsDataStore":{
-			   "type": "dojo/data/ItemFileWriteStore",
-			   "params": {
-					"url": "./resources/data/lists-emoji.json"
-			   }
-			},
-
-			"allitemlistStore":{
-			   "type": "dojo/data/ItemFileWriteStore",
-			   "params": {
-					"url": "./resources/data/all-items-emoji.json"
-			   }
-		   }
-		},
-
-		"models": {
-			"listsmodel": {
-				"modelLoader": "dojox/app/utils/mvcModel",
-				"type": "dojox/mvc/EditStoreRefListController",
-				"params":{
-					"datastore": {"$ref":"#stores.listsDataStore"}
-				}
-			},
-
-			"allitemlistmodel": {
-				"modelLoader": "dojox/app/utils/mvcModel",
-				"type": "dojox/mvc/EditStoreRefListController",
-				"params":{
-					"datastore": {"$ref":"#stores.allitemlistStore"}
-				}
-			},
-
-			"itemlistmodel": {
-				"modelLoader": "dojox/app/utils/mvcModel",
-				"type": "dojox/mvc/EditStoreRefListController",
-				"params":{
-					"datastore": {"$ref":"#stores.allitemlistStore"},
-									"query": {"listId": 0}
-				}
-			}
-		},
-
-		"defaultView": "items,ViewListTodoItemsByPriority",
-
-		"defaultTransition": "fade",
-
-		"views": {
-			"configuration": {
-				"defaultView": "SelectTodoList",
-				"defaultTransition": "fade",
-				"definition": "none",
-
-				"views": {
-					"SelectTodoList": {
-						"template": "./templates/configuration/SelectTodoList.html"
-					},
-
-					"ModifyTodoLists": {
-						"template": "./templates/configuration/ModifyTodoLists.html"
-					},
-
-					"EditTodoList": {
-						"template": "./templates/configuration/EditTodoList.html"
-					}
-				}
-			},
-
-			"items": {
-				"template": "./templates/items.html",
-				"defaultView": "ViewListTodoItemsByPriority",
-				"defaultTransition": "fade",
-				"views": {
-					"ViewListTodoItemsByPriority":{
-						"template": "./templates/items/ViewListTodoItemsByPriority.html"
-					},
-					"ViewAllTodoItemsByDate":{
-						"template": "./templates/items/ViewAllTodoItemsByDate.html"
-					}
-				}
-			},
-
-			"details": {
-				"defaultView": "EditTodoItem",
-				"defaultTransition": "fade",
-				"definition": "none",
-
-				"views": {
-					"EditTodoItem":{
-						"template": "./templates/details/EditTodoItem.html"
-					},
-
-					"EditItemRepeat":{
-						"template": "./templates/details/EditItemRepeat.html"
-					},
-
-					"EditItemRemindMe":{
-						"template": "./templates/details/EditItemRemindMe.html"
-					},
-					"EditItemPriority":{
-						"template": "./templates/details/EditItemPriority.html"
-					},
-					"EditItemList":{
-						"template": "./templates/details/EditItemList.html"
-					}
-				}
-			}
-		}
-	}
+:ref:`dojox/app/module <dojox/app/module>` a package containing various modules than can be used in the configuration file to be mixed into the Application object.
 
 
-The corresponding application looks like the following:
+The following diagram represents the high level architecture of ``dojox/app`` and in particular how the modules listed
+above interacts each others:
 
-.. image :: ./app/AppExample.png
+.. image :: ./app/AppDiagram.png
 
-See the todoApp example in Dojo demos installation directory for the full application.
 
 Comparison with ``dojox/mobile/app``
 ====================================
