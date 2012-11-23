@@ -88,6 +88,7 @@ dojox/charting
    * Axis (dojox/charting/axis2d/Default) now supports rendering ticks inside of the plot area instead of outside of the axis. For that specify a negative length for the ticks.
    * Mouse indicator action (dojox/charting/action2d/MouseIndicator) now support over mode in addition to mouse drag. The mouse indicator can also be further customized (ability to remove the label, ...).
    * Grids (dojox/charting/plot2d/Grid) now supports grid stripes in addition to grid lines.
+   * Ability to render labels on data points for Bubble/Columns/Default/Scatter plots by setting labels property to true.
   
 
 dojox/app

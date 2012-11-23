@@ -157,8 +157,8 @@ Available 2D chart types include:
 
  * Miscellaneous:
 
-   * **Pie** - Goes great with punch!
-   * **Spider** - A very effective tool for comparing multiple entities based on different characteristics
+   * **Pie** - Typical pie chart or circle graph.
+   * **Spider** - A very effective tool for comparing multiple entities based on different characteristics.
    * **Scatter** - Similar to MarkerOnly, yet capable to chart using gradient fields.
    * **Bubble** - Similar to scatter but with bubbles elements which sizes vary depending on the data.
    * **Grid** - For adding a grid layer to your chart.
@@ -287,7 +287,8 @@ Pie charts have a separate list of parameters. Here are the parameters for the p
 Style on Lines, Areas, Bars, Columns, Bubble & Pie plots
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-These plots support a common set of style properties that when provided override the style taken from the chart theme. This includes for example **fill** property to specify with fill is used by the plot.
+These plots support a common set of style properties that when provided override the style taken from the chart theme.
+This includes for example **fill** property to specify with fill is used by the plot.
 This includes as well a **shadow** property that allows you to add a shadow effect, and can
 be a :ref:`dojox.gfx <dojox/gfx>` stroke object with two extra parameters: dx and dy, which represent the offset to the
 right, and the offset down, respectively. Negative values can be specified for the dx and dy parameters to produce
@@ -316,6 +317,28 @@ Finally if you need to specify the style of your plot elements depending on a fu
       return {};
     }});
   });
+
+*About labels*
+
+All these plots also have the ability to render labels for each of the data points. The feature can be disabled using the
+**labels** property of the plots. It is on by default for Pie and off for the other type of plots.
+
+Several properties can be used to configure how the labels are rendered in particular you can choose how the labels
+will be laid out using the **labelStyle** property. For Pie you can specify "default" in which case the labels will
+be rendered on the pie slices or next to them depending on the **labelOffset** or "column" to render the labels by columns
+on the side of the chart. For other plots you can specify "inside" to render the labels inside the shape representing the
+data point (a column, a bar, a marker...) or "outside" to render the label above the data point. In that latter case you
+can use the **labelOffset** property to specify how far from the data point the label must be rendered.
+
+An example of a column plot with outside labels:
+
+.. js ::
+
+  require(["dojox/charting/plot2d/Columns", ...], function(Columns, ...){
+    chart.addPlot("default", { type: Columns, label: true, labelStyle: "outside", labelOffset: 25 });
+  });
+
+
 
 Spider Plot
 ~~~~~~~~~~~
@@ -515,16 +538,6 @@ have their own axes or share them with other plots on the chart.
 
 To associate a given series to a particular plot you should use the plot parameter when adding the series passing the
 plot name for the value as "other" in the example adobe.
-
-Smart Label for Pie
--------------------
-
-Listing labels on both sides of the pie, it keeps labels from overlapping with each other. The smart label can be specified as follows.
-
-.. js ::
-  
-  labelWiring: "ccc"
-  labelStyle:  "columns"
 
 Plots Animation
 ---------------
