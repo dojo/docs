@@ -93,6 +93,11 @@ dojox/charting
 
 dojox/app
 ---------
+
+*Features*
+dojox/app now provides a build system extension that allows you to easily build your application from the 
+config file. 
+*Incompatibilities*
 In 1.8 dojox/app would automatically require a model and mvc controller if it was listed in the config and not included in the list of dependencies.  In 1.9 the model and mvc controller will need to be listed in the dependencies. For example:
 
 .. js ::
