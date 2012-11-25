@@ -432,11 +432,12 @@ As each package.json resource is processed, a profile object is manufactured wit
             packageJson:{
                 __selfFilename:<path at which the package.Json file resides>
                 <remaining packageJson properties>
+            }
         }]
     }
 
 Notice that the package.json object is embedded in a package configuration object that the package.json object
-represents. Also notice that the property :ref:``selfFilename`` is set the absolute path at which the package.Json file
+represents. Also notice that the property :ref:`selfFilename` is set the absolute path at which the package.Json file
 resides and is added to the package.Json object. This gives the reference path for any relative paths found in the
 package.json object, the ``directories.lib`` path in particular.
 
@@ -749,7 +750,7 @@ Relative paths are computed with respect to the path at which the package.json r
 
 Given this design, you could build the myapp example *without* mentioning the dojo or dijit packages in the profile,
 instead supplying the command line argument ``--package ../../dojo,../../dijit``. In practice, this technique is
-typically used to execute the default profile of a package. Fore example, the default profile for dojo can be build like
+typically used to execute the default profile of a package. For example, the default profile for dojo can be build like
 this:
 
 .. code-block :: text
