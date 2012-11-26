@@ -36,7 +36,7 @@ This feature is implemented by creating exclusion regions bracketed by start and
 
   //>>excludeEnd("Tag")
 
-Lines 1 and 5, beginning with ``//>>`` are the pramas.  The ``//`` makes the lines comments in JavaScript, so they will not cause errors.  The full ``//>>`` is the symbol that the builder is looking for to tell it there is a pragma.
+Lines 1 and 5, beginning with ``//>>`` are the pragmas.  The ``//`` makes the lines comments in JavaScript, so they will not cause errors.  The full ``//>>`` is the symbol that the builder is looking for to tell it there is a pragma.
 
 The pragmas ``startExclude`` and ``stopExclude`` work together to create the exclusion region:  the region begins with the excludeStart, and ends with the matching excludeEnd pragma.
 
