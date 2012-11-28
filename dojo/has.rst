@@ -181,7 +181,7 @@ the name of the feature test.
  :ref:`dojo/sniff <dojo/sniff>`, ff, "Environment is running on the Firefox browser platform"
  :ref:`dojo/sniff <dojo/sniff>`, ie, "Environment is running on the Microsoft Internet Explorer browser platform"
  :ref:`dojo/sniff <dojo/sniff>`, wii, "Environment is running on the Nintendo Wii browser platform"
- :ref:`dijt/BackgroundIframe <dijit/BackgroundIframe>`,bgIframe,"Flag to create background iframe behind popups like Menus and Dialog.  A background iframe prevents problems with popups appearing behind applets/pdf viewers, and also prevents the bleed through select problem on IE6 and IE7."
+ :ref:`dijt/BackgroundIframe <dijit/BackgroundIframe>`,config-bgIframe,"Flag to create background iframe behind popups like Menus and Dialog.  A background iframe prevents problems with popups appearing behind applets/pdf viewers, and also prevents the bleed through select problem on IE6 and IE7."
  :ref:`dijit/_WidgetBase <dijit/_WidgetBase>`, dijit-legacy-requires, "Make dijit load modules the application didn't explicitly require, e.g. dijit/_base/manager, backwards compatibility in non-async mode."
  :ref:`dijit/form/_ExpandingTextAreaMixin <dijit/form/_ExpandingTextAreaMixin>`,  textarea-needs-help-shrinking, "Browser platform's <textarea> element needs manual help to shrink as content changes."
  :ref:`dojox/form/uploader/Base <dojox/form/uploader/Base>`, FormData, "Browser has a native FormData implementation, letting user compile set of key/value pairs to send using XMLHttpRequest"
