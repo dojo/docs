@@ -903,6 +903,25 @@ For example to programmatically scroll the view to 9 am using an animation, use 
 
 The columns view is using a scroll bar, in right-to-left display, you can define the position of the scroll bar with respect to the sheet by setting the scrollBarRTLPosition property. Values are “left” (default) and “right”.
 
+
+Row Header
+``````````
+
+The following properties allow to have a fine grained configuration of the row header:
+  * **rowHeaderGridSlotDuration** (60) - The duration of a slot for the row header grid.
+  * **rowHeaderLabelSlotDuration** (60) - The duration of a slot of the row header labels.
+  * **rowHeaderLabelOffset** (2) - The offset in pixels of the labels from the top of the row header cell.
+  * **rowHeaderFirstLabelOffset** (2) - The offset in pixels of the first label from the top of the first row header cell.
+
+Using these properties you can show a line every 15 minutes, a label every 30 min and center the label on the line (depend on font and font size) excepting the first one to be able to see it.
+
+.. js ::
+  new ColumnView({
+    rowHeaderGridSlotDuration: 15,
+    rowHeaderLabelSlotDuration: 30,
+    rowHeaderLabelOffset: -7
+  }, colViewNode);
+
 Layout
 ``````
 
