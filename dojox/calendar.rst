@@ -916,6 +916,7 @@ The following properties allow to have a fine grained configuration of the row h
 Using these properties you can show a line every 15 minutes, a label every 30 min and center the label on the line (depend on font and font size) excepting the first one to be able to see it.
 
 .. js ::
+
   new ColumnView({
     rowHeaderGridSlotDuration: 15,
     rowHeaderLabelSlotDuration: 30,
