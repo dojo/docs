@@ -334,6 +334,8 @@ To specify constructor parameters of the column view, set the columnViewProps pr
        data-dojo-props="dateInterval:'day',columnViewProps:{minHours:6}" 
        style="position:relative;width:500px;height:500px"></div>
 
+The time of day displayed is defined by the minHours (8 by default) and maxHours (18 by default) properties. For example to show the entire day set minHours to 0 and maxHours to 24.
+
 Note: The ColumnView can be replaced by the SimpleColumnView widget which is a columns view without the secondary sheet. See advanced configuration to see how to use this alternate view.
 
 Matrix View
@@ -518,7 +520,7 @@ Month      shows the month that contains the day defined by the "date" property.
 The following functions are also exposed to help navigation:
 
   * nextRange(): show next time range.
-  * previousRange: show previous time range.
+  * previousRange(): show previous time range.
   * goToday(): show the current day.
 
 These buttons and methods are just shortcuts that define the date, dateInterval and dateIntervalSteps properties.
@@ -526,9 +528,11 @@ These buttons and methods are just shortcuts that define the date, dateInterval 
 Event creation
 --------------
 
-Events are retrieved in the data store. To programmatically add a new event, the developer can use the store put() method.
+Events are retrieved in the data store. To programmatically add a new event, the developer can use the store add() method.
 
 The calendar is allowing to interactively create an event by pressing the mouse button on the grid and dragging the mouse to set the duration of the event.
+
+Since Dojo 1.9, this interactive creation is working with asynchronous stores, the newly created event is added at the end of the gesture.
 
 To enable the creation, the createItemOnGridClick property of the calendar must be set to true (false by default).
 Furthermore, a custom function creating the item must be set on the createItemFunc property.
@@ -862,7 +866,7 @@ Layout priority
 ```````````````
 
 During the layout process, the events that are in the displayed time range are sorted according to the follwing comparison function:
-  * Events that starts first are placed first
+  * Events that start first are placed first,
   * If two events have the same start time, the longest is placed first.
 
 These simple rules allow to have nice looking layout when events are overlapping.
@@ -915,7 +919,7 @@ The following properties allow to have a fine grained configuration of the row h
   * **rowHeaderLabelOffset** (2) - The offset in pixels of the labels from the top of the row header cell.
   * **rowHeaderFirstLabelOffset** (2) - The offset in pixels of the first label from the top of the first row header cell.
 
-Using these properties you can show a line every 15 minutes, a label every 30 min and center the label on the line (depend on font and font size) excepting the first one to be able to see it.
+Using these properties, you can show a line every 15 minutes, a label every 30 min and center the label on the line (depend on font and font size) excepting the first one to be able to see it.
 
 .. js ::
 
