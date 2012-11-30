@@ -169,7 +169,7 @@ information of your build and import the ``dojox/app`` extensions into the build
 
 You will then need to reference that profile as well as your configuration file when running the Dojo build tool. For example:
 
-.. sh::
+.. js::
 
     node ../../dojo/dojo.js load=build --profile ../../dojox/app/tests/layoutApp/build.profile.js --appConfigFile layoutApp/config.json
 
