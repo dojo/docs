@@ -171,7 +171,8 @@ You will then need to reference that profile as well as your configuration file 
 
 .. js::
 
-    ./build.sh --profile <dojo-install>/dojox/app/tests/layoutApp/build.profile.js --appConfigFile <dojo-install>/dojox/app/tests/layoutApp/config.json
+    ./build.sh --profile <dojo-install>/dojox/app/tests/layoutApp/build.profile.js 
+               --appConfigFile <dojo-install>/dojox/app/tests/layoutApp/config.json
 
 
 By default the extension uses the first layer in the profile (here "myApp/myApp") to bundle all the modules for the
