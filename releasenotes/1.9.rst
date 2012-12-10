@@ -89,6 +89,7 @@ dojox/charting
    * Mouse indicator action (dojox/charting/action2d/MouseIndicator) now support over mode in addition to mouse drag. The mouse indicator can also be further customized (ability to remove the label, ...).
    * Grids (dojox/charting/plot2d/Grid) now supports grid stripes in addition to grid lines.
    * Ability to render labels on data points for Bubble/Columns/Default/Scatter plots by setting labels property to true.
+   * Tooltip on stacked plots now display the value of the hovered data point not of the stacked value. One can go back to previous behavior if needed by customizing the text function of the Tooltip action.
   
 
 dojox/app
