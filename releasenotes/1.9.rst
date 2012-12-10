@@ -17,13 +17,13 @@ of Dojo might include fixes to support future releases of these browsers, but we
 
 **Desktop**
 
-* Firefox 3.6-12
+* Firefox 3.6-17
 
 * Safari 5-6
 
-* Chrome 13-21
+* Chrome 13-23
 
-* IE 6-9
+* IE 6-10
 
 * Opera 10.50-12 (Dojo core only)
 
@@ -35,7 +35,7 @@ of Dojo might include fixes to support future releases of these browsers, but we
 
 * BlackBerry 6-7 & 10 (Platform browser)
 
-* Mobile compatibility on desktop browsers: IE 8-9, Firefox 4-12, Safari 5-6, Chrome 13-19
+* Mobile compatibility on desktop browsers: IE 8-10, Firefox 4-17, Safari 5-6, Chrome 13-23
 
 TODO: Link to page with specific vendor device models tested on
 
