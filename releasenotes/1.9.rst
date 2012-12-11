@@ -84,13 +84,18 @@ DojoX
 dojox/charting
 --------------
 
+*Features*
+
    * Threshold indicators (dojox/charting/plot2d/Indicator) can now easily be drawn on top of the chart.
    * Axis (dojox/charting/axis2d/Default) now supports rendering ticks inside of the plot area instead of outside of the axis. For that specify a negative length for the ticks.
-   * Mouse indicator action (dojox/charting/action2d/MouseIndicator) now support over mode in addition to mouse drag. The mouse indicator can also be further customized (ability to remove the label, ...).
-   * Grids (dojox/charting/plot2d/Grid) now supports grid stripes in addition to grid lines.
+   * Mouse indicator action (dojox/charting/action2d/MouseIndicator) now supports over mode in addition to mouse drag. The mouse indicator can also be further customized (ability to remove the label, ...).
+   * Grids (dojox/charting/plot2d/Grid) now support grid stripes in addition to grid lines.
    * Ability to render labels on data points for Bubble/Columns/Default/Scatter plots by setting labels property to true.
+
+*Incompatibilities*
+
    * Tooltip on stacked plots now display the value of the hovered data point not of the stacked value. One can go back to previous behavior if needed by customizing the text function of the Tooltip action.
-  
+   * Tooltip, highlight and magnify actions are not anymore hardcoded into the spider plot (dojox/charting/plot2d/Spider). One needs to explicitly set them up on the plot to get them activated. See `dojox/charting migration`_ for details.
 
 dojox/app
 ---------
@@ -110,7 +115,8 @@ In 1.8 dojox/app would automatically require a model and mvc controller if it wa
 		"dojox/app/utils/simpleModel",
 		"dojox/app/utils/mvcModel",
 		"dojox/mvc/EditStoreRefListController",
-		: : :
+		// ...
+	]
 
 dojox/calendar
 --------------
@@ -118,15 +124,12 @@ dojox/calendar
 *Features*
 
   * Better support of asynchronous stores. Interactive event creation is now working with asynchronous stores (event is added to store at the end of the gesture). Event renderers are notified of the current store state (being created but not added yet to store, being added/updated, in store). An example is available (tests/asynchStore.html)
-
   * New properties have been added to further customize the the row header of the column view.
 
 *Incompatibilities*
 
   * In 1.8, the Date constructor was used as last resort to decode a Date string. In 1.9, as it is not reliable, the Date constructor is not used, and time.newDate() will throw an error if parameter is string and it cannot be decoded using ISO decoder (dojo/date/stamp).
-
   * In 1.8, the renderers life cycle events (onRendererXXXX) have the renderer as parameter. In 1.9, an event is passed as parameter. This event will provide the renderer but also the view where this renderer is used and for "rendererCreated" and "rendererReused" events the data item displayed by this renderer.
-
   * The calendar is now complying with the resize policy of Dojo. If the calendar, and especially the Matrix View, is *not* in a Dijit container or a Dojo mobile container, the application developer must call the resize() method of the calendar (or the view if used as standalone).
 
 dojox/gfx
@@ -149,3 +152,14 @@ Dijit Calendar
 --------------
 To avoid accessibility violations the Calendar template changed so that the month name and arrows, plus the
 previous/current/next year, are not contained within the TABLE node.   CSS was correspondingly changed.
+
+dojox/charting migration
+------------------------
+
+Tooltip, highlight and magnify actions are not anymore hardcoded into the spider plot (dojox/charting/plot2d/Spider). One needs to explicitly set them up on the plot to get them activated as follows:
+
+.. js ::
+
+	new Tooltip(spiderchart);
+	new Highlight(spiderchart);
+	new Magnify(spiderchart, "default", {duration: 800, scale: 1.5});

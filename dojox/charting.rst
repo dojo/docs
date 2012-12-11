@@ -1064,7 +1064,7 @@ All plot actions except Tooltip support the following common keyword parameters:
 Highlight
 ---------
 
-This action highlights (changes a color by modifying a fill) individual elements of a chart, when a user hovers over an element with the mouse. Affected elements include: markers, columns, bars, circles, and pie slices.
+This action highlights (changes a color by modifying a fill) individual elements of a chart, when a user hovers over an element with the mouse. Affected elements include: markers, columns, bars, circles, pie slices and spider plots.
 
 Highlight supports one additional parameter:
 
@@ -1075,7 +1075,7 @@ Highlight supports one additional parameter:
 |           |                                   |                                  | element.                                                          |
 +-----------+-----------------------------------+----------------------------------+-------------------------------------------------------------------+
 
-The parameter can be any valid value for a color, e.g., "red", "#FF0000��, "#F00��, [255, 0, 0], {r: 255, g: 0, b: 0}, and so on. In this case this color will be used to fill an element.
+The parameter can be any valid value for a color, e.g., "red", "#FF0000", "#F00", [255, 0, 0], {r: 255, g: 0, b: 0}, and so on. In this case this color will be used to fill an element.
 
 If the parameter is a function, it receives a charting event object (see the previous article for details), and should return a valid color.
 
@@ -1143,7 +1143,7 @@ TODO: Shake Example
 Tooltip
 -------
 
-This action shows a Tooltip, when users hover over a charting element with the mouse. Affected elements include markers, columns, bars, circles, and pie slices.
+This action shows a Tooltip, when users hover over a charting element with the mouse. Affected elements include markers, columns, bars, circles, pie slices and spider circles.
 
 Tooltip supports the following keyword parameters:
 
@@ -1157,7 +1157,7 @@ Tooltip supports the following keyword parameters:
 
 The default text function checks if a data point is an object, and uses an optional "Tooltip" member if available, this is a provision for custom Tooltips. Otherwise, it uses a numeric value. Tooltip text can be any valid HTML, so you can specify rich text multi-line Tooltips if desired.
 
-The example below demonstrates Tooltip action.
+The example below demonstrates Tooltip action with custom text.
 
 .. js ::
 
@@ -1169,7 +1169,11 @@ The example below demonstrates Tooltip action.
       chart.addAxis("y", {vertical: true});
       chart.addPlot("default", {type: Columns, enableCache: true});
       chart.addSeries("Series A", [ ... ]);
-      new Tooltip(chart, "default");
+      new Tooltip(chart, "default", {
+         text: function(o){
+            return "Element at index: "+o.index;
+         }
+      });
       chart.render()
   });
 
@@ -1240,6 +1244,7 @@ MouseIndicator supports several additional parameters:
 +---------------------+----------+-------------+-------------------------------------------------------------------------------+
 |mouseOver            |Boolean   |false        |Whether the mouse indicator is enabled on mouse over or on mouse drag          |
 +---------------------+----------+-------------+-------------------------------------------------------------------------------+
+
 It also includes several styling additional parameters that allows to change the color if the indicator test, background, line... These style properties can also be set on the Chart theme.
 
 Here is an example showing how to attach a MouseIndicator action to the chart and configure it:
