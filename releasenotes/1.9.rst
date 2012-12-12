@@ -102,8 +102,7 @@ dojox/app
 
 *Features*
 
-   * dojox/app now provides a build system extension that allows you to easily build your application from the 
-config file. 
+   * dojox/app now provides a build system extension that allows you to easily build your application from the config file.
    * One can now use the `type` property for a View in the config file to specify alternate View class.
 
 *Incompatibilities*
