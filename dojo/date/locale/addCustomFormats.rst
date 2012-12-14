@@ -26,12 +26,13 @@ Usage
 
 .. js ::
 
-  require(["dojo/date/locale", "dojo/i18n!dojo/cldr/nls/gregorian"], function(locale, gregorian){
+  require(["dojo/_base/kernel", "dojo/date/locale", "dojo/i18n"], function(kernel, locale, i18n){
     var bundle = {
       timeFormat-custom: "HH:mm:ss.zzzz",
       dateFormat-custom: "d-MMMM-y"
     };
-    locale.addCustomFormats(gregorian, bundle);
+    i18n.cache["mypackage/nls/gregorian/" + kernel.locale] = bundle;
+    locale.addCustomFormats("mypackage", "gregorian");
   });
 
 See also
