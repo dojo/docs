@@ -178,10 +178,7 @@ You will then need to reference that profile as well as your configuration file 
 By default the extension uses the first layer in the profile (here "myApp/myApp") to bundle all the modules for the
 application. You can specify an alternate layer you want to target by passing -appConfigLayer "layer/name" on the command line.
 
-Alternatively, you can make sure a layer per-view is built instead of a single layer for all the app by having the
-multipleAppConfigLayers: true set to true in your profile. This is useful if you have a lot of views that won't get
-navigated to in a typical usage of your application. In that case you might not want to load everything upfront. In this
-case the definition file of each view will be used as the layer for the view.
+Alternatively, you can make sure a layer per-view is built instead of a single layer for the entire application by having the `multipleAppConfigLayers` property set to true in your profile. This is useful if you have a lot of views that won't get navigated to in a typical usage of your application. In that case you might not want to load everything upfront. In this case the definition file of each view will be used as the layer for the view.
 
 **Limitation**
 
