@@ -22,12 +22,14 @@ Some of the advanced features of dojo.parser, such as <script type="dojo/method"
 How is the code size of dojox.mobile.parser compared to dojo.parser?
 --------------------------------------------------------------------
 
-As of dojo-1.7 beta3, the size of dojox.mobile.parser is 1KB (built and gzipped), while dojo.parser (plus its dependent modules that are not required by the dojox.mobile base) is 10KB.
+In Dojo 1.7 the size of dojox.mobile.parser is 1KB (built and gzipped), while dojo.parser (plus its dependent modules that are not required by the dojox.mobile base) is 10KB.
 
 Do I have to use dojox.mobile.parser for dojox.mobile applications?
 -------------------------------------------------------------------
 
 No, you don't have to. dojox.mobile.parser is a subset of dojo.parser. Usage and how it works are basically the same. It has no mobile specific features. dojox.mobile.parser's ONLY advantage over dojo.parser is its smaller code size. If your application unfortunately does not work with dojox.mobile.parser, you can replace it with dojo.parser.
+Also if you are embeding your mobile application in an hybrid container such as Cordova, the size might not matter
+that much and you might prefer to pick the full parser.
 
 Can I use dojox.mobile.parser for desktop dojo applications?
 ------------------------------------------------------------
