@@ -101,14 +101,17 @@ Here is an excerpt of a typical configuration file:
 				"views": {
 					"SelectTodoList": {
 						"template": "todoApp/templates/configuration/SelectTodoList.html"
+						"nls": "todoApp/nls/SelectTodoList"
 					},
 
 					"ModifyTodoLists": {
 						"template": "todoApp/templates/configuration/ModifyTodoLists.html"
+						"nls": "todoApp/nls/ModifyTodoList"
 					},
 
 					"EditTodoList": {
 						"template": "todoApp/templates/configuration/EditTodoList.html"
+						"nls": "todoApp/nls/EditTodoList"
 					}
 				}
 			},
@@ -361,9 +364,15 @@ String. The default animation type for the view transition.
 
 views
 -----
-Object. The children views of an application or of a view. Dependencies may be defined on views for optimization and organization purposes. Models might also be defined on views if they are view-specific. Finally a view item as three additional properties: transition for specific view transitions, template for defining the view rendering and finally definition to provide an AMD module to be mixed into the view to control it.
+Object. The child views of an application or of a view. Dependencies may be defined on views for optimization and organization purposes. Models might also be defined on views if they are view-specific. Finally a view item as five additional properties:
+   * template for defining the view rendering for views of type ``dojox/app/View``
+   * definition to provide an AMD module to be mixed into the view to control it. By default if no definition module is specified for a view it is looked up automatically in "./views/<viewId>.js". If you don’t want a definition module at all you should specify the "none" value.
+   * transition for optional view-specific transitions
+   * nls for optionally defining an internationalisation AMD root module for the view of type ``dojox/app/View``. Per Dojo loader specifications the path to the module must contain "/nls/". Once done the view template can use the ${nls.nlskey} notation instead of english text to automatically use the text translated in the right language.
+   * type a reference to an AMD module defining an alternate view type extending ``dojox/app/ViewBase``.
+
 AMD modules identifiers starting with “.” will be resolved relative to the application root. All other modules identifiers will be resolved according to the Dojo AMD loader rules and in particular with respect to its configuration provided as part of the loaderConfig attribute.
-By default if no definition module is specified for a view it is looked up automatically in "./views/<viewId>.js". If you don’t want a definition module at all you should specify the "none" value.
+
 
 .. js ::
 
@@ -393,12 +402,14 @@ By default if no definition module is specified for a view it is looked up autom
         "main":{
           "template": "./views/simple/main.html"
           "definition": "none"
+          "nls": "./nls/simple/main"
         },
         "second":{
           "template": "./views/simple/second.html"
         },
         "third":{
           "template": "./views/simple/third.html"
+          "type": "mypackage/MyDtlView"
         }
       },
       "dependencies":[

@@ -6,8 +6,12 @@ dojox/app/View
 
 :since: V1.7 (``dojox/app/view``)
 
-``dojox/app/View`` module provides a View class to construct View instances, a template rendering engine to render view
-template and view lifecycle APIs. Each View can have one parent view and optionally several children views. It provides a templated
+``dojox/app/View`` module provides the default View for ``dojox/app``. It supports the view definition and lifecycle
+from ``dojox/app/ViewBase`` as well as a template rendering engine to load the view UI as a template and the ability to
+provide an internationalisation module for the view. For those who want to build their own views based on alternate
+templating system, or without a templating system they should directly extend ``dojox/app/ViewBase``.
+
+Each View can have one parent view and optionally several children views. It provides a templated
 container to host the domNodes for the children views. Its purpose is to allow the layout of the view to be provided
 through an html template and to have a set of children views which the view transitions between. For example, to display
 a set of tabs, you would use a View with a child view for each tab. The view's template would define where within the view
@@ -22,12 +26,15 @@ For example:
   <div  style="background:#c5ccd3;" class="view mblView">
   	<div data-app-region="top" data-dojo-type="dojox/mobile/Heading">Tab View</div>
 	<ul data-app-region="top" data-dojo-type="dojox/mobile/TabBar" barType="segmentedControl">
-		<li data-dojo-type="dojox/mobile/TabBarButton" icon1="images/tab-icon-16.png" icon2="images/tab-icon-16h.png"
+		<li data-dojo-type="dojox/mobile/TabBarButton" icon1="images/tab-icon-16.png"
+			icon2="images/tab-icon-16h.png"
 			transitionOptions='{title:"TabScene-Tab1",target:"tabscene,tab1",url: "#tabscene,tab1"}'
 			selected="true">Tab 1</li>
-		<li data-dojo-type="dojox/mobile/TabBarButton" icon1="images/tab-icon-15.png" icon2="images/tab-icon-15h.png"
+		<li data-dojo-type="dojox/mobile/TabBarButton" icon1="images/tab-icon-15.png"
+			icon2="images/tab-icon-15h.png"
 			transitionOptions='{title:"TabScene-Tab2",target:"tabscene,tab2",url: "#tabscene,tab2"}'>Tab 2</li>
-		<li data-dojo-type="dojox/mobile/TabBarButton" icon1="images/tab-icon-10.png" icon2="images/tab-icon-10h.png"
+		<li data-dojo-type="dojox/mobile/TabBarButton" icon1="images/tab-icon-10.png"
+			icon2="images/tab-icon-10h.png"
 			transitionOptions='{title:"TabScene-Tab3",target:"tabscene,tab3",url: "#tabscene,tab3"}'>Tab 3</li>
 	</ul>
   </div>
@@ -68,7 +75,5 @@ For example:
 		}
 	}
   });
-
-
 
 

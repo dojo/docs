@@ -108,7 +108,8 @@ dojox/app
 *Features*
 
    * dojox/app now provides a build system extension that allows you to easily build your application from the config file.
-   * One can now use the `type` property for a View in the config file to specify alternate View class.
+   * One can now use the `type` property for a view in the config file to specify alternate view class extending dojox/view/ViewBase.
+   * Configuration of views now accept a `nls` property to specify an AMD internationalisation root module for a view.
 
 *Incompatibilities*
 
