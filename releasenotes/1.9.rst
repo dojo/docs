@@ -81,6 +81,11 @@ which is now deprecated (and will be removed for 2.0).   Ex:
 DojoX
 =====
 
+dojox/mobile
+------------
+
+   * dojox/mobile data-aware lists now support an itemRenderer property allowing to change the type of ListItem instances created by the list.
+
 dojox/charting
 --------------
 
