@@ -349,11 +349,15 @@ Spider chart also keeps a separate list of parameters. Here comes the parameters
     divisions:       3,            // axis tick count
     axisColor:       "",        // spider axis color
     axisWidth:       0,            // spider axis stroke width
+    axisFont: "normal normal normal 11pt Arial" // spider axis font 
     spiderColor:     "",        // spider web color
     spiderWidth:     0,            // spider web stroke width
     seriesWidth:     0,            // plot border with
     seriesFillAlpha: 0.2,        // plot fill opacity
+    spiderOrigin:    0.16,       // distance of 0 value from the middle of the circle 
     markerSize:      3,            // radius of plot vertex (px)
+    divisions: 5,                // set division of the radar chart
+    precision: 0,                 // set decimal of the displayed number
     spiderType:         "polygon",     // style of spider web, "polygon" or "circle"
     animationType:   dojo.fx.easing.backOut,
   }
