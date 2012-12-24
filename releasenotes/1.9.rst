@@ -146,6 +146,11 @@ dojox/gfx
 Util
 ====
 
+Doh
+---
+Support added for returning a dojo/promise/Promise or dojo/Deferred from a test fixture.
+Before, you could only return a doh.Deferred or a dojo/_base/Deferred.
+
 
 Demos
 =====
