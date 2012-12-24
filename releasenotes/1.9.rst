@@ -154,8 +154,25 @@ Demos
 Migration Notes
 ===============
 
-Dijit Calendar
---------------
+dijit/_Container.addChild() migration
+-------------------------------------
+In 1.8, the behavior of dijit/_Container (and subclasses') addChild() method was undefined
+if some of _Container.containerNode's direct children were plain DOM nodes, rather than widgets.
+
+In practice though, when addChild(widget, n) would count to the n'th position, it would skip over the plain DOMNodes
+and only include the child widgets in the count.
+Further, if the existing child widgets were not direct children of this.containerNode, then addChild()
+would tend to place the new widget as a next or previous sibling of an existing
+child widget, rather than as a direct child of this.containerNode.
+
+In 1.9, parent.addChild(widget, n) places widget.domNode as the n'th DOMNode child of parent.containerNode, just like
+domConstruct.place() does.
+
+If your app was calling parent.addChild() on a widget that contained plain DOM nodes, and depending on the undefined
+behavior listed above, you may need to update your logic.
+
+dijit/Calendar migration
+------------------------
 To avoid accessibility violations the Calendar template changed so that the month name and arrows, plus the
 previous/current/next year, are not contained within the TABLE node.   CSS was correspondingly changed.
 
