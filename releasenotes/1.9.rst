@@ -180,6 +180,16 @@ domConstruct.place() does.
 If your app was calling parent.addChild() on a widget that contained plain DOM nodes, and depending on the undefined
 behavior listed above, you may need to update your logic.
 
+dijit/Dialog and iframes migration
+----------------------------------
+Whenever an application creates an iframe that can be focused by the user (i.e. that has focusable/clickable controls),
+the application is supposed to register the iframe via dijit/focus::registerIframe(frame).
+This has become more important in version 1.9 for Dialogs containing iframes.   If the iframe is not registered,
+then the user won't be able to focus controls within the iframe.
+
+This is due to new code in Dialog (new in 1.9, but also backported to 1.6, 1.7, and 1.8) that detects if focus
+has somehow left the Dialog, and tries to restore it to the Dialog.
+
 dojox/charting migration
 ------------------------
 
