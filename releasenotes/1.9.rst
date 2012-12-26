@@ -158,6 +158,10 @@ Demos
 
 Migration Notes
 ===============
+dijit/Calendar migration
+------------------------
+To avoid accessibility violations the Calendar template changed so that the month name and arrows, plus the
+previous/current/next year, are not contained within the TABLE node.   CSS was correspondingly changed.
 
 dijit/_Container.addChild() migration
 -------------------------------------
@@ -175,11 +179,6 @@ domConstruct.place() does.
 
 If your app was calling parent.addChild() on a widget that contained plain DOM nodes, and depending on the undefined
 behavior listed above, you may need to update your logic.
-
-dijit/Calendar migration
-------------------------
-To avoid accessibility violations the Calendar template changed so that the month name and arrows, plus the
-previous/current/next year, are not contained within the TABLE node.   CSS was correspondingly changed.
 
 dojox/charting migration
 ------------------------
