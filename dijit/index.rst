@@ -79,7 +79,7 @@ Infrastructure Widgets
 
 * :ref:`dijit._KeyNavContainer <dijit/_KeyNavContainer>`
 
-* :ref:`dijit._MenuBase <dijit/_MenuBase>` **STUB**
+* :ref:`dijit._MenuBase <dijit/_MenuBase>`
 
 * :ref:`dijit._PaletteMixin <dijit/_PaletteMixin>` **STUB**
 

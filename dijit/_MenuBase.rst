@@ -1,10 +1,10 @@
 .. _dijit/_MenuBase:
 
 ===============
-dijit._MenuBase
+dijit/_MenuBase
 ===============
 
-:Authors: TODO Author 
+:Authors: Bill Keese
 :since: 1.?
 
 .. contents ::
@@ -13,45 +13,12 @@ dijit._MenuBase
 Introduction
 ============
 
-TODO: introduce the module 
+_MenuBase is a base class used by :ref:`dijit/DropDownMenu <dijit/DropDownMenu>` (and by extension, by
+:ref:`dijit/Menu <dijit/Menu>`, and by :ref:`dijit/MenuBar <dijit/MenuBar>`.
 
-Usage
-=====
-
-.. js ::
-
-    // TODO
-
-Examples
-========
-
-Programmatic example
---------------------
-
-.. code-example ::
-
-  TODO - Here is a programmatic example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
-
-Declarative example
--------------------
-
-.. code-example ::
-
-  TODO - Here is a declarative example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
+It's not meant to be used directly by application code.
 
 See also
 ========
+* :ref:`dijit/DropDownMenu <dijit/DropDownMenu>`
+* :ref:`dijit/MenuBar <dijit/MenuBar>`
