@@ -1,11 +1,11 @@
 .. _dijit/_KeyNavContainer:
 
 =====================
-dojo._KeyNavContainer
+dojo/_KeyNavContainer
 =====================
 
-:Authors: TODO Author 
-:since: 1.?
+:Authors: Bill Keese
+:since: V1.0
 
 .. contents ::
     :depth: 2
@@ -13,45 +13,86 @@ dojo._KeyNavContainer
 Introduction
 ============
 
-TODO: introduce the module 
+_KeyNavContainer extends :ref:`dijit/_Container <dijit/_Container>` to
+provide keyboard navigation support.  Specifically:
 
-Usage
-=====
+    - The user can navigate using the arrow keys, either LEFT/RIGHT or UP/DOWN depending on the
+      orientation of the widget, and HOME/END keys.
+    - The user can jump to any given widget by typing one or more letters of the label of that widget.
 
-.. js ::
+To use this mixin, call connectKeyNavHandlers() in postCreate(), listing the keys for navigating to the previous
+and next widgets.
 
-    // TODO
+Also, child widgets must implement a focus() method.
 
 Examples
 ========
 
-Programmatic example
---------------------
-
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
-  TODO - Here is a programmatic example
+    .. js ::
 
-  .. js ::
+        require([
+            "dojo/_base/declare", "dojo/keys", "dojo/parser", "dojo/query",
+            "dijit/_WidgetBase", "dijit/_KeyNavContainer", "dojo/domReady!"
+        ], function(declare, keys, parser, query,  _WidgetBase, _KeyNavContainer){
+            MyMenu = declare([_WidgetBase, _KeyNavContainer], {
+                buildRendering: function(){
+                    // This is a behavioral widget so we'll just use the existing DOM.
+                    // Alternately we could have a template.
+                    this.inherited(arguments);
 
-  .. css ::
+                    // Set containerNode.   Usually this is set in the template.
+                    this.containerNode = this.domNode;
+                },
 
-  .. html ::
+                postCreate: function(){
+                    // Don't forget the this.inherited() call
+                    this.inherited(arguments);
 
+                    // Setup keyboard navigation
+                    this.connectKeyNavHandlers([keys.UP_ARROW], [keys.DOWN_ARROW]);
 
-Declarative example
--------------------
+                    // Set tabIndex on the container <table> node, since by default it's not tab navigable
+                    this.domNode.setAttribute("tabIndex", "0");
+                }
+            });
 
-.. code-example ::
+            MyMenuItem = declare(_WidgetBase, {
+                postCreate: function(){
+                    this.domNode.setAttribute("tabIndex", "-1");
+                },
+                focus: function(){
+                    this.domNode.focus();
+                }
+            });
 
-  TODO - Here is a declarative example
+            parser.parse();
+        });
 
-  .. js ::
+    .. css ::
 
-  .. css ::
+        table, td {
+            border: 1px solid gray;
+        }
+        td:focus {
+            background-color: yellow;
+        }
 
-  .. html ::
+    .. html ::
 
+        <table data-dojo-type="MyMenu">
+                <tr><td data-dojo-type="MyMenuItem">apple</td></tr>
+                <tr><td data-dojo-type="MyMenuItem">banana</td></tr>
+                <tr><td data-dojo-type="MyMenuItem">orange</td></tr>
+                <tr><td data-dojo-type="MyMenuItem">pear</td></tr>
+                <tr><td data-dojo-type="MyMenuItem">grapes</td></tr>
+                <tr><td data-dojo-type="MyMenuItem">strawberry</td></tr>
+        </table>
 
 See also
 ========
+* :ref:`dijit/_KeyNavMixin <dijit/_KeyNavMixin>`
+* :ref:`dijit/_Container <dijit/_Container>`
+
