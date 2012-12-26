@@ -73,7 +73,7 @@ Infrastructure Widgets
 
 * :ref:`dijit._Container <dijit/_Container>`
 
-* :ref:`dijit._DialogMixin <dijit/_DialogMixin>` **STUB**
+* :ref:`dijit._DialogMixin <dijit/_DialogMixin>`
 
 * :ref:`dijit._KeyNavMixin <dijit/_KeyNavMixin>`
 
