@@ -4,8 +4,8 @@
 dijit._PaletteMixin
 ===================
 
-:Authors: TODO Author 
-:since: 1.?
+:Authors: Bill Keese
+:since: V1.5
 
 .. contents ::
     :depth: 2
@@ -13,45 +13,78 @@ dijit._PaletteMixin
 Introduction
 ============
 
-TODO: introduce the module 
+_PaletteMixin is a base class for widgets like :ref:`dijit/ColorPalette <dijit/ColorPalette>`
+and :ref:`dojox/editor/plugins/InsertEntity <dojox/editor/plugins/InsertEntity>`.
 
-Usage
-=====
+It provides a keyboard accessible way to display a grid of items (colors, emoticons, etc.) and let the user
+select one.
 
-.. js ::
+The subclass must call _preparePalette() with the nested array of labels/id's for the grid nodes,
+and a non-nested array listing the tooltips for each cell.
 
-    // TODO
+In addition, dyeClass must be set as a lightweight class to represent each cell of the grid;
+the class must implement the the dijit/_PaletteMixin.__Dye interface.
 
 Examples
 ========
 
-Programmatic example
---------------------
-
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
-  TODO - Here is a programmatic example
+    .. js ::
 
-  .. js ::
+        require([
+            "dojo/_base/declare", "dojo/dom-construct",
+            "dijit/_WidgetBase", "dijit/_PaletteMixin", "dojo/domReady!"
+        ], function(declare, domConstruct, _WidgetBase, _PaletteMixin){
 
-  .. css ::
+            MyPalette = declare([_WidgetBase, _PaletteMixin], {
+                // summary:
+                //      A palette of numbers from 1.1 to 3.3
 
-  .. html ::
+                 //	Interface for the JS Object associated with a palette cell (i.e. DOMNode)
+                dyeClass: declare(null, {
+                    constructor: function(alias, row, col){
+                        this.label = alias;
+                    },
+                    getValue: function(){
+                        return this.label;
+                    },
+                    fillCell: function(cell, blankGif){
+                        cell.innerHTML = this.label;
+                    }
+                }),
 
+                buildRendering: function(){
+                    // Subclass must define this.gridNode as a <table> element.   Usually done in the template.
+                    this.domNode = this.gridNode = domConstruct.create("table");
+                },
 
-Declarative example
--------------------
+                postCreate: function(){
+                    // Create the grid
+                    this._preparePalette([
+                        [1.1, 1.2, 1.3],
+                        [2.1, 2.2, 2.3],
+                        [3.1, 3.2, 3.3]
+                    ],
+                    [
+                        "one point one", "one point two", "one point three", "two point one", "two point two",
+                        "two point three", "three point one", "three point two", "three point three"
+                    ]);
+                    this.inherited(arguments);
+                }
+            });
 
-.. code-example ::
-
-  TODO - Here is a declarative example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
+            var myPalette = new MyPalette({
+                onChange: function(val){
+                    console.log("selected: " + val);
+                }
+            });
+            myPalette.placeAt(document.body);
+        });
 
 
 See also
 ========
+* :ref:`dijit/ColorPalette <dijit/ColorPalette>`
+* :ref:`dojox/editor/plugins/InsertEntity <dojox/editor/plugins/InsertEntity>`
