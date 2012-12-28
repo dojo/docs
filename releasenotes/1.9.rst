@@ -190,6 +190,12 @@ then the user won't be able to focus controls within the iframe.
 This is due to new code in Dialog (new in 1.9, but also backported to 1.6, 1.7, and 1.8) that detects if focus
 has somehow left the Dialog, and tries to restore it to the Dialog.
 
+dijit template changes
+----------------------
+dijit/templates/InlineEditBox.html and dijit/form/robot/DropDownBox.html were changed in this release.
+If you have subclasses of InlineEditBox, ComboBox, FilteringSelect, or DateTextBox that have modified those templates,
+you may need to update your templates.
+
 dojox/charting migration
 ------------------------
 
