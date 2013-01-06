@@ -130,12 +130,10 @@ Examples
 
 .. _dojo/_base/array#foreach:
 
-.. _dojo/_base/array#forEach:
-
 forEach()
 ---------
 
-``forEach()`` interates over Arrays and NodeLists and provides ways to filter the results.
+``forEach()`` iterates over Arrays and NodeLists and provides ways to filter the results.
 
 .. js ::
 
@@ -176,7 +174,7 @@ Examples
 .. code-example ::
   :djConfig: async: true, parseOnLoad: false
 
-  Basic Intereation Example
+  Basic Iteration Example
 
   .. js ::
 
@@ -323,7 +321,7 @@ Examples
 map()
 -----
 
-``map()`` interates all the elements in an array, passing them to the ``callback`` function and then returning a new 
+``map()`` iterates all the elements in an array, passing them to the ``callback`` function and then returning a new 
 array with any of the modified results.
 
 .. js ::
@@ -454,7 +452,7 @@ some()
 
 ``some()`` semantically answers the question "does a test hold true for at least one item in the array?"  Like 
 `forEach()`_, ``some()`` iterates over the items in an array.  However, it short circuits and returns ``true`` as soon 
-as it encouters an item for which the provided callback returns a truthy value.  If the callback doesn't return 
+as it encounters an item for which the provided callback returns a truthy value.  If the callback doesn't return 
 ``true`` for any item, ``some()`` returns ``false``.
 
 .. js ::
@@ -477,7 +475,7 @@ Examples
 ~~~~~~~~
 
 .. code-example ::
-  :djConfig: async: true, parseOnLoade: false
+  :djConfig: async: true, parseOnLoad: false
 
   Check if there is a value >= 1,000,000 in an array.
 
@@ -488,7 +486,7 @@ Examples
       var arrIndxSome = [200000, 500000, 350000, 1000000, 75, 3];
 
       on(dom.byId("refButton6"), "click", function(){
-        if(array.some(arrIndxSome, function(item){ return item>=1000000 })){
+        if(array.some(arrIndxSome, function(item){ return item >= 1000000; })){
           result = 'yes, there are';
         }else{
           result = 'no, there are no such items';
@@ -515,7 +513,7 @@ every()
 
 ``every()`` semantically answers the question "does a test hold true for every item in the array?"  Like `forEach()`_, 
 ``every()`` iterates over the items in an array.  However, it short circuits and returns ``false`` as soon as it 
-encouters an item for which the provided callback returns a falsey value.  If the callback returns ``true`` for all 
+encounters an item for which the provided callback returns a falsey value.  If the callback returns ``true`` for all 
 items, ``every()`` returns ``true``.
 
 .. js ::
@@ -538,7 +536,7 @@ Examples
 ~~~~~~~~
 
 .. code-example ::
-  :djConfig: async: true, parseOnLoade: false
+  :djConfig: async: true, parseOnLoad: false
 
     Check if every ``income`` > 3000;
 
@@ -554,7 +552,7 @@ Examples
       ];
 
       on(dom.byId("refButton7"), "click", function(){
-        if(array.every(arrIndxEvery , function(item){ return item.income >= 3000 })){
+        if(array.every(arrIndxEvery , function(item){ return item.income >= 3000; })){
           result = "yes, all income >= 3000";
         }else{
           result = "no, not all income >= 3000";
