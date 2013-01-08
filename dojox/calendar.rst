@@ -1230,9 +1230,30 @@ Editing handlers
 
 In some advanced use cases, the editing properties are not sufficient, the editing events are used to have a specific behavior.
 
-To prevent the default behavior, call in your handler of the item editing event e.preventDefault().
+To prevent the editing default behavior applied by the calendar, call in your handler of the item editing event preventDefault().
 
-One example is preventing moving an event in the 11:30am - 2:00pm interval.
+The following example is cancelling the editing gesture when the item has a specific property and its start time is after pm (included)
+
+.. js ::
+
+var ss, se;
+calendar.on("itemEditBegin", function(e){
+	// save initial values
+	ss = calendar.newDate(e.item.startTime);
+	se = calendar.newDate(e.item.endTime);
+});
+
+calendar.on("itemEditEnd", function(e){
+	// a condition using properties of the store item and the render item
+	if(e.storeItem.calendar == "cal2" && e.item.startTime.getHours() >= 13){
+		// cancel default behavior (i.e. applying changes to store)
+		e.preventDefault();
+		
+		// set the previously values to revert changes on the render item
+		e.item.startTime = ss;
+		e.item.endTime = se;
+	} // default behavior for other use cases
+});
 
 These events are listed in the following table:
 
