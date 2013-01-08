@@ -140,7 +140,7 @@ dojox/calendar
    * In 1.8, the itemEditEnd event item property was inconsistent with the other editing events because it was representing the store item instead of the render item. In 1.9, each editing event is containing two properties:
       * item: The render item. To change editing behavior set the startTime and/or endTime of this object.
       * storeItem: the store item. You may want to access some properties of the store item to determine the editing logic.
-The tests/editing.html shows an example.
+      * The tests/editing.html shows an example.
 
 dojox/gfx
 ---------
