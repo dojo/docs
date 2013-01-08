@@ -1236,24 +1236,24 @@ The following example is cancelling the editing gesture when the item has a spec
 
 .. js ::
 
-var ss, se;
-calendar.on("itemEditBegin", function(e){
-	// save initial values
-	ss = calendar.newDate(e.item.startTime);
-	se = calendar.newDate(e.item.endTime);
-});
+  var ss, se;
+  calendar.on("itemEditBegin", function(e){
+    // save initial values
+    ss = calendar.newDate(e.item.startTime);
+    se = calendar.newDate(e.item.endTime);
+  });
 
-calendar.on("itemEditEnd", function(e){
-	// a condition using properties of the store item and the render item
-	if(e.storeItem.calendar == "cal2" && e.item.startTime.getHours() >= 13){
-		// cancel default behavior (i.e. applying changes to store)
-		e.preventDefault();
+  calendar.on("itemEditEnd", function(e){
+    // a condition using properties of the store item and the render item
+    if(e.storeItem.calendar == "cal2" && e.item.startTime.getHours() >= 13){
+      // cancel default behavior (i.e. applying changes to store)
+      e.preventDefault();
 		
-		// set the previously values to revert changes on the render item
-		e.item.startTime = ss;
-		e.item.endTime = se;
-	} // default behavior for other use cases
-});
+      // set the previously values to revert changes on the render item
+      e.item.startTime = ss;
+      e.item.endTime = se;
+    } // default behavior for other use cases
+  });
 
 These events are listed in the following table:
 
