@@ -1156,7 +1156,7 @@ inherited()
 
 The method is used to call a superclass method. It accepts up to three arguments:
 
-* Optional name of the method to call. Generally it should be specified when calling ``this.inherited()`` from an un-annotated method, otherwise it will be deduced from the method itself.
+* Optional name of the method to call. Generally it should be specified when calling ``this.inherited()`` from an un-annotated method, otherwise it will be deduced from the method itself. If specified, it must be the same as the name of a method that calls ``this.inherited()``.
 * ``arguments`` - literally ``arguments`` pseudo-variable, which is used for introspection.
 * Optional array of arguments, which will be used to call a superclass method. If it is not specified ``arguments`` are used. If this argument is a literal constant ``true``, then the found super method is not executed but returned as a value (see `getInherited()`_).
 
@@ -1214,7 +1214,7 @@ Examples:
     lang.extend(B, {
       m3: function(){
         // this method is not annotated =>
-        // we should supply its name when calling
+        // we must supply its name when calling
         // a superclass:
         // simple super call with the same arguments
         this.inherited("m3", arguments);
@@ -1247,7 +1247,7 @@ Examples:
     // add a method on the fly
     x.m5 = function(){
       // this method is not annotated =>
-      // we should supply its name when calling
+      // we must supply its name when calling
       // a superclass:
       // simple super call with the same arguments
       this.inherited("m5", arguments);
@@ -1307,7 +1307,7 @@ Examples:
   dojo.extend(B, {
     m3: function(){
       // this method is not annotated =>
-      // we should supply its name when calling
+      // we must supply its name when calling
       // a superclass:
       // simple super call with the same arguments
       this.inherited("m3", arguments);
@@ -1340,7 +1340,7 @@ Examples:
   // add a method on the fly
   x.m5 = function(){
     // this method is not annotated =>
-    // we should supply its name when calling
+    // we must supply its name when calling
     // a superclass:
     // simple super call with the same arguments
     this.inherited("m5", arguments);
@@ -1358,7 +1358,7 @@ This is a companion method to `inherited()`_. The difference is that it doesn't 
 
 The method accepts up to two arguments:
 
-* Optional name of the method to call. If it is specified it must match the name of the caller. Generally it should be specified when calling this method from an un-annotated method (the same rule as for `inherited()`_).
+* Optional name of the method to call. If it is specified it must match the name of the caller. Generally it must be specified when calling this method from an un-annotated method (the same rule as for `inherited()`_).
 * ``arguments`` - literally ``arguments`` pseudo-variable, which is used for introspection.
 
 The result is a superclass method or ``undefined``, if it was not found. You can use the result as you wish. The most useful case is to pass it to some other function, which cannot use `inherited()`_ directly for some reasons.
