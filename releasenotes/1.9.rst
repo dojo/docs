@@ -85,6 +85,7 @@ dojox/mobile
 ------------
 
    * dojox/mobile data-aware lists now support an itemRenderer property allowing to change the type of ListItem instances created by the list.
+   * New Android Holo dark theme. Used by default an Android 3.x and 4.x devices.
 
 dojox/charting
 --------------
