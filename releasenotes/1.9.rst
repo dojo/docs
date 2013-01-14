@@ -85,7 +85,9 @@ dojox/mobile
 ------------
 
    * dojox/mobile data-aware lists now support an itemRenderer property allowing to change the type of ListItem instances created by the list.
-   * New Android Holo dark theme. Used by default an Android 3.x and 4.x devices.
+   * New Android Holo dark theme used by default on Android 3.x and 4.x devices. For backward compatibility, you can force 'Android' theme on all Android devices by configuring deviceTheme:
+.. html ::
+<script src="../deviceTheme.js" data-dojo-config="mblUserAgent:navigator.userAgent.match('Android')?'Android':null">
 
 dojox/charting
 --------------
