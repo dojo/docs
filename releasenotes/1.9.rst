@@ -56,8 +56,6 @@ There's now a "config-bgIframe" has() flag that can be used to explicitly turn o
 that's useful when a page contains applets, and also for older versions of IE with the bleed through select problem.
 Usage is:
 
-.. html ::
-
 	<script type="text/javascript" src="../../dojo/dojo.js"
 		data-dojo-config="has: {'config-bgIframe': true}"></script>
 
