@@ -1232,7 +1232,7 @@ In some advanced use cases, the editing properties are not sufficient, the editi
 
 To prevent the editing default behavior applied by the calendar, call in your handler of the item editing event preventDefault().
 
-The following example is cancelling the editing gesture when the item has a specific property and its start time is after pm (included)
+The following example is cancelling the editing gesture when the item has a specific property and its start time is after 1pm (included)
 
 .. js ::
 
