@@ -1199,12 +1199,12 @@ Property                     Column view default value Matrix view default value
 ============================ ========================= ========================= =========================== ===============
 allDayKeyboardLeftRightSteps 1                         1                         1                            How many unit to add or removed when using the keyboard left or right keys when editing an all day event.
 allDayKeyboardLeftRightUnit  “day”                     “day”                     "month"                      Unit to add or remove when using the keyboard left or right keys when editing an all day event.
-allDayKeyboardUpDownSteps    0                         7                         1                            How many unit to add or remove when using the keyboard up tor bottom keys when editing an all day event.
-allDayKeyboardUpDownUnit     “day”                     “day”                     "day"                        Unit to add or remove when using the keyboard up tor down keys when editing an all day event.
+allDayKeyboardUpDownSteps    0                         7                         1                            How many unit to add or remove when using the keyboard up or bottom keys when editing an all day event.
+allDayKeyboardUpDownUnit     “day”                     “day”                     "day"                        Unit to add or remove when using the keyboard up or down keys when editing an all day event.
 allowResizeLessThan24H       true                      false                     false                        Allow or not to resize an event that is lasting more than 24 hours to a duration less than 24 hours. Matrix view is preventing this because by default two renderer kinds are used to display events depending on their duration.
 allowStartEndSwap            true                      true                      true                         Allows move the end of an event before the start and vice  versa.
 keyboardLeftRightSteps       1                         15                        1                            How many unit to add or remove when using the keyboard left or right keys.
-keyboardLeftRightUnit        “day”                     “minute”                  "month"                      Unit to add or remove when using the keyboard left tor right keys..
+keyboardLeftRightUnit        “day”                     “minute”                  "month"                      Unit to add or remove when using the keyboard left or right keys..
 keyboardUpDownSteps          15                        7                         1                            How many unit to add or remove when using the keyboard up or down keys.
 keyboardUpDownUnit           “minutes”                 “day”                     "day"                        Unit to add or remove when using the keyboard up or down keys..
 liveLayout                   false                     false                     false                        If false, only the edited renderer position/size is updated during the editing gestures. Otherwise all the renderers are updates during the editing gesture (more CPU intensive).
