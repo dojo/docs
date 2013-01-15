@@ -1230,6 +1230,25 @@ Editing handlers
 
 In some advanced use cases, the editing properties are not sufficient, the editing events are used to have a specific behavior.
 
+
+These events are listed in the following table:
+
+===================== =================================== =====
+Event                 Description                         Usage
+===================== =================================== =====
+itemEditBegin         The widget has entered in edit mode Store initial values.
+itemEditBeginGesture  A gesture is beginning              Store initial values before gesture.
+itemEditMoveGesture   A move gesture occurred             Snapping, view limit management.
+itemEditResizeGesture A resize gesture occurred	          Snapping, view limit management, duration constraints enforcement.
+itemEditEndGesture    A move or resize gesture has ended  Apply or cancel gesture.
+itemEditEnd           The event editing has ended	  Apply changes to store item or cancel changes and revert start and end time.
+===================== =================================== =====
+
+All the editing events have the following properties:
+   * *item*: an object that contains the start and end time during the event editing in the startTime and endTime properties. When the item is moved or resized, new start and end time values are computed and put in these properties. The itemEditMoveGesture and itemEditResizeGesture default event handlers are then manipulating these properties to apply snapping, limits etc according to the editing properties values.
+
+   * *storeItem*: The store item that is being edited. This object must not be changed excepting in itemEditEnd event.
+
 To prevent the editing default behavior applied by the calendar, call in your handler of the item editing event preventDefault().
 
 The following example is cancelling the editing gesture when the item has a specific property and its start time is after 1pm (included)
@@ -1254,25 +1273,6 @@ The following example is cancelling the editing gesture when the item has a spec
       e.item.endTime = se;
     } // default behavior for other use cases
   });
-
-These events are listed in the following table:
-
-===================== =================================== =====
-Event                 Description                         Usage
-===================== =================================== =====
-itemEditBegin         The widget has entered in edit mode Store initial values.
-itemEditBeginGesture  A gesture is beginning              Store initial values before gesture.
-itemEditMoveGesture   A move gesture occurred             Snapping, view limit management.
-itemEditResizeGesture A resize gesture occurred	          Snapping, view limit management, duration constraints enforcement.
-itemEditEndGesture    A move or resize gesture has ended  Apply or cancel gesture.
-itemEditEnd           The event editing has ended	  Apply changes to store item or cancel changes and revert start and end time.
-===================== =================================== =====
-
-All the editing events have an item property which is an object that contains the start and end time during the event editing in the startTime and endTime properties.
-
-When the item is moved or resized, new start and end time values are computed and put these properties.
-
-The itemEditMoveGesture and itemEditResizeGesture default event handlers are then manipulating these properties to apply snapping, limits etc according to the editing properties values.
 
 
 See also
