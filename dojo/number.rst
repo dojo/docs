@@ -87,13 +87,13 @@ round()
 
 ``round()`` attempts to overcome some of the shortcomings of the intrinsic JavaScript rounding methods, ``Math.round()`` and 
 ``Number.toFixed()``, allowing arbitrary increments in rounding to any number of places, and making adjustments for browser 
-quirks.  In addition ``round()`` works around a bug in Internet Explorer with ``Number.toFixed()``:
+quirks.  In addition ``round()`` works around a bug in Internet Explorer (through version 8) with ``Number.toFixed()``:
 
 .. js ::
 
   // Outputs "0.0" in IE
   // Outputs "1.0" in other browsers
-  console.log((0.9).toFixed(1));
+  console.log((0.9).toFixed());
 
 The signature of ``round()`` is:
 
