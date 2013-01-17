@@ -15,6 +15,11 @@ Current Stable
 
 * :ref:`Dojo Toolkit v1.8 Release Notes <releasenotes/1.8>`
 
+Current Development
+===================
+
+* :ref:`Dojo Toolkit v1.9 Release Notes <releasenotes/1.9>`
+
 Archive
 =======
 
