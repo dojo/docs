@@ -265,7 +265,7 @@ Auto Require
   widgets are instantiated, the parser will automatically attempt to require in modules that it hasn't been able to  
   resolve a constructor for and the ``data-dojo-type`` looks like a MID (e.g. ``package/module``).
 
-*Note* Developers should really be cautious when using this features, because you are not making your dependencies 
+*Note* Developers should really be cautious when using this feature, because you are not making your dependencies 
 clear, you may have a harder time isolating where your issue is, because the parser is automatically loading modules 
 that you may not be consciously aware of.
 
