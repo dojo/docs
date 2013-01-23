@@ -409,6 +409,11 @@ You can also use Dojo Mobile's automatic device detection and theme loading by a
 
 When this approach is taken, you can also pass an additional query parameter string, theme={theme id} to force a specific theme from a browser url input (this feature is useful for creating samples and demos as well as testing what a page looks like on various devices). The theme id value is used instead of the navigator.userAgent property to determine the theme, possible values are: Android, BlackBerry, iPhone, iPad or Custom.
 
+Working with Mobile Themes
+--------------------------
+
+The directory 'themes/utils' contains scripts and documentation to modify or create mobile themes.
+
 Typical Use
 -----------
 
