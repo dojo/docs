@@ -86,12 +86,12 @@ dojox/mobile
 
    * dojox/mobile data-aware lists now support an itemRenderer property allowing to change the type of ListItem instances created by the list.
    * Internet Explorer 10 is now supported "natively" (that is, without compatibility code and CSS): since IE10 supports CSS3 transitions, animations and gradients, compatibility mode is disabled for IE10, and Dojo Mobile uses the non-prefixed CSS3 properties supported by IE10 in addition to the webkit-prefixed properties.
+   * Building themes: A new folder 'dojox/mobile/themes/utils' now contains scripts and documentation for building  mobile themes. The number of required .less files for a particular theme has been drastically reduced.
    * New Android Holo dark theme used by default on Android 3.x and 4.x devices. For backward compatibility, you can force 'Android' theme on all Android devices by configuring deviceTheme:
 
 .. js ::
 
 	<script src="../deviceTheme.js" data-dojo-config="mblUserAgent:navigator.userAgent.match('Android')?'Android':null">
-
 
 *Incompatibilities*
 
