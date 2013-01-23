@@ -759,6 +759,55 @@ chain of inheritance, these top methods would not be replaced because they are a
 
 You can see that copied methods were not replaced in ``ABC`` and ``abc``.
 
+createSubclass()
+~~~~~~~~~~~~~~~~
+
+This constructor method creates a subclass of the constructor's class using a list of base classes.
+
+The method has two arguments, first an array of base classes to extend from, second an object to mix in into the newly created class. It returns the constructor of the newly created subclass. For example if you declare the following A, B and C classes:
+
+.. js ::
+
+  require(["dojo/_base/declare"], function(declare){
+    var A = declare(null, {
+       m1: function(){},
+       s1: "bar"
+    });
+    var B = declare(null, {
+	m2: function(){},
+	s2: "foo"
+    });
+    var C = declare(null, {});
+  });
+
+
+The following createSubclass call:
+
+.. js ::
+
+    var D1 = A.createSubclass([B, C], {
+        m1: function(){},
+	d1: 42
+    });
+    var d1 = new D1();
+  
+
+is equivalent to:
+
+.. js ::
+ 
+    var D2 = declare([A, B, C], {
+        m1: function(){},
+	d1: 42
+    });
+    var d2 = new D2();
+    var d1 = new D1();
+  });
+
+
+**Note** Do not forget that ``dojo/declare()`` uses mixins to build a constructor from several bases. Remember that 
+only the first base is the true superclass, the rest is mixed in by copying properties. 
+
 Class Methods
 -------------
 
