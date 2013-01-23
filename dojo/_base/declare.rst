@@ -801,7 +801,6 @@ is equivalent to:
 	d1: 42
     });
     var d2 = new D2();
-    var d1 = new D1();
   });
 
 
