@@ -16,7 +16,7 @@ Introduction
 
 The dojox calendar widget displays events from a data store along time using widespread representation and allows to interactively edit the position in time and duration of these events.
 
-**Note**: The calendar is not supported on Internet Explorer 6. On IE7 and above a standard doctype must be set on the page that includes the calendar.
+**Note**: On an supported version of Internet Explorer a standard doctype must be set on the page that includes the calendar for the calendar to be supported.
 
 **Important**: the DOM node that contains the calendar widget or a view widget **must** have a position style property set to "absolute" or "relative".
 
