@@ -261,3 +261,8 @@ The items listed in the "children" field of each item are displayed as children 
   </ul>
 
 .. image :: EdgeToEdgeStoreList-example4.png
+
+Filtered list example
+---------------------
+
+See :ref:`FilteredListMixin <dojox/mobile/FilteredListMixin#declarative-example-filtered-edgetoedgestorelist>`.

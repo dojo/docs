@@ -298,3 +298,8 @@ This is an example of 'syncWithViews' parameter to synchronize the selected item
   </div>
 
 .. image :: EdgeToEdgeList-sync.gif
+
+Filtered list example
+---------------------
+
+See :ref:`FilteredListMixin <dojox/mobile/FilteredListMixin#declarative-example-filtered-edgetoedgelist>`.
