@@ -95,7 +95,7 @@ dojox/mobile
 
 *Incompatibilities*
 
-   * The dojox/mobile/scrollable.js module cannot be used outside of Dojo any more.
+   * Using the dojox/mobile/scrollable.js module without Dojo is not supported any more. The dojostub.js module, which was provided in dojox/mobile/tests to emulate some Dojo features and let you use scrollable.js outside of Dojo, is no longer provided.
    * The endTransition method of the dojox/mobile/TransitionEvent class has been removed since it was never called by the dojox/mobile framework.
 
 dojox/charting
