@@ -96,6 +96,7 @@ dojox/mobile
 *Incompatibilities*
 
    * The dojox/mobile/scrollable.js module cannot be used outside of Dojo any more.
+   * The endTransition method of the dojox/mobile/TransitionEvent class has been removed since it was never called by the dojox/mobile framework.
 
 dojox/charting
 --------------
