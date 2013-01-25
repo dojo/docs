@@ -81,8 +81,10 @@ There's now a "config-bgIframe" has() flag that can be used to explicitly turn o
 that's useful when a page contains applets, and also for older versions of IE with the bleed through select problem.
 Usage is:
 
+.. html ::
+
 	<script type="text/javascript" src="../../dojo/dojo.js"
-		data-dojo-config="has: {'config-bgIframe': true}"></script>
+	  data-dojo-config="has: {'config-bgIframe': true}"></script>
 
 It can also be specified as a build parameter in the staticHasFlags section.
 
@@ -90,16 +92,17 @@ By default it's turned on for desktop pages, but turned off for mobile.
 
 dijit/Declaration
 -----------------
-Declaration now supports <script type="dojo/aspect">, in addition to the <script type="dojo/connect"> syntax
-which is now deprecated (and will be removed for 2.0).   Ex:
 
-.. js ::
+Declaration now supports ``<script type="dojo/aspect">``, in addition to the ``<script type="dojo/connect">`` syntax
+which is now deprecated (and will be removed for 2.0). For example:
+
+.. html ::
 
 	<div data-dojo-type="dijit/Declaration" data-dojo-props='widgetClass:"MyWidget"'>
 		<script type="dojo/aspect" data-dojo-method="startup" data-dojo-advice="before">
-			...
+			// ...
 		</script>
-
+   </div>
 
 DojoX
 =====
@@ -114,7 +117,7 @@ dojox/mobile
    * Building themes: A new folder 'dojox/mobile/themes/utils' now contains scripts and documentation for building  mobile themes. The number of required .less files for a particular theme has been drastically reduced.
    * New Android Holo dark theme used by default on Android 3.x and 4.x devices. For backward compatibility, you can force 'Android' theme on all Android devices by configuring deviceTheme:
 
-.. js ::
+.. html ::
 
 	<script src="../deviceTheme.js" data-dojo-config="mblUserAgent:navigator.userAgent.match('Android')?'Android':null">
 
@@ -190,9 +193,9 @@ Util
 
 Doh
 ---
-Support added for returning a dojo/promise/Promise or dojo/Deferred from a test fixture.
-Before, you could only return a doh.Deferred or a dojo/_base/Deferred.
 
+Support added for returning a ``dojo/promise/Promise`` or ``dojo/Deferred`` from a test fixture.
+Before, you could only return a ``doh.Deferred`` or a ``dojo/_base/Deferred``.
 
 Demos
 =====
