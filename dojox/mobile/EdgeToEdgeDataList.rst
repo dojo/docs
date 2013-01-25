@@ -231,3 +231,8 @@ This example maps "name" and "count" fields in the json data to "label" and "rig
   }
 
 .. image :: EdgeToEdgeDataList-example3.png
+
+Filtered list example
+---------------------
+
+See :ref:`FilteredListMixin <dojox/mobile/FilteredListMixin#declarative-example-filtered-edgetoedgedatalist>`.

@@ -97,6 +97,10 @@ Lists
 
   A list item to use in a list widget
 
+* :ref:`FilteredListMixin <dojox/mobile/FilteredListMixin>`
+
+  A mixin to add filtering capabilities to all list widgets
+
 IconContainer
 -------------
 
