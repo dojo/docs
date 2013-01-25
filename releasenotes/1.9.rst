@@ -46,9 +46,34 @@ TODO: Link to page with specific vendor device models tested on
 Dojo
 ====
 
+dojo/parser
+-----------
+
+The parser now supports the ability to pass a context ``require()`` when parsing a document via adding it to the
+``options`` hash passed during parse (`#16112 <http://bugs.dojotoolkit.org/ticket/16112>`_).
 
 Dijit
 =====
+
+dijit/_WidgetsInTemplateMixin
+-----------------------------
+
+The ``_WidgetsInTemplateMixin`` supports using relative MIDs in the widget template (
+`#16112 <http://bugs.dojotoolkit.org/ticket/16112>`_).  For example the following is now valid:
+
+.. js ::
+
+   define(["require", "dojo/_base/declare", "dijit/_WidgetBase", "dijit/_TemplatedMixin",
+      "dijit/_WidgetsInTemplateMixin", "./OtherWidget"],
+   function(require, declare, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin){
+      return declare([_WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin], {
+         templateString: '<div><div data-dojo-type="./OtherWidget"></div></div>',
+         contextRequire: require
+      });
+   });
+
+**Note** Because of the synch nature of the widget lifecycle, you still have to require in any modules used in the
+template, as the auto-require feature will not work properly with widgets.
 
 dijit/BackgroundIframe
 ----------------------
