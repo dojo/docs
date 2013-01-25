@@ -1,0 +1,239 @@
+.. _releasenotes/1.9:
+
+======================
+Dojo 1.9 Release Notes
+======================
+
+.. contents ::
+   :depth: 3
+
+
+Browser Support
+===============
+
+The following browsers have been tested and are supported in this release. If a browser version is not listed as
+supported, it still may work, especially on browsers with rapid release cycles (Chrome, Firefox). Future minor releases
+of Dojo might include fixes to support future releases of these browsers, but we cannot guarantee it.
+
+**Desktop**
+
+* Firefox 3.6-17
+
+* Safari 5-6
+
+* Chrome 13-23
+
+* IE 6-10
+
+* Opera 10.50-12 (Dojo core only)
+
+**Mobile (dojox/mobile)**
+
+* iOS 4.x, 5.x (Mobile Safari) and 6.x (including all Dijit widgets except Editor)
+
+* Android 2.2-2.3, 3.1-3.2, 4.0-4.2 (Platform browser)
+
+* BlackBerry 6-7 & 10 (Platform browser)
+
+* Mobile compatibility on desktop browsers: IE 8-10, Firefox 4-17, Safari 5-6, Chrome 13-23
+
+TODO: Link to page with specific vendor device models tested on
+
+**Server-Side Platforms**
+
+* While not a browser, Dojo 1.8 also works inside Node 0.6.x and 0.8.x.
+
+Dojo
+====
+
+
+Dijit
+=====
+
+dijit/BackgroundIframe
+----------------------
+There's now a "config-bgIframe" has() flag that can be used to explicitly turn on/off the background iframe behind popups
+that's useful when a page contains applets, and also for older versions of IE with the bleed through select problem.
+Usage is:
+
+	<script type="text/javascript" src="../../dojo/dojo.js"
+		data-dojo-config="has: {'config-bgIframe': true}"></script>
+
+It can also be specified as a build parameter in the staticHasFlags section.
+
+By default it's turned on for desktop pages, but turned off for mobile.
+
+dijit/Declaration
+-----------------
+Declaration now supports <script type="dojo/aspect">, in addition to the <script type="dojo/connect"> syntax
+which is now deprecated (and will be removed for 2.0).   Ex:
+
+.. js ::
+
+	<div data-dojo-type="dijit/Declaration" data-dojo-props='widgetClass:"MyWidget"'>
+		<script type="dojo/aspect" data-dojo-method="startup" data-dojo-advice="before">
+			...
+		</script>
+
+
+DojoX
+=====
+
+dojox/mobile
+------------
+
+*Features*
+
+   * dojox/mobile data-aware lists now support an itemRenderer property allowing 
+     to change the type of ``ListItem`` instances created by the list.
+   * dojox/mobile list widgets now provide filtering capabilities.
+     For details, see :ref:`dojox/mobile/FilteredListMixin <dojox/mobile/FilteredListMixin>`.
+   * Internet Explorer 10 is now supported "natively" (that is, without compatibility code
+     and CSS): since IE10 supports CSS3 transitions, animations and gradients,
+     compatibility mode is disabled for IE10, and Dojo Mobile uses the non-prefixed CSS3
+     properties supported by IE10 in addition to the webkit-prefixed properties.
+   * Building themes: A new folder ``dojox/mobile/themes/utils`` now contains scripts and 
+     documentation for building  mobile themes. The number of required ``.less`` files for a
+     particular theme has been drastically reduced.
+   * New Android Holo dark theme used by default on Android 3.x and 4.x devices. For 
+     backward compatibility, you can force 'Android' theme on all Android devices by 
+     configuring ``deviceTheme``:
+
+.. js ::
+
+	<script src="../deviceTheme.js" data-dojo-config="mblUserAgent:navigator.userAgent.match('Android')?'Android':null">
+
+*Incompatibilities*
+
+   * Using the dojox/mobile/scrollable.js module without Dojo is not supported any more.
+     The ``dojostub.js`` module, which was provided in ``dojox/mobile/tests`` to emulate some
+     Dojo features and let you use ``scrollable.js`` outside of Dojo, is no longer provided.
+     The tests for this use case are also removed.
+   * The ``endTransition`` method of the ``dojox/mobile/TransitionEvent`` class has been removed
+     since it was never called by the dojox/mobile framework.
+
+dojox/charting
+--------------
+
+*Features*
+
+   * Threshold indicators (dojox/charting/plot2d/Indicator) can now easily be drawn on top of the chart.
+   * Axis (dojox/charting/axis2d/Default) now supports rendering ticks inside of the plot area instead of outside of the axis. For that specify a negative length for the ticks.
+   * Mouse indicator action (dojox/charting/action2d/MouseIndicator) now supports over mode in addition to mouse drag. The mouse indicator can also be further customized (ability to remove the label, ...).
+   * Grids (dojox/charting/plot2d/Grid) now support grid stripes in addition to grid lines.
+   * Ability to render labels on data points for Bubble/Columns/Default/Scatter plots by setting labels property to true.
+   * Charting now supports bidi mirroring. You can enable it calling myChart.setDir("rtl").
+
+*Incompatibilities*
+
+   * Tooltip on stacked plots now display the value of the hovered data point not of the stacked value. One can go back to previous behavior if needed by customizing the text function of the Tooltip action.
+   * Tooltip, highlight and magnify actions are not anymore hardcoded into the spider plot (dojox/charting/plot2d/Spider). One needs to explicitly set them up on the plot to get them activated. See `dojox/charting migration`_ for details.
+
+dojox/app
+---------
+
+*Features*
+
+   * dojox/app now provides a build system extension that allows you to easily build your application from the config file.
+   * One can now use the `type` property for a view in the config file to specify alternate view class extending dojox/view/ViewBase.
+   * Configuration of views now accept a `nls` property to specify an AMD internationalisation root module for a view.
+
+*Incompatibilities*
+
+In 1.8 dojox/app would automatically require a model and mvc controller if it was listed in the config and not included in the list of dependencies.  In 1.9 the model and mvc controller will need to be listed in the dependencies. For example:
+
+.. js ::
+
+	"dependencies": [
+		"dojox/app/utils/simpleModel",
+		"dojox/app/utils/mvcModel",
+		"dojox/mvc/EditStoreRefListController",
+		// ...
+	]
+
+dojox/calendar
+--------------
+
+*Features*
+
+  * Better support of asynchronous stores. Interactive event creation is now working with asynchronous stores (event is added to store at the end of the gesture). Event renderers are notified of the current store state (being created but not added yet to store, being added/updated, in store). An example is available (tests/asynchStore.html)
+  * New properties have been added to further customize the the row header of the column view.
+
+*Incompatibilities*
+
+   * In 1.8, the Date constructor was used as last resort to decode a Date string. In 1.9, as it is not reliable, the Date constructor is not used, and time.newDate() will throw an error if parameter is string and it cannot be decoded using ISO decoder (dojo/date/stamp).
+   * In 1.8, the renderers life cycle events (onRendererXXXX) have the renderer as parameter. In 1.9, an event is passed as parameter. This event will provide the renderer but also the view where this renderer is used and for "rendererCreated" and "rendererReused" events the data item displayed by this renderer.
+   * The calendar is now complying with the resize policy of Dojo. If the calendar, and especially the Matrix View, is *not* in a Dijit container or a Dojo mobile container, the application developer must call the resize() method of the calendar (or the view if used as standalone).
+   * In 1.8, the itemEditEnd event item property was inconsistent with the other editing events because it was representing the store item instead of the render item. In 1.9, each editing event is containing two properties:
+      * item: The render item. To change editing behavior set the startTime and/or endTime of this object.
+      * storeItem: the store item. You may want to access some properties of the store item to determine the editing logic.
+      * The tests/editing.html shows an example.
+
+dojox/gfx
+---------
+
+   * Add dashed stroke support to canvas renderer. If the browser implements the (new) HTML5 dash api (context2d.setLineDash()) then the gfx renderer uses it. Otherwise, it relies on a custom (canvas- specific) implementation.
+
+Util
+====
+
+Doh
+---
+Support added for returning a dojo/promise/Promise or dojo/Deferred from a test fixture.
+Before, you could only return a doh.Deferred or a dojo/_base/Deferred.
+
+
+Demos
+=====
+
+
+Migration Notes
+===============
+dijit/Calendar migration
+------------------------
+To avoid accessibility violations the Calendar template changed so that the month name and arrows, plus the
+previous/current/next year, are not contained within the TABLE node.   CSS was correspondingly changed.
+
+dijit/_Container.addChild() migration
+-------------------------------------
+In 1.8, the behavior of dijit/_Container (and subclasses') addChild() method was undefined
+if some of _Container.containerNode's direct children were plain DOM nodes, rather than widgets.
+
+In practice though, when addChild(widget, n) would count to the n'th position, it would skip over the plain DOMNodes
+and only include the child widgets in the count.
+Further, if the existing child widgets were not direct children of this.containerNode, then addChild()
+would tend to place the new widget as a next or previous sibling of an existing
+child widget, rather than as a direct child of this.containerNode.
+
+In 1.9, parent.addChild(widget, n) places widget.domNode as the n'th DOMNode child of parent.containerNode, just like
+domConstruct.place() does.
+
+If your app was calling parent.addChild() on a widget that contained plain DOM nodes, and depending on the undefined
+behavior listed above, you may need to update your logic.
+
+dijit/Dialog and iframes migration
+----------------------------------
+Whenever an application creates an iframe that can be focused by the user (i.e. that has focusable/clickable controls),
+the application is supposed to register the iframe via dijit/focus::registerIframe(frame).
+This has become more important in version 1.9 for Dialogs containing iframes.   If the iframe is not registered,
+then the user won't be able to focus controls within the iframe.
+
+This is due to new code in Dialog (new in 1.9, but also backported to 1.6, 1.7, and 1.8) that detects if focus
+has somehow left the Dialog, and tries to restore it to the Dialog.
+
+dijit template changes
+----------------------
+dijit/templates/InlineEditBox.html and dijit/form/robot/DropDownBox.html were changed in this release.
+If you have subclasses of InlineEditBox, ComboBox, FilteringSelect, or DateTextBox that have modified those templates,
+you may need to update your templates.
+
+dojox/charting migration
+------------------------
+
+Tooltip, highlight and magnify actions are not anymore hardcoded into the spider plot (dojox/charting/plot2d/Spider). One needs to explicitly set them up on the plot to get them activated as follows:
+
+.. js ::
+
+	new Tooltip(spiderchart);
+	new Highlight(spiderchart);
+	new Magnify(spiderchart, "default", {duration: 800, scale: 1.5});
