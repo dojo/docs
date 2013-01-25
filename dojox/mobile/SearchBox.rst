@@ -35,7 +35,8 @@ again with the next set of results.  This is useful when there are potentially m
 without blocking the UI.
 
 Note that SearchBox does not have support for displaying the search results by itself; this must be done in your application
-(for example, using a RoundRectList).
+(for example, using a RoundRectList), or simply by enabling the filtering capability of 
+list widgets (for details, see :ref:`dojox/mobile/FilteredListMixin <dojox/mobile/FilteredListMixin>`).
 
 Constructor Parameters
 ======================
