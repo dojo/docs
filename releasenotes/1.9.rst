@@ -72,6 +72,9 @@ The ``_WidgetsInTemplateMixin`` supports using relative MIDs in the widget templ
       });
    });
 
+Also, ``dijit/InlineEditBox`` and ``dijit/_editor/plugins/FontChoice`` were updated to take advantage of this new
+feature.
+
 **Note** Because of the synch nature of the widget lifecycle, you still have to require in any modules used in the
 template, as the auto-require feature will not work properly with widgets.
 
