@@ -281,11 +281,28 @@ domConstruct.place() does.
 If your app was calling parent.addChild() on a widget that contained plain DOM nodes, and depending on the undefined
 behavior listed above, you may need to update your logic.
 
-dijit template changes
-----------------------
-dijit/templates/InlineEditBox.html and dijit/form/robot/DropDownBox.html were changed in this release.
-If you have subclasses of InlineEditBox, ComboBox, FilteringSelect, or DateTextBox that have modified those templates,
-you may need to update your templates.
+dijit: keypress to keydown
+--------------------------
+For performance, a number of widgets were changed to use the native keydown event rather than the synthetic
+(and deprecated) dojo/_base/connect._keypress event.
+
+This include changes to the template like data-dojo-attach-event="onkeydown: _onKeyDown" rather than
+data-dojo-attach-event="onkeypress: _onKeyPress", and in the javascript code
+renaming _onKeyPressed() to _onKeyDown(), and accessing evt.keyDown rather than evt.charOrCode.
+
+Changed widgets:
+
+    - Menu (dijit/templates/Menu, DropDownMenu.js, MenuBar.js)
+    - Slider
+    - NumberSpinner
+    - InlineEditBox (onkeypress handler removed, onkeydown not added)
+    - StackContainer, StackController, TabController, ScrollingTabController
+    - AccordionContainer (technically, AccordionButton)
+    - BorderContainer
+    - Editor
+
+Note that _TextBoxMixin still creates it's own normalized event object defining evt.charOrCode,
+and passes it to _onInput().
 
 dojox/charting migration
 ------------------------
