@@ -48,8 +48,8 @@ The first example uses setContent() and show() to vary the message and display i
 
   .. js ::
 
-       require(["dojox/widget/Toaster", "dijit/registry", "dojo/parser", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/domReady!"],
-       function(Toaster, registry, parser, on, dom, lang){
+       require(["dojox/widget/Toaster", "dijit/registry", "dojo/parser", "dojo/on", "dojo/dom", "dojo/domReady!"],
+       function(Toaster, registry, parser, on, dom){
          parser.parse();
          var surpriseMe = function(){
            registry.byId('first_toaster').setContent('Twinkies are now being served in the vending machine!', 'fatal');
@@ -92,8 +92,8 @@ The next example does the same thing, but uses the publish/subscribe model.  The
 
   .. js ::
 
-       require(["dojox/widget/Toaster", "dijit/registry", "dojo/parser", "dojo/topic", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/domReady!"],
-       function(Toaster, registry, parser, topic, on, dom, lang){
+       require(["dojox/widget/Toaster", "dijit/registry", "dojo/parser", "dojo/topic", "dojo/on", "dojo/dom", "dojo/domReady!"],
+       function(Toaster, registry, parser, topic, on, dom){
          parser.parse();
          topic.publish("testMessageTopic",
             {
