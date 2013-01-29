@@ -189,6 +189,7 @@ dojox/calendar
 
   * Better support of asynchronous stores. Interactive event creation is now working with asynchronous stores (event is added to store at the end of the gesture). Event renderers are notified of the current store state (being created but not added yet to store, being added/updated, in store). An example is available (tests/asynchStore.html)
   * New properties have been added to further customize the the row header of the column view.
+  * Query options to be set when querying the store can now be specified on the calendar using queryOptions property.
 
 *Incompatibilities*
 
@@ -204,6 +205,10 @@ dojox/gfx
 ---------
 
    * Add dashed stroke support to canvas renderer. If the browser implements the (new) HTML5 dash api (context2d.setLineDash()) then the gfx renderer uses it. Otherwise, it relies on a custom (canvas- specific) implementation.
+
+dojo/treemap
+------------
+   * Query options to be set when querying the store can now be specified on the calendar using queryOptions property.
 
 Util
 ====
