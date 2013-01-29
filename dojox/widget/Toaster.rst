@@ -48,8 +48,8 @@ The first example uses setContent() and show() to vary the message and display i
 
   .. js ::
 
-       require(["dojox/widget/Toaster", "dijit/registry", "dojo/parser", "dojo/on", "dojo/dom", "dojo/domReady!"],
-       function(Toaster, registry, parser, on, dom){
+       require(["dojox/widget/Toaster", "dijit/registry", "dojo/parser", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/domReady!"],
+       function(Toaster, registry, parser, on, dom, lang){
          parser.parse();
          on(dom.byId("surprise"), "click", lang.hitch(this, "surpriseMe")); 
          var surpriseMe = function(){
@@ -92,8 +92,8 @@ The next example does the same thing, but uses the publish/subscribe model.  The
 
   .. js ::
 
-       require(["dojox/widget/Toaster", "dijit/registry", "dojo/parser", "dojo/topic", "dojo/on", "dojo/dom", "dojo/domReady!"],
-       function(Toaster, registry, parser, topic, on, dom){
+       require(["dojox/widget/Toaster", "dijit/registry", "dojo/parser", "dojo/topic", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/domReady!"],
+       function(Toaster, registry, parser, topic, on, dom, lang){
          parser.parse();
          topic.publish("testMessageTopic", [
             {
@@ -132,8 +132,8 @@ This example builds a Toaster programmatically and lets you set params.
 
   .. js ::
 
-       require(["dojox/widget/Toaster", "dijit/registry", "dojo/topic", "dojo/on", "dojo/dom", "dojo/domReady!"],
-       function(Toaster, registry, topic, on, dom){
+       require(["dojox/widget/Toaster", "dijit/registry", "dojo/topic", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/domReady!"],
+       function(Toaster, registry, topic, on, dom, lang){
          parser.parse();
 
          var showMyToaster = function(){
