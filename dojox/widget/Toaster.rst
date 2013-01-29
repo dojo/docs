@@ -51,11 +51,11 @@ The first example uses setContent() and show() to vary the message and display i
        require(["dojox/widget/Toaster", "dijit/registry", "dojo/parser", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/domReady!"],
        function(Toaster, registry, parser, on, dom, lang){
          parser.parse();
-         on(dom.byId("surprise"), "click", lang.hitch(this, "surpriseMe")); 
          var surpriseMe = function(){
            registry.byId('first_toaster').setContent('Twinkies are now being served in the vending machine!', 'fatal');
            registry.byId('first_toaster').show();
          }
+         on(dom.byId("surprise"), "click", surpriseMe); 
        });
 
 
@@ -95,18 +95,18 @@ The next example does the same thing, but uses the publish/subscribe model.  The
        require(["dojox/widget/Toaster", "dijit/registry", "dojo/parser", "dojo/topic", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/domReady!"],
        function(Toaster, registry, parser, topic, on, dom, lang){
          parser.parse();
-         topic.publish("testMessageTopic", [
+         topic.publish("testMessageTopic",
             {
               message: "Twinkies are now being served in the vending machine!",
               type: "fatal",
               duration: 500
             }
-         ]);
-         on(dom.byId("surprise"), "click", lang.hitch(this, "surpriseMe")); 
+         );
          var surpriseMe = function(){
-           registry.byId('first_toaster').setContent('Twinkies are now being served in the vending machine!', 'fatal');
-           registry.byId('first_toaster').show();
+           registry.byId('publish_subscribe_toaster').setContent('Twinkies are now being served in the vending machine!', 'fatal');
+           registry.byId('publish_subscribe_toaster').show();
          }
+         on(dom.byId("surprise"), "click", surpriseMe);
        });
 
   .. html ::
@@ -116,7 +116,7 @@ The next example does the same thing, but uses the publish/subscribe model.  The
          id="publish_subscribe_toaster"
          >
     </div>
-    <input type="button" value="Click here for Publish Subscribe toaster"/>
+    <input type="button" id="surprise" value="Click here for Publish Subscribe toaster"/>
 
 This example builds a Toaster programmatically and lets you set params.
 
