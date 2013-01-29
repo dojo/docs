@@ -132,8 +132,8 @@ This example builds a Toaster programmatically and lets you set params.
 
   .. js ::
 
-       require(["dojox/widget/Toaster", "dijit/registry", "dojo/topic", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/domReady!"],
-       function(Toaster, registry, topic, on, dom, lang){
+       require(["dojox/widget/Toaster", "dijit/registry", "dojo/topic", "dojo/on", "dojo/dom", "dojo/parser", "dojo/domReady!"],
+       function(Toaster, registry, topic, on, dom, parser){
          parser.parse();
 
          var showMyToaster = function(){
@@ -151,7 +151,7 @@ This example builds a Toaster programmatically and lets you set params.
           // create a toaster
           var myToaster = new Toaster({id: 'myToaster'}, dom.byId('ToasterPane'));
 
-          on(dom.byId("showToaster"), "click", lang.hitch(this, "showMyToaster")); 
+          on(dom.byId("showToaster"), "click", showMyToaster); 
        });
 
   The html creates an empty div to place the new Toaster instance into.  The rest is basic form stuff to parameterize the toaster.
