@@ -208,7 +208,7 @@ dojox/gfx
 
 dojo/treemap
 ------------
-   * Query options to be set when querying the store can now be specified on the calendar using queryOptions property.
+   * Query options to be set when querying the store can now be specified on the treemap using queryOptions property.
 
 Util
 ====
