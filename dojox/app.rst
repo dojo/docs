@@ -444,7 +444,7 @@ The main dojox/app modules
 
 :ref:`dojox/app/main <dojox/app/main>` is used to create a ``dojox/app`` Application object from the JSON configuration. The main responsibilities of ``dojox/app/main`` include loading the various controllers & data stores as well as managing the application lifecycle.
 
-:ref:`dojox/app/View <dojox/app/view>` provides a view object in charge of the view rendering and lifecycle. It contains a template string which will be rendered.  A view can itself have nested View objects.
+:ref:`dojox/app/View <dojox/app/View>` provides a view object in charge of the view rendering and lifecycle. It contains a template string which will be rendered.  A view can itself have nested View objects.
 
 :ref:`dojox/app/Controller <dojox/app/Controller>` a base class for the various application controllers:
 
