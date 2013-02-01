@@ -273,7 +273,7 @@ They are automatically added to the list of dependencies and as such do not need
 controllers
 -----------
 
-Array of AMD modules identifiers. Controllers for the application. All the controllers defined here will be loaded during application startup to respond to application events and controller the application logic. The “``dojox/app/controllers/Load``” and “``dojox/app/controllers/Transition``” are automatically mixed into the application you don’t have the explicitly include them.
+Array of AMD modules identifiers. Controllers for the application. All the controllers listed here will be loaded during application startup to respond to application events and controller the application logic. The “``dojox/app/controllers/Load``”, “``dojox/app/controllers/Transition``” and “``dojox/app/controllers/Layout``” are automatically mixed into the application you don’t have the explicitly include them. If you don't want to include them you have to set the ``noAutoLoadController`` parameter to ``false`` in the config.
 
 .. js ::
 
