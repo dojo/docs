@@ -168,10 +168,18 @@ dojox/app
    * dojox/app now provides a build system extension that allows you to easily build your application from the config file.
    * One can now use the `type` property for a view in the config file to specify alternate view class extending dojox/view/ViewBase.
    * Configuration of views now accept a `nls` property to specify an AMD internationalisation root module for a view.
+   * Support for custom Layout controllers with a dojox/app/controllers/LayoutBase which can be extended with a custom layout controller.
+   * Support for a constraint setting on a view in the config has been added, which will add data-app-constraint to the domNode for the view, and place the view into the specified constraint (region).
+   * Support for a new BorderLayout controller which uses a dijit/layout/BorderContainer to layout views, and uses constraint settings on views in the config to determine which region a view should be placed in.
+   * Support was added to allow multiple views to be included in the DefaultViews, transitions and the url used in the transition. This allows multiple views to be displayed with different constraints (regions) at the same time.  It is also now possible to transition views in regions other than the center.
+
 
 *Incompatibilities*
 
-In 1.8 dojox/app would automatically require a model and mvc controller if it was listed in the config and not included in the list of dependencies.  In 1.9 the model and mvc controller will need to be listed in the dependencies. For example:
+   * data-app-region has been changed to data-app-constraint.
+   * The events used in the Layout controllers have changed from layout and select to initLayout and layoutView.
+   * zIndex is no longer automatically set on views depending upon whether they are in the center or not.  In the past the zIndex was automatically set higher on the left pane of a tablet view to avoid having the transition for the center show over that left pane.
+   * In 1.8 dojox/app would automatically require a model and mvc controller if it was listed in the config and not included in the list of dependencies.  In 1.9 the model and mvc controller will need to be listed in the dependencies. For example:
 
 .. js ::
 
