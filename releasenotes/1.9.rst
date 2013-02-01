@@ -168,10 +168,10 @@ dojox/app
    * dojox/app now provides a build system extension that allows you to easily build your application from the config file.
    * One can now use the `type` property for a view in the config file to specify alternate view class extending dojox/view/ViewBase.
    * Configuration of views now accept a `nls` property to specify an AMD internationalisation root module for a view.
-   * Support for custom Layout controllers with a dojox/app/controllers/LayoutBase which can be extended with a custom layout controller.
-   * Support for a constraint setting on a view in the config has been added, which will add data-app-constraint to the domNode for the view, and place the view into the specified constraint (region).
-   * Support for a new BorderLayout controller which uses a dijit/layout/BorderContainer to layout views, and uses constraint settings on views in the config to determine which region a view should be placed in.
-   * Support was added to allow multiple views to be included in the DefaultViews, transitions and the url used in the transition. This allows multiple views to be displayed with different constraints (regions) at the same time.  It is also now possible to transition views in regions other than the center.
+   * Custom Layout controller support is available with a dojox/app/controllers/LayoutBase which can be extended with a custom layout controller.
+   * Support for a constraint setting on a view in the config has been added, which will add data-app-constraint to the domNode for the view, and place the view into the specified constraint (or region).
+   * A new BorderLayout controller has been provided, which uses a dijit/layout/BorderContainer to layout views, and uses constraint settings on views in the config to determine which constraint (or region) a view should be placed into.
+   * Support was added to allow multiple views to be included in the DefaultViews in the config as well as on transitions and the url used in the transition. This allows multiple views to be displayed with different constraints (or regions) at the same time.  It is also now possible to transition views in regions other than the center.
 
 
 *Incompatibilities*
