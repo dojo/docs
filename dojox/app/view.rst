@@ -35,7 +35,7 @@ For example:
 			transitionOptions='{title:"TabScene-Tab2",target:"tabscene,tab2",url: "#tabscene,tab2"}'>Tab 2</li>
 		<li data-dojo-type="dojox/mobile/TabBarButton" icon1="images/tab-icon-10.png"
 			icon2="images/tab-icon-10h.png"
-			transitionOptions='{title:"TabScene-Tab3",target:"tabscene,tab3",url: "#tabscene,tab3"}'>Tab 3</li>
+			transitionOptions='{title:"TabScene-Tab3",target:"tabscene,tab3",url: "#tabscene,tab3", duration: 1000}'>Tab 3</li>
 	</ul>
   </div>
 
