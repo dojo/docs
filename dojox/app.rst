@@ -456,9 +456,9 @@ The main dojox/app modules
 
 * ``dojox/app/controllers/HistoryHash`` an alternate  controller that maintains application history using URL hash. It works on all browsers but has limitations with regard to browser refresh and going back to an URL out of application’s history stack.
 
-:ref:`dojox/app/model <dojox/app/model>`, depending on the application models configuration, is creating either simple or MVC models for the views to bind their widgets to.
+:ref:`dojox/app/util/model <dojox/app/model>`, depending on the application models configuration, is creating either simple or MVC models for the views to bind their widgets to.
 
-:ref:`dojox/app/module <dojox/app/module>` a package containing various modules than can be used in the configuration file to be mixed into the Application object.
+:ref:`dojox/app/module <dojox/app/module>` a package containing various modules than can be used in the configuration file to be mixed into the Application object. The lifecycle module is automatically mixed into your application.
 
 
 The following diagram represents the high level architecture of ``dojox/app`` and in particular how the modules listed
