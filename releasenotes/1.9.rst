@@ -190,6 +190,17 @@ dojox/app
 		// ...
 	]
 
+   * In 1.8 dojox/app would automatically include the Load, Transition and Layout controllers, unless "noAutoLoadControllers" was set to true in the config.  In 1.9 the controllers are no longer automatically loaded, and the noAutoLoadControllers option has been removed.  So the config must include the necessary controllers. For example:
+
+.. js ::
+
+	"controllers": [
+		"dojox/app/controllers/Load",
+		"dojox/app/controllers/Transition",
+		"dojox/app/controllers/Layout",
+		"dojox/app/controllers/History"
+	]
+
 dojox/calendar
 --------------
 
