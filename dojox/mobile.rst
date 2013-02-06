@@ -435,8 +435,7 @@ Example (using HTML5 validating declarative markup and mobile parser)
   01:<!DOCTYPE HTML>
   02: <html>
   03:   <head>
-  04:     <meta name="viewport" content="width=device-width,initial-scale=1,
-      maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+  04:     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
   05:     <meta name="apple-mobile-web-app-capable" content="yes" />
   06:     <link href="dojox/mobile/themes/iphone/iphone.css" rel="stylesheet"></link>
   07:     <script src="dojo/dojo.js" data-dojo-config="async:true, parseOnLoad:true"></script>
@@ -448,66 +447,27 @@ Example (using HTML5 validating declarative markup and mobile parser)
   13:     </script>
   14:   </head>
   15:   <body>
-  16:     <div id="foo" data-dojo-type="dojox.mobile.View">
-  17:       <h1 data-dojo-type="dojox.mobile.Heading">View 1</h1>
-  18:       <ul data-dojo-type="dojox.mobile.RoundRectList">
-  19:         <li data-dojo-type="dojox.mobile.ListItem" moveTo="bar" label="Hello"
-  20: 	    icon="dojox/mobile/tests/images/i-icon-1.png"></li>
+  16:     <div id="foo" data-dojo-type="dojox/mobile/View">
+  17:       <h1 data-dojo-type="dojox/mobile/Heading">View 1</h1>
+  18:       <ul data-dojo-type="dojox/mobile/RoundRectList">
+  19:         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="moveTo:'bar',label:'Hello',
+  20: 	         icon:'dojox/mobile/tests/images/i-icon-1.png'"></li>
   21:       </ul>
   22:     </div>
   23:
-  24:     <div id="bar" data-dojo-type="dojox.mobile.View">
-  25:       <h1 data-dojo-type="dojox.mobile.Heading" back="Home" moveTo="foo">View 2</h1>
-  26:       <ul data-dojo-type="dojox.mobile.RoundRectList">
-  27:         <li data-dojo-type="dojox.mobile.ListItem" label="World"
-  28: 	    icon="dojox/mobile/tests/images/i-icon-2.png"></li>
+  24:     <div id="bar" data-dojo-type="dojox/mobile/View">
+  25:       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Home',moveTo:'foo'">View 2</h1>
+  26:       <ul data-dojo-type="dojox/mobile/RoundRectList">
+  27:         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World',
+  28: 	        icon:'dojox/mobile/tests/images/i-icon-2.png'"></li>
   29:       </ul>
   30:     </div>
   31:   </body>
   32: </html>
 ..
 
-Example (using older HTML (non-validating) and mobile parser)
 
-.. html ::
-
-  01: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-  02: <html>
-  03:   <head>
-  04:     <meta name="viewport" content="width=device-width,initial-scale=1,
-      maximum-scale=1,minimum-scale=1,user-scalable=no"/>
-  05:     <meta name="apple-mobile-web-app-capable" content="yes" />
-  06:     <link href="dojox/mobile/themes/iphone/iphone.css" rel="stylesheet"></link>
-  07:     <script src="dojo/dojo.js" djConfig="parseOnLoad: true"></script>
-  08:     <script>
-  09:       require([
-  10:         "dojox/mobile/parser", 	// This mobile app uses declarative programming with fast mobile parser
-  11:         "dojox/mobile",		// This is a mobile app.
-  12:       ]); // Skip module alias and function block because we're not doing anything special...
-  13:     </script>
-  14:   </head>
-  15:   <body>
-  16:     <div id="foo" dojoType="dojox.mobile.View">
-  17:       <h1 dojoType="dojox.mobile.Heading">View 1</h1>
-  18:       <ul dojoType="dojox.mobile.RoundRectList">
-  19:         <li dojoType="dojox.mobile.ListItem" moveTo="bar" label="Hello"
-  20: 	    icon="dojox/mobile/tests/images/i-icon-1.png"></li>
-  21:       </ul>
-  22:     </div>
-  23:
-  24:     <div id="bar" dojoType="dojox.mobile.View">
-  25:       <h1 dojoType="dojox.mobile.Heading" back="Home" moveTo="foo">View 2</h1>
-  26:       <ul dojoType="dojox.mobile.RoundRectList">
-  27:         <li dojoType="dojox.mobile.ListItem" label="World"
-  28: 	    icon="dojox/mobile/tests/images/i-icon-2.png"></li>
-  29:       </ul>
-  30:     </div>
-  31:   </body>
-  32: </html>
-
-..
-
-* Line 1 is the standard HTML DOCTYPE.  Example 1 is using HTML5, Example 2 uses HTML4.  HTML5 introduces data-* attribute support, so the first example uses data-dojo-type attribute names (which will validate properly) versus example 2 which uses Dojo extended attributes (non-validating).  The HTML5 style markup is preferred going forward to Dojo 2.0 (but Ex 2 will continue to be supported through 1.x releases).
+* Line 1 is the standard HTML5 DOCTYPE.
 
 * Line 4 is a viewport setting, which sets the width, height and scale of the browser area used to display the content. Mobile Safari recognizes this meta tag.
 
@@ -515,11 +475,11 @@ Example (using older HTML (non-validating) and mobile parser)
 
 * Line 6 loads a style sheet for iPhone theme. You may want to load a different theme instead.
 
-* Line 7 loads Dojo kernel API's.  The first example is using asynchronous AMD loader, the second example uses synchronous pre-Dojo1.7 style loader.  If you debug this example with browser debug tools, you'll see that example 1 loads and enters document ready state much faster than example 2.  The async loader (ex1) style is the preferred notation going forward to Dojo 2.0 (but Ex 2 will continue to be supported through 1.x releases).
+* Line 7 loads Dojo kernel API's with asynchronous AMD loader.
 
-* Line 10 loads lightweight mobile parser, since this example uses declarative markup.  The parser will automatically instantiate the mobile widgets associated with dom elements. You can of course use the default parser (dojo/parser) instead if you're using dijit widgets on views, but the mobile parser is much smaller and has enough capability to bootstrap simple dojo application pages like this example. The desktop browser compatibility module for non-CSS3 browsers is not used in this example, so it will likely only render properly on webkit-based browsers.
+* Line 10 loads lightweight mobile parser, since this example uses declarative markup.  The parser will automatically instantiate the mobile widgets associated with dom elements. You can of course use the default parser (dojo/parser) instead if your don't have size requirements (like in an hybrid application), but the mobile parser is much smaller and has enough capability to bootstrap simple dojo application pages like this example. The desktop browser compatibility module for non-CSS3 browsers is not used in this example, so it will likely only render properly on webkit-based browsers.
 
-* Line 16 through Line 22 is the first view. It contains a heading and a round rectangle list. This view will be shown at start up, since it is the first view and the selected="true" attribute is not specified for the second view.
+* Line 16 through Line 22 is the first view. It contains a heading and a round rectangle list. This view will be shown at start up, since it is the first view and the selected:'true' property is not specified for the second view.
 
 * Line 24 through Line 30 is the second view, which will be shown when you tap on a list item in the first view.
 
