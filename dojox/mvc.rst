@@ -45,7 +45,7 @@ There are two data binding APIs:
 Both APIs above support:
 
 * Optional one-way sync (the default is two-way sync). See :ref:`dojox/mvc/sync:Data binding direction <dojox/mvc/sync#data-binding-direction>` for details.
-* Optional data conversion as data goes from model to widget, and vise versa. See :ref:`dojox/mvc/sync:Data converter <dojox/mvc/sync#data-converter>` for details.
+* Optional data conversion as data goes from model to widget, and vice versa. See :ref:`dojox/mvc/sync:Data converter <dojox/mvc/sync#data-converter>` for details.
 
 Both APIs above use :ref:`dojo/Stateful <dojo/Stateful>` as the endpoints of data binding, including :ref:`widgets <dijit/_WidgetBase>` that inherit :ref:`dojo/Stateful <dojo/Stateful>`.
 
