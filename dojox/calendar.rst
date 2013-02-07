@@ -40,12 +40,12 @@ The following example shows how to declare a calendar widget in markup:
   .. html::
 
     <style type="text/css>
-      .body  { font-size: 0.9em; }
+      .dojoxCalendar{ font-size: 12px; font-family:Myriad,Helvetica,Tahoma,Arial,clean,sans-serif; }
     </style>
                                                                   
     <div data-dojo-type="dojox/calendar/Calendar" 
          data-dojo-props="dateInterval:'day'" 
-         style="position:relative;width:620px;height:620px">
+         style="position:relative;width:600px;height:600px">
     </div>
     
 
@@ -62,7 +62,7 @@ The following example shows how to declare a calendar widget programmatically:
           ready(function(){
             calendar = new Calendar({
                          dateInterval: "day",
-                         style: "position:relative;width:620px;height:620px"
+                         style: "position:relative;width:600px;height:600px"
                       }, "someId");
                     }
                 )}
@@ -71,7 +71,7 @@ The following example shows how to declare a calendar widget programmatically:
   .. html::
 
     <style type="text/css>
-      .body  { font-size: 0.9em; }
+      .dojoxCalendar{ font-size: 12px; font-family:Myriad,Helvetica,Tahoma,Arial,clean,sans-serif; }
     </style>
                                                                         
     <div id="someId" >
