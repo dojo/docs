@@ -18,11 +18,11 @@ The dojox calendar widget displays events from a data store along time using wid
 
 **Note**: On an supported version of Internet Explorer a standard doctype must be set on the page that includes the calendar for the calendar to be supported.
 
-**Terminology:** The "event" word can be interpreted in several was in a calendar application context. So in this documentation we will use the following words to prevent confusion:
-   * data item: item from the store. A data item is the data representation of a event to be displayed.
-   * event: Event dispatched by the calendar widget.
-   * event listener or event handler: Function registered on a particular event called when this event is dispatched by a widget.
-   * item renderer: graphical representation of a data item.
+**Terminology:** The "event" word can be interpreted in several ways in a calendar application context. So in this documentation we will use the following words to prevent confusion:
+   * **data item**: item from the store. A data item is the data representation of a event to be displayed.
+   * **event**: Event dispatched by the calendar widget.
+   * **event listener** or **event handler**: Function registered on a particular event called when this event is dispatched by a widget.
+   * **item renderer**: graphical representation of a data item.
 
 **Important**: the DOM node that contains the calendar widget or a view widget **must** have a position style property set to "absolute" or "relative".
 
@@ -541,7 +541,7 @@ These buttons and methods are just shortcuts that define the date, dateInterval 
 Data item creation
 ------------------
 
-Data items are retrieved in the data store. To programmatically add a new data item, the developer can use the store add() method. If the store is an Observable store, the Calendar will automatically update its rendering.
+Data items are retrieved in the data store. To programmatically add a new data item, the developer can use the store add() method. If the store is an dojo.store.Observable store, the Calendar will automatically update its rendering.
 
 The calendar is allowing to interactively create a data item by pressing the mouse button on the grid and dragging the mouse to set the duration of the event.
 
@@ -568,7 +568,7 @@ The following example is showing an implementation of the createItemFunc that is
 
     var start, end;
     var colView = calendar.columnView;
-    var cal = calendar.dataModule;
+    var cal = calendar.dateModule;
 	
     if(view == colView){
       start = calendar.floorDate(d, "minute", colView.timeSlotDuration);
@@ -886,12 +886,12 @@ These simple rules allow to have nice looking layout when data items are overlap
 
 If you want to change this data item layout priority management, set a sorting function to the layoutPriorityFunction. One use case is to build a sort function based on a priority value set on the data item itself.
 
-Item Renderers
-``````````````
+Renderers
+`````````
 
-The item renderer classes are not set by default on the views. 
+The renderer classes (item renderer and others) are not set by default on the views. 
 
-The calendar widget is setting the default item renderers classes to the views. If a view is used alone, the item renderers must be set explicitly.
+The calendar widget is setting the default renderers classes to the views. If a view is used alone, the renderers must be set explicitly.
 
 Column View
 -----------
@@ -903,7 +903,7 @@ The displayed time interval is defined by the startDate and columnCount properti
 
 The time of day displayed is defined by the minHours (8 by default) and maxHours (18 by default)  properties. For example to show the entire day set minHours to 0 and maxHours to 24.
 
-The desired size of an hour is defined  in the hourSize property (100 by default). According to the value of time slot duration, the size may be slightly bigger.
+The desired size of an hour is defined in the hourSize property (100 by default). According to the value of time slot duration, the size may be slightly bigger.
 
 The time slot duration can defined defined by setting the timeSlotDuration property (15 by default). For example, to show only half hours set the timeSlotDuration to 30.
 
@@ -1169,13 +1169,15 @@ The owner property contains a reference to the view that is using this item rend
 This class provides the state management of the displayed item renderer. The values are computed by the view and passed to the renderer.
 
 The state properties are: edited, focused, hovered, selected. If a state is set, a custom CSS pseudo class is added (same name with upper case first letter for example “Selected”).
+
 Additional CSS pseudo classed are used to describe the data item state with respect to the store: 
+
   * "Storing": The data item is being added/updated to the store.
   * "Unstored": The data item is not in the store yet (interactive data item create use case)
 
 Finally the moveEnabled and resizeEnabled properties, define if the data item can be respectively moved or resized.
 
-If the item renderer needs a substantial refresh, the updateRendering() function is called. It is used mainly to compute the visibility of sub-components of the renderer.
+If the item renderer needs a substantial refresh, the updateRendering() function is called. It is used mainly to compute the visibility of sub-components of this item renderer.
 
 Other utility functions are provided to format time and set text using Bidi text direction etc.
 
@@ -1263,9 +1265,9 @@ itemEditEnd           The widget is leaving edit mode	  Apply changes to store i
 ===================== =================================== =====
 
 All the editing events have the following properties:
-   * *item*: an object that contains the start and end time during the event editing in the startTime and endTime properties. When the data item is moved or resized, new start and end time values are computed and put in these properties. The itemEditMoveGesture and itemEditResizeGesture default event handlers are then manipulating these properties to apply snapping, limits etc according to the editing properties values.
+   * **item**: an object that contains the start and end time during the event editing in the startTime and endTime properties. When the data item is moved or resized, new start and end time values are computed and put in these properties. The itemEditMoveGesture and itemEditResizeGesture default event handlers are then manipulating these properties to apply snapping, limits etc according to the editing properties values.
 
-   * *storeItem*: The data item that is being edited. This object must not be changed excepting in itemEditEnd event.
+   * **storeItem**: The data item that is being edited. This object must not be changed excepting in itemEditEnd event.
 
 To prevent the editing default behavior applied by the calendar, call in your handler of the item editing event preventDefault().
 
