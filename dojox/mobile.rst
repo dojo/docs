@@ -413,10 +413,28 @@ You can also use Dojo Mobile's automatic device detection and theme loading by a
 
 When this approach is taken, you can also pass an additional query parameter string, theme={theme id} to force a specific theme from a browser url input (this feature is useful for creating samples and demos as well as testing what a page looks like on various devices). The theme id value is used instead of the navigator.userAgent property to determine the theme, possible values are: Android, BlackBerry, iPhone, iPad or Custom.
 
-Working with Mobile Themes
---------------------------
+Generating Mobile Themes
+------------------------
 
-The directory 'themes/utils' contains scripts and documentation to modify or create mobile themes.
+The directory 'themes/utils' contains a script to generate themes. Read 'themes/utils/README' to configure your environment.
+
+Creating a new theme from the Custom theme
+------------------------------------------     
+
+The 'custom' theme (i.e. mobile/themes/custom folder) is a generic grey theme. It is a good starting point for creating a new theme. All colors of this theme are derived from 2 colors defined at the beginning of themes/custom/variables.less.
+
+To create a new theme, you can change these colors (i.e. @lightColor and @darkColor) as well as other part of variables.less and then run the compile script.
+
+Example:
+
+1. Ensure your environment is ready for themes compilation (instructions available in themes/README)
+2. Change base colors in themes/custom/variables.less:
+   @lightColor: #FFB126; 
+   @darkColor: #331100;
+3. Execute themes/utils/compile script, all themes are regenerated. The custom theme is now orange.
+4. Try you new theme by applying the custom theme. See 'Automatically Applying Mobile Device Themes Using CSS'
+
+
 
 Typical Use
 -----------
