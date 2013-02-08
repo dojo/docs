@@ -123,6 +123,16 @@ dojox/mobile
      and CSS): since IE10 supports CSS3 transitions, animations and gradients,
      compatibility mode is disabled for IE10, and Dojo Mobile uses the non-prefixed CSS3
      properties supported by IE10 in addition to the webkit-prefixed properties.
+   * The user agent tests that were previously done in ``dojox/mobile/sniff`` have been
+     moved to ``dojo/sniff``, so the use of ``dojox/mobile/sniff`` is deprecated,
+     You should now use ``dojo/sniff`` instead. The ``dojox/mobile/sniff`` module is still present
+     in this release for compatibility, but it will be removed in a future release.
+   * The ``has("ios")`` feature test defined in ``dojo/sniff`` now returns the iOS version
+     (instead of a Boolean). In previous versions, you used ``has("iphone")`` to detect
+     any iOS device (iPhone, iPad or iPod). You should now use ``has("ios")`` instead.
+     The ``dojox/mobile/sniff`` module still sets the ``"iphone"`` feature to the iOS version
+     on all iOS devices for compatibility, but in future releases it will be set only
+     for an iPhone device.
    * Building themes: A new folder ``dojox/mobile/themes/utils`` now contains scripts and 
      documentation for building  mobile themes. The number of required ``.less`` files for a
      particular theme has been drastically reduced.
