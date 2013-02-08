@@ -859,8 +859,48 @@ You can customize this behavior to show only horizontal item renderers, for exam
     }
   }, null);
 
-Renderer overlap
-````````````````
+Grid cell styling
+`````````````````
+
+Each view provides a **styleGridCellFunc** property that allows to customize a grid cell without subclassing a view.
+
+The following example show how to install a pseudo CSS class to grey out Wednesdays and the time range between 12pm and 2pm:
+
+.. css ::
+
+  .greyCell{
+    background-color: #F8F8F8 !important;				
+  }
+  .dojoxCalendarToday.greyCell{
+    background-color: #FFF6D4 !important;
+  }
+  .dojoxCalendarWeekend.greyCell{
+    background-color: #ECF5FE !important;
+  }
+
+.. js ::
+
+  calendar.columnView.set("styleGridCellFunc", function(node, date, hours, minutes){
+    // grey out Wednesday & time range between 12pm and 2pm
+    if(hours >= 12 && hours < 14 || date.getDay() == 3){
+      domClass.add(node, "greyCell");
+    }
+    this.defaultStyleGridCell(node, date, hours, minutes);
+  });
+
+  var func = function(node, date){
+    // grey out Wednesday
+    if(date != null && date.getDay() == 3){
+      domClass.add(node, "greyCell");
+    }
+    this.defaultStyleGridCell(node, date);
+  };
+
+calendar.matrixView.set("styleGridCellFunc", func);						
+calendar.monthColumnView.set("styleGridCellFunc", func);
+
+Item renderer overlap
+`````````````````````
 
 When two item renderers are overlapping in time, the item renderers can either be displayed side by side (no overlap) or can overlap visually horizontally (vertical item renderers) or vertically (horizontal item renderers). 
 
@@ -970,7 +1010,9 @@ The styling of a simple column view  is defined in the themes/claro/SimpleColumn
 Several functions are provided to style or set a style class on part of the view:
   * styleColumnHeaderCell(node, date, renderData): allows to style a column header cell. By default, it installs dojoxCalendarToday and dojoxCalendarWeekend CSS pseudo classes.
   * styleRowHeaderCell(node, hour, renderData): allows to style a row header cell. By default, does nothing.
-  * styleGridColumn(node, date, renderData): allows to style a grid column. By default, it installs dojoxCalendarToday and dojoxCalendarWeekend CSS pseudo classes.
+  * styleGridCell(node, date, hours, minutes, renderData): allows to style a grid cell. By default, it installs dojoxCalendarToday and dojoxCalendarWeekend CSS pseudo classes.
+
+The styleGridCellFunc property allows to customize a grid cell without subclassing a view.
 
 Date formatting
 ```````````````
@@ -1065,6 +1107,7 @@ Several functions are provided to style or set a style class on part of the view
   * styleRowHeaderCell(node, hour, renderData): allows to style a row header cell. By default, does nothing.
   * styleGridCell(node, date, renderData): allows to style a grid column. By default, it installs dojoxCalendarToday, dojoxCalendarWeekend and dojoxCalendarDisabled CSS pseudo classes.
 
+The styleGridCellFunc property allows to customize a grid cell without subclassing a view.
 
 Date formatting
 ```````````````
@@ -1133,6 +1176,8 @@ Several functions are provided to style or set a style class on part of the view
   * styleGridCell(node, date, renderData): allows to style a grid cell. By default, it installs dojoxCalendarToday and dojoxCalendarWeekend CSS pseudo classes.
 
 In an additional layout pass, the dojoxCalendarHiddenEvents CSS pseudo class is installed on grid cells if they are hidden data items in the corresponding date.
+
+The styleGridCellFunc property allows to customize a grid cell without subclassing a view.
 
 Date formatting
 ```````````````
