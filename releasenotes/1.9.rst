@@ -136,6 +136,7 @@ dojox/mobile
    * Building themes: A new folder ``dojox/mobile/themes/utils`` now contains scripts and 
      documentation for building  mobile themes. The number of required ``.less`` files for a
      particular theme has been drastically reduced.
+   * The 'Custom' theme is now generated from 2 main colors, facilitating the creation of new theme based on arbitrary colors.
    * New Android Holo dark theme used by default on Android 3.x and 4.x devices. For 
      backward compatibility, you can force 'Android' theme on all Android devices by 
      configuring ``deviceTheme``:
