@@ -435,6 +435,7 @@ Example:
 4. Try you new theme by applying the custom theme. See 'Automatically Applying Mobile Device Themes Using CSS'
 
 .. image :: theming1.jpg
+
 .. image :: theming2.jpg
 
 Typical Use
