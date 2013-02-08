@@ -889,15 +889,16 @@ The following example show how to install a pseudo CSS class to grey out Wednesd
   });
 
   var func = function(node, date){
-    // grey out Wednesday
+    // grey out Wednesdays
     if(date != null && date.getDay() == 3){
       domClass.add(node, "greyCell");
     }
     this.defaultStyleGridCell(node, date);
   };
 
-calendar.matrixView.set("styleGridCellFunc", func);						
-calendar.monthColumnView.set("styleGridCellFunc", func);
+  calendar.matrixView.set("styleGridCellFunc", func);						
+  calendar.monthColumnView.set("styleGridCellFunc", func);
+
 
 Item renderer overlap
 `````````````````````
