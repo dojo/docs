@@ -217,6 +217,7 @@ dojox/calendar
 
    * In 1.8, the Date constructor was used as last resort to decode a Date string. In 1.9, as it is not reliable, the Date constructor is not used, and time.newDate() will throw an error if parameter is string and it cannot be decoded using ISO decoder (dojo/date/stamp).
    * In 1.8, the renderers life cycle events (onRendererXXXX) have the renderer as parameter. In 1.9, an event is passed as parameter. This event will provide the renderer but also the view where this renderer is used and for "rendererCreated" and "rendererReused" events the data item displayed by this renderer.
+   * The ColumnView.styleGridColumn has been renamed into styleGridCell and the new arguments are (/*DOMNode*/node, /*Date*/date, /*Integer*/hours, /*Integer*/minutes, /*Object*/renderData)
    * The calendar is now complying with the resize policy of Dojo. If the calendar, and especially the Matrix View, is *not* in a Dijit container or a Dojo mobile container, the application developer must call the resize() method of the calendar (or the view if used as standalone).
    * In 1.8, the itemEditEnd event item property was inconsistent with the other editing events because it was representing the store item instead of the render item. In 1.9, each editing event is containing two properties:
       * item: The render item. To change editing behavior set the startTime and/or endTime of this object.
