@@ -538,10 +538,10 @@ The following functions are also exposed to help navigation:
 
 These buttons and methods are just shortcuts that define the date, dateInterval and dateIntervalSteps properties.
 
-Data item creation
-------------------
+Interactive data item creation
+------------------------------
 
-Data items are retrieved in the data store. To programmatically add a new data item, the developer can use the store add() method. If the store is an dojo.store.Observable store, the Calendar will automatically update its rendering.
+Data items are retrieved in the data store. To programmatically add a new data item, the developer can use the store add() method (and *remove()* to delete it). If the store is an dojo.store.Observable store, the Calendar will automatically update its rendering.
 
 The calendar is allowing to interactively create a data item by pressing the mouse button on the grid and dragging the mouse to set the duration of the event.
 
@@ -592,7 +592,7 @@ The following example is showing an implementation of the createItemFunc that is
   }
 
   calendar.set("createOnGridClick", true);
-  calendar.set("createItemFunc", createItem);	
+  calendar.set("createItemFunc", createItem);
 
 Calendar events
 ===============
