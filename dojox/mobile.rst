@@ -434,7 +434,7 @@ Example:
 3. Execute themes/utils/compile script, all themes are regenerated. The custom theme is now orange.
 4. Try you new theme by applying the custom theme. See 'Automatically Applying Mobile Device Themes Using CSS'
 
-.. image :: theming1.jpg
+.. image :: theming0.jpg
 .. image :: theming2.jpg
 
 Typical Use
