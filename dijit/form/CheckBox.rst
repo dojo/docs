@@ -39,7 +39,7 @@ Let's create a checkbox programmatically, initially unchecked:
 
     require(["dojo/ready", "dijit/form/CheckBox"], function(ready, CheckBox){
         ready(function(){
-            var checkBox = new dijit.form.CheckBox({
+            var checkBox = new CheckBox({
                 name: "checkBox",
                 value: "agreed",
                 checked: false,
