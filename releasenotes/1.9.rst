@@ -133,7 +133,11 @@ dojox/mobile
      The ``dojox/mobile/sniff`` module still sets the ``"iphone"`` feature to the iOS version
      on all iOS devices for compatibility, but in future releases it will be set only
      for an iPhone device. 
-
+   * The ``dojox/mobile/RoundRectStoreList`` and ``dojox/mobile/EdgeToEdgeStoreList`` widgets
+     now support updating existing store items. When a ``put`` operation is performed on the store,
+     the corresponding list item is updated with the new properties of the store item. A new
+     ``onAdd`` method has been added to ``dojox/mobile/_StoreMixin`` to better distinguish add
+     and put operations.
    * Building themes: A new folder ``dojox/mobile/themes/utils`` now contains scripts and 
      documentation for building  mobile themes. The number of required ``.less`` files for a
      particular theme has been drastically reduced.
