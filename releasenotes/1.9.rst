@@ -132,7 +132,8 @@ dojox/mobile
      any iOS device (iPhone, iPad or iPod). You should now use ``has("ios")`` instead.
      The ``dojox/mobile/sniff`` module still sets the ``"iphone"`` feature to the iOS version
      on all iOS devices for compatibility, but in future releases it will be set only
-     for an iPhone device.
+     for an iPhone device. 
+
    * Building themes: A new folder ``dojox/mobile/themes/utils`` now contains scripts and 
      documentation for building  mobile themes. The number of required ``.less`` files for a
      particular theme has been drastically reduced.
@@ -153,6 +154,7 @@ dojox/mobile
      The tests for this use case are also removed.
    * The ``endTransition`` method of the ``dojox/mobile/TransitionEvent`` class has been removed
      since it was never called by the dojox/mobile framework.
+   * ``dojox/mobile/sniff`` module does not anymore require ``dojo/_base/sniff`` but ``dojo/sniff`` this means you can't use anymore ``isXX`` methods (e.g. isIE) you should use has flags instead (e.g. has("ie")).
 
 dojox/charting
 --------------
