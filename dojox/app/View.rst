@@ -6,7 +6,7 @@ dojox/app/View
 
 :since: V1.7 (``dojox/app/view``)
 
-``dojox/app/View`` module provides the default View for ``dojox/app``. It supports the view defintion logic and lifecycle from ``dojox/app/ViewBase`` as well as a template rendering engine to load the view UI as a template and the ability to provide an internationalisation module for the view. For those who want to build their own views based on alternate templating system, or without a templating system they should directly extend ``dojox/app/ViewBase``.
+``dojox/app/View`` module provides the default View for ``dojox/app``. It supports the view definition logic and lifecycle (aka View controller) from ``dojox/app/ViewBase`` as well as a template rendering engine to load the view UI as a template and the ability to provide an internationalisation module for the view. For those who want to build their own views based on alternate templating system, or without a templating system they should directly extend ``dojox/app/ViewBase``.
 
 Each View can have one parent view and optionally several children views. It provides a templated
 container to host the DOM nodes for the children views. Its purpose is to allow the layout of the view to be provided
@@ -59,11 +59,14 @@ For example:
 			}));
 		},
 
-		beforeActivate: function(){
+		beforeActivate: function(previousView, data){
 			// set the model value on the view
 			var widget = registry.byId("mywidget");
 			widget.set("value", this.loadedModels.myModel.value);
 		},
+
+                beforeDeactivate: function(nextView, data){
+                },
 
 		destroy: function(){
 			// _WidgetBase.on listener is automatically destroyed when the Widget itself his.
@@ -71,4 +74,6 @@ For example:
 	}
   });
 
+
+The data received in the activation and deactivation methods are the data passed in the data attributes of the transition options of the transtion that led to that view.
 
