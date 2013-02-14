@@ -332,17 +332,17 @@ Replace code like:
 
 .. html ::
 
-<script src="dojo.js></script>
-<script>
-require(["dojox/charting/Chart", "dojox/charting/BidiSupport"], ...);
-</script>
+  <script src="dojo.js></script>
+  <script>
+    require(["dojox/charting/Chart", "dojox/charting/BidiSupport"], ...);
+  </script>
 
 by
 
 .. html ::
 
-<script src="dojo.js" data-dojo-config="has:{'dojo-bidi': true}"></script>
-<script>
-require(["dojox/charting/Chart"], ...);
-</script>
+  <script src="dojo.js" data-dojo-config="has:{'dojo-bidi': true}"></script>
+  <script>
+    require(["dojox/charting/Chart"], ...);
+  </script>
 
