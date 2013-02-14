@@ -332,7 +332,7 @@ Replace code like:
 
 .. html ::
 
-  <script src="dojo.js></script>
+  <script src="dojo.js"></script>
   <script>
     require(["dojox/charting/Chart", "dojox/charting/BidiSupport"], ...);
   </script>
