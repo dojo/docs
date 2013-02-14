@@ -232,6 +232,85 @@ This is an example of 'editable' parameter for re-ordering the list and deleting
 
 .. image :: EdgeToEdgeList-editable.gif
 
+
+**Note:** you have to implement a delete action if you want the delete button to have an action. To do so, 
+you can either subscribe to the "/dojox/mobile/deleteListItem" topic like in the example above or connect to the
+onDeleteItem callback as described below.
+
+
+You can also handle events when edit mode starts/ends or when children ListItems are moved/deleted.
+The example below handles those events by connecting to the callback functions of the EdgeToEdgeList widget. (See test_RoundRectList-connect.html in the dojox/mobile/tests folder for a similar complete example.)
+
+
+.. js ::
+
+    require([
+        "dojo/_base/connect",
+        "dojo/dom-class",
+        "dojo/ready",
+        "dijit/registry",
+    ], function(connect, domClass, ready, registry){
+        var delItem, handler, btn1, list1;
+
+        function showDeleteButton(item){
+            hideDeleteButton();
+            delItem = item;
+            item.rightIconNode.style.display = "none";
+            if(!item.rightIcon2Node){
+                item.set("rightIcon2", "mblDomButtonMyRedButton_0");
+                item.rightIcon2Node.firstChild.innerHTML = "Delete";
+            }
+            item.rightIcon2Node.style.display = "";
+            handler = connect.connect(list1.domNode, "onclick", onDeleteItem);
+        }
+        function hideDeleteButton(){
+            if(delItem){
+                delItem.rightIconNode.style.display = "";
+                delItem.rightIcon2Node.style.display = "none";
+                delItem = null;
+            }
+            connect.disconnect(handler);
+        }
+        function onDeleteItem(e){
+            var item = registry.getEnclosingWidget(e.target);
+            if(domClass.contains(e.target, "mblDomButtonMyRedButton_0")){
+                setTimeout(function(){
+                    item.destroy();
+                }, 0);
+            }
+            hideDeleteButton();
+        }
+
+        connect.subscribe("/dojox/mobile/deleteListItem", function(item){
+            showDeleteButton(item);
+        });
+
+        onClickEdit = function(){
+            list1.startEdit();
+        }
+        onClickDone = function(){
+            hideDeleteButton();
+            list1.endEdit();
+        }
+
+        ready(function(){
+            btn1 = registry.byId("btn1");
+            list1 = registry.byId("list1");
+            connect.connect(list1, "onStartEdit", null, function(){
+                console.log("StartEdit");
+            });
+            connect.connect(list1, "onEndEdit", null, function(){
+                console.log("EndEdit");
+            });
+            connect.connect(list1, "onDeleteItem", null, function(widget){
+                console.log("DeleteIconItem: " + widget.label);
+            });
+            connect.connect(ic, "onMoveItem", null, function(widget, from, to){
+                console.log("MoveIconItem: " + widget.label + " (" + from + " -> " + to + ")");
+            });
+        });
+    });		
+
 Synchronized list example
 -------------------------
 
