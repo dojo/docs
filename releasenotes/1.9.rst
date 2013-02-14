@@ -119,6 +119,9 @@ dojox/mobile
      to change the type of ``ListItem`` instances created by the list.
    * dojox/mobile list widgets now provide filtering capabilities.
      For details, see :ref:`dojox/mobile/FilteredListMixin <dojox/mobile/FilteredListMixin>`.
+   * dojox/mobile editable list widgets now have callbacks functions on user actions.
+     For details, see :ref:`dojox/mobile/RoundRectList <dojox/mobile/RoundRectList#editable-list-example>` and 
+     :ref:`dojox/mobile/EdgeToEdgeList <dojox/mobile/EdgeToEdgeList#editable-list-example>`.
    * Internet Explorer 10 is now supported "natively" (that is, without compatibility code
      and CSS): since IE10 supports CSS3 transitions, animations and gradients,
      compatibility mode is disabled for IE10, and Dojo Mobile uses the non-prefixed CSS3
