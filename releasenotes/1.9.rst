@@ -170,7 +170,8 @@ dojox/charting
    * Mouse indicator action (dojox/charting/action2d/MouseIndicator) now supports over mode in addition to mouse drag. The mouse indicator can also be further customized (ability to remove the label, ...).
    * Grids (dojox/charting/plot2d/Grid) now support grid stripes in addition to grid lines.
    * Ability to render labels on data points for Bubble/Columns/Default/Scatter plots by setting labels property to true.
-   * Charting now supports bidi mirroring. You can enable it calling myChart.setDir("rtl").
+   * Charting bidi features (bi-directional text and mirroring) can be enabled using the dojo-bidi has flag you should not use !BidiSupport modules anymore.
+   * Charting now supports bidi mirroring. You can perform mirroring by calling myChart.setDir("rtl") once bidi features have been included using dojo-bidi.
 
 *Incompatibilities*
 
@@ -324,3 +325,24 @@ Tooltip, highlight and magnify actions are not anymore hardcoded into the spider
 	new Tooltip(spiderchart);
 	new Highlight(spiderchart);
 	new Magnify(spiderchart, "default", {duration: 800, scale: 1.5});
+
+Charting bidi features are not anymore enabled by the BidiSupport and BidiSupport3D modules. Instead you should be using the dojo-bidi flag.
+
+Replace code like:
+
+.. html ::
+
+<script src="dojo.js></script>
+<script>
+require(["dojox/charting/Chart", "dojox/charting/BidiSupport"], ...);
+</script>
+
+by
+
+.. html ::
+
+<script src="dojo.js" data-dojo-config="has:{'dojo-bidi': true}"></script>
+<script>
+require(["dojox/charting/Chart"], ...);
+</script>
+
