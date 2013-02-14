@@ -170,7 +170,7 @@ dojox/charting
    * Mouse indicator action (dojox/charting/action2d/MouseIndicator) now supports over mode in addition to mouse drag. The mouse indicator can also be further customized (ability to remove the label, ...).
    * Grids (dojox/charting/plot2d/Grid) now support grid stripes in addition to grid lines.
    * Ability to render labels on data points for Bubble/Columns/Default/Scatter plots by setting labels property to true.
-   * Charting bidi features (bi-directional text and mirroring) can be enabled using the dojo-bidi has flag you should not use BidiSupport modules anymore.
+   * Charting bidi features (bi-directional text and mirroring) can be enabled using the dojo-bidi has flag you should not use BidiSupport modules anymore. See `dojox/charting migration`_ for details.
    * Charting now supports bidi mirroring. You can perform mirroring by calling myChart.setDir("rtl") once bidi features have been included using dojo-bidi.
 
 *Incompatibilities*
