@@ -138,10 +138,14 @@ dojox/mobile
      the corresponding list item is updated with the new properties of the store item. A new
      ``onAdd`` method has been added to ``dojox/mobile/_StoreMixin`` to better distinguish add
      and put operations.
+   * A subset of widgets (``Button``, ``CheckBox``, ``Heading``, ``ListItem``, ``RadioButton``, 
+     ``Slider``, ``Switch``, ``ToggleButton``, and ``View``) can now be templated.
+     For details, see :ref:`Templating dojox/mobile widgets <dojox/mobile/templating-mobile-widgets>`.
    * Building themes: A new folder ``dojox/mobile/themes/utils`` now contains scripts and 
      documentation for building  mobile themes. The number of required ``.less`` files for a
      particular theme has been drastically reduced.
-   * The 'Custom' theme is now generated from 2 main colors, facilitating the creation of new theme based on arbitrary colors.
+   * The 'Custom' theme is now generated from 2 main colors, facilitating the creation of a new theme 
+     based on arbitrary colors.
    * New Android Holo dark theme used by default on Android 3.x and 4.x devices. For 
      backward compatibility, you can force 'Android' theme on all Android devices by 
      configuring ``deviceTheme``:
@@ -158,7 +162,9 @@ dojox/mobile
      The tests for this use case are also removed.
    * The ``endTransition`` method of the ``dojox/mobile/TransitionEvent`` class has been removed
      since it was never called by the dojox/mobile framework.
-   * ``dojox/mobile/sniff`` module does not anymore require ``dojo/_base/sniff`` but ``dojo/sniff`` this means you can't use anymore ``isXX`` methods (e.g. isIE) you should use has flags instead (e.g. has("ie")).
+   * ``dojox/mobile/sniff`` module does not anymore require ``dojo/_base/sniff`` but ``dojo/sniff``.
+     This means you can't use anymore ``isXX`` methods (such as ``isIE``); you should use ``has`` 
+     flags instead (such as ``has("ie")``).
 
 dojox/charting
 --------------
