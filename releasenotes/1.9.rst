@@ -123,6 +123,7 @@ dojox/mobile
      and CSS): since IE10 supports CSS3 transitions, animations and gradients,
      compatibility mode is disabled for IE10, and Dojo Mobile uses the non-prefixed CSS3
      properties supported by IE10 in addition to the webkit-prefixed properties.
+   * FormLayout container: a responsive container for creating mobile forms.
    * Building themes: A new folder ``dojox/mobile/themes/utils`` now contains scripts and 
      documentation for building  mobile themes. The number of required ``.less`` files for a
      particular theme has been drastically reduced.
