@@ -36,7 +36,7 @@ Let's create a ToggleButton widget programmatically, initially unchecked:
             new ToggleButton({
                 showLabel: true,
                 checked: false,
-                onChange: function(val){this.set('label',val)},
+                onChange: function(val){this.set('label',val);},
                 label: "false"
             }, "programmatic");
         });
