@@ -46,6 +46,13 @@ TODO: Link to page with specific vendor device models tested on
 Dojo
 ====
 
+dojo/node
+---------
+
+``dojo/node`` now properly loads CommonJS modules that depend on modules that support both CommonJS and AMD but assume
+that if and AMD environment is detected, don't return anything for the CommonJS module
+(`#16414 <http://bugs.dojotoolkit.org/ticket/16414>`_).
+
 dojo/parser
 -----------
 
