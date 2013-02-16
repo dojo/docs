@@ -55,6 +55,8 @@ Infrastructure Widgets
 
 * :ref:`dijit._WidgetBase <dijit/_WidgetBase>` (and also deprecated :ref:`dijit._Widget <dijit/_Widget>`)
 
+* :ref:`dijit._AttachMixin <dijit/_AttachMixin>`
+
 * :ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>` (and also deprecated :ref:`dijit._Templated <dijit/_Templated>`)
 
 * :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`

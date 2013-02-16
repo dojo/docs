@@ -18,6 +18,12 @@ The dojox calendar widget displays events from a data store along time using wid
 
 **Note**: On an supported version of Internet Explorer a standard doctype must be set on the page that includes the calendar for the calendar to be supported.
 
+**Terminology:** The "event" word can be interpreted in several ways in a calendar application context. So in this documentation we will use the following words to prevent confusion:
+   * **data item**: item from the store. A data item is the data representation of a event to be displayed.
+   * **event**: Event dispatched by the calendar widget.
+   * **event listener** or **event handler**: Function registered on a particular event called when this event is dispatched by a widget.
+   * **item renderer**: graphical representation of a data item.
+
 **Important**: the DOM node that contains the calendar widget or a view widget **must** have a position style property set to "absolute" or "relative".
 
 Creating a Calendar
@@ -38,10 +44,14 @@ The following example shows how to declare a calendar widget in markup:
     require(["dojo/ready", "dojox/calendar/Calendar"]);
 
   .. html::
+
+    <style type="text/css>
+      .dojoxCalendar{ font-size: 12px; font-family:Myriad,Helvetica,Tahoma,Arial,clean,sans-serif; }
+    </style>
                                                                   
     <div data-dojo-type="dojox/calendar/Calendar" 
          data-dojo-props="dateInterval:'day'" 
-         style="position:relative;width:500px;height:500px">
+         style="position:relative;width:600px;height:600px">
     </div>
     
 
@@ -58,7 +68,7 @@ The following example shows how to declare a calendar widget programmatically:
           ready(function(){
             calendar = new Calendar({
                          dateInterval: "day",
-                         style: "position:relative;width:500px;height:500px"
+                         style: "position:relative;width:600px;height:600px"
                       }, "someId");
                     }
                 )}
@@ -66,7 +76,9 @@ The following example shows how to declare a calendar widget programmatically:
   
   .. html::
 
-    <link rel="stylesheet" href="{{baseUrl}}/dojox/calendar/themes/claro/Calendar.css">
+    <style type="text/css>
+      .dojoxCalendar{ font-size: 12px; font-family:Myriad,Helvetica,Tahoma,Arial,clean,sans-serif; }
+    </style>
                                                                         
     <div id="someId" >
     </div>  
@@ -75,7 +87,7 @@ The following example shows how to declare a calendar widget programmatically:
 Configuring Calendar data
 =========================
 
-The calendar widget is populated with the list events using a store set on its store property.
+The calendar widget is populated with a list of data items using a store set on its store property.
 
 The Calendar can connect to any implementation of the dojo.store.api.Store interface that implements get/query and id management (getIdentity).
 
@@ -97,8 +109,8 @@ You might want to listen to store query errors, for that you can use the promise
 Data mapping
 ------------
 
-In order to display events, the widget must determine for each event its start and end time.
-It will look by default at the "startTime" and "endTime" properties of the store item.
+In order to display the data items, the widget must determine for each data item its start and end time.
+It will look by default at the "startTime" and "endTime" properties.
 
  
 .. js ::
@@ -143,11 +155,13 @@ The property names can be configured by setting the "startTimeAttr" and "endTime
   }, "someId");
 
 The value retrieved can be a date directly usable by the calendar or must converted into a date.
+Since Dojo 1.9, the calendar is using Date instances or directly converts from ISO format in a similar way than the following example.
+
 In the latter case, the **decodeDate()** and **encodeDate()** functions must be set to respectively decode the object into a date and encode the date into a custom object after an editing.
 
 In the following example, the date ISO format is used in the model to communicate with a distant server.
 The decodeDate() will allow the calendar to manipulate Date instances.
-The encodeDate() will allow to sent back a date in the ISO format after an event editing.
+The encodeDate() will allow to sent back a date in the ISO format after a data item editing.
 
 .. js ::
 
@@ -175,14 +189,13 @@ The encodeDate() will allow to sent back a date in the ISO format after an event
  }, "someId");
 
 
-In addition to the start and end time, a summary is retrieved on the store item, by default using the "summary" property name (use summaryAttr property to change the property name).
+In addition to the start and end time, a summary is retrieved on the data item, by default using the "summary" property name (use summaryAttr property to change the property name).
 
 
-The event can also be flagged "all day". An all-day event is a particular event that span over one or several days and that starts at the beginning of a day to finish at the beginning of another day.
+The data item can also be flagged "all day". An all-day data item is representing a particular event that spans over one or several days and that starts at the beginning of a day to finish at the beginning of another day.
 
-
-All-day events can be displayed differently: for example by default they are displayed in the secondary sheet of a column view. The editing behavior of an all-day event is also different to keep the all-day constraint.
-The calendar is looking to the "allDay" property of a data store item to determine if an item is an all day event or not (boolean value expected). The property name can be configured by setting the allDayAttr property.
+All-day data items can be displayed differently: for example by default they are displayed in the secondary sheet of a column view. The editing behavior of an all-day data item is also different to keep the all-day constraint.
+The calendar is looking to the "allDay" property of a data item to determine if it is an all day or not (boolean value expected). The property name can be configured by setting the allDayAttr property.
 
 
 Time range definition
@@ -209,7 +222,7 @@ The following example shows how to display 2 weeks, whose first week contains th
        data-dojo-props="date: new Date(2012, 0, 1), dateInterval:'week', dateIntervalSteps:2" 
        style="position:relative;width:500px;height:500px"></div>    
 
-When using the definition using the startDate and endDate properties, the date property must be explicitely null. 
+When using the definition using the startDate and endDate properties, the date property must be explicitly null. 
 The time of day of these date are not taken into account and the date defined by endDate is included in the time range.
 
 
@@ -224,9 +237,9 @@ The following example shows how to define the time range from the 1st of January
 Styling renderers
 =================
 
-A CSS pseudo class can be specified for each event to be applied to the renderers for this particular event. Set the cssClassFunc function that returns the CSS pseudo class name for a store item.
+A CSS pseudo class can be specified for each data item to be applied to the renderers for this particular event. Set the cssClassFunc function that returns the CSS pseudo class name for a data item.
 
-For example, we can use this feature to change the color of a renderer depending on a calendar property of the store item as displayed in the following example:
+For example, we can use this feature to change the color of an item renderer depending on a calendar property of the data item as displayed in the following example:
 
 .. css ::
 
@@ -280,12 +293,12 @@ For example, we can use this feature to change the color of a renderer depending
 
 .. image :: calendar/cssClassFunc.png
 
-For further customization, custom renderers can be created. See dedicated section of advanced configuration.
+For further customization, custom item renderers can be created. See dedicated section of advanced configuration.
 
 Views
 =====
 
-The calendar is embedding two views: the columns view and the matrix view.
+The calendar is embedding by defaults two views: the columns view and the matrix view.
 
 The views are displaying time and events differently and are more adapted for a given time range to display.
 
@@ -305,8 +318,8 @@ Columns View
 The columns view is displaying one column per day.
 
 It view is made of two sheets:
-  * A main sheet that shows all non all-day events vertically.
-  * A secondary sheet that displays, by default, all-day events horizontally.
+  * A main sheet that shows all non all-day data items vertically.
+  * A secondary sheet that displays, by default, all-day data items horizontally.
 
 See Advanced configuration section to see how to change this behavior.
 
@@ -367,9 +380,9 @@ To specify constructor parameters of the matrix view, set the matrixViewProps pr
        style="position:relative;width:500px;height:500px"></div>
 
 
-The event renderers that are overlapping are stacked vertically. 
+The item renderers that are overlapping are stacked vertically. 
 
-Sometimes there is not enough room to show all renderers. In that case, an expand renderer is displayed at the bottom of the cell to indicate that some events are not visible. 
+Sometimes there is not enough room to show all item renderers. In that case, an expand renderer (by default an arrow) is displayed at the bottom of the cell to indicate that some item renderers are not visible.
 
 The matrix view allows to expand a row to see more events. 
 
@@ -397,9 +410,9 @@ The main properties of the columns view are:
 
 Properties with an (*) are computed by the calendar widget.
 
-By default, this is view is using vertical renderers to show all-day events and events longer than one day.
+By default, this is view is using vertical item renderers to show all-day data items and data items longer than one day.
 
-If a day is containing one or several hidden items (i.e. short events by default), a decoration is displayed on the grid cell.
+If a day is containing one or several hidden data items (i.e. short data items by default), a decoration is displayed on the grid cell.
 
 .. image :: calendar/monthColumnViewHidden.png
 
@@ -431,69 +444,71 @@ The selectedItems property contains the list of selected items from the data sto
 
 The selectedItem property contains the last selected item.
 
-Using the mouse
-```````````````
-
-To select an item, simply click on an renderer.
-
-To deselect an item, press the control key and click on a renderer.
-
-If the selection mode is "multiple", you can extend the selection or deselect an item by pressing the control key and click on a renderer.
-
-Using the keyboard
-``````````````````
-
-If the calendar widget has the focus, press the left or right arrow keys to select an item.
-
-To move only the focus on an item and not select it at the same time, press left or right arrow keys while maintaining the control key.
-
-To deselect an item or extend selection (if selection mode is "multiple"), move the focus to an renderer and press the space bar while maintaining the control key.
-
-Using the touch events
-``````````````````````
-
-To select an item, simply tap on it. 
-
-Item editing
-------------
-
-The calendar widget allows to move and resize an event. 
-
-Only one event can be edited at a time. 
-
-Note: for more information on item editing behavior and events, See dedicated section of advanced configuration.
+These last two properties can read as well as programmatically set.
 
 Using the mouse
 ```````````````
 
-To move an event, press the mouse button over the body of a renderer, drag the event at the desired position and release the mouse button.
+To select a data item, simply click on an item renderer.
 
-To resize an event, press the mouse button over the start or end of a renderer, drag it to the desired position and release the mouse button.
+To deselect a data item, press the control key and click on an item renderer.
 
-If you press the escape key while editing an item, the editing gesture will be canceled.
+If the selection mode is "multiple", you can extend the selection or deselect a data item by pressing the control key and click on an item renderer.
 
 Using the keyboard
 ``````````````````
 
-If an item has the focus (see selection section), press the enter key to edit the event.
+If the calendar widget has the focus, press the left or right arrow keys to select a data item.
+
+To move only the focus on a data item and not select it at the same time, press left or right arrow keys while maintaining the control key.
+
+To deselect a data item or extend selection (if selection mode is "multiple"), move the focus to an item renderer and press the space bar while maintaining the control key.
+
+Using a touch device
+````````````````````
+
+To select a data item, simply tap on it. 
+
+Data item editing
+-----------------
+
+The calendar widget allows to move and resize a data item.
+
+Only one data item can be edited at a time. 
+
+Note: for more information on data item editing behavior and events, See dedicated section of advanced configuration.
+
+Using the mouse
+```````````````
+
+To move a data item, press the mouse button over the body of an item renderer, drag the event at the desired position and release the mouse button.
+
+To resize a data item, press the mouse button over the start or end of an item renderer, drag it to the desired position and release the mouse button.
+
+If you press the escape key while editing a data item, the editing gesture will be canceled.
+
+Using the keyboard
+``````````````````
+
+If a data item has the focus (see selection section), press the enter key to edit it.
 
 In editing mode:
 
-  * press the arrow keys to move the events,
-  * press the up or down arrow keys while maintaining the control key to resize the event by moving the end of the event.
+  * press the arrow keys to move the data item,
+  * press the up or down arrow keys while maintaining the control key to resize it by moving the end of this data item.
   * press the enter key to validate the changes and leaving the edit mode.
   * press the escape key to cancel the changes and leaving the edit mode.
 
-Using touch events
-``````````````````
+Using a touch device
+````````````````````
 
-To enter in edit mode press a renderer for a small amount of time, until the renderer visually change its state.
+To enter in edit mode press an item renderer for a small amount of time, until the it visually change its state.
 
 In editing mode:
 
-  * press and move the body of the renderer to move the event.
-  * press and move one (or both) of the resize areas to resize the event.
-  * tap out the renderer to validate the changes and leave the edit mode.
+  * press and move the body of the item renderer to move the event.
+  * press and move one (or both) of the resize areas to resize the data item.
+  * tap out of the item renderer to validate the changes and leave the edit mode.
 
 
 Navigation buttons
@@ -523,24 +538,24 @@ The following functions are also exposed to help navigation:
 
 These buttons and methods are just shortcuts that define the date, dateInterval and dateIntervalSteps properties.
 
-Event creation
---------------
+Interactive data item creation
+------------------------------
 
-Events are retrieved in the data store. To programmatically add a new event, the developer can use the store add() method.
+Data items are retrieved in the data store. To programmatically add a new data item, the developer can use the store add() method (and *remove()* to delete it). If the store is an dojo.store.Observable store, the Calendar will automatically update its rendering.
 
-The calendar is allowing to interactively create an event by pressing the mouse button on the grid and dragging the mouse to set the duration of the event.
+The calendar is allowing to interactively create a data item by pressing the mouse button on the grid and dragging the mouse to set the duration of the event.
 
-Since Dojo 1.9, this interactive creation is working with asynchronous stores, the newly created event is added at the end of the gesture.
+Since Dojo 1.9, this interactive creation is working with asynchronous stores, the newly created data item is added at the end of the gesture.
 
 To enable the creation, the createItemOnGridClick property of the calendar must be set to true (false by default).
-Furthermore, a custom function creating the item must be set on the createItemFunc property.
+Furthermore, a custom function creating the data item must be set on the createItemFunc property.
 
 This custom function is taking three arguments:
    * The current view,
    * The date of the clicked location,
    * The mouse event.
 
-The following example is showing an implementation of the createItemFunc that is creating an event if and only if the control key only is pressed during the interaction. The created event initial position and duration is depending on the current view.
+The following example is showing an implementation of the createItemFunc that is creating a data item if and only if the control key only is pressed during the interaction. The created event initial position and duration is depending on the current view.
 
 .. js ::
 
@@ -553,7 +568,7 @@ The following example is showing an implementation of the createItemFunc that is
 
     var start, end;
     var colView = calendar.columnView;
-    var cal = calendar.dateFuncObj;
+    var cal = calendar.dateModule;
 	
     if(view == colView){
       start = calendar.floorDate(d, "minute", colView.timeSlotDuration);
@@ -577,7 +592,7 @@ The following example is showing an implementation of the createItemFunc that is
   }
 
   calendar.set("createOnGridClick", true);
-  calendar.set("createItemFunc", createItem);	
+  calendar.set("createItemFunc", createItem);
 
 Calendar events
 ===============
@@ -589,29 +604,29 @@ The following table is listing these events:
 ======================= ============================================================ ===================== ===========
 Event                   Description                                                  Main Properties       Mobile support
 ======================= ============================================================ ===================== ===========
-itemClick               A renderer of an event has been clicked                      item                  Yes
-itemDoubleClick         A renderer of an event has been double-clicked               item                  Yes
-itemRollOver            The mouse cursor has entered in a renderer of an event       item                  No
-itemRollOut             The mouse cursor has left in a renderer of an event          item                  No
-itemContextMenu         A renderer of an event has been context-clicked              item                  No
+itemClick               An item renderer of an event has been clicked                item                  Yes
+itemDoubleClick         An item renderer of an event has been double-clicked         item                  Yes
+itemRollOver            The mouse cursor has entered in an item renderer             item                  No
+itemRollOut             The mouse cursor has left in an item renderer                item                  No
+itemContextMenu         An item renderer event has been context-clicked              item                  No
 gridClick               The grid (background of the calendar) has been clicked       date                  Yes
 gridDoubleClick         The grid has been double-clicked                             date                  Yes
-change                  The selection has changed                                    item                  Yes
+change                  The data item selection has changed                          item                  Yes
 rowHeaderClick          (Matrix view) a cell of the row header has been clicked      index, date           Yes
-expandRendererClick     (Matrix view) a expand renderer has been clicked 	     rowIndex, columnIndex Yes
+expandRendererClick     (Matrix view) an expand renderer has been clicked            rowIndex, columnIndex Yes
 onExpandAnimationEnd    (Matrix view) an expand or collapse row animation has ended  null                  Yes
 columnHeaderClick       (Column views) a cell of the column header has been clicked  index, date           Yes
-onItemEditBegin         The event is entering in editing mode item                   null                  Yes
-onItemEditBeginGesture  An editing gesture of an event is beginning item             editKind              Yes
-onItemEditMoveGesture   An event is being moved                                      item                  Yes
-onItemEditResizeGesture	An event is being resized                                    item                  Yes
+onItemEditBegin         The calendar is entering in editing mode                     item                  Yes
+onItemEditBeginGesture  An editing gesture of data item is beginning                 item,editKind         Yes
+onItemEditMoveGesture   A data item is being moved                                   item                  Yes
+onItemEditResizeGesture	A data item is being resized                                 item                  Yes
 onItemEditEndGesture    An editing gesture has been finished                         item, editKind        Yes
-onItemEditEnd           The event is leaving editing mode                            item, completed       Yes
+onItemEditEnd           The calendar is leaving editing mode                         item, completed       Yes
 ======================= ============================================================ ===================== ===========
 	
 Note: The change event is different than the itemClick event:
   * A change event with a null item value is sent if the grid is clicked. 
-  * If an already selected item is clicked the change event is not dispatched but the itemClick event is.
+  * If an already selected data item is clicked the change event is not dispatched but the itemClick event is.
 
 To react on a calendar event use the on() method to register a listener as shown in the following event:
 
@@ -658,12 +673,12 @@ MonthColumnView          The view that displays each month as a column.
 Mouse                    A mixin that enables interactions on events using the mouse.
 Keyboard                 A mixin that enables interactions on events using the keyboard.
 Touch                    A mixin that enables interactions on events using the touch events
-_RendererMixin           Base class of event renderers.
-VerticalRenderer         The default event renderer class of vertical renderers used in columns view main sheet.
-MobileVerticalRenderer   The default vertical renderer class for mobile environment.
-HorizontalRenderer       The default event renderer class of horizontal renderers used in matrix view and in columns view secondary sheet.
-MobileHorizontalRenderer The default horizontal renderer class for mobile environment.
-LabelRenderer            The default renderer class for labels used in matrix view.
+_RendererMixin           Base class of item renderers.
+VerticalRenderer         The default item renderer class of vertical renderers used in columns view main sheet.
+MobileVerticalRenderer   The default vertical item renderer class for mobile environment.
+HorizontalRenderer       The default item renderer class of horizontal renderers used in matrix view and in columns view secondary sheet.
+MobileHorizontalRenderer The default horizontal item renderer class for mobile environment.
+LabelRenderer            The default item renderer class for labels used in matrix view.
 ======================== ===========
 
 Calendar
@@ -800,19 +815,19 @@ Note: the views are first citizen widgets that can be use alone without enclosin
 Renderer kind mapping
 `````````````````````
 
-The itemToRendererKindFunc properties allow to specify a mapping between a store item and a kind of renderer (vertical, horizontal or label).
+The itemToRendererKindFunc properties allow to specify a mapping between a data item and a kind of item renderer (vertical, horizontal or label).
 
 Setting this function allows to:
-  * Filter out some events, based on some of their properties,
-  * Choose which kind of renderer is more suited to display the event.
+  * Filter out some data items, based on some of their properties,
+  * Choose which kind of item renderer is more suited to display the data item.
 
 The default function behavior on the ColumnView is:
-  * If the event is not an all day event, use vertical renderer,
-  * otherwise, do not display the event.
+  * If the data item is not an all day data item, use vertical item renderer,
+  * otherwise, do not display the data item.
 
-The all day events are displayed on the secondary sheet which also have a function with the inverse behavior.
+The all day data item are displayed on the secondary sheet which also have a function with the inverse behavior.
 
-For example, to show all-day events and all the events whose duration is equal or greater than a usual day (1440 minutes) on the secondary sheet only:
+For example, to show all-day data item and all the data items whose duration is equal or greater than a usual day (1440 minutes) on the secondary sheet only:
 
 .. js ::
 
@@ -830,11 +845,11 @@ For example, to show all-day events and all the events whose duration is equal o
   });
 
 The default function behavior on the MatrixView is:
-  * If the event duration is equal or greater than a usual day (1440 minutes), use a horizontal renderer,
-  * otherwise use a label renderer.
+  * If the data item duration is equal or greater than a usual day (1440 minutes), use a horizontal item renderer,
+  * otherwise use a label item renderer.
 
 
-You can customize this behavior to show only horizontal renderers, for example:
+You can customize this behavior to show only horizontal item renderers, for example:
 
 .. js ::
 
@@ -844,16 +859,57 @@ You can customize this behavior to show only horizontal renderers, for example:
     }
   }, null);
 
-Renderer overlap
-````````````````
+Grid cell styling
+`````````````````
 
-When two event renderers are overlapping in time, the renderer can either be displayed side by side (no overlap) or can overlap visually horizontally (vertical renderers) or vertically (horizontal renderers). 
+Each view provides a **styleGridCellFunc** property that allows to customize a grid cell without subclassing a view.
 
-Note that the label renderers cannot overlap visually.
+The following example show how to install a pseudo CSS class to grey out Wednesdays and the time range between 12pm and 2pm:
 
-To specify the overlap, set the percentOverlap property. A 0 value means no overlap, 50 means an overlapping of the half of renderer size.
+.. css ::
 
-The following images show two overlapping events that are displayed by vertical renderer.
+  .greyCell{
+    background-color: #F8F8F8 !important;				
+  }
+  .dojoxCalendarToday.greyCell{
+    background-color: #FFF6D4 !important;
+  }
+  .dojoxCalendarWeekend.greyCell{
+    background-color: #ECF5FE !important;
+  }
+
+.. js ::
+
+  calendar.columnView.set("styleGridCellFunc", function(node, date, hours, minutes){
+    // grey out Wednesday & time range between 12pm and 2pm
+    if(hours >= 12 && hours < 14 || date.getDay() == 3){
+      domClass.add(node, "greyCell");
+    }
+    this.defaultStyleGridCell(node, date, hours, minutes);
+  });
+
+  var func = function(node, date){
+    // grey out Wednesdays
+    if(date != null && date.getDay() == 3){
+      domClass.add(node, "greyCell");
+    }
+    this.defaultStyleGridCell(node, date);
+  };
+
+  calendar.matrixView.set("styleGridCellFunc", func);						
+  calendar.monthColumnView.set("styleGridCellFunc", func);
+
+
+Item renderer overlap
+`````````````````````
+
+When two item renderers are overlapping in time, the item renderers can either be displayed side by side (no overlap) or can overlap visually horizontally (vertical item renderers) or vertically (horizontal item renderers). 
+
+Note that the label item renderers cannot overlap visually.
+
+To specify the overlap, set the percentOverlap property. A 0 value means no overlap, 50 means an overlapping of the half of item renderer size.
+
+The following images show two overlapping events that are displayed by vertical item renderer.
 The first one shows a percentOverlap of 70%, the second on a percentOverlap of 0%.
 
 .. image :: calendar/overlap70.png
@@ -863,20 +919,20 @@ The first one shows a percentOverlap of 70%, the second on a percentOverlap of 0
 Layout priority
 ```````````````
 
-During the layout process, the events that are in the displayed time range are sorted according to the follwing comparison function:
-  * Events that start first are placed first,
-  * If two events have the same start time, the longest is placed first.
+During the layout process, the data items that are in the displayed time range are sorted according to the following comparison function:
+  * Data items that start first are placed first,
+  * If two data item have the same start time, the longest is placed first.
 
-These simple rules allow to have nice looking layout when events are overlapping.
+These simple rules allow to have nice looking layout when data items are overlapping  in time.
 
-If you want to change this event layout priority management, set a sorting function to the layoutPriorityFunction. One use case is to build a sort function based on a priority value set on the data store item itself.
+If you want to change this data item layout priority management, set a sorting function to the layoutPriorityFunction. One use case is to build a sort function based on a priority value set on the data item itself.
 
 Renderers
 `````````
 
-The renderer classes are not set by default on the views. 
+The renderer classes (item renderer and others) are not set by default on the views. 
 
-The calendar widget is setting the default renderers to the views. If a view is used alone, the renderer must be set explicitly.
+The calendar widget is setting the default renderers classes to the views. If a view is used alone, the renderers must be set explicitly.
 
 Column View
 -----------
@@ -888,7 +944,7 @@ The displayed time interval is defined by the startDate and columnCount properti
 
 The time of day displayed is defined by the minHours (8 by default) and maxHours (18 by default)  properties. For example to show the entire day set minHours to 0 and maxHours to 24.
 
-The desired size of an hour is defined  in the hourSize property (100 by default). According to the value of time slot duration, the size may be slightly bigger.
+The desired size of an hour is defined in the hourSize property (100 by default). According to the value of time slot duration, the size may be slightly bigger.
 
 The time slot duration can defined defined by setting the timeSlotDuration property (15 by default). For example, to show only half hours set the timeSlotDuration to 30.
 
@@ -938,10 +994,10 @@ Renderers
 `````````
 
 The column view is using several renderers:
-  * vertical renderers to show the events in the main sheet.
-  * horizontal renderers and expand renderers for secondary sheet.
+  * vertical item renderers to show the data items in the main sheet.
+  * horizontal item renderers and expand renderers for secondary sheet.
 
-The vertical renderer class can be set on the verticalRenderer property.
+The vertical item renderer class can be set on the verticalRenderer property.
 
 The secondary sheet is a custom matrix view, see matrix view renderers for more information on the horizontal and expand renderers.
 
@@ -955,7 +1011,9 @@ The styling of a simple column view  is defined in the themes/claro/SimpleColumn
 Several functions are provided to style or set a style class on part of the view:
   * styleColumnHeaderCell(node, date, renderData): allows to style a column header cell. By default, it installs dojoxCalendarToday and dojoxCalendarWeekend CSS pseudo classes.
   * styleRowHeaderCell(node, hour, renderData): allows to style a row header cell. By default, does nothing.
-  * styleGridColumn(node, date, renderData): allows to style a grid column. By default, it installs dojoxCalendarToday and dojoxCalendarWeekend CSS pseudo classes.
+  * styleGridCell(node, date, hours, minutes, renderData): allows to style a grid cell. By default, it installs dojoxCalendarToday and dojoxCalendarWeekend CSS pseudo classes.
+
+The styleGridCellFunc property allows to customize a grid cell without subclassing a view.
 
 Date formatting
 ```````````````
@@ -986,7 +1044,7 @@ The refStartTime and refEndTime can be used to define a time range of interest. 
 Expanded row
 ````````````
 
-The matrix view can have one row expanded to show mode events on this particular row (usually a week).
+The matrix view can have one row expanded to show mode data items on this particular row (usually a week).
 
 The following functions are available on the matrix view to manage this feature:
 
@@ -1003,28 +1061,28 @@ Renderers
 
 The matrix view is using several renderers:
 
-  * horizontal renderers (horizontalRenderer property) to display events that last at least a day,
-  * label renderers (labelRenderer property) to display the other events.
-  * expand renderer (expandRenderer property), which indicates visually that some events are visibles on a cell.
+  * horizontal item renderers (horizontalRenderer property) to display data items that last at least a day,
+  * label item renderers (labelRenderer property) to display the other data items.
+  * expand renderer (expandRenderer property), which indicates visually that some data items are visibles on a cell.
 
-Horizontal renderers are placed and sized according to the start and end time of the event.
+Horizontal item renderers are placed and sized according to the start and end time of the data item.
 
-Label renderers a placed in a cell and takes the cell width. They cannot overlap and cannot be resized.
+Label items renderers a placed in a cell and takes the cell width. They cannot overlap and cannot be resized.
 
 Layout
 ``````
 
 The matrix view has several layout properties.
 
-The roundToDay property (default true), indicates that horizontal renderers that represent events whose start or end time is not the start or end of a day should fill the cells that they are overlapping.
+The roundToDay property (default true), indicates that horizontal items renderers that represent events whose start or end time is not the start or end of a day should fill the cells that they are overlapping.
 
-The two following images show the same event that starts at 8 am and finishes at the end of the next day. This first one shows the result when the roundToDay property is true and the next one is this property is false.
+The two following images show the same data items that starts at 8 am and finishes at the end of the next day. This first one shows the result when the roundToDay property is true and the next one is this property is false.
 
 .. image :: calendar/roundToDayTrue.png
 
 .. image :: calendar/roundToDayFalse.png
 
-This property can also be set to false, if all the events are displayed using horizontal renderers (see itemToRendererKindFunc property).
+This property can also be set to false, if all the data items are displayed using horizontal items renderers (see itemToRendererKindFunc property).
 
 The size of the renderers are defined by the following properties:
 
@@ -1050,6 +1108,7 @@ Several functions are provided to style or set a style class on part of the view
   * styleRowHeaderCell(node, hour, renderData): allows to style a row header cell. By default, does nothing.
   * styleGridCell(node, date, renderData): allows to style a grid column. By default, it installs dojoxCalendarToday, dojoxCalendarWeekend and dojoxCalendarDisabled CSS pseudo classes.
 
+The styleGridCellFunc property allows to customize a grid cell without subclassing a view.
 
 Date formatting
 ```````````````
@@ -1099,14 +1158,14 @@ In addition to the properties defined in the common section, the month column vi
 
 This value is used to specify the gap in pixels between each overlapping renderer if percentOverlap is 0.
 
-The hidden items grid cell decoration can be not displayed by setting the showHiddenEvents property.
+The hidden data items grid cell decoration can be not displayed by setting the showHiddenEvents property.
 
 Renderers
 `````````
 
-The month columns view is only using vertical renderers.
+The month columns view is only using item vertical renderers.
 
-The vertical renderer class can be set on the verticalRenderer property.
+The vertical item renderer class can be set on the verticalRenderer property.
 
 Styling
 ```````
@@ -1117,7 +1176,9 @@ Several functions are provided to style or set a style class on part of the view
   * styleColumnHeaderCell(node, date, renderData): allows to style a column header cell.
   * styleGridCell(node, date, renderData): allows to style a grid cell. By default, it installs dojoxCalendarToday and dojoxCalendarWeekend CSS pseudo classes.
 
-In an additional layout pass, the dojoxCalendarHiddenEvents CSS pseudo class is installed on grid cells if they are hidden days in the corresponding date.
+In an additional layout pass, the dojoxCalendarHiddenEvents CSS pseudo class is installed on grid cells if they are hidden data items in the corresponding date.
+
+The styleGridCellFunc property allows to customize a grid cell without subclassing a view.
 
 Date formatting
 ```````````````
@@ -1139,40 +1200,45 @@ grid cell          gridCellPattern         _formatGridCellLabel()
 Custom renderers
 ----------------
 
-Several default renderers are provided but you can develop your own renderer.
+Several default item renderers are provided but you can develop your own renderer.
 
-The renderer must extend the dojox.calendar._RendererMixin class.
+The item renderer must extend the dojox.calendar._RendererMixin class.
 
 The main property is of course the item property. The item is an object that contains:
 
   * **item** - the store item.
-  * **range** - the part of the event displayed by this renderer. Sometimes several renderers are needed to display one event,
+  * **range** - the part of the event displayed by this item renderer. Sometimes several item renderers are needed to display one data item,
   * other layout properties.
 
-The owner property contains a reference to the view that is using this renderer.
+The owner property contains a reference to the view that is using this item renderer.
 
-This class provides the state management of the displayed event. The values are computed by the view and passed to the renderer.
+This class provides the state management of the displayed item renderer. The values are computed by the view and passed to the renderer.
 
 The state properties are: edited, focused, hovered, selected. If a state is set, a custom CSS pseudo class is added (same name with upper case first letter for example “Selected”).
 
-Finally the moveEnabled and resizeEnabled properties, define if the renderer can be respectively moved or resized.
+Additional CSS pseudo classed are used to describe the data item state with respect to the store: 
 
-If the renderer needs a substantial refresh, the updateRendering() function is called. It is used mainly to compute the visibility of sub-components of the renderer.
+  * "Storing": The data item is being added/updated to the store.
+  * "Unstored": The data item is not in the store yet (interactive data item create use case)
+
+Finally the moveEnabled and resizeEnabled properties, define if the data item can be respectively moved or resized.
+
+If the item renderer needs a substantial refresh, the updateRendering() function is called. It is used mainly to compute the visibility of sub-components of this item renderer.
 
 Other utility functions are provided to format time and set text using Bidi text direction etc.
 
-Event editing
--------------
+Data item editing
+-----------------
 
 Introduction
 ````````````
 
-The calendar allows to interactively move or resize an event
+The calendar allows to interactively move or resize a data item.
 
 Steps
 `````
 
-The event editing process is going through the following steps:
+The data item editing process is going through the following steps:
   * The editing is initialized by a user interaction, the widget is entering in edit mode.
   * The user is doing some move gestures or/and some resize gestures.
   * The user validate or cancel the changes, the widget is leaving edit mode.
@@ -1186,9 +1252,9 @@ Editing flags
 
 The editable property allows to globally enable or disable the editing capability of the widget.
 
-If the editable property is true, the moveEnabled and resizeEnabled properties allow to control respectively if an event can be moved or resized.
+If the editable property is true, the moveEnabled and resizeEnabled properties allow to control respectively if a data item can be moved or resized.
 
-To have a control of move or resize at the event level, override respectively the isItemMoveEnabled() or isItemResizeEnabled() functions.
+To have a control of move or resize at the data item level, override respectively the isItemMoveEnabled() or isItemResizeEnabled() functions.
 
 Editing behavior properties
 ```````````````````````````
@@ -1197,12 +1263,12 @@ To customize the event editing behavior, a set of properties are exposed by the 
 ============================ ========================= ========================= =========================== ===============
 Property                     Column view default value Matrix view default value Month Columns default value ViewDescription
 ============================ ========================= ========================= =========================== ===============
-allDayKeyboardLeftRightSteps 1                         1                         1                            How many unit to add or removed when using the keyboard left or right keys when editing an all day event.
-allDayKeyboardLeftRightUnit  “day”                     “day”                     "month"                      Unit to add or remove when using the keyboard left or right keys when editing an all day event.
-allDayKeyboardUpDownSteps    0                         7                         1                            How many unit to add or remove when using the keyboard up or bottom keys when editing an all day event.
-allDayKeyboardUpDownUnit     “day”                     “day”                     "day"                        Unit to add or remove when using the keyboard up or down keys when editing an all day event.
-allowResizeLessThan24H       true                      false                     false                        Allow or not to resize an event that is lasting more than 24 hours to a duration less than 24 hours. Matrix view is preventing this because by default two renderer kinds are used to display events depending on their duration.
-allowStartEndSwap            true                      true                      true                         Allows move the end of an event before the start and vice  versa.
+allDayKeyboardLeftRightSteps 1                         1                         1                            How many unit to add or removed when using the keyboard left or right keys when editing an all day data item.
+allDayKeyboardLeftRightUnit  “day”                     “day”                     "month"                      Unit to add or remove when using the keyboard left or right keys when editing an all day data item.
+allDayKeyboardUpDownSteps    0                         7                         1                            How many unit to add or remove when using the keyboard up or bottom keys when editing an all day data item.
+allDayKeyboardUpDownUnit     “day”                     “day”                     "day"                        Unit to add or remove when using the keyboard up or down keys when editing an all day data item.
+allowResizeLessThan24H       true                      false                     false                        Allow or not to resize a data item that is lasting more than 24 hours to a duration less than 24 hours. Matrix view is preventing this because by default two renderer kinds are used to display data items depending on their duration.
+allowStartEndSwap            true                      true                      true                         Allows move the end of a data item before the start and vice  versa.
 keyboardLeftRightSteps       1                         15                        1                            How many unit to add or remove when using the keyboard left or right keys.
 keyboardLeftRightUnit        “day”                     “minute”                  "month"                      Unit to add or remove when using the keyboard left or right keys..
 keyboardUpDownSteps          15                        7                         1                            How many unit to add or remove when using the keyboard up or down keys.
@@ -1225,8 +1291,8 @@ For example to change the minimal duration of an event to 30 minutes.
   calendar.columnView.set("minDurationSteps", 30);
   calendar.columnView.set("minDurationUnit", "minute");
 
-Editing handlers
-````````````````
+Editing event handlers
+``````````````````````
 
 In some advanced use cases, the editing properties are not sufficient, the editing events are used to have a specific behavior.
 
@@ -1241,17 +1307,17 @@ itemEditBeginGesture  A gesture is beginning              Store initial values b
 itemEditMoveGesture   A move gesture occurred             Snapping, view limit management.
 itemEditResizeGesture A resize gesture occurred	          Snapping, view limit management, duration constraints enforcement.
 itemEditEndGesture    A move or resize gesture has ended  Apply or cancel gesture.
-itemEditEnd           The event editing has ended	  Apply changes to store item or cancel changes and revert start and end time.
+itemEditEnd           The widget is leaving edit mode	  Apply changes to store item or cancel changes and revert start and end time.
 ===================== =================================== =====
 
 All the editing events have the following properties:
-   * *item*: an object that contains the start and end time during the event editing in the startTime and endTime properties. When the item is moved or resized, new start and end time values are computed and put in these properties. The itemEditMoveGesture and itemEditResizeGesture default event handlers are then manipulating these properties to apply snapping, limits etc according to the editing properties values.
+   * **item**: an object that contains the start and end time during the event editing in the startTime and endTime properties. When the data item is moved or resized, new start and end time values are computed and put in these properties. The itemEditMoveGesture and itemEditResizeGesture default event handlers are then manipulating these properties to apply snapping, limits etc according to the editing properties values.
 
-   * *storeItem*: The store item that is being edited. This object must not be changed excepting in itemEditEnd event.
+   * **storeItem**: The data item that is being edited. This object must not be changed excepting in itemEditEnd event.
 
 To prevent the editing default behavior applied by the calendar, call in your handler of the item editing event preventDefault().
 
-The following example is cancelling the editing gesture when the item has a specific property and its start time is after 1pm (included)
+The following example is cancelling the editing gesture when the data item has a specific property and its start time is after 1pm (included)
 
 .. js ::
 

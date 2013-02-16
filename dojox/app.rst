@@ -236,6 +236,23 @@ Object. Dependencies, modules and controllers are loaded using the Dojo AMD load
      }
   }
 
+transit
+-------
+
+AMD module identifier. By default dojox/app is using dojox/css3/transit module to perform transition animations. You can provide your own transition animation function by referencing it here:
+
+.. js ::
+
+  "transit" : "my/app/transit"
+
+The module should return a function with the following signature:
+
+.. js ::
+
+  function(fromDomNode, toDomNode, transitionOptions){ }
+
+and should return a promise.
+
 dependencies
 ------------
 
@@ -273,7 +290,7 @@ They are automatically added to the list of dependencies and as such do not need
 controllers
 -----------
 
-Array of AMD modules identifiers. Controllers for the application. All the controllers defined here will be loaded during application startup to respond to application events and controller the application logic. The “``dojox/app/controllers/Load``” and “``dojox/app/controllers/Transition``” are automatically mixed into the application you don’t have the explicitly include them.
+Array of AMD modules identifiers. Controllers for the application. All the controllers listed here will be loaded during application startup to respond to application events and controller the application logic. The “``dojox/app/controllers/Load``”, “``dojox/app/controllers/Transition``” and “``dojox/app/controllers/Layout``” are automatically mixed into the application you don’t have the explicitly include them. If you don't want to include them you have to set the ``noAutoLoadController`` parameter to ``false`` in the config.
 
 .. js ::
 
@@ -364,6 +381,7 @@ String. The default animation type for the view transition.
 
 views
 -----
+
 Object. The child views of an application or of a view. Dependencies may be defined on views for optimization and organization purposes. Models might also be defined on views if they are view-specific. Finally a view item as five additional properties:
    * template for defining the view rendering for views of type ``dojox/app/View``
    * definition to provide an AMD module to be mixed into the view to control it. By default if no definition module is specified for a view it is looked up automatically in "./views/<viewId>.js". If you don’t want a definition module at all you should specify the "none" value.
@@ -444,7 +462,7 @@ The main dojox/app modules
 
 :ref:`dojox/app/main <dojox/app/main>` is used to create a ``dojox/app`` Application object from the JSON configuration. The main responsibilities of ``dojox/app/main`` include loading the various controllers & data stores as well as managing the application lifecycle.
 
-:ref:`dojox/app/View <dojox/app/view>` provides a view object in charge of the view rendering and lifecycle. It contains a template string which will be rendered.  A view can itself have nested View objects.
+:ref:`dojox/app/View <dojox/app/View>` provides a view object in charge of the view rendering and lifecycle. It contains a template string which will be rendered.  A view can itself have nested View objects.
 
 :ref:`dojox/app/Controller <dojox/app/Controller>` a base class for the various application controllers:
 
@@ -456,10 +474,7 @@ The main dojox/app modules
 
 * ``dojox/app/controllers/HistoryHash`` an alternate  controller that maintains application history using URL hash. It works on all browsers but has limitations with regard to browser refresh and going back to an URL out of application’s history stack.
 
-:ref:`dojox/app/model <dojox/app/model>`, depending on the application models configuration, is creating either simple or MVC models for the views to bind their widgets to.
-
 :ref:`dojox/app/module <dojox/app/module>` a package containing various modules than can be used in the configuration file to be mixed into the Application object.
-
 
 The following diagram represents the high level architecture of ``dojox/app`` and in particular how the modules listed
 above interacts each others:

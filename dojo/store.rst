@@ -150,7 +150,7 @@ When a store is wrapped with ``dojo/store/Observable``, one can listen for chang
 ========================================================  =============================================================
 Method                                                    Description
 ========================================================  =============================================================
-observe(listener)                                         The listener function is called with following arguments:
+observe(listener, includeObjectUpdates)                   The listener function is called with following arguments:
 
                                                           .. js ::
 
@@ -170,6 +170,12 @@ observe(listener)                                         The listener function 
                                                             is ``-1``, then the object is a removal from this result 
                                                             set (due to an object being deleted, or changed such that 
                                                             it is not a part of the result set).
+
+                                                          The ``includeObjectUpdates`` argument indicates whether or
+                                                          not to include updates to objects that don't affect the
+                                                          inclusion or order of the changed object. If this is not set
+                                                          to true, object updates that don't result in addition,
+                                                          removal, or change in order won't trigger the listener.
 
 close()                                                   When ``close()`` is called on a result set, notifications 
                                                           will no longer be fired.

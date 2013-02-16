@@ -22,7 +22,7 @@ of Dojo might include fixes to support future releases of these browsers, but it
 
 * Chrome 13-23
 
-* IE 6-10
+* IE 8-10
 
 * Opera 10.50-12 (Dojo core only)
 
@@ -129,13 +129,36 @@ dojox/mobile
      to change the type of ``ListItem`` instances created by the list.
    * dojox/mobile list widgets now provide filtering capabilities.
      For details, see :ref:`dojox/mobile/FilteredListMixin <dojox/mobile/FilteredListMixin>`.
+   * dojox/mobile editable list widgets now have callback functions on user actions.
+     For details, see :ref:`dojox/mobile/RoundRectList <dojox/mobile/RoundRectList#editable-list-example>` and 
+     :ref:`dojox/mobile/EdgeToEdgeList <dojox/mobile/EdgeToEdgeList#editable-list-example>`.
    * Internet Explorer 10 is now supported "natively" (that is, without compatibility code
      and CSS): since IE10 supports CSS3 transitions, animations and gradients,
      compatibility mode is disabled for IE10, and Dojo Mobile uses the non-prefixed CSS3
      properties supported by IE10 in addition to the webkit-prefixed properties.
+   * The user agent tests that were previously done in ``dojox/mobile/sniff`` have been
+     moved to ``dojo/sniff``, so the use of ``dojox/mobile/sniff`` is deprecated,
+     You should now use ``dojo/sniff`` instead. The ``dojox/mobile/sniff`` module is still present
+     in this release for compatibility, but it will be removed in a future release.
+   * The ``has("ios")`` feature test defined in ``dojo/sniff`` now returns the iOS version
+     (instead of a Boolean). In previous versions, you used ``has("iphone")`` to detect
+     any iOS device (iPhone, iPad or iPod). You should now use ``has("ios")`` instead.
+     The ``dojox/mobile/sniff`` module still sets the ``"iphone"`` feature to the iOS version
+     on all iOS devices for compatibility, but in future releases it will be set only
+     for an iPhone device. 
+   * The ``dojox/mobile/RoundRectStoreList`` and ``dojox/mobile/EdgeToEdgeStoreList`` widgets
+     now support updating existing store items. When a ``put`` operation is performed on the store,
+     the corresponding list item is updated with the new properties of the store item. A new
+     ``onAdd`` method has been added to ``dojox/mobile/_StoreMixin`` to better distinguish add
+     and put operations.
+   * A subset of widgets (``Button``, ``CheckBox``, ``Heading``, ``ListItem``, ``RadioButton``, 
+     ``Slider``, ``Switch``, ``ToggleButton``, and ``View``) can now be templated.
+     For details, see :ref:`Templating dojox/mobile widgets <dojox/mobile/templating-mobile-widgets>`.
    * Building themes: A new folder ``dojox/mobile/themes/utils`` now contains scripts and 
      documentation for building  mobile themes. The number of required ``.less`` files for a
      particular theme has been drastically reduced.
+   * The 'Custom' theme is now generated from 2 main colors, facilitating the creation of a new theme 
+     based on arbitrary colors.
    * New Android Holo dark theme used by default on Android 3.x and 4.x devices. For 
      backward compatibility, you can force 'Android' theme on all Android devices by 
      configuring ``deviceTheme``:
@@ -152,6 +175,9 @@ dojox/mobile
      The tests for this use case are also removed.
    * The ``endTransition`` method of the ``dojox/mobile/TransitionEvent`` class has been removed
      since it was never called by the dojox/mobile framework.
+   * ``dojox/mobile/sniff`` module does not anymore require ``dojo/_base/sniff`` but ``dojo/sniff``.
+     This means you can't use anymore ``isXX`` methods (such as ``isIE``); you should use ``has`` 
+     flags instead (such as ``has("ie")``).
 
 dojox/charting
 --------------
@@ -163,7 +189,8 @@ dojox/charting
    * Mouse indicator action (dojox/charting/action2d/MouseIndicator) now supports over mode in addition to mouse drag. The mouse indicator can also be further customized (ability to remove the label, ...).
    * Grids (dojox/charting/plot2d/Grid) now support grid stripes in addition to grid lines.
    * Ability to render labels on data points for Bubble/Columns/Default/Scatter plots by setting labels property to true.
-   * Charting now supports bidi mirroring. You can enable it calling myChart.setDir("rtl").
+   * Charting bidi features (bi-directional text and mirroring) can be enabled using the dojo-bidi has flag you should not use BidiSupport modules anymore. See `dojox/charting migration`_ for details.
+   * Charting now supports bidi mirroring. You can perform mirroring by calling myChart.setDir("rtl") once bidi features have been included using dojo-bidi.
 
 *Incompatibilities*
 
@@ -177,11 +204,24 @@ dojox/app
 
    * dojox/app now provides a build system extension that allows you to easily build your application from the config file.
    * One can now use the `type` property for a view in the config file to specify alternate view class extending dojox/view/ViewBase.
-   * Configuration of views now accept a `nls` property to specify an AMD internationalisation root module for a view.
+   * Configuration of views now accept a `nls` property to specify an AMD internationalization root module for a view.
+   * Custom Layout controller support is available with a dojox/app/controllers/LayoutBase which can be extended with a custom layout controller.
+   * Support for a constraint setting on a view in the config has been added, which will add data-app-constraint to the domNode for the view, and place the view into the specified constraint (or region).
+   * A new BorderLayout controller has been provided, which uses a dijit/layout/BorderContainer to layout views, and uses constraint settings on views in the config to determine which constraint (or region) a view should be placed into.
+   * One can now specifies alternate transition animation function by using the `transit` property in top level section of the configuration file.
+   * The activate & deactivate function of the view lifecycle now accept two arguments:
+       * respectively the previousView or nextView for the current view at its position
+       * a raw data object that can be passed from one view to another by specifying a data attribute in the transition options.
+   * Support was added to allow multiple views to be included in the DefaultViews in the config as well as on transitions and the url used in the transition. This allows multiple views to be displayed with different constraints (or regions) at the same time.  It is also now possible to transition views in regions other than the center.  To specify multiple views the view names would listed separated by a "+" for example "view1+view2" or "view1,subviewA+view2".  Support has also been added to be able to use a "-" to hide a view.  So if "view1+view2" are displayed and a transition is requested for "view3-view1" then view3 would be displayed (replacing view2 assuming they have the same constraint) and view1 would be hidden.
+
 
 *Incompatibilities*
 
-In 1.8 dojox/app would automatically require a model and mvc controller if it was listed in the config and not included in the list of dependencies.  In 1.9 the model and mvc controller will need to be listed in the dependencies. For example:
+   * data-app-region has been changed to data-app-constraint.
+   * Since "+" and "-" can now be used to indicate multiple views on a transition, those characters are no longer allowed in a view name.
+   * The events used in the Layout controllers have changed from layout and select to initLayout and layoutView.
+   * zIndex is no longer automatically set on views depending upon whether they are in the center or not.  In the past the zIndex was automatically set higher on the left pane of a tablet view to avoid having the transition for the center show over that left pane.
+   * In 1.8 dojox/app would automatically require a model and mvc controller if it was listed in the config and not included in the list of dependencies.  In 1.9 the model and mvc controller will need to be listed in the dependencies. For example:
 
 .. js ::
 
@@ -192,6 +232,19 @@ In 1.8 dojox/app would automatically require a model and mvc controller if it wa
 		// ...
 	]
 
+
+*Incompatibilities (continued)*
+   * In 1.8 dojox/app would automatically include the Load, Transition and Layout controllers, unless "noAutoLoadControllers" was set to true in the config.  In 1.9 the controllers are no longer automatically loaded, and the noAutoLoadControllers option has been removed.  So the config must include the necessary controllers. For example:
+
+.. js ::
+
+	"controllers": [
+		"dojox/app/controllers/Load",
+		"dojox/app/controllers/Transition",
+		"dojox/app/controllers/Layout",
+		"dojox/app/controllers/History"
+	]
+
 dojox/calendar
 --------------
 
@@ -199,11 +252,13 @@ dojox/calendar
 
   * Better support of asynchronous stores. Interactive event creation is now working with asynchronous stores (event is added to store at the end of the gesture). Event renderers are notified of the current store state (being created but not added yet to store, being added/updated, in store). An example is available (tests/asynchStore.html)
   * New properties have been added to further customize the the row header of the column view.
+  * Query options to be set when querying the store can now be specified on the calendar using queryOptions property.
 
 *Incompatibilities*
 
    * In 1.8, the Date constructor was used as last resort to decode a Date string. In 1.9, as it is not reliable, the Date constructor is not used, and time.newDate() will throw an error if parameter is string and it cannot be decoded using ISO decoder (dojo/date/stamp).
    * In 1.8, the renderers life cycle events (onRendererXXXX) have the renderer as parameter. In 1.9, an event is passed as parameter. This event will provide the renderer but also the view where this renderer is used and for "rendererCreated" and "rendererReused" events the data item displayed by this renderer.
+   * The ColumnView.styleGridColumn has been renamed into styleGridCell and two arguments have been added.
    * The calendar is now complying with the resize policy of Dojo. If the calendar, and especially the Matrix View, is *not* in a Dijit container or a Dojo mobile container, the application developer must call the resize() method of the calendar (or the view if used as standalone).
    * In 1.8, the itemEditEnd event item property was inconsistent with the other editing events because it was representing the store item instead of the render item. In 1.9, each editing event is containing two properties:
       * item: The render item. To change editing behavior set the startTime and/or endTime of this object.
@@ -214,6 +269,10 @@ dojox/gfx
 ---------
 
    * Add dashed stroke support to canvas renderer. If the browser implements the (new) HTML5 dash api (context2d.setLineDash()) then the gfx renderer uses it. Otherwise, it relies on a custom (canvas- specific) implementation.
+
+dojo/treemap
+------------
+   * Query options to be set when querying the store can now be specified on the treemap using queryOptions property.
 
 Util
 ====
@@ -242,9 +301,6 @@ dijit/_Container::addChild()
 In 1.8, the behavior of ``dijit/_Container`` (and subclasses) ``.addChild()`` method was undefined if some of the 
 ``_Container.containerNode`` direct children were plain DOM nodes, rather than widgets.
 
-In practice though, when ``addChild(widget, n)`` would count to the *n*'th position, it would skip over the plain
-DOMNodes and only include the child widgets in the count.
-
 Further, if the existing child widgets were not direct children of ``this.containerNode``, then ``.addChild()`` would
 tend to place the new widget as a next or previous sibling of an existing child widget, rather than as a direct child of
 ``this.containerNode``.
@@ -254,6 +310,33 @@ In 1.9, ``parent.addChild(widget, n)`` places ``widget.domNode`` as the *n*'th D
 
 If your application was calling ``parent.addChild()`` on a widget that contained plain DOM nodes, and depending on the
 undefined behavior listed above, you may need to update your logic.
+
+In practice though, when ``addChild(widget, n)`` would count to the *n*'th position, it would skip over the plain
+DOMNodes and only include the child widgets in the count.
+
+dijit: keypress to keydown
+--------------------------
+
+For performance, a number of widgets were changed to use the native keydown event rather than the synthetic (and
+deprecated) dojo/_base/connect._keypress event.
+
+This include changes to the template like ``data-dojo-attach-event="onkeydown: _onKeyDown"`` rather than 
+``data-dojo-attach-event="onkeypress: _onKeyPress"``, and in the class definitions code renaming ``_onKeyPressed()`` to
+``_onKeyDown()``, and accessing ``evt.keyDown`` rather than ``evt.charOrCode``.
+
+Changed widgets:
+
+- Menu (dijit/templates/Menu, DropDownMenu.js, MenuBar.js)
+- Slider
+- NumberSpinner
+- InlineEditBox (onkeypress handler removed, onkeydown not added)
+- StackContainer, StackController, TabController, ScrollingTabController
+- AccordionContainer (technically, AccordionButton)
+- BorderContainer
+- Editor
+
+Note that ``_TextBoxMixin`` still creates it's own normalized event object defining ``evt.charOrCode``, and passes it to
+``._onInput()``.
 
 dijit Template Changes
 ----------------------
@@ -274,3 +357,25 @@ Tooltip, highlight and magnify actions are no longer "hardcoded" into the spider
 	new Tooltip(spiderchart);
 	new Highlight(spiderchart);
 	new Magnify(spiderchart, "default", {duration: 800, scale: 1.5});
+
+Charting bidi features are not anymore enabled by the BidiSupport and BidiSupport3D modules. Instead you should be
+using the ``dojo-bidi`` flag.
+
+Replace code like:
+
+.. html ::
+
+  <script src="dojo.js"></script>
+  <script>
+    require(["dojox/charting/Chart", "dojox/charting/BidiSupport"], ...);
+  </script>
+
+by
+
+.. html ::
+
+  <script src="dojo.js" data-dojo-config="has:{'dojo-bidi': true}"></script>
+  <script>
+    require(["dojox/charting/Chart"], ...);
+  </script>
+

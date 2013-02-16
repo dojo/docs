@@ -231,6 +231,85 @@ This is an example of 'editable' parameter for re-ordering the list and deleting
 
 .. image :: RoundRectList-editable.gif
 
+
+**Note:** you have to implement a delete action if you want the delete button to have an action. To do so, 
+you can either subscribe to the "/dojox/mobile/deleteListItem" topic like in the example above or connect to the
+onDeleteItem callback as described below.
+
+
+You can also handle events when edit mode starts/ends or when children ListItems are moved/deleted.
+The example below handles those events by connecting to the callback functions of the RoundRectList widget. (See test_RoundRectList-connect.html in the dojox/mobile/tests folder for a complete example.)
+
+.. js ::
+
+    require([
+        "dojo/_base/connect",
+        "dojo/dom-class",
+        "dojo/ready",
+        "dijit/registry",
+    ], function(connect, domClass, ready, registry){
+        var delItem, handler, btn1, list1;
+
+        function showDeleteButton(item){
+            hideDeleteButton();
+            delItem = item;
+            item.rightIconNode.style.display = "none";
+            if(!item.rightIcon2Node){
+                item.set("rightIcon2", "mblDomButtonMyRedButton_0");
+                item.rightIcon2Node.firstChild.innerHTML = "Delete";
+            }
+            item.rightIcon2Node.style.display = "";
+            handler = connect.connect(list1.domNode, "onclick", onDeleteItem);
+        }
+        function hideDeleteButton(){
+            if(delItem){
+                delItem.rightIconNode.style.display = "";
+                delItem.rightIcon2Node.style.display = "none";
+                delItem = null;
+            }
+            connect.disconnect(handler);
+        }
+        function onDeleteItem(e){
+            var item = registry.getEnclosingWidget(e.target);
+            if(domClass.contains(e.target, "mblDomButtonMyRedButton_0")){
+                setTimeout(function(){
+                    item.destroy();
+                }, 0);
+            }
+            hideDeleteButton();
+        }
+
+        connect.subscribe("/dojox/mobile/deleteListItem", function(item){
+            showDeleteButton(item);
+        });
+
+        onClickEdit = function(){
+            list1.startEdit();
+        }
+        onClickDone = function(){
+            hideDeleteButton();
+            list1.endEdit();
+        }
+
+        ready(function(){
+            btn1 = registry.byId("btn1");
+            list1 = registry.byId("list1");
+            connect.connect(list1, "onStartEdit", null, function(){
+                console.log("StartEdit");
+            });
+            connect.connect(list1, "onEndEdit", null, function(){
+                console.log("EndEdit");
+            });
+            connect.connect(list1, "onDeleteItem", null, function(widget){
+                console.log("DeleteIconItem: " + widget.label);
+            });
+            connect.connect(ic, "onMoveItem", null, function(widget, from, to){
+                console.log("MoveIconItem: " + widget.label + " (" + from + " -> " + to + ")");
+            });
+        });
+    });		
+		
+
 Synchronized list example
 -------------------------
 
@@ -257,7 +336,7 @@ This is an example of 'syncWithViews' parameter to synchronize the selected item
           <li data-dojo-type="dojox.mobile.ListItem"
               data-dojo-props='icon:"images/i-icon-1.png", moveTo:"wifi"'>Wi-Fi</li>
           <li data-dojo-type="dojox.mobile.ListItem"
-              data-dojo-props='icon:"images/i-icon-2.png", moveTo:"bright"'>Brightness &amp; Wallpaper</li>
+              data-dojo-props='icon:"images/i-icon-2.png", moveTo:"bright"'>Brightness & Wallpaper</li>
           <li data-dojo-type="dojox.mobile.ListItem"
               data-dojo-props='icon:"images/i-icon-3.png", moveTo:"picture"'>Picture Frame</li>
         </ul>
@@ -275,7 +354,7 @@ This is an example of 'syncWithViews' parameter to synchronize the selected item
         </ul>
       </div>
       <div id="bright" data-dojo-type="dojox.mobile.View">
-        <h1 data-dojo-type="dojox.mobile.Heading">Brightness &amp; Wallpaper</h1>
+        <h1 data-dojo-type="dojox.mobile.Heading">Brightness & Wallpaper</h1>
         <ul data-dojo-type="dojox.mobile.RoundRectList">
           <li data-dojo-type="dojox.mobile.ListItem"
               data-dojo-props='moveTo:"picture"'>Next View</li>

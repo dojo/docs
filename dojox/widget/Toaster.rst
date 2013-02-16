@@ -48,14 +48,14 @@ The first example uses setContent() and show() to vary the message and display i
 
   .. js ::
 
-       require(["dojox/widget/Toaster", "dijit/Registry", "dojo/parser", "dojo/on", "dojo/dom", "dojo/domReady!"],
+       require(["dojox/widget/Toaster", "dijit/registry", "dojo/parser", "dojo/on", "dojo/dom", "dojo/domReady!"],
        function(Toaster, registry, parser, on, dom){
          parser.parse();
-         on(dom.byId("surprise"), "click", lang.hitch(this, "surpriseMe")); 
          var surpriseMe = function(){
            registry.byId('first_toaster').setContent('Twinkies are now being served in the vending machine!', 'fatal');
            registry.byId('first_toaster').show();
          }
+         on(dom.byId("surprise"), "click", surpriseMe); 
        });
 
 
@@ -92,21 +92,21 @@ The next example does the same thing, but uses the publish/subscribe model.  The
 
   .. js ::
 
-       require(["dojox/widget/Toaster", "dijit/Registry", "dojo/parser", "dojo/topic", "dojo/on", "dojo/dom", "dojo/domReady!"],
+       require(["dojox/widget/Toaster", "dijit/registry", "dojo/parser", "dojo/topic", "dojo/on", "dojo/dom", "dojo/domReady!"],
        function(Toaster, registry, parser, topic, on, dom){
          parser.parse();
-         topic.publish("testMessageTopic", [
+         topic.publish("testMessageTopic",
             {
               message: "Twinkies are now being served in the vending machine!",
               type: "fatal",
               duration: 500
             }
-         ]);
-         on(dom.byId("surprise"), "click", lang.hitch(this, "surpriseMe")); 
+         );
          var surpriseMe = function(){
-           registry.byId('first_toaster').setContent('Twinkies are now being served in the vending machine!', 'fatal');
-           registry.byId('first_toaster').show();
+           registry.byId('publish_subscribe_toaster').setContent('Twinkies are now being served in the vending machine!', 'fatal');
+           registry.byId('publish_subscribe_toaster').show();
          }
+         on(dom.byId("surprise"), "click", surpriseMe);
        });
 
   .. html ::
@@ -116,7 +116,7 @@ The next example does the same thing, but uses the publish/subscribe model.  The
          id="publish_subscribe_toaster"
          >
     </div>
-    <input type="button" value="Click here for Publish Subscribe toaster"/>
+    <input type="button" id="surprise" value="Click here for Publish Subscribe toaster"/>
 
 This example builds a Toaster programmatically and lets you set params.
 
@@ -132,8 +132,8 @@ This example builds a Toaster programmatically and lets you set params.
 
   .. js ::
 
-       require(["dojox/widget/Toaster", "dijit/Registry", "dojo/topic", "dojo/on", "dojo/dom", "dojo/domReady!"],
-       function(Toaster, registry, topic, on, dom){
+       require(["dojox/widget/Toaster", "dijit/registry", "dojo/topic", "dojo/on", "dojo/dom", "dojo/parser", "dojo/domReady!"],
+       function(Toaster, registry, topic, on, dom, parser){
          parser.parse();
 
          var showMyToaster = function(){
@@ -151,7 +151,7 @@ This example builds a Toaster programmatically and lets you set params.
           // create a toaster
           var myToaster = new Toaster({id: 'myToaster'}, dom.byId('ToasterPane'));
 
-          on(dom.byId("showToaster"), "click", lang.hitch(this, "showMyToaster")); 
+          on(dom.byId("showToaster"), "click", showMyToaster); 
        });
 
   The html creates an empty div to place the new Toaster instance into.  The rest is basic form stuff to parameterize the toaster.
@@ -192,17 +192,4 @@ This example builds a Toaster programmatically and lets you set params.
      </tr>
      <tr>
        <td valign="top">Message:<br><small>HTML is accepted</small></td>
-       <td><textarea id="myToasterMsg" name="myToasterMsg" rows="4" cols="60">Test Message</textarea></td>
-     </tr>
-     <tr>
-       <td></td>
-       <td><input type="button" id="showToaster" value="Click here to see YOUR Toaster"/></td>
-     </tr>
-   </table>
-
-Additional Considerations
-=========================
-
-- Toasters defined in Dialogs
-- Creating Toaster programmatically
-- Multiple Toasters
+       <td><textarea id="myToasterMsg" name="myToasterMsg" rows="4" cols="60">Test Message
