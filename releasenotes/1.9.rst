@@ -346,8 +346,8 @@ dijit Template Changes
 If you have subclasses of ``InlineEditBox``, ``ComboBox``, ``FilteringSelect``, or ``DateTextBox`` that have modified
 those templates, you may need to update your templates.
 
-dojox/charting
---------------
+dojox/charting migration
+------------------------
 
 Tooltip, highlight and magnify actions are no longer "hardcoded" into the spider plot
 (``dojox/charting/plot2d/Spider``). The need to be explicitly setup on the plot to utilize them, for example:
