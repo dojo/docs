@@ -383,7 +383,7 @@ Package/Module                                                                  
 :ref:`dojox/date/buddhist <dojox/date/buddhist>`                                   Mature       Provides support for Buddhist dates.
 :ref:`dojox/date/hebrew <dojox/date/hebrew>`                                       Mature       Provides support for Hebrew dates.
 :ref:`dojox/date/islamic <dojox/date/islamic>`                                     Mature       Provides support for Islamic dates.
-:ref:`dojox/date/umalqura<dojox/date/umalqura>`                                    Mature       Provides support for Um AlQura dates.
+:ref:`dojox/date/umalqura <dojox/date/umalqura>`                                    Mature       Provides support for Um AlQura dates.
 :ref:`dojox/date/php <dojox/date/php>`                                             Experimental Utilities for handling PHP styled dates.
 :ref:`dojox/date/posix <dojox/date/posix>`                                         Experimental Utilities for handling POSIX strftime formatted dates.
 :ref:`dojox/date/relative <dojox/date/relative>`                                   Experimental Utilities for handling relative dates.
