@@ -1,8 +1,8 @@
 .. _dojox/date/umalqura:
 
-==================
+===================
 dojox.date.umalqura
-==================
+===================
 
 :Contributor: Hossam Katory
 :since: V1.9
@@ -48,7 +48,7 @@ Code snippet below illustrates most common usage of Um AlQura calendar.
   </body>
 
 Um AlQura calendar package
-------------------------
+--------------------------
 
 Um AlQura calendar package comprises of following two files:
 
@@ -56,7 +56,7 @@ Um AlQura calendar package comprises of following two files:
     * dojox.date.umalqura.locale includes implementation of functions responsible for conversion between two possible representations of Um AlQura date: String representation and Date object. It also provides date formatting capabilities.
 
 Um AlQura calendar and DateTextBox
---------------------------------
+----------------------------------
 
 Um AlQura calendar implemented in this package can be used in conjunction with DateTextBox in order to provide graphical date picker for Um AlQura calendar. For example, image below illustrates DateTextBox using Um AlQura calendar with default language set to Arabic.
 
