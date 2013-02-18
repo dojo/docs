@@ -1,7 +1,7 @@
-.. _dojox/app/modules:
+.. _dojox/app/module:
 
 ================
-dojox/app/modues
+dojox/app/module
 ================
 
 :since: V1.7
