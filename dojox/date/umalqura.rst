@@ -17,9 +17,9 @@ Introduction
 
 The Um AlQura calendar (Hijri calendar) does not rely on a visual sighting of the crescent moon to fix the start of a new month as in the case of the civil Islamic calendar. Saudi Arabia used a lunar calendar in which each month started on the day of the astronomical Conjunction based on the meridian of Greenwich. The rule was:
 
- If the Moon’s age at sunset is 12 hours or more after the astronomical New Moon then the Um AlQura month starts from the previous sunset date since the Um AlQura day starts at sunset, and the night comes before the daylight.
+If the Moon’s age at sunset is 12 hours or more after the astronomical New Moon then the Um AlQura month starts from the previous sunset date since the Um AlQura day starts at sunset, and the night comes before the daylight.
 
-  This rule implied that every lunar month started in the evening when the Moon at sunset was either less than 12 hours old or less than 12 hours away from the time of New Moon. The consequence was that in about 50% of all cases the lunar Um AlQura month began before the astronomical New Moon and in about as many cases moonset occurred before sunset. In all cases, the lunar crescent would have been absolutely invisible to the naked eye on the first evening of the lunar Um AlQura month.
+This rule implied that every lunar month started in the evening when the Moon at sunset was either less than 12 hours old or less than 12 hours away from the time of New Moon. The consequence was that in about 50% of all cases the lunar Um AlQura month began before the astronomical New Moon and in about as many cases moonset occurred before sunset. In all cases, the lunar crescent would have been absolutely invisible to the naked eye on the first evening of the lunar Um AlQura month.
 
 
 Usage
