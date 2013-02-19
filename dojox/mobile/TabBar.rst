@@ -171,6 +171,42 @@ Standard Tab can be used to create tabbed panes. If the closable=true option is 
 
 .. image :: TabBar-StandardTab.png
 
+If the fill="always" option is specified, each tab is resized so that they all fill the entire content of the bar.
+
+.. html ::
+
+  <ul data-dojo-type="dojox.mobile.TabBar" data-dojo-props='barType:"standardTab", fill:"always"'>
+    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+  </ul>
+
+  <ul data-dojo-type="dojox.mobile.TabBar"
+      data-dojo-props='barType:"standardTab", closable:true, center:false, fill:"always"'>
+    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+  </ul>
+
+  <ul data-dojo-type="dojox.mobile.TabBar"
+      data-dojo-props='barType:"standardTab",
+                       center:false,
+                       fill:"always",
+                       iconBase:"images/tab-icons.png"'>
+    <li data-dojo-type="dojox.mobile.TabBarButton"
+        data-dojo-props='icon1:"images/tab-icon-16.png",
+                         icon2:"images/tab-icon-16h.png",
+                         selected:true'>Image</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton"
+        data-dojo-props='iconPos1:"0,29,29,29",
+                         iconPos2:"29,29,29,29"'>Sprite</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton"
+        data-dojo-props='icon1:"mblDomButtonGrayStar",
+                         icon2:"mblDomButtonYellowStar"'>DOM Button</li>
+  </ul>
+
+.. image :: TabBar-StandardTab-FillAlways.png
+
 Slim Tab
 --------
 
