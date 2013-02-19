@@ -398,8 +398,11 @@ This example uses synchronous loading, and loads all of Dojo core.  This results
     dojo.requireIf(!dojo.isWebKit, "dojox.mobile.compat"); // (Optional) Load the compat layer if the incoming browser isn't webkit based
     // Do something with Dojo Mobile...
 
+Themes
+------
+
 Applying a Mobile Device Theme Using CSS
-----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Selecting the CSS to apply (iphone, android, blackberry or custom) is equally simple:
 
@@ -408,18 +411,18 @@ Selecting the CSS to apply (iphone, android, blackberry or custom) is equally si
   <link rel="stylesheet" type="text/css" href="dojox/mobile/themes/iphone/iphone.css"></link>
 
 Automatically Applying Mobile Device Themes Using CSS
------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You can also use Dojo Mobile's automatic device detection and theme loading by adding the "dojox/mobile/deviceTheme" to your requires list.  When automatic device detection and theme loading is enabled, Dojo Mobile will insert appropriate stylesheet links dynamically into the header, based on user agent sniffing.
 
 When this approach is taken, you can also pass an additional query parameter string, theme={theme id} to force a specific theme from a browser url input (this feature is useful for creating samples and demos as well as testing what a page looks like on various devices). The theme id value is used instead of the navigator.userAgent property to determine the theme, possible values are: Android, BlackBerry, iPhone, iPad or Custom.
 
 Generating Mobile Themes
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 The directory 'themes/utils' contains a script to generate themes. Read 'themes/utils/README' to configure your environment.
 
 Creating a new theme from the Custom theme
-------------------------------------------     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The 'custom' theme (i.e. mobile/themes/custom folder) is a generic grey theme. It is a good starting point for creating a new theme. All colors of this theme are derived from 2 colors defined at the beginning of themes/custom/variables.less.
 
@@ -434,7 +437,7 @@ Example:
 3. Execute themes/utils/compile script, all themes are regenerated. The custom theme is now orange.
 4. Try you new theme by applying the custom theme. See 'Automatically Applying Mobile Device Themes Using CSS'
 
-.. image :: theming0.jpg
+.. image :: theming1.jpg
 .. image :: theming2.jpg
 
 Typical Use

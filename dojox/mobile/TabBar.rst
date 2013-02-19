@@ -31,6 +31,16 @@ Constructor Parameters
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |barType       |String    |tabBar   |"tabBar"(default), "segmentedControl", "standardTab", "slimTab", "flatTab", or "tallTab"                   |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
+|fill          |String    |"auto"   |Define if the bar should resize its children so that they evenly fill all the available space.             |
+|              |          |         |                                                                                                           |
+|              |          |         |Available values are :                                                                                     |
+|              |          |         |                                                                                                           |
+|              |          |         |* "auto" : content is resized to evenly fill the bar only when width < 500px and barType is "tabBar".      |
+|              |          |         |                                                                                                           |
+|              |          |         |* "always" : bar buttons are always resized to evenly fill the entire bar.                                 |
+|              |          |         |                                                                                                           |
+|              |          |         |* "never" : bar buttons are never resized.                                                                 |
++--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |closable      |Boolean   |false    |If true, user can close (destroy) a child tab by clicking the X on the tab. This property is NOT effective |
 |              |          |         |for "tabBar" and "tallBar".                                                                                |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
@@ -161,6 +171,42 @@ Standard Tab can be used to create tabbed panes. If the closable=true option is 
 
 .. image :: TabBar-StandardTab.png
 
+If the fill="always" option is specified, each tab is resized so that they all fill the entire content of the bar.
+
+.. html ::
+
+  <ul data-dojo-type="dojox.mobile.TabBar" data-dojo-props='barType:"standardTab", fill:"always"'>
+    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+  </ul>
+
+  <ul data-dojo-type="dojox.mobile.TabBar"
+      data-dojo-props='barType:"standardTab", closable:true, center:false, fill:"always"'>
+    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+  </ul>
+
+  <ul data-dojo-type="dojox.mobile.TabBar"
+      data-dojo-props='barType:"standardTab",
+                       center:false,
+                       fill:"always",
+                       iconBase:"images/tab-icons.png"'>
+    <li data-dojo-type="dojox.mobile.TabBarButton"
+        data-dojo-props='icon1:"images/tab-icon-16.png",
+                         icon2:"images/tab-icon-16h.png",
+                         selected:true'>Image</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton"
+        data-dojo-props='iconPos1:"0,29,29,29",
+                         iconPos2:"29,29,29,29"'>Sprite</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton"
+        data-dojo-props='icon1:"mblDomButtonGrayStar",
+                         icon2:"mblDomButtonYellowStar"'>DOM Button</li>
+  </ul>
+
+.. image :: TabBar-StandardTab-FillAlways.PNG
+
 Slim Tab
 --------
 
@@ -199,6 +245,41 @@ Slim Tab is a space-saving type of tab bar. This may be useful especially for sm
 
 .. image :: TabBar-SlimTab.png
 
+If the fill="always" option is specified, each tab is resized so that they all fill the entire content of the bar.
+
+.. html ::
+
+  <ul data-dojo-type="dojox.mobile.TabBar" data-dojo-props='barType:"slimTab", fill:"always"'>
+    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+  </ul>
+
+  <ul data-dojo-type="dojox.mobile.TabBar"
+      data-dojo-props='barType:"slimTab", closable:true, center:false, fill:"always"'>
+    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+  </ul>
+
+  <ul data-dojo-type="dojox.mobile.TabBar"
+      data-dojo-props='barType:"slimTab",
+                       center:false,
+                       fill:"always",
+                       iconBase:"images/tab-icons.png"'>
+    <li data-dojo-type="dojox.mobile.TabBarButton"
+        data-dojo-props='icon1:"images/tab-icon-16.png",
+                         icon2:"images/tab-icon-16h.png",
+                         selected:true'>Image</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton"
+        data-dojo-props='iconPos1:"0,29,29,29",
+                         iconPos2:"29,29,29,29"'>Sprite</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton"
+        data-dojo-props='icon1:"mblDomButtonGrayStar",
+                         icon2:"mblDomButtonYellowStar"'>DOM Button</li>
+  </ul>
+
+.. image :: TabBar-SlimTab-FillAlways.PNG
 
 Flat Tab
 --------
@@ -237,6 +318,41 @@ Flat Tab has no borders and no background color by default to be displayed throu
 
 .. image :: TabBar-FlatTab.png
 
+If the fill="always" option is specified, each tab is resized so that they all fill the entire content of the bar.
+
+.. html ::
+
+  <ul data-dojo-type="dojox.mobile.TabBar" data-dojo-props='barType:"flatTab", fill:"always"'">
+    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+  </ul>
+
+  <ul data-dojo-type="dojox.mobile.TabBar" data-dojo-props='barType:"flatTab", fill:"always", closable:true, center:false'">
+    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+    </ul>
+
+  <ul data-dojo-type="dojox.mobile.TabBar"
+      data-dojo-props='barType:"flatTab",
+                       center:false,
+                       fill:"always",
+                       iconBase:"images/tab-icons.png"'">
+    <li data-dojo-type="dojox.mobile.TabBarButton"
+        data-dojo-props='icon1:"images/tab-icon-16.png",
+                         icon2:"images/tab-icon-16h.png"'>Image</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton"
+        data-dojo-props='iconPos1:"0,29,29,29",
+                         iconPos2:"29,29,29,29"'>Sprite</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton"
+        data-dojo-props='icon1:"mblDomButtonGrayStar",
+                         icon2:"mblDomButtonYellowStar",
+                         selected:true'>DOM Button</li>
+  </ul>
+
+.. image :: TabBar-FlatTab-FillAlways.png
+
 Tall Tab
 --------
 
@@ -257,6 +373,26 @@ Tall Tab
   </ul>
 
 .. image :: TabBar-TallTab.png
+
+If the fill="always" option is specified, each tab is resized so that they all fill the entire content of the bar.
+
+.. html ::
+
+  <ul data-dojo-type="dojox.mobile.TabBar"
+      data-dojo-props='barType:"tallTab", fill:"always", iconBase:"images/tab-icons.png"'>
+    <li data-dojo-type="dojox.mobile.TabBarButton"
+        data-dojo-props='icon1:"images/tab-icon-16.png",
+                         icon2:"images/tab-icon-16h.png",
+                         selected:true'>Image</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton"
+        data-dojo-props='iconPos1:"0,29,29,29",
+                         iconPos2:"29,29,29,29"'>Sprite</li>
+    <li data-dojo-type="dojox.mobile.TabBarButton"
+        data-dojo-props='icon1:"mblDomButtonGrayStar",
+                         icon2:"mblDomButtonYellowStar"'>DOM Button</li>
+  </ul>
+
+.. image :: TabBar-TallTab-FillAlways.png
 
 Grouped Tab Bar
 ---------------

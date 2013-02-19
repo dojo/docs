@@ -236,6 +236,23 @@ Object. Dependencies, modules and controllers are loaded using the Dojo AMD load
      }
   }
 
+transit
+-------
+
+AMD module identifier. By default dojox/app is using dojox/css3/transit module to perform transition animations. You can provide your own transition animation function by referencing it here:
+
+.. js ::
+
+  "transit" : "my/app/transit"
+
+The module should return a function with the following signature:
+
+.. js ::
+
+  function(fromDomNode, toDomNode, transitionOptions){ }
+
+and should return a promise.
+
 dependencies
 ------------
 
@@ -364,6 +381,7 @@ String. The default animation type for the view transition.
 
 views
 -----
+
 Object. The child views of an application or of a view. Dependencies may be defined on views for optimization and organization purposes. Models might also be defined on views if they are view-specific. Finally a view item as five additional properties:
    * template for defining the view rendering for views of type ``dojox/app/View``
    * definition to provide an AMD module to be mixed into the view to control it. By default if no definition module is specified for a view it is looked up automatically in "./views/<viewId>.js". If you don’t want a definition module at all you should specify the "none" value.
