@@ -32,7 +32,6 @@ Constructor Parameters
 |barType       |String    |tabBar   |"tabBar"(default), "segmentedControl", "standardTab", "slimTab", "flatTab", or "tallTab"                   |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |fill          |String    |"auto"   |Define if the bar should resize its children so that they evenly fill all the available space.           |
-|              |          |         |Available values are:                                                           a                         |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |closable      |Boolean   |false    |If true, user can close (destroy) a child tab by clicking the X on the tab. This property is NOT effective |
 |              |          |         |for "tabBar" and "tallBar".                                                                                |
