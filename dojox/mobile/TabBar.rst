@@ -205,7 +205,7 @@ If the fill="always" option is specified, each tab is resized so that they all f
                          icon2:"mblDomButtonYellowStar"'>DOM Button</li>
   </ul>
 
-.. image :: TabBar-StandardTab-FillAlways.png
+.. image :: TabBar-StandardTab-FillAlways.PNG
 
 Slim Tab
 --------
