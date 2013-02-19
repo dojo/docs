@@ -136,6 +136,7 @@ dojox/mobile
      and CSS): since IE10 supports CSS3 transitions, animations and gradients,
      compatibility mode is disabled for IE10, and Dojo Mobile uses the non-prefixed CSS3
      properties supported by IE10 in addition to the webkit-prefixed properties.
+   * FormLayout container: a responsive container for creating mobile forms.
    * The user agent tests that were previously done in ``dojox/mobile/sniff`` have been
      moved to ``dojo/sniff``, so the use of ``dojox/mobile/sniff`` is deprecated,
      You should now use ``dojo/sniff`` instead. The ``dojox/mobile/sniff`` module is still present
