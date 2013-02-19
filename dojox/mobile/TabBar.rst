@@ -32,7 +32,9 @@ Constructor Parameters
 |barType       |String    |tabBar   |"tabBar"(default), "segmentedControl", "standardTab", "slimTab", "flatTab", or "tallTab"                   |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |fill          |String    |"auto"   |Define if the bar should resize its children so that they evenly fill all the available space.             |
+|              |          |         |                                                                                                           |
 |              |          |         |Available values are :                                                                                     |
+|              |          |         |                                                                                                           |
 |              |          |         |* "auto" : bar buttons are resized to evenly fill the entire bar only on small devices (width < 500px) and |
 |              |          |         |when barType is "tabBar". This is the same behaviour than in version 1.8.                                  |
 |              |          |         |                                                                                                           |
