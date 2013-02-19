@@ -31,6 +31,8 @@ Constructor Parameters
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |barType       |String    |tabBar   |"tabBar"(default), "segmentedControl", "standardTab", "slimTab", "flatTab", or "tallTab"                   |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
+|fill          |String    |fill     |"tabBar"(default), "segmentedControl", "standardTab", "slimTab", "flatTab", or "tallTab"                   |
++--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |closable      |Boolean   |false    |If true, user can close (destroy) a child tab by clicking the X on the tab. This property is NOT effective |
 |              |          |         |for "tabBar" and "tallBar".                                                                                |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
