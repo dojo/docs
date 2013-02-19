@@ -35,8 +35,7 @@ Constructor Parameters
 |              |          |         |                                                                                                           |
 |              |          |         |Available values are :                                                                                     |
 |              |          |         |                                                                                                           |
-|              |          |         |* "auto" : bar buttons are resized to evenly fill the entire bar only on small devices (width < 500px) and |
-|              |          |         |when barType is "tabBar". This is the same behaviour than in version 1.8.                                  |
+|              |          |         |* "auto" : content is resized to evenly fill the bar only when width < 500px and barType is "tabBar".      |
 |              |          |         |                                                                                                           |
 |              |          |         |* "always" : bar buttons are always resized to evenly fill the entire bar.                                 |
 |              |          |         |                                                                                                           |
