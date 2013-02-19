@@ -36,7 +36,7 @@ Constructor Parameters
 |              |          |         |"auto": bar buttons are resized to evenly fill the entire bar only on small devices (width < 500px) and    |
 |              |          |         |        when barType is "tabBar". This is the same behaviour than in version 1.8.                          |
 |              |          |         |"always": bar buttons are always resized to evenly fill the entire bar.                                    |
-|              |          |         |"never": bar buttons are never resized.                                    |
+|              |          |         |"never": bar buttons are never resized.                                                                    |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |closable      |Boolean   |false    |If true, user can close (destroy) a child tab by clicking the X on the tab. This property is NOT effective |
 |              |          |         |for "tabBar" and "tallBar".                                                                                |
