@@ -181,6 +181,13 @@ dojox/mobile
    * ``dojox/mobile/sniff`` module does not anymore require ``dojo/_base/sniff`` but ``dojo/sniff``.
      This means you can't use anymore ``isXX`` methods (such as ``isIE``); you should use ``has`` 
      flags instead (such as ``has("ie")``).
+   * As a consequence of the new support for templating on some widgets (see above), old code that was already
+     attempting to mix ``dijit/_TemplatedMixin`` into mobile widgets may not work any more. 
+     The new behavior is that, when a widget is templated, Dojo Mobile assumes that the template contains
+     the whole widget contents, and no children nodes will be created by the widget code. For example,
+     in a templated ``dojox/mobile/ListItem``, the template must contain a ``labelNode`` attach point
+     (whereas, in 1.8, the label node was always created internally). So, old code using templates with
+     mobile widgets should be modified and the necessary attach points should be added to the templates.
 
 dojox/charting
 --------------
