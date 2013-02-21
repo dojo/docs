@@ -15,12 +15,20 @@ Introduction
 ============
 
 deviceTheme is an automatic theme loader.
-It can be enabled by simply requiring dojox.mobile.deviceTheme from your application.
-It detects the user agent of the browser and loads the appropriate theme files.
-dojox.mobile provides five pre-defined themes, android, blackberry, iphone, ipad, and custom.
+It can be enabled by simply including dojox/mobile/deviceTheme script in your application as follows:
+
+.. html ::
+
+  <script src="dojox/mobile/deviceTheme.js"></script>
+  <script src="dojo/dojo.js" data-dojo-config="parseOnLoad: true"></script>
+
+Using the script tag as above is the recommended way to load the deviceTheme, trying to load using the AMD loader can lead to styles being applied incorrectly. One drawback, however, is that the deviceTheme.js cannot be included in a build.
+
+deviceTheme detects the user agent of the browser and loads the appropriate theme files.
+dojox/mobile provides five pre-defined themes, android, holodark, blackberry, iphone, ipad, and custom.
 If the iPhone device is detected, for example, the deviceTheme loads the iphone theme.
 
-You can also pass an additional query parameter string, theme={theme id} to force a specific theme through the browser url input. The available theme ids are Android, BlackBerry, Custom, iPhone, and iPad. They are case sensitive. If the given id does not match, the iphone theme is used.
+You can also pass an additional query parameter string, theme={theme id} to force a specific theme through the browser url input. The available theme ids are Android, BlackBerry, Holodark, Custom, iPhone, and iPad. They are case sensitive. If the given id does not match, the iphone theme is used.
 
 .. html ::
 
@@ -31,32 +39,22 @@ You can also pass an additional query parameter string, theme={theme id} to forc
   http://your.server.com/yourapp.html?theme=iPhone // iphone theme
   http://your.server.com/yourapp.html?theme=iPad // ipad theme
 
-To simulate a particular device, the user agent may be overridden by setting djConfig.mblUserAgent.
-
-Examples
-========
+To simulate a particular device, the user agent may be overridden by setting dojoConfig.mblUserAgent.
 
 By default, an all-in-one theme file (e.g. themes/iphone/iphone.css) is
 loaded. The all-in-one theme files contain style sheets for all the
-dojox.mobile widgets regardless of whether they are used in your
+dojox/mobile widgets regardless of whether they are used in your
 application or not.
 
 If you want to choose what theme files to load, you can specify them
-via djConfig as shown in the following example:
+via dojoConfig or data-dojo-config as shown in the following example:
 
 .. html ::
 
-  djConfig="parseOnLoad:true, mblThemeFiles:['base','Button']"
+  <script src="dojox/mobile/deviceTheme.js"
+     data-dojo-config="mblThemeFiles:['base','Button']"></script>
+  <script src="dojo/dojo.js" data-dojo-config="parseOnLoad: true"></script>
 
-Or you may want to use dojox.mobile.themeFiles as follows to get the
-same result. Note that the assignment has to be done before loading
-deviceTheme.js.
-
-.. js ::
-
-  dojo.require("dojox.mobile");
-  dojox.mobile.themeFiles = ['base','Button'];
-  dojo.require("dojox.mobile.deviceTheme");
 
 In the case of this example, if iphone is detected, for example, the
 following files will be loaded:
@@ -102,50 +100,11 @@ without CSS styles being applied to them to calculate its layout at
 initialization, the layout calculation may fail.
 This timing issue could lead to annoying initialization problems.
 
-A possible workaround for this problem is to use dojo.require to load
-deviceTheme.js and place it in a separate <script> block immediately
-below the script tag that loads dojo.js as below. However, this may or may
-not solve the problem.
-
-.. html ::
-
-  <script src="dojo.js"></script>
-  <script>
-	  dojo.require("dojox.mobile.deviceTheme");
-  </script>
-  <script>
-	  dojo.require("dojox.mobile");
-	  ....
-
-Enhancements in 1.8
-===================
-
-Loading deviceTheme with a script tag
--------------------------------------
-
-In 1.8, there is another option available to avoid the loading problem above. It is to use deviceTheme.js as a non-dojo JavaScript code.
-You load deviceTheme.js prior to loading dojo.js using the
-script tag as follows.
-
-.. html ::
-
-  <script src="dojox/mobile/deviceTheme.js"
-     data-dojo-config="mblThemeFiles:['base','Button']"></script>
-  <script src="dojo/dojo.js" data-dojo-config="parseOnLoad: true"></script>
-
-In this case, if the detected device is an iPhone, for example, the following files will be loaded by the deviceTheme.
-
-.. html ::
-
-  dojox/mobile/themes/iphone/base.css
-  dojox/mobile/themes/iphone/Button.css
-
-Using the script tag as above is the recommended way to load the deviceTheme in 1.8; trying to load using the AMD loader can lead to styles being applied incorrectly. One drawback, however, is that the deviceTheme.js cannot be included in a build.
 
 Overriding the theme styles
 ---------------------------
 
-With 1.8 deviceTheme, you can simply override the given theme styles in your html file like this:
+You can simply override a given theme styles in your html file like this:
 
 .. html ::
 
@@ -155,4 +114,4 @@ With 1.8 deviceTheme, you can simply override the given theme styles in your htm
   }
   </style>
 
-With 1.7 deviceTheme, unfortunately this is ignored and has no effects because <link> tags are appended as the last children of the <head> element, and thus they supersede your custom styles. The new 1.8 deviceTheme prepends <link> tags to the <head> to solve this issue.
+This will work as deviceTheme will prep-end and not happen the stylesheets to be loaded.
