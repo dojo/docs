@@ -41,6 +41,9 @@ You can also pass an additional query parameter string, theme={theme id} to forc
 
 To simulate a particular device, the user agent may be overridden by setting dojoConfig.mblUserAgent.
 
+Loading specific files
+======================
+
 By default, an all-in-one theme file (e.g. themes/iphone/iphone.css) is
 loaded. The all-in-one theme files contain style sheets for all the
 dojox/mobile widgets regardless of whether they are used in your
@@ -102,7 +105,7 @@ This timing issue could lead to annoying initialization problems.
 
 
 Overriding the theme styles
----------------------------
+===========================
 
 You can simply override a given theme styles in your html file like this:
 
