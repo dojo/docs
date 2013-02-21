@@ -152,6 +152,12 @@ dojox/mobile
      the corresponding list item is updated with the new properties of the store item. A new
      ``onAdd`` method has been added to ``dojox/mobile/_StoreMixin`` to better distinguish add
      and put operations.
+   * To address performance problems with very long lists in scrollable views, a new
+     ``dojox/mobile/LongListMixin`` module has been added. This module can be mixed in any Dojo Mobile
+     list (``dojox/mobile/RoundRectList``, ``dojox/mobile/EdgeToEdgeList``, and their data-aware variants)
+     using ``data-dojo-mixins="dojox/mobile/LongListMixin"``. This will transparently enable listeners
+     on the scrollable view to keep only a subset of the items in the DOM, which will significantly speed up
+     scrolling.
    * A subset of widgets (``Button``, ``CheckBox``, ``Heading``, ``ListItem``, ``RadioButton``, 
      ``Slider``, ``Switch``, ``ToggleButton``, and ``View``) can now be templated.
      For details, see :ref:`Templating dojox/mobile widgets <dojox/mobile/templating-mobile-widgets>`.
@@ -160,7 +166,7 @@ dojox/mobile
      particular theme has been drastically reduced.
    * The 'Custom' theme is now generated from 2 main colors, facilitating the creation of a new theme 
      based on arbitrary colors.
-   * The ``dojox/mobile/TabBar`` widget now support resizing its children so that they evenly fill all the space
+   * The ``dojox/mobile/TabBar`` widget now supports resizing its children so that they evenly fill all the space
      available in the bar. This is done by setting the new attribute "fill" to the value "always".
    * New Android Holo dark theme used by default on Android 3.x and 4.x devices. For 
      backward compatibility, you can force 'Android' theme on all Android devices by 
