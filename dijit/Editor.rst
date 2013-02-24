@@ -69,8 +69,7 @@ Declarative example
 Programmatic example
 --------------------
 
-Of course, the editor can be created programmatically in addition to declaratively,
-although even when created programmatically you need to specify a source DOM node to replace:
+Of course, the editor can be created programmatically in addition to declaratively:
 
 .. code-example ::
 
@@ -78,10 +77,11 @@ although even when created programmatically you need to specify a source DOM nod
 
     require(["dojo/ready", "dijit/Editor", "dijit/_editor/plugins/AlwaysShowToolbar", "dojo/dom", "dojo/query"], function(ready, Editor, AlwaysShowToolbar, dom, query){
         this.createEditor = function(){
-            new Editor({
+            var myEditor = new Editor({
                 height: '',
                 extraPlugins: [AlwaysShowToolbar]
             }, dom.byId('programmatic2'));
+            myEditor.startup();
             query('#create2').orphan();
         }
     });
