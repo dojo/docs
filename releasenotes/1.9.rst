@@ -62,6 +62,13 @@ of relative MIDs to be used, specifically in Widget templates.
 Dijit
 =====
 
+dijit/_AttachMixin
+------------------
+:ref:`dijit/_AttachMixin <dijit/_AttachMixin>` is a new mixin to perform the data-dojo-attach-point and
+data-dojo-attach-event hookup normally done by :ref:`dijit/_TemplatedMixin <dijit/_TemplatedMixin>`.
+It's useful for custom widgets where the template is
+(always) expanded on the server, so on the client you just need to hookup the attach points and event listeners.
+
 dijit/_KeyNavMixin
 ------------------
 :ref:`dijit/_KeyNavMixin <dijit/_KeyNavMixin>` is a new mixin to enable keyboard navigation between a widget's descendants.
