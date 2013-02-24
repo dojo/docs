@@ -362,6 +362,10 @@ dijit Template Changes
 If you have subclasses of ``InlineEditBox``, ``ComboBox``, ``FilteringSelect``, or ``DateTextBox`` that have modified
 those templates, you may need to update your templates.
 
+dijit/Editor
+------------
+If you are creating Editor widgets programatically, be sure to call startup() on them.
+
 dojox/charting migration
 ------------------------
 
