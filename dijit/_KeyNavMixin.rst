@@ -22,13 +22,13 @@ then you should mixin :ref:`dijit/_KeyNavContainer <dijit/_KeyNavContainer>` ins
 
 To use this mixin, the subclass must implement a number of abstract methods:
 
-    - focusFirstChild() and focusLastChild() to support the HOME and END keys.
+    - _getFirst() and _getLast() to return the HOME and END keys.
     - _onLeftArrow(), _onRightArrow() _onDownArrow(), and _onUpArrow() methods to handle the
       LEFT/RIGHT/UP/DOWN arrow keys.  These methods are meant to navigate relative to the current node,
       so they should operate based on this.focusedChild.
-    - _getNextFocusableChild(child) to find the next child relative to a specified child.
+    - _getNext(child) to find the next child relative to a specified child.
       "Next" in this context refers to a linear ordering of the children or descendants used
-      by letter key search.
+      for letter key search.
 
 In addition, the subclass must:
 
@@ -61,8 +61,8 @@ to the cell labeled "pear".
         ], function(declare, array, lang, on, parser, query, registry, _WidgetBase, _KeyNavMixin){
             MyGrid = declare([_WidgetBase, _KeyNavMixin], {
                 buildRendering: function(){
-                    // This is a behavioral widget so we'll just use the existing DOM.   Alternately we could have
-                    // a template.
+                    // This is a behavioral widget so we'll just use the existing DOM.
+                    // Alternately we could have a template.
                     this.inherited(arguments);
 
                     // Set containerNode.   Usually this is set in the template.
@@ -88,12 +88,12 @@ to the cell labeled "pear".
 
 
                 // Home/End key support
-                focusFirstChild: function(){
-                    this.focusChild(this.getChildren()[0]);
+                _getFirst: function(){
+                    return this.getChildren()[0];
                 },
-                focusLastChild: function(){
+                _getLast: function(){
                     var children = this.getChildren();
-                    this.focusChild(children[children.length - 1]);
+                    return children[children.length - 1];
                 },
 
                 // Simple arrow key support.   Up/down logic assumes that evey row has the same number of cells.
@@ -120,7 +120,7 @@ to the cell labeled "pear".
                 },
 
                 // Letter key navigation support
-                _getNextFocusableChild: function(child){
+                _getNext: function(child){
                     var children = this.getChildren();
                     return children[(array.indexOf(children, child) + 1) % children.length];
                 }
