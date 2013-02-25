@@ -861,8 +861,24 @@ You can customize this behavior to show only horizontal item renderers, for exam
 
 Grid cell styling
 `````````````````
+The grid cells can be customized either by using CSS or programmatically.
 
-Each view provides a **styleGridCellFunc** property that allows to customize a grid cell without subclassing a view.
+Each cell of the calendar has some CSS classes depending on the date/time it displays:
+   * "Sun", "Mon", "Tue", "Wed", "Thu", "Fri" or "Sat", depending on the day of week,
+   * "H0" to "H23" according to the time of day (Column view only).
+   * "Mxx" where *xx* is the minutes part of the time of day (Column view, depends on the the slot duration). 
+
+The following example specifies CSS classes to grey out Wednesdays and the time range between 12pm and 2pm:
+
+.. css ::
+
+  .dojoxCalendar .dojoxCalendarGrid .Wed, 
+  .dojoxCalendar .dojoxCalendarGrid .H12,
+  .dojoxCalendar .dojoxCalendarGrid .H13	{
+    background-color: #F8F8F8 !important;
+  }
+
+For more advanced use cases, each view provides a **styleGridCellFunc** property that allows to customize a grid cell without subclassing a view.
 
 The following example show how to install a pseudo CSS class to grey out Wednesdays and the time range between 12pm and 2pm:
 
@@ -870,12 +886,6 @@ The following example show how to install a pseudo CSS class to grey out Wednesd
 
   .greyCell{
     background-color: #F8F8F8 !important;				
-  }
-  .dojoxCalendarToday.greyCell{
-    background-color: #FFF6D4 !important;
-  }
-  .dojoxCalendarWeekend.greyCell{
-    background-color: #ECF5FE !important;
   }
 
 .. js ::
@@ -895,7 +905,7 @@ The following example show how to install a pseudo CSS class to grey out Wednesd
     }
     this.defaultStyleGridCell(node, date);
   };
-
+  calendar.columnView.secondarySheet.set("styleGridCellFunc", func);				
   calendar.matrixView.set("styleGridCellFunc", func);						
   calendar.monthColumnView.set("styleGridCellFunc", func);
 
