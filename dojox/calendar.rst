@@ -868,7 +868,7 @@ Each cell of the calendar has some CSS classes depending on the date/time it dis
    * "H0" to "H23" according to the time of day (Column view only).
    * "Mxx" where *xx* is the minutes part of the time of day (Column view, depends on the the slot duration). 
 
-The following example specifies CSS classes to grey out Wednesdays and the time range between 12pm and 2pm:
+The following example specifies CSS classes to grey out Wednesdays and the time range between 12pm and 2pm for other days of week:
 
 .. css ::
 
@@ -880,7 +880,7 @@ The following example specifies CSS classes to grey out Wednesdays and the time 
 
 For more advanced use cases, each view provides a **styleGridCellFunc** property that allows to customize a grid cell without subclassing a view.
 
-The following example show how to install a pseudo CSS class to grey out Wednesdays and the time range between 12pm and 2pm:
+The following example show how to install a pseudo CSS class to grey out Wednesdays and the time range between 12pm and 2pm for other days of week:
 
 .. css ::
 
