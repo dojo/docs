@@ -73,7 +73,7 @@ dijit/_KeyNavMixin
 ------------------
 :ref:`dijit/_KeyNavMixin <dijit/_KeyNavMixin>` is a new mixin to enable keyboard navigation between a widget's descendants.
 Navigation can be performed via arrow keys and HOME/END keys, and also a letter key search.
-:ref:`dijit/Tree <dijit/Tree>` is an example of a widget that extends _KeyNavMixin.
+:ref:`dijit/Tree <dijit/Tree>` and :ref:`dijit/form/Select <dijit/form/Select>` are examples of widgets that extend _KeyNavMixin.
 
 It's similar to :ref:`dijit/_KeyNavContainer <dijit/_KeyNavContainer>` but can be user for any widgets,
 not just subclasses of :ref:`dijit/_Container <dijit/_Container>`.

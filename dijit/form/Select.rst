@@ -11,7 +11,7 @@ dijit.form.Select
 .. contents ::
    :depth: 2
 
-A styleable drop down select box (similar to html select element)
+A styleable, searchable drop down select box (similar to html select element).
 
 
 Introduction
@@ -146,7 +146,7 @@ When styling the entries of a Select widget, you must use div and span tags, ins
 Setting Width
 -------------
 
-By default, the width of the select widget will be to fit the width of the selected item.
+By default, the width of the select widget will be to fit the width of the selected option.
 However, you can specify a width on the select to force a fixed width.
 
 .. code-example::
@@ -178,7 +178,7 @@ A ``maxHeight`` (integer) attribute is available to define maximum height of sel
 Note about validation
 =====================
 
-If you mark a select as ``required``, user will be forced to select a value. However, you often want to have a dummy "prompt" as first select value (eg. ``-- SELECT --`` or ``-- CITY --``). If you set its value to "", validation will reject form when nothing is select *but* the prompt will appear as a separator in the options list. To have a prompt option and still use default validation, set its value to " " (or any number of spaces). Validation rejects any blank value (zero, one or more spaces) but only false values (false, "", 0) appear as separator so all will be right.
+If you mark a select as ``required`` (boolean), user will be forced to select a value. However, you often want to have a dummy "prompt" as first select value (eg. ``-- SELECT --`` or ``-- CITY --``). If you set its value to "", validation will reject form when nothing is select *but* the prompt will appear as a separator in the options list. To have a prompt option and still use default validation, set its value to " " (or any number of spaces). Validation rejects any blank value (zero, one or more spaces) but only false values (false, "", 0) appear as separator so all will be right.
 
 Accessibility
 =============
@@ -186,17 +186,30 @@ Accessibility
 Keyboard
 --------
 
-+------------------------------------------------------+---------------+
-| **Action**                                           | **Key**       |
-+------------------------------------------------------+---------------+
-| Open the menu of options                             | Down arrow    |
-+------------------------------------------------------+---------------+
-| Navigate through the options                         | Up/Down arrow |
-+------------------------------------------------------+---------------+
-| Pick an option                                       | Enter         |
-+------------------------------------------------------+---------------+
-| Close the menu of options without selection          | Esc           |
-+------------------------------------------------------+---------------+
++-------------------------------------------------------+---------------+
+| **Action**                                           | **Key**        |
++------------------------------------------------------+----------------+
+| Open the menu of options                             | Down arrow     |
++------------------------------------------------------+----------------+
+| Navigate through the options                         | Up/Down arrow  |
++------------------------------------------------------+----------------+
+| Select the first option                              | Home           |
++------------------------------------------------------+----------------+
+| Select the last option                               | End            |
++------------------------------------------------------+----------------+
+| Pick an option                                       | Enter          |
++------------------------------------------------------+----------------+
+| Close the menu of options without selection          | Esc            |
++------------------------------------------------------+----------------+
+| Option searching                                     | printable keys |
++------------------------------------------------------+----------------+
 
 If the menu is open, pressing the Tab key will close the menu only.
 It will not focus the next element unless you press the Tab key a second time.
+
+You can search for specific options by typing the first letter(s) of a matching option.  For example, typing the letter 'k'
+will find the next option that begins with the letter 'k', starting with the current option.  If typed without pauses, multiple
+letters can also be used to search.  Typing the 2 letters 'a' and 'b' within 1 second of each other will search for an option that begins
+with 'ab'.  However, pausing between letters would result in searching for an option that begins with 'a', and then subsequently an option
+that begins with 'b'.  While usually not necessary, the pause timing can be controlled via the ``multiCharSearchDuration`` (integer)
+attribute which defaults to 1000 (milliseconds).
