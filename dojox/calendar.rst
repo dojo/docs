@@ -1266,32 +1266,33 @@ If the editable property is true, the moveEnabled and resizeEnabled properties a
 
 To have a control of move or resize at the data item level, override respectively the isItemMoveEnabled() or isItemResizeEnabled() functions.
 
-.. css ::
-  #calendarNode {
-    position:absolute;
-    left: 10px;
-    right: 10px;
-    top: 10px;
-    bottom: 10px;
-  } 
-
 .. js ::
 
   // subclass Calendar class
   var ECalendar = new declare("extented.Calendar", Calendar, {
     isItemMoveEnabled: function(renderItem, rendererKind){
       
-      // get store item to check the *calendar* property
+      // get store item to check the *editable* property
       var storeItem = this.renderItemToItem(renderItem, this.get("store"));
 
-      // allow editing if the calendar widget is editable and the *calendar" property is *cal1*
-      return this.editable && storeItem.calendar == "cal1";
+      // allow move of item if the calendar widget is editable and the *editable" property is *true*
+      return this.editable && storeItem.editable;
    }
   });
 
   var calendar = new ECalendar(null, "calendarNode");
 
 .. html ::
+
+  <style type="text/css>
+    #calendarNode {
+      position:absolute;
+      left: 10px;
+      right: 10px;
+      top: 10px;
+      bottom: 10px;
+    } 
+  </style>
 
   <div id="calendarNode"></div> 
 
