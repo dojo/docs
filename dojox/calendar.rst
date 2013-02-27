@@ -45,7 +45,7 @@ The following example shows how to declare a calendar widget in markup:
 
   .. html::
 
-    <style type="text/css>
+    <style type="text/css">
       .dojoxCalendar{ font-size: 12px; font-family:Myriad,Helvetica,Tahoma,Arial,clean,sans-serif; }
     </style>
                                                                   
@@ -76,7 +76,7 @@ The following example shows how to declare a calendar widget programmatically:
   
   .. html::
 
-    <style type="text/css>
+    <style type="text/css">
       .dojoxCalendar{ font-size: 12px; font-family:Myriad,Helvetica,Tahoma,Arial,clean,sans-serif; }
     </style>
                                                                         
@@ -1270,6 +1270,16 @@ The following example shows how to subclass the Calendar to override these funct
   * allow editing (move and resize) of a data item if, and only if, the calendar widget is editable and if the data item "editable" property is resolved as *true*,
   * allow resize of a data item if the data item is editable and the "resizeEnabled" property of the data item is resolved as *true*.
 
+.. css ::
+
+  #calendarNode {
+    position:absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+  }
+
 .. js ::
 
   // subclass Calendar class
@@ -1290,16 +1300,6 @@ The following example shows how to subclass the Calendar to override these funct
   var calendar = new ECalendar(null, "calendarNode");
 
 .. html ::
-
-  <style type="text/css>
-    #calendarNode {
-      position:absolute;
-      left: 10px;
-      right: 10px;
-      top: 10px;
-      bottom: 10px;
-    } 
-  </style>
 
   <div id="calendarNode"></div> 
 
