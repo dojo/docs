@@ -297,6 +297,7 @@ dojox/calendar
       * item: The render item. To change editing behavior set the startTime and/or endTime of this object.
       * storeItem: the store item. You may want to access some properties of the store item to determine the editing logic.
       * The tests/editing.html shows an example.
+   * In 1.8, the dojox.calendar.Calendar methods called isItemEditable, isItemMoveEnabled and isItemResizeEnabled took as first parameter the internal render item which that was not useful. Now the store data item is passed.
 
 dojox/gfx
 ---------
