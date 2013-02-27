@@ -1283,7 +1283,7 @@ The following example shows how to subclass the Calendar to override these funct
 .. js ::
 
   // subclass Calendar class
-  var ECalendar = new declare("extented.Calendar", Calendar, {
+  var ECalendar = new declare("extended.Calendar", Calendar, {
 
     isItemEditable: function(renderItem, rendererKind){
       // get store item to check the *editable* property
