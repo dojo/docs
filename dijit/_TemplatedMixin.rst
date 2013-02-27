@@ -71,75 +71,12 @@ or pulled in from a file using the :ref:`dojo/text! <dojo/text>` plugin.
 When using a built or released Dijit tree, the build will ``internStrings``, converting the dojo/text! call
 into a literal string, avoiding a network request when users load the widget.
 
-The tags in the template can have these special attributes, in addition to typical attributes like class:
+Because ``_TemplatedMixin`` extends :ref:`_AttachMixin <dijit/_AttachMixin>`, the tags in the template can have these special attributes, in addition to typical attributes like class:
 
   * data-dojo-attach-point
   * data-dojo-attach-event
 
-data-dojo-attach-point
-----------------------
-(before dojo 1.6 a.k.a. dojoAttachPoint)
-
-In the JavaScript of a widget, you often might wish to refer to some of its html template's dom nodes directly.
-In this case the widget will need to access the <span> with the count in order to change the value.
-
-You might think the widget author could just use ids in the html template, and then dojo.byId() in the widget's js.
-But if she does, then if two or more widget instances are created, they'll all have the same ids!
-Obviously code will blow up then.
-
-Instead, you the widget author do the following:
-
-1. In your widget template's html, for every node that these variables are supposed to correspond to (eg point to), you add the attribute: data-dojo-attach-point="yourVariableNameHere".
-
-2. In your widget's js, you use (without declaring them) variables for these nodes. In this case you will access this.counter.
-
-The reason the variables are undeclared is that when the code in _TemplatedMixin scans the html in step 1, and it finds the variables in the data-dojo-attach-point attribute, it adds those variables to your widget class, dynamically.
-
-When using the ``widgetsInTemplate`` parameter, a data-dojo-attach-point on the widget node in the template will refer to the widget instance rather than the Dom Node.
-
-data-dojo-attach-event
-----------------------
-(before dojo 1.6 a.k.a. dojoAttachEvent)
-
-data-dojo-attach-event will automatically setup a connection from an event on the DOM node (onclick in this case) to call a method in the widget (in this case increment().
-
-Here's an example of data-dojo-attach-point and data-dojo-attach-event:
-
-.. code-example::
-  :djConfig: parseOnLoad: false
-  :type: inline
-  :width: 400
-  :height: 250
-  :toolbar: versions, dir
-
-  .. js ::
-
-    require([
-        "dojo/declare", "dojo/parser",
-        "dijit/_WidgetBase", "dijit/_TemplatedMixin", "dojo/domReady!"
-    ], function(declare, parser, _WidgetBase, _TemplatedMixin){
-         parser.parse();
-         return declare("FancyCounter", [dijit._WidgetBase, dijit._TemplatedMixin], {
-                // counter
-                _i: 0,
-
-                templateString:
-                    "<div>" +
-                        "<button data-dojo-attach-event='onclick: increment'>press me</button>" +
-                        "&nbsp; count: <span data-dojo-attach-point='counter'>0</span>" +
-                    "</div>",
-
-                 increment: function(evt){
-                     this.counter.innerHTML = ++this._i;
-                 }
-         });
-   });
-
-  .. html ::
-
-    <span data-dojo-type="FancyCounter">press me</span>
-
-
+See the :ref:`_AttachMixin <dijit/_AttachMixin>` documentation for more details.
 
 containerNode
 -------------
