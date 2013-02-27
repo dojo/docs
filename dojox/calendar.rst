@@ -1264,20 +1264,27 @@ The editable property allows to globally enable or disable the editing capabilit
 
 If the editable property is true, the moveEnabled and resizeEnabled properties allow to control respectively if a data item can be moved or resized.
 
-To have a control of move or resize at the data item level, override respectively the isItemMoveEnabled() or isItemResizeEnabled() functions.
+To have a control of editing, move or resize at the data item level, override respectively the isItemEditable(), isItemMoveEnabled() or isItemResizeEnabled() functions of the Calendar class.
+
+The following example shows how to subclass the Calendar to override these functions to:
+  * allow editing (move and resize) of a data item if, and only if, the calendar widget is editable and if the data item "editable" property is resolved as *true*,
+  * allow resize of a data item if the data item is editable and the "resizeEnabled" property of the data item is resolved as *true*.
 
 .. js ::
 
   // subclass Calendar class
   var ECalendar = new declare("extented.Calendar", Calendar, {
-    isItemMoveEnabled: function(renderItem, rendererKind){
-      
-      // get store item to check the *editable* property
-      var storeItem = this.renderItemToItem(renderItem, this.get("store"));
 
-      // allow move of item if the calendar widget is editable and the *editable" property is *true*
+    isItemEditable: function(renderItem, rendererKind){
+      // get store item to check the *editable* property
+      var storeItem = this.renderItemToItem(renderItem, this.get("store"));      
       return this.editable && storeItem.editable;
-   }
+    },
+    
+    isItemResizeEnabled: function(renderItem, rendererKind){
+        var storeItem = this.renderItemToItem(renderItem, this.get("store"));
+    	return this.isItemEditable(renderItem, rendererKind) && storeItem.resizeEnabled;
+    }
   });
 
   var calendar = new ECalendar(null, "calendarNode");
