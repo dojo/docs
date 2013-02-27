@@ -4,8 +4,6 @@
 dijit._AttachMixin
 ==================
 
-TODOC!
-
 .. contents ::
   :depth: 2
 
