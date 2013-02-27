@@ -330,4 +330,4 @@ Dijit doesn't have any behavioral widgets, given that it's meant to be able to b
 See also
 ========
 
-* `Dive into Dijit <http://www.sitepen.com/blog/2010/07/12/dive-into-dijit/>`_
+* `Dive into Dijit with AMD <http://www.sitepen.com/blog/2012/11/16/dive-into-dijit-with-amd/>`_
