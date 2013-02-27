@@ -1285,20 +1285,16 @@ The following example shows how to subclass the Calendar to override these funct
   // subclass Calendar class
   var ECalendar = declare("extended.Calendar", Calendar, {
 
-    isItemEditable: function(renderItem, rendererKind){
-      // get store item to check the *editable* property
-      var storeItem = this.renderItemToItem(renderItem, this.get("store"));      
-      return storeItem.editable;
+    isItemEditable: function(item, rendererKind){  
+      return item.editable;
     },
     
-    isItemResizeEnabled: function(renderItem, rendererKind){
-        var storeItem = this.renderItemToItem(renderItem, this.get("store"));
-    	return this.isItemEditable(renderItem, rendererKind) && storeItem.resizeEnabled;
+    isItemResizeEnabled: function(item, rendererKind){
+    	return this.isItemEditable(item, rendererKind) && item.resizeEnabled;
     },
 
-    isItemMoveEnabled: function(renderItem, rendererKind){
-        var storeItem = this.renderItemToItem(renderItem, this.get("store"));
-    	return this.isItemEditable(renderItem, rendererKind) && storeItem.moveEnabled;
+    isItemMoveEnabled: function(item, rendererKind){
+    	return this.isItemEditable(item, rendererKind) && item.moveEnabled;
     }
   });
 
