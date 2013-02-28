@@ -1290,11 +1290,11 @@ The following example shows how to subclass the Calendar to override these funct
     },
     
     isItemResizeEnabled: function(item, rendererKind){
-    	return this.isItemEditable(item, rendererKind) && item.resizeEnabled;
+      return this.isItemEditable(item, rendererKind) && item.resizeEnabled;
     },
 
     isItemMoveEnabled: function(item, rendererKind){
-    	return this.isItemEditable(item, rendererKind) && item.moveEnabled;
+      return this.isItemEditable(item, rendererKind) && item.moveEnabled;
     }
   });
 
