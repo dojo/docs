@@ -40,7 +40,6 @@ A plain Calendar widget with the formatted date below:
 
     require([
         "dojo/parser",
-        "dijit/dijit", // loads the optimized dijit layer
         "dijit/Calendar"
     ]);
 
@@ -55,15 +54,6 @@ A plain Calendar widget with the formatted date below:
     </div>
     <p id="formatted"></p>
 
-  .. css ::
-
-    .{{ theme }} table.dijitCalendarContainer {
-        margin: 25px auto;
-    }
-    #formatted {
-        text-align: center;
-    }
-
 With an initial selection and weekends disabled:
 
 .. code-example::
@@ -75,7 +65,7 @@ With an initial selection and weekends disabled:
 
     require([
         "dojo/parser",
-        "dijit/dijit", // loads the optimized dijit layer
+        "dojo/date",
         "dijit/Calendar"
     ]);
 
@@ -85,12 +75,12 @@ With an initial selection and weekends disabled:
     
   .. css ::
 
-    .{{ theme }} .dijitCalendarDisabledDate {
-        background-color:#333 !important;
-        text-decoration:none !important;
+    #mycal .dijitCalendarDisabledDate {
+        background-color: #333;
+        text-decoration: none;
     }
 
-    .{{ theme }} table.dijitCalendarContainer {
+    #mycal .dijitCalendarContainer {
         margin: 25px auto;
     }
 
@@ -104,21 +94,18 @@ JavaScript declaration, with a restriction of +/- one week from the current date
   .. js ::
 
     require([
-        "dojo/ready",
-        "dijit/dijit", // loads the optimized dijit layer
         "dijit/Calendar",
-        "dojo/date"
-    ], function(ready, dijit, Calendar, date){
-        ready(function(){
-            new Calendar({
+        "dojo/date",
+        "dojo/domReady!"
+    ], function(Calendar, date){
+        new Calendar({
             value: new Date(),
             isDisabledDate: function(d){
                 var d = new Date(d); d.setHours(0, 0, 0, 0);
                 var today = new Date(); today.setHours(0, 0, 0, 0);
                 return Math.abs(date.difference(d, today, "week")) > 0;
             }
-            }, "mycal");
-        });
+        }, "mycal");
     });
 
   .. html ::
@@ -127,7 +114,7 @@ JavaScript declaration, with a restriction of +/- one week from the current date
     
   .. css ::
 
-      .{{ theme }} table.dijitCalendarContainer {
+      #mycal table.dijitCalendarContainer {
         margin: 25px auto;
         width: 200px;
       }
@@ -144,7 +131,6 @@ Custom styling:
 
     require([
         "dojo/parser",
-        "dijit/dijit", // loads the optimized dijit layer
         "dijit/Calendar"
     ]);
   
@@ -164,46 +150,51 @@ Custom styling:
 
 [1.4+] Non-Gregorian calendars:
 
+TODO: this example breaks on parse.
+
 .. code-example::
-  :height: 340
-  :type: inline
-  :version: 1.5
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
       require([
-        "dijit/dijit", // loads the optimized dijit layer
         "dijit/Calendar",
         "dijit/registry",
         "dojo/dom",
+        "dojo/parser",
+        "dojo/topic",
         "dojox/date/hebrew",
         "dojox/date/hebrew/Date",
         "dojox/date/hebrew/locale",
         "dojox/date/islamic",
         "dojox/date/islamic/Date",
-        "dojox/date/islamic/locale"
-    ], function(dijit, Calendar, registry, dom, hebrew){
+        "dojox/date/islamic/locale",
+        "dojo/domReady!"
+    ], function(Calendar, registry, dom, parser, topic, hebrew){
         this.publishing = false;
 
-        this.publishDate = function(d){
+        publishDate = function(d){
             if(!publishing){
                 publishing = true;
-                dojo.publish("date", [{date: d.toGregorian ? d.toGregorian() : d, id: this.id}]);
+                topic.publish("date", {date: d.toGregorian ? d.toGregorian() : d, id: this.id});
                 publishing = false;
             }
-        }
+        };
 
-        dojo.subscribe("date", function(data){
+        topic.subscribe("date", function(data){
             registry.filter(function(widget){ return widget.id != data.id; }).forEach(function(widget){ widget.set('value', data.date); });
         });
 
-        this.formatDate = function(d){
+        formatDate = function(d){
+            // TODO: stop using dojo and dojox globals
             var datePackage = (this.id == "gregorian") ? dojo.date : dojox.date[this.id];
                 dom.byId(this.id+"Formatted").innerHTML = datePackage.locale.format(arguments[0], {
                 formatLength: 'long',
                 selector: 'date'
             });
-        }
+        };
+
+        parser.parse();
     });
 
   .. html ::
@@ -211,6 +202,7 @@ Custom styling:
     <table class="container">
         <tr>
             <td>
+                <!-- TODO: stop using dojo and dojox globals -->
                 <div id="hebrew" data-dojo-type="dijit/Calendar" data-dojo-props="datePackage:dojox.date.hebrew, onValueSelected:publishDate, onChange:formatDate"></div>
                 <div id="hebrewFormatted"></div>
             </td>
