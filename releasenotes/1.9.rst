@@ -78,6 +78,25 @@ Navigation can be performed via arrow keys and HOME/END keys, and also a letter 
 It's similar to :ref:`dijit/_KeyNavContainer <dijit/_KeyNavContainer>` but can be user for any widgets,
 not just subclasses of :ref:`dijit/_Container <dijit/_Container>`.
 
+dijit/_TemplatedMixin
+---------------------
+:ref:`dijit/_TemplatedMixin <dijit/_TemplatedMixin>` has a new _rendered parameter to the constructor, that's useful
+for when standard widgets have
+`their templates pre-expanded on the server <http://jamesthom.as/blog/2013/01/15/server-side-dijit/>`_.
+
+Expected usage is to have markup like below on your main page:
+
+.. html ::
+
+    <div class="dijit dijitReset dijitInline dijitLeft" id="widget_fname" role="presentation"
+        data-dojo-type="dijit/form/TextBox" data-dojo-props="_rendered: true, id: 'fname', name: 'fname'"
+	    ><div class="dijitReset dijitInputField dijitInputContainer"
+		    ><input class="dijitReset dijitInputInner" data-dojo-attach-point='textbox,focusNode' autocomplete="off"
+			    name="fname" type="text"
+	    /></div
+    ></div>
+
+
 dijit/_WidgetsInTemplateMixin
 -----------------------------
 
