@@ -16,12 +16,12 @@ Introduction
 
 The dojox calendar widget displays events from a data store along time using widespread representation and allows to interactively edit the position in time and duration of these events.
 
-**Note**: On an supported version of Internet Explorer a standard doctype must be set on the page that includes the calendar for the calendar to be supported.
+**Note**: On a supported version of Internet Explorer a standard doctype must be set on the page that includes the calendar for the calendar to be supported.
 
 **Terminology:** The "event" word can be interpreted in several ways in a calendar application context. So in this documentation we will use the following words to prevent confusion:
-   * **data item**: item from the store. A data item is the data representation of a event to be displayed.
-   * **event**: Event dispatched by the calendar widget.
-   * **event listener** or **event handler**: Function registered on a particular event called when this event is dispatched by a widget.
+   * **data item**: item from the data store. A data item is the data representation of an event (e.g. Meeting at 9am to 10am).
+   * **event**: Event dispatched by a widget or a DOM node.
+   * **event listener** or **event handler**: Function registered on a particular event which is invoked when this event is dispatched by a widget or a DOM node.
    * **item renderer**: graphical representation of a data item.
 
 **Important**: the DOM node that contains the calendar widget or a view widget **must** have a position style property set to "absolute" or "relative".
