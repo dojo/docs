@@ -30,11 +30,10 @@ Limitations
 
 .. js ::
  
-    require(["dojo/parser", "dojo/ready", "dijit/Editor"], function(parser, ready){
-        ready(function(){
-            myEditor.onLoadDeferred.then(function(){
-            myEditor.set("value", "<b>This is new content.</b>");
-            });
+    require(["dojo/parser", "dijit/Editor",  "dojo/domReady!"], function(parser){
+        parser.parse();
+        myEditor.onLoadDeferred.then(function(){
+        myEditor.set("value", "<b>This is new content.</b>");
         });
     });
 
@@ -75,7 +74,8 @@ Of course, the editor can be created programmatically in addition to declarative
 
   .. js ::
 
-    require(["dojo/ready", "dijit/Editor", "dijit/_editor/plugins/AlwaysShowToolbar", "dojo/dom", "dojo/query"], function(ready, Editor, AlwaysShowToolbar, dom, query){
+    require(["dijit/Editor", "dijit/_editor/plugins/AlwaysShowToolbar", "dojo/dom", "dojo/query", "dojo/domReady!"],
+    function(Editor, AlwaysShowToolbar, dom, query){
         this.createEditor = function(){
             var myEditor = new Editor({
                 height: '',

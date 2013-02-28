@@ -35,21 +35,26 @@ The first example shows how to create a TooltipDialog and DropDownButton program
 
   .. js ::
 
-    require(["dojo/ready", "dijit/TooltipDialog", "dijit/form/TextBox", "dijit/form/Button", "dijit/form/DropDownButton", "dojo/dom"], function(ready, TooltipDialog, TextBox, Button, DropDownButton, dom){
-        ready(function(){
-            var myDialog = new TooltipDialog({
-                content:
-                    '<label for="name">Name:</label> <input data-dojo-type="dijit/form/TextBox" id="name" name="name"><br>' +
-                    '<label for="hobby">Hobby:</label> <input data-dojo-type="dijit/form/TextBox" id="hobby" name="hobby"><br>' +
-                    '<button data-dojo-type="dijit/form/Button" type="submit">Save</button>'
-            });
-
-            var myButton = new DropDownButton({
-                label: "show tooltip dialog",
-                dropDown: myDialog
-            });
-            dom.byId("dropDownButtonContainer").appendChild(myButton.domNode);
+    require([
+        "dijit/TooltipDialog",
+        "dijit/form/TextBox",
+        "dijit/form/Button",
+        "dijit/form/DropDownButton",
+        "dojo/dom",
+        "dojo/domReady!"
+    ], function(TooltipDialog, TextBox, Button, DropDownButton, dom){
+        var myDialog = new TooltipDialog({
+            content:
+                '<label for="name">Name:</label> <input data-dojo-type="dijit/form/TextBox" id="name" name="name"><br>' +
+                '<label for="hobby">Hobby:</label> <input data-dojo-type="dijit/form/TextBox" id="hobby" name="hobby"><br>' +
+                '<button data-dojo-type="dijit/form/Button" type="submit">Save</button>'
         });
+
+        var myButton = new DropDownButton({
+            label: "show tooltip dialog",
+            dropDown: myDialog
+        });
+        dom.byId("dropDownButtonContainer").appendChild(myButton.domNode);
     });
 
   .. html ::
@@ -62,22 +67,26 @@ A TooltipDialog may be popped up from any node.
 
   .. js ::
 
-    require(["dojo/ready", "dijit/TooltipDialog", "dijit/popup", "dojo/on", "dojo/dom"], function(ready, TooltipDialog, popup, on, dom){
-        ready(function(){
-            var myTooltipDialog = new TooltipDialog({
-                id: 'myTooltipDialog',
-                style: "width: 300px;",
-                content: "<p>I have a mouse leave event handler that will close the dialog.",
-                onMouseLeave: function(){
-                    popup.close(myTooltipDialog);
-                }
-            });
+    require([
+        "dijit/TooltipDialog",
+        "dijit/popup",
+        "dojo/on",
+        "dojo/dom",
+        "dojo/domReady!"
+    ], function(TooltipDialog, popup, on, dom){
+        var myTooltipDialog = new TooltipDialog({
+            id: 'myTooltipDialog',
+            style: "width: 300px;",
+            content: "<p>I have a mouse leave event handler that will close the dialog.",
+            onMouseLeave: function(){
+                popup.close(myTooltipDialog);
+            }
+        });
 
-            on(dojo.byId('thenode'), 'mouseover', function(){
-                popup.open({
-                    popup: myTooltipDialog,
-                    around: dom.byId('thenode')
-                });
+        on(dom.byId('thenode'), 'mouseover', function(){
+            popup.open({
+                popup: myTooltipDialog,
+                around: dom.byId('thenode')
             });
         });
     });

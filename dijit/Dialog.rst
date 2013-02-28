@@ -36,13 +36,11 @@ Programmatic instantiation
 
     .. js ::
 
-        require(["dojo/ready", "dijit/Dialog"], function(ready, Dialog){
-            ready(function(){
-                myDialog = new Dialog({
-                    title: "My Dialog",
-                    content: "Test content.",
-                    style: "width: 300px"
-                });
+        require(["dijit/Dialog", "dojo/domReady!"], function(Dialog){
+            myDialog = new Dialog({
+                title: "My Dialog",
+                content: "Test content.",
+                style: "width: 300px"
             });
         });
 
@@ -110,21 +108,19 @@ Now let's create a dialog programmatically, and change the dialog's content dyna
 
   .. js ::
 
-    require(["dojo/ready", "dijit/Dialog", "dijit/form/Button"], function(ready, Dialog, Button){
-        ready(function(){
-            var myDialog = new Dialog({
-                title: "Programmatic Dialog Creation",
-                style: "width: 300px"
-            });
-            
-            var myButton = new Button({
-                label: "Show me!",
-                onClick: function(){
-                    myDialog.set("content", "Hey, I wasn't there before, I was added at " + new Date() + "!");
-                    myDialog.show();
-                }
-            }, "progbutton");
+    require(["dijit/Dialog", "dijit/form/Button", "dojo/domReady!"], function(Dialog, Button){
+        var myDialog = new Dialog({
+            title: "Programmatic Dialog Creation",
+            style: "width: 300px"
         });
+
+        var myButton = new Button({
+            label: "Show me!",
+            onClick: function(){
+                myDialog.set("content", "Hey, I wasn't there before, I was added at " + new Date() + "!");
+                myDialog.show();
+            }
+        }, "progbutton");
     });
 
   .. html ::

@@ -31,22 +31,20 @@ and it will have the same effect as clicking the span with the mouse:
   .. js ::
 
     require([
-        "dojo/ready",
         "dijit/_WidgetBase",
         "dijit/_TemplatedMixin",
         "dijit/_OnDijitClickMixin",
         "dojo/_base/declare",
-        "dojo/dom"
-    ], function(ready, _WidgetBase, _TemplatedMixin, _OnDijitClickMixin, declare, dom){
-        ready(function(){
-            var MyButton = declare([_WidgetBase, _TemplatedMixin, _OnDijitClickMixin], {
-                templateString: "<span tabIndex=0 data-dojo-attach-event='ondijitclick: onClick'>click me</span>",
-                onClick: function(evt){
-                    alert("Awesome!!");
-                }
-            });
-            new MyButton({}, dom.byId("myButton"));
+        "dojo/dom",
+        "dojo/domReady!"
+    ], function(_WidgetBase, _TemplatedMixin, _OnDijitClickMixin, declare, dom){
+        var MyButton = declare([_WidgetBase, _TemplatedMixin, _OnDijitClickMixin], {
+            templateString: "<span tabIndex=0 data-dojo-attach-event='ondijitclick: onClick'>click me</span>",
+            onClick: function(evt){
+                alert("Awesome!!");
+            }
         });
+        new MyButton({}, dom.byId("myButton"));
     });
 
   .. html ::

@@ -19,15 +19,13 @@ You have the same options either way.
 
 .. js ::
   
-  require(["dojo/ready", "dijit/Dialog"], function(ready, Dialog){
-      ready(function(){
-          // create a "hidden" Dialog:
-          var myDialog = new Dialog({ title:"Hello Dijit!" }, "someId");
-          myDialog.startup();
+  require(["dijit/Dialog", "dojo/domReady!"], function(Dialog){
+      // create a "hidden" Dialog:
+      var myDialog = new Dialog({ title:"Hello Dijit!" }, "someId");
+      myDialog.startup();
 
-          // Hint: In order to open the dialog, you have to call
-          // myDialog.show();
-      });
+      // Hint: In order to open the dialog, you have to call
+      // myDialog.show();
   });
 
 is identical to:
@@ -46,13 +44,12 @@ The declarative method requires you include the :ref:`dojo/parser <dojo/parser>`
 .. html ::
   
   <script>
-      require(["dojo/parser", "dojo/ready", "dijit/registry", "dojo/dom"], function(parser, ready, registry, dom){
-          ready(function(){
-              // dom.byId("foobar") would only be a normal domNode.
-              var myDialog = registry.byId("foobar");
-              myDialog.set("content", "<p>I've been replaced!</p>");
-              myDialog.show();
-          });
+      require(["dojo/parser", "dijit/registry", "dojo/dom", "dojo/domReady!"], function(parser, registry, dom){
+          parser.parse();
+          // dom.byId("foobar") would only be a normal domNode.
+          var myDialog = registry.byId("foobar");
+          myDialog.set("content", "<p>I've been replaced!</p>");
+          myDialog.show();
       });
   </script>
   <div data-dojo-type="dijit/Dialog" id="foobar" title="Foo!">
@@ -179,11 +176,9 @@ Some of the more popular are:
 
 .. js ::
 
-  require(["dojo/ready", "dojo/dom-style", "dijit/registry"], function(ready, domStyle, registry){
-      ready(function(){
-          // hide a widget with id="myThiner"
+  require(["dojo/dom-style", "dijit/registry"], function(domStyle, registry){
+          // hide a widget with id="myThinger"
           domStyle.set(registry.byId("myThinger").domNode, "display", "none");
-      });
   });
 
 * containerNode - If a widget uses a template to create complex markup and has inner markup to be displayed

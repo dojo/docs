@@ -21,13 +21,11 @@ Programmatic InlineEditBox
 
   .. js ::
 
-    require(["dojo/ready", "dijit/InlineEditBox", "dijit/form/Textarea"], function(ready, InlineEditBox, Textarea){
-        ready(function(){
-            var eb = new InlineEditBox({
-                editor: Textarea,
-                autoSave: false
-            }, "ieb");
-        });
+    require(["dijit/InlineEditBox", "dijit/form/Textarea", "dojo/domReady!"], function(InlineEditBox, Textarea){
+        var eb = new InlineEditBox({
+            editor: Textarea,
+            autoSave: false
+        }, "ieb");
     });
 
   .. html ::

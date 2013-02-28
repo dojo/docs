@@ -45,12 +45,10 @@ Programmatic example
 
   .. js ::
 
-    require(["dojo/ready", "dijit/TitlePane", "dojo/dom"], function(ready, TitlePane, dom){
-        ready(function(){
-            var tp;
-            tp = new dijit.TitlePane({title:"I'm a TitlePane", content: "Collapse me!"});
-            dom.byId("holder").appendChild(tp.domNode);
-        });
+    require(["dijit/TitlePane", "dojo/dom", "dojo/domReady!"], function(TitlePane, dom){
+        var tp = new TitlePane({title:"I'm a TitlePane", content: "Collapse me!"});
+        dom.byId("holder").appendChild(tp.domNode);
+        tp.startup();
     });
 
   .. html ::

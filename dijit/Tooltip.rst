@@ -28,12 +28,10 @@ Usage
 
   .. js ::
  
-    require(["dojo/ready", "dijit/Tooltip"], function(ready, Tooltip){
-        ready(function(){
-            new Tooltip({
-                connectId: ["exampleNode"],
-                label: "the text for the tooltip"
-            });
+    require(["dijit/Tooltip", "dojo/domReady!"], function(Tooltip){
+        new Tooltip({
+            connectId: ["exampleNode"],
+            label: "the text for the tooltip"
         });
     });
 
@@ -78,7 +76,7 @@ Here's a tooltip created programmatically:
 
   .. js ::
 
-    require(["dojo/ready", "dijit/Tooltip"], function(ready, Tooltip){
+    require(["dijit/Tooltip", "dojo/domReady!"], function(Tooltip){
         // create a new Tooltip and connect it to bar1 and bar4
         new Tooltip({
             connectId: ["bar1", "bar4"],
@@ -177,15 +175,13 @@ These parameters allow a single Tooltip widget to display unique tooltips for (f
 
   .. js ::
 
-      require(["dojo/ready", "dijit/Tooltip", "dojo/query!css2"], function(ready, Tooltip){
-          ready(function(){
-              new Tooltip({
-                  connectId: "myTable",
-                  selector: "tr",
-                  getContent: function(matchedNode){
-                      return matchedNode.getAttribute("tooltipText");
-                  }
-              });
+      require(["dijit/Tooltip", "dojo/query!css2", "dojo/domReady!"], function(Tooltip){
+          new Tooltip({
+              connectId: "myTable",
+              selector: "tr",
+              getContent: function(matchedNode){
+                  return matchedNode.getAttribute("tooltipText");
+              }
           });
       });
 

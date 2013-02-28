@@ -19,16 +19,14 @@ Programmatic
 
   .. js ::
 
-    require(["dijit/ProgressBar", "dojo/_base/window", "dojo/ready"], function(ProgressBar, win, ready){
-        ready(function(){
-            var i = 0;
-            var myProgressBar = new ProgressBar({
-                style: "width: 300px"
-            }).placeAt(win.body());
-            setInterval(function(){
-               myProgressBar.set("value", i++ % 100);
-            }, 100);
-        });
+    require(["dijit/ProgressBar", "dojo/_base/window", "dojo/domReady!"], function(ProgressBar, win){
+        var i = 0;
+        var myProgressBar = new ProgressBar({
+            style: "width: 300px"
+        }).placeAt(win.body());
+        setInterval(function(){
+           myProgressBar.set("value", i++ % 100);
+        }, 100);
     });
 
 

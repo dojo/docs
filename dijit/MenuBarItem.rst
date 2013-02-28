@@ -21,18 +21,21 @@ A programmatically created MenuBarItem
 
   .. js ::
 
-    dojo.require("dijit.MenuBar");
-    dojo.require("dijit.MenuBarItem");
-    var pMenuBar;
-    function fClickItem(){alert("Clicked on first item")};
-    function fClickAnotherItem(){alert("Clicked on the second Item!")};
-    dojo.ready(function(){
-        pMenuBar = new dijit.MenuBar({id:"SampleMenu"});
-        pMenuBar.addChild(new dijit.MenuBarItem({label:"MenuBarItem#1 ", disabled:true, onClick:fClickItem}));
-        pMenuBar.addChild(new dijit.MenuBarItem({label:"MenubarItem#2 ", onClick:fClickAnotherItem}));
+    require([
+        "dijit/MenuBar",
+        "dijit/MenuBarItem",
+        "dojo/domReady!"
+    ], function(MenuBar, MenuBarItem){
+        var pMenuBar = new MenuBar({});
+
+        pMenuBar.addChild(new MenuBarItem({
+            label: "Click me"
+        }));
+
         pMenuBar.placeAt("wrapper");
         pMenuBar.startup();
     });
+
 
 
   .. html ::

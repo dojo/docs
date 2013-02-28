@@ -287,32 +287,35 @@ Startup() is called once on the top element in the hierarchy, after the whole hi
 
   .. js ::
 
-    require(["dojo/ready", "dijit/layout/BorderContainer", "dijit/layout/ContentPane", "dijit/layout/TabContainer"], function(ready, BorderContainer, ContentPane, TabContainer){
-        ready(function(){
-            // create a BorderContainer as the top widget in the hierarchy
-            var bc = new BorderContainer({style: "height: 500px; width: 800px;"});
+    require([
+        "dijit/layout/BorderContainer",
+        "dijit/layout/ContentPane",
+        "dijit/layout/TabContainer",
+        "dojo/domReady!"
+    ], function(BorderContainer, ContentPane, TabContainer){
+        // create a BorderContainer as the top widget in the hierarchy
+        var bc = new BorderContainer({style: "height: 300px; width: 400px;"});
 
-            // create a ContentPane as the left pane in the BorderContainer
-            var cp1 = new ContentPane({
-                region: "left",
-                style: "height: 100px",
-                content: "hello world"
-            });
-            bc.addChild(cp1);
-
-            // create a TabContainer as the center pane in the BorderContainer,
-            // which itself contains two children
-            var tc = new TabContainer({region: "center"});
-            var tab1 = new ContentPane({title: "tab 1"}),
-            tab2 = new ContentPane({title: "tab 2"});
-            tc.addChild( tab1 );
-            tc.addChild( tab2 );
-            bc.addChild(tc);
-
-            // put the top level widget into the document, and then call startup()
-            document.body.appendChild(bc.domNode);
-            bc.startup();
+        // create a ContentPane as the left pane in the BorderContainer
+        var cp1 = new ContentPane({
+            region: "left",
+            style: "height: 100px",
+            content: "hello world"
         });
+        bc.addChild(cp1);
+
+        // create a TabContainer as the center pane in the BorderContainer,
+        // which itself contains two children
+        var tc = new TabContainer({region: "center"});
+        var tab1 = new ContentPane({title: "tab 1"}),
+        tab2 = new ContentPane({title: "tab 2"});
+        tc.addChild( tab1 );
+        tc.addChild( tab2 );
+        bc.addChild(tc);
+
+        // put the top level widget into the document, and then call startup()
+        document.body.appendChild(bc.domNode);
+        bc.startup();
     });
 
 Note that:

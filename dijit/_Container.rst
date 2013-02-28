@@ -28,18 +28,16 @@ Example
     .. js ::
 
         require([
-            "dojo/_base/declare", "dojo/dom-construct", "dojo/ready", "dojo/_base/window",
-            "dijit/_WidgetBase", "dijit/_Container", "dijit/form/Button"
-        ], function(declare, domConstruct, ready, win, _WidgetBase, _Container, Button){
-            ready(function(){
-                var MyToolbar = declare([_WidgetBase, _Container], { });
+            "dojo/_base/declare", "dojo/dom-construct", "dojo/_base/window",
+            "dijit/_WidgetBase", "dijit/_Container", "dijit/form/Button", "dojo/domReady!"
+        ], function(declare, domConstruct, win, _WidgetBase, _Container, Button){
+            var MyToolbar = declare([_WidgetBase, _Container], { });
 
-                var toolbar = new MyToolbar();
-                toolbar.placeAt(win.body());
-                toolbar.addChild(new Button({label: "click me"}));
-                toolbar.addChild(new Button({label: "click me"}));
-                domConstruct.place("<p>Widgets in toolbar: " + toolbar.getChildren().length + "</p>", win.body());
-            });
+            var toolbar = new MyToolbar();
+            toolbar.placeAt(win.body());
+            toolbar.addChild(new Button({label: "click me"}));
+            toolbar.addChild(new Button({label: "click me"}));
+            domConstruct.place("<p>Widgets in toolbar: " + toolbar.getChildren().length + "</p>", win.body());
         });
 
 

@@ -98,9 +98,10 @@ Creating a programmatic tree is very simple:
   .. js ::
 
         require([
-            "dojo/ready", "dojo/_base/window", "dojo/store/Memory",
-            "dijit/tree/ObjectStoreModel", "dijit/Tree"
-        ], function(ready, win, Memory, ObjectStoreModel, Tree){
+            "dojo/_base/window", "dojo/store/Memory",
+            "dijit/tree/ObjectStoreModel", "dijit/Tree",
+            "dojo/domReady!"
+        ], function(win, Memory, ObjectStoreModel, Tree){
 
             // Create test store, adding the getChildren() method required by ObjectStoreModel
             var myStore = new Memory({
@@ -139,14 +140,12 @@ Creating a programmatic tree is very simple:
                 query: {id: 'world'}
             });
 
-            // Create the Tree.   Note that all widget creation should be inside a dojo.ready().
-            ready(function(){
-                var tree = new Tree({
-                    model: myModel
-                });
-                tree.placeAt(win.body());
-                tree.startup();
+            // Create the Tree.
+            var tree = new Tree({
+                model: myModel
             });
+            tree.placeAt(win.body());
+            tree.startup();
         });
 
 
@@ -352,14 +351,14 @@ When using :ref:`dijit.tree.ObjectStoreModel <dijit/tree/ObjectStoreModel>`, the
 in a `dojo.store.Observable <dojo/store/Observable>`, as below:
 
 .. code-example ::
-  :djConfig: async: true, parseOnLoad: true
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
         require([
             "dojo/store/Memory", "dojo/store/Observable",
             "dijit/tree/ObjectStoreModel", "dijit/Tree", "dojo/parser"
-        ], function(Memory, Observable, ObjectStoreModel, Tree){
+        ], function(Memory, Observable, ObjectStoreModel, Tree, parser){
             // Create test store, adding a getChildren() method needed by the model
             myStore = new Memory({
                 data: [
@@ -400,6 +399,8 @@ in a `dojo.store.Observable <dojo/store/Observable>`, as below:
                 store: myStore,
                 query: { id: "world" }
             });
+
+            parser.parse();
         });
 
   .. html ::
@@ -460,9 +461,10 @@ and set the Tree's dndController to ``dijit.tree.dndSource``.
   .. js ::
 
     require([
-        "dojo/aspect", "dojo/ready", "dojo/_base/window", "dojo/store/Memory", "dojo/store/Observable",
-        "dijit/Tree", "dijit/tree/ObjectStoreModel", "dijit/tree/dndSource"
-    ], function(aspect, ready, win, Memory, Observable, Tree, ObjectStoreModel, dndSource){
+        "dojo/aspect", "dojo/_base/window", "dojo/store/Memory", "dojo/store/Observable",
+        "dijit/Tree", "dijit/tree/ObjectStoreModel", "dijit/tree/dndSource",
+        "dojo/domReady!"
+    ], function(aspect, win, Memory, Observable, Tree, ObjectStoreModel, dndSource){
 
             // Create test store, adding the getChildren() method required by ObjectStoreModel,
             // and making put(child, {parent: parent}) work
@@ -528,14 +530,11 @@ and set the Tree's dndController to ``dijit.tree.dndSource``.
                 query: {id: 'world'}
             });
 
-            // After DOM is loaded and dijit infrastructure has finished initializing, create Tree
-            ready(function(){
-                (new Tree({
-                    model: myModel,
-                    dndController: dndSource
-                })).placeAt(win.body()).startup();
-
-            });
+            // Create Tree
+            (new Tree({
+                model: myModel,
+                dndController: dndSource
+            })).placeAt(win.body()).startup();
         });
 
 You can also specify custom checkAcceptance() and checkItemAcceptance() to accept/reject items to the tree.
@@ -563,9 +562,10 @@ This is useful for when a user can control the order of the children of the chil
   .. js ::
 
     require([
-        "dojo/aspect", "dojo/ready", "dojo/_base/window", "dojo/store/Memory", "dojo/store/Observable",
-        "dijit/Tree", "dijit/tree/ObjectStoreModel", "dijit/tree/dndSource"
-    ], function(aspect, ready, win, Memory, Observable, Tree, ObjectStoreModel, dndSource){
+        "dojo/aspect", "dojo/_base/window", "dojo/store/Memory", "dojo/store/Observable",
+        "dijit/Tree", "dijit/tree/ObjectStoreModel", "dijit/tree/dndSource",
+        "dojo/domReady!"
+    ], function(aspect, win, Memory, Observable, Tree, ObjectStoreModel, dndSource){
 
             // Create test store, adding the getChildren() method required by ObjectStoreModel,
             // and making put(child, {parent: parent}) work
@@ -631,14 +631,12 @@ This is useful for when a user can control the order of the children of the chil
                 query: {id: 'world'}
             });
 
-            // After DOM is loaded and dijit infrastructure has finished initializing, create Tree
-            ready(function(){
-                (new Tree({
-                    model: myModel,
-                    dndController: dndSource,
-                    betweenThreshold: 5
-                })).placeAt(win.body()).startup();
-            });
+            // Create Tree
+            (new Tree({
+                model: myModel,
+                dndController: dndSource,
+                betweenThreshold: 5
+            })).placeAt(win.body()).startup();
         });
 
 

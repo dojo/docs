@@ -37,24 +37,25 @@ If no such widget exists, it returns undefined.
 Retrieving a widget by its id and accessing its DOM node (main DOM rendering element)
 ----------------------------------------------------------------------------------------------
 .. code-example ::
-  :djConfig: async: true, parseOnLoad: true
+  :djConfig: async: true, parseOnLoad: false
   
   .. js ::
       
-      require(["dojo/parser","dojo/ready","dojo/dom", "dijit/registry", "dijit/form/TextBox"], 
-        function(parser,ready, dom, registry) {
-          ready(function() {
-              // Locate the JS object.
-              var widget = registry.byId("myTextBox2");
-              if (widget){
-                var dNode = widget.domNode;
-                // Find my output node and write out I found my textbox and got its value.
-                dom.byId("textNode2").innerHTML = "Found my text box.  It has value: [" + widget.get("value") + "] and its primary DOM node tag name is: [" + dNode.tagName + "]";
-              }else{
-                // Find my output node and write out I couldn't find the widget.
-                dom.byId("textNode2").innerHTML = "Could not locate my text box widget!";
-              }
-          });
+      require(["dojo/parser", "dojo/dom", "dijit/registry", "dijit/form/TextBox", "dojo/domReady!"],
+        function(parser, dom, registry) {
+
+          parser.parse();
+
+          // Locate the JS object.
+          var widget = registry.byId("myTextBox2");
+          if (widget){
+            var dNode = widget.domNode;
+            // Find my output node and write out I found my textbox and got its value.
+            dom.byId("textNode2").innerHTML = "Found my text box.  It has value: [" + widget.get("value") + "] and its primary DOM node tag name is: [" + dNode.tagName + "]";
+          }else{
+            // Find my output node and write out I couldn't find the widget.
+            dom.byId("textNode2").innerHTML = "Could not locate my text box widget!";
+          }
       });
 
   .. html ::
@@ -228,25 +229,26 @@ Comparing dom.byId and registry.byId
 *This example shows how the output of each is different.*
 
 .. code-example ::
-  :djConfig: async: true, parseOnLoad: true
+  :djConfig: async: true, parseOnLoad: false
   
   .. js ::
   
-    require(["dojo/parser","dojo/ready", "dojo/dom", "dijit/registry", "dijit/form/TextBox"], 
-            function(parser,ready, dom, registry) {
-                ready(function() {
-                    // Locate the JS object.
-                    var dibiWidget = registry.byId("myTextBox3");
-                    var dobiWidget = dom.byId("myTextBox3");
-                    var dibiDOM = registry.byId("textNode3");
-                    var dobiDOM = dom.byId("textNode3");
+    require(["dojo/parser", "dojo/dom", "dijit/registry", "dijit/form/TextBox", "dojo/domReady!"],
+    function(parser, dom, registry) {
+
+        parser.parse();
+
+        // Locate the JS object.
+        var dibiWidget = registry.byId("myTextBox3");
+        var dobiWidget = dom.byId("myTextBox3");
+        var dibiDOM = registry.byId("textNode3");
+        var dobiDOM = dom.byId("textNode3");
 
 
-                    dom.byId("textNode3").innerHTML = "registry.byId for widget id returned: " + dibiWidget + "<br>" +
-                                                  "dom.byId for widget id returned: " + dobiWidget + "<br>" +
-                                                  "registry.byId for dom id returned: " + dibiDOM + "<br>" +
-                                                  "dom.byId for dom id returned: " + dobiDOM + "<br>";
-                });
+        dom.byId("textNode3").innerHTML = "registry.byId for widget id returned: " + dibiWidget + "<br>" +
+                                      "dom.byId for widget id returned: " + dobiWidget + "<br>" +
+                                      "registry.byId for dom id returned: " + dibiDOM + "<br>" +
+                                      "dom.byId for dom id returned: " + dobiDOM + "<br>";
       });
 
   .. html ::

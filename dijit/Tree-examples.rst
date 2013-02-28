@@ -183,9 +183,10 @@ But the tree will display and work properly regardless, and for simple markup, e
   .. js ::
 
         require([
-            "dojo/_base/declare", "dojo/ready", "dojo/_base/window", "dojo/store/Memory",
-            "dijit/tree/ObjectStoreModel", "dijit/Tree"
-        ], function(declare, ready, win, Memory, ObjectStoreModel, Tree){
+            "dojo/_base/declare", "dojo/_base/window", "dojo/store/Memory",
+            "dijit/tree/ObjectStoreModel", "dijit/Tree",
+            "dojo/domReady!"
+        ], function(declare, win, Memory, ObjectStoreModel, Tree){
 
             // Create test store, adding getChildren() method needed by ObjectStoreModel
             var store = new Memory({
@@ -211,17 +212,15 @@ But the tree will display and work properly regardless, and for simple markup, e
                 _setLabelAttr: {node: "labelNode", type: "innerHTML"}
             });
 
-            // Create the Tree.   Note that all widget creation should be inside a dojo.ready().
-            ready(function(){
-                var tree = new Tree({
-                    model: model,
-                    _createTreeNode: function(args){
-                       return new MyTreeNode(args);
-                    }
-                });
-                tree.placeAt(win.body());
-                tree.startup();
+            // Create the Tree.
+            var tree = new Tree({
+                model: model,
+                _createTreeNode: function(args){
+                   return new MyTreeNode(args);
+                }
             });
+            tree.placeAt(win.body());
+            tree.startup();
         });
 
 
@@ -235,9 +234,10 @@ This example shows you how to use a tree to build a navigation menu.
   .. js ::
 
         require([
-            "dojo/ready", "dojo/_base/window", "dojo/store/Memory",
-            "dijit/tree/ObjectStoreModel", "dijit/Tree"
-        ], function(ready, win, Memory, ObjectStoreModel, Tree){
+            "dojo/_base/window", "dojo/store/Memory",
+            "dijit/tree/ObjectStoreModel", "dijit/Tree",
+            "dojo/domReady!"
+        ], function(win, Memory, ObjectStoreModel, Tree){
 
             // Create test store, adding the getChildren() method required by ObjectStoreModel
             var myStore = new Memory({
@@ -259,13 +259,11 @@ This example shows you how to use a tree to build a navigation menu.
             });
 
             // Create the Tree, specifying an onClick method
-            ready(function(){
-                (new Tree({
-                    model: myModel,
-                    onClick: function(item){
-                        // Get the URL from the item, and navigate to it
-                        location.href = item.url;
-                    }
-                })).placeAt(win.body()).startup();
-            });
+            (new Tree({
+                model: myModel,
+                onClick: function(item){
+                    // Get the URL from the item, and navigate to it
+                    location.href = item.url;
+                }
+            })).placeAt(win.body()).startup();
        });
