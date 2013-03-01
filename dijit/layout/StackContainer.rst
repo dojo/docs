@@ -79,30 +79,33 @@ Here's an example of a programmatically created StackContainer, and associated S
  
   .. js ::
 
-    require(["dojo/ready", "dijit/layout/StackContainer", "dijit/layout/ContentPane", "dijit/layout/StackController"], function(ready, StackContainer, ContentPane, StackController){
-        ready(function(){
-            var sc = new StackContainer({
-                style: "height: 300px; width: 400px;",
-                id: "myProgStackContainer"
-            }, "scontainer-prog");
+    require([
+        "dijit/layout/StackContainer",
+        "dijit/layout/ContentPane",
+        "dijit/layout/StackController",
+        "dojo/domReady!"
+    ], function(StackContainer, ContentPane, StackController){
+        var sc = new StackContainer({
+            style: "height: 300px; width: 400px;",
+            id: "myProgStackContainer"
+        }, "scontainer-prog");
 
-            var cp1 = new ContentPane({
-                title: "page 1",
-                content: "page 1 content"
-            });
-            sc.addChild(cp1);
-
-            var cp2 = new ContentPane({
-                title: "page 2",
-                content: "page 2 content"
-            });
-            sc.addChild(cp2);
-
-            var controller = new StackController({containerId: "myProgStackContainer"}, "scontroller-prog");
-
-            sc.startup();
-            controller.startup();
+        var cp1 = new ContentPane({
+            title: "page 1",
+            content: "page 1 content"
         });
+        sc.addChild(cp1);
+
+        var cp2 = new ContentPane({
+            title: "page 2",
+            content: "page 2 content"
+        });
+        sc.addChild(cp2);
+
+        var controller = new StackController({containerId: "myProgStackContainer"}, "scontroller-prog");
+
+        sc.startup();
+        controller.startup();
     });
 
   The HTML is very simple

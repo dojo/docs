@@ -38,26 +38,24 @@ Note that the tabs all have a fixed height.
  
   .. js ::
 
-    require(["dojo/ready", "dijit/layout/TabContainer", "dijit/layout/ContentPane"], function(ready, TabContainer, ContentPane){
-        ready(function(){
-            var tc = new TabContainer({
-                style: "height: 100%; width: 100%;"
-            }, "tc1-prog");
-      
-            var cp1 = new ContentPane({
-                 title: "Food",
-                 content: "We offer amazing food"
-            });
-            tc.addChild(cp1);
-      
-            var cp2 = new ContentPane({
-                 title: "Drinks",
-                 content: "We are known for our drinks."
-            });
-            tc.addChild(cp2);
-      
-            tc.startup();
+    require(["dijit/layout/TabContainer", "dijit/layout/ContentPane", "dojo/domReady!"], function(TabContainer, ContentPane){
+        var tc = new TabContainer({
+            style: "height: 100%; width: 100%;"
+        }, "tc1-prog");
+
+        var cp1 = new ContentPane({
+             title: "Food",
+             content: "We offer amazing food"
         });
+        tc.addChild(cp1);
+
+        var cp2 = new ContentPane({
+             title: "Drinks",
+             content: "We are known for our drinks."
+        });
+        tc.addChild(cp2);
+
+        tc.startup();
     });
 
   The HTML is very simple:
@@ -156,33 +154,31 @@ true (if programmatically created) or the attribute selected="true" (if declarat
  
   .. js ::
 
-    require(["dojo/ready", "dijit/layout/TabContainer", "dijit/layout/ContentPane"], function(ready, TabContainer, ContentPane){
-        ready(function(){
-            var tc = new TabContainer({
-                style: "height: 100%; width: 100%;"
-            }, "tc1-prog");
-      
-            var cp1 = new ContentPane({
-                title: "First Tab",
-                content: "We offer amazing food"
-            });
-            tc.addChild(cp1);
-      
-            var cp2 = new ContentPane({
-                title: "Second Tab",
-                content: "We are known for our drinks."
-            });
-            tc.addChild(cp2);
+    require(["dijit/layout/TabContainer", "dijit/layout/ContentPane", "dojo/domReady!"], function(TabContainer, ContentPane){
+        var tc = new TabContainer({
+            style: "height: 100%; width: 100%;"
+        }, "tc1-prog");
 
-            var cp3 = new ContentPane({
-                title: "Third Tab",
-                content: "This Tab has the attribute 'selected: true' set.",
-                selected: true
-            });
-            tc.addChild(cp3);
-            
-            tc.startup();
+        var cp1 = new ContentPane({
+            title: "First Tab",
+            content: "We offer amazing food"
         });
+        tc.addChild(cp1);
+
+        var cp2 = new ContentPane({
+            title: "Second Tab",
+            content: "We are known for our drinks."
+        });
+        tc.addChild(cp2);
+
+        var cp3 = new ContentPane({
+            title: "Third Tab",
+            content: "This Tab has the attribute 'selected: true' set.",
+            selected: true
+        });
+        tc.addChild(cp3);
+
+        tc.startup();
     });
 
   The HTML is very simple:
@@ -241,21 +237,25 @@ Closing A Tab
 A common action for ``closable`` tabs is to register an ``onClose`` function on the child, returning true or false to indicate whether or not the closing should take place:
 
 .. code-example::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
-    require(["dojo/parser", "dojo/ready", "dijit/layout/TabContainer", "dijit/layout/ContentPane"], function(parser, ready, TabContainer, ContentPane){
-        ready(function(){
-            var closablePane = new ContentPane({
-                title:"Close Me",
-                closable: true,
-                onClose: function(){
-                   // confirm() returns true or false, so return that.
-                   return confirm("Do you really want to Close this?");
-                }
-            });
-            onCloseEx.addChild(closablePane);
+    require(["dojo/parser", "dijit/layout/TabContainer", "dijit/layout/ContentPane", "dojo/domReady!"],
+            function(parser, TabContainer, ContentPane){
+
+        parser.parse();
+
+        var closablePane = new ContentPane({
+            title:"Close Me",
+            closable: true,
+            onClose: function(){
+               // confirm() returns true or false, so return that.
+               return confirm("Do you really want to Close this?");
+            }
         });
+
+        onCloseEx.addChild(closablePane);
     });
 
   You can, of course, attach the onClose function directly on a pane as well:

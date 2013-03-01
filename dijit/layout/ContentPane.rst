@@ -94,13 +94,11 @@ Programmatic example
 
   .. js ::
 
-    require(["dojo/ready", "dijit/layout/ContentPane"], function(ready, ContentPane){
-      ready(function(){
+    require(["dijit/layout/ContentPane", "dojo/domReady!"], function(ContentPane){
         new ContentPane({
           content:"<p>Optionally set new content now</p>",
           style:"height:125px"
         }, "targetID");
-      });
     });
 
   .. html ::
@@ -116,13 +114,11 @@ Programmatic example
 
   .. js ::
 
-    require(["dojo/ready", "dijit/layout/ContentPane"], function(ready, ContentPane){
-      ready(function(){
+    require(["dijit/layout/ContentPane"], function(ContentPane){
         new ContentPane({
           content:"<p>I am initial content</p>",
           style:"height:125px"
         }).placeAt("targetID2");
-      });
     });
 
   .. html ::

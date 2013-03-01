@@ -56,10 +56,8 @@ However, addChild() is called when children are added programmatically, like:
 
 .. js ::
 
-  require(["dojo/ready", "dijit/registry", "dijit/layout/ContentPane"], function(ready, registry, ContentPane)){
-      ready(function(){
-          registry.byId("tc").addChild( new ContentPane() );
-      });
+  require(["dijit/registry", "dijit/layout/ContentPane"], function(registry, ContentPane)){
+      registry.byId("tc").addChild( new ContentPane() );
   }
 
 To bridge this gap and do processing common to both initial children and added children, there's a method called _setupChild().

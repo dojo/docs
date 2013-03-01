@@ -255,7 +255,7 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
 after it has been added to the DOM, so that its contained BorderContainer can lay itself out.
 
 .. code-example::
-  :djConfig: parseOnLoad: true
+  :djConfig: async: true, parseOnLoad: false
   :height: 400
   :width: 660
 
@@ -278,21 +278,33 @@ after it has been added to the DOM, so that its contained BorderContainer can la
 
   .. js ::
 
-    require(["dojo/parser", "dojo/ready", "dojo/_base/declare", "dijit/_WidgetBase", "dijit/_TemplatedMixin", "dijit/_WidgetsInTemplateMixin", "dijit/form/Button", "dijit/layout/ContentPane", "dijit/layout/BorderContainer", "dijit/layout/TabContainer", "dijit/layout/AccordionContainer", "dijit/layout/AccordionPane"], function(parser, ready, declare, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin){
-        ready(function(){
-            declare("MyDijit",
-                [_WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin], {
-                    // Note: string would come from dojo/text! plugin in a 'proper' dijit
-                    templateString: '<div style="width: 100%; height: 100%;">' +
-                        '<div data-dojo-type="dijit/layout/BorderContainer" design="headline" ' +
-                        '  style="width: 100%; height: 100%;" data-dojo-attach-point="outerBC">' +
-                        '<div data-dojo-type="dijit/layout/ContentPane" region="center">MyDijit - Center content goes here.</div>' +
-                        '<div data-dojo-type="dijit/layout/ContentPane" region="bottom">MyDijit - Bottom : ' +
-                        ' <div data-dojo-type="dijit/form/Button">A Button</div>' +
-                        '</div>' +
-                        '</div></div>'
-            });
+    require([
+        "dojo/parser",
+        "dojo/_base/declare",
+        "dijit/_WidgetBase",
+        "dijit/_TemplatedMixin",
+        "dijit/_WidgetsInTemplateMixin",
+        "dijit/form/Button",
+        "dijit/layout/ContentPane",
+        "dijit/layout/BorderContainer",
+        "dijit/layout/TabContainer",
+        "dijit/layout/AccordionContainer",
+        "dijit/layout/AccordionPane"
+    ], function(parser, declare, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin){
+        declare("MyDijit",
+            [_WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin], {
+                // Note: string would come from dojo/text! plugin in a 'proper' dijit
+                templateString: '<div style="width: 100%; height: 100%;">' +
+                    '<div data-dojo-type="dijit/layout/BorderContainer" design="headline" ' +
+                    '  style="width: 100%; height: 100%;" data-dojo-attach-point="outerBC">' +
+                    '<div data-dojo-type="dijit/layout/ContentPane" region="center">MyDijit - Center content goes here.</div>' +
+                    '<div data-dojo-type="dijit/layout/ContentPane" region="bottom">MyDijit - Bottom : ' +
+                    ' <div data-dojo-type="dijit/form/Button">A Button</div>' +
+                    '</div>' +
+                    '</div></div>'
         });
+
+        parser.parse();
     });
 
   The markup has to look as follows:
