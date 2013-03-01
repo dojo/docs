@@ -93,24 +93,24 @@ Creating a programmatic tree is very simple:
 
   .. js ::
 
-    require(["dojo/ready", "dijit/Tree", "dojo/data/ItemFileReadStore", "dijit/tree/ForestStoreModel"], function(ready, Tree, ItemFileReadStore, ForestStoreModel){
-        ready(function(){
-            var store = new ItemFileReadStore({
-                url: "{{dataUrl}}/dijit/tests/_data/countries.json"
-            });
-
-            var treeModel = new ForestStoreModel({
-                store: store,
-                query: {"type": "continent"},
-                rootId: "root",
-                rootLabel: "Continents",
-                childrenAttrs: ["children"]
-            });
-
-            new Tree({
-                model: treeModel
-            }, "treeOne");
+    require(["dijit/Tree", "dojo/data/ItemFileReadStore", "dijit/tree/ForestStoreModel", "dojo/domReady!"],
+            function(Tree, ItemFileReadStore, ForestStoreModel){
+        var store = new ItemFileReadStore({
+            url: "{{dataUrl}}/dijit/tests/_data/countries.json"
         });
+
+        var treeModel = new ForestStoreModel({
+            store: store,
+            query: {"type": "continent"},
+            rootId: "root",
+            rootLabel: "Continents",
+            childrenAttrs: ["children"]
+        });
+
+        var myTree = new Tree({
+            model: treeModel
+        }, "treeOne");
+        myTree.startup();
     });
 
   .. html ::
