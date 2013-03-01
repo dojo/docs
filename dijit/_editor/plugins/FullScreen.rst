@@ -46,7 +46,7 @@ Basic Usage
 -----------
 Usage of this plugin is quite simple and painless.
 The first thing you need to do is to require it into the page that's using the editor.
-This is done in the same spot all your dojo.require calls are made, usually a head script tag.
+This is done in the same spot as your require() call is made, usually the head script tag.
 For example:
 
 .. js ::

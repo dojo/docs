@@ -46,12 +46,6 @@ Creation from markup is simpler and more structured.
 
 .. code-example ::
 
-  .. js ::
-
-    dojo.require("dijit.MenuBar");
-    dojo.require("dijit.DropDownMenu");
-    dojo.require("dijit.MenuBarItem");
-
   .. html ::
 
     <div id="menubar" data-dojo-type="dijit/MenuBar">

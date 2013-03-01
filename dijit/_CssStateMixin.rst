@@ -35,13 +35,13 @@ Usage
 
 To use this mixin in custom widgets:
 
-1. require _CssStateMixin and mix it in to the widget:
+1. mix it in to the widget:
     
 .. js ::
 
-    dojo.require("dijit._CssStateMixin");
-    ...
-    dojo.declare(myWidget, [ ..., dijit._CssStateMixin], ...
+    require(["dojo/_base/declare", "dijit/_CssStateMixin"], function(declare, _CssStateMixin){
+        declare(myWidget, [ ..., _CssStateMixin], ...
+    });
 
 *Note that most dijits already extend _CssStateMixin, so they should skip this step.*
 
