@@ -933,13 +933,13 @@ Group
     Creates a group object.
 
   add(shape)
-    Adds a shape to a surface returning the surface itself. It is used to move shapes between groups and a surface.
+    Adds a shape to a group returning the group itself. It is used to move shapes between groups and a surface.
 
   remove(shape)
-    Removes a shape from a surface returning the surface itself. The shape can be added later to the same surface or a group.
+    Removes a shape from a group returning the group itself. The shape can be added later to the same group or a surface.
 
   clear()
-    Removes all shapes from a surface returning the surface itself.
+    Removes all shapes from a group returning the group itself.
 
 Rectangle
 ---------
