@@ -39,7 +39,14 @@ You can also pass an additional query parameter string, theme={theme id} to forc
   http://your.server.com/yourapp.html?theme=iPhone // iphone theme
   http://your.server.com/yourapp.html?theme=iPad // ipad theme
 
-To simulate a particular device, the user agent may be overridden by setting dojoConfig.mblUserAgent.
+To simulate a particular device from the application code the user agent may be forced by setting dojoConfig.mblUserAgent as follows:
+
+
+.. html ::
+
+  <script src="dojox/mobile/deviceTheme.js" data-dojo-config="mblUserAgent: 'Holodark'"></script>
+  <script src="dojo/dojo.js" data-dojo-config="parseOnLoad: true"></script>
+
 
 Loading specific files
 ======================
