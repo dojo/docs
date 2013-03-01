@@ -17,10 +17,8 @@ Usage
 
 .. js ::
  
-    require(["dojo/ready", "dijit/form/VerticalSlider"], function(ready, VerticalSlider){
-        ready(function(){
-            var slider = new VerticalSlider({}, "mySlider");
-        });
+    require(["dijit/form/VerticalSlider", "dojo/domReady!"], function(VerticalSlider){
+        var slider = new VerticalSlider({}, "mySlider");
     });
 
 Here are some of the constructor parameters:
@@ -46,36 +44,38 @@ moves the slider.  The following code fills in a simple textbox called sliderVal
 vertical slider and a simple rule (tick marks) created programmatically.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
     require([
-        "dojo/ready",
         "dijit/form/VerticalSlider",
         "dijit/form/VerticalRule",
         "dojo/dom",
         "dijit/form/TextBox", // this we only include to make an example with TextBox
-        "dojo/parser"
-    ], function(ready, VerticalSlider, VerticalRule, dom){
-        ready(function(){
-            var rulesNode = document.createElement('div');
-            vertical.appendChild(rulesNode);
-            var sliderRules = new VerticalRule({
-                count: 11,
-                style: "width:5px;"
-            }, rulesNode);
-            var slider = new VerticalSlider({
-                name: "vertical",
-                value: 6,
-                minimum: -10,
-                maximum: 10,
-                intermediateChanges: true,
-                style: "height:300px;",
-                onChange: function(value){
-                    dom.byId("sliderValue").value = value;
-                }
-            }, "vertical");
-        });
+        "dojo/parser",
+        "dojo/domReady!"
+    ], function(VerticalSlider, VerticalRule, dom, TextBox, parser){
+        parser.parse();
+
+        var rulesNode = document.createElement('div');
+        vertical.appendChild(rulesNode);
+        var sliderRules = new VerticalRule({
+            count: 11,
+            style: "width:5px;"
+        }, rulesNode);
+
+        var slider = new VerticalSlider({
+            name: "vertical",
+            value: 6,
+            minimum: -10,
+            maximum: 10,
+            intermediateChanges: true,
+            style: "height:300px;",
+            onChange: function(value){
+                dom.byId("sliderValue").value = value;
+            }
+        }, "vertical");
     });
 
   .. html ::

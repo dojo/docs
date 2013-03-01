@@ -21,10 +21,8 @@ Usage
 
 .. js ::
  
-    require(["dojo/ready", "dijit/form/HorizontalSlider"], function(ready, HorizontalSlider){
-        ready(function(){
-            var slider = new HorizontalSlider({}, "mySlider");
-        });
+    require(["dijit/form/HorizontalSlider", "dojo/domReady!"], function(HorizontalSlider){
+        var slider = new HorizontalSlider({}, "mySlider");
     });
 
 Here are some of the constructor parameters:
@@ -49,29 +47,30 @@ One way you could show the user the value of your slider is to create a textbox 
 moves the slider.  The following code fills in a simple textbox called sliderValue.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
     require([
-        "dojo/ready",
-        "dijit/form/HorizontalSlider",
         "dojo/dom", // for inserting value in TextBox example
-        "dijit/form/TextBox", // this we only include to make an example with TextBox
-        "dojo/parser" // parser because of TextBox decoration
-    ], function(ready, HorizontalSlider, dom){
-        ready(function(){
-            var slider = new HorizontalSlider({
-                name: "slider",
-                value: 5,
-                minimum: -10,
-                maximum: 10,
-                intermediateChanges: true,
-                style: "width:300px;",
-                onChange: function(value){
-                    dom.byId("sliderValue").value = value;
-                }
-            }, "slider");
-        });
+        "dojo/parser", // parser because of TextBox decoration
+        "dijit/form/HorizontalSlider",
+        "dijit/form/TextBox" // this we only include to make an example with TextBox
+    ], function(dom, parser, HorizontalSlider, TextBox){
+
+        parser.parse();
+
+        var slider = new HorizontalSlider({
+            name: "slider",
+            value: 5,
+            minimum: -10,
+            maximum: 10,
+            intermediateChanges: true,
+            style: "width:300px;",
+            onChange: function(value){
+                dom.byId("sliderValue").value = value;
+            }
+        }, "slider");
     });
 
   .. html ::

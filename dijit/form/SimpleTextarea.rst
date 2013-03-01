@@ -35,16 +35,14 @@ The *value* attribute can be set with the widget's set('value', text) method.
 
   .. js ::
 
-    require(["dojo/ready", "dijit/form/SimpleTextarea"], function(ready, SimpleTextarea){
-        ready(function(){
-            var textarea = new SimpleTextarea({
-                name: "myarea",
-                rows: "4",
-                cols: "50",
-                style: "width:auto;"
-            }, "myarea");
-            textarea.set("value", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.");
-        });
+    require(["dijit/form/SimpleTextarea", "dojo/domReady!"], function(SimpleTextarea){
+        var textarea = new SimpleTextarea({
+            name: "myarea",
+            rows: "4",
+            cols: "50",
+            style: "width:auto;"
+        }, "myarea");
+        textarea.set("value", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.");
     });
 
   .. html ::

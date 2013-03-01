@@ -33,17 +33,15 @@ The first example shows how to create a button programmatically.
 
   .. js ::
 
-    require(["dojo/ready", "dijit/form/Button", "dojo/dom"], function(ready, Button, dom){
-        ready(function(){
-            // Create a button programmatically:
-            var myButton = new Button({
-                label: "Click me!",
-                onClick: function(){
-                    // Do something:
-                    dom.byId("result1").innerHTML += "Thank you! ";
-                }
-            }, "progButtonNode");
-        });
+    require(["dijit/form/Button", "dojo/dom", "dojo/domReady!"], function(Button, dom){
+        // Create a button programmatically:
+        var myButton = new Button({
+            label: "Click me!",
+            onClick: function(){
+                // Do something:
+                dom.byId("result1").innerHTML += "Thank you! ";
+            }
+        }, "progButtonNode");
     });
 
   .. html ::

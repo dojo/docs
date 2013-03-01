@@ -24,14 +24,15 @@ HTML5 markup
 ------------
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
-    require(["dojo/parser", "dojo/ready", "dijit/form/DataList", "dijit/registry"], function(parser, ready, DataList, registry){
-        ready(function(){
-            var store = registry.byId('fruit');
-            alert('fruit that start with "B" = ' + store.query({name:/^B.*/}).map(function(option){ return option.name; }));
-        });
+    require(["dojo/parser", "dijit/form/DataList", "dijit/registry", "dojo/domReady!"],
+    function(parser, DataList, registry){
+        parser.parse();
+        var store = registry.byId('fruit');
+        alert('fruit that start with "B" = ' + store.query({name:/^B.*/}).map(function(option){ return option.name; }));
     });
 
   .. html ::

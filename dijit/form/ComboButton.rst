@@ -25,27 +25,26 @@ This example shows how to create a menu and combo button programmatically.
 
   .. js ::
 
-    require(["dojo/ready", "dijit/Menu", "dijit/MenuItem", "dijit/form/ComboButton"], function(ready, Menu, MenuItem, ComboButton){
-        ready(function(){
-            var menu = new Menu({ style: "display: none;"});
-            var menuItem1 = new MenuItem({
-                label: "Yahoo",
-                onClick: function(){ alert('hi'); }
-            });
-            menu.addChild(menuItem1);
-
-            var menuItem2 = new MenuItem({
-                label: "Google",
-                onClick: function(){ alert('ho'); }
-            });
-            menu.addChild(menuItem2);
-
-            var button = new ComboButton({
-                label: "get all mail",
-                dropDown: menu
-            });
-            button.placeAt(dojo.body());
+    require(["dijit/Menu", "dijit/MenuItem", "dijit/form/ComboButton", "dojo/domReady!"],
+            function(Menu, MenuItem, ComboButton){
+        var menu = new Menu({ style: "display: none;"});
+        var menuItem1 = new MenuItem({
+            label: "Yahoo",
+            onClick: function(){ alert('hi'); }
         });
+        menu.addChild(menuItem1);
+
+        var menuItem2 = new MenuItem({
+            label: "Google",
+            onClick: function(){ alert('ho'); }
+        });
+        menu.addChild(menuItem2);
+
+        var button = new ComboButton({
+            label: "get all mail",
+            dropDown: menu
+        });
+        button.placeAt(dojo.body());
     });
 
 

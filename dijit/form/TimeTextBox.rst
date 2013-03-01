@@ -49,17 +49,15 @@ Programmatic example
 
   .. js ::
 
-    require(["dojo/ready", "dijit/form/TimeTextBox"], function(ready, TimeTextBox){
-        ready(function(){
-            new TimeTextBox({name: "progval", value: new Date(),
-                constraints: {
-                    timePattern: 'HH:mm:ss',
-                    clickableIncrement: 'T00:15:00',
-                    visibleIncrement: 'T00:15:00',
-                    visibleRange: 'T01:00:00'
-                }
-            }, "progval");
-        });
+    require(["dijit/form/TimeTextBox", "dojo/domReady!"], function(TimeTextBox){
+        new TimeTextBox({name: "progval", value: new Date(),
+            constraints: {
+                timePattern: 'HH:mm:ss',
+                clickableIncrement: 'T00:15:00',
+                visibleIncrement: 'T00:15:00',
+                visibleRange: 'T01:00:00'
+            }
+        }, "progval");
     });
 
   .. html ::

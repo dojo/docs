@@ -61,16 +61,14 @@ Here, we'll use a programmatically-created NumberSpinner:
 
   .. js ::
 
-    require(["dojo/ready", "dijit/form/NumberSpinner"], function(ready, NumberSpinner){
-        ready(function(){
-            var mySpinner = new NumberSpinner({
-                value: 1000,
-                smallDelta: 10,
-                constraints: { min:9, max:1550, places:0 },
-                id: "integerspinner3",
-                style: "width:100px"
-            }, "spinnerId" );
-        });
+    require(["dijit/form/NumberSpinner", "dojo/domReady!"], function(NumberSpinner){
+        var mySpinner = new NumberSpinner({
+            value: 1000,
+            smallDelta: 10,
+            constraints: { min:9, max:1550, places:0 },
+            id: "integerspinner3",
+            style: "width:100px"
+        }, "spinnerId" );
     });
 
   .. html ::

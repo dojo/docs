@@ -71,16 +71,11 @@ The fractional part can be 0 to 6 digits long.
 
   .. js ::
 
-    require(["dojo/ready", "dijit/form/NumberTextBox"], function(ready, NumberTextBox){
-        function createWidget(){
-            var props = {
-                name: "programmatic",
-                constraints: {pattern: "0.######"}
-            };
-            new NumberTextBox(props, "programmatic");
-        }
-        
-        ready(createWidget);
+    require(["dijit/form/NumberTextBox", "dojo/domReady!"], function(NumberTextBox){
+        new NumberTextBox({
+              name: "programmatic",
+              constraints: {pattern: "0.######"}
+        }, "programmatic");
     });
 
   .. html ::

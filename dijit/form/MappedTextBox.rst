@@ -51,27 +51,25 @@ In this example, the user enters a query to a service that expects the query to 
 
   .. js ::
 
-    require(["dojo/ready", "dijit/form/MappedTextBox"], function(ready, MappedTextBox){
-    	ready(function(){
-    		var textbox = new MappedTextBox({
-    			format: function(value){
-    				// format set value to display to user.
-    				var displayed = this.get("displayedValue");
-    				if(value.toUpperCase() == displayed.toUpperCase()){
-    					// leave user input alone 
-    					return displayed;
-    				}else{
-    					// update to new value
-    					return value;
-    				}
-    			},
-    			parse: function(displayedValue){
-    				// parse user input to send canonical value to server
-    				return displayedValue.toUpperCase();
-    			}
-    		}, "textBox");
-    		textbox.set("value", "HI");
-    	});
+    require(["dijit/form/MappedTextBox", "dojo/domReady!"], function(MappedTextBox){
+        var textbox = new MappedTextBox({
+            format: function(value){
+                // format set value to display to user.
+                var displayed = this.get("displayedValue");
+                if(value.toUpperCase() == displayed.toUpperCase()){
+                    // leave user input alone
+                    return displayed;
+                }else{
+                    // update to new value
+                    return value;
+                }
+            },
+            parse: function(displayedValue){
+                // parse user input to send canonical value to server
+                return displayedValue.toUpperCase();
+            }
+        }, "textBox");
+        textbox.set("value", "HI");
     });
 
   .. html ::

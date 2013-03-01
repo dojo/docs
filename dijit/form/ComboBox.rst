@@ -48,8 +48,8 @@ include the *value* attribute in the attribute list passed to the constructor.
   .. js ::
 
         require([
-            "dojo/ready", "dojo/store/Memory", "dijit/form/ComboBox"
-        ], function(ready, Memory, ComboBox){
+            "dojo/store/Memory", "dijit/form/ComboBox", "dojo/domReady!"
+        ], function(Memory, ComboBox){
             var stateStore = new Memory({
                 data: [
                     {name:"Alabama", id:"AL"},
@@ -67,15 +67,13 @@ include the *value* attribute in the attribute list passed to the constructor.
                 ]
             });
 
-            ready(function(){
-                var comboBox = new ComboBox({
-                    id: "stateSelect",
-                    name: "state",
-                    value: "California",
-                    store: stateStore,
-                    searchAttr: "name"
-                }, "stateSelect");
-            });
+            var comboBox = new ComboBox({
+                id: "stateSelect",
+                name: "state",
+                value: "California",
+                store: stateStore,
+                searchAttr: "name"
+            }, "stateSelect");
         });
 
   .. html ::

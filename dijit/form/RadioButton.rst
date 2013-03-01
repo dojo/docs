@@ -29,22 +29,22 @@ Let's create 2 RadioButton widgets, 1 programmatically and 1 declaratively.
 We'll wrap both inside a FORM to illustrate what happens on submit.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
  
     require([
-        "dojo/ready",
         "dojo/parser",
         "dijit/form/RadioButton",
-        "dijit/form/Button" // used for example purpose
-    ], function(ready, parser, RadioButton){
-        ready(function(){
-            var radioOne = new RadioButton({
-                checked: true,
-                value: "tea",
-                name: "drink",
-            }, "radioOne");
-        });
+        "dijit/form/Button", // used for example purpose
+        "dojo/domReady!"
+    ], function(parser, RadioButton){
+        parser.parse();
+        var radioOne = new RadioButton({
+            checked: true,
+            value: "tea",
+            name: "drink",
+        }, "radioOne");
     });
 
   .. html ::

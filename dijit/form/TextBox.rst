@@ -79,14 +79,17 @@ Please see the following for an example:
 To programmatically size a textbox you would do:
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
-    require(["dojo/ready", "dojo/parser", "dijit/registry", "dojo/dom-style", "dijit/form/TextBox"], function(ready, parser, registry, domStyle){
-        ready(function(){
-            var box = registry.byId("firstname");
-            domStyle.set(box.domNode, "width", "5em");
-        });
+    require(["dojo/parser", "dijit/registry", "dojo/dom-style", "dijit/form/TextBox", "dojo/domReady!"],
+            function(parser, registry, domStyle){
+
+        parser.parse();
+
+        var box = registry.byId("firstname");
+        domStyle.set(box.domNode, "width", "5em");
     });
 
   .. html ::
@@ -105,15 +108,14 @@ Please see the following example for more detail:
 
   .. js ::
 
-    require(["dojo/ready", "dojo/parser", "dijit/registry", "dojo/on", "dijit/form/TextBox"], function(ready, parser, registry, on){
-        ready(function(){
-            parser.parse();
-            var box0 = registry.byId("value0Box");
-            var box1 = registry.byId("value1Box");
-            box1.set("value", box0.get("value") + " modified");
-            on(box0, "change", function(){
-                 box1.set("value", box0.get("value") + " modified");
-            });
+    require(["dojo/parser", "dijit/registry", "dojo/on", "dijit/form/TextBox", "dojo/domReady!"],
+            function(parser, registry, on){
+        parser.parse();
+        var box0 = registry.byId("value0Box");
+        var box1 = registry.byId("value1Box");
+        box1.set("value", box0.get("value") + " modified");
+        on(box0, "change", function(){
+             box1.set("value", box0.get("value") + " modified");
         });
     });
 
@@ -137,14 +139,12 @@ In order to use it, submit a parameter "placeHolder" to your widget:
 
   .. js ::
 
-    require(["dojo/ready", "dijit/form/TextBox"], function(ready, TextBox){
-        ready(function(){
-            var myTextBox = new dijit.form.TextBox({
-                name: "firstname",
-                value: "" /* no or empty value! */,
-                placeHolder: "type in your name"
-            }, "firstname");
-        });
+    require(["dijit/form/TextBox", "dojo/domReady!"], function(TextBox){
+        var myTextBox = new dijit.form.TextBox({
+            name: "firstname",
+            value: "" /* no or empty value! */,
+            placeHolder: "type in your name"
+        }, "firstname");
     });
 
   .. html ::

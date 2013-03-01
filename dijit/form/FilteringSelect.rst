@@ -50,8 +50,8 @@ To get the text currently displayed in the textbox (the value of the currently s
   .. js ::
 
         require([
-            "dojo/ready", "dojo/store/Memory", "dijit/form/FilteringSelect"
-        ], function(ready, Memory, FilteringSelect){
+            "dojo/store/Memory", "dijit/form/FilteringSelect", "dojo/domReady!"
+        ], function(Memory, FilteringSelect){
             var stateStore = new Memory({
                 data: [
                     {name:"Alabama", id:"AL"},
@@ -69,15 +69,13 @@ To get the text currently displayed in the textbox (the value of the currently s
                 ]
             });
 
-            ready(function(){
-                var filteringSelect = new FilteringSelect({
-                    id: "stateSelect",
-                    name: "state",
-                    value: "CA",
-                    store: stateStore,
-                    searchAttr: "name"
-                }, "stateSelect");
-            });
+            var filteringSelect = new FilteringSelect({
+                id: "stateSelect",
+                name: "state",
+                value: "CA",
+                store: stateStore,
+                searchAttr: "name"
+            }, "stateSelect");
         });
 
   .. html ::
@@ -153,8 +151,8 @@ In this example, the FilteringSelect has been set to display the ids for states 
   .. js ::
 
         require([
-            "dojo/ready", "dojo/_base/window", "dojo/store/Memory", "dijit/form/FilteringSelect"
-        ], function(ready, win, Memory, FilteringSelect){
+            "dojo/_base/window", "dojo/store/Memory", "dijit/form/FilteringSelect", "dojo/domReady!"
+        ], function(win, Memory, FilteringSelect){
             var stateStore = new Memory({
                 data: [
                     {name:"Alabama", id:"AL"},
@@ -172,16 +170,14 @@ In this example, the FilteringSelect has been set to display the ids for states 
                 ]
             });
 
-            ready(function(){
-                var filteringSelect = new FilteringSelect({
-                    id: "stateSelect",
-                    name: "state",
-                    value: "CA",
-                    store: stateStore,
-                    searchAttr: "id"
-                }, "stateSelect");
-                filteringSelect.placeAt(win.body());
-            });
+            var filteringSelect = new FilteringSelect({
+                id: "stateSelect",
+                name: "state",
+                value: "CA",
+                store: stateStore,
+                searchAttr: "id"
+            }, "stateSelect");
+            filteringSelect.placeAt(win.body());
         });
 
 Codependent FilteringSelect/ComboBox widgets
@@ -483,35 +479,34 @@ and the state FilteringSelect filters the city ComboBox choices in this example.
     ];
 
     require([
-        "dojo/ready", "dojo/store/Memory",
-        "dijit/form/ComboBox", "dijit/form/FilteringSelect"
-    ], function(ready, Memory, ComboBox, FilteringSelect){
+        "dojo/store/Memory",
+        "dijit/form/ComboBox", "dijit/form/FilteringSelect",
+        "dojo/domReady!"
+    ], function(Memory, ComboBox, FilteringSelect){
 
-        ready(function(){
-            new dijit.form.ComboBox({
-                id: "city",
-                store: new Memory({ data: cities }),
-                autoComplete: true,
-                query: {state: /.*/},
-                style: "width: 150px;",
-                required: true,
-                searchAttr: "name",
-                onChange: function(city){
-                    console.log("combobox onchange ", city, this.item);
-                    dijit.byId('state').set('value', this.item ? this.item.state : null);
-                }
-            }, "city");
+        new dijit.form.ComboBox({
+            id: "city",
+            store: new Memory({ data: cities }),
+            autoComplete: true,
+            query: {state: /.*/},
+            style: "width: 150px;",
+            required: true,
+            searchAttr: "name",
+            onChange: function(city){
+                console.log("combobox onchange ", city, this.item);
+                dijit.byId('state').set('value', this.item ? this.item.state : null);
+            }
+        }, "city");
 
-            new dijit.form.FilteringSelect({
-                id: "state",
-                store: new Memory({ idProperty: "state", data: states }),
-                autoComplete: true,
-                style: "width: 150px;",
-                onChange: function(state){
-                    dijit.byId('city').query.state = this.item.state || /.*/;
-                }
-            }, "state");
-        });
+        new dijit.form.FilteringSelect({
+            id: "state",
+            store: new Memory({ idProperty: "state", data: states }),
+            autoComplete: true,
+            style: "width: 150px;",
+            onChange: function(state){
+                dijit.byId('city').query.state = this.item.state || /.*/;
+            }
+        }, "state");
     });
 
   .. html ::
@@ -539,25 +534,24 @@ the autocompleted value in the textbox, as with other FilteringSelects, rather t
   .. js ::
 
     require([
-        "dojo/ready", "dojo/dom", "dojo/store/Memory", "dijit/form/FilteringSelect"
-    ], function(ready, dom, Memory, FilteringSelect){
+        "dojo/dom", "dojo/store/Memory", "dijit/form/FilteringSelect",
+        "dojo/domReady!"
+    ], function(dom, Memory, FilteringSelect){
         var dojoStore = new Memory({data: [
             {id: 1, name:"we", label:"<i>we</i> <img src='http://placekitten.com/50/70' />"},
             {id: 2, name:"are", label:"<u>are</u> <img src='http://placekitten.com/50/60' />"},
             {id: 3, name:"kittens", label:"<b>kittens</b> <img src='http://placekitten.com/50/50' />"}
         ]});
 
-        ready(function(){
-           var fs = new FilteringSelect({
-                 id: "dojoBox",
-                 value: 3,
-                 store: dojoStore,
-                 searchAttr: "name",
-                 name: "xyz",
-                 labelAttr: "label",
-                 labelType: "html"
-           }, dom.byId("dojoBox"));
-        });
+       var fs = new FilteringSelect({
+             id: "dojoBox",
+             value: 3,
+             store: dojoStore,
+             searchAttr: "name",
+             name: "xyz",
+             labelAttr: "label",
+             labelType: "html"
+       }, dom.byId("dojoBox"));
     });
 
   .. html ::

@@ -27,31 +27,30 @@ The first example shows how to create a menu and drop down button programmatical
 
   .. js ::
 
-    require(["dojo/ready", "dijit/form/DropDownButton", "dijit/DropDownMenu", "dijit/MenuItem", "dojo/dom"], function(ready, DropDownButton, DropDownMenu, MenuItem, dom){
-        ready(function(){
-            var menu = new DropDownMenu({ style: "display: none;"});
-            var menuItem1 = new MenuItem({
-                label: "Save",
-                iconClass:"dijitEditorIcon dijitEditorIconSave",
-                onClick: function(){ alert('save'); }
-            });
-            menu.addChild(menuItem1);
-
-            var menuItem2 = new MenuItem({
-                label: "Cut",
-                iconClass:"dijitEditorIcon dijitEditorIconCut",
-                onClick: function(){ alert('cut'); }
-            });
-            menu.addChild(menuItem2);
-
-            var button = new DropDownButton({
-                label: "hello!",
-                name: "programmatic2",
-                dropDown: menu,
-                id: "progButton"
-            });
-            dom.byId("dropDownButtonContainer").appendChild(button.domNode);
+    require(["dijit/form/DropDownButton", "dijit/DropDownMenu", "dijit/MenuItem", "dojo/dom", "dojo/domReady!"],
+            function(DropDownButton, DropDownMenu, MenuItem, dom){
+        var menu = new DropDownMenu({ style: "display: none;"});
+        var menuItem1 = new MenuItem({
+            label: "Save",
+            iconClass:"dijitEditorIcon dijitEditorIconSave",
+            onClick: function(){ alert('save'); }
         });
+        menu.addChild(menuItem1);
+
+        var menuItem2 = new MenuItem({
+            label: "Cut",
+            iconClass:"dijitEditorIcon dijitEditorIconCut",
+            onClick: function(){ alert('cut'); }
+        });
+        menu.addChild(menuItem2);
+
+        var button = new DropDownButton({
+            label: "hello!",
+            name: "programmatic2",
+            dropDown: menu,
+            id: "progButton"
+        });
+        dom.byId("dropDownButtonContainer").appendChild(button.domNode);
     });
 
   .. html ::

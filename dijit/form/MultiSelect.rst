@@ -70,24 +70,26 @@ Programmatic example
 
   .. js ::
 
-    require(["dojo/ready", "dijit/form/MultiSelect", "dijit/form/Button", "dojo/dom", "dojo/_base/window"], function(ready, MultiSelect, Button, dom, win){
-        ready(function(){
-            var sel = dom.byId('dynamic');
-            var n = 0;
-            for(var i in dijit){
-                var c = win.doc.createElement('option');
-                c.innerHTML = i;
-                c.value = n++;
-                sel.appendChild(c);
+    require([
+        "dijit/form/MultiSelect", "dijit/form/Button",
+        "dojo/dom", "dojo/_base/window", "dojo/domReady!"
+    ], function(MultiSelect, Button, dom, win){
+
+        var sel = dom.byId('dynamic');
+        var n = 0;
+        for(var i in dijit){
+            var c = win.doc.createElement('option');
+            c.innerHTML = i;
+            c.value = n++;
+            sel.appendChild(c);
+        }
+        var myMultiSelect = new MultiSelect({ name: 'dynamic' }, sel);
+
+        new Button({
+            onClick: function(){
+                alert(myMultiSelect.get('value'));
             }
-            var myMultiSelect = new MultiSelect({ name: 'dynamic' }, sel);
-            
-            new Button({
-                onClick: function(){
-                    alert(myMultiSelect.get('value'));
-                }
-            }, "progbutton");
-        });
+        }, "progbutton");
     });
 
   .. html ::

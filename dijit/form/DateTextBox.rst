@@ -95,31 +95,30 @@ Here's an example:
 
   .. js ::
 
-    require(["dojo/ready", "dojo/_base/declare", "dijit/form/DateTextBox", "dojo/date/locale", "dojo/dom"], function(ready, declare, DateTextBox, locale, dom){
-        ready(function(){
-            declare("OracleDateTextBox", DateTextBox, {
-                oracleFormat: {selector: 'date', datePattern: 'dd-MMM-yyyy', locale: 'en-us'},
-                value: "", // prevent parser from trying to convert to Date object
-                postMixInProperties: function(){ // change value string to Date object
-                    this.inherited(arguments);
-                    // convert value to Date object
-                    this.value = locale.parse(this.value, this.oracleFormat);
-                },
-                // To write back to the server in Oracle format, override the serialize method:
-                serialize: function(dateObject, options){
-                    return locale.format(dateObject, this.oracleFormat).toUpperCase();
-                }
-            });
-            function showServerValue(){
-                dom.byId('toServerValue').value = document.getElementsByName('oracle')[0].value;
+    require(["dojo/_base/declare", "dijit/form/DateTextBox", "dojo/date/locale", "dojo/dom", "dojo/domReady!"],
+            function(declare, DateTextBox, locale, dom){
+        declare("OracleDateTextBox", DateTextBox, {
+            oracleFormat: {selector: 'date', datePattern: 'dd-MMM-yyyy', locale: 'en-us'},
+            value: "", // prevent parser from trying to convert to Date object
+            postMixInProperties: function(){ // change value string to Date object
+                this.inherited(arguments);
+                // convert value to Date object
+                this.value = locale.parse(this.value, this.oracleFormat);
+            },
+            // To write back to the server in Oracle format, override the serialize method:
+            serialize: function(dateObject, options){
+                return locale.format(dateObject, this.oracleFormat).toUpperCase();
             }
-            new OracleDateTextBox({
-                value: "31-DEC-2009",
-                name: "oracle",
-                onChange: function(v){ setTimeout(showServerValue, 0)}
-            }, "oracle");
-            showServerValue();
         });
+        function showServerValue(){
+            dom.byId('toServerValue').value = document.getElementsByName('oracle')[0].value;
+        }
+        new OracleDateTextBox({
+            value: "31-DEC-2009",
+            name: "oracle",
+            onChange: function(v){ setTimeout(showServerValue, 0)}
+        }, "oracle");
+        showServerValue();
     });
 
   .. html ::
@@ -165,14 +164,14 @@ There is a ``constraints`` property `fullYear` (boolean) that controls the prese
 The catch is that this can only be set after the widget has been created.
 
 .. code-example ::
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
-    require(["dojo/parser", "dojo/ready", "dijit/form/DateTextBox"], function(parser, ready){
-        ready(function(){
-            myShortYear.constraints.fullYear = false;
-            myShortYear.set('value', myShortYear.get('value')); // reformat display to short year
-        });
+    require(["dojo/parser", "dijit/form/DateTextBox", "dojo/domReady!"], function(parser){
+        parser.parse();
+        myShortYear.constraints.fullYear = false;
+        myShortYear.set('value', myShortYear.get('value')); // reformat display to short year
     });
 
   .. html ::

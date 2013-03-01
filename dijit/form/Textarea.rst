@@ -32,14 +32,12 @@ Notice how we pass the *name*, *style* and *value* parameters into the object cr
 
   .. js ::
 
-    require(["dojo/ready", "dijit/form/Textarea"], function(ready, Textarea){
-        ready(function(){
-            var textarea = new Textarea({
-                name: "myarea",
-                value: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-                style: "width:200px;"
-            }, "myarea").startup();
-        });
+    require(["dijit/form/Textarea", "dojo/domReady!"], function(Textarea){
+        var textarea = new Textarea({
+            name: "myarea",
+            value: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+            style: "width:200px;"
+        }, "myarea").startup();;
     });
 
   .. html ::
