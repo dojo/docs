@@ -1,7 +1,7 @@
 .. _dijit/layout/TabContainer-examples:
 
 ===============================================
-dijit.layout.TabContainer - additional examples
+dijit/layout/TabContainer - additional examples
 ===============================================
 
 .. contents ::
@@ -12,13 +12,10 @@ Tab Strip
 
 This is a plain TabContainer with three tabs, fixed height and a tab strip.
 The tabstrip is especially useful when the TabContainer is child of a BorderContainer.
+The tabstrip is supported in the tundra, nihilo, and soria themes, but not the claro theme.
 
 .. code-example ::
-
-  .. js ::
-
-    dojo.require("dijit.layout.TabContainer");
-    dojo.require("dijit.layout.ContentPane");
+  :theme: tundra
 
   The HTML is very simple
 
@@ -49,11 +46,6 @@ Note that right tabs don't work in conjunction with doLayout=false.
 
 .. code-example ::
 
-  .. js ::
-
-    dojo.require("dijit.layout.TabContainer");
-    dojo.require("dijit.layout.ContentPane");
-
   notice the tabPosition attribute
 
   .. html ::
@@ -77,11 +69,6 @@ Tabs at the left, with a strip.
 Note that left tabs don't work in conjunction with doLayout=false.
 
 .. code-example ::
-
-  .. js ::
-
-    dojo.require("dijit.layout.TabContainer");
-    dojo.require("dijit.layout.ContentPane");
 
   notice the tabPosition attribute
 
@@ -107,11 +94,6 @@ Note that bottom tabs don't work in conjunction with doLayout=false.
 
 .. code-example ::
 
-  .. js ::
-
-    dojo.require("dijit.layout.TabContainer");
-    dojo.require("dijit.layout.ContentPane");
-
   notice the tabPosition attribute
 
   .. html ::
@@ -128,40 +110,6 @@ Note that bottom tabs don't work in conjunction with doLayout=false.
       </div>
     </div>
 
-One technique to allow validation, and still use the parser would be to simply decorate the node with a data-dojo-type attribute (after onLoad) and parse the parent node.
-For ease, we'll store the class name for our inner widgets in a rel="" attribute.
-
-.. code-example ::
-
-  .. js ::
-
-    dojo.require("dijit.layout.TabContainer");
-    dojo.require("dijit.layout.ContentPane");
-    dojo.require("dojo.parser");
-    dojo.ready(function(){
-        dojo.query("div[rel]").forEach(function(n){
-            var className = dojo.attr(n, "rel");
-            // now set it
-            dojo.attr(n, "data-dojo-type", className);
-        });
-        dojo.parser.parse("progtabwrapper");
-    });
-
-  .. html ::
-
-    <div id="progtabwrapper">
-    <div rel="dijit.layout.TabContainer" style="width: 400px; height: 100px;">
-      <div rel="dijit.layout.ContentPane" title="My first tab">
-        Lorem ipsum and all around...
-      </div>
-      <div rel="dijit.layout.ContentPane" title="My second tab">
-        Lorem ipsum and all around - second...
-      </div>
-      <div rel="dijit.layout.ContentPane" title="My last tab">
-        Lorem ipsum and all around - last...
-      </div>
-    </div>
-    </div>
 
 Programmatic Example
 ====================
@@ -171,21 +119,24 @@ similar to what the parser does:
 
 .. code-example ::
 
-  As a simple example, we'll use :ref:`dojo.query <dojo/query>` to find and create the ContentPanes used in the TabContainer
+  As a simple example, we'll use :ref:`dojo/query <dojo/query>` to find and create the ContentPanes used in the TabContainer
 
   .. js ::
 
-    dojo.require("dijit.layout.TabContainer");
-    dojo.require("dijit.layout.ContentPane");
-    dojo.ready(function(){
-        dojo.query(".tc1cp").forEach(function(n){
-            new dijit.layout.ContentPane({
+    require([
+        "dojo/dom-attr", "dojo/query",
+        "dijit/layout/TabContainer", "dijit/layout/ContentPane",
+        "dojo/domReady!"
+    ], function(attr, query, TabContainer, ContentPane){
+
+        query(".tc1cp").forEach(function(n){
+            new ContentPane({
                 // just pass a title: attribute, this, we're stealing from the node
-                title: dojo.attr(n, "title")
+                title: attr.get(n, "title")
             }, n);
         });
-        var tc = new dijit.layout.TabContainer({
-            style: dojo.attr("tc1-prog", "style")
+        var tc = new TabContainer({
+            style: attr.get("tc1-prog", "style")
         }, "tc1-prog");
         tc.startup();
     });
@@ -214,11 +165,6 @@ This is supported by using two TabContainer widgets.
 Remember that although a TabContainer's children are often ContentPanes, they can be any layout widget, including another TabContainer:
 
 .. code-example ::
-
-  .. js ::
-
-    dojo.require("dijit.layout.TabContainer");
-    dojo.require("dijit.layout.ContentPane");
 
   The HTML is very simple
 
@@ -261,9 +207,12 @@ If there is no nested tab in a tab, content pane is inserted instead.
 
   .. js ::
 
-    dojo.require("dijit.layout.TabContainer");
-    dojo.require("dijit.layout.ContentPane");
-    dojo.ready(function(){
+    require([
+        "dojo/_base/array",
+        "dijit/layout/TabContainer", "dijit/layout/ContentPane",
+        "dojo/domReady!"
+    ], function(array, TabContainer, ContentPane){
+
         var tabs = [{
             title: 'Tab 1',
             sub: [{
@@ -286,25 +235,25 @@ If there is no nested tab in a tab, content pane is inserted instead.
             title: 'Tab 3',
             sub: []
         }];
-        var tabContainer = new dijit.layout.TabContainer({
+        var tabContainer = new TabContainer({
             doLayout: false
         }, 'tabContainer');
-        dojo.forEach(tabs, function(tab){
+        array.forEach(tabs, function(tab){
             if(!tab.sub.length){
-                var cp = new dijit.layout.ContentPane({
+                var cp = new ContentPane({
                     title: tab.title,
                     content: 'No sub tabs'
                 });
                 tabContainer.addChild(cp);
                 return;
             }
-            var subTab = new dijit.layout.TabContainer({
+            var subTab = new TabContainer({
                 title: tab.title,
                 doLayout: false,
                 nested: true
             });
-            dojo.forEach(tab.sub, function(sub){
-                var cp = new dijit.layout.ContentPane({
+            array.forEach(tab.sub, function(sub){
+                var cp = new ContentPane({
                     title: sub.title,
                     content: sub.content
                 });
