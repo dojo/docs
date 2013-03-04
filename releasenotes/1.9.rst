@@ -286,13 +286,13 @@ dojox/app
        * respectively the previousView or nextView for the current view at its position
        * a raw data object that can be passed from one view to another by specifying a data attribute in the transition options.
    * Support was added to allow multiple views to be included in the DefaultViews in the config as well as on transitions and the url used in the transition. This allows multiple views to be displayed with different constraints (or regions) at the same time.  It is also now possible to transition views in regions other than the center.  To specify multiple views the view names would listed separated by a "+" for example "view1+view2" or "view1,subviewA+view2".  Support has also been added to be able to use a "-" to hide a view.  So if "view1+view2" are displayed and a transition is requested for "view3-view1" then view3 would be displayed (replacing view2 assuming they have the same constraint) and view1 would be hidden.
-
+   * Observable support for a stores via config has been added, if you set "observable": true on a store it will wrap the store in a dojo/store/Observable.
 
 *Incompatibilities*
 
    * data-app-region has been changed to data-app-constraint.
    * Since "+" and "-" can now be used to indicate multiple views on a transition, those characters are no longer allowed in a view name.
-   * The events used in the Layout controllers have changed from layout and select to initLayout and layoutView.
+   * The events used in the Layout controllers have changed from layout -> app-initLayout and  select -> app-layoutView, and the other events used by dojox/app have also been changed to have an app- prefix for example, load -> app-load, init -> app-init, domNode -> app-domNode, and transition -> app-transition.
    * zIndex is no longer automatically set on views depending upon whether they are in the center or not.  In the past the zIndex was automatically set higher on the left pane of a tablet view to avoid having the transition for the center show over that left pane.
    * In 1.8 dojox/app would automatically require a model and mvc controller if it was listed in the config and not included in the list of dependencies.  In 1.9 the model and mvc controller will need to be listed in the dependencies. For example:
 
