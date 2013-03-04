@@ -281,12 +281,12 @@ dojox/app
    * Custom Layout controller support is available with a dojox/app/controllers/LayoutBase which can be extended with a custom layout controller.
    * Support for a constraint setting on a view in the config has been added, which will add data-app-constraint to the domNode for the view, and place the view into the specified constraint (or region).
    * A new BorderLayout controller has been provided, which uses a dijit/layout/BorderContainer to layout views, and uses constraint settings on views in the config to determine which constraint (or region) a view should be placed into.
-   * One can now specifies alternate transition animation function by using the `transit` property in top level section of the configuration file.
+   * One can now specify an alternate transition animation function by using the `transit` property in top level section of the configuration file.
    * The activate & deactivate function of the view lifecycle now accept two arguments:
        * respectively the previousView or nextView for the current view at its position
        * a raw data object that can be passed from one view to another by specifying a data attribute in the transition options.
    * Support was added to allow multiple views to be included in the DefaultViews in the config as well as on transitions and the url used in the transition. This allows multiple views to be displayed with different constraints (or regions) at the same time.  It is also now possible to transition views in regions other than the center.  To specify multiple views the view names would listed separated by a "+" for example "view1+view2" or "view1,subviewA+view2".  Support has also been added to be able to use a "-" to hide a view.  So if "view1+view2" are displayed and a transition is requested for "view3-view1" then view3 would be displayed (replacing view2 assuming they have the same constraint) and view1 would be hidden.
-   * Observable support for a stores via config has been added, if you set "observable": true on a store it will wrap the store in a dojo/store/Observable.
+   * Observable support for stores via the config has been added. Setting "observable": true on a store will have the store wrapped in a dojo/store/Observable.
 
 *Incompatibilities*
 
