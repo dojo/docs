@@ -62,7 +62,9 @@ Here is an excerpt of a typical configuration file:
 			"todoApp/todoApp"
 		],
 		"controllers": [
-			"dojox/app/controllers/History"
+			"dojox/app/controllers/Load",
+			"dojox/app/controllers/Transition",
+			"dojox/app/controllers/Layout"
 		],
 		"stores": {
 			"listsDataStore":{
@@ -91,26 +93,49 @@ Here is an excerpt of a typical configuration file:
 			}
 		},
 		"defaultView": "items,ViewListTodoItemsByPriority",
-		"defaultTransition": "fade",
+
+		"has" : {
+			"phone" : {
+				"isTablet" : false
+			},
+			"!phone" : {
+				"template": "todoApp/tablet/ViewTodoLists.html",
+				"definition": "todoApp/tablet/ViewTodoLists",
+				"isTablet" : true
+			},
+			"ie9orLess" : {
+				"controllers": [
+					"dojox/app/controllers/HistoryHash"
+				]
+			},
+			"!ie9orLess" : {
+				"controllers": [
+					"dojox/app/controllers/History"
+				]
+			}
+		},	
+
+		"defaultTransition": "slide",
 		"views": {
 			"configuration": {
 				"defaultView": "SelectTodoList",
-				"defaultTransition": "fade",
+				"defaultTransition": "slide",
 				"definition": "none",
 
 				"views": {
 					"SelectTodoList": {
-						"template": "todoApp/templates/configuration/SelectTodoList.html"
+						"template": "todoApp/configuration/SelectTodoList.html",
 						"nls": "todoApp/nls/SelectTodoList"
 					},
 
 					"ModifyTodoLists": {
-						"template": "todoApp/templates/configuration/ModifyTodoLists.html"
+						"template": "todoApp/configuration/ModifyTodoLists.html",
 						"nls": "todoApp/nls/ModifyTodoList"
 					},
 
 					"EditTodoList": {
-						"template": "todoApp/templates/configuration/EditTodoList.html"
+						"template": "todoApp/configuration/EditTodoList.html",
+						"definition": "todoApp/configuration/EditTodoList.js",
 						"nls": "todoApp/nls/EditTodoList"
 					}
 				}
@@ -119,13 +144,13 @@ Here is an excerpt of a typical configuration file:
 		}
 	}
 
-You can find the entire configuration file for this typical application `here <https://github.com/cjolif/dojo-todo-app/blob/master/config-phone.json>`_
+You can find the entire configuration file for this typical application `here <https://github.com/cjolif/dojo-todo-app/blob/master/config.json>`_
 
 Once started the corresponding application looks like the following:
 
 .. image :: ./app/AppExample.png
 
-See the todoApp example in Dojo demos installation directory for the full application.
+See the todoApp example in Dojo demos installation directory for the full application, or you can find it on github `here <https://github.com/cjolif/dojo-todo-app/>`.
 
 Building an Application
 =======================
@@ -290,32 +315,35 @@ They are automatically added to the list of dependencies and as such do not need
 controllers
 -----------
 
-Array of AMD modules identifiers. Controllers for the application. All the controllers listed here will be loaded during application startup to respond to application events and controller the application logic. The “``dojox/app/controllers/Load``”, “``dojox/app/controllers/Transition``” and “``dojox/app/controllers/Layout``” are automatically mixed into the application you don’t have the explicitly include them. If you don't want to include them you have to set the ``noAutoLoadController`` parameter to ``false`` in the config.
+Array of AMD modules identifiers. Controllers for the application. All the controllers listed here will be loaded during application startup to respond to application events and controller the application logic. In the previous release the “``dojox/app/controllers/Load``”, “``dojox/app/controllers/Transition``” and “``dojox/app/controllers/Layout``” were automatically mixed into the application, that is no longer the case, with 1.9 you must have them listed to include them.
 
 .. js ::
 
   "controllers": [
-    "dojox/app/controllers/History",
-    "mypackage/custom/appController"
-  ]
+    "dojox/app/controllers/Load",
+    "dojox/app/controllers/Transition",
+    "dojox/app/controllers/Layout"
+  ],
+
 
 They are automatically added to the list of dependencies and as such do not need to be listed in the dependencies property.
 
 stores
 ------
 
-Object. Dojo stores which are used by ``dojox/app`` to setup data models. A store item is an object with a a type and a params property. The type property is the AMD module identifier for the store class to be instantiated. The content of the params property is passed to the store class constructor to build an instance.
+Object. Dojo stores which are used by ``dojox/app`` to setup data models. A store item is an object with a a type and a params property. The type property is the AMD module identifier for the store class to be instantiated. The content of the params property is passed to the store class constructor to build an instance.  Setting "observable": true on a store will have the store wrapped in a dojo/store/Observable, but in order to use dojo/store/Observable it must be included in the dependencies section.
 
 .. js ::
 
   "stores": {
     "store1":{
       "type": "dojo/store/Memory",
+      "observable": true,
       "params": { // parameters used to initialize the data store
         "data": "modelApp.names"
       }
     },
-    "store1":{
+    "store2":{
       "type": "dojo/store/JsonRest",
       "params": {
         "data": "modelApp.repeatData"
@@ -362,21 +390,31 @@ All model modules that are used must also be explicitly listed in the dependenci
 defaultView
 -----------
 
-String. The name of the view to load when the application is initialized.
+String. The name of the view (or views) to load when the application is initialized.  Multiple views can be included in the DefaultView in the config, this allows multiple views to be displayed with different constraints (or regions) at the same time. It is also now possible to transition views in regions other than the center. To specify multiple views, the view names would listed separated by a "+", for example: "view1+view2" or "view1,subviewA+view2".
 
 .. js ::
 
-  "defaultView": "home"
+  "defaultView": "header+navigation+TestInfo"
 
 
 defaultTransition
 -----------------
 
-String. The default animation type for the view transition.
+String. The default animation type for the view transition, the defaultTransition is only used if transition is not set in the config and it is not set or defaulted on the transitionEvent 
 
 .. js ::
 
   "defaultTransition": "slide"
+
+
+transition
+-----------------
+
+String. The transition animation type to use for the view transition. if a transition is set on a view or parent it will override the transition set on the transitionEvent or the defaultTransition in the config.
+
+.. js ::
+
+  "transition": "slide"
 
 
 views
