@@ -417,6 +417,44 @@ String. The transition animation type to use for the view transition. if a trans
   "transition": "slide"
 
 
+has
+-----------------
+
+Object. The has section is used to merge sections of config from the has section into the final config based upon has tests.  The has sections will include a string which is used as a has test, if the has test for the string is true the section below that string will be merged into the config at the same level as the has section.  A "!" can be used to indicate that a section should be merged if the has test is false.  If the has section to be merged contains a property which already exists at that level of the config, the value from the has section will replace the value in the config, if the has section contains an array which also exists in the config at the same level as the has section the items from the array in the has section will be added to the array in the config.  As an example:
+
+.. js ::
+
+  //if the app had code like this:
+    require(["dojo/text!"+configurationFile], function(configJson){
+        has.add("phone", !isTablet);
+        has.add("ie9orLess", has("ie") && (has("ie") <= 9));
+        var config = json.fromJson(configJson);
+        Application(config);
+    });
+  
+  //the config could have a has section like this:
+    "has" : {
+        "phone" : {
+            "defaultView": "configuration",
+            "isTablet" : false
+        },
+        "!phone" : {
+            "defaultView": "configuration+TestInfo",
+            "isTablet" : true
+        },
+        "ie9orLess" : {
+            "controllers": [
+                "dojox/app/controllers/HistoryHash"
+            ]
+        },
+        "!ie9orLess" : {
+            "controllers": [
+                "dojox/app/controllers/History"
+            ]
+        }
+    },
+
+
 views
 -----
 
