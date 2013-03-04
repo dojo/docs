@@ -275,6 +275,32 @@ dojox/app
 
 *Features*
 
+   * dojox/app now provides has test support for the config file, so there is no longer a need for multiple configs for an app.  In the example below "phone" and "ie9orLess" would be set with has.add("phone", !isTablet); and has.add("ie9orLess", has("ie") && (has("ie") <= 9)); and dojox/app/main would process the has sections and merge the appropriate sections into the config.  Properties set on the config at the same level as the has will be replaced by the value set in the has section, and items in an array will be added to the array in the same section of the config as the has section. 
+
+.. js ::
+
+	"has" : {
+		"phone" : {
+			"defaultView": "configuration",
+			"isTablet" : false
+		},
+		"!phone" : {
+			"defaultView": "configuration+TestInfo",
+			"isTablet" : true
+		},
+		"ie9orLess" : {
+			"controllers": [
+				"dojox/app/controllers/HistoryHash"
+			]
+		},
+		"!ie9orLess" : {
+			"controllers": [
+				"dojox/app/controllers/History"
+			]
+		}
+	},	
+
+
    * dojox/app now provides a build system extension that allows you to easily build your application from the config file.
    * One can now use the `type` property for a view in the config file to specify alternate view class extending dojox/view/ViewBase.
    * Configuration of views now accept a `nls` property to specify an AMD internationalization root module for a view.
