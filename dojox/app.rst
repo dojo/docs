@@ -420,7 +420,7 @@ String. The transition animation type to use for the view transition. if a trans
 has
 -----------------
 
-Object. The has section is used to merge sections of config from the has section into the final config based upon has tests.  The has sections will include a string which is used as a has test, if the has test for the string is true the section below that string will be merged into the config at the same level as the has section.  A "!" can be used to indicate that a section should be merged if the has test is false.  If the has section to be merged contains a property which already exists at that level of the config, the value from the has section will replace the value in the config, if the has section contains an array which also exists in the config at the same level as the has section the items from the array in the has section will be added to the array in the config.  As an example:
+Object. The has sections are used to merge sections of config from the has sections into the final config based upon has tests.  The has sections will include a string which is used as a has test, if the has test for the string is true the section below that string will be merged into the config at the same level as the has section.  A "!" can be used to indicate that a section should be merged if the has test is false.  If the has section to be merged contains a property which already exists at that level of the config, the value from the has section will replace the value in the config, if the has section contains an array which also exists in the config at the same level as the has section the items from the array in the has section will be added to the array in the config.  As an example:
 
 .. js ::
 
