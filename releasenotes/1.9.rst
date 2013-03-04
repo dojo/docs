@@ -275,7 +275,7 @@ dojox/app
 
 *Features*
 
-   * dojox/app now provides has test support for the config file, so there is no longer a need for multiple configs for an app.  In the example below "phone" and "ie9orLess" would be set with has.add("phone", !isTablet); and has.add("ie9orLess", has("ie") && (has("ie") <= 9)); and dojox/app/main would process the has sections and merge the appropriate sections into the config.  Properties set on the config at the same level as the has will be replaced by the value set in the has section, and items in an array will be added to the array in the same section of the config as the has section. 
+   * dojox/app now provides has test support for the config file, so there is no longer a need for multiple configs for an app.  In the example below "phone" and "ie9orLess" would be set with has.add("phone", !isTablet); and has.add("ie9orLess", has("ie") && (has("ie") <= 9)); and dojox/app/main would process the has sections and merge the appropriate sections into the config.  Properties set on the config at the same level as the has will be replaced by the value set in the has section, and items in an array will be added to config array with the same name and at the same level as the has section. 
 
 .. js ::
 
