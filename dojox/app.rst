@@ -150,7 +150,7 @@ Once started the corresponding application looks like the following:
 
 .. image :: ./app/AppExample.png
 
-See the todoApp example in Dojo demos installation directory for the full application, or you can find it on github `here <https://github.com/cjolif/dojo-todo-app>`.
+See the todoApp example in Dojo demos installation directory for the full application, or you can find it on github `here <https://github.com/cjolif/dojo-todo-app/>`_
 
 Building an Application
 =======================
