@@ -406,7 +406,7 @@ String. The default animation type for the view transition, the defaultTransitio
 transition
 -----------------
 
-String. The transition animation type to use for the view transition. if a transition is set on a view or parent it will override the transition set on the transitionEvent or the defaultTransition in the config.
+String. The transition animation type to use for the view transition. If a transition is set on a view or parent it will override the transition set on the transitionEvent or the defaultTransition in the config.
 
 .. js ::
 
@@ -457,11 +457,11 @@ views
 -----
 
 Object. The child views of an application or of a view. Dependencies may be defined on views for optimization and organization purposes. Models might also be defined on views if they are view-specific. Finally a view item as five additional properties:
-   * template for defining the view rendering for views of type ``dojox/app/View``
-   * controller to provide an AMD module to be mixed into the view to control it. By default if no controller module is specified for a view it is looked up automatically with the same name and folder as the template. If you don’t want a controller module at all you should specify the "none" value.
-   * transition for optional view-specific transitions
-   * nls for optionally defining an internationalisation AMD root module for the view of type ``dojox/app/View``. Per Dojo loader specifications the path to the module must contain "/nls/". Once done the view template can use the ${nls.nlskey} notation instead of english text to automatically use the text translated in the right language.
-   * type a reference to an AMD module defining an alternate view type extending ``dojox/app/ViewBase``.
+   * "template" for defining the view rendering for views of type ``dojox/app/View``
+   * "controller" to provide an AMD module to be mixed into the view to control it. By default if no controller module is specified for a view it is looked up automatically with the same name and folder as the template. If you don’t want a controller module at all you should specify the "none" value.
+   * "transition" for optional view-specific transitions
+   * "nls" for optionally defining an internationalisation AMD root module for the view of type ``dojox/app/View``. Per Dojo loader specifications the path to the module must contain "/nls/". Once done the view template can use the ${nls.nlskey} notation instead of english text to automatically use the text translated in the right language.
+   * "type" a reference to an AMD module defining an alternate view type extending ``dojox/app/ViewBase``.
 
 AMD modules identifiers starting with “.” will be resolved relative to the application root. All other modules identifiers will be resolved according to the Dojo AMD loader rules and in particular with respect to its configuration provided as part of the loaderConfig attribute.
 
