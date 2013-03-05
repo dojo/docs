@@ -95,13 +95,9 @@ Here is an excerpt of a typical configuration file:
 		"defaultView": "items,ViewListTodoItemsByPriority",
 
 		"has" : {
-			"phone" : {
-				"isTablet" : false
-			},
 			"!phone" : {
 				"template": "todoApp/tablet/ViewTodoLists.html",
-				"definition": "todoApp/tablet/ViewTodoLists",
-				"isTablet" : true
+				"controller": "todoApp/tablet/ViewTodoLists"
 			},
 			"ie9orLess" : {
 				"controllers": [
@@ -120,7 +116,7 @@ Here is an excerpt of a typical configuration file:
 			"configuration": {
 				"defaultView": "SelectTodoList",
 				"defaultTransition": "slide",
-				"definition": "none",
+				"controller": "none",
 
 				"views": {
 					"SelectTodoList": {
@@ -135,7 +131,7 @@ Here is an excerpt of a typical configuration file:
 
 					"EditTodoList": {
 						"template": "todoApp/configuration/EditTodoList.html",
-						"definition": "todoApp/configuration/EditTodoList.js",
+						"controller": "todoApp/configuration/EditTodoList.js",
 						"nls": "todoApp/nls/EditTodoList"
 					}
 				}
@@ -206,12 +202,12 @@ You will then need to reference that profile as well as your configuration file 
 By default the extension uses the first layer in the profile (here "myApp/myApp") to bundle all the modules for the
 application. You can specify an alternate layer you want to target by passing -appConfigLayer "layer/name" on the command line.
 
-Alternatively, you can make sure a layer per-view is built instead of a single layer for the entire application by having the `multipleAppConfigLayers` property set to true in your profile. This is useful if you have a lot of views that won't get navigated to in a typical usage of your application. In that case you might not want to load everything upfront. In this case the definition file of each view will be used as the layer for the view.
+Alternatively, you can make sure a layer per-view is built instead of a single layer for the entire application by having the `multipleAppConfigLayers` property set to true in your profile. This is useful if you have a lot of views that won't get navigated to in a typical usage of your application. In that case you might not want to load everything upfront. In this case the controller file of each view will be used as the layer for the view.
 
 **Limitation**
 
 This extension does not support the "./" shortcut notation to reference the modules in the config file and default
-definition file. You have to explicitly list your definition file and use absolute module paths. You can very easily
+controller file. You have to explicitly list your controller file and use absolute module paths. You can very easily
 do that by creating an "myApp" module that you should instead of "." to reference your modules.
 
 
@@ -281,7 +277,7 @@ and should return a promise.
 dependencies
 ------------
 
-Array of AMD modules identifiers. When defined at the top level dependencies of the ``dojox/app`` application. When defined at view level, dependencies for the view.
+Array of AMD modules identifiers. When defined at the top level dependencies of the ``dojox/app`` application, these app level dependencies could also be added to the define for the app or one of the "modules" which are mixed into the app. When defined at view level, dependencies for the view.
 
 .. js ::
 
@@ -425,22 +421,24 @@ Object. The has sections are used to merge sections of config from the has secti
 .. js ::
 
   //if the app had code like this:
+  
     require(["dojo/text!"+configurationFile], function(configJson){
-        has.add("phone", !isTablet);
-        has.add("ie9orLess", has("ie") && (has("ie") <= 9));
         var config = json.fromJson(configJson);
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if(width <= 600){
+            has.add("phone", true);
+        }
+        has.add("ie9orLess", has("ie") && (has("ie") <= 9));
         Application(config);
     });
   
   //the config could have a has section like this:
     "has" : {
         "phone" : {
-            "defaultView": "configuration",
-            "isTablet" : false
+            "defaultView": "configuration"
         },
         "!phone" : {
-            "defaultView": "configuration+TestInfo",
-            "isTablet" : true
+            "defaultView": "configuration+TestInfo"
         },
         "ie9orLess" : {
             "controllers": [
@@ -460,7 +458,7 @@ views
 
 Object. The child views of an application or of a view. Dependencies may be defined on views for optimization and organization purposes. Models might also be defined on views if they are view-specific. Finally a view item as five additional properties:
    * template for defining the view rendering for views of type ``dojox/app/View``
-   * definition to provide an AMD module to be mixed into the view to control it. By default if no definition module is specified for a view it is looked up automatically in "./views/<viewId>.js". If you don’t want a definition module at all you should specify the "none" value.
+   * controller to provide an AMD module to be mixed into the view to control it. By default if no controller module is specified for a view it is looked up automatically with the same name and folder as the template. If you don’t want a controller module at all you should specify the "none" value.
    * transition for optional view-specific transitions
    * nls for optionally defining an internationalisation AMD root module for the view of type ``dojox/app/View``. Per Dojo loader specifications the path to the module must contain "/nls/". Once done the view template can use the ${nls.nlskey} notation instead of english text to automatically use the text translated in the right language.
    * type a reference to an AMD module defining an alternate view type extending ``dojox/app/ViewBase``.
@@ -481,7 +479,7 @@ AMD modules identifiers starting with “.” will be resolved relative to the a
         "dojox/mobile/EdgeToEdgeCategory"
       ],
       "template": "./views/simple/home.html"
-      "definition": "./views/simple/home.js "
+      "controller": "./views/simple/home.js "
     },
 
     // simple composite view which loads all views and shows the default
@@ -495,7 +493,7 @@ AMD modules identifiers starting with “.” will be resolved relative to the a
       "views": {
         "main":{
           "template": "./views/simple/main.html"
-          "definition": "none"
+          "controller": "none"
           "nls": "./nls/simple/main"
         },
         "second":{
@@ -544,7 +542,7 @@ The main dojox/app modules
 
 * ``dojox/app/controllers/Layout`` a controller that performs nested view layout
 
-* ``dojox/app/controllers/Load`` a controller that loads the view templates and view definition modules
+* ``dojox/app/controllers/Load`` a controller that loads the view templates and view controller modules
 
 * ``dojox/app/controllers/History`` a controller that maintains application history using HTM5 history API. This will not work on platforms that don’t support it like IE, Android 3 & 4, iOS 4.
 
