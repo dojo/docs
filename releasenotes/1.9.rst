@@ -289,11 +289,24 @@ dojox/app
    * A new config setting for "transition" has been added to set the transition animation type to use for the view transition. If a "transition" is set on a view or parent it will override the transition set on the transitionEvent or the defaultTransition in the config.
    * Observable support for stores via the config has been added. Setting "observable": true on a store will have the store wrapped in a dojo/store/Observable.
    * dojox/app is changing it's recommendation for the file structure used for an app.  The recommendation now is to place the “controller” (.js files) and the “template” (.html files) in the same folders for related parts of the app. This makes it much easier to reuse code between apps.
-   * dojox/app has also changed the default location used for the “controller” if it is not specified for a view in the config.  Now dojox/app will attempt to find the “controller” with the same name and folder as the “template” file.
-   * dojox/app now provides "has" test support for the config file, so there is no longer a need for multiple configs for an app.  In the example below "phone" and "ie9orLess" would be set with has.add("phone", !isTablet); and has.add("ie9orLess", has("ie") && (has("ie") <= 9)); and dojox/app/main would process the has sections and merge the appropriate sections into the config.  Properties set on the config at the same level as the has will be replaced by the value set in the has section, and items in an array will be added to config array with the same name and at the same level as the has section. 
+   * dojox/app has also changed the default location used for the “controller” when it is not specified for a view in the config.  dojox/app will attempt to find the “controller” using the same name and folder as the “template” file.
+   * dojox/app now provides "has" test support for the config file, so there is no longer a need for multiple configs for an app.  In the example below dojox/app/main would process the has sections and merge the appropriate sections into the config.  Properties set on the config at the same level as the has will be replaced by the value set in the has section, and items in an array will be added to config array with the same name and at the same level as the has section. 
 
 .. js ::
 
+	// The app would have code like this:
+	require(["dojo/text!"+configurationFile], function(configJson){
+		var config = json.fromJson(configJson);
+		var width = window.innerWidth || document.documentElement.clientWidth;
+		if(width <= 600){
+			has.add("phone", true);
+		}
+		has.add("ie9orLess", has("ie") && (has("ie") <= 9));
+		Application(config);
+	});
+
+
+	// The config would include something like this:
 	"has" : {
 		"phone" : {
 			"defaultView": "configuration",
