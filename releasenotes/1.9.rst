@@ -309,12 +309,10 @@ dojox/app
 	// The config would include something like this:
 	"has" : {
 		"phone" : {
-			"defaultView": "configuration",
-			"isTablet" : false
+			"defaultView": "configuration"
 		},
 		"!phone" : {
-			"defaultView": "configuration+TestInfo",
-			"isTablet" : true
+			"defaultView": "configuration+TestInfo"
 		},
 		"ie9orLess" : {
 			"controllers": [
