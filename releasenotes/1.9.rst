@@ -318,6 +318,7 @@ dojox/app
 *Incompatibilities*
 
    * data-app-region has been changed to data-app-constraint.
+   * The property name used in the config for the view's .js file has been changed from “definition” to “controller”, config files will have to be updated to use "controller" instead of "definition" in the view.
    * Since "+" and "-" can now be used to indicate multiple views on a transition, those characters are no longer allowed in a view name.
    * The events used in the Layout controllers have changed from layout -> app-initLayout and  select -> app-layoutView, and the other events used by dojox/app have also been changed to have an app- prefix for example, load -> app-load, init -> app-init, domNode -> app-domNode, and transition -> app-transition.
    * zIndex is no longer automatically set on views depending upon whether they are in the center or not.  In the past the zIndex was automatically set higher on the left pane of a tablet view to avoid having the transition for the center show over that left pane.
