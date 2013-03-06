@@ -466,6 +466,11 @@ dijit/Editor
 ------------
 If you are creating Editor widgets programatically, be sure to call startup() on them.
 
+dijit/Tree
+----------
+Tree::persist was changed to false by default.  Also, persisting a Tree no longer saves/restores which TreeNodes
+are selected, but just which TreeNodes are open.
+
 dojox/charting migration
 ------------------------
 
