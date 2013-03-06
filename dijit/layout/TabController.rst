@@ -4,58 +4,8 @@
 dijit.layout.TabController
 ==========================
 
-:Authors: TODO Author 
-:since: 1.?
+This is a supporting class for tabs in a :ref:`dijit/layout/TabContainer <dijit/layout/TabContainer>`
+without the features for scrolling or showing the Menu listing the tabs.
 
-.. contents ::
-    :depth: 2
-
-Introduction
-============
-
-TODO: introduce the module 
-
-Usage
-=====
-
-.. js ::
-
-  // Dojo 1.7 (AMD)
-
-.. js ::
-
-  // Dojo < 1.7
-
-Examples
-========
-
-Programmatic example
---------------------
-
-.. code-example ::
-
-  TODO - Here is a programmatic example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
-
-Declarative example
--------------------
-
-.. code-example ::
-
-  TODO - Here is a declarative example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
-
-See also
-========
+It's used internally by TabContainers when the tabs are displayed on the left or right rather than the top or bottom,
+and can also be used by explicitly specifying the TabContainer.controllerWidget property to the TabContainer constructor.
