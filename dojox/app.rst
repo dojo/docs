@@ -96,8 +96,8 @@ Here is an excerpt of a typical configuration file:
 
 		"has" : {
 			"!phone" : {
-				"template": "todoApp/tablet/ViewTodoLists.html",
-				"controller": "todoApp/tablet/ViewTodoLists"
+				"controller": "todoApp/tablet/ViewTodoLists.js",
+				"template": "todoApp/tablet/ViewTodoLists.html"
 			},
 			"ie9orLess" : {
 				"controllers": [
@@ -116,22 +116,23 @@ Here is an excerpt of a typical configuration file:
 			"configuration": {
 				"defaultView": "SelectTodoList",
 				"defaultTransition": "slide",
-				"controller": "none",
 
 				"views": {
 					"SelectTodoList": {
+						"controller": "todoApp/configuration/SelectTodoList.js",
 						"template": "todoApp/configuration/SelectTodoList.html",
 						"nls": "todoApp/nls/SelectTodoList"
 					},
 
 					"ModifyTodoLists": {
+						"controller": "todoApp/configuration/ModifyTodoLists.js",
 						"template": "todoApp/configuration/ModifyTodoLists.html",
 						"nls": "todoApp/nls/ModifyTodoList"
 					},
 
 					"EditTodoList": {
-						"template": "todoApp/configuration/EditTodoList.html",
 						"controller": "todoApp/configuration/EditTodoList.js",
+						"template": "todoApp/configuration/EditTodoList.html",
 						"nls": "todoApp/nls/EditTodoList"
 					}
 				}
@@ -458,7 +459,7 @@ views
 
 Object. The child views of an application or of a view. Dependencies may be defined on views for optimization and organization purposes. Models might also be defined on views if they are view-specific. Finally a view item as five additional properties:
    * "template" for defining the view rendering for views of type ``dojox/app/View``
-   * "controller" to provide an AMD module to be mixed into the view to control it. By default if no controller module is specified for a view it is looked up automatically with the same name and folder as the template. If you don’t want a controller module at all you should specify the "none" value.
+   * "controller" to provide an AMD module to be mixed into the view to control it. The controller must be specified for a view in order to be used, in 1.9 a default controller will not be loaded.  If the view does not have a controller module to load do not specify the controller, as of 1.9 setting the controller to "none" is not supported.
    * "transition" for optional view-specific transitions
    * "nls" for optionally defining an internationalisation AMD root module for the view of type ``dojox/app/View``. Per Dojo loader specifications the path to the module must contain "/nls/". Once done the view template can use the ${nls.nlskey} notation instead of english text to automatically use the text translated in the right language.
    * "type" a reference to an AMD module defining an alternate view type extending ``dojox/app/ViewBase``.
@@ -478,29 +479,31 @@ AMD modules identifiers starting with “.” will be resolved relative to the a
         "dojox/mobile/ListItem",
         "dojox/mobile/EdgeToEdgeCategory"
       ],
+      "controller": "./views/simple/home.js ",
       "template": "./views/simple/home.html"
-      "controller": "./views/simple/home.js "
     },
 
     // simple composite view which loads all views and shows the default
     "main":{
       // all views in the main view will be bound to the user model
       "models": [],
+      "controller": "simple.js",
       "template": "simple.html",
       "defaultView": "main",
       "defaultTransition": "slide",
       // the child views available to this view
       "views": {
         "main":{
-          "template": "./views/simple/main.html"
-          "controller": "none"
+          "template": "./views/simple/main.html",
           "nls": "./nls/simple/main"
         },
         "second":{
+          "controller": "./views/simple/second.js",
           "template": "./views/simple/second.html"
         },
         "third":{
-          "template": "./views/simple/third.html"
+          "controller": "./views/simple/third.js",
+          "template": "./views/simple/third.html",
           "type": "mypackage/MyDtlView"
         }
       },
@@ -521,6 +524,7 @@ AMD modules identifiers starting with “.” will be resolved relative to the a
           }
         }
       },
+       "controller": "./views/repeat.js",
        "template": "./views/repeat.html",
       "dependencies":["dojox/mobile/TextBox"]
     }
