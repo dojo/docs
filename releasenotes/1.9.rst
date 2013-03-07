@@ -289,7 +289,7 @@ dojox/app
    * A new config setting for "transition" has been added to set the transition animation type to use for the view transition. If a "transition" is set on a view or parent it will override the transition set on the transitionEvent or the defaultTransition in the config.
    * Observable support for stores via the config has been added. Setting "observable": true on a store will have the store wrapped in a dojo/store/Observable.
    * dojox/app is changing it's recommendation for the file structure used for an app.  The recommendation now is to place the “controller” (.js files) and the “template” (.html files) in the same folders for related parts of the app. This makes it much easier to reuse code between apps.
-   * dojox/app has also changed the default location used for the “controller” when it is not specified for a view in the config.  dojox/app will attempt to find the “controller” using the same name and folder as the “template” file.
+   * It is no longer necessary to set a view controller to "none" when the view does not use a controller, now when view does not have a controller set no controller will be loaded.
    * dojox/app now provides "has" test support for the config file, so there is no longer a need for multiple configs for an app.  In the example below dojox/app/main would process the has sections and merge the appropriate sections into the config.  Properties set on the config at the same level as the has will be replaced by the value set in the has section, and items in an array will be added to config array with the same name and at the same level as the has section. 
 
 .. js ::
@@ -332,6 +332,7 @@ dojox/app
 
    * data-app-region has been changed to data-app-constraint.
    * The property name used in the config for the view's .js file has been changed from “definition” to “controller”, config files will have to be updated to use "controller" instead of "definition" in the view.
+   * The option to be able to load a default controller for a view (when the controller is not set) has been removed, the controller must be specified for a view in order to be loaded. If the view does not have a controller module to load, it should not set a controller, setting the controller to "none" is no longer supported.
    * Since "+" and "-" can now be used to indicate multiple views on a transition, those characters are no longer allowed in a view name.
    * The events used in the Layout controllers have changed from layout -> app-initLayout and  select -> app-layoutView, and the other events used by dojox/app have also been changed to have an app- prefix for example, load -> app-load, init -> app-init, domNode -> app-domNode, and transition -> app-transition.
    * zIndex is no longer automatically set on views depending upon whether they are in the center or not.  In the past the zIndex was automatically set higher on the left pane of a tablet view to avoid having the transition for the center show over that left pane.
