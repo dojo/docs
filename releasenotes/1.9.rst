@@ -289,7 +289,7 @@ dojox/app
    * A new config setting for "transition" has been added to set the transition animation type to use for the view transition. If a "transition" is set on a view or parent it will override the transition set on the transitionEvent or the defaultTransition in the config.
    * Observable support for stores via the config has been added. Setting "observable": true on a store will have the store wrapped in a dojo/store/Observable.
    * dojox/app is changing it's recommendation for the file structure used for an app.  The recommendation now is to place the “controller” (.js files) and the “template” (.html files) in the same folders for related parts of the app. This makes it much easier to reuse code between apps.
-   * It is no longer necessary to set a view controller to "none" when the view does not use a controller, now when view does not have a controller set no controller will be loaded.
+   * It is no longer necessary to set a view controller to "none" when the view does not use a controller, now when view does not set a controller in the config, no controller will be loaded for the view.
    * dojox/app now provides "has" test support for the config file, so there is no longer a need for multiple configs for an app.  In the example below dojox/app/main would process the has sections and merge the appropriate sections into the config.  Properties set on the config at the same level as the has will be replaced by the value set in the has section, and items in an array will be added to config array with the same name and at the same level as the has section. 
 
 .. js ::
