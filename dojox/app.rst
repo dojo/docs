@@ -459,7 +459,7 @@ views
 
 Object. The child views of an application or of a view. Dependencies may be defined on views for optimization and organization purposes. Models might also be defined on views if they are view-specific. Finally a view item as five additional properties:
    * "template" for defining the view rendering for views of type ``dojox/app/View``
-   * "controller" to provide an AMD module to be mixed into the view to control it. The controller must be specified for a view in order to be used, in 1.9 a default controller will not be loaded.  If the view does not have a controller module to load do not specify the controller, as of 1.9 setting the controller to "none" is not supported.
+   * "controller" to provide an AMD module to be mixed into the view as the view controller. In 1.9 the option to be able to load a default controller has been removed, the controller must be specified for a view in order to be loaded.  If the view does not have a controller module to load, it should not set a controller, as of 1.9 setting the controller to "none" is no longer supported.
    * "transition" for optional view-specific transitions
    * "nls" for optionally defining an internationalisation AMD root module for the view of type ``dojox/app/View``. Per Dojo loader specifications the path to the module must contain "/nls/". Once done the view template can use the ${nls.nlskey} notation instead of english text to automatically use the text translated in the right language.
    * "type" a reference to an AMD module defining an alternate view type extending ``dojox/app/ViewBase``.
