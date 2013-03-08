@@ -45,7 +45,7 @@ Inherited from dojox/mobile/_ItemBase
 |              |          |         |name of a DOM button. If icon is not specified, the iconBase parameter of the parent widget is used.       |
 |              |          |         |Default icon size for List Items is 29px wide by 29px height.                                              |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|iconPos       |String    |""       |The position of an aggregated icon. IconPos is comma separated values like top, left, width, height           |
+|iconPos       |String    |""       |The position of an aggregated icon. IconPos is comma separated values like top, left, width, height        |
 |              |          |         |(ex. "0,0,29,29"). If iconPos is not specified, the iconPos parameter of the parent widget is used.        |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |moveTo        |String    |""       |The id of the transition destination view which resides in the current page. If the value has a hash sign  |
