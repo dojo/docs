@@ -1,7 +1,7 @@
 .. _dojox/mobile/ListItem:
 
 =====================
-dojox.mobile.ListItem
+dojox/mobile/ListItem
 =====================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,7 +14,10 @@ dojox.mobile.ListItem
 Introduction
 ============
 
-ListItem represents an item of either :ref:`dojox.mobile.RoundRectList <dojox/mobile/RoundRectList>` or :ref:`dojox.mobile.EdgeToEdgeList <dojox/mobile/EdgeToEdgeList>`. It can have icons and/or labels as shown below. There are three ways to move to a different view, moveTo, href, and url. You can choose only one of them.
+ListItem represents an item of either :ref:`dojox/mobile/RoundRectList <dojox/mobile/RoundRectList>` or 
+:ref:`dojox/mobile/EdgeToEdgeList <dojox/mobile/EdgeToEdgeList>`. It can have icons and/or labels as 
+shown below. There are three ways to move to a different view, using the properties 'moveTo', 'href', 
+or 'url'. You can choose only one of them.
 
 .. image :: ListItem.png
 
@@ -23,14 +26,14 @@ ListItem represents an item of either :ref:`dojox.mobile.RoundRectList <dojox/mo
 Constructor Parameters
 ======================
 
-Inherited from dojox.mobile._ItemBase
+Inherited from dojox/mobile/_ItemBase
 -------------------------------------
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default  |Description                                                                                                |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|transition    |String    |"slide"  |A type of animated transition effect. You can choose from the standard transition types, "slide", "fade",  |
-|              |          |         |"flip", or from the extended transition types, "cover", "coverv", "dissolve", "reveal", "revealv",         |
+|transition    |String    |"slide"  |A type of animated transition effect. You can choose from the standard transition types: "slide", "fade",  |
+|              |          |         |"flip", or from the extended transition types: "cover", "coverv", "dissolve", "reveal", "revealv",         |
 |              |          |         |"scaleIn", "scaleOut", "slidev", "swirl", "zoomIn", "zoomOut", "cube", and "swap". If "none" is specified, |
 |              |          |         |transition occurs immediately without animation.                                                           |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
@@ -42,11 +45,11 @@ Inherited from dojox.mobile._ItemBase
 |              |          |         |name of a DOM button. If icon is not specified, the iconBase parameter of the parent widget is used.       |
 |              |          |         |Default icon size for List Items is 29px wide by 29px height.                                              |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|iconPos       |String    |""       |The position of an aggregated icon. IconPos is comma separated values like top,left,width,height           |
+|iconPos       |String    |""       |The position of an aggregated icon. IconPos is comma separated values like top, left, width, height           |
 |              |          |         |(ex. "0,0,29,29"). If iconPos is not specified, the iconPos parameter of the parent widget is used.        |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |moveTo        |String    |""       |The id of the transition destination view which resides in the current page. If the value has a hash sign  |
-|              |          |         |('#') before the id (e.g. #view1) and the dojo.hash module (=the dojox.mobile.bookmarkable module since    |
+|              |          |         |('#') before the id (e.g. #view1) and the dojo.hash module (=the dojox/mobile/bookmarkable module since    |
 |              |          |         |V1.8) is loaded by the user application, the view transition updates the hash in the browser URL so that   |
 |              |          |         |the user can bookmark the destination view. In this case, the user can also use the browser's back/forward |
 |              |          |         |button to navigate through the views in the browser history. If null, transitions to a blank view. If '#', |
@@ -138,7 +141,10 @@ Examples
 Declarative example
 -------------------
 
-In this example, no view transition is specified, but if you specify, for example, moveTo="view1", an arrow icon is displayed at the position of the rightIcon even if rightIcon is specified. In this case, if you want to change the arrow icon to another, you can use the arrowClass property instead of rightIcon.
+In this example, no view transition is specified, but if you specify, for example, 
+moveTo="view1", an arrow icon is displayed at the position of the rightIcon even if rightIcon 
+is specified. In this case, if you want to change the arrow icon to another, you can use the 
+arrowClass property instead of rightIcon.
 
 .. html ::
 
@@ -146,8 +152,8 @@ In this example, no view transition is specified, but if you specify, for exampl
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.RoundRectList">
-    <li data-dojo-type="dojox.mobile.ListItem"
+  <ul data-dojo-type="dojox/mobile/RoundRectList">
+    <li data-dojo-type="dojox/mobile/ListItem"
         data-dojo-props='icon:"mblDomButtonRedCircleMinus",
                          label:"Label",
                          rightText:"rightText",
@@ -161,25 +167,28 @@ In this example, no view transition is specified, but if you specify, for exampl
 View content examples
 ---------------------
 
-A new view can be created from external html fragment or JSON data specified with the url property. Below are examples of such view content. The first one is an html fragment, and the second one is equivalent JSON. They make the same view.
+A new view can be created from an external HTML fragment or from JSON data specified 
+with the url property. Below are examples of such view content. The first one is an 
+HTML fragment, and the second one is the equivalent JSON. They produce the same view.
 
-Note that the JSON format cannot have duplicate keys at the same level, while the html format has no such limitation.
+Note that the JSON format cannot have duplicate keys at the same level, while the HTML 
+format has no such limitation.
 
 html fragment:
 
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.View">
-      <h1 data-dojo-type="dojox.mobile.Heading"
+  <div data-dojo-type="dojox/mobile/View">
+      <h1 data-dojo-type="dojox/mobile/Heading"
           data-dojo-props='back:"Home", moveTo:"foo"'>view1.html</h1>
-      <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
-      <li data-dojo-type="dojox.mobile.ListItem">
+      <ul data-dojo-type="dojox/mobile/EdgeToEdgeList">
+      <li data-dojo-type="dojox/mobile/ListItem">
           Jack Coleman
       </li>
-      <li data-dojo-type="dojox.mobile.ListItem">
+      <li data-dojo-type="dojox/mobile/ListItem">
           James Evans
       </li>
-      <li data-dojo-type="dojox.mobile.ListItem">
+      <li data-dojo-type="dojox/mobile/ListItem">
           Jason Griffin
       </li>
       </ul>
@@ -190,14 +199,14 @@ JSON data:
 .. js ::
 
   {
-    "dojox.mobile.View": {
-      "dojox.mobile.Heading": {
+    "dojox/mobile/View": {
+      "dojox/mobile/Heading": {
         "@back": "Home",
         "@moveTo": "foo",
         "@label": "view1.json"
       },
-      "dojox.mobile.EdgeToEdgeList": {
-        "dojox.mobile.ListItem": [{
+      "dojox/mobile/EdgeToEdgeList": {
+        "dojox/mobile/ListItem": [{
           "@label": "Jack Coleman"
         }, {
           "@label": "James Evans"
@@ -211,18 +220,19 @@ JSON data:
 Variable height example
 -----------------------
 
-In this example, the first ListItem has 'variableHeight' parameter and the height of the item is adjusted according to its content.
+In this example, the first ListItem has the 'variableHeight' parameter and the height of the item is 
+adjusted according to its content.
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.RoundRectList">
-    <li data-dojo-type="dojox.mobile.ListItem"
+  <ul data-dojo-type="dojox/mobile/RoundRectList">
+    <li data-dojo-type="dojox/mobile/ListItem"
         data-dojo-props='icon:"images/i-icon-1.png",
                          moveTo:"#article",
                          variableHeight:true'>
       Create client-side diagrammatic interaction in Web applications with GFX
     </li>
-    <li data-dojo-type="dojox.mobile.ListItem"
+    <li data-dojo-type="dojox/mobile/ListItem"
         data-dojo-props='icon:"images/i-icon-2.png",
                          moveTo:"#article"'>
       Explores advanced topics in the new Java framework for implementing
@@ -232,43 +242,57 @@ In this example, the first ListItem has 'variableHeight' parameter and the heigh
 
 .. image :: ListItem-variable.png
 
-Layout specifying example
--------------------------
 
-In this example, a child node of each ListItem has the 'layout' attribute and such nodes are aligned as specified.
+Child alignment and preventTouch example
+----------------------------------------
+
+ListItem supports different options for the alignment of its children elements: left, right,
+or center alignment. To align a child widget of the ListItem, use its 'layout' property. 
+For children which are not widgets, set their 'data-mobile-layout' attribute (for backward
+compatibility, the attribute 'layout' is also supported but it is deprecated and will be removed 
+in a next release). 
+
+Also, ListItem allows to selectively disable the touch events for some of its children, such
+that touching these children does not trigger item's action.
+For children which are widgets, use the "preventTouch" property. For children which are 
+not widgets, set their 'data-mobile-prevent-touch' attribute (for backward compatibility, 
+the attribute 'preventTouch' is also supported but it is deprecated and will be removed 
+in a next release). 
+
+The following example illustrates the child alignment and the enabling of preventTouch 
+for both widget and non-widget children of ListItem.
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
-    <li data-dojo-type="dojox.mobile.ListItem">
-      <div layout="left">
-        <span data-dojo-type="dojox.mobile.ToolBarButton">Left</span>
+  <ul data-dojo-type="dojox/mobile/EdgeToEdgeList">
+    <li data-dojo-type="dojox/mobile/ListItem">
+      <div data-mobile-layout="left" data-mobile-prevent-touch="true">
+        <span data-dojo-type="dojox/mobile/ToolBarButton">Left</span>
       </div>
     </li>
-    <li data-dojo-type="dojox.mobile.ListItem">
-      <div layout="center">
-        <span data-dojo-type="dojox.mobile.ToolBarButton">Center</span>
-      </div>
+    <li data-dojo-type="dojox/mobile/ListItem">
+      <span data-dojo-type="dojox/mobile/ToolBarButton"
+        data-dojo-props="layout: 'center', preventTouch:'true'">Center</span>
     </li>
-    <li data-dojo-type="dojox.mobile.ListItem">
-      <div layout="right">
-        <span data-dojo-type="dojox.mobile.ToolBarButton">Right</span>
-      </div>
+    <li data-dojo-type="dojox/mobile/ListItem">
+      <span data-dojo-type="dojox/mobile/ToolBarButton"
+        data-dojo-props="layout: 'right'">Right</span>
     </li>
   </ul>
 
-  <ul data-dojo-type="dojox.mobile.RoundRectList">
-    <li data-dojo-type="dojox.mobile.ListItem">
-      <div layout="left">Left Node</div>
+  <ul data-dojo-type="dojox/mobile/RoundRectList">
+    <li data-dojo-type="dojox/mobile/ListItem">
+      <div data-mobile-layout="left">Left Node</div>
     </li>
-    <li data-dojo-type="dojox.mobile.ListItem">
-      <div layout="center">Center Node</div>
+    <li data-dojo-type="dojox/mobile/ListItem">
+      <div data-mobile-layout="center">Center Node</div>
     </li>
-    <li data-dojo-type="dojox.mobile.ListItem">
-      <div layout="right">Right Node</div>
+    <li data-dojo-type="dojox/mobile/ListItem">
+      <div data-mobile-layout="right">Right Node</div>
     </li>
   </ul>
 
 .. image :: ListItem-layout.png
 
-See also the :ref:`dojox.mobile.RoundRectList <dojox/mobile/RoundRectList>` and :ref:`dojox.mobile.EdgeToEdgeList <dojox/mobile/EdgeToEdgeList>` widgets for various examples.
+See also the :ref:`dojox/mobile/RoundRectList <dojox/mobile/RoundRectList>` and 
+:ref:`dojox/mobile/EdgeToEdgeList <dojox/mobile/EdgeToEdgeList>` widgets for various examples.

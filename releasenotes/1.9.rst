@@ -218,6 +218,19 @@ dojox/mobile
    * A subset of widgets (``Button``, ``CheckBox``, ``Heading``, ``ListItem``, ``RadioButton``, 
      ``Slider``, ``Switch``, ``ToggleButton``, and ``View``) can now be templated.
      For details, see :ref:`Templating dojox/mobile widgets <dojox/mobile/templating-mobile-widgets>`.
+   * Support for HTML5-compliant attributes has been introduced:
+      * Fixed header and footer: for headers or footers which are not widgets, the attribute 
+        ``data-mobile-fixed`` can now be used in markup. For backward compatibility, the attribute 
+        ``fixed`` is still supported but it is deprecated and will be removed in a future release.
+      * ``ListItem``: the attributes ``data-mobile-layout`` and ``data-mobile-prevent-touch`` can now 
+        be used in markup on children which are not widgets. For backward compatibility, the attributes 
+        ``layout`` and ``preventTouch`` are still supported but are deprecated and will be 
+        removed in a future release.
+      * ``Carousel``: for the lazy loading of children of type ``SwapView``, it is no longer 
+        necessary to use the non-HTML5 compliant attribute ``lazy``. ``Carousel`` now dynamically
+        extends ``SwapView`` adding to it the property ``lazy``, which can now be specified in 
+        markup using the ``data-dojo-props`` attribute. For backward compatibility, the attribute 
+        ``lazy`` is still supported but it is deprecated and will be removed in a future release.
    * Building themes: A new folder ``dojox/mobile/themes/utils`` now contains scripts and 
      documentation for building  mobile themes. The number of required ``.less`` files for a
      particular theme has been drastically reduced.
