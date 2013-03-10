@@ -84,25 +84,16 @@ Example usage:
       ...
    });
 
-dijit/_AttachMixin
-------------------
+Server side rendering
+---------------------
+There are two enhancements to dijit to make server side (pre)rendering of templates easier.
+
 :ref:`dijit/_AttachMixin <dijit/_AttachMixin>` is a new mixin to perform the data-dojo-attach-point and
 data-dojo-attach-event hookup normally done by :ref:`dijit/_TemplatedMixin <dijit/_TemplatedMixin>`.
 It's useful for custom widgets where the template is
 (always) expanded on the server, so on the client you just need to hookup the attach points and event listeners.
 
-dijit/_KeyNavMixin
-------------------
-:ref:`dijit/_KeyNavMixin <dijit/_KeyNavMixin>` is a new mixin to enable keyboard navigation between a widget's descendants.
-Navigation can be performed via arrow keys and HOME/END keys, and also a letter key search.
-:ref:`dijit/Tree <dijit/Tree>` and :ref:`dijit/form/Select <dijit/form/Select>` are examples of widgets that extend _KeyNavMixin.
-
-It's similar to :ref:`dijit/_KeyNavContainer <dijit/_KeyNavContainer>` but can be user for any widgets,
-not just subclasses of :ref:`dijit/_Container <dijit/_Container>`.
-
-dijit/_TemplatedMixin
----------------------
-:ref:`dijit/_TemplatedMixin <dijit/_TemplatedMixin>` has a new _rendered parameter to the constructor, that's useful
+Also, :ref:`dijit/_TemplatedMixin <dijit/_TemplatedMixin>` has a new _rendered parameter to the constructor, that's useful
 for when standard widgets have
 `their templates pre-expanded on the server <http://jamesthom.as/blog/2013/01/15/server-side-dijit/>`_.
 
@@ -117,6 +108,16 @@ Expected usage is to have markup like below on your main page:
 			    name="fname" type="text"
 	    /></div
     ></div>
+
+
+dijit/_KeyNavMixin
+------------------
+:ref:`dijit/_KeyNavMixin <dijit/_KeyNavMixin>` is a new mixin to enable keyboard navigation between a widget's descendants.
+Navigation can be performed via arrow keys and HOME/END keys, and also a letter key search.
+:ref:`dijit/Tree <dijit/Tree>` and :ref:`dijit/form/Select <dijit/form/Select>` are examples of widgets that extend _KeyNavMixin.
+
+It's similar to :ref:`dijit/_KeyNavContainer <dijit/_KeyNavContainer>` but can be user for any widgets,
+not just subclasses of :ref:`dijit/_Container <dijit/_Container>`.
 
 
 dijit/_WidgetsInTemplateMixin
