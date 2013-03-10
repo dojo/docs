@@ -143,6 +143,19 @@ feature.
 **Note** Because of the synchronous nature of the widget lifecycle, you still have to require in any modules used in the
 template, as the auto-require feature will not work properly with widgets.
 
+dijit/a11yclick
+---------------
+The a11yclick module was updated with new synthetic events "press" and "release" that fire for mousedown/mouseup,
+touchstart/touchend (or Microsoft equivalents), or keydown/keyup.  They only call the listener when the events will
+trigger a click.   I.E. for keyboard, it's the SPACE or ENTER key, and for mouse, it's the left mouse button.
+
+Many modules were updated to take advantage of this, including _CssStateMixin (which now show feedback while pressing
+a button via keyboard, by showing the button in its active state between keydown and keyup.
+
+Also, the allyclick module was updated to support the keyboard equivalent of mouse clicks with modifiers.
+I.E. an app can setup a listener on a11yclick.click, and regardless of whether the user does a ctrl-left-mouse-click
+or a ctrl-ENTER key, the listener will be called where evt.ctrlKey == true.
+
 dijit/BackgroundIframe
 ----------------------
 
