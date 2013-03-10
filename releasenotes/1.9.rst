@@ -59,6 +59,17 @@ The parser now supports the ability to pass a context ``require()`` when parsing
 ``options`` hash passed during parse (`#16112 <http://bugs.dojotoolkit.org/ticket/16112>`_).  This allows for the use
 of relative MIDs to be used, specifically in Widget templates.
 
+dojo/touch
+----------
+There have been many improvements to dojo/touch w.r.t. touch device behavior.   (Behavior on mouse devices remains the
+same.)   Some of the fixes are:
+
+    - works for newer devices with both touch screens and mice
+    - the dojo/touch::release event consistently fires based on the node the finger was over when it was removed from the screen, consistent with mouseup behavior
+    - support for Microsoft Surface (with MSPointer* events instead of touchstart/touchend/etc.)
+    - dojoClick property: DOMNodes with the dojoClick property will get click events instantly rather than
+      after 300ms, and won't get phantom mousedown/mouseup events 300ms after the touchend event
+
 Dijit
 =====
 
