@@ -73,6 +73,12 @@ same.)   Some of the fixes are:
 Dijit
 =====
 
+Mobile support in Dijit
+-----------------------
+The dijit code has been improved to work better on mobile.
+Dojox/mobile is still the preferred way to write mobile applications, but dijit is working better than before
+for writing hybrid applications to run on desktop and mobile.
+
 dijit and dojo/domReady!
 ------------------------
 Dijit has been upgraded to be able to work with the dojo/domReady! plugin.
