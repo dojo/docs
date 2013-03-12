@@ -38,10 +38,10 @@ Profile Knobs
 ``layerOptimize`` (default = "shrinksafe")
   * [*falsy*] Layer modules are not optimized; the ``stripConsole`` profile property, if any, is ignored.
 
-  * ["comment.keeplines"] All comments are removed fromm all layer modules; new-lines are preserved; the ``stripConsole``
+  * ["comments.keeplines"] All comments are removed fromm all layer modules; new-lines are preserved; the ``stripConsole``
     profile property, if any, is ignored.
 
-  * ["comment"] All comments are removed form all layer modules; new-lines are *not* preserved; the ``stripConsole``
+  * ["comments"] All comments are removed form all layer modules; new-lines are *not* preserved; the ``stripConsole``
     profile property, if any, is ignored.
 
   * ["shrinksafe.keeplines"] All layer modules are processed by shrinksafe; new-lines are preserved; the semantics of
@@ -50,7 +50,7 @@ Profile Knobs
   * ["shrinksafe"] All layer modules are processed by shrinksafe; new-lines are *not* preserved; the semantics of the
     ``stripConsole`` property are executed.
 
-  * ["closure.keepLines"] All layer modules are processed by the Google Closure compiler, simple-mode; new-lines are
+  * ["closure.keeplines"] All layer modules are processed by the Google Closure compiler, simple-mode; new-lines are
     preserved; the semantics of the ``stripConsole`` property are executed.
 
   * ["closure"] All layer modules are processed by the Google Closure compiler, simple-mode; new-lines are *not*
