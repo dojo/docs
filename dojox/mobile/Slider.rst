@@ -1,7 +1,7 @@
 .. _dojox/mobile/Slider:
 
 ===================
-dojox.mobile.Slider
+dojox/mobile/Slider
 ===================
 
 :Authors: Doug Hays
@@ -47,7 +47,7 @@ Simple Slider
 
 .. html ::
 
-  <input type="range" style="width:200px;" data-dojo-type="dojox.mobile.Slider" value="10" max="20" />
+  <input type="range" style="width:200px;" data-dojo-type="dojox/mobile/Slider" value="10" max="20" />
 
 .. image :: SimpleMobileSlider.png
 
@@ -57,7 +57,7 @@ onChange handler in HTML5 format
 
 .. html ::
 
-  <input type="range" style="height:200px;width:20px;" data-dojo-type="dojox.mobile.Slider" data-dojo-props='
+  <input type="range" style="height:200px;width:20px;" data-dojo-type="dojox/mobile/Slider" data-dojo-props='
         step:0,
         orientation:"V",
         onChange:function(newValue){ alert("value changed to " + newValue); }' />

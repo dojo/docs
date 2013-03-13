@@ -1,7 +1,7 @@
 .. _dojox/mobile/IconMenuItem:
 
 =========================
-dojox.mobile.IconMenuItem
+dojox/mobile/IconMenuItem
 =========================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,14 +14,14 @@ dojox.mobile.IconMenuItem
 Introduction
 ============
 
-IconMenuItem represents a menu item of :ref:`dojox.mobile.IconMenu <dojox/mobile/IconMenu>`. This widget inherits from dojox.mobile._ItemBase. Basic usage is same as the other subclasses such as :ref:`dojox.mobile.ListItem <dojox/mobile/ListItem>`.
+IconMenuItem represents a menu item of :ref:`dojox/mobile/IconMenu <dojox/mobile/IconMenu>`. This widget inherits from dojox/mobile/_ItemBase. Basic usage is same as the other subclasses such as :ref:`dojox/mobile/ListItem <dojox/mobile/ListItem>`.
 
 .. image :: IconMenuItem.png
 
 Constructor Parameters
 ======================
 
-Inherited from dojox.mobile._ItemBase
+Inherited from dojox/mobile/_ItemBase
 -------------------------------------
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
@@ -44,7 +44,7 @@ Inherited from dojox.mobile._ItemBase
 |              |          |         |(ex. "0,0,29,29"). If iconPos is not specified, the iconPos parameter of the parent widget is used.        |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |moveTo        |String    |""       |The id of the transition destination view which resides in the current page. If the value has a hash sign  |
-|              |          |         |('#') before the id (e.g. #view1) and the dojo.hash module (=the dojox.mobile.bookmarkable module since    |
+|              |          |         |('#') before the id (e.g. #view1) and the dojo/hash module (=the dojox/mobile/bookmarkable module since    |
 |              |          |         |V1.8) is loaded by the user application, the view transition updates the hash in the browser URL so that   |
 |              |          |         |the user can bookmark the destination view. In this case, the user can also use the browser's back/forward |
 |              |          |         |button to navigate through the views in the browser history. If null, transitions to a blank view. If '#', |
@@ -91,9 +91,9 @@ Parameters from this widget
 Usage
 =====
 
-Use this widget as child widgets of the :ref:`dojox.mobile.IconMenu <dojox/mobile/IconMenu>` widget.
+Use this widget as child widgets of the :ref:`dojox/mobile/IconMenu <dojox/mobile/IconMenu>` widget.
 
 Examples
 ========
 
-See the :ref:`dojox.mobile.IconMenu <dojox/mobile/IconMenu>` widget for various examples.
+See the :ref:`dojox/mobile/IconMenu <dojox/mobile/IconMenu>` widget for various examples.

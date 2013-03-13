@@ -1,7 +1,7 @@
 .. _dojox/mobile/SpinWheelTimePicker:
 
 ================================
-dojox.mobile.SpinWheelTimePicker
+dojox/mobile/SpinWheelTimePicker
 ================================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,7 +14,7 @@ dojox.mobile.SpinWheelTimePicker
 Introduction
 ============
 
-SpinWheelTimePicker is a time picker widget. It is a subclass of dojox.mobile.SpinWheel. It has the hour and minute slots.
+SpinWheelTimePicker is a time picker widget. It is a subclass of dojox/mobile/SpinWheel. It has the hour and minute slots.
 
 .. image :: SpinWheelTimePicker.png
 
@@ -42,7 +42,7 @@ Declarative example
 
 .. html ::
 
-  <div id="spin1" data-dojo-type="dojox.mobile.SpinWheelTimePicker"></div>
+  <div id="spin1" data-dojo-type="dojox/mobile/SpinWheelTimePicker"></div>
 
 Programmatic example
 --------------------

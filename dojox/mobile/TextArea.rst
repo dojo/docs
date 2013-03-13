@@ -1,7 +1,7 @@
 .. _dojox/mobile/TextArea:
 
 =====================
-dojox.mobile.TextArea
+dojox/mobile/TextArea
 =====================
 
 :Authors: Doug Hays
@@ -41,7 +41,7 @@ Simple TextArea
 
 .. html ::
 
-  <textarea data-dojo-type="dojox.mobile.TextArea" placeHolder="Enter comment"></textarea>
+  <textarea data-dojo-type="dojox/mobile/TextArea" placeHolder="Enter comment"></textarea>
 
 .. image :: SimpleMobileTextArea.png
 
@@ -51,7 +51,7 @@ onChange handler in HTML5 format
 
 .. html ::
 
-  <textarea data-dojo-type="dojox.mobile.TextArea" rows="5" cols="40"
+  <textarea data-dojo-type="dojox/mobile/TextArea" rows="5" cols="40"
         data-dojo-props='value:"some data\nline 2", onChange:function(newValue){ alert("value changed to " + newValue); }'></textarea>
 
 .. image :: HTML5MobileTextArea.png

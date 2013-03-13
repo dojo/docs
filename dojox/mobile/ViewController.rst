@@ -1,7 +1,7 @@
 .. _dojox/mobile/ViewController:
 
 ===========================
-dojox.mobile.ViewController
+dojox/mobile/ViewController
 ===========================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,7 +14,7 @@ dojox.mobile.ViewController
 Introduction
 ============
 
-dojox.mobile.ViewController is a singleton class which controls view transitions. This class listens to "startTransition" events and performs view transitions. If the transition destination is an external view specified with the url parameter, the view content is retrieved and parsed to create a new target view.
+dojox/mobile/ViewController is a singleton class which controls view transitions. This class listens to "startTransition" events and performs view transitions. If the transition destination is an external view specified with the url parameter, the view content is retrieved and parsed to create a new target view.
 
 Constructor Parameters
 ======================
@@ -55,24 +55,24 @@ You can load external views from the URL of an html fragment or a JSON data by u
 
 .. html ::
 
-  <div id="home" data-dojo-type="dojox.mobile.View">
-      <h1 data-dojo-type="dojox.mobile.Heading">Home</h1>
-      <button data-dojo-type="dojox.mobile.Button" id="btn1" style="margin:5px;"
+  <div id="home" data-dojo-type="dojox/mobile/View">
+      <h1 data-dojo-type="dojox/mobile/Heading">Home</h1>
+      <button data-dojo-type="dojox/mobile/Button" id="btn1" style="margin:5px;"
               data-dojo-props='onClick:onBtn1Clicked'>Load external view</button>
   </div>
-  <div id="container" data-dojo-type="dojox.mobile.View">
+  <div id="container" data-dojo-type="dojox/mobile/View">
       <!-- An external view is loaded here when clicking the button above -->
   </div>
 
 .. html ::
 
   <!-- data/view1.html (HTML fragment file) -->
-  <div id="view1" data-dojo-type="dojox.mobile.View">
-      <h1 data-dojo-type="dojox.mobile.Heading" back="Home" moveTo="home">view1.html</h1>
-      <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
-          <li data-dojo-type="dojox.mobile.ListItem">Jack Coleman</li>
-          <li data-dojo-type="dojox.mobile.ListItem">James Evans</li>
-          <li data-dojo-type="dojox.mobile.ListItem">Jason Griffin</li>
+  <div id="view1" data-dojo-type="dojox/mobile/View">
+      <h1 data-dojo-type="dojox/mobile/Heading" back="Home" moveTo="home">view1.html</h1>
+      <ul data-dojo-type="dojox/mobile/EdgeToEdgeList">
+          <li data-dojo-type="dojox/mobile/ListItem">Jack Coleman</li>
+          <li data-dojo-type="dojox/mobile/ListItem">James Evans</li>
+          <li data-dojo-type="dojox/mobile/ListItem">Jason Griffin</li>
       </ul>
   </div>
 

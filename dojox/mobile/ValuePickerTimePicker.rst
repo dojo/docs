@@ -1,7 +1,7 @@
 .. _dojox/mobile/ValuePickerTimePicker:
 
 ==================================
-dojox.mobile.ValuePickerTimePicker
+dojox/mobile/ValuePickerTimePicker
 ==================================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,7 +14,7 @@ dojox.mobile.ValuePickerTimePicker
 Introduction
 ============
 
-ValuePickerTimePicker is a time picker widget. It is a subclass of dojox.mobile.ValuePicker. It has the hour and minute slots.
+ValuePickerTimePicker is a time picker widget. It is a subclass of dojox/mobile/ValuePicker. It has the hour and minute slots.
 
 .. image :: ValuePickerTimePicker.png
 
@@ -46,13 +46,13 @@ Declarative example
 
 .. html ::
 
-  <div id="picker1" data-dojo-type="dojox.mobile.ValuePickerTimePicker"></div>
+  <div id="picker1" data-dojo-type="dojox/mobile/ValuePickerTimePicker"></div>
 
 .. image :: ValuePickerTimePicker.png
 
 .. html ::
 
-  <div id="picker1" data-dojo-type="dojox.mobile.ValuePickerTimePicker"
+  <div id="picker1" data-dojo-type="dojox/mobile/ValuePickerTimePicker"
       data-dojo-props='is24h:true'></div>
 
 .. image :: ValuePickerTimePicker2.png

@@ -1,7 +1,7 @@
 .. _dojox/mobile/ScrollableView:
 
 ===========================
-dojox.mobile.ScrollableView
+dojox/mobile/ScrollableView
 ===========================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,7 +14,7 @@ dojox.mobile.ScrollableView
 Introduction
 ============
 
-ScrollableView is a container widget which represents an entire mobile device screen, and has a touch scrolling capability. ScrollableView is a subclass of :ref:`dojox.mobile.View <dojox/mobile/View>`. Unlike the base View class, ScrollableView's domNode always stays at the top of the screen and its height is "100%" of the screen. Inside this fixed domNode, the containerNode scrolls. The browser's default scrolling behavior is disabled, and the scrolling mechanism is re-implemented in JavaScript. Thus the user does not need to use the two-finger operation to scroll the inner DIV (containerNode). The main purpose of this widget is to realize fixed-positioned header and/or footer bars.
+ScrollableView is a container widget which represents an entire mobile device screen, and has a touch scrolling capability. ScrollableView is a subclass of :ref:`dojox/mobile/View <dojox/mobile/View>`. Unlike the base View class, ScrollableView's domNode always stays at the top of the screen and its height is "100%" of the screen. Inside this fixed domNode, the containerNode scrolls. The browser's default scrolling behavior is disabled, and the scrolling mechanism is re-implemented in JavaScript. Thus the user does not need to use the two-finger operation to scroll the inner DIV (containerNode). The main purpose of this widget is to realize fixed-positioned header and/or footer bars.
 
 The animation below shows the difference between View and ScrollableView scrolling behavior. 
 
@@ -23,7 +23,7 @@ The animation below shows the difference between View and ScrollableView scrolli
 Constructor Parameters
 ======================
 
-Inherited from dojox.mobile.View
+Inherited from dojox/mobile/View
 --------------------------------
 
 +--------------+----------+---------+-------------------------------------------------------------------------------+
@@ -32,7 +32,7 @@ Inherited from dojox.mobile.View
 |selected      |Boolean   |false    |If true, the view is displayed at startup time.                                |
 +--------------+----------+---------+-------------------------------------------------------------------------------+
 
-Inherited from dojox.mobile.scrollable
+Inherited from dojox/mobile/scrollable
 --------------------------------------
 
 +----------------------+----------+---------+---------------------------------------------------------------------------------------+
@@ -57,7 +57,7 @@ Inherited from dojox.mobile.scrollable
 
 Usage
 =====
-Basic usage is the same as for :ref:`dojox.mobile.View <dojox/mobile/View>`. If you do not need fixed-positioned header and/or footer bars, you should use :ref:`dojox.mobile.View <dojox/mobile/View>`.
+Basic usage is the same as for :ref:`dojox/mobile/View <dojox/mobile/View>`. If you do not need fixed-positioned header and/or footer bars, you should use :ref:`dojox/mobile/View <dojox/mobile/View>`.
 
 Examples
 ========
@@ -74,10 +74,10 @@ To make a bar widget (Heading, TabBar, or perhaps your custom bar widget) fixed-
 
 .. html ::
 
-  <div id="view1" data-dojo-type="dojox.mobile.ScrollableView">
-    <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props='fixed:"top"'>View Header Bar</h1>
+  <div id="view1" data-dojo-type="dojox/mobile/ScrollableView">
+    <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props='fixed:"top"'>View Header Bar</h1>
     ....
-    <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props='fixed:"bottom"'>View Footer Bar</h1>
+    <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props='fixed:"bottom"'>View Footer Bar</h1>
   </div>
 
 .. image :: ScrollableView-example1-anim.gif
@@ -94,13 +94,13 @@ To make a bar widget (Heading, TabBar, or perhaps your custom bar widget) fixed-
 
 .. html ::
 
-  <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props='fixed:"top"'>Application Header Bar</h1>
-  <div id="view1" data-dojo-type="dojox.mobile.ScrollableView">
+  <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props='fixed:"top"'>Application Header Bar</h1>
+  <div id="view1" data-dojo-type="dojox/mobile/ScrollableView">
       ....
   </div>
-  <div id="view2" data-dojo-type="dojox.mobile.ScrollableView">
+  <div id="view2" data-dojo-type="dojox/mobile/ScrollableView">
       ....
   </div>
-  <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props='fixed:"bottom"'>Application Footer Bar</h1>
+  <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props='fixed:"bottom"'>Application Footer Bar</h1>
 
 .. image :: ScrollableView-example2-anim.gif

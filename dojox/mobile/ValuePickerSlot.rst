@@ -1,7 +1,7 @@
 .. _dojox/mobile/ValuePickerSlot:
 
 ============================
-dojox.mobile.ValuePickerSlot
+dojox/mobile/ValuePickerSlot
 ============================
 
 :Authors: Yoshiroh Kamiyama
@@ -19,7 +19,7 @@ ValuePickerSlot is a slot that is placed in the ValuePicker widget.
 Usage
 =====
 
-Use this widget as child widgets of the :ref:`dojox.mobile.ValuePicker <dojox/mobile/ValuePicker>` widget.
+Use this widget as child widgets of the :ref:`dojox/mobile/ValuePicker <dojox/mobile/ValuePicker>` widget.
 
 Constructor Parameters
 ======================
@@ -54,4 +54,4 @@ Constructor Parameters
 Examples
 ========
 
-See the :ref:`dojox.mobile.ValuePicker <dojox/mobile/ValuePicker>` widget for various examples.
+See the :ref:`dojox/mobile/ValuePicker <dojox/mobile/ValuePicker>` widget for various examples.

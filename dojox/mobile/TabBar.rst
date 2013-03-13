@@ -1,7 +1,7 @@
 .. _dojox/mobile/TabBar:
 
 ===================
-dojox.mobile.TabBar
+dojox/mobile/TabBar
 ===================
 
 :Authors: Yoshiroh Kamiyama
@@ -11,7 +11,7 @@ dojox.mobile.TabBar
 .. contents ::
     :depth: 2
 
-TabBar is a container widget that has typically multiple TabBarButtons which controls visibility of views. It can be used as a tab container. There was dojox.mobile.TabContainer in dojo-1.5, but it is obsolete. In dojo-1.6 or later, use TabBar instead of TabContainer.
+TabBar is a container widget that has typically multiple TabBarButtons which controls visibility of views. It can be used as a tab container. There was dojox/mobile/TabContainer in dojo-1.5, but it is obsolete. In dojo-1.6 or later, use TabBar instead of TabContainer.
 
 .. image :: TabBar.png
 
@@ -58,16 +58,16 @@ This type of bar typically appears at the bottom of the screen to control visibi
   ]);
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.TabBar">
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+  <ul data-dojo-type="dojox/mobile/TabBar">
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"images/tab-icon-16.png",
                          icon2:"images/tab-icon-16h.png",
                          moveTo:"view1", selected:true'>New</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"images/tab-icon-15.png",
                          icon2:"images/tab-icon-15h.png",
                          moveTo:"view2"'>What's Hot</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"images/tab-icon-10.png",
                          icon2:"images/tab-icon-10h.png",
                          moveTo:"view3"'>Genius</li>
@@ -86,22 +86,22 @@ In this example, an aggregated icon image as below is used for each TabBarButton
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.TabBar"
+  <ul data-dojo-type="dojox/mobile/TabBar"
       data-dojo-props='iconBase:"images/tab-icons.png"'>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='iconPos1:"0,0,29,29",
                          iconPos2:"29,0,29,29",
                          selected:true'>Featured</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='iconPos1:"0,29,29,29",
                          iconPos2:"29,29,29,29"'>Categories</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='iconPos1:"0,58,29,29",
                          iconPos2:"29,58,29,29"'>Top 25</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='iconPos1:"0,87,29,29",
                          iconPos2:"29,87,29,29"'>Search</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='iconPos1:"0,116,29,29",
                          iconPos2:"29,116,29,29"'>Updates</li>
   </ul>
@@ -115,10 +115,10 @@ This type of bar is typically used at the top of the screen to control visibilit
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.TabBar" data-dojo-props='barType:"segmentedControl"'>
-    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>New</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">What's Hot</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Genius</li>
+  <ul data-dojo-type="dojox/mobile/TabBar" data-dojo-props='barType:"segmentedControl"'>
+    <li data-dojo-type="dojox/mobile/TabBarButton" data-dojo-props='selected:true'>New</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">What's Hot</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Genius</li>
   </ul>
 
 .. image :: TabBar-SegmentedControl.png
@@ -130,31 +130,31 @@ Standard Tab can be used to create tabbed panes. If the closable=true option is 
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.TabBar" data-dojo-props='barType:"standardTab"'>
-    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+  <ul data-dojo-type="dojox/mobile/TabBar" data-dojo-props='barType:"standardTab"'>
+    <li data-dojo-type="dojox/mobile/TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Plan</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Main Event</li>
   </ul>
 
-  <ul data-dojo-type="dojox.mobile.TabBar"
+  <ul data-dojo-type="dojox/mobile/TabBar"
       data-dojo-props='barType:"standardTab", closable:true, center:false'>
-    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Plan</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Main Event</li>
   </ul>
 
-  <ul data-dojo-type="dojox.mobile.TabBar"
+  <ul data-dojo-type="dojox/mobile/TabBar"
       data-dojo-props='barType:"standardTab",
                        center:false,
                        iconBase:"images/tab-icons.png"'>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"images/tab-icon-16.png",
                          icon2:"images/tab-icon-16h.png",
                          selected:true'>Image</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='iconPos1:"0,29,29,29",
                          iconPos2:"29,29,29,29"'>Sprite</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"mblDomButtonGrayStar",
                          icon2:"mblDomButtonYellowStar"'>DOM Button</li>
   </ul>
@@ -168,31 +168,31 @@ Slim Tab is a space-saving type of tab bar. This may be useful especially for sm
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.TabBar" data-dojo-props='barType:"slimTab"'>
-    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+  <ul data-dojo-type="dojox/mobile/TabBar" data-dojo-props='barType:"slimTab"'>
+    <li data-dojo-type="dojox/mobile/TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Plan</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Main Event</li>
   </ul>
 
-  <ul data-dojo-type="dojox.mobile.TabBar"
+  <ul data-dojo-type="dojox/mobile/TabBar"
       data-dojo-props='barType:"slimTab", closable:true, center:false'>
-    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Plan</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Main Event</li>
   </ul>
 
-  <ul data-dojo-type="dojox.mobile.TabBar"
+  <ul data-dojo-type="dojox/mobile/TabBar"
       data-dojo-props='barType:"slimTab",
                        center:false,
                        iconBase:"images/tab-icons.png"'>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"images/tab-icon-16.png",
                          icon2:"images/tab-icon-16h.png",
                          selected:true'>Image</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='iconPos1:"0,29,29,29",
                          iconPos2:"29,29,29,29"'>Sprite</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"mblDomButtonGrayStar",
                          icon2:"mblDomButtonYellowStar"'>DOM Button</li>
   </ul>
@@ -207,29 +207,29 @@ Flat Tab has no borders and no background color by default to be displayed throu
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.TabBar" data-dojo-props='barType:"flatTab"'">
-    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+  <ul data-dojo-type="dojox/mobile/TabBar" data-dojo-props='barType:"flatTab"'">
+    <li data-dojo-type="dojox/mobile/TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Plan</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Main Event</li>
   </ul>
 
-  <ul data-dojo-type="dojox.mobile.TabBar" data-dojo-props='barType:"flatTab", closable:true, center:false'">
-    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+  <ul data-dojo-type="dojox/mobile/TabBar" data-dojo-props='barType:"flatTab", closable:true, center:false'">
+    <li data-dojo-type="dojox/mobile/TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Plan</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Main Event</li>
     </ul>
 
-  <ul data-dojo-type="dojox.mobile.TabBar"
+  <ul data-dojo-type="dojox/mobile/TabBar"
       data-dojo-props='barType:"flatTab",
                        center:false,
                        iconBase:"images/tab-icons.png"'">
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"images/tab-icon-16.png",
                          icon2:"images/tab-icon-16h.png"'>Image</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='iconPos1:"0,29,29,29",
                          iconPos2:"29,29,29,29"'>Sprite</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"mblDomButtonGrayStar",
                          icon2:"mblDomButtonYellowStar",
                          selected:true'>DOM Button</li>
@@ -242,16 +242,16 @@ Tall Tab
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.TabBar"
+  <ul data-dojo-type="dojox/mobile/TabBar"
       data-dojo-props='barType:"tallTab", iconBase:"images/tab-icons.png"'>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"images/tab-icon-16.png",
                          icon2:"images/tab-icon-16h.png",
                          selected:true'>Image</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='iconPos1:"0,29,29,29",
                          iconPos2:"29,29,29,29"'>Sprite</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"mblDomButtonGrayStar",
                          icon2:"mblDomButtonYellowStar"'>DOM Button</li>
   </ul>
@@ -265,33 +265,33 @@ TabBar forms kind of tab container whose panes are views. You may, however, want
 
 .. html ::
 
-  <div id="groupview1" data-dojo-type="dojox.mobile.View" data-dojo-props='selected:true'>
-      <ul data-dojo-type="dojox.mobile.TabBar" data-dojo-props='barType:"segmentedControl", fixed:"top"'>
-        <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='moveTo:"subview1", selected:true'>New</li>
-        <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='moveTo:"subview2"'>What's Hot</li>
-        <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='moveTo:"subview3"'>Genius</li>
+  <div id="groupview1" data-dojo-type="dojox/mobile/View" data-dojo-props='selected:true'>
+      <ul data-dojo-type="dojox/mobile/TabBar" data-dojo-props='barType:"segmentedControl", fixed:"top"'>
+        <li data-dojo-type="dojox/mobile/TabBarButton" data-dojo-props='moveTo:"subview1", selected:true'>New</li>
+        <li data-dojo-type="dojox/mobile/TabBarButton" data-dojo-props='moveTo:"subview2"'>What's Hot</li>
+        <li data-dojo-type="dojox/mobile/TabBarButton" data-dojo-props='moveTo:"subview3"'>Genius</li>
       </ul>
 
-      <div id="subview1" data-dojo-type="dojox.mobile.ScrollableView" data-dojo-props='selected:true'>
-        <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
-          <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='moveTo:"hello"'>Hello</li>
+      <div id="subview1" data-dojo-type="dojox/mobile/ScrollableView" data-dojo-props='selected:true'>
+        <ul data-dojo-type="dojox/mobile/EdgeToEdgeList">
+          <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='moveTo:"hello"'>Hello</li>
         </ul>
       </div>
 
-      <div id="subview2" data-dojo-type="dojox.mobile.ScrollableView">
-        <ul data-dojo-type="dojox.mobile.RoundRectList">
-          <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='moveTo:"hello"'>Hello</li>
+      <div id="subview2" data-dojo-type="dojox/mobile/ScrollableView">
+        <ul data-dojo-type="dojox/mobile/RoundRectList">
+          <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='moveTo:"hello"'>Hello</li>
         </ul>
       </div>
 
-      <div id="subview3" data-dojo-type="dojox.mobile.ScrollableView">
-        <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-props='shadow:true'>View3</div>
+      <div id="subview3" data-dojo-type="dojox/mobile/ScrollableView">
+        <div data-dojo-type="dojox/mobile/RoundRect" data-dojo-props='shadow:true'>View3</div>
       </div>
   </div>
 
-  <div id="hello" data-dojo-type="dojox.mobile.ScrollableView">
-      <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props='back:"Group1", moveTo:"groupview1"'>Hello</h1>
-      <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-props='shadow:true'>Hello View</div>
+  <div id="hello" data-dojo-type="dojox/mobile/ScrollableView">
+      <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props='back:"Group1", moveTo:"groupview1"'>Hello</h1>
+      <div data-dojo-type="dojox/mobile/RoundRect" data-dojo-props='shadow:true'>Hello View</div>
   </div>
 
 .. image :: TabBar-group-anim.gif
@@ -300,30 +300,30 @@ TabBar forms kind of tab container whose panes are views. You may, however, want
 Tab Bar with Badge
 ------------------
 
-You can use the 'badge' parameter of :ref:`dojox.mobile.TabBarButton <dojox/mobile/TabBarButton>` to add :ref:`dojox.mobile.Badge <dojox/mobile/Badge>` onto TabBar.
+You can use the 'badge' parameter of :ref:`dojox/mobile/TabBarButton <dojox/mobile/TabBarButton>` to add :ref:`dojox/mobile/Badge <dojox/mobile/Badge>` onto TabBar.
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.TabBar"
+  <ul data-dojo-type="dojox/mobile/TabBar"
       data-dojo-props='iconBase:"images/tab-icons.png"'>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='iconPos1:"0,0,29,29",
                          iconPos2:"29,0,29,29",
                          selected:true,
                          badge:"55"'>Featured</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='iconPos1:"0,29,29,29",
                          iconPos2:"29,29,29,29",
                          badge:"New"'>Categories</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='iconPos1:"0,58,29,29",
                          iconPos2:"29,58,29,29",
                          badge:"25"'>Top 25</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='iconPos1:"0,87,29,29",
                          iconPos2:"29,87,29,29",
                          badge:"10"'>Search</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='iconPos1:"0,116,29,29",
                          iconPos2:"29,116,29,29",
                          badge:"5"'>Updates</li>

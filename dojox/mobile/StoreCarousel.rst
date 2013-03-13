@@ -317,11 +317,11 @@ Using various widgets as an item of Carousel
 --------------------------------------------
 
 You can use other various widgets than :ref:`dojox/mobile/CarouselItem <dojox/mobile/CarouselItem>` as an item of StoreCarousel widget by specifying the widget class name to the "type" parameter of json object in the data store.
-This example uses :ref:`dojox/mobile/ContentPane <dojox/mobile/ContentPane>` and `dijit.CalendarLite <dijit/CalendarLite>`_ widgets as well as CarouselItem widget.
+This example uses :ref:`dojox/mobile/ContentPane <dojox/mobile/ContentPane>` and `dijit/CalendarLite <dijit/CalendarLite>`_ widgets as well as CarouselItem widget.
 
 .. html ::
 
-  <!-- Need to load the theme files for dijit.Calendar, Carousel and PageIndicator -->
+  <!-- Need to load the theme files for dijit/Calendar, Carousel and PageIndicator -->
   <link href="dijit/themes/dijit.css" rel="stylesheet"/>
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','Carousel','PageIndicator','dijit.Calendar']"></script>

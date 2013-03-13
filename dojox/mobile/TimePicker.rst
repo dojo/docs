@@ -1,7 +1,7 @@
 .. _dojox/mobile/TimePicker:
 
 =======================
-dojox.mobile.TimePicker
+dojox/mobile/TimePicker
 =======================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,12 +14,12 @@ dojox.mobile.TimePicker
 Introduction
 ============
 
-dojox.mobile.TimePicker is a wrapper widget around :ref:`dojox.mobile.SpinWheelTimePicker <dojox/mobile/SpinWheelTimePicker>` or :ref:`dojox.mobile.ValuePickerTimePicker <dojox/mobile/ValuePickerTimePicker>`. If you use :ref:`dojox.mobile.deviceTheme <dojox/mobile/deviceTheme>` and the current theme is 'android', it returns ValuePickerTimePicker. For the other themes, it returns SpinWheelTimePicker.
+dojox/mobile/TimePicker is a wrapper widget around :ref:`dojox/mobile/SpinWheelTimePicker <dojox/mobile/SpinWheelTimePicker>` or :ref:`dojox/mobile/ValuePickerTimePicker <dojox/mobile/ValuePickerTimePicker>`. If you use :ref:`dojox/mobile/deviceTheme <dojox/mobile/deviceTheme>` and the current theme is 'android', it returns ValuePickerTimePicker. For the other themes, it returns SpinWheelTimePicker.
 
 Constructor Parameters
 ======================
 
-See :ref:`dojox.mobile.ValuePickerTimePicker <dojox/mobile/ValuePickerTimePicker>`.
+See :ref:`dojox/mobile/ValuePickerTimePicker <dojox/mobile/ValuePickerTimePicker>`.
 
 Examples
 ========
@@ -36,7 +36,7 @@ Declarative example
 
 .. html ::
 
-  <div id="picker1" data-dojo-type="dojox.mobile.TimePicker"></div>
+  <div id="picker1" data-dojo-type="dojox/mobile/TimePicker"></div>
 
 Programmatic example
 --------------------
@@ -56,4 +56,4 @@ Programmatic example
       });
   });
 
-See also :ref:`dojox.mobile.SpinWheelTimePicker <dojox/mobile/SpinWheelTimePicker>` or :ref:`dojox.mobile.ValuePickerTimePicker <dojox/mobile/ValuePickerTimePicker>`.
+See also :ref:`dojox/mobile/SpinWheelTimePicker <dojox/mobile/SpinWheelTimePicker>` or :ref:`dojox/mobile/ValuePickerTimePicker <dojox/mobile/ValuePickerTimePicker>`.

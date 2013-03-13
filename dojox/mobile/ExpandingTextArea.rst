@@ -1,7 +1,7 @@
 .. _dojox/mobile/ExpandingTextArea:
 
 ==============================
-dojox.mobile.ExpandingTextArea
+dojox/mobile/ExpandingTextArea
 ==============================
 
 :Authors: Doug Hays
@@ -42,7 +42,7 @@ Simple ExpandingTextArea
 
 .. html ::
 
-  <textarea data-dojo-type="dojox.mobile.ExpandingTextArea">line 1
+  <textarea data-dojo-type="dojox/mobile/ExpandingTextArea">line 1
   line 2</textarea>
 
 .. image :: SimpleMobileExpandingTextArea.png
@@ -53,7 +53,7 @@ onChange handler in HTML5 format
 
 .. html ::
 
-  <textarea data-dojo-type="dojox.mobile.ExpandingTextArea" cols="40"
+  <textarea data-dojo-type="dojox/mobile/ExpandingTextArea" cols="40"
     data-dojo-props='value:"line 1\nline 2\nline 3", onChange:function(newValue){ alert("value changed to " + newValue); }'></textarea>
 
 .. image :: HTML5MobileExpandingTextArea.png

@@ -1,7 +1,7 @@
 .. _dojox/mobile/SearchBox:
 
 ======================
-dojox.mobile.SearchBox
+dojox/mobile/SearchBox
 ======================
 
 :Authors: Doug Hays
@@ -41,7 +41,7 @@ list widgets (for details, see :ref:`dojox/mobile/FilteredListMixin <dojox/mobil
 Constructor Parameters
 ======================
 
-Relative attributes inherited from dojox.mobile.TextBox
+Relative attributes inherited from dojox/mobile/TextBox
 -------------------------------------------------------
 
 +--------------+----------+-------------------------+-----------------------------------------------------------------------------------------------------------+
@@ -175,15 +175,15 @@ Using inline OPTION tags
 
 .. html ::
 
-  <select data-dojo-type="dijit.form.DataList" data-dojo-props='id:"dataList"' >
+  <select data-dojo-type="dijit/form/DataList" data-dojo-props='id:"dataList"' >
     <option>Alabama</option>
     <option>Alaska</option>
     <option>American Samoa</option>
     <option>Arizona</option>
     <option>Arkansas</option>
   </select>
-  <input data-dojo-type="dojox.mobile.SearchBox" type="search" placeHolder="Search"
+  <input data-dojo-type="dojox/mobile/SearchBox" type="search" placeHolder="Search"
     data-dojo-props='list:"dataList", ignoreCase: true, onSearch:onSearch'>
-  <ul data-dojo-type="dojox.mobile.RoundRectList" jsId="list"></ul>
+  <ul data-dojo-type="dojox/mobile/RoundRectList" jsId="list"></ul>
 
 .. image :: SearchBox.png

@@ -1,7 +1,7 @@
 .. _dojox/mobile/TreeView:
 
 ====================================
-dojox.mobile.TreeView (EXPERIMENTAL)
+dojox/mobile/TreeView (EXPERIMENTAL)
 ====================================
 
 :Authors: Yoshiroh Kamiyama
@@ -11,12 +11,12 @@ dojox.mobile.TreeView (EXPERIMENTAL)
 .. contents ::
     :depth: 2
 
-The dojox.mobile.TreeView is an **EXPERIMENTAL** widget.
+The dojox/mobile/TreeView is an **EXPERIMENTAL** widget.
 
 Introduction
 ============
 
-The dojox.mobile.TreeView widget is a scrollable view with tree-style navigation. You may use it when implementing the Master-Detail pattern.
+The dojox/mobile/TreeView widget is a scrollable view with tree-style navigation. You may use it when implementing the Master-Detail pattern.
 
 .. image :: TreeView-anim.gif
 
@@ -51,7 +51,7 @@ Declarative example
 
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.TreeView"
+  <div data-dojo-type="dojox/mobile/TreeView"
        data-dojo-props='model: treeModel'></div>
 
 .. image :: TreeView-example1-anim.gif

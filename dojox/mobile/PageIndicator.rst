@@ -1,7 +1,7 @@
 .. _dojox/mobile/PageIndicator:
 
 ==========================
-dojox.mobile.PageIndicator
+dojox/mobile/PageIndicator
 ==========================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,7 +14,7 @@ dojox.mobile.PageIndicator
 Introduction
 ============
 
-PageIndicator displays a series of gray and white dots to indicate which page is currently being viewed. It can typically be used with :ref:`dojox.mobile.SwapView <dojox/mobile/SwapView>`. It is also internally used in :ref:`dojox.mobile.Carousel <dojox/mobile/Carousel>`.
+PageIndicator displays a series of gray and white dots to indicate which page is currently being viewed. It can typically be used with :ref:`dojox/mobile/SwapView <dojox/mobile/SwapView>`. It is also internally used in :ref:`dojox/mobile/Carousel <dojox/mobile/Carousel>`.
 
 .. image :: PageIndicator.png
 
@@ -77,22 +77,22 @@ Declarative example
 .. html ::
 
   <body style="visibility:hidden;background-color:#6d6d6d">
-    <div data-dojo-type="dojox.mobile.SwapView">
+    <div data-dojo-type="dojox/mobile/SwapView">
       <h1>My Pictures</h1>
       <img src="images/pic1.jpg">
     </div>
 
-    <div data-dojo-type="dojox.mobile.SwapView">
+    <div data-dojo-type="dojox/mobile/SwapView">
       <h1>May 3, 2011</h1>
       <img src="images/pic2.jpg">
     </div>
 
-    <div data-dojo-type="dojox.mobile.SwapView">
+    <div data-dojo-type="dojox/mobile/SwapView">
       <h1>May 3, 2011</h1>
       <img src="images/pic3.jpg">
     </div>
 
-    <div data-dojo-type="dojox.mobile.PageIndicator"
+    <div data-dojo-type="dojox/mobile/PageIndicator"
          data-dojo-props='fixed:"bottom"'></div>
   </body>
 

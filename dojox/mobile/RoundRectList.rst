@@ -1,7 +1,7 @@
 .. _dojox/mobile/RoundRectList:
 
 ==========================
-dojox.mobile.RoundRectList
+dojox/mobile/RoundRectList
 ==========================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,7 +14,7 @@ dojox.mobile.RoundRectList
 Introduction
 ============
 
-RoundRectList is a rounded rectangle list, which can be used to display a group of items. Each item must be :ref:`dojox.mobile.ListItem <dojox/mobile/ListItem>`.
+RoundRectList is a rounded rectangle list, which can be used to display a group of items. Each item must be :ref:`dojox/mobile/ListItem <dojox/mobile/ListItem>`.
 
 .. image :: RoundRectList.png
 
@@ -68,12 +68,12 @@ In this example, <ul> and <li> are used just because they are typically used to 
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.RoundRectList">
-    <li data-dojo-type="dojox.mobile.ListItem"
+  <ul data-dojo-type="dojox/mobile/RoundRectList">
+    <li data-dojo-type="dojox/mobile/ListItem"
         data-dojo-props='icon:"images/i-icon-3.png",
                          rightText:"Off",
                          moveTo:"view1"'>Wi-Fi</li>
-    <li data-dojo-type="dojox.mobile.ListItem"
+    <li data-dojo-type="dojox/mobile/ListItem"
         data-dojo-props='icon:"images/i-icon-4.png",
                          rightText:"VPN",
                          moveTo:"view2"'>VPN</li>
@@ -92,16 +92,16 @@ In this example, an aggregated icon image as below is used for each list item ic
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.RoundRectList"
+  <ul data-dojo-type="dojox/mobile/RoundRectList"
       data-dojo-props='iconBase:"images/i-icon-all.png"'>
-    <li data-dojo-type="dojox.mobile.ListItem"
+    <li data-dojo-type="dojox/mobile/ListItem"
         data-dojo-props='iconPos:"0,0,29,29"'>Airplane Mode
-        <div class="mblItemSwitch" data-dojo-type="dojox.mobile.Switch"></div></li>
-    <li data-dojo-type="dojox.mobile.ListItem"
+        <div class="mblItemSwitch" data-dojo-type="dojox/mobile/Switch"></div></li>
+    <li data-dojo-type="dojox/mobile/ListItem"
         data-dojo-props='iconPos:"0,29,29,29",
                          rightText:"mac",
                          href:"test_IconContainer.html"'>Wi-Fi</li>
-    <li data-dojo-type="dojox.mobile.ListItem"
+    <li data-dojo-type="dojox/mobile/ListItem"
         data-dojo-props='iconPos:"0,58,29,29",
                          rightText:"AcmePhone",
                          moveTo:"general"'>Carrier</li>
@@ -114,18 +114,18 @@ Selection mode example
 
 .. html ::
 
-  <h2 data-dojo-type="dojox.mobile.RoundRectCategory">Single Select</h2>
-  <ul data-dojo-type="dojox.mobile.RoundRectList" data-dojo-props='select:"single"'>
-    <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='checked:true'>Cube</li>
-    <li data-dojo-type="dojox.mobile.ListItem">Dissolve</li>
-    <li data-dojo-type="dojox.mobile.ListItem">Ripple</li>
+  <h2 data-dojo-type="dojox/mobile/RoundRectCategory">Single Select</h2>
+  <ul data-dojo-type="dojox/mobile/RoundRectList" data-dojo-props='select:"single"'>
+    <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='checked:true'>Cube</li>
+    <li data-dojo-type="dojox/mobile/ListItem">Dissolve</li>
+    <li data-dojo-type="dojox/mobile/ListItem">Ripple</li>
   </ul>
 
-  <h2 data-dojo-type="dojox.mobile.RoundRectCategory">Multiple Select</h2>
-  <ul data-dojo-type="dojox.mobile.RoundRectList" data-dojo-props='select:"multiple"'>
-    <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='checked:true'>Cube</li>
-    <li data-dojo-type="dojox.mobile.ListItem">Dissolve</li>
-    <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='checked:true'>Ripple</li>
+  <h2 data-dojo-type="dojox/mobile/RoundRectCategory">Multiple Select</h2>
+  <ul data-dojo-type="dojox/mobile/RoundRectList" data-dojo-props='select:"multiple"'>
+    <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='checked:true'>Cube</li>
+    <li data-dojo-type="dojox/mobile/ListItem">Dissolve</li>
+    <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='checked:true'>Ripple</li>
   </ul>
 
 .. image :: RoundRectList-check.png
@@ -214,16 +214,16 @@ This is an example of 'editable' parameter for re-ordering the list and deleting
 
 .. html ::
 
-  <ul id="list1" data-dojo-type="dojox.mobile.RoundRectList" data-dojo-props='editable:true'>
-    <li id="item1" data-dojo-type="dojox.mobile.ListItem"
+  <ul id="list1" data-dojo-type="dojox/mobile/RoundRectList" data-dojo-props='editable:true'>
+    <li id="item1" data-dojo-type="dojox/mobile/ListItem"
      data-dojo-props='icon:"images/i-icon-1.png"'>Slide</li>
-    <li id="item2" data-dojo-type="dojox.mobile.ListItem"
+    <li id="item2" data-dojo-type="dojox/mobile/ListItem"
      data-dojo-props='icon:"images/i-icon-2.png"'>Flip</li>
-    <li id="item3" data-dojo-type="dojox.mobile.ListItem"
+    <li id="item3" data-dojo-type="dojox/mobile/ListItem"
      data-dojo-props='icon:"images/i-icon-3.png"'>Fade</li>
-    <li id="item4" data-dojo-type="dojox.mobile.ListItem"
+    <li id="item4" data-dojo-type="dojox/mobile/ListItem"
      data-dojo-props='icon:"images/i-icon-4.png"'>Cover</li>
-    <li id="item5" data-dojo-type="dojox.mobile.ListItem"
+    <li id="item5" data-dojo-type="dojox/mobile/ListItem"
      data-dojo-props='icon:"images/i-icon-5.png"'>Reveal</li>
   </ul>
   <button onclick="onClickEdit()">Edit</button>
@@ -246,49 +246,49 @@ This is an example of 'syncWithViews' parameter to synchronize the selected item
 
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.FixedSplitter" data-dojo-props='orientation:"H"'>
+  <div data-dojo-type="dojox/mobile/FixedSplitter" data-dojo-props='orientation:"H"'>
 
-    <div data-dojo-type="dojox.mobile.Container" style="width:300px;border-right:1px solid black;">
-      <div id="settings" data-dojo-type="dojox.mobile.View">
-        <h1 data-dojo-type="dojox.mobile.Heading">Settings</h1>
+    <div data-dojo-type="dojox/mobile/Container" style="width:300px;border-right:1px solid black;">
+      <div id="settings" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading">Settings</h1>
         <!-- RoundRectList to be synchronized with the right side view's visibility --> 
-        <ul data-dojo-type="dojox.mobile.RoundRectList"
+        <ul data-dojo-type="dojox/mobile/RoundRectList"
             data-dojo-props='transition:"flip", stateful:true, syncWithViews:true'>
-          <li data-dojo-type="dojox.mobile.ListItem"
+          <li data-dojo-type="dojox/mobile/ListItem"
               data-dojo-props='icon:"images/i-icon-1.png", moveTo:"wifi"'>Wi-Fi</li>
-          <li data-dojo-type="dojox.mobile.ListItem"
+          <li data-dojo-type="dojox/mobile/ListItem"
               data-dojo-props='icon:"images/i-icon-2.png", moveTo:"bright"'>Brightness &amp; Wallpaper</li>
-          <li data-dojo-type="dojox.mobile.ListItem"
+          <li data-dojo-type="dojox/mobile/ListItem"
               data-dojo-props='icon:"images/i-icon-3.png", moveTo:"picture"'>Picture Frame</li>
         </ul>
       </div>
     </div>
 
-    <div data-dojo-type="dojox.mobile.Container">
-      <div id="wifi" data-dojo-type="dojox.mobile.View">
-        <h1 data-dojo-type="dojox.mobile.Heading">Wi-Fi Networks</h1>
-        <ul data-dojo-type="dojox.mobile.RoundRectList">
-          <li data-dojo-type="dojox.mobile.ListItem"
+    <div data-dojo-type="dojox/mobile/Container">
+      <div id="wifi" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading">Wi-Fi Networks</h1>
+        <ul data-dojo-type="dojox/mobile/RoundRectList">
+          <li data-dojo-type="dojox/mobile/ListItem"
               data-dojo-props='moveTo:"bright"'>Next View</li>
-          <li data-dojo-type="dojox.mobile.ListItem"
+          <li data-dojo-type="dojox/mobile/ListItem"
               data-dojo-props='moveTo:"picture", transitionDir:-1'>Previous View</li>
         </ul>
       </div>
-      <div id="bright" data-dojo-type="dojox.mobile.View">
-        <h1 data-dojo-type="dojox.mobile.Heading">Brightness &amp; Wallpaper</h1>
-        <ul data-dojo-type="dojox.mobile.RoundRectList">
-          <li data-dojo-type="dojox.mobile.ListItem"
+      <div id="bright" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading">Brightness &amp; Wallpaper</h1>
+        <ul data-dojo-type="dojox/mobile/RoundRectList">
+          <li data-dojo-type="dojox/mobile/ListItem"
               data-dojo-props='moveTo:"picture"'>Next View</li>
-          <li data-dojo-type="dojox.mobile.ListItem"
+          <li data-dojo-type="dojox/mobile/ListItem"
               data-dojo-props='moveTo:"wifi", transitionDir:-1'>Previous View</li>
         </ul>
       </div>
-      <div id="picture" data-dojo-type="dojox.mobile.View">
-        <h1 data-dojo-type="dojox.mobile.Heading">Picture Frame</h1>
-        <ul data-dojo-type="dojox.mobile.RoundRectList">
-          <li data-dojo-type="dojox.mobile.ListItem"
+      <div id="picture" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading">Picture Frame</h1>
+        <ul data-dojo-type="dojox/mobile/RoundRectList">
+          <li data-dojo-type="dojox/mobile/ListItem"
               data-dojo-props='moveTo:"wifi"'>Next View</li>
-          <li data-dojo-type="dojox.mobile.ListItem"
+          <li data-dojo-type="dojox/mobile/ListItem"
               data-dojo-props='moveTo:"bright", transitionDir:-1'>Previous View</li>
         </ul>
       </div>

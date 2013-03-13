@@ -1,7 +1,7 @@
 .. _dojox/mobile/View:
 
 =================
-dojox.mobile.View
+dojox/mobile/View
 =================
 
 :Authors: Yoshiroh Kamiyama
@@ -45,18 +45,18 @@ In this example, there are two Views, "view1" and "view2", and the user can move
 
 .. html ::
 
-  <div id="view1" data-dojo-type="dojox.mobile.View">
-    <h1 data-dojo-type="dojox.mobile.Heading">View 1</h1>
-    <ul data-dojo-type="dojox.mobile.RoundRectList">
-      <li data-dojo-type="dojox.mobile.ListItem"
+  <div id="view1" data-dojo-type="dojox/mobile/View">
+    <h1 data-dojo-type="dojox/mobile/Heading">View 1</h1>
+    <ul data-dojo-type="dojox/mobile/RoundRectList">
+      <li data-dojo-type="dojox/mobile/ListItem"
           data-dojo-props='icon:"images/i-icon-1.png",
                            moveTo:"view2",
                            transition:"slide"'>Go To View 2</li>
     </ul>
   </div>
 
-  <div id="view2" data-dojo-type="dojox.mobile.View">
-    <h1 data-dojo-type="dojox.mobile.Heading"
+  <div id="view2" data-dojo-type="dojox/mobile/View">
+    <h1 data-dojo-type="dojox/mobile/Heading"
         data-dojo-props='back:"View 1",
                          moveTo:"view1"'>View 2</h1>
   </div>

@@ -234,11 +234,11 @@ Using various widgets as an item of Carousel
 --------------------------------------------
 
 You can use other various widgets than :ref:`dojox/mobile/CarouselItem <dojox/mobile/CarouselItem>` as an item of Carousel widget.
-This example uses :ref:`dojox/mobile/ContentPane <dojox/mobile/ContentPane>` and `dijit.CalendarLite <dijit/CalendarLite>`_ widgets.
+This example uses :ref:`dojox/mobile/ContentPane <dojox/mobile/ContentPane>` and `dijit/CalendarLite <dijit/CalendarLite>`_ widgets.
 
 .. html ::
 
-  <!-- Need to load the theme files for dijit.Calendar, Carousel and PageIndicator -->
+  <!-- Need to load the theme files for dijit/Calendar, Carousel and PageIndicator -->
   <link href="dijit/themes/dijit.css" rel="stylesheet"/>
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','Carousel','PageIndicator','dijit.Calendar']"></script>
@@ -261,9 +261,9 @@ This example uses :ref:`dojox/mobile/ContentPane <dojox/mobile/ContentPane>` and
       <div data-dojo-type="dojox/mobile/SwapView">
           <div data-dojo-type="dojox/mobile/ContentPane" data-dojo-props='href:"data/fragment.html"'></div>
       </div>
-      <!-- View #2 : Using dijit.CalendarLite -->
+      <!-- View #2 : Using dijit/CalendarLite -->
       <div data-dojo-type="dojox/mobile/SwapView">
-          <div data-dojo-type="dijit.CalendarLite"></div>
+          <div data-dojo-type="dijit/CalendarLite"></div>
       </div>
   </div>
 

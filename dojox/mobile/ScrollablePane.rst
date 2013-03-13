@@ -1,7 +1,7 @@
 .. _dojox/mobile/ScrollablePane:
 
 ===========================
-dojox.mobile.ScrollablePane
+dojox/mobile/ScrollablePane
 ===========================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,7 +14,7 @@ dojox.mobile.ScrollablePane
 Introduction
 ============
 
-The dojox.mobile.ScrollablePane widget is a pane that has the touch-scrolling capability. Unlike :ref:`dojox.mobile.ScrollableView <dojox/mobile/ScrollableView>`, ScrollablePane is not a view. ScrollablePane can be placed in a view to create a partial scrolling area.
+The dojox/mobile/ScrollablePane widget is a pane that has the touch-scrolling capability. Unlike :ref:`dojox/mobile/ScrollableView <dojox/mobile/ScrollableView>`, ScrollablePane is not a view. ScrollablePane can be placed in a view to create a partial scrolling area.
 
 .. image :: ScrollablePane.png
 
@@ -46,8 +46,8 @@ Declarative example
 
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.View" style="height:100px">
-    <div data-dojo-type="dojox.mobile.ScrollablePane" 
+  <div data-dojo-type="dojox/mobile/View" style="height:100px">
+    <div data-dojo-type="dojox/mobile/ScrollablePane" 
          data-dojo-props='height:"inherit"'
          style="background-color:yellow;color:black;">
       hello<br>
@@ -81,12 +81,12 @@ Rounded corner mask example
 
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.View">
-    <div data-dojo-type="dojox.mobile.ScrollablePane"
+  <div data-dojo-type="dojox/mobile/View">
+    <div data-dojo-type="dojox/mobile/ScrollablePane"
          data-dojo-props='height:"100px",
                           roundCornerMask:true,
                           radius:"5"'>
-      <div data-dojo-type="dojox.mobile.ContentPane"
+      <div data-dojo-type="dojox/mobile/ContentPane"
            style="margin:5px 9px 7px 9px;padding:8px;
                   background-color:white;color:black;">
         Hello<br>

@@ -1,7 +1,7 @@
 .. _dojox/mobile/IconMenu:
 
 =====================
-dojox.mobile.IconMenu
+dojox/mobile/IconMenu
 =====================
 
 :Authors: Yoshiroh Kamiyama, Atsushi Ono
@@ -14,7 +14,7 @@ dojox.mobile.IconMenu
 Introduction
 ============
 
-The dojox.mobile.IconMenu widget displays a pop-up menu just like iPhone's call options menu that is shown while you are on a call. Each menu item must be :ref:`dojox.mobile.IconMenuItem <dojox/mobile/IconMenuItem>`.
+The dojox/mobile/IconMenu widget displays a pop-up menu just like iPhone's call options menu that is shown while you are on a call. Each menu item must be :ref:`dojox/mobile/IconMenuItem <dojox/mobile/IconMenuItem>`.
 
 .. image :: IconMenu.png
 
@@ -65,19 +65,19 @@ Declarative example
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.IconMenu" style="width:274px;height:210px;margin:20px;" 
+  <ul data-dojo-type="dojox/mobile/IconMenu" style="width:274px;height:210px;margin:20px;" 
       data-dojo-props='cols:3'>
-      <li data-dojo-type="dojox.mobile.IconMenuItem" 
+      <li data-dojo-type="dojox/mobile/IconMenuItem" 
           data-dojo-props='label:"Mute", icon:"images/mute.png", selected:true'></li>
-      <li data-dojo-type="dojox.mobile.IconMenuItem" 
+      <li data-dojo-type="dojox/mobile/IconMenuItem" 
           data-dojo-props='label:"Keypad", icon:"images/keypad.png"'></li>
-      <li data-dojo-type="dojox.mobile.IconMenuItem" 
+      <li data-dojo-type="dojox/mobile/IconMenuItem" 
           data-dojo-props='label:"Settings", icon:"images/settings.png"'></li>
-      <li data-dojo-type="dojox.mobile.IconMenuItem" 
+      <li data-dojo-type="dojox/mobile/IconMenuItem" 
           data-dojo-props='label:"Info", icon:"images/info.png"'></li>
-      <li data-dojo-type="dojox.mobile.IconMenuItem" 
+      <li data-dojo-type="dojox/mobile/IconMenuItem" 
           data-dojo-props='label:"Tour", icon:"images/tour.png", moveTo:"view2", transition:"slide"'></li>
-      <li data-dojo-type="dojox.mobile.IconMenuItem" 
+      <li data-dojo-type="dojox/mobile/IconMenuItem" 
           data-dojo-props='label:"Contacts", icon:"images/contacts.png"'></li>
   </ul>
 
@@ -155,7 +155,7 @@ Programmatic example
 Using IconMenu with SimpleDialog widget
 ---------------------------------------
 
-This example shows a pop-up menu by using IconMenu widget with :ref:`dojox.mobile.SimpleDialog <dojox/mobile/SimpleDialog>` widget.
+This example shows a pop-up menu by using IconMenu widget with :ref:`dojox/mobile/SimpleDialog <dojox/mobile/SimpleDialog>` widget.
 You can close the dialog when selecting the IconMenuItem which has "closeOnAction:true" parameter.
 
 .. html ::
@@ -184,32 +184,32 @@ You can close the dialog when selecting the IconMenuItem which has "closeOnActio
 
 .. html ::
 
-  <div id="dlg1" data-dojo-type="dojox.mobile.SimpleDialog" data-dojo-props='modal:false'>
-      <ul data-dojo-type="dojox.mobile.IconMenu" data-dojo-props='cols:3'>
-          <li data-dojo-type="dojox.mobile.IconMenuItem" 
+  <div id="dlg1" data-dojo-type="dojox/mobile/SimpleDialog" data-dojo-props='modal:false'>
+      <ul data-dojo-type="dojox/mobile/IconMenu" data-dojo-props='cols:3'>
+          <li data-dojo-type="dojox/mobile/IconMenuItem" 
               data-dojo-props='label:"Mute", icon:"images/mute.png", selected:true'></li>
-          <li data-dojo-type="dojox.mobile.IconMenuItem" 
+          <li data-dojo-type="dojox/mobile/IconMenuItem" 
               data-dojo-props='label:"Keypad", icon:"images/keypad.png"'></li>
-          <li data-dojo-type="dojox.mobile.IconMenuItem" 
+          <li data-dojo-type="dojox/mobile/IconMenuItem" 
               data-dojo-props='label:"Settings", icon:"images/settings.png"'></li>
-          <li data-dojo-type="dojox.mobile.IconMenuItem" 
+          <li data-dojo-type="dojox/mobile/IconMenuItem" 
               data-dojo-props='label:"Info", icon:"images/info.png"'></li>
-          <li data-dojo-type="dojox.mobile.IconMenuItem" 
+          <li data-dojo-type="dojox/mobile/IconMenuItem" 
               data-dojo-props='label:"Tour", icon:"images/tour.png", 
                                moveTo:"view2", transition:"slide", closeOnAction:true'></li>
-          <li data-dojo-type="dojox.mobile.IconMenuItem" 
+          <li data-dojo-type="dojox/mobile/IconMenuItem" 
               data-dojo-props='label:"Contacts", icon:"images/contacts.png", closeOnAction:true'></li>
       </ul>
   </div>
-  <div id="view1" data-dojo-type="dojox.mobile.View">
-      <h1 data-dojo-type="dojox.mobile.Heading">6-up Icon Menu</h1>
-      <button data-dojo-type="dojox.mobile.Button" class="mblBlueButton" 
+  <div id="view1" data-dojo-type="dojox/mobile/View">
+      <h1 data-dojo-type="dojox/mobile/Heading">6-up Icon Menu</h1>
+      <button data-dojo-type="dojox/mobile/Button" class="mblBlueButton" 
               style="width:100px;margin:10px;" onclick="show()">Show</button>
-      <button data-dojo-type="dojox.mobile.Button" class="mblBlueButton" 
+      <button data-dojo-type="dojox/mobile/Button" class="mblBlueButton" 
               style="width:100px;margin:10px;" onclick="hide()">Hide</button>
   </div>
-  <div id="view2" data-dojo-type="dojox.mobile.View" style="background-color:white;height:100%;">
-      <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props='back:"Home", moveTo:"view1"'>View2</h1>
+  <div id="view2" data-dojo-type="dojox/mobile/View" style="background-color:white;height:100%;">
+      <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props='back:"Home", moveTo:"view1"'>View2</h1>
   </div>
 
 .. image :: IconMenu-example2.gif

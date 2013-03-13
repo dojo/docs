@@ -104,7 +104,7 @@ In this example, no ListItem is defined as children of EdgeToEdgeDataList. The L
 
 .. html ::
 
-  <div data-dojo-type="dojo.data.ItemFileReadStore" 
+  <div data-dojo-type="dojo/data/ItemFileReadStore" 
               data-dojo-id="sampleStore" data-dojo-props='url:"sample.json"'></div>
   <ul data-dojo-type="dojox/mobile/EdgeToEdgeDataList" data-dojo-props='store:sampleStore'>
   </ul>
@@ -168,7 +168,7 @@ You can initially filter items by using "query" parameter. This example filters 
 
 .. html ::
 
-  <div data-dojo-type="dojo.data.ItemFileReadStore" 
+  <div data-dojo-type="dojo/data/ItemFileReadStore" 
               data-dojo-id="sampleStore" data-dojo-props='url:"sample2.json"'></div>
   <ul data-dojo-type="dojox/mobile/EdgeToEdgeDataList" 
               data-dojo-props='store:sampleStore, query:{label:"*e"}'>
@@ -210,7 +210,7 @@ This example maps "name" and "count" fields in the json data to "label" and "rig
 
 .. html ::
 
-  <div data-dojo-type="dojo.data.ItemFileReadStore" 
+  <div data-dojo-type="dojo/data/ItemFileReadStore" 
               data-dojo-id="sampleStore" data-dojo-props='url:"sample3.json"'></div>
   <ul data-dojo-type="dojox/mobile/EdgeToEdgeDataList" 
               data-dojo-props='store:sampleStore, itemMap:{name:"label", count:"rightText"}'>
