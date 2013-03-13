@@ -1,7 +1,7 @@
 .. _dojox/mobile/Badge:
 
 ==================
-dojox.mobile.Badge
+dojox/mobile/Badge
 ==================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,7 +14,10 @@ dojox.mobile.Badge
 Introduction
 ============
 
-dojox.mobile.Badge is a utility to create/update a badge node. It is not a widget, but just a convenient function. Note that a badge consists of a simple DOM button. It can be created even without dojox.mobile.Badge.
+dojox/mobile/Badge is not a widget that inherits from dijit/_WidgetBase but a 
+simple utility class for creating and updating a badge node. A badge consists of 
+a simple DOM button. It is intended to be used from other widgets such as 
+dojox/mobile/IconItem or dojox/mobile/TabBarButton.
 
 .. image :: Badge.png
 
@@ -28,7 +31,7 @@ Constructor Parameters
 +--------------+----------+----------------------+----------------------------------------------------------------------------------------------+
 |className     |String    |"mblDomButtonRedBadge"|A class name of a DOM button.                                                                 |
 +--------------+----------+----------------------+----------------------------------------------------------------------------------------------+
-|fontSize      |Number    |16                    |Font size in pixel. The other styles are determined by the DOM button itself.                 |
+|fontSize      |Number    |16                    |Font size in pixel. The other style attributes are determined by the DOM button itself.       |
 +--------------+----------+----------------------+----------------------------------------------------------------------------------------------+
 
 Examples
@@ -55,18 +58,18 @@ Declarative example
 .. html ::
 
   <!-- Using default style -->
-  <div data-dojo-type="dojox.mobile.Badge" data-dojo-props='value:"10"'></div>
+  <div data-dojo-type="dojox/mobile/Badge" data-dojo-props='value:"10"'></div>
 
   <!-- Specifying className -->
-  <div data-dojo-type="dojox.mobile.Badge" class="mblDomButtonRedBadge" data-dojo-props='value:"20"'></div>
-  <div data-dojo-type="dojox.mobile.Badge" class="mblDomButtonBlueBadge" data-dojo-props='value:"30"'></div>
-  <div data-dojo-type="dojox.mobile.Badge" class="mblDomButtonGreenBadge" data-dojo-props='value:"40"'></div>
+  <div data-dojo-type="dojox/mobile/Badge" class="mblDomButtonRedBadge" data-dojo-props='value:"20"'></div>
+  <div data-dojo-type="dojox/mobile/Badge" class="mblDomButtonBlueBadge" data-dojo-props='value:"30"'></div>
+  <div data-dojo-type="dojox/mobile/Badge" class="mblDomButtonGreenBadge" data-dojo-props='value:"40"'></div>
 
   <!-- Specifying fontSize -->
-  <div data-dojo-type="dojox.mobile.Badge" data-dojo-props='value:"50", fontSize:11'></div>
-  <div data-dojo-type="dojox.mobile.Badge" 
+  <div data-dojo-type="dojox/mobile/Badge" data-dojo-props='value:"50", fontSize:11'></div>
+  <div data-dojo-type="dojox/mobile/Badge" 
           class="mblDomButtonBlueBadge" data-dojo-props='value:"60", fontSize:11'></div>
-  <div data-dojo-type="dojox.mobile.Badge" 
+  <div data-dojo-type="dojox/mobile/Badge" 
           class="mblDomButtonGreenBadge" data-dojo-props='value:"70", fontSize:11'></div>
 
 .. image :: Badge-example1.png
@@ -144,10 +147,10 @@ You can get/set the value of badge by calling getValue()/setValue(value) functio
           var badge = new Badge({value:"10"});
           win.body().appendChild(badge.domNode);
           
-          // Get the value of badge widget
+          // Get the value of the badge
           console.log(badge.getValue()); // "10"
           
-          // Set the value of badge widget
+          // Set the value of the badge
           badge.setValue("100");
           console.log(badge.getValue()); // "100"
       });

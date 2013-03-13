@@ -1,7 +1,7 @@
 .. _dojox/mobile/Accordion:
 
 ======================
-dojox.mobile.Accordion
+dojox/mobile/Accordion
 ======================
 
 :Authors: Yoshiroh Kamiyama, Atsushi Ono
@@ -14,7 +14,14 @@ dojox.mobile.Accordion
 Introduction
 ============
 
-dojox.mobile.Accordion is a layout widget that allows the user to freely navigate between panes. It has no specific child widget. Any widgets can be its children. Typically :ref:`dojox.mobile.Pane <dojox/mobile/Pane>`,  :ref:`dojox.mobile.Container <dojox/mobile/Container>`, or  :ref:`dojox.mobile.ContentPane <dojox/mobile/ContentPane>` are used as children widgets.
+dojox/mobile/Accordion is a container widget that can display a group of child panes 
+in a stacked format.
+
+Typically, :ref:`dojox/mobile/Pane <dojox/mobile/Pane>`, :ref:`dojox/mobile/Container <dojox/mobile/Container>`, 
+or :ref:`dojox/mobile/ContentPane <dojox/mobile/ContentPane>` are used as child widgets, but Accordion 
+requires no specific child widget. Accordion supports three modes for opening child panes: 
+multiselect, fixed-height, and single-select. Accordion can have rounded corners, and it can 
+lazy-load the content modules.
 
 .. image :: Accordion.gif
 
@@ -78,7 +85,7 @@ Declarative example
 
 .. html ::
 
-  <!-- Need to load the theme file for Accordion widget as well as base theme file -->
+  <!-- Need to load the theme file for Accordion widget as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','Accordion']"></script>
 
@@ -93,18 +100,18 @@ Declarative example
 
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.Accordion" data-dojo-props='iconBase:"images/icons16.png"'>
-      <div data-dojo-type="dojox.mobile.ContentPane" 
+  <div data-dojo-type="dojox/mobile/Accordion" data-dojo-props='iconBase:"images/icons16.png"'>
+      <div data-dojo-type="dojox/mobile/ContentPane" 
            data-dojo-props='label:"External Content", iconPos1:"16,32,16,16", href:"data/fragment1.html"'>
       </div>
-      <div data-dojo-type="dojox.mobile.ContentPane" 
+      <div data-dojo-type="dojox/mobile/ContentPane" 
            data-dojo-props='label:"RoundRectList", iconPos1:"16,48,16,16"'>
-          <ul data-dojo-type="dojox.mobile.RoundRectList" data-dojo-props='iconBase:"images/tab-icon-11h.png"'>
-              <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='label:"u1space", rightText:"Off"'>
+          <ul data-dojo-type="dojox/mobile/RoundRectList" data-dojo-props='iconBase:"images/tab-icon-11h.png"'>
+              <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='label:"u1space", rightText:"Off"'>
               </li>
-              <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='label:"u2space", rightText:"Off"'>
+              <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='label:"u2space", rightText:"Off"'>
               </li>
-              <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='label:"Wi-Fi", rightText:"Off"'>
+              <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='label:"Wi-Fi", rightText:"Off"'>
               </li>
           </ul>
       </div>
@@ -113,7 +120,7 @@ Declarative example
 .. html ::
 
   <!-- data/fragment1.html (HTML fragment file) -->
-  <div dojoType="dojox.mobile.RoundRect" shadow="true">
+  <div data-dojo-type="dojox/mobile/RoundRect" shadow="true">
       HTML fragment example
   </div>
 
@@ -124,7 +131,7 @@ Programmatic example
 
 .. html ::
 
-  <!-- Need to load the theme file for Accordion widget as well as base theme file -->
+  <!-- Need to load the theme file for Accordion widget as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','Accordion']"></script>
 
@@ -177,7 +184,7 @@ Programmatic example
 .. html ::
 
   <!-- data/fragment1.html (HTML fragment file) -->
-  <div dojoType="dojox.mobile.RoundRect" shadow="true">
+  <div data-dojo-type="dojox/mobile/RoundRect" shadow="true">
       HTML fragment example
   </div>
 
@@ -186,12 +193,13 @@ Programmatic example
 Single open mode
 ----------------
 
-By default, Accordion widget allows users to open multiple panes at a time. 
-But when you specify "singleOpen:true" property to the Accordion widget, it changes to the single open mode in which you can open only one pane at a time.
+By default, the Accordion widget allows users to open multiple panes at a time. 
+But when you specify "singleOpen:true" property to the Accordion widget, it changes to the single open 
+mode in which you can open only one pane at a time.
 
 .. html ::
 
-  <!-- Need to load the theme file for Accordion widget as well as base theme file -->
+  <!-- Need to load the theme file for Accordion widget as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','Accordion']"></script>
 
@@ -207,25 +215,25 @@ But when you specify "singleOpen:true" property to the Accordion widget, it chan
 
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.Accordion" data-dojo-props='singleOpen:true'>
-      <div data-dojo-type="dojox.mobile.ScrollableView" style="background-color:white"
+  <div data-dojo-type="dojox/mobile/Accordion" data-dojo-props='singleOpen:true'>
+      <div data-dojo-type="dojox/mobile/ScrollableView" style="background-color:white"
            data-dojo-props='label:"ScrollableView", height:"100px"'>
           <div style="padding:10px;color:black;">
               A<br>B<br>C<br>D<br>E<br>F<br>G<br>H<br>I<br>J<br>K<br>L<br>M<br>N<br>
               O<br>P<br>Q<br>R<br>S<br>T<br>U<br>V<br>W<br>X<br>Y<br>Z
           </div>
       </div>
-      <div data-dojo-type="dojox.mobile.ContentPane" 
+      <div data-dojo-type="dojox/mobile/ContentPane" 
            data-dojo-props='label:"External Content", href:"data/fragment1.html"'>
       </div>
-      <div data-dojo-type="dojox.mobile.ContentPane" 
+      <div data-dojo-type="dojox/mobile/ContentPane" 
            data-dojo-props='label:"RoundRectList"'>
-          <ul data-dojo-type="dojox.mobile.RoundRectList" data-dojo-props='iconBase:"images/tab-icon-11h.png"'>
-              <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='label:"u1space", rightText:"Off"'>
+          <ul data-dojo-type="dojox/mobile/RoundRectList" data-dojo-props='iconBase:"images/tab-icon-11h.png"'>
+              <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='label:"u1space", rightText:"Off"'>
               </li>
-              <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='label:"u2space", rightText:"Off"'>
+              <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='label:"u2space", rightText:"Off"'>
               </li>
-              <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='label:"Wi-Fi", rightText:"Off"'>
+              <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='label:"Wi-Fi", rightText:"Off"'>
               </li>
           </ul>
       </div>
@@ -234,7 +242,7 @@ But when you specify "singleOpen:true" property to the Accordion widget, it chan
 .. html ::
 
   <!-- data/fragment1.html (HTML fragment file) -->
-  <div dojoType="dojox.mobile.RoundRect" shadow="true">
+  <div data-dojo-type="dojox/mobile/RoundRect" shadow="true">
       HTML fragment example
   </div>
 
@@ -243,12 +251,14 @@ But when you specify "singleOpen:true" property to the Accordion widget, it chan
 Fixed height
 ------------
 
-You can fix the height of Accordion widget by specifying "fixedHeight:true" property as described in the example below.
-This example also applies "mblAccordionRoundRect" style class to the Accordion widget to make it have a rounded rectangle shape.
+You can fix the height of the Accordion widget by specifying the "fixedHeight:true" property 
+as described in the example below.
+This example also applies the "mblAccordionRoundRect" style class to the Accordion widget to 
+make it have a rounded rectangle shape.
 
 .. html ::
 
-  <!-- Need to load the theme file for Accordion widget as well as base theme file -->
+  <!-- Need to load the theme file for Accordion widget as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','Accordion']"></script>
   <!-- Stylesheets for expand/collapse icons -->
@@ -267,9 +277,9 @@ This example also applies "mblAccordionRoundRect" style class to the Accordion w
 
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.Accordion" style="height:250px;" class="mblAccordionRoundRect"
+  <div data-dojo-type="dojox/mobile/Accordion" style="height:250px;" class="mblAccordionRoundRect"
        data-dojo-props='fixedHeight:true'>
-      <div data-dojo-type="dojox.mobile.ScrollableView" style="background-color:white"
+      <div data-dojo-type="dojox/mobile/ScrollableView" style="background-color:white"
            data-dojo-props='label:"ScrollableView", selected:true, height:"inherit", 
                             icon1:"mblDomButtonBlackRightArrow16", icon2:"mblDomButtonWhiteDownArrow16"'>
           <div style="padding:10px;color:black;">
@@ -277,19 +287,19 @@ This example also applies "mblAccordionRoundRect" style class to the Accordion w
               O<br>P<br>Q<br>R<br>S<br>T<br>U<br>V<br>W<br>X<br>Y<br>Z
           </div>
       </div>
-      <div data-dojo-type="dojox.mobile.ContentPane" 
+      <div data-dojo-type="dojox/mobile/ContentPane" 
            data-dojo-props='label:"External Content", href:"data/fragment1.html",
                             icon1:"mblDomButtonBlackRightArrow16", icon2:"mblDomButtonWhiteDownArrow16"'>
       </div>
-      <div data-dojo-type="dojox.mobile.ContentPane" 
+      <div data-dojo-type="dojox/mobile/ContentPane" 
            data-dojo-props='label:"RoundRectList", 
                             icon1:"mblDomButtonBlackRightArrow16", icon2:"mblDomButtonWhiteDownArrow16"'>
-          <ul data-dojo-type="dojox.mobile.RoundRectList" data-dojo-props='iconBase:"images/tab-icon-11h.png"'>
-              <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='label:"u1space", rightText:"Off"'>
+          <ul data-dojo-type="dojox/mobile/RoundRectList" data-dojo-props='iconBase:"images/tab-icon-11h.png"'>
+              <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='label:"u1space", rightText:"Off"'>
               </li>
-              <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='label:"u2space", rightText:"Off"'>
+              <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='label:"u2space", rightText:"Off"'>
               </li>
-              <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='label:"Wi-Fi", rightText:"Off"'>
+              <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='label:"Wi-Fi", rightText:"Off"'>
               </li>
           </ul>
       </div>
@@ -298,7 +308,7 @@ This example also applies "mblAccordionRoundRect" style class to the Accordion w
 .. html ::
 
   <!-- data/fragment1.html (HTML fragment file) -->
-  <div dojoType="dojox.mobile.RoundRect" shadow="true">
+  <div data-dojo-type="dojox/mobile/RoundRect" shadow="true">
       HTML fragment example
   </div>
 
@@ -307,12 +317,13 @@ This example also applies "mblAccordionRoundRect" style class to the Accordion w
 Lazy loading
 ------------
 
-If you would like to instantiate the widgets inside a child pane lazily, you can do so by specifying "lazy:true" property to the child widget.
-In this example, CalendarLite widget is instanciated when you open the child pane first time.
+If you would like to instantiate the widgets inside a child pane lazily, you can do so 
+by specifying "lazy:true" property to the child widget.
+In this example, the CalendarLite widget is instanciated when you open the child pane first time.
 
 .. html ::
 
-  <!-- Need to load the theme files for Accordion and dijit.Calendar -->
+  <!-- Need to load the theme files for Accordion and dijit/Calendar -->
   <link href="dijit/themes/dijit.css" rel="stylesheet"/>
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','Accordion','dijit.Calendar']"></script>
@@ -329,12 +340,12 @@ In this example, CalendarLite widget is instanciated when you open the child pan
 
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.Accordion">
-      <div data-dojo-type="dojox.mobile.ContentPane" 
+  <div data-dojo-type="dojox/mobile/Accordion">
+      <div data-dojo-type="dojox/mobile/ContentPane" 
            data-dojo-props='label:"Calendar (Lazy)", lazy:true' height="304px">
           <div style="padding:10px">
               <!-- This widget is instanciated lazily -->
-              <div data-dojo-type="dijit.CalendarLite"></div>
+              <div data-dojo-type="dijit/CalendarLite"></div>
           </div>
       </div>
   </div>
