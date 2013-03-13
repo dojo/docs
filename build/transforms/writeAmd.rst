@@ -52,6 +52,9 @@ the following properties:
   Optional. If present, gives a copywrite message to include when the layer is written. Either a string or a filename
   of a resource containing the copyright text can be provided.
 
+``includeLocales``
+  An array of locales that will be included in the layer. This can be defined at the profile or layer level.
+
 ``noref``
   Optional. If present and truthy, instructs the loader to consume the cache of layer member modules (see below)
   immediately; otherwise, the cache is not consumed until the layer module is defined or another cache of modules is
@@ -187,6 +190,8 @@ machinery loads available localizations as required during runtime. In the typic
 
 In order to accommodate some legacy usages, the v1.7 build program outputs flattened NLS bundles for any locale specified by the ``localeList`` profile knob.
 
+NLS bundle loading can be avoided for specific locales by including locales in a layer, using the includeLocales setting. For example, if you set includeLocales: ['en-us'], the layer will not need to make a separate request for the NLS bundle for en-us users.
+
 
 Profile Knobs
 =============
@@ -245,6 +250,8 @@ Layer items are JavaScript objects with the following properties
   layer item. If a string that does not give an existing filename, the string it interpreted as an explicit copyright
   message. If no string value is given, then no copyright text is output.
 
+``includeLocales``
+  An array of locales that will be included in the layer. The NLS bundle for each listed locale will be included in the layer, so that these locales will not need a separate request(s) to access their NLS bundle. Note, that using included locales adds extra bytes to the layer, and users that don't match the included locales will be loading unnecessary bundles. Using this option is best when the majority of users will match a particular locale (or small set of locales).
 
 ``noref`` (default = ``undefined``)
   Optional. If present and truthy, instructs the loader to consume the cache of layer member modules immediately;
