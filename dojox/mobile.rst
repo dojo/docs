@@ -101,6 +101,10 @@ Lists
 
   A mixin to add filtering capabilities to all list widgets
 
+* :ref:`LongListMixin <dojox/mobile/LongListMixin>`
+
+  A mixin to enhance scrolling performances of lists containing many items
+
 IconContainer
 -------------
 
