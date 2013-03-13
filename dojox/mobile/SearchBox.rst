@@ -60,7 +60,7 @@ Relative attributes inherited from dojox.mobile.TextBox
 |trim          |Boolean   | false                   |Remove leading and trailing spaces.                                                                        |
 +--------------+----------+-------------------------+-----------------------------------------------------------------------------------------------------------+
 
-Inherited from dijit.form._SearchMixin
+Inherited from dijit/form/_SearchMixin
 --------------------------------------
 
 +----------------+---------------------+--------------+-----------------------------------------------------------------------------------------------------------+
@@ -68,7 +68,7 @@ Inherited from dijit.form._SearchMixin
 +----------------+---------------------+--------------+-----------------------------------------------------------------------------------------------------------+
 |pageSize        |Integer              | Infinity     |Maximum number of search results to return per query.                                                      |
 +----------------+---------------------+--------------+-----------------------------------------------------------------------------------------------------------+
-|store           |dojo.store.api.Store | null         |Data provider object used by this SearchBox.                                                               |
+|store           |dojo/store/api/Store | null         |Data provider object used by this SearchBox.                                                               |
 +----------------+---------------------+--------------+-----------------------------------------------------------------------------------------------------------+
 |fetchProperties |Object               | {}           |Mixin to the store's fetch, for example: { sort: [{attribute:"name",descending: true}] }                   |
 +----------------+---------------------+--------------+-----------------------------------------------------------------------------------------------------------+
@@ -97,7 +97,7 @@ Attributes from this widget
 Examples
 ========
 
-Using a dojo.store and nextPage function
+Using a dojo/store and nextPage function
 ----------------------------------------
 
 .. js ::

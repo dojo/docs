@@ -1,7 +1,7 @@
 .. _dojox/mobile/DataCarousel:
 
 =========================
-dojox.mobile.DataCarousel
+dojox/mobile/DataCarousel
 =========================
 
 :Authors: Yoshiroh Kamiyama, Atsushi Ono
@@ -14,14 +14,17 @@ dojox.mobile.DataCarousel
 Introduction
 ============
 
-DataCarousel is an enhanced version of :ref:`dojox.mobile.Carousel <dojox/mobile/Carousel>`. It can generate contents according to the given dojo.data store.
+*Deprecated*. Since V1.8, use :ref:`dojox/mobile/StoreCarousel <dojox/mobile/StoreCarousel>` instead.
+
+DataCarousel is a subclass of :ref:`dojox/mobile/Carousel <dojox/mobile/Carousel>` 
+which can generate contents according to the given dojo/data store.
 
 .. image :: DataCarousel.png
 
 Constructor Parameters
 ======================
 
-Inherited from dojox.mobile.Carousel
+Inherited from dojox/mobile/Carousel
 ------------------------------------
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
@@ -29,25 +32,25 @@ Inherited from dojox.mobile.Carousel
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |numVisible    |Number    |3        |The number of visible items.                                                                               |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|itemWidth     |Number    |0        |The number of visible items (=numVisible) is determined by (carousel_width / itemWidth). If itemWidth is   |
-|              |          |         |specified, user-specified numVisible is ignored and it is automatically calculated. If resize() is called, |
-|              |          |         |numVisible is recalculated and the layout changes accordingly. If itemWidth is 0 (default), numVisible is  |
-|              |          |         |used as it is, and recalculation never happens.                                                            |
+|itemWidth     |Number    |0        |The number of visible items (``numVisible``) is determined by (``carousel_width`` / ``itemWidth``).        |
+|              |          |         |If ``itemWidth`` is specified, the user-specified ``numVisible`` is ignored and it is automatically        |
+|              |          |         |calculated. If ``resize()`` is called, ``numVisible`` is recalculated and the layout changes accordingly.  |
+|              |          |         |If ``itemWidth`` is 0 (default), ``numVisible`` is used as it is, and recalculation never happens.         |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |title         |String    |""       |A title of the carousel to be displayed on the title bar.                                                  |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|pageIndicator |Boolean   |true     |If true, a page indicator, a series of small dots that indicate the current page, is displayed on the title|
-|              |          |         |bar.                                                                                                       |
+|pageIndicator |Boolean   |true     |If true, a page indicator, that is a series of small dots that indicate the current page, is displayed     |
+|              |          |         |on the title bar.                                                                                          |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |navButton     |Boolean   |false    |If true, navigation buttons are displayed on the title bar.                                                |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |height        |String    |"300px"  |Explicitly specified height of the widget (ex. "300px"). If "inherit" is specified, the height is inherited|
 |              |          |         |from its offset parent.                                                                                    |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|selectable    |Boolean   |true     |If true, an item can be selected by clicking on it.                                                        |
+|selectable    |Boolean   |true     |If true, an item can be selected by clicking it.                                                           |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-Inherited from dojox.mobile._DataMixin
+Inherited from dojox/mobile/_DataMixin
 --------------------------------------
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
@@ -55,10 +58,10 @@ Inherited from dojox.mobile._DataMixin
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |store         |Object    |null     |Reference to data provider object used by this widget.                                                     |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|query         |Object    |null     |A query that can be passed to 'store' to initially filter the items. See `dojo.data <dojo/data>`_ for      |
-|              |          |         |details.                                                                                                   |
+|query         |Object    |null     |A query that can be passed to 'store' to initially filter the items. See `dojo/data <../../dojo/data>`_    |
+|              |          |         |for details.                                                                                               |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|queryOptions  |Object    |null     |An optional parameter for the query. See `dojo.data <dojo/data>`_ for details.                             |
+|queryOptions  |Object    |null     |An optional parameter for the query. See `dojo/data <../../dojo/data>`_ for details.                       |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
 Examples
@@ -73,7 +76,7 @@ Each item in the json object is used as attributes for :ref:`CarouselItem <dojox
 
 .. html ::
 
-  <!-- Need to load the theme files for Carousel and PageIndicator as well as base theme file -->
+  <!-- Need to load the theme files for Carousel and PageIndicator as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','Carousel','PageIndicator']"></script>
 
@@ -88,9 +91,9 @@ Each item in the json object is used as attributes for :ref:`CarouselItem <dojox
 
 .. html ::
 
-  <div data-dojo-type="dojo.data.ItemFileReadStore" 
+  <div data-dojo-type="dojo/data/ItemFileReadStore" 
           data-dojo-id="sampleStore" data-dojo-props='url:"sample.json"'></div>
-  <div id="carousel1" data-dojo-type="dojox.mobile.DataCarousel"
+  <div id="carousel1" data-dojo-type="dojox/mobile/DataCarousel"
           data-dojo-props='store:sampleStore, height:"150px", navButton:true, numVisible:2, title:"Category"'>
   </div>
 
@@ -113,7 +116,7 @@ Programmatic example
 
 .. html ::
 
-  <!-- Need to load the theme files for Carousel and PageIndicator as well as base theme file -->
+  <!-- Need to load the theme files for Carousel and PageIndicator as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','Carousel','PageIndicator']"></script>
 
@@ -165,7 +168,7 @@ In this example, two items are visible in the carousel on portrait mode while th
 
 .. html ::
 
-  <!-- Need to load the theme files for Carousel and PageIndicator as well as base theme file -->
+  <!-- Need to load the theme files for Carousel and PageIndicator as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','Carousel','PageIndicator']"></script>
 
@@ -180,9 +183,9 @@ In this example, two items are visible in the carousel on portrait mode while th
 
 .. html ::
 
-  <div data-dojo-type="dojo.data.ItemFileReadStore" 
+  <div data-dojo-type="dojo/data/ItemFileReadStore" 
           data-dojo-id="sampleStore" data-dojo-props='url:"sample.json"'></div>
-  <div id="carousel1" data-dojo-type="dojox.mobile.DataCarousel"
+  <div id="carousel1" data-dojo-type="dojox/mobile/DataCarousel"
           data-dojo-props='store:sampleStore, height:"150px", navButton:true, itemWidth:150, title:"Category"'>
   </div>
 
@@ -213,7 +216,7 @@ This example handles the event when a carousel item is selected by subscribing t
 
 .. html ::
 
-  <!-- Need to load the theme files for Carousel and PageIndicator as well as base theme file -->
+  <!-- Need to load the theme files for Carousel and PageIndicator as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','Carousel','PageIndicator']"></script>
 
@@ -247,12 +250,12 @@ This example handles the event when a carousel item is selected by subscribing t
 
 .. html ::
 
-  <div data-dojo-type="dojo.data.ItemFileReadStore" 
+  <div data-dojo-type="dojo/data/ItemFileReadStore" 
           data-dojo-id="sampleStore" data-dojo-props='url:"sample.json"'></div>
-  <div id="carousel1" data-dojo-type="dojox.mobile.DataCarousel"
+  <div id="carousel1" data-dojo-type="dojox/mobile/DataCarousel"
           data-dojo-props='store:sampleStore, height:"150px", navButton:true, numVisible:2, title:"Category"'>
   </div>
-  <div id="msg" data-dojo-type="dojox.mobile.RoundRect" style="font-size:14px"></div>
+  <div id="msg" data-dojo-type="dojox/mobile/RoundRect" style="font-size:14px"></div>
 
 .. js ::
 
@@ -275,7 +278,7 @@ You can initially filter items by using "query" parameter. This example filters 
 
 .. html ::
 
-  <!-- Need to load the theme files for Carousel and PageIndicator as well as base theme file -->
+  <!-- Need to load the theme files for Carousel and PageIndicator as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','Carousel','PageIndicator']"></script>
 
@@ -290,9 +293,9 @@ You can initially filter items by using "query" parameter. This example filters 
 
 .. html ::
 
-  <div data-dojo-type="dojo.data.ItemFileReadStore" 
+  <div data-dojo-type="dojo/data/ItemFileReadStore" 
       data-dojo-id="sampleStore" data-dojo-props='url:"sample.json"'></div>
-  <div id="carousel1" data-dojo-type="dojox.mobile.DataCarousel"
+  <div id="carousel1" data-dojo-type="dojox/mobile/DataCarousel"
       data-dojo-props='store:sampleStore, height:"150px", navButton:true, numVisible:2, 
                        title:"Category", query:{value:"s*"}'>
   </div>
@@ -314,8 +317,8 @@ You can initially filter items by using "query" parameter. This example filters 
 Using various widgets as an item of Carousel
 --------------------------------------------
 
-You can use other various widgets than :ref:`dojox.mobile.CarouselItem <dojox/mobile/CarouselItem>` as an item of DataCarousel widget by specifying the widget class name to the "type" parameter of json object in the data store.
-This example uses :ref:`dojox.mobile.ContentPane <dojox/mobile/ContentPane>` and `dijit.CalendarLite <dijit/CalendarLite>`_ widgets as well as CarouselItem widget.
+You can use other various widgets than :ref:`dojox/mobile/CarouselItem <dojox/mobile/CarouselItem>` as an item of DataCarousel widget by specifying the widget class name to the "type" parameter of json object in the data store.
+This example uses :ref:`dojox/mobile/ContentPane <dojox/mobile/ContentPane>` and `dijit.CalendarLite <dijit/CalendarLite>`_ widgets as well as CarouselItem widget.
 
 .. html ::
 
@@ -336,9 +339,9 @@ This example uses :ref:`dojox.mobile.ContentPane <dojox/mobile/ContentPane>` and
 
 .. html ::
 
-  <div data-dojo-type="dojo.data.ItemFileReadStore" 
+  <div data-dojo-type="dojo/data/ItemFileReadStore" 
       data-dojo-id="sampleStore" data-dojo-props='url:"sample2.json"'></div>
-  <div id="carousel1" data-dojo-type="dojox.mobile.DataCarousel"
+  <div id="carousel1" data-dojo-type="dojox/mobile/DataCarousel"
       data-dojo-props='store:sampleStore, height:"250px", navButton:true, numVisible:1, title:"Category"'>
   </div>
 
@@ -347,7 +350,7 @@ This example uses :ref:`dojox.mobile.ContentPane <dojox/mobile/ContentPane>` and
   // sample2.json
   {
       "items": [
-          { "type": "dojox.mobile.ContentPane", "props": 'href:"data/fragment.html"' },
+          { "type": "dojox/mobile/ContentPane", "props": 'href:"data/fragment.html"' },
           { "type": "dijit.CalendarLite" },
           { "src": "images/shell.jpg", "value": "shell", "headerText": "shell" }
       ]
@@ -356,7 +359,7 @@ This example uses :ref:`dojox.mobile.ContentPane <dojox/mobile/ContentPane>` and
 .. html ::
 
   <!-- data/fragment.html (HTML fragment file) -->
-  <div dojoType="dojox.mobile.RoundRect" shadow="true">
+  <div data-dojo-type="dojox/mobile/RoundRect" shadow="true">
       <p><img src="images/tab-icon-33h.png" align="left" width="60" height="60">
       Dojo Mobile is a world class HTML5 mobile JavaScript framework 
       that enables rapid development of mobile web applications with 

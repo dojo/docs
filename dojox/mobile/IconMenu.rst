@@ -51,7 +51,7 @@ Declarative example
 
 .. html ::
 
-  <!-- Need to load the theme file for IconMenu as well as base theme file -->
+  <!-- Need to load the theme file for IconMenu as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','IconMenu']"></script>
 
@@ -88,7 +88,7 @@ Programmatic example
 
 .. html ::
 
-  <!-- Need to load the theme file for IconMenu as well as base theme file -->
+  <!-- Need to load the theme file for IconMenu as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','IconMenu']"></script>
 

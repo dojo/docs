@@ -14,7 +14,12 @@ dojox.mobile.Container
 Introduction
 ============
 
-Container is a simple container widget that can be used for any purposes. It inherits from :ref:`dojox.mobile.Pane <dojox/mobile/Pane>` and dijit._Container. It is a widget, but can be regarded as a simple <div> element.
+dojox/mobile/Container is a simple <div>-wrapper container widget. 
+It inherits from :ref:`dojox.mobile.Pane <dojox/mobile/Pane>` and dijit/_Container.
+Unlike View, Container has no special functionality. It can be used for any purpose — 
+for example, as a container pane for Accordion, FixedSplitter, GridLayout, and so on, 
+or for creating a partial area in a view.
+
 
 Constructor Parameters
 ======================

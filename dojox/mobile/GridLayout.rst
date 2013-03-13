@@ -14,9 +14,19 @@ dojox.mobile.GridLayout
 Introduction
 ============
 
-GridLayout is a widget which layouts its children div elements into a grid.  Use this widget when you want to keep the number of columns fixed. For example, if cols is 2 and the number of children div elements is 6, this widget layouts its children div elements into 2 rows and 3 columns. The width of the children changes appropriately to cater for the number of columns. If cols is 0, this widget layouts its children div elements in order according to width of the children div elements. The width of the children does not change. It is useful when changing the layout by orientation change or screen size change (for fixed sized objects).
+GridLayout is a container widget that places its child widgets in a grid layout. 
+Each child must be a container widget such as dojox/mobile/Pane.
+Use this widget when you want to keep the number of columns fixed. For example, 
+if the parameter ``cols`` is set to 2 and the number of children div elements is 6, this 
+widget places its children div elements into 2 rows and 3 columns. 
+The width of the children changes appropriately to cater for the number of columns. 
+If ``cols`` is 0, this widget places its children div elements by ordering them accordingly 
+to the width of the children div elements. This widget does not change the width of the children. 
+This widget is useful for adapting automatically the layout of widgets with fixed side 
+when the orientation of mobile devices changes, or when the screen size changes.
 
-This widget affects its immediate children div elements only. For example, if you want to layout button elements, you need to wrap them with div elements.
+This widget manages its immediate children div elements only. For example, if you 
+want to lay out button elements, you need to wrap them with div elements.
 
 .. image :: GridLayout.png
 

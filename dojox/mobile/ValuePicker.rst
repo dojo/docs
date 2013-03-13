@@ -14,7 +14,9 @@ dojox.mobile.ValuePicker
 Introduction
 ============
 
-ValuePicker is a widget for selecting some values. The values can be selected by using the Plus or Minus buttons, or you can type the value directly in the input field. This type of value pickers are typically seen on Android devices.
+ValuePicker is a widget for selecting values. The values can be selected by using 
+the Plus or Minus buttons, or by entering the value directly into the input field. 
+This type of value picker is typically seen on Android devices.
 
 .. image :: ValuePicker.png
 

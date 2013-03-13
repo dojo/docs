@@ -67,12 +67,12 @@ You can load external views from the URL of an html fragment or a JSON data by u
 .. html ::
 
   <!-- data/view1.html (HTML fragment file) -->
-  <div id="view1" dojoType="dojox.mobile.View">
-      <h1 dojoType="dojox.mobile.Heading" back="Home" moveTo="home">view1.html</h1>
-      <ul dojoType="dojox.mobile.EdgeToEdgeList">
-          <li dojoType="dojox.mobile.ListItem">Jack Coleman</li>
-          <li dojoType="dojox.mobile.ListItem">James Evans</li>
-          <li dojoType="dojox.mobile.ListItem">Jason Griffin</li>
+  <div id="view1" data-dojo-type="dojox.mobile.View">
+      <h1 data-dojo-type="dojox.mobile.Heading" back="Home" moveTo="home">view1.html</h1>
+      <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
+          <li data-dojo-type="dojox.mobile.ListItem">Jack Coleman</li>
+          <li data-dojo-type="dojox.mobile.ListItem">James Evans</li>
+          <li data-dojo-type="dojox.mobile.ListItem">Jason Griffin</li>
       </ul>
   </div>
 

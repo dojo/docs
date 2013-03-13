@@ -89,7 +89,7 @@ In this example, icon content is shown below the icons, and only one icon conten
 
 .. html ::
 
-  <!-- Need to load the theme file for IconContainer as well as base theme file -->
+  <!-- Need to load the theme file for IconContainer as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','IconContainer']"></script>
 
@@ -127,7 +127,7 @@ In this example, icon content is shown below the icons, and multiple icon conten
 
 .. html ::
 
-  <!-- Need to load the theme file for IconContainer as well as base theme file -->
+  <!-- Need to load the theme file for IconContainer as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','IconContainer']"></script>
 
@@ -165,7 +165,7 @@ In this example, selecting an icon causes a flip transition to show the icon con
 
 .. html ::
 
-  <!-- Need to load the theme file for IconContainer as well as base theme file -->
+  <!-- Need to load the theme file for IconContainer as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','IconContainer']"></script>
 
@@ -203,7 +203,7 @@ In this example, selecting an icon causes a flip transition to show the icon con
 
 .. html ::
 
-  <!-- Need to load the theme file for IconContainer as well as base theme file -->
+  <!-- Need to load the theme file for IconContainer as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','IconContainer']"></script>
 
@@ -244,7 +244,7 @@ When you click "Home" button in header, it returns to the Home view with a zoomO
 
   <!-- Need to load stylesheets for zoomIn/zoomOut transtions -->
   <link href="dojox/mobile/themes/common/transitions.css" rel="stylesheet"/>
-  <!-- Need to load the theme file for IconContainer as well as base theme file -->
+  <!-- Need to load the theme file for IconContainer as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','IconContainer']"></script>
 
@@ -284,7 +284,7 @@ You can show a badge (:ref:`dojox.mobile.Badge <dojox/mobile/Badge>`) on an Icon
 
   <!-- Need to load stylesheets for badge class -->
   <link href="dojox/mobile/themes/common/domButtons/DomButtonRedBadge.css" rel="stylesheet"/>
-  <!-- Need to load the theme file for IconContainer as well as base theme file -->
+  <!-- Need to load the theme file for IconContainer as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','IconContainer']"></script>
 
