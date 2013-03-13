@@ -424,16 +424,26 @@ dojox/calendar
       * item: The render item. To change editing behavior set the startTime and/or endTime of this object.
       * storeItem: the store item. You may want to access some properties of the store item to determine the editing logic.
       * The tests/editing.html shows an example.
-   * In 1.8, the dojox.calendar.Calendar methods called isItemEditable, isItemMoveEnabled and isItemResizeEnabled took as first parameter the internal render item which that was not useful. Now the store data item is passed.
+   * In 1.8, the dojox/calendar/Calendar methods called isItemEditable, isItemMoveEnabled and isItemResizeEnabled took as first parameter the internal render item which that was not useful. Now the store data item is passed.
 
 dojox/gfx
 ---------
 
    * Add dashed stroke support to canvas renderer. If the browser implements the (new) HTML5 dash api (context2d.setLineDash()) then the gfx renderer uses it. Otherwise, it relies on a custom (canvas- specific) implementation.
 
-dojo/treemap
+dojox/treemap
 ------------
    * Query options to be set when querying the store can now be specified on the treemap using queryOptions property.
+
+dojox/form/manager
+------------------
+   * ``dojox/form/Form`` now inherits from ``dijit/_WidgetsInTemplateMixin``.
+   * The ``dojox/form/manager`` package has been converted to use dojo/on instead of ``dojo/connect`` (`#16288`_) and the test pages have been made more robust and converted to AMD (`#16289`_).
+   * The ``observer`` attribute used by ``dojox/form/Manager`` has been changed to the HTML5-valid ``data-dojo-observer`` (`#13449`_).
+
+.. _#16288: http://bugs.dojotoolkit.org/ticket/16288
+.. _#16289: http://bugs.dojotoolkit.org/ticket/16289
+.. _#13449: http://bugs.dojotoolkit.org/ticket/13449
 
 Util
 ====
