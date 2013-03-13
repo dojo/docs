@@ -38,6 +38,8 @@ Utility Classes
 
 Utility methods and classes used by widgets or by applications with widgets.
 
+* :ref:`dijit.a11y <dijit/a11y>` - functions about tab index
+
 * :ref:`dijit.focus <dijit/focus>` - keeps track of focused node and active widgets
 
 * :ref:`dijit.place <dijit/place>` - low level code for positioning popups / drop downs

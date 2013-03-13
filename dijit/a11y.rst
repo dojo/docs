@@ -1,0 +1,9 @@
+.. _dijit/a11y:
+
+dijit/a11y
+==========
+
+.. contents::
+   :depth: 2
+
+The dijit/a11y module contains functions related to tab index.
