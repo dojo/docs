@@ -16,7 +16,7 @@ Introduction
 
 The dojox calendar widget displays events from a data store along time using widespread representation and allows to interactively edit the position in time and duration of these events.
 
-**Note**: On a supported version of Internet Explorer a standard doctype must be set on the page that includes the calendar for the calendar to be supported.
+**Note**: On a supported version of Internet Explorer a standard doctype must be set on the page that includes the calendar for the calendar to be supported (see http://www.w3.org/QA/2002/04/valid-dtd-list.html).
 
 **Terminology:** The "event" word can be interpreted in several ways in a calendar application context. So in this documentation we will use the following words to prevent confusion:
    * **data item**: item from the data store. A data item is the data representation of an event (e.g. Meeting at 9am to 10am).
