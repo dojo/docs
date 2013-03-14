@@ -597,7 +597,7 @@ is changed to:
 .. js ::
 
   require(["dojo/aspect"], function(aspect){
-    var handle = aspect.after(myInstance, "execute", callback);
+    var handle = aspect.after(myInstance, "execute", callback, true);
     /  ...
     handle.remove();
   });
@@ -611,7 +611,7 @@ Quick Reference
 =================================================   ============================   ====================================
 1.x syntax                                          2.0 module                     2.0 syntax
 =================================================   ============================   ====================================
-dojo.connect(obj,method,cb)                         dojo/aspect                    aspect.after(obj,method,cb)
+dojo.connect(obj,method,cb)                         dojo/aspect                    aspect.after(obj,method,cb,true)
 dojo.disconnect(handle)                                                            handle.remove();
 =================================================   ============================   ====================================
 
@@ -1296,7 +1296,7 @@ _setFooAttr:...                                     widget definitions          
 this._focused                                       widget definitions             this.focused
 this._supportingWidgets.push(...)                   widget definitions             this.own(...)
 this.connect(node, "onclick", "myMethod")           widget definitions             this.own(on(node, "click", lang.hitch(this, "myMethod")))
-this.connect(obj, func, "myMethod")                 widget definitions             this.own(aspect.after(obj, func, lang.hitch(this, "myMethod")))
+this.connect(obj, func, "myMethod")                 widget definitions             this.own(aspect.after(obj, func, lang.hitch(this, "myMethod"), true))
 this.subscribe(topicName, "myMethod")               widget definitions             this.own(topic(topicName, lang.hitch(this, "myMethod"))) but note that arguments to myMethod are passed as varargs not array
 =================================================   ============================   ====================================
 
