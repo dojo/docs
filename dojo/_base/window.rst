@@ -7,14 +7,37 @@ dojo/_base/window
 .. contents ::
     :depth: 2
 
-**dojo/_base/window** serves two purposes:
+*Deprecated*.
 
-   - It provides methods/variables to access the current document and the ``<body>`` element of the current document
-     These should be used along with :ref:`dojo/_base/kernel::global <dojo/_base/kernel#global>` as an abstraction
-     in application code.
+Reasons for deprecation
+=======================
 
-   - It provides functions to switch the "current document", i.e. the document accessed by the methods/variables
-     mentioned above.
+**dojo/_base/window** was originally written to serve two main purposes:
+
+   - Provide methods/variables to access the current document and the ``<body>`` element of the current document.
+
+   - Provide functions to switch the "current document", i.e. the document accessed by the methods/variables
+     mentioned above, and indirectly by DOM methods where the document isn't implied by the arguments, for example
+     ``dojo.byId("xyz")``.
+
+In modern code, you can usually forgo use of this module, and instead just:
+
+   - Use the ``window``, ``document``, and ``document.body`` global variables, or equivalent variables
+     for the frame that you want to operate on.
+
+   - If you need to operate on a different frame/document, all of the modern dojo DOM related methods either take a document
+     parameter or a DOMNode parameter (which implies a document).   For example:
+
+.. js ::
+
+     require(["dojo/dom", "dojo/dom-geometry"], function(dom, domGeom){
+         var node = dom.byId("address", myDocument);
+         domGeom.setMarginBox(node, ...);
+     });
+
+
+Here's the original documentation for the dojo/_base/window methods, preserved for posterity:
+
 
 
 Accessing the Current Document

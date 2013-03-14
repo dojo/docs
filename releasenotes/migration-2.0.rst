@@ -249,7 +249,33 @@ dojo.deprecated                                     dojo/_base/kernel           
 dojo.experimental                                   dojo/_base/kernel              kernel.experimental
 dojo.version                                        dojo/_base/kernel              kernel.version
 dojo.eval                                           dojo/json                      native eval() or json.parse() for json
+dojo.global                                         dojo/_base/kernel              kernel.global
 =================================================   ============================   ====================================
+
+``global`` is an alias for the global scope that was designed to work both in a browser environment
+(where it points to ``window``), and a server environment.
+
+With modern AMD code, hopefully globals are completely unnecessary.
+If you do need to create/read a global, then the following pattern is preferred:
+
+.. js ::
+
+   require([...], function(...){
+        var global = this;
+        ...
+        global.myVariable = "hello world";
+   });
+
+For strict modules, there's a slightly more complicated syntax:
+
+.. js ::
+
+   "use strict";
+   require([...], function(...){
+        var global = Function("return this")();
+        ...
+        global.myVariable = "hello world";
+   });
 
 dojo/_base/array
 ~~~~~~~~~~~~~~~~
@@ -726,6 +752,31 @@ dojo.objectToQuery                                  dojo/io-query               
 
 dojo/_base/window
 ~~~~~~~~~~~~~~~~~
+
+**dojo/_base/window** was originally written to serve two main purposes:
+
+   - Provide methods/variables to access the current document and the ``<body>`` element of the current document.
+
+   - Provide functions to switch the "current document", i.e. the document accessed by the methods/variables
+     mentioned above, and indirectly by DOM methods where the document isn't implied by the arguments, for example
+     ``dojo.byId("xyz")``.
+
+In modern code, you can usually forgo use of this module, and instead just:
+
+   - Use the ``window``, ``document``, and ``document.body`` global variables, or equivalent variables
+     for the frame that you want to operate on.
+
+   - If you need to operate on a different frame/document, all of the modern dojo DOM related methods either take a document
+     parameter or a DOMNode parameter (which implies a document).   For example:
+
+.. js ::
+
+     require(["dojo/dom", "dojo/dom-geometry"], function(dom, domGeom){
+         var node = dom.byId("address", myDocument);
+         domGeom.setMarginBox(node, ...);
+     });
+
+In V1.9 (and earlier) the old methods are still accessible through AMD via:
 
 =================================================   ============================   ====================================
 1.x syntax                                          2.0 module                     2.0 syntax

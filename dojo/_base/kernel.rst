@@ -7,7 +7,9 @@ dojo/_base/kernel
 .. contents ::
   :depth: 2
 
-**dojo/_base/kernel** is a module that contains some of the very basic features that are part of Dojo.  The module us not usually required directly by end developers, unless required for creating additional modules that are part of the toolkit.
+**dojo/_base/kernel** is a module that contains some of the very basic features that are part of Dojo.
+The module us not usually required directly by end developers, unless required for creating additional modules
+that are part of the toolkit.
 
 Usage
 =====
@@ -19,7 +21,7 @@ automatically loaded, you should require it in to have access to its features:
 .. js ::
 
   define(["dojo/_base/kernel"], function(kernel){
-    // kernal has the module's features
+    // kernel has the module's features
   });
 
 Features
@@ -30,7 +32,9 @@ Features
 deprecated()
 ------------
 
-This function logs a warning message to the console, alerting developers a method or package has been removed, replaced, or otherwise has been changed, and they are using an "older" version of the method.  ``isDebug`` needs to be set to ``true`` for these messages to appear.
+This function logs a warning message to the console, alerting developers a method or package has been removed, replaced,
+or otherwise has been changed, and they are using an "older" version of the method.
+``isDebug`` needs to be set to ``true`` for these messages to appear.
 
 .. js ::
 
@@ -38,7 +42,8 @@ This function logs a warning message to the console, alerting developers a metho
     kernel.deprecated("dijit.layout.SplitContainer", "Use dijit.layout.BorderContainer instead", "2.0");
   });
 
-This means the "SplitContainer" widget still works, but has been replaced by the :ref:`BorderContainer <dijit/layout/BorderContainer>` widget, and will be removed in Dojo 2.0.
+This means the "SplitContainer" widget still works, but has been replaced by the
+:ref:`BorderContainer <dijit/layout/BorderContainer>` widget, and will be removed in Dojo 2.0.
 
 The signature of the method is:
 
@@ -73,22 +78,30 @@ The signature of the method is:
 global
 ------
 
-``global`` is an alias for the global scope.
+*Deprecated*.  ``global`` is an alias for the global scope that was designed to work both in a browser environment
+(where it points to ``window``), and a server environment.
 
-In a browser environment, global is the window object. You should refer to `global` rather than `window` so that your 
-code will run correctly in other contexts (e.g. Rhino or NodeJS).
+With modern AMD code, hopefully globals are completely unnecessary.
+If you do need to create/read a global, then the following pattern is preferred:
 
 .. js ::
 
-  // connect a global "onclick" handler
-  require(["dojo/_base/kernel", "dojo/on"], function(kernel, on){
-    on(kernel.global, "click", function(e){
-      console.log("clicked: ", e.target);
-    });
-  });
+   require([...], function(...){
+        var global = this;
+        ...
+        global.myVariable = "hello world";
+   });
 
-Though this example is clearly targeted at a browser environment, by using ``global`` over the ``window`` object we 
-are ensuring the code will run in any other environments with a defined host environment file.
+For strict modules, there's a slightly more complicated syntax:
+
+.. js ::
+
+   "use strict";
+   require([...], function(...){
+        var global = Function("return this")();
+        ...
+        global.myVariable = "hello world";
+   });
 
 See also :ref:`dojo/_base/window::withGlobal <dojo/_base/window#withglobal>`.
 
@@ -97,7 +110,9 @@ See also :ref:`dojo/_base/window::withGlobal <dojo/_base/window#withglobal>`.
 locale
 ------
 
-``locale`` contains the locale for loading localized resources, specified according to `RFC 3066 <http://www.ietf.org/rfc/rfc3066.txt>`_.  This string can be specified with the help of :ref:`dojo/_base/config::locale <dojo/_base/config#locale`.
+``locale`` contains the locale for loading localized resources, specified according to
+`RFC 3066 <http://www.ietf.org/rfc/rfc3066.txt>`_.
+This string can be specified with the help of :ref:`dojo/_base/config::locale <dojo/_base/config#locale`.
 
 A simple reference of locale:
 
