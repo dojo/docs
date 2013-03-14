@@ -11,6 +11,8 @@ dojox.mobile.app
 .. contents ::
     :depth: 2
 
+*Deprecated*. Since V1.8, use :ref:`dojox/app <dojox/app>` instead.
+
 ``dojox.mobile.app`` provides a simple framework to develop mobile web applications. It handles view definitions and resources in a declarative fashion.
 
 Initialization

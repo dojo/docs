@@ -1,7 +1,7 @@
 .. _dojox/mobile/EdgeToEdgeCategory:
 
 ===============================
-dojox.mobile.EdgeToEdgeCategory
+dojox/mobile/EdgeToEdgeCategory
 ===============================
 
 :Authors: Yoshiroh Kamiyama
@@ -42,4 +42,4 @@ Declarative example
 
 .. html ::
 
-  <h2 data-dojo-type="dojox.mobile.EdgeToEdgeCategory">J</h2>
+  <h2 data-dojo-type="dojox/mobile/EdgeToEdgeCategory">J</h2>

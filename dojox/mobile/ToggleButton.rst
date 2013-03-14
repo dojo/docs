@@ -1,7 +1,7 @@
 .. _dojox/mobile/ToggleButton:
 
 =========================
-dojox.mobile.ToggleButton
+dojox/mobile/ToggleButton
 =========================
 
 :Authors: Doug Hays
@@ -43,7 +43,7 @@ Simple ToggleButton
 
 .. html ::
 
-  <button data-dojo-type="dojox.mobile.ToggleButton" checked="true">Toggle me</button>
+  <button data-dojo-type="dojox/mobile/ToggleButton" checked="true">Toggle me</button>
 
 .. image :: SimpleMobileToggleButton.png
 
@@ -53,7 +53,7 @@ onChange handler in HTML5 format
 
 .. html ::
 
-  <button data-dojo-type="dojox.mobile.ToggleButton" data-dojo-props='
+  <button data-dojo-type="dojox/mobile/ToggleButton" data-dojo-props='
         label:"Toggle me too",
         onChange:function(checked){ alert("checked state changed to " + checked); }'></button>
 

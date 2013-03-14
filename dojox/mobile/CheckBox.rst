@@ -1,7 +1,7 @@
 .. _dojox/mobile/CheckBox:
 
 =====================
-dojox.mobile.CheckBox
+dojox/mobile/CheckBox
 =====================
 
 :Authors: Doug Hays
@@ -39,7 +39,7 @@ Simple CheckBox
 
 .. html ::
 
-  <input data-dojo-type="dojox.mobile.CheckBox" type="checkbox" />
+  <input data-dojo-type="dojox/mobile/CheckBox" type="checkbox" />
 
 .. image :: SimpleMobileCheckBox.png
 
@@ -49,7 +49,7 @@ onChange handler in HTML5 format
 
 .. html ::
 
-  <input data-dojo-type="dojox.mobile.CheckBox" type="checkbox" data-dojo-props='
+  <input data-dojo-type="dojox/mobile/CheckBox" type="checkbox" data-dojo-props='
         onChange:function(checked){ alert("checked state changed to " + checked); },
         checked:true' />
 

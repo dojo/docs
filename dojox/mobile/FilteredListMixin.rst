@@ -15,7 +15,7 @@ Introduction
 This mixin adds filtering capabilities to all dojox/mobile list widgets: 
 :ref:`dojox/mobile/RoundRectList <dojox/mobile/RoundRectList>` and any of its subclasses
 (:ref:`dojox/mobile/RoundRectStoreList <dojox/mobile/RoundRectStoreList>`, 
-:ref:`dojox/mobile/RoundRectList <dojox/mobile/RoundRectList>`, 
+:ref:`dojox/mobile/RoundRectDataList <dojox/mobile/RoundRectDataList>`, 
 :ref:`dojox/mobile/EdgeToEdgeList <dojox/mobile/EdgeToEdgeList>`, 
 :ref:`dojox/mobile/EdgeToEdgeStoreList <dojox/mobile/EdgeToEdgeStoreList>`, 
 :ref:`dojox/mobile/EdgeToEdgeDataList <dojox/mobile/EdgeToEdgeDataList>`). 

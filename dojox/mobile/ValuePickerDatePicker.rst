@@ -1,7 +1,7 @@
 .. _dojox/mobile/ValuePickerDatePicker:
 
 ==================================
-dojox.mobile.ValuePickerDatePicker
+dojox/mobile/ValuePickerDatePicker
 ==================================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,14 +14,14 @@ dojox.mobile.ValuePickerDatePicker
 Introduction
 ============
 
-ValuePickerDatePicker is a date picker widget. It is a subclass of :ref:`dojox.mobile.ValuePicker <dojox/mobile/ValuePicker>`. It has the year, month, and day slots.
+ValuePickerDatePicker is a date picker widget. It is a subclass of :ref:`dojox/mobile/ValuePicker <dojox/mobile/ValuePicker>`. It has the year, month, and day slots.
 
 .. image :: ValuePickerDatePicker.png
 
 Constructor Parameters
 ======================
 
-Inherited from dojox.mobile._DatePickerMixin
+Inherited from dojox/mobile/_DatePickerMixin
 --------------------------------------------
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
@@ -62,7 +62,7 @@ Declarative example
 
 .. html ::
 
-  <div id="picker1" data-dojo-type="dojox.mobile.ValuePickerDatePicker"></div>
+  <div id="picker1" data-dojo-type="dojox/mobile/ValuePickerDatePicker"></div>
 
 
 Programmatic example

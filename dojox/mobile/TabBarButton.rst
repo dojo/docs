@@ -1,7 +1,7 @@
 .. _dojox/mobile/TabBarButton:
 
 =========================
-dojox.mobile.TabBarButton
+dojox/mobile/TabBarButton
 =========================
 
 :Authors: Yoshiroh Kamiyama
@@ -11,14 +11,14 @@ dojox.mobile.TabBarButton
 .. contents ::
     :depth: 2
 
-TabBarButton is a button that is placed in the TabBar widget. It is a subclass of dojox.mobile._ItemBase just like ListItem or IconItem. So, unlike Button, it has similar capability as ListItem or IconItem, such as icon support, transition, etc.
+TabBarButton is a button that is placed in the TabBar widget. It is a subclass of dojox/mobile/_ItemBase just like ListItem or IconItem. So, unlike Button, it has similar capability as ListItem or IconItem, such as icon support, transition, etc.
 
 .. image :: TabBarButton.png
 
 Constructor Parameters
 ======================
 
-Inherited from dojox.mobile._ItemBase
+Inherited from dojox/mobile/_ItemBase
 -------------------------------------
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
@@ -33,7 +33,7 @@ Inherited from dojox.mobile._ItemBase
 |              |          |         |transition slides the view from right to left when dir == 1, and from left to right when dir == -1.        |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |moveTo        |String    |""       |The id of the transition destination view which resides in the current page. If the value has a hash sign  |
-|              |          |         |('#') before the id (e.g. #view1) and the dojo.hash module (=the dojox.mobile.bookmarkable module since    |
+|              |          |         |('#') before the id (e.g. #view1) and the dojo/hash module (=the dojox/mobile/bookmarkable module since    |
 |              |          |         |V1.8) is loaded by the user application, the view transition updates the hash in the browser URL so that   |
 |              |          |         |the user can bookmark the destination view. In this case, the user can also use the browser's back/forward |
 |              |          |         |button to navigate through the views in the browser history. If null, transitions to a blank view. If '#', |
@@ -94,9 +94,9 @@ Parameters from this widget
 Usage
 =====
 
-Use this widget as child widgets of the :ref:`dojox.mobile.TabBar <dojox/mobile/TabBar>` widget.
+Use this widget as child widgets of the :ref:`dojox/mobile/TabBar <dojox/mobile/TabBar>` widget.
 
 Examples
 ========
 
-See the :ref:`dojox.mobile.TabBar <dojox/mobile/TabBar>` widget for various examples.
+See the :ref:`dojox/mobile/TabBar <dojox/mobile/TabBar>` widget for various examples.

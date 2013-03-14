@@ -1,7 +1,7 @@
 .. _dojox/mobile/SearchBox:
 
 ======================
-dojox.mobile.SearchBox
+dojox/mobile/SearchBox
 ======================
 
 :Authors: Doug Hays
@@ -41,7 +41,7 @@ list widgets (for details, see :ref:`dojox/mobile/FilteredListMixin <dojox/mobil
 Constructor Parameters
 ======================
 
-Relative attributes inherited from dojox.mobile.TextBox
+Relative attributes inherited from dojox/mobile/TextBox
 -------------------------------------------------------
 
 +--------------+----------+-------------------------+-----------------------------------------------------------------------------------------------------------+
@@ -60,7 +60,7 @@ Relative attributes inherited from dojox.mobile.TextBox
 |trim          |Boolean   | false                   |Remove leading and trailing spaces.                                                                        |
 +--------------+----------+-------------------------+-----------------------------------------------------------------------------------------------------------+
 
-Inherited from dijit.form._SearchMixin
+Inherited from dijit/form/_SearchMixin
 --------------------------------------
 
 +----------------+---------------------+--------------+-----------------------------------------------------------------------------------------------------------+
@@ -68,7 +68,7 @@ Inherited from dijit.form._SearchMixin
 +----------------+---------------------+--------------+-----------------------------------------------------------------------------------------------------------+
 |pageSize        |Integer              | Infinity     |Maximum number of search results to return per query.                                                      |
 +----------------+---------------------+--------------+-----------------------------------------------------------------------------------------------------------+
-|store           |dojo.store.api.Store | null         |Data provider object used by this SearchBox.                                                               |
+|store           |dojo/store/api/Store | null         |Data provider object used by this SearchBox.                                                               |
 +----------------+---------------------+--------------+-----------------------------------------------------------------------------------------------------------+
 |fetchProperties |Object               | {}           |Mixin to the store's fetch, for example: { sort: [{attribute:"name",descending: true}] }                   |
 +----------------+---------------------+--------------+-----------------------------------------------------------------------------------------------------------+
@@ -97,7 +97,7 @@ Attributes from this widget
 Examples
 ========
 
-Using a dojo.store and nextPage function
+Using a dojo/store and nextPage function
 ----------------------------------------
 
 .. js ::
@@ -175,15 +175,15 @@ Using inline OPTION tags
 
 .. html ::
 
-  <select data-dojo-type="dijit.form.DataList" data-dojo-props='id:"dataList"' >
+  <select data-dojo-type="dijit/form/DataList" data-dojo-props='id:"dataList"' >
     <option>Alabama</option>
     <option>Alaska</option>
     <option>American Samoa</option>
     <option>Arizona</option>
     <option>Arkansas</option>
   </select>
-  <input data-dojo-type="dojox.mobile.SearchBox" type="search" placeHolder="Search"
+  <input data-dojo-type="dojox/mobile/SearchBox" type="search" placeHolder="Search"
     data-dojo-props='list:"dataList", ignoreCase: true, onSearch:onSearch'>
-  <ul data-dojo-type="dojox.mobile.RoundRectList" jsId="list"></ul>
+  <ul data-dojo-type="dojox/mobile/RoundRectList" jsId="list"></ul>
 
 .. image :: SearchBox.png

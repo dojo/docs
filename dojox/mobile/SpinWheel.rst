@@ -1,7 +1,7 @@
 .. _dojox/mobile/SpinWheel:
 
 ======================
-dojox.mobile.SpinWheel
+dojox/mobile/SpinWheel
 ======================
 
 :Authors: Yoshiroh Kamiyama
@@ -38,24 +38,24 @@ Declarative example
 
 .. html ::
 
-  <div id="view1" data-dojo-type="dojox.mobile.View">
-      <h1 data-dojo-type="dojox.mobile.Heading">Custom SpinWheel</h1>
-      <div id="spin1" data-dojo-type="dojox.mobile.SpinWheel">
-       <div data-dojo-type="dojox.mobile.SpinWheelSlot"
+  <div id="view1" data-dojo-type="dojox/mobile/View">
+      <h1 data-dojo-type="dojox/mobile/Heading">Custom SpinWheel</h1>
+      <div id="spin1" data-dojo-type="dojox/mobile/SpinWheel">
+       <div data-dojo-type="dojox/mobile/SpinWheelSlot"
            labels="['A','B','C','D','E','F','G','H','I','J','K']"
            style="text-align:center;width:40px;"></div>
-       <div data-dojo-type="dojox.mobile.SpinWheelSlot"
+       <div data-dojo-type="dojox/mobile/SpinWheelSlot"
            labelFrom="3000" labelTo="3100"
            style="width:70px;"></div>
        <div id="pt" class="mblSpinWheelSlot"></div>
        <div id="txt" class="mblSpinWheelSlot">.</div>
-       <div data-dojo-type="dojox.mobile.SpinWheelSlot"
+       <div data-dojo-type="dojox/mobile/SpinWheelSlot"
            labelFrom="0" labelTo="9"
            style="width:30px;"></div>
-       <div data-dojo-type="dojox.mobile.SpinWheelSlot"
+       <div data-dojo-type="dojox/mobile/SpinWheelSlot"
            labels="['pt','px','cm']"
            style="width:50px;"></div>
-       <div data-dojo-type="dojox.mobile.SpinWheelSlot"
+       <div data-dojo-type="dojox/mobile/SpinWheelSlot"
            labels="[
                '<img src=images/i-icon-1.png>',
                '<img src=images/i-icon-2.png>',

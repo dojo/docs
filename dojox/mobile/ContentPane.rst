@@ -1,7 +1,7 @@
 .. _dojox/mobile/ContentPane:
 
 ========================
-dojox.mobile.ContentPane
+dojox/mobile/ContentPane
 ========================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,7 +14,7 @@ dojox.mobile.ContentPane
 Introduction
 ============
 
-ContentPane is a very simple and lightweight content pane to embed an HTML fragment. It can be regarded as a <div> element, but has ability to embed an HTML fragment and run the parser. The onLoad() handler is called when parsing is done and the content is ready. Compared with dijit.layout.ContentPane, this widget provides only basic fuctionality, but it is much smaller than dijit.layout.ContentPane.
+ContentPane is a very simple and lightweight content pane to embed an HTML fragment. It can be regarded as a <div> element, but has ability to embed an HTML fragment and run the parser. The onLoad() handler is called when parsing is done and the content is ready. Compared with dijit/layout/ContentPane, this widget provides only basic fuctionality, but it is much smaller than dijit/layout/ContentPane.
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default  |Description                                                                                                |
@@ -49,23 +49,23 @@ Declarative example
 
 .. html ::
 
-  <h2 data-dojo-type="dojox.mobile.RoundRectCategory">Pane1</h2>
-  <div data-dojo-type="dojox.mobile.ContentPane"
-       data-dojo-props="content:'&lt;div data-dojo-type=&quot;dojox.mobile.RoundRect&quot; data-dojo-props=&quot;shadow:true&quot;&gt;Thank you!&lt;/div&gt;'"></div>
+  <h2 data-dojo-type="dojox/mobile/RoundRectCategory">Pane1</h2>
+  <div data-dojo-type="dojox/mobile/ContentPane"
+       data-dojo-props="content:'&lt;div data-dojo-type=&quot;dojox/mobile/RoundRect&quot; data-dojo-props=&quot;shadow:true&quot;&gt;Thank you!&lt;/div&gt;'"></div>
 
-  <h2 data-dojo-type="dojox.mobile.RoundRectCategory">Pane2</h2>
-  <div data-dojo-type="dojox.mobile.ContentPane"
+  <h2 data-dojo-type="dojox/mobile/RoundRectCategory">Pane2</h2>
+  <div data-dojo-type="dojox/mobile/ContentPane"
        data-dojo-props='href:"fragment1.html"'></div>
 
 The content of fragment1.html is as follows:
 
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-props='shadow:true'>
+  <div data-dojo-type="dojox/mobile/RoundRect" data-dojo-props='shadow:true'>
     HTML fragment example
   </div>
 
 .. image :: ContentPane.png
 
 
-See examples of :ref:`dojox.mobile.FixedSplitter <dojox/mobile/FixedSplitter>` also.
+See examples of :ref:`dojox/mobile/FixedSplitter <dojox/mobile/FixedSplitter>` also.

@@ -1,7 +1,7 @@
 .. _dojox/mobile/ValuePicker:
 
 ========================
-dojox.mobile.ValuePicker
+dojox/mobile/ValuePicker
 ========================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,7 +14,9 @@ dojox.mobile.ValuePicker
 Introduction
 ============
 
-ValuePicker is a widget for selecting some values. The values can be selected by using the Plus or Minus buttons, or you can type the value directly in the input field. This type of value pickers are typically seen on Android devices.
+ValuePicker is a widget for selecting values. The values can be selected by using 
+the Plus or Minus buttons, or by entering the value directly into the input field. 
+This type of value picker is typically seen on Android devices.
 
 .. image :: ValuePicker.png
 
@@ -38,19 +40,19 @@ Declarative example
 
 .. html ::
 
-  <div id="view1" data-dojo-type="dojox.mobile.View" selected="true">
-      <h1 data-dojo-type="dojox.mobile.Heading">Custom ValuePicker</h1>
-      <div id="spin1" data-dojo-type="dojox.mobile.ValuePicker">
-       <div data-dojo-type="dojox.mobile.ValuePickerSlot"
+  <div id="view1" data-dojo-type="dojox/mobile/View" selected="true">
+      <h1 data-dojo-type="dojox/mobile/Heading">Custom ValuePicker</h1>
+      <div id="spin1" data-dojo-type="dojox/mobile/ValuePicker">
+       <div data-dojo-type="dojox/mobile/ValuePickerSlot"
            labels="['A','B','C','D','E','F','G','H','I','J','K']"
            style="text-align:center;width:40px;"></div>
-       <div data-dojo-type="dojox.mobile.ValuePickerSlot"
+       <div data-dojo-type="dojox/mobile/ValuePickerSlot"
            labelFrom="3000" labelTo="3100"
            style="width:70px;"></div>
-       <div data-dojo-type="dojox.mobile.ValuePickerSlot"
+       <div data-dojo-type="dojox/mobile/ValuePickerSlot"
            labelFrom="0" labelTo="9"
            style="width:50px;"></div>
-       <div data-dojo-type="dojox.mobile.ValuePickerSlot"
+       <div data-dojo-type="dojox/mobile/ValuePickerSlot"
            labels="['pt','px','cm']"
            style="width:50px;"></div>
       </div>
