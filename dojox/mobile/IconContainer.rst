@@ -1,7 +1,7 @@
 .. _dojox/mobile/IconContainer:
 
 ==========================
-dojox.mobile.IconContainer
+dojox/mobile/IconContainer
 ==========================
 
 :Authors: Yoshiroh Kamiyama, Atsushi Ono
@@ -60,20 +60,20 @@ Lazy loading of the contents
 
 Each icon content may consist of one or more dojo widgets. Loading of all the necessary dojo modules of all the icon contents at startup could slow down the startup time of the application. To improve the startup time performance, you can specify the lazy="true" parameter of the IconItem. In this case IconContainer loads dojo modules, which are necessary for the icon content, dynamically only when it is opened the first time.
 
-Below is an example of lazy loading of icon contents. Before the dojo parser runs, the data-dojo-type attributes of the lazy-load nodes are rewritten so that the specified modules (in this case, dijit.ColorPalette and dijit.ProgressBar) will not be be loaded by the parser. IconContainer loads them for you when you open the icons.
+Below is an example of lazy loading of icon contents. Before the dojo parser runs, the data-dojo-type attributes of the lazy-load nodes are rewritten so that the specified modules (in this case, dijit/ColorPalette and dijit/ProgressBar) will not be be loaded by the parser. IconContainer loads them for you when you open the icons.
 
 In 1.7 and older, lazy loading is supported only in sync mode since it is performed synchronously using dojo.require.
 There is no restriction in 1.8, and you can use lazy loading in async mode as well as in sync mode.
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.IconContainer" 
+  <ul data-dojo-type="dojox/mobile/IconContainer" 
       data-dojo-props='transition:"below", iconBase:"images/icon-1.png"'>
-    <li data-dojo-type="dojox.mobile.IconItem" data-dojo-props='label:"Color Palette", lazy:true'>
-      <div data-dojo-type='dijit.ColorPalette'></div>
+    <li data-dojo-type="dojox/mobile/IconItem" data-dojo-props='label:"Color Palette", lazy:true'>
+      <div data-dojo-type='dijit/ColorPalette'></div>
     </li>
-    <li data-dojo-type="dojox.mobile.IconItem" data-dojo-props='label:"Progress Bar", lazy:true'>
-      <div data-dojo-type='dijit.ProgressBar'></div>
+    <li data-dojo-type="dojox/mobile/IconItem" data-dojo-props='label:"Progress Bar", lazy:true'>
+      <div data-dojo-type='dijit/ProgressBar'></div>
     </li>
   </ul>
 
@@ -89,7 +89,7 @@ In this example, icon content is shown below the icons, and only one icon conten
 
 .. html ::
 
-  <!-- Need to load the theme file for IconContainer as well as base theme file -->
+  <!-- Need to load the theme file for IconContainer as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','IconContainer']"></script>
 
@@ -103,16 +103,16 @@ In this example, icon content is shown below the icons, and only one icon conten
 
 .. html ::
 
-  <h1 data-dojo-type="dojox.mobile.Heading">Icon Container (Single/Below)</h1>
-  <ul data-dojo-type="dojox.mobile.IconContainer" 
+  <h1 data-dojo-type="dojox/mobile/Heading">Icon Container (Single/Below)</h1>
+  <ul data-dojo-type="dojox/mobile/IconContainer" 
       data-dojo-props='transition:"below", single:true, iconBase:"images/icon-1.png"'>
-    <li data-dojo-type="dojox.mobile.IconItem" data-dojo-props='label:"Icon 1"'>
-      <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-props='shadow:true'>
+    <li data-dojo-type="dojox/mobile/IconItem" data-dojo-props='label:"Icon 1"'>
+      <div data-dojo-type="dojox/mobile/RoundRect" data-dojo-props='shadow:true'>
          App #1
       </div>
     </li>
-    <li data-dojo-type="dojox.mobile.IconItem" data-dojo-props='label:"Icon 2"'>
-      <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-props='shadow:true'>
+    <li data-dojo-type="dojox/mobile/IconItem" data-dojo-props='label:"Icon 2"'>
+      <div data-dojo-type="dojox/mobile/RoundRect" data-dojo-props='shadow:true'>
          App #2
       </div>
     </li>
@@ -127,7 +127,7 @@ In this example, icon content is shown below the icons, and multiple icon conten
 
 .. html ::
 
-  <!-- Need to load the theme file for IconContainer as well as base theme file -->
+  <!-- Need to load the theme file for IconContainer as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','IconContainer']"></script>
 
@@ -141,16 +141,16 @@ In this example, icon content is shown below the icons, and multiple icon conten
 
 .. html ::
 
-  <h1 data-dojo-type="dojox.mobile.Heading">Icon Container (Multi/Below)</h1>
-  <ul data-dojo-type="dojox.mobile.IconContainer" 
+  <h1 data-dojo-type="dojox/mobile/Heading">Icon Container (Multi/Below)</h1>
+  <ul data-dojo-type="dojox/mobile/IconContainer" 
       data-dojo-props='transition:"below", iconBase:"images/icon-1.png"'>
-    <li data-dojo-type="dojox.mobile.IconItem" data-dojo-props='label:"Icon 1"'>
-      <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-props='shadow:true'>
+    <li data-dojo-type="dojox/mobile/IconItem" data-dojo-props='label:"Icon 1"'>
+      <div data-dojo-type="dojox/mobile/RoundRect" data-dojo-props='shadow:true'>
         App #1
       </div>
     </li>
-    <li data-dojo-type="dojox.mobile.IconItem" data-dojo-props='label:"Icon 2"'>
-      <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-props='shadow:true'>
+    <li data-dojo-type="dojox/mobile/IconItem" data-dojo-props='label:"Icon 2"'>
+      <div data-dojo-type="dojox/mobile/RoundRect" data-dojo-props='shadow:true'>
         App #2
       </div>
     </li>
@@ -165,7 +165,7 @@ In this example, selecting an icon causes a flip transition to show the icon con
 
 .. html ::
 
-  <!-- Need to load the theme file for IconContainer as well as base theme file -->
+  <!-- Need to load the theme file for IconContainer as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','IconContainer']"></script>
 
@@ -179,16 +179,16 @@ In this example, selecting an icon causes a flip transition to show the icon con
 
 .. html ::
 
-  <h1 data-dojo-type="dojox.mobile.Heading">Icon Container (Single/Flip)</h1>
-  <ul data-dojo-type="dojox.mobile.IconContainer" 
+  <h1 data-dojo-type="dojox/mobile/Heading">Icon Container (Single/Flip)</h1>
+  <ul data-dojo-type="dojox/mobile/IconContainer" 
       data-dojo-props='transition:"flip", single:true, iconBase:"images/icon-1.png"'>
-    <li data-dojo-type="dojox.mobile.IconItem" data-dojo-props='label:"Icon 1"'>
-      <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-props='shadow:true'>
+    <li data-dojo-type="dojox/mobile/IconItem" data-dojo-props='label:"Icon 1"'>
+      <div data-dojo-type="dojox/mobile/RoundRect" data-dojo-props='shadow:true'>
         App #1
       </div>
     </li>
-    <li data-dojo-type="dojox.mobile.IconItem" data-dojo-props='label:"Icon 2"'>
-      <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-props='shadow:true'>
+    <li data-dojo-type="dojox/mobile/IconItem" data-dojo-props='label:"Icon 2"'>
+      <div data-dojo-type="dojox/mobile/RoundRect" data-dojo-props='shadow:true'>
         App #2
       </div>
     </li>
@@ -203,7 +203,7 @@ In this example, selecting an icon causes a flip transition to show the icon con
 
 .. html ::
 
-  <!-- Need to load the theme file for IconContainer as well as base theme file -->
+  <!-- Need to load the theme file for IconContainer as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','IconContainer']"></script>
 
@@ -217,16 +217,16 @@ In this example, selecting an icon causes a flip transition to show the icon con
 
 .. html ::
 
-  <h1 data-dojo-type="dojox.mobile.Heading">Icon Container (Multi/Flip)</h1>
-  <ul data-dojo-type="dojox.mobile.IconContainer" 
+  <h1 data-dojo-type="dojox/mobile/Heading">Icon Container (Multi/Flip)</h1>
+  <ul data-dojo-type="dojox/mobile/IconContainer" 
       data-dojo-props='transition:"flip", iconBase:"images/icon-1.png"'>
-    <li data-dojo-type="dojox.mobile.IconItem" data-dojo-props='label:"Icon 1"'>
-      <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-props='shadow:true'>
+    <li data-dojo-type="dojox/mobile/IconItem" data-dojo-props='label:"Icon 1"'>
+      <div data-dojo-type="dojox/mobile/RoundRect" data-dojo-props='shadow:true'>
         App #1
       </div>
     </li>
-    <li data-dojo-type="dojox.mobile.IconItem" data-dojo-props='label:"Icon 2"'>
-      <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-props='shadow:true'>
+    <li data-dojo-type="dojox/mobile/IconItem" data-dojo-props='label:"Icon 2"'>
+      <div data-dojo-type="dojox/mobile/RoundRect" data-dojo-props='shadow:true'>
         App #2
       </div>
     </li>
@@ -244,7 +244,7 @@ When you click "Home" button in header, it returns to the Home view with a zoomO
 
   <!-- Need to load stylesheets for zoomIn/zoomOut transtions -->
   <link href="dojox/mobile/themes/common/transitions.css" rel="stylesheet"/>
-  <!-- Need to load the theme file for IconContainer as well as base theme file -->
+  <!-- Need to load the theme file for IconContainer as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','IconContainer']"></script>
 
@@ -258,16 +258,16 @@ When you click "Home" button in header, it returns to the Home view with a zoomO
 
 .. html ::
 
-  <h1 data-dojo-type="dojox.mobile.Heading">Icon Container (Single/Below)</h1>
-  <ul data-dojo-type="dojox.mobile.IconContainer" 
+  <h1 data-dojo-type="dojox/mobile/Heading">Icon Container (Single/Below)</h1>
+  <ul data-dojo-type="dojox/mobile/IconContainer" 
       data-dojo-props='transition:"zoomIn", single:true, iconBase:"images/icon-1.png"'>
-    <li data-dojo-type="dojox.mobile.IconItem" data-dojo-props='label:"Icon 1"'>
-      <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-props='shadow:true'>
+    <li data-dojo-type="dojox/mobile/IconItem" data-dojo-props='label:"Icon 1"'>
+      <div data-dojo-type="dojox/mobile/RoundRect" data-dojo-props='shadow:true'>
          App #1
       </div>
     </li>
-    <li data-dojo-type="dojox.mobile.IconItem" data-dojo-props='label:"Icon 2"'>
-      <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-props='shadow:true'>
+    <li data-dojo-type="dojox/mobile/IconItem" data-dojo-props='label:"Icon 2"'>
+      <div data-dojo-type="dojox/mobile/RoundRect" data-dojo-props='shadow:true'>
          App #2
       </div>
     </li>
@@ -278,13 +278,13 @@ When you click "Home" button in header, it returns to the Home view with a zoomO
 Badge on IconItem
 -----------------
 
-You can show a badge (:ref:`dojox.mobile.Badge <dojox/mobile/Badge>`) on an IconItem by using the "badge" parameter as shown in the example below.
+You can show a badge (:ref:`dojox/mobile/Badge <dojox/mobile/Badge>`) on an IconItem by using the "badge" parameter as shown in the example below.
 
 .. html ::
 
   <!-- Need to load stylesheets for badge class -->
   <link href="dojox/mobile/themes/common/domButtons/DomButtonRedBadge.css" rel="stylesheet"/>
-  <!-- Need to load the theme file for IconContainer as well as base theme file -->
+  <!-- Need to load the theme file for IconContainer as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','IconContainer']"></script>
 
@@ -298,11 +298,11 @@ You can show a badge (:ref:`dojox.mobile.Badge <dojox/mobile/Badge>`) on an Icon
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.IconContainer" 
+  <ul data-dojo-type="dojox/mobile/IconContainer" 
       data-dojo-props='transition:"slide", single:true, iconBase:"images/icon-1.png"'>
-      <li id="icon1" data-dojo-type="dojox.mobile.IconItem" 
+      <li id="icon1" data-dojo-type="dojox/mobile/IconItem" 
                      data-dojo-props='badge:"55", label:"Icon 1"'></li>
-      <li id="icon2" data-dojo-type="dojox.mobile.IconItem" 
+      <li id="icon2" data-dojo-type="dojox/mobile/IconItem" 
                      data-dojo-props='badge:"New", label:"Icon 2"'></li>
   </ul>
 
@@ -363,23 +363,23 @@ You end edit mode by calling the endEdit() function of the IconContainer widget.
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.IconContainer" id="iconContainer1"
+  <ul data-dojo-type="dojox/mobile/IconContainer" id="iconContainer1"
       data-dojo-props='editable:true, transition:"slide"'>
-      <li data-dojo-type="dojox.mobile.IconItem" 
+      <li data-dojo-type="dojox/mobile/IconItem" 
           data-dojo-props='label:"app1", moveTo:"app1", icon:"images/icon1.png"'></li>
-      <li data-dojo-type="dojox.mobile.IconItem" 
+      <li data-dojo-type="dojox/mobile/IconItem" 
           data-dojo-props='label:"app2", moveTo:"app2", icon:"images/icon2.png"'></li>
-      <li data-dojo-type="dojox.mobile.IconItem" 
+      <li data-dojo-type="dojox/mobile/IconItem" 
           data-dojo-props='label:"app3", moveTo:"app3", icon:"images/icon3.png"'></li>
-      <li data-dojo-type="dojox.mobile.IconItem" 
+      <li data-dojo-type="dojox/mobile/IconItem" 
           data-dojo-props='label:"app4", moveTo:"app4", icon:"images/icon4.png"'></li>
-      <li data-dojo-type="dojox.mobile.IconItem" 
+      <li data-dojo-type="dojox/mobile/IconItem" 
           data-dojo-props='label:"app5", moveTo:"app5", icon:"images/icon5.png"'></li>
-      <li data-dojo-type="dojox.mobile.IconItem" 
+      <li data-dojo-type="dojox/mobile/IconItem" 
           data-dojo-props='label:"app6", moveTo:"app6", icon:"images/icon6.png"'></li>
   </ul>
-  <button data-dojo-type="dojox.mobile.Button" onclick="startEdit();">Start Edit</button>
-  <button data-dojo-type="dojox.mobile.Button" onclick="endEdit();">End Edit</button>
+  <button data-dojo-type="dojox/mobile/Button" onclick="startEdit();">Start Edit</button>
+  <button data-dojo-type="dojox/mobile/Button" onclick="endEdit();">End Edit</button>
 
 .. image :: IconContainer-editable.gif
 

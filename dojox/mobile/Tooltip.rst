@@ -1,7 +1,7 @@
 .. _dojox/mobile/Tooltip:
 
 ====================
-dojox.mobile.Tooltip
+dojox/mobile/Tooltip
 ====================
 
 :Authors: Doug Hays
@@ -46,7 +46,7 @@ Text Only
 
 .. html ::
 
-  <div id="textTooltip" data-dojo-type="dojox.mobile.Tooltip" class="mblTooltipBubble">Enter a value.<br><center>Please!</center></div>
+  <div id="textTooltip" data-dojo-type="dojox/mobile/Tooltip" class="mblTooltipBubble">Enter a value.<br><center>Please!</center></div>
   <button type="button" onclick="dijit.registry.byId('textTooltip').show(this, ['after','below-centered','above-centered'])">right</button>
 
 .. image :: SimpleMobileTooltip.png
@@ -57,8 +57,8 @@ Widget content
 
 .. html ::
 
-  <div id="customPicker" data-dojo-type="dojox.mobile.Tooltip">
-        <div id="spin1" data-dojo-type="dojox.mobile.SpinWheelDatePicker"></div>
+  <div id="customPicker" data-dojo-type="dojox/mobile/Tooltip">
+        <div id="spin1" data-dojo-type="dojox/mobile/SpinWheelDatePicker"></div>
   </div>
   <button type="button" onclick="dijit.registry.byId('customPicker').show(this, ['above-centered','after','before'])">above</button>
 

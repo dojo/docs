@@ -1,7 +1,7 @@
 .. _dojox/mobile/ProgressIndicator:
 
 ==============================
-dojox.mobile.ProgressIndicator
+dojox/mobile/ProgressIndicator
 ==============================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,7 +14,7 @@ dojox.mobile.ProgressIndicator
 Introduction
 ============
 
-dojox.mobile.ProgressIndicator is a round spinning graphical representation which indicates that the current task is on-going.
+dojox/mobile/ProgressIndicator is a round spinning graphical representation which indicates that the current task is on-going.
 
 .. image :: ProgressIndicator.png
 
@@ -23,7 +23,7 @@ The spinning object is NOT an animated gif, but a collection of div elements. No
 Usage
 =====
 
-Until V1.7, ProgressIndicator was a singleton class and not a widget. From V1.8, however, it became a widget, and you can create a new instance with the new operator. It can still be used as a singleton as well. A singleton instance can be obtained by calling dojox.mobile.ProgressIndicator.getInstance().
+Until V1.7, ProgressIndicator was a singleton class and not a widget. From V1.8, however, it became a widget, and you can create a new instance with the new operator. It can still be used as a singleton as well. A singleton instance can be obtained by calling dojox/mobile/ProgressIndicator.getInstance().
 
 The start() method of ProgressIndicator starts the spinning, and the stop() method stops the spinning. You need to explicitly add ProgressIndicator.domNode to somewhere visible. The stop() method automatically removes ProgressIndicator.domNode from the dom tree for you.
 
@@ -70,7 +70,7 @@ Examples
 
 Singleton example
 -------------------
-In this example, get the progress indicator instance using getInstance(), add it to the current dom tree, and call the start() method to start spinning the progress indicator. In the load() handler of dojo.xhr, call the stop() method to stop spinning and remove it from the dom tree.
+In this example, get the progress indicator instance using getInstance(), add it to the current dom tree, and call the start() method to start spinning the progress indicator. In the load() handler of dojo/xhr, call the stop() method to stop spinning and remove it from the dom tree.
 
 .. js ::
 
@@ -104,14 +104,14 @@ Declarative example
 Default indicator
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.ProgressIndicator" startSpinning="true"></div>
+  <div data-dojo-type="dojox/mobile/ProgressIndicator" startSpinning="true"></div>
 
 .. image :: ProgressIndicator-default.png
 
 Large indicator
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.ProgressIndicator" startSpinning="true"
+  <div data-dojo-type="dojox/mobile/ProgressIndicator" startSpinning="true"
        size="80"></div>
 
 .. image :: ProgressIndicator-large.png
@@ -119,7 +119,7 @@ Large indicator
 Color indicator
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.ProgressIndicator" startSpinning="true"
+  <div data-dojo-type="dojox/mobile/ProgressIndicator" startSpinning="true"
        colors="['#E60012','#F39800','#FFF100','#8FC31F','#009944','#009E96',
                 '#00A0E9','#0068B7','#1D2088','#920783','#E4007F','#E5004F']"></div>
 

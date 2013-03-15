@@ -1,7 +1,7 @@
 .. _dojox/mobile/ScreenSizeAware:
 
 ===========================================
-dojox.mobile.ScreenSizeAware (EXPERIMENTAL)
+dojox/mobile/ScreenSizeAware (EXPERIMENTAL)
 ===========================================
 
 :Authors: Yoshiroh Kamiyama, Atsushi Ono
@@ -11,61 +11,73 @@ dojox.mobile.ScreenSizeAware (EXPERIMENTAL)
 .. contents ::
     :depth: 2
 
-The dojox.mobile.ScreenSizeAware is an **EXPERIMENTAL** widget.
+The dojox/mobile/ScreenSizeAware is an **EXPERIMENTAL** widget.
 
 Introduction
 ============
 
-dojox.mobile.ScreenSizeAware is a module to make a screen size aware application. This module helps you create an application that transforms its UI layout according to the screen size. It assumes that the application consists of two horizontally split panes, and the left pane has a list widget as shown in the example below.
+dojox/mobile/ScreenSizeAware is an experimental module that helps for creating 
+applications that transform their UI layout according to the screen size.
+It assumes that the application consists of two horizontally split panes, 
+and the left pane has a list widget as shown in the example below.
 
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.FixedSplitter" data-dojo-props='orientation:"H"'>
-    <div data-dojo-type="dojox.mobile.Container" style="width:300px;">
-      <div id="leftView" data-dojo-type="dojox.mobile.ScrollableView">
-        <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props='fixed:"top"'>Left Pane</h1>
-        <ul data-dojo-type="dojox.mobile.EdgeToEdgeList" data-dojo-props='stateful:true'>
-          <li data-dojo-type="dojox.mobile.ListItem"
+  <div data-dojo-type="dojox/mobile/FixedSplitter" data-dojo-props='orientation:"H"'>
+    <div data-dojo-type="dojox/mobile/Container" style="width:300px;">
+      <div id="leftView" data-dojo-type="dojox/mobile/ScrollableView">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props='fixed:"top"'>Left Pane</h1>
+        <ul data-dojo-type="dojox/mobile/EdgeToEdgeList" data-dojo-props='stateful:true'>
+          <li data-dojo-type="dojox/mobile/ListItem"
               data-dojo-props='label:"View1", moveTo:"view1"'></li>
           ....
         </ul>
       </div>
     </div>
-    <div data-dojo-type="dojox.mobile.Container">
-      <div id="view1" data-dojo-type="dojox.mobile.ScrollableView">
-        <h1 data-dojo-type="dojox.mobile.Heading"
+    <div data-dojo-type="dojox/mobile/Container">
+      <div id="view1" data-dojo-type="dojox/mobile/ScrollableView">
+        <h1 data-dojo-type="dojox/mobile/Heading"
             data-dojo-props='fixed:"top", back:"Home", moveTo:"leftView"'>Right Pane</h1>
         ....
       </div>
     </div>
   </div>
 
-If you place this module in such an application, the application is rendered in a split view as shown below when the screen size is detected as tablet size.
+If you require this module in such an application, in a tablet-sized screen, 
+the application shows a horizontally split view whose left pane is a list widget, 
+as shown below.
 
 .. image :: ScreenSizeAware-tablet.png
 
-It is rendered in single view layout as shown below when the screen size is detected as phone size.
+In a phone-sized screen, the application shows a list widget that fills the screen, as shown below.. 
 
 .. image :: ScreenSizeAware-phone.png
 
-The ScreenSizeAware modules analyzes the document's DOM structure to determine which node is the FixedSplitter, which node is the left pane, etc. You can also explicity specify those nodes using the properties such as splitterId, leftPaneId, etc.
+The ScreenSizeAware modules analyzes the document's DOM structure to determine 
+which node is the FixedSplitter, which node is the left pane, etc. You can also explicity 
+specify those nodes using the properties such as splitterId, leftPaneId, etc.
 
 Usage
 =====
 
-All you need to do is to require dojox.mobile.ScreenSizeAware and place the following tag somewhere in your application.
+All you need to do is to require dojox/mobile/ScreenSizeAware and place the following tag 
+somewhere in your application.
 
 .. html ::
 
-  <span data-dojo-type="dojox.mobile.ScreenSizeAware"></span>
+  <span data-dojo-type="dojox/mobile/ScreenSizeAware"></span>
 
-Then the ScreenSizeAware widget transforms the UI layout according to the current screen size. No inline JavaScript code is necessary in your application html file.
+Then the ScreenSizeAware widget transforms the UI layout according to the current screen size. 
+No inline JavaScript code is necessary in your application html file.
 
-There is another way to apply ScreenSizeAware to your application. Instead of placing the <span> tag, you can use the screenSizeAware property of FixedSplitter as below. In this case, you do not need to explicitly require dojox.mobile.ScreenSizeAware, because it is dynamically loaded by FixedSplitter.
+There is another way to apply ScreenSizeAware to your application. Instead of placing the 
+<span> tag, you can use the screenSizeAware property of FixedSplitter as below. In this case, 
+you do not need to explicitly require dojox/mobile/ScreenSizeAware, because it is dynamically 
+loaded by FixedSplitter.
 
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.FixedSplitter"
+  <div data-dojo-type="dojox/mobile/FixedSplitter"
        data-dojo-props='orientation:"H", screenSizeAware:true'>
 
 Constructor Parameters
@@ -93,7 +105,7 @@ Applying ScreenSizeAware by placing a span tag
 
 .. html ::
 
-  <!-- Need to load the theme file for FixedSplitter widget as well as base theme file -->
+  <!-- Need to load the theme file for FixedSplitter widget as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','FixedSplitter']"></script>
   
@@ -119,33 +131,33 @@ Applying ScreenSizeAware by placing a span tag
 
 .. html ::
 
-  <span data-dojo-type="dojox.mobile.ScreenSizeAware"></span>
-  <div data-dojo-type="dojox.mobile.FixedSplitter" data-dojo-props='orientation:"H"'>
-      <div data-dojo-type="dojox.mobile.Container" style="width:300px;border-right:1px solid black;">
-          <div id="settings" data-dojo-type="dojox.mobile.ScrollableView" data-dojo-props='selected:true'>
-              <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props='fixed:"top"'>Settings</h1>
-              <ul data-dojo-type="dojox.mobile.EdgeToEdgeList" data-dojo-props='transition:"flip", stateful:true'>
-                  <li data-dojo-type="dojox.mobile.ListItem" 
+  <span data-dojo-type="dojox/mobile/ScreenSizeAware"></span>
+  <div data-dojo-type="dojox/mobile/FixedSplitter" data-dojo-props='orientation:"H"'>
+      <div data-dojo-type="dojox/mobile/Container" style="width:300px;border-right:1px solid black;">
+          <div id="settings" data-dojo-type="dojox/mobile/ScrollableView" data-dojo-props='selected:true'>
+              <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props='fixed:"top"'>Settings</h1>
+              <ul data-dojo-type="dojox/mobile/EdgeToEdgeList" data-dojo-props='transition:"flip", stateful:true'>
+                  <li data-dojo-type="dojox/mobile/ListItem" 
                       data-dojo-props='icon:"images/i-icon-1.png", moveTo:"general"'>
                       General
                   </li>
-                  <li data-dojo-type="dojox.mobile.ListItem" 
+                  <li data-dojo-type="dojox/mobile/ListItem" 
                       data-dojo-props='icon:"images/i-icon-2.png", moveTo:"wifi"'>
                       Wi-Fi
                   </li>
               </ul>
           </div>
       </div>
-      <div data-dojo-type="dojox.mobile.Container">
-          <div id="general" data-dojo-type="dojox.mobile.ScrollableView" data-dojo-props='selected:true'>
-              <h1 data-dojo-type="dojox.mobile.Heading" 
+      <div data-dojo-type="dojox/mobile/Container">
+          <div id="general" data-dojo-type="dojox/mobile/ScrollableView" data-dojo-props='selected:true'>
+              <h1 data-dojo-type="dojox/mobile/Heading" 
                   data-dojo-props='fixed:"top", back:"Settings", moveTo:"settings"'>General</h1>
-              <div data-dojo-type="dojox.mobile.RoundRect">General</div>
+              <div data-dojo-type="dojox/mobile/RoundRect">General</div>
           </div>
-          <div id="wifi" data-dojo-type="dojox.mobile.ScrollableView">
-              <h1 data-dojo-type="dojox.mobile.Heading" 
+          <div id="wifi" data-dojo-type="dojox/mobile/ScrollableView">
+              <h1 data-dojo-type="dojox/mobile/Heading" 
                   data-dojo-props='fixed:"top", back:"Settings", moveTo:"settings"'>Wi-Fi</h1>
-              <div data-dojo-type="dojox.mobile.RoundRect">Wi-Fi</div>
+              <div data-dojo-type="dojox/mobile/RoundRect">Wi-Fi</div>
           </div>
       </div>
   </div>
@@ -165,7 +177,7 @@ You can do the same thing with the example above by specifying the "screenSizeAw
 
 .. html ::
 
-  <!-- Need to load the theme file for FixedSplitter widget as well as base theme file -->
+  <!-- Need to load the theme file for FixedSplitter widget as well as the base theme file -->
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js" 
           data-dojo-config="mblThemeFiles: ['base','FixedSplitter']"></script>
   
@@ -191,32 +203,32 @@ You can do the same thing with the example above by specifying the "screenSizeAw
 
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.FixedSplitter" data-dojo-props='orientation:"H", screenSizeAware:true'>
-      <div data-dojo-type="dojox.mobile.Container" style="width:300px;border-right:1px solid black;">
-          <div id="settings" data-dojo-type="dojox.mobile.ScrollableView" data-dojo-props='selected:true'>
-              <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props='fixed:"top"'>Settings</h1>
-              <ul data-dojo-type="dojox.mobile.EdgeToEdgeList" data-dojo-props='transition:"flip", stateful:true'>
-                  <li data-dojo-type="dojox.mobile.ListItem" 
+  <div data-dojo-type="dojox/mobile/FixedSplitter" data-dojo-props='orientation:"H", screenSizeAware:true'>
+      <div data-dojo-type="dojox/mobile/Container" style="width:300px;border-right:1px solid black;">
+          <div id="settings" data-dojo-type="dojox/mobile/ScrollableView" data-dojo-props='selected:true'>
+              <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props='fixed:"top"'>Settings</h1>
+              <ul data-dojo-type="dojox/mobile/EdgeToEdgeList" data-dojo-props='transition:"flip", stateful:true'>
+                  <li data-dojo-type="dojox/mobile/ListItem" 
                       data-dojo-props='icon:"images/i-icon-1.png", moveTo:"general"'>
                       General
                   </li>
-                  <li data-dojo-type="dojox.mobile.ListItem" 
+                  <li data-dojo-type="dojox/mobile/ListItem" 
                       data-dojo-props='icon:"images/i-icon-2.png", moveTo:"wifi"'>
                       Wi-Fi
                   </li>
               </ul>
           </div>
       </div>
-      <div data-dojo-type="dojox.mobile.Container">
-          <div id="general" data-dojo-type="dojox.mobile.ScrollableView" data-dojo-props='selected:true'>
-              <h1 data-dojo-type="dojox.mobile.Heading" 
+      <div data-dojo-type="dojox/mobile/Container">
+          <div id="general" data-dojo-type="dojox/mobile/ScrollableView" data-dojo-props='selected:true'>
+              <h1 data-dojo-type="dojox/mobile/Heading" 
                   data-dojo-props='fixed:"top", back:"Settings", moveTo:"settings"'>General</h1>
-              <div data-dojo-type="dojox.mobile.RoundRect">General</div>
+              <div data-dojo-type="dojox/mobile/RoundRect">General</div>
           </div>
-          <div id="wifi" data-dojo-type="dojox.mobile.ScrollableView">
-              <h1 data-dojo-type="dojox.mobile.Heading" 
+          <div id="wifi" data-dojo-type="dojox/mobile/ScrollableView">
+              <h1 data-dojo-type="dojox/mobile/Heading" 
                   data-dojo-props='fixed:"top", back:"Settings", moveTo:"settings"'>Wi-Fi</h1>
-              <div data-dojo-type="dojox.mobile.RoundRect">Wi-Fi</div>
+              <div data-dojo-type="dojox/mobile/RoundRect">Wi-Fi</div>
           </div>
       </div>
   </div>

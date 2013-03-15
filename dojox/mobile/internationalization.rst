@@ -42,7 +42,7 @@ the button label.
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <link href="../themes/iphone/iphone.css" rel="stylesheet">
 
-      <script src="../../../dojo/dojo.js" djConfig="parseOnLoad: true"></script>
+      <script src="../../../dojo/dojo.js" data-dojo-config="parseOnLoad: true"></script>
 
       <script language="JavaScript" type="text/javascript">
           require([

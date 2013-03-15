@@ -1,7 +1,7 @@
 .. _dojox/mobile/Pane:
 
 =================
-dojox.mobile.Pane
+dojox/mobile/Pane
 =================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,7 +14,10 @@ dojox.mobile.Pane
 Introduction
 ============
 
-dojox.mobile.Pane is a simple div-wrapper pane widget that can be used for any purposes. It is a widget, but can be regarded as a simple <div> element.
+dojox/mobile/Pane is a simple <div>-wrapper pane widget. 
+Unlike View, Pane has no special functionality. It can be used for any purpose — 
+for example, as pane for Accordion, FixedSplitter, GridLayout, and so on, or for 
+creating a partial area in a view.
 
 Constructor Parameters
 ======================
@@ -24,4 +27,4 @@ None.
 Examples
 ========
 
-See examples of :ref:`dojox.mobile.FixedSplitter <dojox/mobile/FixedSplitter>`.
+See examples of :ref:`dojox/mobile/FixedSplitter <dojox/mobile/FixedSplitter>`.

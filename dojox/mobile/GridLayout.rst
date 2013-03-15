@@ -1,7 +1,7 @@
 .. _dojox/mobile/GridLayout:
 
 =======================
-dojox.mobile.GridLayout
+dojox/mobile/GridLayout
 =======================
 
 :Authors: Hikaru Tamura
@@ -14,9 +14,19 @@ dojox.mobile.GridLayout
 Introduction
 ============
 
-GridLayout is a widget which layouts its children div elements into a grid.  Use this widget when you want to keep the number of columns fixed. For example, if cols is 2 and the number of children div elements is 6, this widget layouts its children div elements into 2 rows and 3 columns. The width of the children changes appropriately to cater for the number of columns. If cols is 0, this widget layouts its children div elements in order according to width of the children div elements. The width of the children does not change. It is useful when changing the layout by orientation change or screen size change (for fixed sized objects).
+GridLayout is a container widget that places its child widgets in a grid layout. 
+Each child must be a container widget such as dojox/mobile/Pane.
+Use this widget when you want to keep the number of columns fixed. For example, 
+if the parameter ``cols`` is set to 2 and the number of children div elements is 6, this 
+widget places its children div elements into 2 rows and 3 columns. 
+The width of the children changes appropriately to cater for the number of columns. 
+If ``cols`` is 0, this widget places its children div elements by ordering them accordingly 
+to the width of the children div elements. This widget does not change the width of the children. 
+This widget is useful for adapting automatically the layout of widgets with fixed side 
+when the orientation of mobile devices changes, or when the screen size changes.
 
-This widget affects its immediate children div elements only. For example, if you want to layout button elements, you need to wrap them with div elements.
+This widget manages its immediate children div elements only. For example, if you 
+want to lay out button elements, you need to wrap them with div elements.
 
 .. image :: GridLayout.png
 
@@ -48,25 +58,25 @@ Declarative example
 
 .. html ::
 
-  <div id="view1" data-dojo-type="dojox.mobile.View">
-    <div data-dojo-type="dojox.mobile.GridLayout" data-dojo-props='cols:3' style="height: 200px;">
-      <div data-dojo-type="dojox.mobile.Pane">
-        <button class="mblBlueButton" data-dojo-type="dojox.mobile.Button">Button 1</button>
+  <div id="view1" data-dojo-type="dojox/mobile/View">
+    <div data-dojo-type="dojox/mobile/GridLayout" data-dojo-props='cols:3' style="height: 200px;">
+      <div data-dojo-type="dojox/mobile/Pane">
+        <button class="mblBlueButton" data-dojo-type="dojox/mobile/Button">Button 1</button>
       </div>
-      <div data-dojo-type="dojox.mobile.Pane">
-        <button class="mblBlueButton" data-dojo-type="dojox.mobile.Button">Button 2</button>
+      <div data-dojo-type="dojox/mobile/Pane">
+        <button class="mblBlueButton" data-dojo-type="dojox/mobile/Button">Button 2</button>
       </div>
-      <div data-dojo-type="dojox.mobile.Pane">
-        <button class="mblBlueButton" data-dojo-type="dojox.mobile.Button">Button 3</button>
+      <div data-dojo-type="dojox/mobile/Pane">
+        <button class="mblBlueButton" data-dojo-type="dojox/mobile/Button">Button 3</button>
       </div>
-      <div data-dojo-type="dojox.mobile.Pane">
-        <button class="mblBlueButton" data-dojo-type="dojox.mobile.Button">Button 4</button>
+      <div data-dojo-type="dojox/mobile/Pane">
+        <button class="mblBlueButton" data-dojo-type="dojox/mobile/Button">Button 4</button>
       </div>
-      <div data-dojo-type="dojox.mobile.Pane">
-        <button class="mblBlueButton" data-dojo-type="dojox.mobile.Button">Button 5</button>
+      <div data-dojo-type="dojox/mobile/Pane">
+        <button class="mblBlueButton" data-dojo-type="dojox/mobile/Button">Button 5</button>
       </div>
-      <div data-dojo-type="dojox.mobile.Pane">
-        <button class="mblBlueButton" data-dojo-type="dojox.mobile.Button">Button 6</button>
+      <div data-dojo-type="dojox/mobile/Pane">
+        <button class="mblBlueButton" data-dojo-type="dojox/mobile/Button">Button 6</button>
       </div>
   </div>
 
@@ -97,25 +107,25 @@ The following is an orientation change example. The code is the same, but the la
 
 .. html ::
 
-  <div id="view1" data-dojo-type="dojox.mobile.View">
-    <div data-dojo-type="dojox.mobile.GridLayout">
-      <div data-dojo-type="dojox.mobile.Pane">
-        <button class="mblBlueButton" data-dojo-type="dojox.mobile.Button">Button 1</button>
+  <div id="view1" data-dojo-type="dojox/mobile/View">
+    <div data-dojo-type="dojox/mobile/GridLayout">
+      <div data-dojo-type="dojox/mobile/Pane">
+        <button class="mblBlueButton" data-dojo-type="dojox/mobile/Button">Button 1</button>
       </div>
-      <div data-dojo-type="dojox.mobile.Pane">
-        <button class="mblBlueButton" data-dojo-type="dojox.mobile.Button">Button 2</button>
+      <div data-dojo-type="dojox/mobile/Pane">
+        <button class="mblBlueButton" data-dojo-type="dojox/mobile/Button">Button 2</button>
       </div>
-      <div data-dojo-type="dojox.mobile.Pane">
-        <button class="mblBlueButton" data-dojo-type="dojox.mobile.Button">Button 3</button>
+      <div data-dojo-type="dojox/mobile/Pane">
+        <button class="mblBlueButton" data-dojo-type="dojox/mobile/Button">Button 3</button>
       </div>
-      <div data-dojo-type="dojox.mobile.Pane">
-        <button class="mblBlueButton" data-dojo-type="dojox.mobile.Button">Button 4</button>
+      <div data-dojo-type="dojox/mobile/Pane">
+        <button class="mblBlueButton" data-dojo-type="dojox/mobile/Button">Button 4</button>
       </div>
-      <div data-dojo-type="dojox.mobile.Pane">
-        <button class="mblBlueButton" data-dojo-type="dojox.mobile.Button">Button 5</button>
+      <div data-dojo-type="dojox/mobile/Pane">
+        <button class="mblBlueButton" data-dojo-type="dojox/mobile/Button">Button 5</button>
       </div>
-      <div data-dojo-type="dojox.mobile.Pane">
-        <button class="mblBlueButton" data-dojo-type="dojox.mobile.Button">Button 6</button>
+      <div data-dojo-type="dojox/mobile/Pane">
+        <button class="mblBlueButton" data-dojo-type="dojox/mobile/Button">Button 6</button>
       </div>
     </div>
   </div>

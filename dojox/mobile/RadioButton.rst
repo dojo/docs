@@ -1,7 +1,7 @@
 .. _dojox/mobile/RadioButton:
 
 ========================
-dojox.mobile.RadioButton
+dojox/mobile/RadioButton
 ========================
 
 :Authors: Doug Hays
@@ -39,8 +39,8 @@ Simple RadioButton
 
 .. html ::
 
-  <input type="radio" data-dojo-type="dojox.mobile.RadioButton" checked="true"  name="radioGroup" value="yes" />
-  <input type="radio" data-dojo-type="dojox.mobile.RadioButton" checked="false" name="radioGroup" value="no" />
+  <input type="radio" data-dojo-type="dojox/mobile/RadioButton" checked="true"  name="radioGroup" value="yes" />
+  <input type="radio" data-dojo-type="dojox/mobile/RadioButton" checked="false" name="radioGroup" value="no" />
 
 .. image :: SimpleMobileRadioButton.png
 
@@ -50,10 +50,10 @@ onChange handler in HTML5 format
 
 .. html ::
 
-  <input type="radio" name="group" data-dojo-type="dojox.mobile.RadioButton" data-dojo-props='
+  <input type="radio" name="group" data-dojo-type="dojox/mobile/RadioButton" data-dojo-props='
       value:"on",
       onChange:function(checked){ if(checked)alert("on selected"); }' />
-  <input type="radio" name="group" data-dojo-type="dojox.mobile.RadioButton" data-dojo-props='
+  <input type="radio" name="group" data-dojo-type="dojox/mobile/RadioButton" data-dojo-props='
       checked:true,
       value:"off",
       onChange:function(checked){ if(checked)alert("off selected"); }' />

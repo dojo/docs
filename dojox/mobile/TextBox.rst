@@ -1,7 +1,7 @@
 .. _dojox/mobile/TextBox:
 
 ====================
-dojox.mobile.TextBox
+dojox/mobile/TextBox
 ====================
 
 :Authors: Doug Hays
@@ -47,7 +47,7 @@ Simple TextBox
 
 .. html ::
 
-  <input data-dojo-type="dojox.mobile.TextBox" placeHolder="Enter LAST name" />
+  <input data-dojo-type="dojox/mobile/TextBox" placeHolder="Enter LAST name" />
 
 .. image :: SimpleMobileTextBox.png
 
@@ -57,7 +57,7 @@ onChange handler in HTML5 format
 
 .. html ::
 
-  <input data-dojo-type="dojox.mobile.TextBox" style="background-color:lightgray;"
+  <input data-dojo-type="dojox/mobile/TextBox" style="background-color:lightgray;"
         data-dojo-props='maxLength:10, value:"some data", onChange:function(newValue){ alert("value changed to " + newValue); }' />
 
 .. image :: HTML5MobileTextBox.png

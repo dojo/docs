@@ -1,7 +1,7 @@
 .. _dojox/mobile/pageTurningUtils:
 
 =============================
-dojox.mobile.pageTurningUtils
+dojox/mobile/pageTurningUtils
 =============================
 
 :Authors: Atsushi Ono
@@ -11,15 +11,19 @@ dojox.mobile.pageTurningUtils
 .. contents ::
   :depth: 2
 
-The dojox.mobile.pageTurningUtils is an **EXPERIMENTAL** module. It works only on webkit-based browsers. It does not work on other desktop browsers such as Firefox or IE.
+The dojox/mobile/pageTurningUtils is an **EXPERIMENTAL** module. It works 
+only on webkit-based browsers. It does not work on other desktop browsers such as Firefox or IE.
 
 Introduction
 ============
 
-pageTurningUtils is an utility class which provides page turning effects just like turning a real book.
-It enables you to create a kind of ebook reader application with more realistic page turning animations.
+pageTurningUtils is an utility module that provides page-turning effects that 
+closely mimic the turning of real book pages. It enables you to create page-turning 
+animations as in an ebook reader or slide-show application.
+The page contents can be arbitrary HTML, text, images, or widgets.
 
-Currently, this class provides the following three types of page turning effects. We may add bottom-left turning in the future.
+Currently, this class provides the following three types of page turning effects. 
+We may add bottom-left turning in the future.
 
 Top-right turning with dog ear
 ------------------------------
@@ -51,9 +55,10 @@ This page turning effect can be used, for example, for some Asian books.
 Usage
 =====
 
-pageTurnigUtils class expects that your book application has the DOM structure as shown below.
+The pageTurningUtils class expects that your book application has the DOM structure as shown below.
 The top level container node represents a whole catalog, and it has multiple pages as child nodes.
-And each page node should have two child nodes; the first node represents the content shown in the front side of the page, and the second node represents the one shown in the back side of the page.
+And each page node should have two child nodes; the first node represents the content shown in the 
+front side of the page, and the second node represents the one shown in the back side of the page.
 Please make the front-side/back-side node empty if it is an empty page (like "back1" node in the example below).
 
 .. html ::
@@ -74,7 +79,8 @@ Please make the front-side/back-side node empty if it is an empty page (like "ba
   </div>
 
 When the DOM structure is ready, you can instantiate the pageTurnigUtils class to initialize the catalog node.
-Note that this class is not a widget, and that it is not intended to be used declaratively in html markup. You need to instantiate it programmatically.
+Note that this class is not a widget, and that it is not intended to be used declaratively in HTML markup. 
+You need to instantiate it programmatically.
 The typical usage is as below:
 
 .. html ::
@@ -152,7 +158,7 @@ Various page contents
 ---------------------
 
 The page contents can be not only images but also other elements such as iframe and div contents. 
-You can also use widgets as page contents such as dojox.mobile.View, dojox.mobile.ScrollableView, dojox.mobile.ContentPane, etc.
+You can also use widgets as page contents such as dojox/mobile/View, dojox/mobile/ScrollableView, dojox/mobile/ContentPane, etc.
 See test_pageTurningUtils-pageType.html in the dojox/mobile/tests folder for a complete example.
 
 .. js ::
@@ -216,32 +222,32 @@ See test_pageTurningUtils-pageType.html in the dojox/mobile/tests folder for a c
           </div>
           <div id="back3"></div>
       </div>
-      <div id="page4"> <!-- dojox.mobile.View widget -->
-          <div id="front4" data-dojo-type="dojox.mobile.View" style="height:100%;background-color:#c5ccd3;">
-              <h1 data-dojo-type="dojox.mobile.Heading">View</h1>
-              <div dojoType="dojox.mobile.RoundRect" shadow="true">
+      <div id="page4"> <!-- dojox/mobile/View widget -->
+          <div id="front4" data-dojo-type="dojox/mobile/View" style="height:100%;background-color:#c5ccd3;">
+              <h1 data-dojo-type="dojox/mobile/Heading">View</h1>
+              <div data-dojo-type="dojox/mobile/RoundRect" shadow="true">
                   <p><img src="images/dojo-logo1.png" align="left" width="60" height="60">
                   Dojo saves you time and scales with your development process, using web standards as its platform...</p>
               </div>
           </div>
           <div id="back4"></div>
       </div>
-      <div id="page5"> <!-- dojox.mobile.ScrollableView widget -->
-          <div id="front5" data-dojo-type="dojox.mobile.ScrollableView" style="height:100%;background-color:#c5ccd3;">
-              <h1 data-dojo-type="dojox.mobile.Heading">ScrollableView</h1>
-              <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
-                  <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='icon:"images/i-icon-1.png"'>
+      <div id="page5"> <!-- dojox/mobile/ScrollableView widget -->
+          <div id="front5" data-dojo-type="dojox/mobile/ScrollableView" style="height:100%;background-color:#c5ccd3;">
+              <h1 data-dojo-type="dojox/mobile/Heading">ScrollableView</h1>
+              <ul data-dojo-type="dojox/mobile/EdgeToEdgeList">
+                  <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/i-icon-1.png"'>
                       Item 1
                   </li>
-                  <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='icon:"images/i-icon-2.png"'>
+                  <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/i-icon-2.png"'>
                       Item 2
                   </li>
               </ul>
           </div>
           <div id="back5"></div>
       </div>
-      <div id="page6"> <!-- dojox.mobile.ContentPane widget -->
-          <div id="front6" data-dojo-type="dojox.mobile.ContentPane" data-dojo-props='href:"data/view5.html"'></div>
+      <div id="page6"> <!-- dojox/mobile/ContentPane widget -->
+          <div id="front6" data-dojo-type="dojox/mobile/ContentPane" data-dojo-props='href:"data/view5.html"'></div>
           <div id="back6"></div>
       </div>
   </div>

@@ -1,7 +1,7 @@
 .. _dojox/mobile/Rating:
 
 ===================
-dojox.mobile.Rating
+dojox/mobile/Rating
 ===================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,7 +14,9 @@ dojox.mobile.Rating
 Introduction
 ============
 
-dojox.mobile.Rating is a widget which shows the rating using stars. This widget simply shows the specified number of stars. It is a read-only widget, and has no editing capability.
+dojox/mobile/Rating is a widget that displays a rating, usually with stars 
+This widget simply shows the specified number of stars. It is a read-only widget, and 
+has no editing capability.
 
 .. image :: Rating.png
 
@@ -41,16 +43,16 @@ Declarative example
 -------------------
 .. html ::
 
-  <span data-dojo-type="dojox.mobile.Rating"
+  <span data-dojo-type="dojox/mobile/Rating"
         data-dojo-props='image:"images/star-orange.png",
         numStars:3, value:0.5'></span><br>
-  <span data-dojo-type="dojox.mobile.Rating"
+  <span data-dojo-type="dojox/mobile/Rating"
         data-dojo-props='image:"images/star-yellow.png",
         numStars:3, value:2.5'></span><br>
-  <span data-dojo-type="dojox.mobile.Rating"
+  <span data-dojo-type="dojox/mobile/Rating"
         data-dojo-props='image:"images/star-green.png",
         numStars:5, value:1'></span><br>
-  <span data-dojo-type="dojox.mobile.Rating"
+  <span data-dojo-type="dojox/mobile/Rating"
         data-dojo-props='image:"images/star-blue.png",
         numStars:5, value:4'></span><br>
 

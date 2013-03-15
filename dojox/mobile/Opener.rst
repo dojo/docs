@@ -1,7 +1,7 @@
 .. _dojox/mobile/Opener:
 
 ===================
-dojox.mobile.Opener
+dojox/mobile/Opener
 ===================
 
 :Authors: Doug Hays
@@ -43,11 +43,11 @@ Example
 .. html ::
 
   <button onclick="dijit.registry.byId('customPicker').show()">slide up</button>
-  <div id="customPicker" data-dojo-type="dojox.mobile.Opener">
-        <h1 data-dojo-type="dojox.mobile.Heading" label="Custom Picker">
-                <div data-dojo-type="dojox.mobile.ToolBarButton" label="Done" class="mblColorBlue" style="width:45px;float:right;" onClick="dijit.registry.byId('customPicker').hide()"></div>
+  <div id="customPicker" data-dojo-type="dojox/mobile/Opener">
+        <h1 data-dojo-type="dojox/mobile/Heading" label="Custom Picker">
+                <div data-dojo-type="dojox/mobile/ToolBarButton" label="Done" class="mblColorBlue" style="width:45px;float:right;" onClick="dijit.registry.byId('customPicker').hide()"></div>
         </h1>
-        <div id="spin1" data-dojo-type="dojox.mobile.SpinWheelDatePicker"></div>
+        <div id="spin1" data-dojo-type="dojox/mobile/SpinWheelDatePicker"></div>
   </div>
 
 Small screen Overlay

@@ -1,7 +1,7 @@
 .. _dojox/mobile/CarouselItem:
 
 =========================
-dojox.mobile.CarouselItem
+dojox/mobile/CarouselItem
 =========================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,7 +14,7 @@ dojox.mobile.CarouselItem
 Introduction
 ============
 
-CarouselItem represents an item of :ref:`dojox.mobile.Carousel <dojox/mobile/Carousel>`. In typical use cases, users do not use this widget alone. Instead, it is used in conjunction with the Carousel widget.
+CarouselItem represents an item of :ref:`dojox/mobile/Carousel <dojox/mobile/Carousel>`. In typical use cases, users do not use this widget alone. Instead, it is used in conjunction with the Carousel widget.
 
 .. image :: CarouselItem.png
 
@@ -60,19 +60,19 @@ Declarative example
 .. html ::
 
   <!-- Display an image with both header and footer -->
-  <div data-dojo-type="dojox.mobile.CarouselItem"
+  <div data-dojo-type="dojox/mobile/CarouselItem"
        data-dojo-props='src:"images/glass1.jpg", headerText:"My Header", footerText:"My Footer"'></div>
 
   <!-- Display an image with header -->
-  <div data-dojo-type="dojox.mobile.CarouselItem"
+  <div data-dojo-type="dojox/mobile/CarouselItem"
        data-dojo-props='src:"images/glass1.jpg", headerText:"My Header"'></div>
 
   <!-- Display an image footer -->
-  <div data-dojo-type="dojox.mobile.CarouselItem"
+  <div data-dojo-type="dojox/mobile/CarouselItem"
        data-dojo-props='src:"images/glass1.jpg", footerText:"My Footer"'></div>
 
   <!-- Display only an image -->
-  <div data-dojo-type="dojox.mobile.CarouselItem"
+  <div data-dojo-type="dojox/mobile/CarouselItem"
        data-dojo-props='src:"images/glass1.jpg"'></div>
 
 .. image :: CarouselItem-example1.png
@@ -137,4 +137,4 @@ Programmatic example
 Using CarouselItem together with Carousel widget
 ------------------------------------------------
 
-See :ref:`dojox.mobile.Carousel <dojox/mobile/Carousel>` widget for various examples.
+See :ref:`dojox/mobile/Carousel <dojox/mobile/Carousel>` widget for various examples.

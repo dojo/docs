@@ -1,7 +1,7 @@
 .. _dojox/mobile/EdgeToEdgeStoreList:
 
 ================================
-dojox.mobile.EdgeToEdgeStoreList
+dojox/mobile/EdgeToEdgeStoreList
 ================================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,14 +14,15 @@ dojox.mobile.EdgeToEdgeStoreList
 Introduction
 ============
 
-EdgeToEdgeStoreList is an enhanced version of :ref:`dojox.mobile.EdgeToEdgeList <dojox/mobile/EdgeToEdgeList>`. It can generate ListItems according to the given dojo.store store.
+EdgeToEdgeStoreList is a subclass of :ref:`dojox/mobile/EdgeToEdgeList <dojox/mobile/EdgeToEdgeList>`
+which can generate ListItems according to the given dojo/store store.
 
 .. image :: EdgeToEdgeStoreList.png
 
 Constructor Parameters
 ======================
 
-Inherited from dojox.mobile.EdgeToEdgeList
+Inherited from dojox/mobile/EdgeToEdgeList
 ------------------------------------------
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
@@ -54,7 +55,7 @@ Inherited from dojox.mobile.EdgeToEdgeList
 |tag           |String    |"ul"     |A name of html tag to create as domNode.                                                                   |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-Inherited from dojox.mobile._StoreListMixin
+Inherited from dojox/mobile/_StoreListMixin
 -------------------------------------------
 
 +--------------+----------+----------------------+-----------------------------------------------------------------------------------------------------------+
@@ -68,7 +69,7 @@ Inherited from dojox.mobile._StoreListMixin
 |itemRenderer  |Class     |dojox/mobile/ListItem |An optional property specifying the type of the ListItem instances that will be created by the mixin.      |
 +--------------+----------+----------------------+-----------------------------------------------------------------------------------------------------------+
 
-Inherited from dojox.mobile._StoreMixin
+Inherited from dojox/mobile/_StoreMixin
 ---------------------------------------
 
 +----------------+----------+----------+--------------------------------------------------------------------------------------------------------+
@@ -76,14 +77,14 @@ Inherited from dojox.mobile._StoreMixin
 +----------------+----------+----------+--------------------------------------------------------------------------------------------------------+
 |store           |Object    |null      |Reference to data provider object used by this widget.                                                  |
 +----------------+----------+----------+--------------------------------------------------------------------------------------------------------+
-|query           |Object    |null      |A query that can be passed to 'store' to initially filter the items. See `dojo.data <dojo/store>`_ for  |
-|                |          |          |details.                                                                                                |
+|query           |Object    |null      |A query that can be passed to 'store' to initially filter the items. See `dojo/data <../../dojo/store>`_|
+|                |          |          |for details.                                                                                            |
 +----------------+----------+----------+--------------------------------------------------------------------------------------------------------+
-|queryOptions    |Object    |null      |An optional parameter for the query. See `dojo.data <dojo/store>`_ for details.                         |
+|queryOptions    |Object    |null      |An optional parameter for the query. See `dojo/data <../../dojo/store>`_ for details.                   |
 +----------------+----------+----------+--------------------------------------------------------------------------------------------------------+
-|labelProperty   |String    |"label"   |A property name (a property in the dojo.store item) that specifies that item's label.                   |
+|labelProperty   |String    |"label"   |A property name (a property in the dojo/store item) that specifies that item's label.                   |
 +----------------+----------+----------+--------------------------------------------------------------------------------------------------------+
-|childrenProperty|String    |"children"|A property name (a property in the dojo.store item) that specifies that item's children.                |
+|childrenProperty|String    |"children"|A property name (a property in the dojo/store item) that specifies that item's children.                |
 +----------------+----------+----------+--------------------------------------------------------------------------------------------------------+
 
 Examples
@@ -110,9 +111,9 @@ In this example, no ListItem is declared under EdgeToEdgeStoreList. The ListItem
 
 .. html ::
 
-  <div data-dojo-type="dojo.store.Memory" data-dojo-id="sampleStore" 
+  <div data-dojo-type="dojo/store/Memory" data-dojo-id="sampleStore" 
               data-dojo-props='data:storeData, idProperty:"label"'></div>
-  <ul data-dojo-type="dojox.mobile.EdgeToEdgeStoreList" 
+  <ul data-dojo-type="dojox/mobile/EdgeToEdgeStoreList" 
               data-dojo-props='store:sampleStore'>
   </ul>
 
@@ -175,9 +176,9 @@ You can initially filter items by using "query" parameter. This example filters 
 
 .. html ::
 
-  <div data-dojo-type="dojo.store.Memory" data-dojo-id="sampleStore" 
+  <div data-dojo-type="dojo/store/Memory" data-dojo-id="sampleStore" 
               data-dojo-props='data:storeData2, idProperty:"label"'></div>
-  <ul data-dojo-type="dojox.mobile.EdgeToEdgeStoreList" 
+  <ul data-dojo-type="dojox/mobile/EdgeToEdgeStoreList" 
               data-dojo-props='store:sampleStore, query:{label:/e$/}'>
   </ul>
 
@@ -212,9 +213,9 @@ This example maps "name" and "count" fields in the json data to "label" and "rig
 
 .. html ::
 
-  <div data-dojo-type="dojo.store.Memory" data-dojo-id="sampleStore" 
+  <div data-dojo-type="dojo/store/Memory" data-dojo-id="sampleStore" 
               data-dojo-props='data:storeData3, idProperty:"name"'></div>
-  <ul data-dojo-type="dojox.mobile.EdgeToEdgeStoreList" 
+  <ul data-dojo-type="dojox/mobile/EdgeToEdgeStoreList" 
               data-dojo-props='store:sampleStore, itemMap:{name:"label", count:"rightText"}'>
   </ul>
 
@@ -254,9 +255,9 @@ The items listed in the "children" field of each item are displayed as children 
 
 .. html ::
 
-  <div data-dojo-type="dojo.store.Memory" data-dojo-id="sampleStore" 
+  <div data-dojo-type="dojo/store/Memory" data-dojo-id="sampleStore" 
               data-dojo-props='data:storeData4, idProperty:"label"'></div>
-  <ul data-dojo-type="dojox.mobile.EdgeToEdgeStoreList" 
+  <ul data-dojo-type="dojox/mobile/EdgeToEdgeStoreList" 
               data-dojo-props='store:sampleStore, childrenProperty:"children"'>
   </ul>
 

@@ -1,7 +1,7 @@
 .. _dojox/mobile/RoundRectCategory:
 
 ==============================
-dojox.mobile.RoundRectCategory
+dojox/mobile/RoundRectCategory
 ==============================
 
 :Authors: Yoshiroh Kamiyama
@@ -42,4 +42,4 @@ Declarative example
 
 .. html ::
 
-  <h2 data-dojo-type="dojox.mobile.RoundRectCategory">Transition Effects</h2>
+  <h2 data-dojo-type="dojox/mobile/RoundRectCategory">Transition Effects</h2>

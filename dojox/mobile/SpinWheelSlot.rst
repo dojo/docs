@@ -1,7 +1,7 @@
 .. _dojox/mobile/SpinWheelSlot:
 
 ==========================
-dojox.mobile.SpinWheelSlot
+dojox/mobile/SpinWheelSlot
 ==========================
 
 :Authors: Yoshiroh Kamiyama
@@ -19,7 +19,7 @@ SpinWheelSlot is a slot that is placed in the SpinWheel widget.
 Usage
 =====
 
-Use this widget as child widgets of the :ref:`dojox.mobile.SpinWheel <dojox/mobile/SpinWheel>` widget.
+Use this widget as child widgets of the :ref:`dojox/mobile/SpinWheel <dojox/mobile/SpinWheel>` widget.
 
 Constructor Parameters
 ======================
@@ -52,4 +52,4 @@ Constructor Parameters
 Examples
 ========
 
-See the :ref:`dojox.mobile.SpinWheel <dojox/mobile/SpinWheel>` widget for various examples.
+See the :ref:`dojox/mobile/SpinWheel <dojox/mobile/SpinWheel>` widget for various examples.

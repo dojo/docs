@@ -1,7 +1,7 @@
 .. _dojox/mobile/scrollable:
 
 =======================
-dojox.mobile.scrollable
+dojox/mobile/scrollable
 =======================
 
 :Authors: Yoshiroh Kamiyama

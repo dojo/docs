@@ -2,7 +2,7 @@
 .. _dojox/mobile/SpinWheelDatePicker:
 
 ================================
-dojox.mobile.SpinWheelDatePicker
+dojox/mobile/SpinWheelDatePicker
 ================================
 
 :Authors: Yoshiroh Kamiyama
@@ -15,14 +15,14 @@ dojox.mobile.SpinWheelDatePicker
 Introduction
 ============
 
-SpinWheelDatePicker is a date picker widget. It is a subclass of dojox.mobile.SpinWheel. It has the year, month, and day slots.
+SpinWheelDatePicker is a date picker widget. It is a subclass of dojox/mobile/SpinWheel. It has the year, month, and day slots.
 
 .. image :: SpinWheelDatePicker.png
 
 Constructor Parameters
 ======================
 
-Inherited from dojox.mobile._DatePickerMixin
+Inherited from dojox/mobile/_DatePickerMixin
 --------------------------------------------
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
@@ -61,7 +61,7 @@ Declarative example
 
 .. html ::
 
-  <div id="spin1" data-dojo-type="dojox.mobile.SpinWheelDatePicker"></div>
+  <div id="spin1" data-dojo-type="dojox/mobile/SpinWheelDatePicker"></div>
 
 Programmatic example
 --------------------

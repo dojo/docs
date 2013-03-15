@@ -1,7 +1,7 @@
 .. _dojox/mobile/SimpleDialog:
 
 =========================
-dojox.mobile.SimpleDialog
+dojox/mobile/SimpleDialog
 =========================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,13 +14,19 @@ dojox.mobile.SimpleDialog
 Introduction
 ============
 
-The dojox.mobile.SimpleDialog widget is a dialog box for mobile. Compared with dijit.Dialog, it has only very little functionality, but the code size is much smaller.
+The dojox/mobile/SimpleDialog widget is a dialog box for mobile. Compared with dijit/Dialog, 
+ its code size is much smaller and its functionality is more limited. 
 
-When a SimpleDialog is created, it is initially hidden and not displayed (display="none"). To show the dialog box, you need to get a reference to the widget and call the show() method.
+When a SimpleDialog is created, it is initially hidden (display="none"). To show it, you must 
+get a reference to the widget and call its show() method.
 
-The contents can be arbitrary HTML, text, or widgets. Note, however, that the widget is initially hidden. You need to be careful when you place something that cannot be initialized under the hidden state into a SimpleDialog.
+The contents can be arbitrary HTML, text, or widgets. Note, however, that the widget is i
+nitially hidden. You need to be careful when you place in a SimpleDialog elements that 
+cannot be initialized in hidden state.
 
-After a SimpleDialog is created, its DOM node is moved right under the <body> element so that it is positioned correctly at the center of the screen and can be placed over the translucent cover that blocks the entire screen.
+After a SimpleDialog is created, its DOM node is moved right under the <body> element 
+so that it is positioned correctly at the center of the screen and can be placed over 
+the translucent cover that blocks the entire screen.
 
 .. image :: SimpleDialog.png
 
@@ -104,10 +110,10 @@ Declarative example
 
 .. html ::
 
-  <div id="dlg_message" data-dojo-type="dojox.mobile.SimpleDialog">
+  <div id="dlg_message" data-dojo-type="dojox/mobile/SimpleDialog">
     <div class="mblSimpleDialogTitle">Information</div>
     <div class="mblSimpleDialogText">This is a sample dialog.</div>
-    <button data-dojo-type="dojox.mobile.Button" class="mblSimpleDialogButton"
+    <button data-dojo-type="dojox/mobile/Button" class="mblSimpleDialogButton"
             style="width:100px;" onclick="hide('dlg_message')">OK</button>
   </div>
 
@@ -166,13 +172,13 @@ Programmatic example
 Mixin example
 -------------
 
-This is an example of creating a SimpleDialog from HTML fragment by mixing in dojox.mobile._ContentPaneMixin using the 'data-dojo-mixins' attribute.
+This is an example of creating a SimpleDialog from HTML fragment by mixing in dojox/mobile/_ContentPaneMixin using the 'data-dojo-mixins' attribute.
 
 .. html ::
 
 	<div id="dlg_volume"
-	     data-dojo-type="dojox.mobile.SimpleDialog"
-	     data-dojo-mixins="dojox.mobile._ContentPaneMixin"
+	     data-dojo-type="dojox/mobile/SimpleDialog"
+	     data-dojo-mixins="dojox/mobile/_ContentPaneMixin"
 	     data-dojo-props='href:"dialog.html"'></div>
 
 .. html ::
@@ -180,20 +186,20 @@ This is an example of creating a SimpleDialog from HTML fragment by mixing in do
   <!-- dialog.html (HTML fragment file) -->
   <div class="mblSimpleDialogTitle">Volume</div>
   <div class="mblSimpleDialogText">Ringtone</div>
-  <input data-dojo-type="dojox.mobile.Slider"
+  <input data-dojo-type="dojox/mobile/Slider"
          data-dojo-props='value:"0", min:"0", max:"20", step:"0.1", type:"range"'
          style="width:90%;">
   <div class="mblSimpleDialogText">Media</div>
-  <input data-dojo-type="dojox.mobile.Slider"
+  <input data-dojo-type="dojox/mobile/Slider"
          data-dojo-props='value:"0", min:"0", max:"20", step:"0.1", type:"range"'
          style="width:90%;">
   <div class="mblSimpleDialogText">Alarm</div>
-  <input data-dojo-type="dojox.mobile.Slider"
+  <input data-dojo-type="dojox/mobile/Slider"
          data-dojo-props='value:"0", min:"0", max:"20", step:"0.1", type:"range"'
          style="width:90%;">
-  <button data-dojo-type="dojox.mobile.Button"
+  <button data-dojo-type="dojox/mobile/Button"
           class="mblSimpleDialogButton2l" onclick="hide('dlg_volume')">OK</button>
-  <button data-dojo-type="dojox.mobile.Button"
+  <button data-dojo-type="dojox/mobile/Button"
           class="mblSimpleDialogButton2r" onclick="hide('dlg_volume')">Cancel</button>
 
 .. image :: SimpleDialog-example3.png
@@ -227,9 +233,9 @@ Large dialog example for Tablet
 
 .. html ::
 
-  <div id="dlg1" data-dojo-type="dojox.mobile.SimpleDialog" data-dojo-props='closeButton:true'>
+  <div id="dlg1" data-dojo-type="dojox/mobile/SimpleDialog" data-dojo-props='closeButton:true'>
     <div class="dlgTitle">Account Information
-      <button id="btn1" data-dojo-type="dojox.mobile.Button"
+      <button id="btn1" data-dojo-type="dojox/mobile/Button"
               class="mblBlueButton" style="margin-top:-5px;width:60px;float:right;">Edit</button>
     </div>
     <hr/>
@@ -237,9 +243,9 @@ Large dialog example for Tablet
       <tr>
         <td style="width:250px"><img alt="" src="images/pic1.jpg" width="230" height="230"></td>
         <td style="vertical-align:top">
-          <input data-dojo-type="dojox.mobile.TextBox" value="Kirena Kobe" readOnly="readOnly"><br>
-          <input data-dojo-type="dojox.mobile.TextBox" value="123-456-7891"><br>
-          <input data-dojo-type="dojox.mobile.TextBox" value="kkobe@acme.com">
+          <input data-dojo-type="dojox/mobile/TextBox" value="Kirena Kobe" readOnly="readOnly"><br>
+          <input data-dojo-type="dojox/mobile/TextBox" value="123-456-7891"><br>
+          <input data-dojo-type="dojox/mobile/TextBox" value="kkobe@acme.com">
         </td>
       </tr>
       <tr>

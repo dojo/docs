@@ -1,7 +1,7 @@
 .. _dojox/mobile/ToolBarButton:
 
 ==========================
-dojox.mobile.ToolBarButton
+dojox/mobile/ToolBarButton
 ==========================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,14 +14,14 @@ dojox.mobile.ToolBarButton
 Introduction
 ============
 
-ToolBarButton is a button which is typically placed in the Heading widget. It is a subclass of dojox.mobile._ItemBase just like ListItem or IconItem. So, unlike :ref:`dojox.mobile.Button <dojox/mobile/Button>`, it has almost the same capability as ListItem or IconItem, such as icon support, transition, etc.
+ToolBarButton is a button which is typically placed in the Heading widget. It is a subclass of dojox/mobile/_ItemBase just like ListItem or IconItem. So, unlike :ref:`dojox/mobile/Button <dojox/mobile/Button>`, it has almost the same capability as ListItem or IconItem, such as icon support, transition, etc.
 
 .. image :: ToolbarButton.png
 
 Constructor Parameters
 ======================
 
-Inherited from dojox.mobile._ItemBase
+Inherited from dojox/mobile/_ItemBase
 -------------------------------------
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
@@ -43,7 +43,7 @@ Inherited from dojox.mobile._ItemBase
 |              |          |         |(ex. "0,0,29,29"). If iconPos is not specified, the iconPos parameter of the parent widget is used.        |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |moveTo        |String    |""       |The id of the transition destination view which resides in the current page. If the value has a hash sign  |
-|              |          |         |('#') before the id (e.g. #view1) and the dojo.hash module is loaded by the user application, the view     |
+|              |          |         |('#') before the id (e.g. #view1) and the dojo/hash module is loaded by the user application, the view     |
 |              |          |         |transition updates the hash in the browser URL so that the user can bookmark the destination view. In this |
 |              |          |         |case, the user can also use the browser's back/forward button to navigate through the views in the browser |
 |              |          |         |history. If null, transitions to a blank view. If '#', returns to the previous view immediately without    |
@@ -97,14 +97,14 @@ Parameters from this widget
 Usage
 =====
 
-Use this widget as child widgets of the :ref:`dojox.mobile.Heading <dojox/mobile/Heading>` widget.
+Use this widget as child widgets of the :ref:`dojox/mobile/Heading <dojox/mobile/Heading>` widget.
 
 In dojo-1.8, this widget can also be placed outside the Heading widget. See the navigation button example below.
 
 Examples
 ========
 
-See the :ref:`dojox.mobile.Heading <dojox/mobile/Heading>` widget for various examples.
+See the :ref:`dojox/mobile/Heading <dojox/mobile/Heading>` widget for various examples.
 
 Navigation button example
 -------------------------
@@ -120,18 +120,18 @@ This is an example of arrow buttons that are placed outside the Heading widget a
 
 .. html ::
 
-  <div id="view2" data-dojo-type="dojox.mobile.View">
-    <div data-dojo-type="dojox.mobile.RoundRect" data-dojo-props='shadow:true'>
+  <div id="view2" data-dojo-type="dojox/mobile/View">
+    <div data-dojo-type="dojox/mobile/RoundRect" data-dojo-props='shadow:true'>
       Dojo saves you time, delivers powerful performance,
       and scales with your development process.
       It's the toolkit experienced developers turn to
       for building superior desktop and mobile web experiences.
     </div>
-    <span data-dojo-type="dojox.mobile.ToolBarButton"
+    <span data-dojo-type="dojox/mobile/ToolBarButton"
           data-dojo-props='arrow:"left",
                            moveTo:"view3",
                            transition:"slide"'>Back</span>
-    <span data-dojo-type="dojox.mobile.ToolBarButton"
+    <span data-dojo-type="dojox/mobile/ToolBarButton"
           data-dojo-props='arrow:"right",
                            moveTo:"view1",
                            transition:"slide",

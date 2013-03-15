@@ -1,7 +1,7 @@
 .. _dojox/mobile/RoundRectDataList:
 
 ==============================
-dojox.mobile.RoundRectDataList
+dojox/mobile/RoundRectDataList
 ==============================
 
 :Authors: Yoshiroh Kamiyama
@@ -14,14 +14,17 @@ dojox.mobile.RoundRectDataList
 Introduction
 ============
 
-RoundRectDataList is an enhanced version of :ref:`dojox.mobile.RoundRectList <dojox/mobile/RoundRectList>`. It can generate ListItems according to the given dojo.data store.
+*Deprecated*. Since V1.8, use :ref:`dojox/mobile/RoundRectStoreList <dojox/mobile/RoundRectStoreList>` instead.
+
+RoundRectDataList is a subclass of :ref:`dojox/mobile/RoundRectList <dojox/mobile/RoundRectList>`
+which can generate ListItems according to the given dojo/data store.
 
 .. image :: RoundRectDataList.png
 
 Constructor Parameters
 ======================
 
-Inherited from dojox.mobile.RoundRectList
+Inherited from dojox/mobile/RoundRectList
 -----------------------------------------
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
@@ -54,7 +57,7 @@ Inherited from dojox.mobile.RoundRectList
 |tag           |String    |"ul"     |A name of html tag to create as domNode.                                                                   |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-Inherited from dojox.mobile._DataListMixin
+Inherited from dojox/mobile/_DataListMixin
 ------------------------------------------
 
 +--------------+----------+----------------------+-----------------------------------------------------------------------------------------------------------+
@@ -68,7 +71,7 @@ Inherited from dojox.mobile._DataListMixin
 |itemRenderer  |Class     |dojox/mobile/ListItem |An optional property specifying the type of the ListItem instances that will be created by the mixin.      |
 +--------------+----------+----------------------+-----------------------------------------------------------------------------------------------------------+
 
-Inherited from dojox.mobile._DataMixin
+Inherited from dojox/mobile/_DataMixin
 --------------------------------------
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
@@ -76,10 +79,10 @@ Inherited from dojox.mobile._DataMixin
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |store         |Object    |null     |Reference to data provider object used by this widget.                                                     |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|query         |Object    |null     |A query that can be passed to 'store' to initially filter the items. See `dojo.data <dojo/data>`_ for      |
-|              |          |         |details.                                                                                                   |
+|query         |Object    |null     |A query that can be passed to 'store' to initially filter the items. See `dojo/data <../../dojo/data>`_    |
+|              |          |         |for details.                                                                                               |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|queryOptions  |Object    |null     |An optional parameter for the query. See `dojo.data <dojo/data>`_ for details.                             |
+|queryOptions  |Object    |null     |An optional parameter for the query. See `dojo/data <../../dojo/data>`_ for details.                       |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
 Examples
@@ -101,9 +104,9 @@ In this example, no ListItem is declared under RoundRectDataList. The ListItems 
 
 .. html ::
 
-  <div data-dojo-type="dojo.data.ItemFileReadStore" 
+  <div data-dojo-type="dojo/data/ItemFileReadStore" 
               data-dojo-id="sampleStore" data-dojo-props='url:"sample.json"'></div>
-  <ul data-dojo-type="dojox.mobile.RoundRectDataList" data-dojo-props='store:sampleStore'>
+  <ul data-dojo-type="dojox/mobile/RoundRectDataList" data-dojo-props='store:sampleStore'>
   </ul>
 
 .. js ::
@@ -165,9 +168,9 @@ You can initially filter items by using "query" parameter. This example filters 
 
 .. html ::
 
-  <div data-dojo-type="dojo.data.ItemFileReadStore" 
+  <div data-dojo-type="dojo/data/ItemFileReadStore" 
               data-dojo-id="sampleStore" data-dojo-props='url:"sample2.json"'></div>
-  <ul data-dojo-type="dojox.mobile.RoundRectDataList" 
+  <ul data-dojo-type="dojox/mobile/RoundRectDataList" 
               data-dojo-props='store:sampleStore, query:{label:"*e"}'>
   </ul>
 
@@ -207,9 +210,9 @@ This example maps "name" and "count" fields in the json data to "label" and "rig
 
 .. html ::
 
-  <div data-dojo-type="dojo.data.ItemFileReadStore" 
+  <div data-dojo-type="dojo/data/ItemFileReadStore" 
               data-dojo-id="sampleStore" data-dojo-props='url:"sample3.json"'></div>
-  <ul data-dojo-type="dojox.mobile.RoundRectDataList" 
+  <ul data-dojo-type="dojox/mobile/RoundRectDataList" 
               data-dojo-props='store:sampleStore, itemMap:{name:"label", count:"rightText"}'>
   </ul>
 
