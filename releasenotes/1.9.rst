@@ -59,6 +59,9 @@ The parser now supports the ability to pass a context ``require()`` when parsing
 ``options`` hash passed during parse (`#16112 <http://bugs.dojotoolkit.org/ticket/16112>`_).  This allows for the use
 of relative MIDs to be used, specifically in Widget templates.
 
+Also, a widget's markupFactory() method may now return a Promise for the new widget, and the parser will wait for that
+promise to resolve before calling startup() on all the widgets.
+
 dojo/touch
 ----------
 There have been many improvements to dojo/touch w.r.t. touch device behavior.   (Behavior on mouse devices remains the
