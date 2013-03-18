@@ -533,6 +533,11 @@ Internationalization (i18n)
 
 * :ref:`Internationalization (i18n) <dojox/mobile/internationalization>`
 
+Bi-directional Languages Support (Bidi)
+---------------------------------------
+
+* :ref:`Bi-directional Languages Support (Bidi) <dojox/mobile/bidi>`
+
 Build
 -----
 
