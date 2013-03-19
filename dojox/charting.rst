@@ -305,7 +305,8 @@ This also includes a **filter** property that allows you to add a filter effect.
 
 .. js ::
 
-  require(["dojox/charting/plot2d/Columns", "dojox/gfx/filters", ... , "dojox/gfx/svgext"], function(Columns, filters, ...){
+  require(["dojox/charting/plot2d/Columns", "dojox/gfx/filters", ... , "dojox/gfx/svgext"], 
+    function(Columns, filters, ...){
     chart.addPlot("default", { type: Columns, fill: "red", filter: filters.shadows.dropShadow });
   });
 
