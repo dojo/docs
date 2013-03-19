@@ -299,7 +299,17 @@ Shadows can be added to a plot on data points as follows:
     chart.addPlot("default", { type: Lines, markers: true,
       tension: "X", shadow: {dx: 2, dy: 2} });
   });
-  
+
+This also includes a **filter** property that allows you to add a filter effect. This will work only if the underlying drawing system of the chart, gfx, is using the SVG rendering engine. In order for the filter to be functional you also need to explicitly require dojox/gfx/svgext module in your application as follows:
+
+
+  require(["dojox/charting/plot2d/Columns", "dojox/gfx/filters", ... , "dojox/gfx/svgext"], function(Columns, filters, ...){
+    chart.addPlot("default", { type: Columns, fill: "red", filter: filters.shadows.dropShadow });
+  });
+
+
+See :ref:`GFX documentation <dojox/gfx>` on how to use pre-defined filters or create new ones. 
+ 
 Finally if you need to specify the style of your plot elements depending on a function you can use the **styleFunc** property of these plots to compute the color based for example on data values:
 
 .. js ::
