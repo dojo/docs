@@ -311,6 +311,7 @@ dojox/charting
    * Ability to render labels on data points for Bubble/Columns/Default/Scatter plots by setting labels property to true.
    * Charting bidi features (bi-directional text and mirroring) can be enabled using the dojo-bidi has flag you should not use BidiSupport modules anymore. See `dojox/charting migration`_ for details.
    * Charting now supports bidi mirroring. You can perform mirroring by calling myChart.setDir("rtl") once bidi features have been included using dojo-bidi.
+   * Most plots now supports a filter property which allows to apply an SVG filter to the plot elements when using gfx SVG renderer.
 
 *Incompatibilities*
 
