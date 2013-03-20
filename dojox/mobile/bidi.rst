@@ -311,12 +311,24 @@ Please note that textDir for first input field is set to "ltr" while for other w
 
 .. html ::
 
- <td>
-    <textarea data-dojo-type="dojox.mobile.TextArea" data-dojo-props='textDir:"rtl"'>abc</textarea>
- </td>
-
+<body>
+  <button onclick="show2()">Show Dialog</button>
+  <div id="dlg2" data-dojo-type="dojox.mobile.SimpleDialog" data-dojo-props='closeButton:true'>
+     <div class="dlgTitle" >Dialog for Text dir test
+       <button data-dojo-type="dojox.mobile.Button" class="mblBlueButton" data-dojo-props='textDir:"rtl"'>שלום עולם !</button>
+     </div>
+     <table>
+       <tr>
+         <td style="width:250px"><img alt="" src="../images/pic1.jpg" width="230" height="230"></td>
+         <td style="vertical-align:top">
+             <input data-dojo-type="dojox.mobile.TextBox" data-dojo-props='value:"Hello World !", textDir:"ltr"'     ><br>
+             <input data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='value:"Hello שלום!", list:"values", textDir:"rtl"'>
+         </td>
+       </tr>
+     </table>
+   </div>
+</body>
 
 Image below illustrates the result on iPad 2 
 
 .. image :: bidi_textDiriOS.png
-
