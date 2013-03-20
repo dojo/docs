@@ -327,4 +327,12 @@ Please note that textDir for first input field is set to "ltr" while for other w
 	      </td>
 	   </tr>
 	   <tr>
-              <td colspan="2"><textarea data-dojo-type="dojox.mobile.TextArea" data-dojo-props='textDir:"rtl"'>שלום World!
+	     <td colspan="2"><textarea data-dojo-type="dojox.mobile.TextArea" data-dojo-props='textDir:"rtl"'>&#1513;&#1500;&#1493;&#1501; World!</textarea></td>
+	   </tr>
+	</table>
+      </div>
+   </body>	
+
+Image below illustrates the result on iPad 2
+
+
