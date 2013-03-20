@@ -4,6 +4,10 @@
 Dojo Mobile Bi-directional Languages Support (Bidi)
 ===================================================
 
+:Authors: Ramy Said, Tomer Mahlin
+:Developers: Alex Shensis, Alia Naguib, Ahmed Mustafa, Helena Halperin, Semion Chichelnitsky
+:since: V1.9
+
 .. contents ::
     :depth: 2
 
