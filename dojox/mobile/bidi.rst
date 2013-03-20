@@ -300,7 +300,7 @@ Notice that the upper list with caption "RTL RoundRectCategory!" has textDir set
 
 Image below illustrates how this example looks like on Google Nexus 7 tablet:
 
-.. image :: textDirAndroid.png
+.. image :: textDirAndroid.PNG
 
 Second example illustrates selective assignment of textDir attribute for different widgets which are part of a composite widget - dialog. 
 
