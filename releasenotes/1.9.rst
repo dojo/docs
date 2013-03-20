@@ -272,6 +272,7 @@ dojox/mobile
      based on arbitrary colors.
    * The ``dojox/mobile/TabBar`` widget now supports resizing its children so that they evenly fill all the space
      available in the bar. This is done by setting the new attribute "fill" to the value "always".
+   * "beforescroll" and "afterscroll" events added to scrollable widgets (``dojox/mobile/ScrollableView``, ...). The beforescroll event handler can return false to cancel the scroll. See the ``dojox/mobile/ScrollableView`` API doc for more informations on these new events.
    * New Android Holo dark theme used by default on Android 3.x and 4.x devices. For 
      backward compatibility, you can force 'Android' theme on all Android devices by 
      configuring ``deviceTheme``:
