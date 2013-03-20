@@ -318,4 +318,11 @@ Image below illustrates the result on iPad 2
 
 .. image :: textDiriOS.png
 
+.. image :: bidi_textDiriOS.png
+
+.. image :: test.png
+
+
+
+
 
