@@ -311,7 +311,12 @@ Please note that textDir for first input field is set to "ltr" while for other w
 .. html ::
 
    <body>
-
+     <button onclick="show2()">Show Dialog</button>
+     <div id="dlg2" data-dojo-type="dojox.mobile.SimpleDialog" data-dojo-props='closeButton:true'>
+       <div class="dlgTitle">Dialog for Text dir test
+          <button data-dojo-type="dojox.mobile.Button" class="mblBlueButton" data-dojo-props='textDir:"rtl"'>שלום עולם !</button>
+       </div>
+     </div>
    </body>
 
 Image below illustrates the result on iPad 2 
