@@ -335,6 +335,23 @@ dojox/app
        * respectively the previousView or nextView for the current view at its position
        * a raw data object that can be passed from one view to another by specifying a data attribute in the transition options.
    * Support was added to allow multiple views to be included in the DefaultViews in the config as well as on transitions and the url used in the transition. This allows multiple views to be displayed with different constraints (or regions) at the same time.  It is also now possible to transition views in regions other than the center.  To specify multiple views the view names would listed separated by a "+" for example "view1+view2" or "view1,subviewA+view2".  Support has also been added to be able to use a "-" to hide a view.  So if "view1+view2" are displayed and a transition is requested for "view3-view1" then view3 would be displayed (replacing view2 assuming they have the same constraint) and view1 would be hidden.
+   * Support was added to allow view specific params.  To specify params for a specific view the params must contain the view name with the view specfiic params set with the view name, for example: 
+.. js ::
+
+	MainOption1: function(e){
+		var views = "navLeft+mainCenter+lastRight"
+		var params = {"mainCenter":{'mainSel':"MainOption1","tparam1":"tValue1"}};
+		var transOpts = {
+			title: views,
+			target: views,
+			url: "#"+views,
+			params:params
+		};
+		new TransitionEvent(e.target,transOpts,e).dispatch();
+	},
+
+
+*Features (continued)*
    * A new config setting for "transition" has been added to set the transition animation type to use for the view transition. If a "transition" is set on a view or parent it will override the transition set on the transitionEvent or the defaultTransition in the config.
    * Observable support for stores via the config has been added. Setting "observable": true on a store will have the store wrapped in a dojo/store/Observable.
    * dojox/app is changing it's recommendation for the file structure used for an app.  The recommendation now is to place the “controller” (.js files) and the “template” (.html files) in the same folders for related parts of the app. This makes it much easier to reuse code between apps.
