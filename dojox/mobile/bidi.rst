@@ -203,5 +203,32 @@ If the direction is not specified on the widget level, then widgets inherit the 
 Bi-directional Text Support
 ===========================
 
-TBD
+
+Background
+-----------
+
+Base text direction is a very important aspect associated with the display of Bidi text. It greatly affects the readability of Bidi text. When text is displayed with not natural to it base text direction it becomes unreadable to a very considerable extent. 
+The Unicode Bidirectional Algorithm, which is commonly used for preparation of Bidi text for display, is not capable to reliably identify the natural base text direction for a given text. Only a human reader can unfailingly recognize the natural base text direction for a given text.
+Support for enforcing the base text direction is provided out of the box by most platforms / technologies, but very often the default settings do not guarantee proper display of English and Arabic (or English and Hebrew) text in the same application.
+Dojo provides necessary means (textDir attribute) to enforce the base text direction. Those should be explicitly leveraged by the application in order to ensure proper display of English and Arabic (or English and Hebrew) text on the same screen.
+
+The ``textDdir`` attribute
+----------------------------
+Control over text direction for text which appears on the screen as part of the widget is provided via textDir attribute.For example:
+
+.. html ::
+
+<input data-dojo-type="dojox.mobile.TextBox" data-dojo-props='value:"Hello World !", textDir:"rtl"'>
+
+
+
+textDir controls only direction of text displayed inside widget. It does not affect the graphics of the widget. 
+For widgets which don't display any text it has no effect.
+Control over text direction (via textDir) is provided independently from control over GUI direction (via dir). For example you can set dir and textDir to different values as shown on the example below:
+
+.. html ::
+
+<input data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='value:"Hello &#1506;&#1493;&#1500;&#1501;!", list:"values", textDir:"rtl",dir:"ltr"'>
+
+
 
