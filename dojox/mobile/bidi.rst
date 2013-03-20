@@ -310,6 +310,9 @@ Please note that textDir for first input field is set to "ltr" while for other w
 
 .. html ::
 
+   <tr>
+     <td><textarea data-dojo-type="dojox.mobile.TextArea" data-dojo-props='textDir:"rtl"'>שלום World!</textarea></td>
+   </tr>
 
 Image below illustrates the result on iPad 2 
 
