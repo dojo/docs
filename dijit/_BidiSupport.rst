@@ -4,55 +4,13 @@
 dijit._BidiSupport
 ==================
 
-:Authors: TODO Author 
-:since: 1.?
+*Deprecated*.
 
-.. contents ::
-    :depth: 2
+This module used to be used to enable bidi support in dijit, but it's deprecated.
 
-Introduction
-============
+Bidi support for dijit should now be enabled via:
 
-TODO: introduce the module 
+.. html ::
 
-Usage
-=====
-
-.. js ::
-
-    // TODO
-
-Examples
-========
-
-Programmatic example
---------------------
-
-.. code-example ::
-
-  TODO - Here is a programmatic example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
-
-Declarative example
--------------------
-
-.. code-example ::
-
-  TODO - Here is a declarative example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
-
-See also
-========
+  <script src="dojo.js" data-dojo-config="has:{'dojo-bidi': true}"></script>
 
