@@ -325,6 +325,9 @@ Please note that textDir for first input field is set to "ltr" while for other w
              <input data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='value:"Hello שלום!", list:"values", textDir:"rtl"'>
          </td>
        </tr>
+       <tr>
+         <td><textarea> </textarea></td>
+       </tr>
      </table>
    </div>
 </body>
