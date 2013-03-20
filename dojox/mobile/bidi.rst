@@ -310,30 +310,14 @@ Please note that textDir for first input field is set to "ltr" while for other w
 
 .. html ::
 
-   <body>
-     <button onclick="show2()">Show Dialog</button>
-     <div id="dlg2" data-dojo-type="dojox.mobile.SimpleDialog" data-dojo-props='closeButton:true'>
-       <div class="dlgTitle">Dialog for Text dir test
-          <button data-dojo-type="dojox.mobile.Button" class="mblBlueButton" data-dojo-props='textDir:"rtl"'>שלום עולם !</button>
-       </div>
-     </div>
-     <table>
-       <tr>
-       </tr>
-       <tr>
-         <td colspan="2"><textarea data-dojo-type="dojox.mobile.TextArea" data-dojo-props='textDir:"rtl"'>שלום World!</textarea></td>
-       </tr>
-     </table>
-   </body>
 
 Image below illustrates the result on iPad 2 
 
-.. image :: textDiriOS.png
+.. image :: textDiriOS.png 
+.. image :: bidi_textDiriOS.png 
+.. image :: test.png 
 
-.. image :: bidi_textDiriOS.png
-
-.. image :: test.png
-
+.. image :: textDirAndroid.png
 
 
 
