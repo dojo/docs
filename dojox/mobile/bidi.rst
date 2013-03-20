@@ -304,18 +304,6 @@ Image below illustrates how this example looks like on Google Nexus 7 tablet:
 .. image :: textDirAndroid.png
 
 
-.. image :: bidi_textDirAndroid.png
-
-
-.. image :: bidi_EdgeToEdgeList_RTL.png
-
-
-.. image :: test.png
-
-.. image :: test.PNG
-
-
-
 Second example illustrates selective assignment of textDir attribute for different widgets which are part of a composite widget - dialog. 
 
 Please note that textDir for first input field is set to "ltr" while for other widgets it is set to "rtl".
@@ -326,19 +314,30 @@ Please note that textDir for first input field is set to "ltr" while for other w
 
    <body>
      <button onclick="show2()">Show Dialog</button>
-		
      <div id="dlg2" data-dojo-type="dojox.mobile.SimpleDialog" data-dojo-props='closeButton:true'>
 	<div class="dlgTitle" >Dialog for Text dir test
-	   <button data-dojo-type="dojox.mobile.Button" class="mblBlueButton" style="width:150px;float:right;" data-dojo-props='textDir:"rtl"'>שלום עולם !</button>
+          <button data-dojo-type="dojox.mobile.Button" class="mblBlueButton" style="width:150px;float:right;" data-dojo-props='textDir:"rtl"'>&#1513;&#1500;&#1493;&#1501; &#1506;&#1493;&#1500;&#1501; !</button>
 	</div>
 	<table style="width:100%">
-	   <tr>
-	      <td style="width:250px"><img alt="" src="../images/pic1.jpg" width="230" height="230"></td>
-	      <td style="vertical-align:top">
+	  <tr>
+	    <td style="width:250px"><img alt="" src="../images/pic1.jpg" width="230" height="230"></td>
+	    <td style="vertical-align:top">
 		<input data-dojo-type="dojox.mobile.TextBox" data-dojo-props='value:"Hello World !", textDir:"ltr"' 	><br>
-		<input data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='value:"Hello עולם!", list:"values", textDir:"rtl"'>
-					
-	      </td>
-	   </tr>
-	   <tr>
-	     <td colspan="2"><textarea data-dojo-type="dojox.mobile.TextArea" data-dojo-props='textDir:"rtl"'>שלום World!
+		<input data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='value:"Hello שלום!", list:"values", textDir:"rtl"'>
+	    </td>
+	  </tr>
+	  <tr>
+	    <td colspan="2"><textarea data-dojo-type="dojox.mobile.TextArea" data-dojo-props='textDir:"rtl"'>שלום World!</textarea></td>
+	  </tr>
+	</table>
+      </div>
+   </body>
+
+
+Image below illustrates the result on iPad 2
+
+.. image :: textDiriOS.png
+
+
+Examples
+---------
