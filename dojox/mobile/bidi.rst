@@ -314,12 +314,4 @@ Please note that textDir for first input field is set to "ltr" while for other w
 Image below illustrates the result on iPad 2 
 
 .. image :: bidi_textDiriOS.png
-.. image :: textDiriOS.png
-
-.. image :: bidi_textDiriOS.png 
-.. image :: test.png 
-
-
-
-
 
