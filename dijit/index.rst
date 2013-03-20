@@ -87,7 +87,7 @@ Infrastructure Widgets
 
 * :ref:`dijit._PaletteMixin <dijit/_PaletteMixin>`
 
-* :ref:`dijit._TimePicker <dijit/_TimePicker>` **STUB**
+* :ref:`dijit._TimePicker <dijit/_TimePicker>`
 
 Menu Widgets
 ============
