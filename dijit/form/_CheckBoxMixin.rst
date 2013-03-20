@@ -4,58 +4,8 @@
 dijit.form._CheckBoxMixin
 =========================
 
-:Authors: TODO Author 
-:since: 1.?
+:Authors: Doug Hays
+:since: 1.7
 
-.. contents ::
-    :depth: 2
-
-Introduction
-============
-
-TODO: introduce the module 
-
-Usage
-=====
-
-.. js ::
-
-  // Dojo 1.7 (AMD)
-
-.. js ::
-
-  // Dojo < 1.7
-
-Examples
-========
-
-Programmatic example
---------------------
-
-.. code-example ::
-
-  TODO - Here is a programmatic example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
-
-Declarative example
--------------------
-
-.. code-example ::
-
-  TODO - Here is a declarative example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
-
-See also
-========
+_CheckBoxMixin is a base class for :ref:`dijit/form/CheckBox <dijit/form/CheckBox>` and
+:ref:`dojox/mobile/CheckBox <dojox/mobile/CheckBox>`.  It's not meant to be used directly.

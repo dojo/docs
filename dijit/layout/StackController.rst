@@ -4,58 +4,9 @@
 dijit.layout.StackController
 ============================
 
-:Authors: TODO Author 
-:since: 1.?
+:Authors: Bill Keese
+:since: 1.0
 
-.. contents ::
-    :depth: 2
+StackController is used in conjunction with a :ref:`dijit/layout/StackContainer <dijit/layout/StackContainer>`.
 
-Introduction
-============
-
-TODO: introduce the module 
-
-Usage
-=====
-
-.. js ::
-
-  // Dojo 1.7 (AMD)
-
-.. js ::
-
-  // Dojo < 1.7
-
-Examples
-========
-
-Programmatic example
---------------------
-
-.. code-example ::
-
-  TODO - Here is a programmatic example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
-
-Declarative example
--------------------
-
-.. code-example ::
-
-  TODO - Here is a declarative example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
-
-See also
-========
+See that page for details.

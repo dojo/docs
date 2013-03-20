@@ -4,58 +4,8 @@
 dijit.form._FormValueMixin
 ==========================
 
-:Authors: TODO Author 
-:since: 1.?
+:Authors: Doug Hays
+:since: 1.7
 
-.. contents ::
-    :depth: 2
-
-Introduction
-============
-
-TODO: introduce the module 
-
-Usage
-=====
-
-.. js ::
-
-  // Dojo 1.7 (AMD)
-
-.. js ::
-
-  // Dojo < 1.7
-
-Examples
-========
-
-Programmatic example
---------------------
-
-.. code-example ::
-
-  TODO - Here is a programmatic example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
-
-Declarative example
--------------------
-
-.. code-example ::
-
-  TODO - Here is a declarative example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
-
-See also
-========
+Mixin for widgets corresponding to native HTML elements such as `<input>` or `<select>`
+that have user changeable values.

@@ -4,59 +4,12 @@
 dijit.form._ComboBoxMenuMixin
 =============================
 
-:Authors: TODO Author 
-:since: 1.?
+:Authors: Doug Hays
+:since: 1.7
 
-.. contents ::
-    :depth: 2
+_ComboBoxMenuMixin is a base class for :ref:`dijit/form/_ComboBoxMenu <dijit/form/_ComboBoxMenu>` and
+:ref:`dojox/mobile/_ComboBoxMenu <dijit/form/_ComboBoxMenu>`, which are widgets used
+internally by for :ref:`dijit/form/ComboBox <dijit/form/ComboBox>` and
+:ref:`dojox/mobile/ComboBox <dojox/mobile/ComboBox>`.
 
-Introduction
-============
-
-TODO: introduce the module 
-
-Usage
-=====
-
-.. js ::
-
-  // Dojo 1.7 (AMD)
-
-.. js ::
-
-  // Dojo < 1.7
-
-Examples
-========
-
-Programmatic example
---------------------
-
-.. code-example ::
-
-  TODO - Here is a programmatic example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
-
-Declarative example
--------------------
-
-.. code-example ::
-
-  TODO - Here is a declarative example
-
-  .. js ::
-
-  .. css ::
-
-  .. html ::
-
-
-See also
-========
-
+It's not meant to be used directly.

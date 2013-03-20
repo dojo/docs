@@ -13,7 +13,8 @@ dijit.form._FormMixin
 Introduction
 ============
 
-TODO: introduce the module 
+Mixin for containers of form widgets (i.e. widgets that represent a single value
+and can be children of a `<form>` node or `dijit/form/Form` widget).
 
 Usage
 =====

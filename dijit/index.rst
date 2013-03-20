@@ -71,7 +71,7 @@ Infrastructure Widgets
 
 * :ref:`dijit._OnDijitClickMixin <dijit/_OnDijitClickMixin>`
 
-* :ref:`dijit._BidiSupport <dijit/_BidiSupport>` **STUB**
+* :ref:`dijit._BidiSupport <dijit/_BidiSupport>`
 
 * :ref:`dijit._Contained <dijit/_Contained>`
 
@@ -148,7 +148,7 @@ Miscellaneous Widgets
 
 * :ref:`dijit.Toolbar <dijit/Toolbar>`
 
-* :ref:`dijit.ToolbarSeparator <dijit/ToolbarSeparator>` **STUB**
+* :ref:`dijit.ToolbarSeparator <dijit/ToolbarSeparator>`
 
 * :ref:`dijit.Tooltip <dijit/Tooltip>`
 
@@ -299,35 +299,13 @@ Form Widgets and Handling
 
       Base class for form widgets with a value
 
-    * :ref:`dijit.form._AutoCompleterMixin <dijit/form/_AutoCompleterMixin>` **STUB**
+    * :ref:`dijit.form._FormValueMixin <dijit/form/_FormValueMixin>`
 
-    * :ref:`dijit.form._ButtonMixin <dijit/form/_ButtonMixin>` **STUB**
-
-    * :ref:`dijit.form._CheckBoxMixin <dijit/form/_CheckBoxMixin>` **STUB**
-
-    * :ref:`dijit.form._ComboBoxMenu <dijit/form/_ComboBoxMenu>` **STUB**
-
-    * :ref:`dijit.form._DateTimeTextBox <dijit/form/_DateTimeTextBox>` **STUB**
-
-    * :ref:`dijit.form._ExpandingTextAreaMixin <dijit/form/_ExpandingTextAreaMixin>` **STUB**
-
-    * :ref:`dijit.form._FormMixin <dijit/form/_FormMixin>` **STUB**
-
-    * :ref:`dijit.form._FormValueMixin <dijit/form/_FormValueMixin>` **STUB**
-
-    * :ref:`dijit.form._FormWidgetMixin <dijit/form/_FormWidgetMixin>` **STUB**
+    * :ref:`dijit.form._FormWidgetMixin <dijit/form/_FormWidgetMixin>`
 
     * :ref:`dijit.form._ListBase <dijit/form/_ListBase>` **STUB**
 
     * :ref:`dijit.form._ListMouseMixin <dijit/form/_ListMouseMixin>` **STUB**
-
-    * :ref:`dijit.form._RadioButtonMixin <dijit/form/_RadioButtonMixin>` **STUB**
-
-    * :ref:`dijit.form._Spinner <dijit/form/_Spinner>` **STUB**
-
-    * :ref:`dijit.form._TextBoxMixin <dijit/form/_TextBoxMixin>` **STUB**
-
-    * :ref:`dijit.form._ToggleButtonMixin <dijit/form/_ToggleButtonMixin>` **STUB**
 
 Layout
 ======
@@ -350,11 +328,9 @@ Layout
 
   * :ref:`dijit/layout/utils <dijit/layout/utils>` **STUB**
 
-  * :ref:`dijit.layout.ScrollingTabController <dijit/layout/ScrollingTabController>` **STUB**
+  * :ref:`dijit.layout.StackController <dijit/layout/StackController>`
 
-  * :ref:`dijit.layout.StackController <dijit/layout/StackController>` **STUB**
-
-  * :ref:`dijit.layout.TabController <dijit/layout/TabController>` **STUB**
+  * :ref:`dijit.layout.TabController <dijit/layout/TabController>`
 
 Note about programmatic instantiation
 =====================================

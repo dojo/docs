@@ -4,9 +4,6 @@
 dijit.form._FormValueWidget
 ===========================
 
-.. contents :: 
-    :depth: 2
-
 dijit/form/_FormSelectWidget is a base class for widgets corresponding to native HTML elements such as
 <input> or <select> that have user changeable values.
 
