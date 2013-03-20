@@ -208,8 +208,14 @@ Background
 -----------
 
 Base text direction is a very important aspect associated with the display of Bidi text. It greatly affects the readability of Bidi text. When text is displayed with not natural to it base text direction it becomes unreadable to a very considerable extent. 
+
+
 The Unicode Bidirectional Algorithm, which is commonly used for preparation of Bidi text for display, is not capable to reliably identify the natural base text direction for a given text. Only a human reader can unfailingly recognize the natural base text direction for a given text.
+
+
 Support for enforcing the base text direction is provided out of the box by most platforms / technologies, but very often the default settings do not guarantee proper display of English and Arabic (or English and Hebrew) text in the same application.
+
+
 Dojo provides necessary means (textDir attribute) to enforce the base text direction. Those should be explicitly leveraged by the application in order to ensure proper display of English and Arabic (or English and Hebrew) text on the same screen.
 
 The ``textDdir`` attribute
@@ -218,8 +224,9 @@ Control over text direction for text which appears on the screen as part of the 
 
 .. html ::
 
-<input data-dojo-type="dojox.mobile.TextBox" data-dojo-props='value:"Hello World !", textDir:"rtl"'>
-
+   <body>
+       <input data-dojo-type="dojox.mobile.TextBox" data-dojo-props='value:"Hello World !", textDir:"rtl"'>
+   </body>
 
 
 textDir controls only direction of text displayed inside widget. It does not affect the graphics of the widget. 
@@ -228,7 +235,11 @@ Control over text direction (via textDir) is provided independently from control
 
 .. html ::
 
-<input data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='value:"Hello &#1506;&#1493;&#1500;&#1501;!", list:"values", textDir:"rtl",dir:"ltr"'>
+   <body>
+       <input data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='value:"Hello עולם!", list:"values", textDir:"rtl",dir:"ltr"'>
+   </body>
+
+
 
 
 
