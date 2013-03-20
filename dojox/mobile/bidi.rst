@@ -270,35 +270,33 @@ Notice that the upper list with caption "RTL RoundRectCategory!" has textDir set
 .. html ::
 
    <body>
-		<h2 data-dojo-type="dojox/mobile/RoundRectCategory" data-dojo-props='textDir:"rtl"'>RTL RoundRectCategory!</h2>
-		<ul data-dojo-type="dojox/mobile/EdgeToEdgeList" data-dojo-props='textDir:"rtl"'>
-			<li id="first" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-1.png"'>
-				<font style="font-style:italic; font-size: 16pt">Rtl </font>direction!!
-				<div data-dojo-type="dojox.mobile.Switch"></div>
-			</li>
-			<li id="second" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-2.png",rightText:"mac.", moveTo:"hello."'>
-				&nbsp;Wi-Fi!  Internet!  Rtl direction!&nbsp;			
-			</li>
-			<li id="third" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-3.png", rightText:"AcmePhone.", moveTo:"hello."'>
-				שלום World!
-			</li>
-		</ul>
-	
-		<h2 data-dojo-type="dojox/mobile/RoundRectCategory" data-dojo-props='textDir:"ltr"'>LTR RoundRectCategory!</h2>
-		<ul data-dojo-type="dojox/mobile/EdgeToEdgeList" data-dojo-props='textDir:"ltr"'>
-			<li id="first_ltr" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-1.png"'>
-				<font style="font-style:italic; font-size: 16pt">Ltr </font>direction!!
-				<div data-dojo-type="dojox.mobile.Switch"></div>
-			</li>
-			<li id="second_ltr" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-2.png",rightText:"mac.", moveTo:"hello."'>
+      <h2 data-dojo-type="dojox/mobile/RoundRectCategory" data-dojo-props='textDir:"rtl"'>RTL RoundRectCategory!</h2>
+      <ul data-dojo-type="dojox/mobile/EdgeToEdgeList" data-dojo-props='textDir:"rtl"'>
+         <li id="first" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-1.png"'>
+	    <font style="font-style:italic; font-size: 16pt">Rtl </font>direction!!
+	    <div data-dojo-type="dojox.mobile.Switch"></div>
+	 </li>
+	 <li id="second" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-2.png",rightText:"mac.", moveTo:"hello."'>
+				 Wi-Fi!  Internet!  Rtl direction! 			
+	 </li>
+	 <li id="third" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-3.png", rightText:"AcmePhone.", moveTo:"hello."'>
+			שלום World!
+	 </li>
+      </ul>
+      <h2 data-dojo-type="dojox/mobile/RoundRectCategory" data-dojo-props='textDir:"ltr"'>LTR RoundRectCategory!</h2>
+      <ul data-dojo-type="dojox/mobile/EdgeToEdgeList" data-dojo-props='textDir:"ltr"'>
+	 <li id="first_ltr" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-1.png"'>
+           <font style="font-style:italic; font-size: 16pt">Ltr </font>direction!!
+	   <div data-dojo-type="dojox.mobile.Switch"></div>
+	 </li>
+	 <li id="second_ltr" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-2.png",rightText:"mac.", moveTo:"hello."'>
 				Wi-Fi!  Internet!  Ltr direction!
-			</li>
-			<li id="third_ltr" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-3.png",textDir:"ltr", rightText:"AcmePhone.", moveTo:"hello."'>
+	 </li>
+	 <li id="third_ltr" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-3.png",textDir:"ltr", rightText:"AcmePhone.", moveTo:"hello."'>
 				שלום World!
-			</li>
-		</ul>
+	 </li>
+       </ul>
    </body>
-
 
 Image below illustrates how this example looks like on Google Nexus 7 tablet:
 
@@ -313,29 +311,20 @@ Please note that textDir for first input field is set to "ltr" while for other w
 .. html ::
 
    <body>
-	<button onclick="show2()">Show Dialog</button>
+     <button onclick="show2()">Show Dialog</button>
 		
-	<div id="dlg2" data-dojo-type="dojox.mobile.SimpleDialog" data-dojo-props='closeButton:true'>
-		<div class="dlgTitle" >Dialog for Text dir test
-			<button data-dojo-type="dojox.mobile.Button" class="mblBlueButton" style="width:150px;float:right;" data-dojo-props='textDir:"rtl"'>&#1513;&#1500;&#1493;&#1501; &#1506;&#1493;&#1500;&#1501; !</button>
-		</div>
-		<table style="width:100%">
-			<tr>
-				<td style="width:250px"><img alt="" src="../images/pic1.jpg" width="230" height="230"></td>
-				<td style="vertical-align:top">
-					<input data-dojo-type="dojox.mobile.TextBox" data-dojo-props='value:"Hello World !", textDir:"ltr"' 	><br>
-					<input data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='value:"Hello &#1506;&#1493;&#1500;&#1501;!", list:"values", textDir:"rtl"'>
-					
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2"><textarea data-dojo-type="dojox.mobile.TextArea" data-dojo-props='textDir:"rtl"'>&#1513;&#1500;&#1493;&#1501; World!</textarea></td>
-			</tr>
-		</table>
+     <div id="dlg2" data-dojo-type="dojox.mobile.SimpleDialog" data-dojo-props='closeButton:true'>
+	<div class="dlgTitle" >Dialog for Text dir test
+	   <button data-dojo-type="dojox.mobile.Button" class="mblBlueButton" style="width:150px;float:right;" data-dojo-props='textDir:"rtl"'>שלום עולם !</button>
 	</div>
-   </body>
-
-
-
-Image below illustrates the result on iPad 2
-
+	<table style="width:100%">
+	   <tr>
+	      <td style="width:250px"><img alt="" src="../images/pic1.jpg" width="230" height="230"></td>
+	      <td style="vertical-align:top">
+		<input data-dojo-type="dojox.mobile.TextBox" data-dojo-props='value:"Hello World !", textDir:"ltr"' 	><br>
+		<input data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='value:"Hello עולם!", list:"values", textDir:"rtl"'>
+					
+	      </td>
+	   </tr>
+	   <tr>
+              <td colspan="2"><textarea data-dojo-type="dojox.mobile.TextArea" data-dojo-props='textDir:"rtl"'>שלום World!
