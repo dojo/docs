@@ -310,6 +310,11 @@ Image below illustrates how this example looks like on Google Nexus 7 tablet:
 .. image :: bidi_EdgeToEdgeList_RTL.png
 
 
+.. image :: test.png
+
+.. image :: test.PNG
+
+
 
 Second example illustrates selective assignment of textDir attribute for different widgets which are part of a composite widget - dialog. 
 
