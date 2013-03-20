@@ -241,5 +241,101 @@ Control over text direction (via textDir) is provided independently from control
 
 
 
+Possible values
+---------------
 
+textDir can receive the same range of values defined for dir attribute in HTML5. Namely:
+
+* ltr
+* rtl
+* auto
+
+Dynamic change
+---------------
+
+Similarly to dir attribute, textDir supports dynamic change. Display of text changes accordingly when value of textDir is set programmatically.
+
+Inheritance
+-------------
+
+As opposed to dir attribute textDir is neither inherited nor propagated.  This is because textDir is supposed to be used for controlling base text direction of end user text. This type of text usually appears in very well defined contexts. The same composite widget  (i.e. dialog) can show both end user text and translated text. Widget by itself can't distinguish between those types of text and thus can't decide to which portions of text apply textDir. This is why it is in responsibility of programmer to explicitly provide a value to textDir attribute for only those widgets which show end user text. 
+
+Examples
+---------
+
+First example illustrates usage of textDir attribute to enforce different base text direction values to different instances of EdgeToEdgeList widget.
+
+Notice that the upper list with caption "RTL RoundRectCategory!" has textDir set to "rtl" while bottom list with caption  "LTRL RoundRectCategory!"  has textDir set to "ltr".
+
+.. html ::
+
+   <body>
+		<h2 data-dojo-type="dojox/mobile/RoundRectCategory" data-dojo-props='textDir:"rtl"'>RTL RoundRectCategory!</h2>
+		<ul data-dojo-type="dojox/mobile/EdgeToEdgeList" data-dojo-props='textDir:"rtl"'>
+			<li id="first" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-1.png"'>
+				<font style="font-style:italic; font-size: 16pt">Rtl </font>direction!!
+				<div data-dojo-type="dojox.mobile.Switch"></div>
+			</li>
+			<li id="second" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-2.png",rightText:"mac.", moveTo:"hello."'>
+				&nbsp;Wi-Fi!  Internet!  Rtl direction!&nbsp;			
+			</li>
+			<li id="third" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-3.png", rightText:"AcmePhone.", moveTo:"hello."'>
+				שלום World!
+			</li>
+		</ul>
+	
+		<h2 data-dojo-type="dojox/mobile/RoundRectCategory" data-dojo-props='textDir:"ltr"'>LTR RoundRectCategory!</h2>
+		<ul data-dojo-type="dojox/mobile/EdgeToEdgeList" data-dojo-props='textDir:"ltr"'>
+			<li id="first_ltr" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-1.png"'>
+				<font style="font-style:italic; font-size: 16pt">Ltr </font>direction!!
+				<div data-dojo-type="dojox.mobile.Switch"></div>
+			</li>
+			<li id="second_ltr" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-2.png",rightText:"mac.", moveTo:"hello."'>
+				Wi-Fi!  Internet!  Ltr direction!
+			</li>
+			<li id="third_ltr" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-3.png",textDir:"ltr", rightText:"AcmePhone.", moveTo:"hello."'>
+				שלום World!
+			</li>
+		</ul>
+   </body>
+
+
+Image below illustrates how this example looks like on Google Nexus 7 tablet:
+
+
+
+Second example illustrates selective assignment of textDir attribute for different widgets which are part of a composite widget - dialog. 
+
+Please note that textDir for first input field is set to "ltr" while for other widgets it is set to "rtl".
+
+
+
+.. html ::
+
+   <body>
+	<button onclick="show2()">Show Dialog</button>
+		
+	<div id="dlg2" data-dojo-type="dojox.mobile.SimpleDialog" data-dojo-props='closeButton:true'>
+		<div class="dlgTitle" >Dialog for Text dir test
+			<button data-dojo-type="dojox.mobile.Button" class="mblBlueButton" style="width:150px;float:right;" data-dojo-props='textDir:"rtl"'>&#1513;&#1500;&#1493;&#1501; &#1506;&#1493;&#1500;&#1501; !</button>
+		</div>
+		<table style="width:100%">
+			<tr>
+				<td style="width:250px"><img alt="" src="../images/pic1.jpg" width="230" height="230"></td>
+				<td style="vertical-align:top">
+					<input data-dojo-type="dojox.mobile.TextBox" data-dojo-props='value:"Hello World !", textDir:"ltr"' 	><br>
+					<input data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='value:"Hello &#1506;&#1493;&#1500;&#1501;!", list:"values", textDir:"rtl"'>
+					
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><textarea data-dojo-type="dojox.mobile.TextArea" data-dojo-props='textDir:"rtl"'>&#1513;&#1500;&#1493;&#1501; World!</textarea></td>
+			</tr>
+		</table>
+	</div>
+   </body>
+
+
+
+Image below illustrates the result on iPad 2
 
