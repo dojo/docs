@@ -308,11 +308,13 @@ Second example illustrates selective assignment of textDir attribute for differe
 
 Please note that textDir for first input field is set to "ltr" while for other widgets it is set to "rtl".
 
+
 .. html ::
 
-   <tr>
-     <td><textarea data-dojo-type="dojox.mobile.TextArea" data-dojo-props='textDir:"rtl"'>שלום World!</textarea></td>
-   </tr>
+ <td>
+    <textarea data-dojo-type="dojox.mobile.TextArea" data-dojo-props='textDir:"rtl"'>abc</textarea>
+ </td>
+
 
 Image below illustrates the result on iPad 2 
 
