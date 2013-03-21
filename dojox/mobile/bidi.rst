@@ -76,13 +76,13 @@ This usually solves the alignment of the component.
 .. html ::
 
   <body style="visibility:hidden;" dir="rtl">
-    <div id="settings" dojoType="dojox.mobile.View" selected="true">
-      <h1 dojoType="dojox.mobile.Heading">Settings</h1>
-      <ul dojoType="dojox.mobile.EdgeToEdgeList">
-        <li dojoType="dojox.mobile.ListItem" icon="images/a-icon-2-41x41.png" rightText="mac" moveTo="hello">
+    <div id="settings" data-dojo-type="dojox.mobile.View" selected="true">
+      <h1 data-dojo-type="dojox.mobile.Heading">Settings</h1>
+      <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
+        <li data-dojo-type="dojox.mobile.ListItem" icon="images/a-icon-2-41x41.png" rightText="mac" moveTo="hello">
         Wi-Fi
         </li>
-        <li dojoType="dojox.mobile.ListItem" icon="images/a-icon-2-41x41.png" rightText="AcmePhone" moveTo="hello">
+        <li data-dojo-type="dojox.mobile.ListItem" icon="images/a-icon-2-41x41.png" rightText="AcmePhone" moveTo="hello">
         Carrier
         </li>
       </ul>
@@ -118,13 +118,13 @@ And finally set the ``dir`` attribute of the widget  to rtl:
 .. html ::
 
   <body style="visibility:hidden;">
-    <div id="settings" dojoType="dojox.mobile.View" selected="true">
-    <h1 dojoType="dojox.mobile.Heading">الاعدادات</h1>
-      <ul dojoType="dojox.mobile.EdgeToEdgeList">
-        <li dojoType="dojox.mobile.ListItem" dir="rtl" icon="images/a-icon-2-41x41.png" rightText="مصر" moveTo="hello">
+    <div id="settings" data-dojo-type="dojox.mobile.View" selected="true">
+    <h1 data-dojo-type="dojox.mobile.Heading">الاعدادات</h1>
+      <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
+        <li data-dojo-type="dojox.mobile.ListItem" dir="rtl" icon="images/a-icon-2-41x41.png" rightText="مصر" moveTo="hello">
         الشبكة اللاسلكية
         </li>
-        <li dojoType="dojox.mobile.ListItem" dir=”rtl” icon="images/a-icon-2-41x41.png" rightText="مصرية" moveTo="hello">
+        <li data-dojo-type="dojox.mobile.ListItem" dir=”rtl” icon="images/a-icon-2-41x41.png" rightText="مصرية" moveTo="hello">
         شبكة المحمول
         </li>
        </ul>
@@ -150,11 +150,11 @@ By adding the ``dir`` attribute in the widget tag itself, we specify the directi
 
 .. html ::
 
-  <ul dojoType="dojox.mobile.EdgeToEdgeList">
-    <li dojoType="dojox.mobile.ListItem" dir="rtl" icon="images/a-icon-2-41x41.png" rightText="مصر" moveTo="hello">
+  <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
+    <li data-dojo-type="dojox.mobile.ListItem" dir="rtl" icon="images/a-icon-2-41x41.png" rightText="مصر" moveTo="hello">
     الشبكة اللاسلكية
     </li>
-    <li dojoType="dojox.mobile.ListItem" icon="images/a-icon-2-41x41.png" rightText="acmePhone" moveTo="hello">
+    <li data-dojo-type="dojox.mobile.ListItem" icon="images/a-icon-2-41x41.png" rightText="acmePhone" moveTo="hello">
     Carrier
     </li>
   </ul>
@@ -186,11 +186,11 @@ If the direction is not specified on the widget level, then widgets inherit the 
 
   <div dir="ltr">
     <div dir="rtl">
-      <ul dojoType="dojox.mobile.EdgeToEdgeList">
-        <li dojoType="dojox.mobile.ListItem" icon="images/a-icon-2-41x41.png" rightText="مصر" moveTo="hello">
+      <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
+        <li data-dojo-type="dojox.mobile.ListItem" icon="images/a-icon-2-41x41.png" rightText="مصر" moveTo="hello">
         الشبكة اللاسلكية
         </li>
-        <li dojoType="dojox.mobile.ListItem" icon="images/a-icon-2-41x41.png" rightText="مصرية" moveTo="hello">
+        <li data-dojo-type="dojox.mobile.ListItem" icon="images/a-icon-2-41x41.png" rightText="مصرية" moveTo="hello">
         شبكة المحمول
         </li>
       </ul>
