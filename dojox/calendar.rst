@@ -237,7 +237,7 @@ The following example shows how to define the time range from the 1st of January
 Styling renderers
 =================
 
-A CSS pseudo class can be specified for each data item to be applied to the renderers for this particular event. Set the cssClassFunc function that returns the CSS pseudo class name for a data item.
+A CSS class can be specified for each data item to be applied to the renderers for this particular event. Set the cssClassFunc function that returns the CSS class name for a data item.
 
 For example, we can use this feature to change the color of an item renderer depending on a calendar property of the data item as displayed in the following example:
 
@@ -880,7 +880,7 @@ The following example specifies CSS classes to grey out Wednesdays and the time 
 
 For more advanced use cases, each view provides a **styleGridCellFunc** property that allows to customize a grid cell without subclassing a view.
 
-The following example show how to install a pseudo CSS class to grey out Wednesdays and the time range between 12pm and 2pm for other days of week:
+The following example show how to install a CSS class to grey out Wednesdays and the time range between 12pm and 2pm for other days of week:
 
 .. css ::
 
@@ -1014,14 +1014,14 @@ The secondary sheet is a custom matrix view, see matrix view renderers for more 
 Styling
 ```````
 
-The styling of a column view  is defined in the themes/claro/ColumnView.css and themes/claro/ColumnView_rtl.css. The base CSS pseudo class name is dojoxCalendarColumnView.
+The styling of a column view  is defined in the themes/claro/ColumnView.css and themes/claro/ColumnView_rtl.css. The base CSS class name is dojoxCalendarColumnView.
 
-The styling of a simple column view  is defined in the themes/claro/SimpleColumnView.css and themes/claro/SimpleColumnView_rtl.css. The base CSS pseudo class name is dojoxCalendarSimpleColumnView.
+The styling of a simple column view  is defined in the themes/claro/SimpleColumnView.css and themes/claro/SimpleColumnView_rtl.css. The base CSS class name is dojoxCalendarSimpleColumnView.
 
 Several functions are provided to style or set a style class on part of the view:
-  * styleColumnHeaderCell(node, date, renderData): allows to style a column header cell. By default, it installs dojoxCalendarToday and dojoxCalendarWeekend CSS pseudo classes.
+  * styleColumnHeaderCell(node, date, renderData): allows to style a column header cell. By default, it installs dojoxCalendarToday and dojoxCalendarWeekend CSS classes.
   * styleRowHeaderCell(node, hour, renderData): allows to style a row header cell. By default, does nothing.
-  * styleGridCell(node, date, hours, minutes, renderData): allows to style a grid cell. By default, it installs dojoxCalendarToday and dojoxCalendarWeekend CSS pseudo classes.
+  * styleGridCell(node, date, hours, minutes, renderData): allows to style a grid cell. By default, it installs dojoxCalendarToday and dojoxCalendarWeekend CSS classes.
 
 The styleGridCellFunc property allows to customize a grid cell without subclassing a view.
 
@@ -1111,12 +1111,12 @@ Styling
 
 The styling of a matrix view is defined in the themes/claro/MatrixView.css and themes/claro/MatrixView_rtl.css.
 
-The base CSS pseudo class name is dojoxCalendarMatrixView.
+The base CSS class name is dojoxCalendarMatrixView.
 
 Several functions are provided to style or set a style class on part of the view:
-  * styleColumnHeaderCell(node, date, renderData): allows to style a column header cell. By default, it installs dojoxCalendarWeekend CSS pseudo classes.
+  * styleColumnHeaderCell(node, date, renderData): allows to style a column header cell. By default, it installs dojoxCalendarWeekend CSS classes.
   * styleRowHeaderCell(node, hour, renderData): allows to style a row header cell. By default, does nothing.
-  * styleGridCell(node, date, renderData): allows to style a grid column. By default, it installs dojoxCalendarToday, dojoxCalendarWeekend and dojoxCalendarDisabled CSS pseudo classes.
+  * styleGridCell(node, date, renderData): allows to style a grid column. By default, it installs dojoxCalendarToday, dojoxCalendarWeekend and dojoxCalendarDisabled CSS classes.
 
 The styleGridCellFunc property allows to customize a grid cell without subclassing a view.
 
@@ -1180,13 +1180,13 @@ The vertical item renderer class can be set on the verticalRenderer property.
 Styling
 ```````
 
-The styling of a month columns view  is defined in the themes/claro/MonthColumnView.css and themes/claro/MonthColumnView_rtl.css. The base CSS pseudo class name is dojoxCalendarMonthColumnView.
+The styling of a month columns view  is defined in the themes/claro/MonthColumnView.css and themes/claro/MonthColumnView_rtl.css. The base CSS class name is dojoxCalendarMonthColumnView.
 
 Several functions are provided to style or set a style class on part of the view:
   * styleColumnHeaderCell(node, date, renderData): allows to style a column header cell.
-  * styleGridCell(node, date, renderData): allows to style a grid cell. By default, it installs dojoxCalendarToday and dojoxCalendarWeekend CSS pseudo classes.
+  * styleGridCell(node, date, renderData): allows to style a grid cell. By default, it installs dojoxCalendarToday and dojoxCalendarWeekend CSS classes.
 
-In an additional layout pass, the dojoxCalendarHiddenEvents CSS pseudo class is installed on grid cells if they are hidden data items in the corresponding date.
+In an additional layout pass, the dojoxCalendarHiddenEvents CSS class is installed on grid cells if they are hidden data items in the corresponding date.
 
 The styleGridCellFunc property allows to customize a grid cell without subclassing a view.
 
@@ -1224,9 +1224,9 @@ The owner property contains a reference to the view that is using this item rend
 
 This class provides the state management of the displayed item renderer. The values are computed by the view and passed to the renderer.
 
-The state properties are: edited, focused, hovered, selected. If a state is set, a custom CSS pseudo class is added (same name with upper case first letter for example “Selected”).
+The state properties are: edited, focused, hovered, selected. If a state is set, a custom CSS class is added (same name with upper case first letter for example “Selected”).
 
-Additional CSS pseudo classed are used to describe the data item state with respect to the store: 
+Additional CSS classed are used to describe the data item state with respect to the store: 
 
   * "Storing": The data item is being added/updated to the store.
   * "Unstored": The data item is not in the store yet (interactive data item create use case)
