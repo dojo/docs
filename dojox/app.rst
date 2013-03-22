@@ -29,7 +29,7 @@ loader dojo. Once done you require the ``dojox/app`` main module and provide it 
   });
 
 Upon loading the configuration, the views, stores and models described in the configuration are created and the application
-lifecycle is started.
+lifecycle is started. The main difference with a traditional Dojo application is that the application structure is defined from the configuration file.
 
 Here is an excerpt of a typical configuration file:
 
