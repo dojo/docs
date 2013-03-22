@@ -12,16 +12,7 @@ dojox/app
 Introduction
 ============
 
-``dojox/app`` is an application framework designed to allow simple configuration of potentially nested views and to
-facilitate the transitioning between these views based on a configuration file. Its main current targets are mobile
-(phone & tablet) devices but it is not restricted to this and can be used for desktop applications as well. Thanks
-to ``dojox/app`` the applications are easily configurable and buildable for easy and fast deployment. There are two
-core modules that will need to work together to accomplish these goals:
-
-* ``dojox/app`` - A library that provides high-level application controllers, defined by metadata which describes the overall structure and navigation of the application and it's views.
-* ``dojox/mvc`` – An optional library that provides the ability to have view concerns separated from model or data concerns by using simple binding between them so that they can be kept in sync.
-
-If ``dojox/app`` is mandatory, ``dojox/mvc`` can be used or not based on your data binding requirements.
+``dojox/app`` is an application framework designed to simply configure through a configuration file an application formed of potentially nested views and to facilitate the transitioning between those views based. Its main current targets are mobile (phone & tablet) devices but it is not restricted to this and can be used for desktop applications as well. Thanks to ``dojox/app`` the applications are easily configurable and buildable for easy and fast deployment. 
 
 Creating an Application
 =======================
