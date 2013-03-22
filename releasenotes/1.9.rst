@@ -230,7 +230,22 @@ the ESC key from closing it.   Example usage:
 
 dijit/Menu
 ----------
-There's a new passivePopupDelay property on MenuBars (and also Menus) that, when set to a finite value, merely
+There's a new RadioMenuItem widget that (similar to CheckedMenuItem) can be used to make menus with radio button
+choices, only one of which is selected at a time.  For example:
+
+.. html ::
+
+	<div id="menu" data-dojo-type="dijit/DropDownMenu">
+		<div id="g1r1" data-dojo-id="g1r1" data-dojo-type="dijit/RadioMenuItem"
+			 data-dojo-props="group: 'g1'">small</div>
+		<div id="g1r2" data-dojo-id="g1r2" data-dojo-type="dijit/RadioMenuItem"
+			 data-dojo-props="group: 'g1', checked:true">medium</div>
+		<div id="g1r3" data-dojo-id="g1r3" data-dojo-type="dijit/RadioMenuItem"
+			 data-dojo-props="group: 'g1'">large</div>
+	</div>
+
+
+Also, there's a new passivePopupDelay property on MenuBars (and also Menus) that, when set to a finite value, merely
 hovering the menu will open the dropdown.   Usually the user needs to click the menu to show the drop down menu.
 Example usage:
 

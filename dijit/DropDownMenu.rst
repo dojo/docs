@@ -31,6 +31,9 @@ Items In a DropDownMenu
 :ref:`dijit/CheckedMenuItem <dijit/CheckedMenuItem>` widgets are like :ref:`dijit/MenuItem <dijit/MenuItem>`
 widgets, but can be clicked to change between a checked and unchecked state.
 
+:ref:`dijit/RadioMenuItem <dijit/RadioMenuItem>` widgets are for when you want a group of menu choices, only one
+of which is selected at a time.
+
 The :ref:`dijit/PopupMenuItem <dijit/PopupMenuItem>` is like a :ref:`dijit/MenuItem <dijit/MenuItem>`,
 but when clicked displays a submenu or other widget to the right or left.
 A :ref:`dijit/PopupMenuItem <dijit/PopupMenuItem>` always has two child nodes:

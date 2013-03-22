@@ -46,3 +46,8 @@ Action                                        Key
 Navigate to menu item                          Up and down arrow keys
 check/uncheck menu item                          Spacebar or enter
 ==========================================    =================================================
+
+See also
+========
+
+* :ref:`dijit/RadioMenuItem <dijit/RadioMenuItem>` - for menu items where only one can be checked at a time
