@@ -208,7 +208,20 @@ which is now deprecated (and will be removed for 2.0). For example:
 		<script type="dojo/aspect" data-dojo-method="startup" data-dojo-advice="before">
 			// ...
 		</script>
-   </div>
+	</div>
+
+dijit/Menu
+----------
+There's a new passivePopupDelay property on MenuBars (and also Menus) that, when set to a finite value, merely
+hovering the menu will open the dropdown.   Usually the user needs to click the menu to show the drop down menu.
+Example usage:
+
+.. html ::
+
+	<div data-dojo-type="dijit/Menu" data-dojo-props='passivePopupDelay: 500'>
+		...
+	</div>
+
 
 DojoX
 =====
