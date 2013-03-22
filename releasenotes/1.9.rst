@@ -222,6 +222,42 @@ Example usage:
 		...
 	</div>
 
+dijit/Tree
+----------
+dijit/tree/ObjectStoreModel now supports a labelType parameter like dijit/form/ComboBox, allowing Tree labels to be
+HTML rather than plain text.  The default is still plain text.  Example usage:
+
+.. js ::
+
+    require([
+        "dojo/store/Memory", "dijit/tree/ObjectStoreModel", "dijit/Tree", "dojo/domReady!"
+    ], function(Memory, ObjectStoreModel, Tree){
+
+        // Create test store, adding the getChildren() method required by ObjectStoreModel
+        var myStore = new Memory({
+            data: [
+                { id: 'world', name:'<i>rich text</i>The earth', type:'planet', population: '6 billion'},
+                ...
+            ],
+            getChildren: function(object){
+                return this.query({parent: object.id});
+            }
+        });
+
+        // Create the model
+        var myModel = new ObjectStoreModel({
+            store: myStore,
+            labelType: "html",
+            query: {id: 'world'}
+        });
+
+        // Create the Tree.
+        var tree = new Tree({
+            model: myModel
+        });
+        tree.placeAt(win.body());
+        tree.startup();
+    });
 
 DojoX
 =====
