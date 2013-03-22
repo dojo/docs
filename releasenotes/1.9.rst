@@ -210,6 +210,24 @@ which is now deprecated (and will be removed for 2.0). For example:
 		</script>
 	</div>
 
+dijit/Dialog
+------------
+There's a new closable property that can be set to false, to hide the [x] icon for closing the dialog and prevent
+the ESC key from closing it.   Example usage:
+
+.. html ::
+
+	<div id="unclosable" data-dojo-type="dijit/Dialog" title="Unclosable Dialog" data-dojo-props="closable:false">
+		<div class="dijitDialogPaneContentArea">
+			This dialog has no close icon and the ESCAPE key won't close it.  You need to use the buttons.
+		</div>
+		<div class="dijitDialogPaneActionBar">
+			<button id="unclosableSubmit" data-dojo-type="dijit/form/Button" type="submit">OK</button>
+			<button id="unclosableCancel" data-dojo-type="dijit/form/Button" type="button"
+					onClick='dijit.byId("unclosable").onCancel();'>Cancel</button>
+		</div>
+	</div>
+
 dijit/Menu
 ----------
 There's a new passivePopupDelay property on MenuBars (and also Menus) that, when set to a finite value, merely
