@@ -138,6 +138,8 @@ Miscellaneous Widgets
 
 * :ref:`dijit.DialogUnderlay <dijit/DialogUnderlay>` **STUB**
 
+* :ref:`dijit.Fieldset <dijit/Fieldset>`
+
 * :ref:`dijit.Editor <dijit/Editor>`
 
 * :ref:`dijit.InlineEditBox <dijit/InlineEditBox>`
