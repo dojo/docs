@@ -33,7 +33,7 @@ Dojo comes with an amazing charting library, in the form of dojox/charting. A la
 
   .. html ::
 
-    <div id="chartOne" style="width: 400px; height: 240px; margin: 30px auto 0px auto;"></div>
+    <div id="chartOne" style="width: 400px; height: 240px; margin: 10px auto 0px auto;"></div>
 
 
 Introduction
