@@ -228,6 +228,17 @@ the ESC key from closing it.   Example usage:
 		</div>
 	</div>
 
+dijit/Fieldset
+--------------
+There's a new Fieldset widget, which is a collapsible fieldset similar to dijit/TitlePane.  Example usage:
+
+.. html ::
+
+    <div id="tp2" data-dojo-type="dijit/Fieldset">
+        <legend>My legend</legend>
+        Click legend to close me.
+    </div>
+
 dijit/Menu
 ----------
 There's a new RadioMenuItem widget that (similar to CheckedMenuItem) can be used to make menus with radio button
