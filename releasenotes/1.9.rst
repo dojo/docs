@@ -452,6 +452,7 @@ dojox/app
    * Observable support for stores via the config has been added. Setting "observable": true on a store will have the store wrapped in a dojo/store/Observable.
    * dojox/app is changing it's recommendation for the file structure used for an app.  The recommendation now is to place the “controller” (.js files) and the “template” (.html files) in the same folders for related parts of the app. This makes it much easier to reuse code between apps.
    * It is no longer necessary to set a view controller to "none" when the view does not use a controller. Now when view does not set a controller in the config, no controller will be loaded for the view.
+   * In order to make it easier to access the loaded stores from a view, dojox/app will now have access to the loaded stores via a loadedStores object on the view.  Support has also been added to allow stores to be defined for a specific view in the config, previously stores could only be created globally for the application.
    * dojox/app now provides "has" test support for the config file, so there is no longer a need for multiple configs for an app.  In the example below dojox/app/main would process the has sections and merge the appropriate sections into the config.  Properties set on the config at the same level as the has will be replaced by the value set in the has section, and items in an array will be added to config array with the same name and at the same level as the has section. 
 
 .. js ::
