@@ -143,12 +143,12 @@ See the todoApp example in Dojo demos installation directory for the full applic
 Building an Application
 =======================
 
-Once you have created your configuration file and the application you might want to build the application for production.
-For that ``dojox/app`` comes with extensions to the Dojo build system in order to help you build your application from the
-configuration file.
+Once you have created your configuration file and the application, you might want to build the application for production.
+In order to help you build your application from the
+configuration file ``dojox/app`` comes with extensions to the Dojo build system.
 
-In order to achieve that you will need to create a simple Dojo build system profile that will contain the key
-information of your build and import the ``dojox/app`` extensions into the build process.
+The first step is to create a simple Dojo build system profile that will contain the key
+information of your build and import the ``dojox/app`` extensions into the build process as shown below (see require line in the profile):
 
 .. js::
 
