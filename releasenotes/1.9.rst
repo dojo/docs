@@ -558,7 +558,7 @@ dojox/gfx
    * The gfx registry API (gfx.shape.byId(), gfx.shape.getUID(), gfx.shape.register(), gfx.shape.dispose()), is now optional, and is disabled by default. If an application uses it, it must explicitly require the dojox/gfx/registry module.
 
 dojox/treemap
-------------
+-------------
    * Query options to be set when querying the store can now be specified on the treemap using queryOptions property.
 
 dojox/form/manager
