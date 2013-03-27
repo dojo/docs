@@ -819,7 +819,7 @@ Now take a look at these options in action using our above example:
 
 TODO: Example Series Options
 
-The data array, is just an array of data. All plot types can accept a one dimensional array, but there are some additional format options available based on the type of chart. With a one-dimensional array for line type graphs the X axis will be integers; 1,2,3�� and the data will be the Y axis. For bar type plots the data is the length of the bar and the choice between column or bar type determines the orientation. And for pie type charts the sum of the array is your whole pie. All the plot types except pie can have multiple series.
+The data array, is just an array of data. All plot types can accept a one dimensional array, but there are some additional format options available based on the type of chart. With a one-dimensional array for cartesian type graphs (lines, columns...) the X axis will be integers; 1,2,3... and the data will be mapped to the Y axis. For bar type plots the X and Y axis are inverted. Finally for pie type charts the sum of the array is your whole pie, each data point representing a slice. All the plot types except pie can have multiple series.
 
 .. js ::
   
