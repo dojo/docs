@@ -720,3 +720,9 @@ by
   <script>
     require(["dojox/charting/Chart"], ...);
   </script>
+
+DOH
+---
+The doh object used to have all the dojo/_base methods, for example dojo.forEach() was accessible via doh.forEach().
+This is no longer the case.  Those methods should be accessed via the dojo global, or better yet via AMD require
+of the proper module (dojo/_base/array in this case).
