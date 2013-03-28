@@ -871,7 +871,7 @@ With any of the stacked plot types each data set added with addSeries() is place
             .addAxis("y", {vertical: true, fixLower: "major", fixUpper: "major", min: 0})
             .setTheme(Julie)
             .addSeries("Series 1", [1, 2, 3, 4, 5]);
-            .addSeries("Series 2", [1, 1, 1, 1, 1], {stroke: {color: "red"}});
+            .addSeries("Series 2", [1, 1, 1, 1, 1], {stroke: {color: "red"}})
             .render();
         });
     });
