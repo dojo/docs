@@ -834,7 +834,7 @@ Here is an example of using coordinate pairs with a scatter plot:
 
   .. js ::
 
-    require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Scatter", "dojox/charting/themes/Julie" , "dojo/ready"],
+    require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Scatter", "dojox/charting/themes/Julie", "dojo/ready"],
       function(Chart, Default, Scatter, Julie, ready){
         ready(function(){
           var c = new Chart("scatter");
@@ -862,7 +862,7 @@ With any of the stacked plot types each data set added with addSeries() is place
 
   .. js ::
 
-    require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/StackedLines", "dojox/charting/themes/Julie" , "dojo/ready"],
+    require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/StackedLines", "dojox/charting/themes/Julie", "dojo/ready"],
       function(Chart, Default, StackedLines, Julie, ready){
         ready(function(){
           var c = new Chart("stacked");
