@@ -285,7 +285,15 @@ Style on Lines, Areas, Bars, Columns, Bubble & Pie plots
 --------------------------------------------------------
 
 These plots support a common set of style properties that when provided override the style taken from the chart theme.
-This includes for example **fill** property to specify with fill is used by the plot.
+This includes for example **fill** property to specify with fill is used by the plot and the **stroke** property to specify the border of a column for example.
+
+
+.. js ::
+
+  require(["dojox/charting/plot2d/Columns", ...], function(Columns, ...){
+    chart.addPlot("default", { type: Columns, stroke: {color: "blue", width: 2}, fill: "lightblue"});
+  });
+
 This includes as well a **shadow** property that allows you to add a shadow effect, and can
 be a :ref:`dojox.gfx <dojox/gfx>` stroke object with two extra parameters: dx and dy, which represent the offset to the
 right, and the offset down, respectively. Negative values can be specified for the dx and dy parameters to produce
@@ -794,30 +802,16 @@ Data Management
 Connecting Charts to Data and Specifying a Data Series
 ------------------------------------------------------
 
-Using addSeries(), you can define the data sets that will be displayed on our chart. addSeries() accepts three parameters, a name, a data array and an options array. There is also an updateSeries() call that takes a name and data array for when you want to refresh your data. Let's run through the options available in the addSeries() call, then look at the data array.
+Using addSeries(), you can define the data sets that will be displayed by a plot the chart. addSeries() accepts three parameters, a name, a data array and an options object. There is also an updateSeries() call that takes a name and data array for when you want to refresh your data. Let's run through the options available in the addSeries() call, then look at the data array.
 
-There are only a few options to cover for the addSeries() call. First up is stroke, which covers the color and width of your line or the border of your bar and column type graphs.Along with stroke we have fill, and it determines the color of the fill area under the line in area type line graphs and determines the bar fill color for bar and column type graphs. If you are familiar with SVG or dojox.gfx, stroke and fill should be very familiar.
+In the options of addSeries you can pass styling properties that will override the ones from the plot used to render the series like **stroke** or **fill**.
+
+See :ref:`Style on Lines, Areas, Bars, Columns, Bubble & Pie plots <dojox/charting>` for more details on those properties.
 
 .. js ::
   
   chart.addSeries("Series 1", [1, 2, 4, 5, 5, 7], {stroke: {color: "blue", width: 2},
       fill: "lightblue"});
-
-The other option is marker and it allows you to define custom markers using SVG path segments. Here are some of marker types as defined in the Dojo Charting source code. Note that each is just defined internally as an SVG path:
-
-.. js ::
-  
-  CIRCLE:        "m-3,0 c0,-4 6,-4 6,0 m-6,0 c0,4 6,4 6,0",
-  SQUARE:        "m-3,-3 l0,6 6,0 0,-6 z",
-  DIAMOND:    "m0,-3 l3,3 -3,3 -3,-3 z",
-  CROSS:        "m0,-3 l0,6 m-3,-3 l6,0",
-  X:        "m-3,-3 l6,6 m0,-6 l-6,6",
-  TRIANGLE:    "m-3,3 l3,-6 3,6 z",
-  TRIANGLE_INVERTED:"m-3,-3 l3,6 3,-6 z"
-
-Now take a look at these options in action using our above example:
-
-TODO: Example Series Options
 
 The data array, is just an array of data. All plot types can accept a one dimensional array, but there are some additional format options available based on the type of chart. With a one-dimensional array for cartesian type graphs (lines, columns...) the X axis will be integers; 1,2,3... and the data will be mapped to the Y axis. For bar type plots the X and Y axis are inverted. Finally for pie type charts the sum of the array is your whole pie, each data point representing a slice. All the plot types except pie can have multiple series.
 
@@ -835,16 +829,57 @@ For any non "stacked" line plot type you can specify coordinate pairs. You need 
 
 Here is an example of using coordinate pairs with a scatter plot:
 
-TODO: Example Coordinate Pairs
+
+.. code-example::
+
+  .. js ::
+
+    require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Scatter", "dojox/charting/themes/Julie" , "dojo/ready"],
+      function(Chart, Default, Scatter, Julie, ready){
+        ready(function(){
+          var c = new Chart("scatter");
+          c.addPlot("default", {type: Scatter})
+            .addAxis("x", {fixLower: "major", fixUpper: "major"})
+            .addAxis("y", {vertical: true, fixLower: "major", fixUpper: "major", min: 0})
+            .setTheme(Julie)
+            .addSeries("Series A", [1, 2, 0.5, 1.5, 1, 2.8, 0.4])
+            .addSeries("Series B", [2.6, 1.8, 2, 1, 1.4, 0.7, 2])
+            .addSeries("Series C", [6.3, 1.8, 3, 0.5, 4.4, 2.7, 2])
+            .render();
+        });
+    });
+
+  .. html ::
+
+    <div id="satter" style="width: 400px; height: 240px; margin: 10px auto 0px auto;"></div>
+
 
 With any of the stacked plot types each data set added with addSeries() is placed relative to the previous set. Here is a simple example that shows this concept. Instead of the second data set being a straight line across at 1, all the points are 1 above the point from the first data set.
 
-.. js ::
-  
-  chart.addSeries("Series 1", [1, 2, 3, 4, 5]);
-  chart.addSeries("Series 2", [1, 1, 1, 1, 1], {stroke: {color: "red"}});
 
-TODO: Example Stacked Data Series
+
+.. code-example::
+
+  .. js ::
+
+    require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/StackedLines", "dojox/charting/themes/Julie" , "dojo/ready"],
+      function(Chart, Default, StackedLines, Julie, ready){
+        ready(function(){
+          var c = new Chart("stacked");
+          c.addPlot("default", {type: StackedLines})
+            .addAxis("x", {fixLower: "major", fixUpper: "major"})
+            .addAxis("y", {vertical: true, fixLower: "major", fixUpper: "major", min: 0})
+            .setTheme(Julie)
+            .addSeries("Series 1", [1, 2, 3, 4, 5]);
+            .addSeries("Series 2", [1, 1, 1, 1, 1], {stroke: {color: "red"}});
+            .render();
+        });
+    });
+
+  .. html ::
+
+    <div id="stacked" style="width: 400px; height: 240px; margin: 10px auto 0px auto;"></div>
+
 
 For pie type charts you can specify additional information: the text label for each slice, the color of the slice and even a font color that overrides the font color definable in the addPlot() call.
 
