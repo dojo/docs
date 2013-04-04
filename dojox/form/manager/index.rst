@@ -81,7 +81,7 @@ This fictitious form demonstrates following:
 Event processing
 ----------------
 
-The form manager normalizes change events on all form widgets and HTML form elements. In order to request this special event processing, add ``observer`` attribute to a form widget or an HTML form element. The value of ``observer`` is a string that lists event handler names using comma to separate them.
+The form manager normalizes change events on all form widgets and HTML form elements. In order to request this special event processing, add ``data-dojo-observer`` attribute to a form widget or an HTML form element. The value of ``data-dojo-observer`` is a string that lists event handler names using comma to separate them.
 
 In a radio button group all observers are pooled together regardless of what element of the group they are attached to and attached to the whole group as the single form widget.
 
@@ -101,8 +101,8 @@ Example:
 .. html ::
   
   <div data-dojo-type="dojox.form.Manager">
-    <input type="checkbox" data-dojo-type="dijit.form.CheckBox" name="w01" value="w01" observer="log">
-    <input type="text" name="e03" value="e03" observer="log,disabler">
+    <input type="checkbox" data-dojo-type="dijit.form.CheckBox" name="w01" value="w01" data-dojo-observer="log">
+    <input type="text" name="e03" value="e03" data-dojo-observer="log,disabler">
     <span data-dojo-attach-point="n01" class="dojoFormValue">&nbsp;</span>
     <span data-dojo-attach-point="n02" data-dojo-attach-event="onclick: clicked">test</span>
     <script type="dojo/method" data-dojo-event="log" data-dojo-args="value,name">
