@@ -1,7 +1,7 @@
 .. _dojox/form/manager/index:
 
 ==================
-dojox.form.manager
+dojox/form/manager
 ==================
 
 :Project owner: Eugene Lazutkin
@@ -29,7 +29,7 @@ The form manager helps to do following common tasks:
 * Processing of unified change events for underlying form elements using *observers*.
 * Orchestration of complex client-side validation of groups of fields. A simple form widget validation is supported automatically.
 * Orchestration of I/O.
-* Form support on the level of :ref:`dijit.form.Form <dijit/form/Form>`.
+* Form support on the level of :ref:`dijit/form/Form <dijit/form/Form>`.
 
 In general the form manager shields programmers and designers from dealing with specific form elements. It is quite possible for a designer to use a text input widget for some field, rearrange the HTML later changing the field to a select node, and then change it to a group of radio buttons --- all without changing a single line in the form-handling code. All event processing, value access, enable/disable functionality, and so on will continue working regardless of those changes.
 
@@ -40,7 +40,7 @@ The form manager works with following elements (inspected on instantiation):
 
 * Form widgets.
 
-  All form widgets (objects based on :ref:`dijit.form._FormWidget <dijit/form/_FormWidget>`) are recognized automatically. A value of the ``name`` attribute of form widget is used as a unique identifier for this widget.
+  All form widgets (objects based on :ref:`dijit/form/_FormWidget <dijit/form/_FormWidget>`) are recognized automatically. A value of the ``name`` attribute of form widget is used as a unique identifier for this widget.
 
   *Important exception: radio buttons all share the same name and grouped as a single complex widget.*
 
@@ -63,8 +63,8 @@ Example:
 
 .. html ::
   
-  <div data-dojo-type="dojox.form.Manager">
-    <input type="checkbox" data-dojo-type="dijit.form.CheckBox" name="w01" value="w01">
+  <div data-dojo-type="dojox/form/Manager">
+    <input type="checkbox" data-dojo-type="dijit/form/CheckBox" name="w01" value="w01">
     <input type="text" name="e03" value="e03">
     <span data-dojo-attach-point="n01" class="dojoFormValue">&nbsp;</span>
     <span data-dojo-attach-point="n02">test</span>
@@ -100,8 +100,8 @@ Example:
 
 .. html ::
   
-  <div data-dojo-type="dojox.form.Manager">
-    <input type="checkbox" data-dojo-type="dijit.form.CheckBox" name="w01" value="w01" data-dojo-observer="log">
+  <div data-dojo-type="dojox/form/Manager">
+    <input type="checkbox" data-dojo-type="dijit/form/CheckBox" name="w01" value="w01" data-dojo-observer="log">
     <input type="text" name="e03" value="e03" data-dojo-observer="log,disabler">
     <span data-dojo-attach-point="n01" class="dojoFormValue">&nbsp;</span>
     <span data-dojo-attach-point="n02" data-dojo-attach-event="onclick: clicked">test</span>
@@ -174,4 +174,4 @@ Available tests
 
 All tests are located in the ``dojox/form/tests/`` sub-directory. They are used by developers to test the conformance, and can be used by users to see how different objects and algorithms can be used. Following tests are available (these are external links to Dojo Nightlies, which are are not set up for speed but for debugging):
 
-* `test_Manager1.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/form/tests/test_Manager1.html>`_ tests all available components of the form manager package.
+* `test_Manager_amd.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/form/tests/test_Manager_amd.html>`_ tests all available components of the form manager package.
