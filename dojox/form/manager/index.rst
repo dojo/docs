@@ -165,7 +165,7 @@ You don't have to use :ref:`Manager <dojox/form/Manager>` directly. In many case
 
 This architecture provides for ultimate flexibility. All functionality is in mixins, and user can mix and match only necessary features conserving the downloadable bytes, if needed. Writing additional mixins is supported and actively encouraged!
 
-:ref:`Manager <dojox/form/Manager>` is a simple widget that includes all above listed mixins, and treats its body as a template. Using it you don't need to put the template in the separate file but can do it completely inline. It allows to use normal template-specific directives for :ref:`dojo/parser <dojo/parser>`: ``data-dojo-attach-point``, ``data-dojo-attach-event``, and a special directive used in the form manager: ``observer`` to designate methods to be called for all high-level change events on this element (a form widget or an HTML form element). You can use it as is, or as a sample code for your own custom widgets.
+:ref:`Manager <dojox/form/Manager>` is a simple widget that includes all above listed mixins, and treats its body as a template. Using it you don't need to put the template in the separate file but can do it completely inline. It allows to use normal template-specific directives for :ref:`dojo/parser <dojo/parser>`: ``data-dojo-attach-point``, ``data-dojo-attach-event``, and a special directive used in the form manager: ``data-dojo-observer`` to designate methods to be called for all high-level change events on this element (a form widget or an HTML form element). You can use it as is, or as a sample code for your own custom widgets.
 
 Please refer to documentation of individual mixins and the widget for details of their API and implementation.
 
