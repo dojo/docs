@@ -660,6 +660,11 @@ dijit/Editor
 ------------
 If you are creating Editor widgets programatically, be sure to call startup() on them.
 
+StackContainer, TabContainer
+----------------------------
+There was a wrapper div added around each StackContainer child for accessibility reasons.
+Also, pane2button is now a function rather than a hash.
+
 dijit/Tree
 ----------
 Tree::persist was changed to false by default.  Also, persisting a Tree no longer saves/restores which TreeNodes
