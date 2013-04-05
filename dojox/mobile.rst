@@ -408,7 +408,7 @@ Themes
 Applying a Mobile Device Theme Using CSS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Selecting the CSS to apply (iphone, android, blackberry or custom) is equally simple:
+Selecting the CSS to apply (iphone, android, blackberry, windows or custom) is equally simple:
 
 .. html ::
 
