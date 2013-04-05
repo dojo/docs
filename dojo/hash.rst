@@ -64,8 +64,8 @@ Examples
 
    .. js ::
    
-    require(["dojo/_base/connect", "dojo/hash"], function(connect, hash){
-        connect.subscribe("/dojo/hashchange", context, callback);
+    require(["dojo/topic", "dojo/hash"], function(topic, hash){
+        topic.subscribe("/dojo/hashchange", context, callback);
     });
 
 2) Set the hash using query notation:
