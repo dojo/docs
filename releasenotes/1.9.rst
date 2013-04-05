@@ -322,6 +322,12 @@ dojox/mobile
      and CSS): since IE10 supports CSS3 transitions, animations and gradients,
      compatibility mode is disabled for IE10, and Dojo Mobile uses the non-prefixed CSS3
      properties supported by IE10 in addition to the webkit-prefixed properties.
+   * A new Windows theme is available (in ``dojox/mobile/themes/windows/``) and provides a look and feel
+     inspired by the Windows 8 / Windows Phone 8 "Metro" interface. If you use the ``dojox/mobile/deviceTheme``
+     module, the Windows theme is selected by default on Internet Explorer 10 (so, for example,
+     on Windows 8 tablets and on smartphones running Windows Phone 8). Note: the Windows theme is marked
+     as experimental for now, because some widgets have a very different layout, so using it may disturb the layout
+     of the application.
    * FormLayout container: a responsive container for creating mobile forms.
    * The user agent tests that were previously done in ``dojox/mobile/sniff`` have been
      moved to ``dojo/sniff``, so the use of ``dojox/mobile/sniff`` is deprecated,
