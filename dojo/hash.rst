@@ -91,7 +91,7 @@ Examples
 
     require(["dojo/hash", "dojo/io-query"], function(hash, ioQuery){
         function updateHash(){
-            var obj = ioQuery.queryToObject(dojo.hash());  // get
+            var obj = ioQuery.queryToObject(hash());  // get
             obj.someNewParam = true;
             hash(ioQuery.objectToQuery(obj));  // set
         }
