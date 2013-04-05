@@ -339,7 +339,8 @@ dojox/mobile
      ``onAdd`` method has been added to ``dojox/mobile/_StoreMixin`` to better distinguish add
      and put operations.
    * To address performance problems with very long lists in scrollable views, a new
-     ``dojox/mobile/LongListMixin`` module has been added. This module can be mixed in any Dojo Mobile
+     :ref:`dojox/mobile/LongListMixin <dojox/mobile/LongListMixin>` module has been added.
+     This module can be mixed in any Dojo Mobile
      list (``dojox/mobile/RoundRectList``, ``dojox/mobile/EdgeToEdgeList``, and their data-aware variants)
      using ``data-dojo-mixins="dojox/mobile/LongListMixin"``. This will transparently enable listeners
      on the scrollable view to keep only a subset of the items in the DOM, which will significantly speed up
