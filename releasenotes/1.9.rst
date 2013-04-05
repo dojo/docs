@@ -375,8 +375,9 @@ dojox/mobile
    * The ``dojox/mobile/TabBar`` widget now supports resizing its children so that they evenly fill all the space
      available in the bar. This is done by setting the new attribute "fill" to the value "always".
    * "beforescroll" and "afterscroll" events added to scrollable widgets (``dojox/mobile/ScrollableView``, ...). The beforescroll event handler can return false to cancel the scroll. See the ``dojox/mobile/ScrollableView`` API doc for more informations on these new events.
-   * Dojo Mobile sets the ``dojoClick`` property on the document body, so click events are fired immediately
-     on touch end events for all Mobile widgets. See the dojo/touch section in Dojo Core above.
+   * Dojo Mobile sets the ``dojoClick`` property on the document body, so all Mobile widgets benefit from
+     the new dojo/touch features (in particular, click events are fired instantly on touchend events).
+     See the dojo/touch section in Dojo Core above.
    * New Android Holo dark theme used by default on Android 3.x and 4.x devices. For 
      backward compatibility, you can force 'Android' theme on all Android devices by 
      configuring ``deviceTheme``:
