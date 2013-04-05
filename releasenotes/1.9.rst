@@ -36,7 +36,7 @@ of Dojo might include fixes to support future releases of these browsers, but it
 
 * Windows Phone 8 (IE10)
 
-* Mobile compatibility on desktop browsers: IE 8-10, Firefox 4-19, Safari 5-6, Chrome 13-25
+* Mobile compatibility on desktop browsers: IE 8-10, Firefox 4-20, Safari 5-6, Chrome 13-26
 
 
 
