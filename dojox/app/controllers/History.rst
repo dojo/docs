@@ -8,12 +8,12 @@ dojox/app/controllers/History(Hash)
 
 ``dojox/app/controllers/History`` and ``dojox/app/controllers/HistoryHash`` control forward and backward navigation between views.
 A view can use ``transitionOptions`` or ``href`` to navigate forward or backward. ``dojox/app/controllers/History`` leverages HTML5 history API for this while ``dojox/app/controllers/HistoryHash`` uses url hashes.
-HTML5 history does not work on Android 3.x and 4.x, iOS 4.x and old desktop browsers. On these plaforms you must use hash history instead.
+HTML5 history does not work on Android 3.x and 4.x, iOS 4.x and old desktop browsers. On these platforms you must use hash history instead.
 
 Usage
 =====
 
-``trasitionOptions`` can be used on any ``dojox/mobile`` widgets which inherit from ``dojox/mobile/_ItemBase``. The following sample will result in a transition to the 'second' view from the 'main' view of the application.
+``transitionOptions`` can be used on any ``dojox/mobile`` widgets which inherit from ``dojox/mobile/_ItemBase``. The following sample will result in a transition to the 'second' view from the 'main' view of the application.
 
 .. html ::
 

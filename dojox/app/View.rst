@@ -41,7 +41,7 @@ the top of this main view when rendered.
 
 Normally, when using a BorderContainer, one would also have a data-app-constraint="center" section. In the case of a View however, the "center" region will be applied to the currently active view (the current tab for example).
 
-The application can also provide view definition modules to implement the View lifecyle APIs (like init(), destroy(),...).
+The application can also provide view definition modules to implement the View lifecycle APIs (like init(), destroy(),...).
 This module can act as a view controller, synchronizing the data between the model and the view.
 
 For example:
@@ -75,5 +75,6 @@ For example:
   });
 
 
-The data received in the activation and deactivation methods are the data passed in the data attributes of the transition options of the transtion that led to that view.
+The data received in the activation and deactivation methods are the data passed in the data attributes of the
+transition options of the transition that led to that view.
 
