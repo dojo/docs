@@ -34,7 +34,7 @@ dojo.xhrPost supported object properties
 All of the dojo.xhrGet :ref:`object properties <dojo/xhrGet>`
 
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
-|**putData**       |A string of data you wish to send as the put body.  dojo.xhrPut (and dojo.rawXhrPut), do not do any processing of this      |
+|**data**          |A string of data you wish to send as the put body.  dojo.xhrPut (and dojo.rawXhrPut), do not do any processing of this      |
 |                  |It is merely passed through as the PUT body.                                                                                |
 |                  |                                                                                                                            |
 |                  |                                                                                                                            |
@@ -73,7 +73,7 @@ Example 1: dojo.xhrPut call to send some text data
           // Also, how to handle the return and callbacks.
           var xhrArgs = {
             url: "putIt",
-            putData: "Some random text",
+            data: "Some random text",
             handleAs: "text",
             load: function(data){
               dojo.byId("response2").innerHTML = "Message put.";
