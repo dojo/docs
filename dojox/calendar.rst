@@ -518,7 +518,7 @@ Events are retrieved in the data store. To programmatically add a new event, the
 
 The calendar is allowing to interactively create an event by pressing the mouse button on the grid and dragging the mouse to set the duration of the event.
 
-To enable the creation, the createItemOnGridClick property of the calendar must be set to true (false by default).
+To enable the creation, the createOnGridClick property of the calendar must be set to true (false by default).
 Furthermore, a custom function creating the item must be set on the createItemFunc property.
 
 This custom function is taking three arguments:
