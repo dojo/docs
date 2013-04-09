@@ -757,7 +757,7 @@ The following example shows how to clip a gfx image with all the possible clip g
 
 The image not clipped:
 
-.. image :: noclip.PNG
+.. image :: ./gfx/noclip.PNG
 
 Clipped by a rectangle: 
 
@@ -766,7 +766,7 @@ Clipped by a rectangle:
   surface.createImage({x:100,y:100, width:96, height:96, src:"html5.png"}).setClip({x:120, y:120, width:50,height:50});
 
 
-.. image :: rectclip.PNG
+.. image :: ./gfx/rectclip.PNG
 
 Clipped by an ellipse:
 
@@ -774,7 +774,7 @@ Clipped by an ellipse:
 
   surface.createImage({x:100,y:100, width:96, height:96, src:"html5.png"}).setClip({cx:148, cy:148, rx:20, ry:50});
 
-.. image :: ellipseclip.PNG
+.. image :: ./gfx/ellipseclip.PNG
 
 Clipped by a circle (using the ellipse geometry):
 
@@ -782,7 +782,7 @@ Clipped by a circle (using the ellipse geometry):
 
   surface.createImage({x:100,y:100, width:96, height:96, src:"html5.png"}).setClip({cx:148, cy:148, rx:30, ry:30});
 
-.. image :: circleclip.PNG
+.. image :: ./gfx/circleclip.PNG
 
 Clipped by a polyline:
 
@@ -790,7 +790,7 @@ Clipped by a polyline:
 
   surface.createImage({x:100,y:100, width:96, height:96, src:"html5.png"}).setClip({points:[150,110,180,145,120,185,150,110]});
 
-.. image :: plineclip.PNG
+.. image :: ./gfx/plineclip.PNG
 
 Clipped by a path:
 
@@ -798,7 +798,7 @@ Clipped by a path:
 
   surface.createImage({src:img, x:300,y:350,width:200,height:200}).setClip({d:"M 110,105 C104,194 117,167 173,110.0000 z"});
 
-.. image :: pathclip.PNG
+.. image :: ./gfx/pathclip.PNG
 
 Implementation details
 ~~~~~~~~~~~~~~~~~~~~~~
