@@ -874,8 +874,8 @@ Surface
   getBoundingBox()
     Returns the content bounding box.
 
-  connect() and disconnect()
-    See the discussion of these methods in the Event processing section above.
+  on()
+    See the discussion of this method in the Event processing section above.
 
   whenLoaded(callbackFunction)
     Executes the user-specified callbackFunction as soon as the Surface is ready for drawing.
@@ -917,7 +917,7 @@ Group
   getParent()
     Accesses group's parent container.
 
-  connect()/disconnect()
+  on()
     Implement the event processing.
 
   Group also shares the following methods with a Surface:
