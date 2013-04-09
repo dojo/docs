@@ -112,7 +112,7 @@ Implementation details
 Canvas
 ~~~~~~
 
-Canvas ignores the line style. All lines are drawn solid.
+From 1.9, Canvas supports the line style property using either the new HTML5 setLineDash() method if the browser implements it, or via a gfx custom implementation. In the latter case, the join and cap properties are ignored.
 
 Fill property
 =============
@@ -272,8 +272,3 @@ Silverlight has following restrictions:
 * ``size``: fully supported.
 
 * ``family``: ``"serif"`` and ``"times"`` are substituted by ``"Times New Roman"``, ``"sans-serif"`` and ``"helvetica"`` are substituted by ``"Arial"``, ``"monotone"`` and ``"courier"`` are substituted by ``"Courier New"``, the rest is passed unchanged and will be interpreted by the underlying Silverlight renderer.
-
-Canvas
-~~~~~~
-
-Canvas doesn’t implement text and, consequently, font definitions.
