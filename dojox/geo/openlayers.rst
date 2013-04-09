@@ -500,7 +500,7 @@ Here is an example that shows a pie chart at New York location:
       "dojox/geo/openlayers/WidgetFeature", "dojox/charting/widget/Chart",
       "dojox/charting/widget/Chart2D", "dojox/charting/plot2d/Pie",
       "dojox/charting/themes/PlotKit/blue" ],
-              function(ready, win, domConstruct, Map, Layer, WidgetFeature, Chart, Chart2D, Pie, blue){
+              function(ready, domConstruct, win, Map, Layer, WidgetFeature, Chart, Chart2D, Pie, blue){
     ready(function(){
 
       // create a map widget and place it on the page.

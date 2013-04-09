@@ -1,7 +1,7 @@
 .. _dojox/form/manager/index:
 
 ==================
-dojox.form.manager
+dojox/form/manager
 ==================
 
 :Project owner: Eugene Lazutkin
@@ -29,7 +29,7 @@ The form manager helps to do following common tasks:
 * Processing of unified change events for underlying form elements using *observers*.
 * Orchestration of complex client-side validation of groups of fields. A simple form widget validation is supported automatically.
 * Orchestration of I/O.
-* Form support on the level of :ref:`dijit.form.Form <dijit/form/Form>`.
+* Form support on the level of :ref:`dijit/form/Form <dijit/form/Form>`.
 
 In general the form manager shields programmers and designers from dealing with specific form elements. It is quite possible for a designer to use a text input widget for some field, rearrange the HTML later changing the field to a select node, and then change it to a group of radio buttons --- all without changing a single line in the form-handling code. All event processing, value access, enable/disable functionality, and so on will continue working regardless of those changes.
 
@@ -40,7 +40,7 @@ The form manager works with following elements (inspected on instantiation):
 
 * Form widgets.
 
-  All form widgets (objects based on :ref:`dijit.form._FormWidget <dijit/form/_FormWidget>`) are recognized automatically. A value of the ``name`` attribute of form widget is used as a unique identifier for this widget.
+  All form widgets (objects based on :ref:`dijit/form/_FormWidget <dijit/form/_FormWidget>`) are recognized automatically. A value of the ``name`` attribute of form widget is used as a unique identifier for this widget.
 
   *Important exception: radio buttons all share the same name and grouped as a single complex widget.*
 
@@ -52,7 +52,7 @@ The form manager works with following elements (inspected on instantiation):
 
 * Any node attribute of the widget itself.
 
-  The usual source of such nodes is the ``data-dojo-attach-point`` directive of :ref:`dojo.parser() <dojo/parser>`. Following names are ignored: ``domNode``, ``containerNode``, ``srcNodeRef``, ``bgIframe`` (they are used internally by the widget machinery).
+  The usual source of such nodes is the ``data-dojo-attach-point`` directive of :ref:`dojo/parser <dojo/parser>`. Following names are ignored: ``domNode``, ``containerNode``, ``srcNodeRef``, ``bgIframe`` (they are used internally by the widget machinery).
 
 The DOM nodes of the 3rd class are not considered to be form fields automatically and will be ignored by value-related operations to prevent inefficiencies. But in some cases it is important to use such non-form elements as a read-only fields. If you want to designate a DOM node as a value field, you should do two things:
 
@@ -63,8 +63,8 @@ Example:
 
 .. html ::
   
-  <div data-dojo-type="dojox.form.Manager">
-    <input type="checkbox" data-dojo-type="dijit.form.CheckBox" name="w01" value="w01">
+  <div data-dojo-type="dojox/form/Manager">
+    <input type="checkbox" data-dojo-type="dijit/form/CheckBox" name="w01" value="w01">
     <input type="text" name="e03" value="e03">
     <span data-dojo-attach-point="n01" class="dojoFormValue">&nbsp;</span>
     <span data-dojo-attach-point="n02">test</span>
@@ -81,13 +81,13 @@ This fictitious form demonstrates following:
 Event processing
 ----------------
 
-The form manager normalizes change events on all form widgets and HTML form elements. In order to request this special event processing, add ``observer`` attribute to a form widget or an HTML form element. The value of ``observer`` is a string that lists event handler names using comma to separate them.
+The form manager normalizes change events on all form widgets and HTML form elements. In order to request this special event processing, add ``data-dojo-observer`` attribute to a form widget or an HTML form element. The value of ``data-dojo-observer`` is a string that lists event handler names using comma to separate them.
 
 In a radio button group all observers are pooled together regardless of what element of the group they are attached to and attached to the whole group as the single form widget.
 
 Observers cannot be attached to non-form elements for obvious reasons (no way to deduce the change event). Use ``data-dojo-attach-event`` for that.
 
-An observer method is a method on the current form manager. They can be added by adding them to the form manager object using common JavaScript methods, or added dynamically with :ref:`dojo.parser() <dojo/parser>`.
+An observer method is a method on the current form manager. They can be added by adding them to the form manager object using common JavaScript methods, or added dynamically with :ref:`dojo/parser <dojo/parser>`.
 
 When the change event is triggered each relevant observer will be called in the context of the form manager with following parameters:
 
@@ -100,9 +100,9 @@ Example:
 
 .. html ::
   
-  <div data-dojo-type="dojox.form.Manager">
-    <input type="checkbox" data-dojo-type="dijit.form.CheckBox" name="w01" value="w01" observer="log">
-    <input type="text" name="e03" value="e03" observer="log,disabler">
+  <div data-dojo-type="dojox/form/Manager">
+    <input type="checkbox" data-dojo-type="dijit/form/CheckBox" name="w01" value="w01" data-dojo-observer="log">
+    <input type="text" name="e03" value="e03" data-dojo-observer="log,disabler">
     <span data-dojo-attach-point="n01" class="dojoFormValue">&nbsp;</span>
     <span data-dojo-attach-point="n02" data-dojo-attach-event="onclick: clicked">test</span>
     <script type="dojo/method" data-dojo-event="log" data-dojo-args="value,name">
@@ -131,7 +131,7 @@ Let's go over new additions line by line:
 Components
 ==========
 
-The form manager package consists of the main widget: :ref:`dojox.form.Manager <dojox/form/Manager>` and a set of mixins (don't mind the leading underscore) located in ``/dojox/form/manager``:
+The form manager package consists of the main widget: :ref:`dojox/form/Manager <dojox/form/Manager>` and a set of mixins (don't mind the leading underscore) located in ``/dojox/form/manager``:
 
 * :ref:`_Mixin <dojox/form/manager/_Mixin>`
 
@@ -143,7 +143,7 @@ The form manager package consists of the main widget: :ref:`dojox.form.Manager <
 
 * :ref:`_FormMixin <dojox/form/manager/_FormMixin>`
 
-  *Optional.* Helpful when the top element of the widget is a ``<form>``. In this case it provides ``onReset()`` and ``onSubmit()`` functionality with reasonable defaults. Additionally it provides ``isValid()`` method, which validates all form widgets individually. Essentially it mirrors :ref:`dijit.form.Form <dijit/form/Form>`.
+  *Optional.* Helpful when the top element of the widget is a ``<form>``. In this case it provides ``onReset()`` and ``onSubmit()`` functionality with reasonable defaults. Additionally it provides ``isValid()`` method, which validates all form widgets individually. Essentially it mirrors :ref:`dijit/form/Form <dijit/form/Form>`.
 
 * :ref:`_ValueMixin <dojox/form/manager/_ValueMixin>`
 
@@ -165,7 +165,7 @@ You don't have to use :ref:`Manager <dojox/form/Manager>` directly. In many case
 
 This architecture provides for ultimate flexibility. All functionality is in mixins, and user can mix and match only necessary features conserving the downloadable bytes, if needed. Writing additional mixins is supported and actively encouraged!
 
-:ref:`Manager <dojox/form/Manager>` is a simple widget that includes all above listed mixins, and treats its body as a template. Using it you don't need to put the template in the separate file but can do it completely inline. It allows to use normal template-specific directives for :ref:`dojo.parser() <dojo/parser>`: ``data-dojo-attach-point``, ``data-dojo-attach-event``, and a special directive used in the form manager: ``observer`` to designate methods to be called for all high-level change events on this element (a form widget or an HTML form element). You can use it as is, or as a sample code for your own custom widgets.
+:ref:`Manager <dojox/form/Manager>` is a simple widget that includes all above listed mixins, and treats its body as a template. Using it you don't need to put the template in the separate file but can do it completely inline. It allows to use normal template-specific directives for :ref:`dojo/parser <dojo/parser>`: ``data-dojo-attach-point``, ``data-dojo-attach-event``, and a special directive used in the form manager: ``data-dojo-observer`` to designate methods to be called for all high-level change events on this element (a form widget or an HTML form element). You can use it as is, or as a sample code for your own custom widgets.
 
 Please refer to documentation of individual mixins and the widget for details of their API and implementation.
 
@@ -174,4 +174,4 @@ Available tests
 
 All tests are located in the ``dojox/form/tests/`` sub-directory. They are used by developers to test the conformance, and can be used by users to see how different objects and algorithms can be used. Following tests are available (these are external links to Dojo Nightlies, which are are not set up for speed but for debugging):
 
-* `test_Manager1.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/form/tests/test_Manager1.html>`_ tests all available components of the form manager package.
+* `test_Manager_amd.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/form/tests/test_Manager_amd.html>`_ tests all available components of the form manager package.

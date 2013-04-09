@@ -211,7 +211,7 @@ The configuration comes in the form of a JSON-like object of the following keys 
 id
 --
 
-String. The ``dojox/app`` application's id. A global variable with id’s name is created by ``dojox/app/main``.
+String. Mandatory. The ``dojox/app`` application's id. A global variable with id’s name is created by ``dojox/app/main``.
 
 .. js ::
 
@@ -221,7 +221,7 @@ String. The ``dojox/app`` application's id. A global variable with id’s name i
 name
 ----
 
-String. The ``dojox/app`` application's name.
+String. Optional. The ``dojox/app`` application's name.
 
 .. js ::
 
@@ -230,7 +230,7 @@ String. The ``dojox/app`` application's name.
 description
 -----------
 
-String. The description of the ``dojox/app`` application
+String. Optional. The description of the ``dojox/app`` application
 
 .. js ::
 
@@ -239,7 +239,7 @@ String. The description of the ``dojox/app`` application
 loaderConfig
 ------------
 
-Object. Dependencies, modules and controllers are loaded using the Dojo AMD loader. This parameter allows to configure the loader itself and specify for example where custom modules can be found. See http://livedocs.dojotoolkit.org/loader/amd#module-identifiers
+Object.  Optional.  Dependencies, modules and controllers are loaded using the Dojo AMD loader. This parameter allows to configure the loader itself and specify for example where custom modules can be found. See http://livedocs.dojotoolkit.org/loader/amd#module-identifiers
 
 .. js ::
 
@@ -252,7 +252,7 @@ Object. Dependencies, modules and controllers are loaded using the Dojo AMD load
 transit
 -------
 
-AMD module identifier. By default dojox/app is using dojox/css3/transit module to perform transition animations. You can provide your own transition animation function by referencing it here:
+AMD module identifier.  Optional. By default dojox/app is using dojox/css3/transit module to perform transition animations. You can provide your own transition animation function by referencing it here:
 
 .. js ::
 
@@ -269,7 +269,7 @@ and should return a promise.
 dependencies
 ------------
 
-Array of AMD modules identifiers. When defined at the top level dependencies of the ``dojox/app`` application, these app level dependencies could also be added to the define for the app or one of the "modules" which are mixed into the app. When defined at view level, dependencies for the view.
+Array of AMD modules identifiers.  Optional. When defined at the top level dependencies of the ``dojox/app`` application, these app level dependencies could also be added to the define for the app or one of the "modules" which are mixed into the app. When defined at view level, dependencies for the view.
 
 .. js ::
 
@@ -290,7 +290,7 @@ will auto-require them.
 modules
 -------
 
-Array of AMD modules identifiers. Modules for the application. Used as the mixins when declaring the Application class in ``dojox/app/main``. They modify the top level behavior of the application, how it processes the config, or any other life cycle. The “``dojox/app/module/lifecycle``” is automatically mixed into the application you don’t have the explicitly include it.
+Array of AMD modules identifiers.  Optional. Modules for the application. Used as the mixins when declaring the Application class in ``dojox/app/main``. They modify the top level behavior of the application, how it processes the config, or any other life cycle. The “``dojox/app/module/lifecycle``” is automatically mixed into the application you don’t have the explicitly include it.
 
 .. js ::
 
@@ -303,7 +303,7 @@ They are automatically added to the list of dependencies and as such do not need
 controllers
 -----------
 
-Array of AMD modules identifiers. Controllers for the application. All the controllers listed here will be loaded during application startup to respond to application events and controller the application logic. In the previous release the “``dojox/app/controllers/Load``”, “``dojox/app/controllers/Transition``” and “``dojox/app/controllers/Layout``” were automatically mixed into the application, that is no longer the case, with 1.9 you must have them listed to include them.
+Array of AMD modules identifiers. Mandatory. Controllers for the application. All the controllers listed here will be loaded during application startup to respond to application events and controller the application logic. In the previous release the “``dojox/app/controllers/Load``”, “``dojox/app/controllers/Transition``” and “``dojox/app/controllers/Layout``” were automatically mixed into the application, that is no longer the case, with 1.9 you must have them listed to include them.
 
 .. js ::
 
@@ -319,7 +319,7 @@ They are automatically added to the list of dependencies and as such do not need
 stores
 ------
 
-Object. Dojo stores which are used by ``dojox/app`` to setup data models. A store item is an object with a a type and a params property. The type property is the AMD module identifier for the store class to be instantiated. The content of the params property is passed to the store class constructor to build an instance.  Setting "observable": true on a store will have the store wrapped in a dojo/store/Observable, but in order to use dojo/store/Observable it must be included in the dependencies section.
+Object.  Optional. Dojo stores which are used by ``dojox/app`` to setup data models. A store item is an object with a a type and a params property. The type property is the AMD module identifier for the store class to be instantiated. The content of the params property is passed to the store class constructor to build an instance.  Setting "observable": true on a store will have the store wrapped in a dojo/store/Observable, but in order to use dojo/store/Observable it must be included in the dependencies section.
 
 .. js ::
 
@@ -344,7 +344,7 @@ All stores modules that are used must also be explicitly listed in the dependenc
 template
 --------
 
-String. HTML file. When defined at application level defines the application root template. When defined at view level defined the view template.
+String. Mandatory for default views. HTML file. When defined at application level defines the application root template. When defined at view level defined the view template.
 
 .. js ::
 
@@ -353,7 +353,7 @@ String. HTML file. When defined at application level defines the application roo
 models
 ------
 
-Object. Models and their instantiation parameters. A model item is an object with three properties: the model type, the modelLoader and the params. The modelLoader property defines whether an MVC or a simple model must be loaded. The type property defines which class must be used for that model using an AMD module identifier and finally the params property content is passed to the model class constructor to build an instance.
+Object.  Optional. Models and their instantiation parameters. A model item is an object with three properties: the model type, the modelLoader and the params. The modelLoader property defines whether an MVC or a simple model must be loaded. The type property defines which class must be used for that model using an AMD module identifier and finally the params property content is passed to the model class constructor to build an instance.
 
 .. js ::
 
@@ -378,7 +378,7 @@ All model modules that are used must also be explicitly listed in the dependenci
 defaultView
 -----------
 
-String. The name of the view (or views) to load when the application is initialized.  Multiple views can be included in the DefaultView in the config, this allows multiple views to be displayed with different constraints (or regions) at the same time. It is also now possible to transition views in regions other than the center. To specify multiple views, the view names would listed separated by a "+", for example: "view1+view2" or "view1,subviewA+view2".
+String. Mandatory. The name of the view (or views) to load when the application is initialized.  Multiple views can be included in the DefaultView in the config, this allows multiple views to be displayed with different constraints (or regions) at the same time. It is also now possible to transition views in regions other than the center. To specify multiple views, the view names would listed separated by a "+", for example: "view1+view2" or "view1,subviewA+view2".
 
 .. js ::
 
@@ -388,7 +388,7 @@ String. The name of the view (or views) to load when the application is initiali
 defaultTransition
 -----------------
 
-String. The default animation type for the view transition, the defaultTransition is only used if transition is not set in the config and it is not set or defaulted on the transitionEvent 
+String.  Optional. The default animation type for the view transition, the defaultTransition is only used if transition is not set in the config and it is not set or defaulted on the transitionEvent 
 
 .. js ::
 
@@ -396,9 +396,9 @@ String. The default animation type for the view transition, the defaultTransitio
 
 
 transition
------------------
+----------
 
-String. The transition animation type to use for the view transition. If a transition is set on a view or parent it will override the transition set on the transitionEvent or the defaultTransition in the config.
+String.  Optional. The transition animation type to use for the view transition. If a transition is set on a view or parent it will override the transition set on the transitionEvent or the defaultTransition in the config.
 
 .. js ::
 
@@ -406,9 +406,9 @@ String. The transition animation type to use for the view transition. If a trans
 
 
 has
------------------
+---
 
-Object. The has sections are used to merge sections of config from the has sections into the final config based upon has tests.  The has sections will include a string which is used as a has test, if the has test for the string is true the section below that string will be merged into the config at the same level as the has section.  A "!" can be used to indicate that a section should be merged if the has test is false.  If the has section to be merged contains a property which already exists at that level of the config, the value from the has section will replace the value in the config, if the has section contains an array which also exists in the config at the same level as the has section the items from the array in the has section will be added to the array in the config.  As an example:
+Object.  Optional. The has sections are used to merge sections of config from the has sections into the final config based upon has tests.  The has sections will include a string which is used as a has test, if the has test for the string is true the section below that string will be merged into the config at the same level as the has section.  A "!" can be used to indicate that a section should be merged if the has test is false.  If the has section to be merged contains a property which already exists at that level of the config, the value from the has section will replace the value in the config, if the has section contains an array which also exists in the config at the same level as the has section the items from the array in the has section will be added to the array in the config.  As an example:
 
 .. js ::
 
@@ -448,7 +448,7 @@ Object. The has sections are used to merge sections of config from the has secti
 views
 -----
 
-Object. The child views of an application or of a view. Dependencies may be defined on views for optimization and organization purposes. Models might also be defined on views if they are view-specific. Finally a view item as five additional properties:
+Object. Mandatory if there are  views. The child views of an application or of a view. Dependencies may be defined on views for optimization and organization purposes. Models might also be defined on views if they are view-specific. Finally a view item as five additional properties:
    * "template" for defining the view rendering for views of type ``dojox/app/View``
    * "controller" to provide an AMD module to be mixed into the view as the view controller. In 1.9 the option to be able to load a default controller has been removed, the controller must be specified for a view in order to be loaded.  If the view does not have a controller module to load, it should not set a controller, as of 1.9 setting the controller to "none" is no longer supported.
    * "transition" for optional view-specific transitions

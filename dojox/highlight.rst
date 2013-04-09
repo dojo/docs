@@ -1,7 +1,7 @@
 .. _dojox/highlight:
 
 ===============
-dojox.highlight
+dojox/highlight
 ===============
 
 
@@ -14,8 +14,7 @@ To use the Highlight engine, require it into your page, along with any appropria
 
 .. js ::
 
-  dojo.require("dojox.highlight");
-  dojo.require("dojox.highlight.languages.javascript");
+  require(["dojox/highlight", "dojox/hightlight/languages/javascript"]);
 
 
 Provided Languages
@@ -44,11 +43,11 @@ There are additional definitions for Pygments-based highlighting:
 
 The rollups _www and _html are provided as layers, for related code inclusion.
 
-The name in parenthesis indicate that which you should dojo.require() to load the definitions. eg:
+The name in parenthesis indicate that which you should require to load the definitions. eg:
 
 .. js ::
 
-  dojo.require("dojox.highlight.languages.pygments.css"); // add CSS rules to the engine
+  require(["dojox/highlight/languages/pygments/css"]); // add CSS rules to the engine
 
 Highlight Styles
 ----------------
@@ -88,16 +87,18 @@ After loading in the highlight engine, and putting the CSS on the page, the only
 
 .. html ::
 
-      <code data-dojo-type="dojox.highlight.Code">var foo = dojo.map([1,2,3,4,5], function(n){ return n % 2 });</code>
+      <code data-dojo-type="dojox/highlight/widget/Code">var foo = dojo.map([1,2,3,4,5], function(n){ return n % 2 });</code>
 
-Or by calling ``dojox.highlight.init(someNode)``.
+Or by calling ``dojox/highlight::init(someNode)``.
 
 .. js ::
 
-  // attempt to highlight all <code> blocks on a page:
-  dojo.query("code").forEach(dojox.highlight.init);
-
-Highlight can also be used via the dojox.highlight.processString function
+  require(["dojox/highlight", "dojo/query"], function(highlight, query){
+    // attempt to highlight all <code> blocks on a page:
+    query("code").forEach(highlight.init);
+  });
+  
+Highlight can also be used via the dojox/highlight/processString function
 
 .. code-example ::
 
@@ -107,18 +108,18 @@ Highlight can also be used via the dojox.highlight.processString function
 
   .. js ::
 
-      dojo.require("dojox.highlight");
-      dojo.require("dojox.highlight.languages.sql");
-      function highlight(){
-
-        // highlighting the code
-        var code = dojox.highlight.processString("Select a from b where a = 2;").result;
-
-        // putting the highlighted code in a html element so you can see
-        dojo.attr('demoCode1', {innerHTML: code});
-      }
+      require(["dojo/dom-attr", "dijit/registry", "dojox/highlight", "dojox/highlight/languages/sql", "dijit/form/Button"],
+      function(domAttr, registry, highlight, sql){
+        function highlight(){
+          // highlighting the code
+          var code = highlight.processString("Select a from b where a = 2;").result;
+          // putting the highlighted code in a html element so you can see
+          domAttr.set('demoCode1', {innerHTML: code});
+        }
+        registry.byId("buttonOne").on("click", lang.hitch(this, "highlight"));
+      });
 
   .. html ::
 
     <div id="demoCode1">Select a from b where a = 2;</div>
-    <button data-dojo-type="dijit.form.Button" id="buttonOne" onClick="highlight();">Highlight Code</button>
+    <button data-dojo-type="dijit/form/Button" id="buttonOne">Highlight Code</button>

@@ -56,8 +56,8 @@ Usage
     // will not be called until DOM is ready
   });
 
-Common convention is to not to assign it a return variable to the callback function, since its return is meaningless.  
-Also, it is common convention put it at the end of any array of requirements:
+Common convention is not to assign a return variable to the callback function, since its return is meaningless. 
+Also, it is common convention to put it at the end of any array of requirements:
 
 .. js ::
 

@@ -16,11 +16,11 @@ of Dojo might include fixes to support future releases of these browsers, but it
 
 **Desktop**
 
-* Firefox 3.6-19
+* Firefox 3.6-20
 
 * Safari 5-6
 
-* Chrome 13-25
+* Chrome 13-26
 
 * IE 8-10
 
@@ -36,7 +36,7 @@ of Dojo might include fixes to support future releases of these browsers, but it
 
 * Windows Phone 8 (IE10)
 
-* Mobile compatibility on desktop browsers: IE 8-10, Firefox 4-19, Safari 5-6, Chrome 13-25
+* Mobile compatibility on desktop browsers: IE 8-10, Firefox 4-20, Safari 5-6, Chrome 13-26
 
 
 
@@ -322,6 +322,12 @@ dojox/mobile
      and CSS): since IE10 supports CSS3 transitions, animations and gradients,
      compatibility mode is disabled for IE10, and Dojo Mobile uses the non-prefixed CSS3
      properties supported by IE10 in addition to the webkit-prefixed properties.
+   * A new Windows theme is available (in ``dojox/mobile/themes/windows/``) and provides a look and feel
+     inspired by the Windows 8 / Windows Phone 8 "Metro" interface. If you use the ``dojox/mobile/deviceTheme``
+     module, the Windows theme is selected by default on Internet Explorer 10 (so, for example,
+     on Windows 8 tablets and on smartphones running Windows Phone 8). Note: the Windows theme is marked
+     as experimental for now, because some widgets have a very different layout, so using it may disturb the layout
+     of the application.
    * FormLayout container: a responsive container for creating mobile forms.
    * The user agent tests that were previously done in ``dojox/mobile/sniff`` have been
      moved to ``dojo/sniff``, so the use of ``dojox/mobile/sniff`` is deprecated,
@@ -339,7 +345,8 @@ dojox/mobile
      ``onAdd`` method has been added to ``dojox/mobile/_StoreMixin`` to better distinguish add
      and put operations.
    * To address performance problems with very long lists in scrollable views, a new
-     ``dojox/mobile/LongListMixin`` module has been added. This module can be mixed in any Dojo Mobile
+     :ref:`dojox/mobile/LongListMixin <dojox/mobile/LongListMixin>` module has been added.
+     This module can be mixed in any Dojo Mobile
      list (``dojox/mobile/RoundRectList``, ``dojox/mobile/EdgeToEdgeList``, and their data-aware variants)
      using ``data-dojo-mixins="dojox/mobile/LongListMixin"``. This will transparently enable listeners
      on the scrollable view to keep only a subset of the items in the DOM, which will significantly speed up
@@ -368,6 +375,9 @@ dojox/mobile
    * The ``dojox/mobile/TabBar`` widget now supports resizing its children so that they evenly fill all the space
      available in the bar. This is done by setting the new attribute "fill" to the value "always".
    * "beforescroll" and "afterscroll" events added to scrollable widgets (``dojox/mobile/ScrollableView``, ...). The beforescroll event handler can return false to cancel the scroll. See the ``dojox/mobile/ScrollableView`` API doc for more informations on these new events.
+   * Dojo Mobile sets the ``dojoClick`` property on the document body, so all Mobile widgets benefit from
+     the new dojo/touch features (in particular, click events are fired instantly on touchend events).
+     See the dojo/touch section in Dojo Core above.
    * New Android Holo dark theme used by default on Android 3.x and 4.x devices. For 
      backward compatibility, you can force 'Android' theme on all Android devices by 
      configuring ``deviceTheme``:
@@ -452,6 +462,7 @@ dojox/app
    * Observable support for stores via the config has been added. Setting "observable": true on a store will have the store wrapped in a dojo/store/Observable.
    * dojox/app is changing it's recommendation for the file structure used for an app.  The recommendation now is to place the “controller” (.js files) and the “template” (.html files) in the same folders for related parts of the app. This makes it much easier to reuse code between apps.
    * It is no longer necessary to set a view controller to "none" when the view does not use a controller. Now when view does not set a controller in the config, no controller will be loaded for the view.
+   * In order to make it easier to access the loaded stores from a view, dojox/app will now have access to the loaded stores via a loadedStores object on the view.  Support has also been added to allow stores to be defined for a specific view in the config, previously stores could only be created globally for the application.
    * dojox/app now provides "has" test support for the config file, so there is no longer a need for multiple configs for an app.  In the example below dojox/app/main would process the has sections and merge the appropriate sections into the config.  Properties set on the config at the same level as the has will be replaced by the value set in the has section, and items in an array will be added to config array with the same name and at the same level as the has section. 
 
 .. js ::
@@ -551,7 +562,7 @@ dojox/gfx
 
    * Add dashed stroke support to canvas renderer. If the browser implements the (new) HTML5 dash api (context2d.setLineDash()) then the gfx renderer uses it. Otherwise, it relies on a custom (canvas- specific) implementation.
    * Extend batch mode support to canvas renderer. When enabled, repaint requests are suspended for the target container until the current batch is closed via a call to closeBatch().
-   * Add SVG filter support. The dojox/gfx/svgext module adds a new Shape.setFilter() method to set a filter object on a shape. A filter objects should define a set of properties to configure the filter (like x, y, etc.) and the list of filter primitives (as an array) that make this filter, as specified by the SVG specification (http://www.w3.org/TR/SVG/filters.html). In addition, the new dojox/gfx/filters module defines a minimal convenient API to write filter objects as well as a set of predefined, ready-to-use filters. See dojox/gfx/tests/test_filter.html for an example of this new API, and the Dojox Gfx reference guide for more information.
+   * Add SVG filter support. The dojox/gfx/svgext module adds a new Shape.setFilter() method to set a filter object on a shape. A filter objects should define a set of properties to configure the filter (like x, y, etc.) and the list of filter primitives (as an array) that make this filter, as specified by the SVG specification (http://www.w3.org/TR/SVG/filters.html). In addition, the new dojox/gfx/filters module defines a minimal convenient API to write filter objects as well as a set of predefined, ready-to-use filters. See dojox/gfx/tests/test_filter.html for an example of this new API, and the Dojox Gfx reference guide for more information. Note: IE9 does not support SVG filters.
    * The gfx.shape.Text class implements getBoundingBox() (all renderers).
    * Add gfx.shape.Shape.on() and Surface.on() methods. The connect()/disconnect() API is deprecated.
 
@@ -649,6 +660,11 @@ dijit/Editor
 ------------
 If you are creating Editor widgets programatically, be sure to call startup() on them.
 
+StackContainer, TabContainer
+----------------------------
+There was a wrapper div added around each StackContainer child for accessibility reasons.
+Also, pane2button is now a function rather than a hash.
+
 dijit/Tree
 ----------
 Tree::persist was changed to false by default.  Also, persisting a Tree no longer saves/restores which TreeNodes
@@ -709,3 +725,9 @@ by
   <script>
     require(["dojox/charting/Chart"], ...);
   </script>
+
+DOH
+---
+The doh object used to have all the dojo/_base methods, for example dojo.forEach() was accessible via doh.forEach().
+This is no longer the case.  Those methods should be accessed via the dojo global, or better yet via AMD require
+of the proper module (dojo/_base/array in this case).

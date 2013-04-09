@@ -58,7 +58,7 @@ In ``lib/app/src.js``:
 
 .. js ::
 
-  require(["dojo/node!util", "dojo/node!fs"], funciton(util, fs){
+  require(["dojo/node!util", "dojo/node!fs"], function(util, fs){
     util.puts("I loaded!");
   });
 

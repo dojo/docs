@@ -113,9 +113,9 @@ D                       day of the year       85
 E                       day of the week       Thursday                                EEEE
 "                       "                     Thu                                     EEE
 a                       am/pm                 PM
-h                       hours by 0-11         1
+h                       hours by 1-12         1
 H                       hours by 0-23         13
-K                       hours by 1-12
+K                       hours by 0-11
 k                       hours by 1-24
 m                       minutes               37
 s                       seconds               43

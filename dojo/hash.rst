@@ -64,8 +64,8 @@ Examples
 
    .. js ::
    
-    require(["dojo/_base/connect", "dojo/hash"], function(connect, hash){
-        connect.subscribe("/dojo/hashchange", context, callback);
+    require(["dojo/topic", "dojo/hash"], function(topic, hash){
+        topic.subscribe("/dojo/hashchange", context, callback);
     });
 
 2) Set the hash using query notation:
@@ -91,7 +91,7 @@ Examples
 
     require(["dojo/hash", "dojo/io-query"], function(hash, ioQuery){
         function updateHash(){
-            var obj = ioQuery.queryToObject(dojo.hash());  // get
+            var obj = ioQuery.queryToObject(hash());  // get
             obj.someNewParam = true;
             hash(ioQuery.objectToQuery(obj));  // set
         }

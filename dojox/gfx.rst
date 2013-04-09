@@ -702,21 +702,24 @@ getUID()
 Event processing
 ----------------
 
-Every shape and a surface object supports connect() and disconnect() methods, which are signature-compatible with dojo.connect() and dojo.disconnect() methods:
+From 1.9, shapes and surface objects implement an on() method that matches the new dojo/on API. The previous connect() and disconnect() methods are deprecated. 
+
+on(type, listener)
+  Connects a listener to the specified event type on this shape/surface, and returns a token that can be used to remove the event listener from the event (see dojo/on for more information). The type parameter can either be a string (the event name, like "mousemove"), or function (aka an extension event type like dojo/touch.press).
 
 connect(name, object, method)
-  Connects an event processor to the event named "name" on this shape/surface, and returns a token for this connection.
+  Deprecated. Connects an event processor to the event named "name" on this shape/surface, and returns a token for this connection.
 
 disconnect(token)
-  Disconnects the event processing.
+  Deprecated. Disconnects the event processing.
 
-See the api documentation of dojo.connect() and dojo.disconnect() for more details.
+See the api documentation of dojo/on for more details.
 
 From 1.7, the gfx shape targeted by a mouse event can be retrieved from the event received in the handler via the event.gfxTarget property. For example:
 
   .. js ::
 
-    group.connect(“onmouseclick”, function(e){ var s = e.gfxTarget; s.setFill(“red”); });
+    group.on(“click”, function(e){ var s = e.gfxTarget; s.setFill(“red”); });
 
 Implementation notes
 ~~~~~~~~~~~~~~~~~~~~

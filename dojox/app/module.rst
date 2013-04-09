@@ -11,5 +11,5 @@ This package contains application modules that will be mixed into the Applicatio
 The predefined modules are the following:
 
 
-* ``dojox/app/module/lifecyle`` - A module that allows you to listen to the lifecycle state of the application. It is included by default.
+* ``dojox/app/module/lifecycle`` - A module that allows you to listen to the lifecycle state of the application. It is included by default.
 * ``dojox/app/module/env`` – A reserved module to store the application environment (mobile vs desktop...).
