@@ -19,7 +19,7 @@ to:
 .. js ::
 
     require(["dojo/topic"], function(topic){
-		 var handle = topic.unsubscribe("some/topic", listener)
-		 ...
+		 var handle = topic.subscribe("some/topic", listener)
+		 //...
 		 handle.remove();
 	});
