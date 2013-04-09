@@ -7,7 +7,7 @@ dojo/_base
 .. contents ::
     :depth: 2
 
-**dojo/_base** contains what formally constituted the "base" of Dojo when you required in ``dojo/dojo.js`` into your 
+**dojo/_base** contains what formerly constituted the "base" of Dojo when you required in ``dojo/dojo.js`` into your 
 project.  Currently, this is not entirely accurate and ``dojo/_base`` contains a mixture of configuration modules, 
 limited amounts of functionality that haven't been moved out to the Dojo Core and a lot of "stubs" which add "base" 
 functionality to Dojo when it is running in legacy mode.
