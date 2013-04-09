@@ -547,7 +547,7 @@ The calendar is allowing to interactively create a data item by pressing the mou
 
 Since Dojo 1.9, this interactive creation is working with asynchronous stores, the newly created data item is added at the end of the gesture.
 
-To enable the creation, the createItemOnGridClick property of the calendar must be set to true (false by default).
+To enable the creation, the createOnGridClick property of the calendar must be set to true (false by default).
 Furthermore, a custom function creating the data item must be set on the createItemFunc property.
 
 This custom function is taking three arguments:
