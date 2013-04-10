@@ -1503,20 +1503,17 @@ SVG Filters
 -----------
 
 From 1.9, SVG Filters are supported on any shapes through the new Shape.setFilter(filterArg) method (defined when the dojox/gfx/shapeext module is required), where the filterArg
-parameter is an object that defines the filter properties. In addition to this new method, a convenient API is provided
-in the dojox/gfx/filters module that makes writing filters easier. Note that the dojox/gfx/filters module must be required **in addition to** the dojox/gfx/svgext module.
+parameter is an object that defines the filter properties. In addition to this new method, a convenient API is provided in the dojox/gfx/filters module that makes writing filters easier. Note that the dojox/gfx/filters module must be required **in addition to** the dojox/gfx/svgext module.
 
 A filter defines a graphic effect applied on a shape (Group included), as specified by the SVG specification (http://www.w3.org/TR/SVG/filters.html).
-It is the result of the combination of one or multiple pixel operations (called filter primitives). By combining primitives, a
-developer can build complex visual effects that are then applied on the rendering of a shape (the shape geometry is not impacted by a filter).
+It is the result of the combination of one or multiple pixel operations (called filter primitives). By combining primitives, a developer can build complex visual effects that are then applied on the rendering of a shape (the shape geometry is not impacted by a filter).
 
 Using the predefined filters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Because writing such filter effect can be tedious, the dojox/gfx/filters module comes with a set of predefined, ready-to-use filters, organized
-by category : convolutions, shadows, blurs, colors, miscs, reliefs and texture. Please see the dojox/gfx/filters API documentation
-for the full list of available filters or the dojox/gfx/tests/test_filters.html test and the dojox/gfx/demos/filters.html demo to see them in action. Each category is defined by a corresponding
-property on the filters module (e.g. filters.convolutions) and filters by a corresponding property (in fact, a function) on the category (e.g filters.convolutions.verticalEdges).
+Because writing such filter effect can be tedious, the dojox/gfx/filters module comes with a set of predefined, ready-to-use filters, organized by category : convolutions, shadows, blurs, colors, miscs, reliefs and texture. Each category is defined by a corresponding property on the filters module (e.g. filters.convolutions) and filters by a corresponding property (in fact, a function) on the category (e.g filters.convolutions.verticalEdges).
+Please refer to the dojox/gfx/filters API documentation for the full list of available filters or the dojox/gfx/tests/test_filters.html test and the dojox/gfx/demos/filters.html demo to see them in action.
+
 The following picture shows the result of the predefined filters.miscs.fuzzy filter applied on the parent shape (a Group) of a gfx drawing:
 
 .. image :: ./gfx/fuzzy.png
@@ -1528,7 +1525,7 @@ The following code sets a predefined dropShadow filter on a shape, with a custom
 
   require(["dojox/gfx/svgext", "dojox/gfx/filters", ...], function(svg, filters) {
     var shape = ...;
-    var filter = filters.shadows.dropShadow({x:0, y:0, width:0.8, height:0.8, filterUnits:"objectBoundingBox"});
+    var filter = filters.shadows.dropShadow({x:0, y:0, width:1, height:1, filterUnits:"objectBoundingBox"});
     shape.setFilter(filter);
   });
 
@@ -1536,9 +1533,8 @@ Writing custom filters with the dojox/gfx/filters API
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The dojox/gfx/filters module defines a simple API that allow to write custom filter following the same terminology as the SVG specification.
-As wrote previously, a filter is made of filter primitives that can be combined and/or chained together to build complex visual effects, each of
-the primitives performing a specific operation. For example, the feGaussianBlur primitive performs a Gaussian blur on the image data.
-In term of API, the filters module provides:
+As wrote previously, a filter is made of filter primitives that can be combined and/or chained together to build complex visual effects, each of the primitives performing a specific operation. For example, the feGaussianBlur primitive performs a Gaussian blur on the image data. In term of API, the filters module provides:
+
   * a set of functions used to create the corresponding SVG filter primitives objects, based on the same naming as the specification (e.g. filters.feGaussianBlur()).
   * the filters.createFilter(args, primitives) function, where *args* is a configuration object for the filter and *primitives* an optional array of filter primitives objects.
 
@@ -1546,26 +1542,27 @@ The available primitives functions are: filters.feBlend(), filters.feColorMatrix
 feDisplacementMap(), filters.feFlood(), filters.feGaussianBlur(), filters.feImage(), filters.feMorphology(), filters.feOffset(), filters.feSpecularLighting(), filters.feTile(), filters.feTurbulence(),
 feDistantLight(), filters.fePointLight(), filters.feSpotLight(), filters.feMergeNode(), filters.feFuncA(), filters.feFuncR(), filters.feFuncG(), filters.feFuncB().
 
-The primitives factory functions follows the following signature:
-filters.*primitive*(/*Object*/properties, /*Array?*/children)
-filters.*primitive*(/*Array?*/children)
+These primitives factory functions follow the following signature:
+
+   * filters.*primitive*(/*Object*/properties, /*Array?*/children)
+   * filters.*primitive*(/*Array?*/children)
+
 where:
+
   * the *properties* parameter must define the primitive attributes as defined by the specification.
   * the optional *children* array parameter is an array of children primitives.
 
-The exception to this rule is the feMerge() factory function, which also accepts the feMerge(string, string) signature, a shortcut to specifiy
-the children feMergeNode *in* parameters.
+The exception to this rule is the feMerge() factory function, which also accepts the feMerge(string, string)  signature, a shortcut to specify the children feMergeNode *in* parameters.
 
-For example, a drop shadow effect could be written as the combination of a Gaussian blur with an offset in both x and y axis, merged with the
-original data. In term of code, it gives:
+For example, a drop shadow effect could be written as the combination of a Gaussian blur with an offset in both x and y axis, merged with the original data. In term of code, it gives:
 
 .. js ::
 
-		filters.createFilter({x:"-10%", y:"-10%", width:"120%", height:"120%"}, [
-			filters.feGaussianBlur({"in":"SourceAlpha","stdDeviation":4}),
-			filters.feOffset({"dx":5,"dy":5,"result":"offsetBlur"}),
-			filters.feMerge("offsetBlur","SourceGraphic")
-		]),
+  filters.createFilter({x:"-10%", y:"-10%", width:"120%", height:"120%"}, [
+    filters.feGaussianBlur({"in":"SourceAlpha","stdDeviation":4}),
+    filters.feOffset({"dx":5,"dy":5,"result":"offsetBlur"}),
+    filters.feMerge("offsetBlur","SourceGraphic")
+  ]),
 
 and the result is:
 
