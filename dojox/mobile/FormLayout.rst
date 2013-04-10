@@ -17,194 +17,107 @@ FormLayout is a widget which layouts form controls. Each control is associated w
 Each element of a form is made of a <label> and a <fieldset> that contains one or more form widgets.
 Form controls are: "dojox/mobile/Button", "dojox/mobile/CheckBox", "dojox/mobile/ComboBox", "dojox/mobile/RadioButton", "dojox/mobile/Slider", "dojox/mobile/TextBox", "dojox/mobile/SearchBox", "dojox/mobile/ExpandingTextArea", "dojox/mobile/ToggleButton".
 
-.. image :: FormLayout1.png
-
-.. image :: FormLayout2.png
-
-.. image :: FormLayout3.png
-
 Examples
 ========
 
 Example 1
 ---------
+A single Column form.
 
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.Heading"
-       data-dojo-props='back:"Settings", moveTo:"settings"'>General</div>
+		<div data-dojo-type="dojox.mobile.FormLayout" data-dojo-props="columns:'single'">
+			<div>
+				<label>Buttons</label>
+				<fieldset>
+					<button data-dojo-type="dojox.mobile.Button">Help</button>
+					<input type="submit" class="mblBlueButton" data-dojo-type="dojox.mobile.Button" value="Submit">
+					<button class="mblRedButton" data-dojo-type="dojox.mobile.Button">Cancel</button>
+				</fieldset>
+			</div>
+			<div>
+				<label>Checkbox</label>
+				<fieldset><input type="checkbox" data-dojo-type="dojox.mobile.CheckBox"><label>Click me</label>
+				</fieldset>
+			</div>
+			<div>
+				<label>Toggle Button</label>
+				<fieldset>
+					<button data-dojo-type="dojox.mobile.ToggleButton">Toggle me</button>
+				</fieldset>
+			</div>
+			<div>
+				<label>Switch</label>
+				<fieldset><input type="checkbox" data-dojo-type="dojox.mobile.Switch" value="on"></fieldset>
+			</div>
+			<div>
+				<label>Radio Button</label>
+				<fieldset>
+					<input type="radio" id="rb1" data-dojo-type="dojox.mobile.RadioButton" name="mobileRadio"
+						   value="Large" checked><label for="rb1">1</label>
+					<input type="radio" id="rb2" data-dojo-type="dojox.mobile.RadioButton" name="mobileRadio"
+						   value="Medium"><label for="rb2">2</label>
+					<input type="radio" id="rb3" data-dojo-type="dojox.mobile.RadioButton" name="mobileRadio"
+						   value="Small"><label for="rb3">3</label>
+				</fieldset>
+			</div>
+			<div>
+				<label>Slider</label>
+				<fieldset><input id="sh" name="shb" data-dojo-type="dojox.mobile.Slider" value="0" min="0" max="20"
+								 step="0.1" type="range" style="width:150px;"></fieldset>
+			</div>
+			<div>
+				<label>ComboBox</label>
+				<fieldset><input type="text" data-dojo-type="dojox.mobile.ComboBox"
+								 data-dojo-props='value:"", list:"states"'></fieldset>
+			</div>
+			<div>
+				<label>TextArea</span></label>
+				<fieldset>
+					<textarea data-dojo-type="dojox.mobile.TextArea" rows="3" cols="20">TextArea</textarea><br>
+					<textarea data-dojo-type="dojox.mobile.ExpandingTextArea" rows="3"
+							  cols="20">ExpandingTextArea</textarea>
+				</fieldset>
+			</div>
+			<div>
+				<label>TextBox</label>
+				<fieldset><input data-dojo-type="dojox.mobile.TextBox" intermediateChanges="true" maxLength="9"
+								 selectOnClick="true" placeHolder="max 9 chars"
+								 onChange="console.log('onChange fired with ' + arguments[0])"></fieldset>
+			</div>
+			<div>
+				<label>SearchBox</span></label>
+				<fieldset><input data-dojo-type="dojox.mobile.SearchBox" type="search" selectOnClick="true"
+								 placeHolder="Search" data-dojo-props='list:"states", pageSize:5, onSearch:myOnSearch'>
+				</fieldset>
+			</div>
+		</div>
+	</div>
 
-.. image :: Heading-general.png
+.. image :: FormLayout1.png
+
+
 
 Example 2
 ---------
+The same form using two columns layout.
 
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.Heading" data-dojo-props='label:"World Clock"'>
-    <span data-dojo-type="dojox.mobile.ToolBarButton">Edit</span>
-    <span data-dojo-type="dojox.mobile.ToolBarButton"
-          data-dojo-props='icon:"mblDomButtonWhitePlus"'
-          style="float:right;" onclick="console.log('+ was clicked')"></span>
-  </div>
+		<div data-dojo-type="dojox.mobile.FormLayout" data-dojo-props="columns:'two'">
+		</div>                
 
-.. image :: Heading-world.png
+
+.. image :: FormLayout2.png
 
 Example 3
 ---------
+The same form using two columns layout and right align mode.
 
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.Heading" data-dojo-props='label:"Voice Memos"'>
-    <span data-dojo-type="dojox.mobile.ToolBarButton"
-          data-dojo-props='label:"Speaker"'></span>
-    <span data-dojo-type="dojox.mobile.ToolBarButton"
-          data-dojo-props='label:"Done",defaultColor:"mblColorBlue"'
-          style="float:right;"></span>
-  </div>
+		<div data-dojo-type="dojox.mobile.FormLayout" data-dojo-props="rightAlign: true, columns:'two'">
+		</div>                
 
-.. image :: Heading-voice.png
 
-Example 4
----------
-
-.. html ::
-
-  <div data-dojo-type="dojox.mobile.Heading" data-dojo-props='label:"Updates"'>
-    <span data-dojo-type="dojox.mobile.ToolBarButton"
-          data-dojo-props='label:"Update All"' style="float:right;"></span>
-  </div>
-
-.. image :: Heading-update.png
-
-Example 5
----------
-
-.. html ::
-
-  <div data-dojo-type="dojox.mobile.Heading"
-       data-dojo-props='label:"News", back:"Bookmarks", moveTo:"bookmarks"'>
-    <span data-dojo-type="dojox.mobile.ToolBarButton"
-          data-dojo-props='label:"Done",defaultColor:"mblColorBlue"'
-          style="float:right;"></span>
-  </div>
-
-.. image :: Heading-news.png
-
-Example 6
----------
-
-.. html ::
-
-  <div data-dojo-type="dojox.mobile.Heading">
-    <span data-dojo-type="dojox.mobile.ToolBarButton"
-          data-dojo-props='label:"Done",defaultColor="mblColorBlue"'></span>
-    <span data-dojo-type="dojox.mobile.ToolBarButton"
-          data-dojo-props='label:"New Folder"'
-          style="float:right;"></span>
-  </div>
-
-.. image :: Heading-done.png
-
-Example 7
----------
-
-.. html ::
-
-  <div data-dojo-type="dojox.mobile.Heading">
-    <span data-dojo-type="dojox.mobile.ToolBarButton"
-          data-dojo-props='toggle:true'>New</span>
-    <span data-dojo-type="dojox.mobile.ToolBarButton"
-          data-dojo-props='toggle:"true"'>Toggle</span>
-    <span data-dojo-type="dojox.mobile.ToolBarButton"
-          data-dojo-props='icon:"images/tab-icon-18h.png", moveTo:"view3"'
-          style="padding:0 10px"></span>
-    <span data-dojo-type="dojox.mobile.ToolBarButton"
-          data-dojo-props='icon:"images/tab-icons.png", iconPos:"29,0,29,29", moveTo:"view3"'
-          style="padding:0 10px"></span>
-    <span data-dojo-type="dojox.mobile.ToolBarButton"
-          data-dojo-props='icon:"mblDomButtonWhitePlus", moveTo:"view3"'
-          style="float:right;"></span>
-  </div>
-
-.. image :: Heading-toggle.png
-
-Example 8
----------
-
-.. html ::
-
-  <div data-dojo-type="dojox.mobile.Heading">
-    <ul data-dojo-type="dojox.mobile.TabBar" data-dojo-props='barType:"segmentedControl"'>
-      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px"
-          data-dojo-props='selected:true'>Catalog</li>
-      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px">Share</li>
-      <li data-dojo-type="dojox.mobile.TabBarButton" style="width:80px">Download</li>
-    </ul>
-    <span data-dojo-type="dojox.mobile.ToolBarButton"
-          data-dojo-props='icon:"mblDomButtonWhiteSearch"' style="float:right;"></span>
-  </div>
-
-.. image :: Heading-catalog.png
-
-Example 9
----------
-
-.. html ::
-
-  <div data-dojo-type="dojox.mobile.Heading">
-    <table cellpadding="0" cellspacing="0" style="width:100%;"><tr>
-    <td><span data-dojo-type="dojox.mobile.ToolBarButton"
-              data-dojo-props='icon:"mblDomButtonWhitePlus"'></span></td>
-    <td align="center"><div data-dojo-type="dojox.mobile.TabBar"
-                            data-dojo-props='barType:"segmentedControl"' style="margin:auto;">
-      <div data-dojo-type="dojox.mobile.TabBarButton"
-           data-dojo-props='selected:true' style="width:80px">Search</div>
-      <div data-dojo-type="dojox.mobile.TabBarButton" style="width:80px">Directions</div>
-    </div></td>
-    <td align="right"><span data-dojo-type="dojox.mobile.ToolBarButton"
-                            data-dojo-props='icon:"images/tab-icon-15h.png"'
-                            style="float:right;"></span></td>
-    </tr></table>
-  </div>
-
-.. image :: Heading-search.png
-
-Example 10
-----------
-
-.. html ::
-
-  <div data-dojo-type="dojox.mobile.Heading"
-       data-dojo-props='back:"Inbox", label:"1 of 10"'>
-    <ul data-dojo-type="dojox.mobile.TabBar"
-        data-dojo-props='barType:"segmentedControl", selectOne:false'
-        style="float:right;">
-      <li data-dojo-type="dojox.mobile.TabBarButton"
-          data-dojo-props='icon:"mblDomButtonWhiteUpArrow"'></li>
-      <li data-dojo-type="dojox.mobile.TabBarButton"
-          data-dojo-props='icon:"mblDomButtonWhiteDownArrow"'></li>
-    </ul>
-  </div>
-
-.. image :: Heading-inbox.png
-
-Example 11
-----------
-
-.. html ::
-
-  <div data-dojo-type="dojox.mobile.Heading"
-       data-dojo-props='back:"Top", label:"Inbox(32)"'>
-    <span data-dojo-type="dojox.mobile.ToolBarButton"
-          data-dojo-props='icon:"mblDomButtonWhiteSearch"'
-          style="float:right;"></span>
-    <span data-dojo-type="dojox.mobile.ToolBarButton"
-          data-dojo-props='icon:"mblDomButtonWhiteUpArrow"'
-          style="float:right;"></span>
-    <span data-dojo-type="dojox.mobile.ToolBarButton"
-          data-dojo-props='icon:"mblDomButtonWhiteDownArrow"'
-          style="float:right;"></span>
-  </div>
-
-.. image :: Heading-top.png
+.. image :: FormLayout3.png
