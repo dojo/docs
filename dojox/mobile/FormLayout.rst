@@ -22,7 +22,7 @@ Examples
 
 Example 1
 ---------
-A single Column form.
+A single column form.
 
 .. html ::
 
@@ -74,50 +74,4 @@ A single Column form.
 			<div>
 				<label>TextArea</span></label>
 				<fieldset>
-					<textarea data-dojo-type="dojox.mobile.TextArea" rows="3" cols="20">TextArea</textarea><br>
-					<textarea data-dojo-type="dojox.mobile.ExpandingTextArea" rows="3"
-							  cols="20">ExpandingTextArea</textarea>
-				</fieldset>
-			</div>
-			<div>
-				<label>TextBox</label>
-				<fieldset><input data-dojo-type="dojox.mobile.TextBox" intermediateChanges="true" maxLength="9"
-								 selectOnClick="true" placeHolder="max 9 chars"
-								 onChange="console.log('onChange fired with ' + arguments[0])"></fieldset>
-			</div>
-			<div>
-				<label>SearchBox</span></label>
-				<fieldset><input data-dojo-type="dojox.mobile.SearchBox" type="search" selectOnClick="true"
-								 placeHolder="Search" data-dojo-props='list:"states", pageSize:5, onSearch:myOnSearch'>
-				</fieldset>
-			</div>
-		</div>
-	</div>
-
-.. image :: FormLayout1.png
-
-
-
-Example 2
----------
-The same form using two columns layout.
-
-.. html ::
-
-		<div data-dojo-type="dojox.mobile.FormLayout" data-dojo-props="columns:'two'">
-		</div>                
-
-
-.. image :: FormLayout2.png
-
-Example 3
----------
-The same form using two columns layout and right align mode.
-
-.. html ::
-
-		<div data-dojo-type="dojox.mobile.FormLayout" data-dojo-props="rightAlign: true, columns:'two'">
-		</div>                
-
-
-.. image :: FormLayout3.png
+					<textarea data-dojo-type="dojox.mobile.TextArea" rows="3" cols="20">TextArea
