@@ -22,7 +22,9 @@ Examples
 
 Example 1
 ---------
-A single Column form.
+A single column form.
+
+.. image :: FormLayout1.png
 
 .. html ::
 
@@ -95,13 +97,12 @@ A single Column form.
 	</div>
 
 
-.. image :: FormLayout1.png
-
-
 
 Example 2
 ---------
 The same form using two columns layout.
+
+.. image :: FormLayout2.png
 
 .. html ::
 
@@ -110,17 +111,14 @@ The same form using two columns layout.
 		</div>                
 
 
-.. image :: FormLayout2.png
-
 Example 3
 ---------
 The same form using two columns layout and right align mode.
+
+.. image :: FormLayout3.png
 
 .. html ::
 
 		<div data-dojo-type="dojox.mobile.FormLayout" data-dojo-props="rightAlign: true, columns:'two'">
     ...
 		</div>                
-
-
-.. image :: FormLayout3.png
