@@ -584,6 +584,12 @@ dojox/form/manager
 .. _#16289: http://bugs.dojotoolkit.org/ticket/16289
 .. _#13449: http://bugs.dojotoolkit.org/ticket/13449
 
+dojox/date
+----------
+
+A new alternate calendar system, Um AlQura (Hijri) calendar, was added. See 
+:ref:`dojox/date/umalqura <dojox/date/umalqura>`
+
 Util
 ====
 
