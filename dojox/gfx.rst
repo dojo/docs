@@ -1529,6 +1529,9 @@ The following code sets a predefined dropShadow filter on a shape, with a custom
     shape.setFilter(filter);
   });
 
+
+.. image :: ./gfx/dropshadow.png
+
 Writing custom filters with the dojox/gfx/filters API
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1566,7 +1569,7 @@ For example, a drop shadow effect could be written as the combination of a Gauss
 
 and the result is:
 
-.. image :: ./gfx/dropshadow.png
+.. image :: ./gfx/blur.png
 
 
 Utilities
