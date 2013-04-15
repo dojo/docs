@@ -22,7 +22,7 @@ dojo/declare()
 Defining a Class
 ----------------
 
-In ``my/person.js``:
+In ``my/Person.js``:
 
 .. js ::
 
@@ -49,7 +49,7 @@ Using mixin() in a Class Constructor
 
 Define a class, "my/Person", using an object for mixing in arguments instead of an argument list.
 
-In ``my/person.js``:
+In ``my/Person.js``:
 
 .. js ::
 
