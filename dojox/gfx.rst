@@ -1512,25 +1512,26 @@ Using the predefined filters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Because writing such filter effect can be tedious, the dojox/gfx/filters module comes with a set of predefined, ready-to-use filters, organized by category : convolutions, shadows, blurs, colors, miscs, reliefs and texture. Each category is defined by a corresponding property on the filters module (e.g. filters.convolutions) and filters by a corresponding property (in fact, a function) on the category (e.g filters.convolutions.verticalEdges).
-Please refer to the dojox/gfx/filters API documentation for the full list of available filters or the dojox/gfx/tests/test_filters.html test and the dojox/gfx/demos/filters.html demo to see them in action.
 
 The following picture shows the result of the predefined filters.miscs.fuzzy filter applied on the parent shape (a Group) of a gfx drawing:
 
 .. image :: ./gfx/fuzzy.png
 
-Predefined filters are exported as functions that take an optional configuration parameter which allows to change the filter default settings.
-The following code sets a predefined dropShadow filter on a shape, with a custom configuration:
+Please refer to the dojox/gfx/filters API documentation for the full list of available filters or the dojox/gfx/tests/test_filters.html test and the dojox/gfx/demos/filters.html demo to see them in action.
+
+Predefined filters are exported as functions that take an optional configuration parameter which allows to change the filter default settings (for example, you may set your own id, or change the filter coordinates).
+The following code sets a predefined bumpOut filter on a shape, with a custom configuration:
 
 .. js ::
 
   require(["dojox/gfx/svgext", "dojox/gfx/filters", ...], function(svg, filters) {
     var shape = ...;
-    var filter = filters.shadows.dropShadow({x:0, y:0, width:1, height:1, filterUnits:"objectBoundingBox"});
+    var filter = filters.shadows.bumpOut({x:-200, y:-150, width:550, height:600, filterUnits:"userSpaceOnUse"});
     shape.setFilter(filter);
   });
 
 
-.. image :: ./gfx/dropshadow.png
+.. image :: ./gfx/bumpout.png
 
 Writing custom filters with the dojox/gfx/filters API
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1547,8 +1548,10 @@ feDistantLight(), filters.fePointLight(), filters.feSpotLight(), filters.feMerge
 
 These primitives factory functions follow the following signature:
 
-   * filters.*primitive*(/*Object*/properties, /*Array?*/children)
-   * filters.*primitive*(/*Array?*/children)
+.. js ::
+
+   * filters.a_primitive(/*Object*/properties, /*Array?*/children)
+   * filters.a_primitive(/*Array?*/children)
 
 where:
 
@@ -1569,7 +1572,7 @@ For example, a drop shadow effect could be written as the combination of a Gauss
 
 and the result is:
 
-.. image :: ./gfx/blur.png
+.. image :: ./gfx/dropshadow.png
 
 
 Utilities
