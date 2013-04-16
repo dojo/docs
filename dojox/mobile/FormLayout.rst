@@ -111,7 +111,7 @@ The same form using two columns layout.
 
 Example 3
 ---------
-The same form using two columns layout and right align mode.
+The same form using two columns layout and rightAlign set to true.
 
 .. image :: FormLayout3.png
 
