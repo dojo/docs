@@ -12,10 +12,22 @@ dojox.mobile.FormLayout
 Introduction
 ============
 
-FormLayout is a widget which layouts form controls. Each control is associated with a label. Two layouts are supported using the columns property: single and two columns. A third option is to set the columns property to "auto". In this case the layout is determined by the width of the screen: A single column if the screen width is lower than 500px, two columns otherwise.
+FormLayout is a mobile widget which layouts form controls. Each control of the form is associated with a label. The layout is controlled by the 'columns' property:
+* columns = 'single': Labels and controls are stacked vertically.                                                                                                           
+* columns = 'two': Labels and controls are stacked horizontally, labels use 20% of the total width of the form. 
+* column = 'auto': This is the default value. In this case the layout is determined by the width of the screen: A single column if the screen width is lower than 500px, two columns otherwise.     
 
 Each element of a form is made of a <label> and a <fieldset> that contains one or more form widgets.
-Form controls are: "dojox/mobile/Button", "dojox/mobile/CheckBox", "dojox/mobile/ComboBox", "dojox/mobile/RadioButton", "dojox/mobile/Slider", "dojox/mobile/TextBox", "dojox/mobile/SearchBox", "dojox/mobile/ExpandingTextArea", "dojox/mobile/ToggleButton".
+Form controls are: 
+* dojox/mobile/Button
+* dojox/mobile/CheckBox
+* dojox/mobile/ComboBox
+* dojox/mobile/RadioButton
+* dojox/mobile/Slider
+* dojox/mobile/TextBox
+* dojox/mobile/SearchBox
+* dojox/mobile/ExpandingTextArea
+* dojox/mobile/ToggleButton
 
 Examples
 ========
@@ -76,49 +88,4 @@ A single column form.
 			<div>
 				<label>TextArea</span></label>
 				<fieldset>
-					<textarea data-dojo-type="dojox/mobile/TextArea" rows="3" cols="20">TextArea</textarea><br>
-					<textarea data-dojo-type="dojox/mobile/ExpandingTextArea" rows="3"
-							  cols="20">ExpandingTextArea</textarea>
-				</fieldset>
-			</div>
-			<div>
-				<label>TextBox</label>
-				<fieldset><input data-dojo-type="dojox/mobile/TextBox" intermediateChanges="true" maxLength="9"
-								 selectOnClick="true" placeHolder="max 9 chars"
-								 onChange="console.log('onChange fired with ' + arguments[0])"></fieldset>
-			</div>
-			<div>
-				<label>SearchBox</span></label>
-				<fieldset><input data-dojo-type="dojox/mobile/SearchBox" type="search" selectOnClick="true"
-								 placeHolder="Search" data-dojo-props='list:"states", pageSize:5, onSearch:myOnSearch'>
-				</fieldset>
-			</div>
-		</div>
-	</div>
-
-
-
-Example 2
----------
-The same form using two columns layout.
-
-.. image :: FormLayout2.png
-
-.. html ::
-
-		<div data-dojo-type="dojox/mobile/FormLayout" data-dojo-props="columns:'two'">
-		...
-		</div>                
-
-
-Example 3
----------
-The same form using two columns layout and right align mode.
-
-.. image :: FormLayout3.png
-
-.. html ::
-
-		<div data-dojo-type="dojox/mobile/FormLayout" data-dojo-props="rightAlign: true, columns:'two'">
-		...
-		</div>                
+					<textarea data-dojo-type="dojox/mobile/TextArea" rows="3" cols="20">TextArea
