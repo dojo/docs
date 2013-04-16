@@ -554,7 +554,7 @@ above interacts each others:
 Comparison with ``dojox/mobile/app``
 ====================================
 
-First please note that going forward ``dojox/mobile/app`` will be deprecated in favor of ``dojox/app``.
+First please note that ``dojox/mobile/app`` has been deprecated in favor of ``dojox/app``, so you are fully encouraged to use ``dojox/app``.
 
 The main differences between ``dojox/app`` and ``dojox/mobile/app`` are the following:
 
