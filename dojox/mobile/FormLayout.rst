@@ -92,12 +92,29 @@ A single column form.
 				<fieldset><input id="sh" name="shb" data-dojo-type="dojox/mobile/Slider" value="0" min="0" max="20"
 								 step="0.1" type="range" style="width:150px;"></fieldset>
 			</div>
-			<div>
-				<label>ComboBox</label>
-				<fieldset><input type="text" data-dojo-type="dojox/mobile/ComboBox"
-								 data-dojo-props='value:"", list:"states"'></fieldset>
-			</div>
-			<div>
-				<label>TextArea</span></label>
-				<fieldset>
-					<textarea data-dojo-type="dojox/mobile/TextArea" rows="3" cols="20">TextArea
+		</div>      
+
+Example 2
+---------
+The same form using two columns layout.
+
+.. image :: FormLayout2.png
+
+.. html ::
+
+		<div data-dojo-type="dojox/mobile/FormLayout" data-dojo-props="columns:'two'">
+		...
+		</div>                
+
+
+Example 3
+---------
+The same form using two columns layout and right align mode.
+
+.. image :: FormLayout3.png
+
+.. html ::
+
+		<div data-dojo-type="dojox/mobile/FormLayout" data-dojo-props="rightAlign: true, columns:'two'">
+		...
+		</div>                
