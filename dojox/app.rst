@@ -191,8 +191,8 @@ You will then need to reference that profile as well as your configuration file 
                --appConfigFile <dojo-install>/dojox/app/tests/layoutApp/config.json
 
 
-By default the extension uses the first layer in the profile (here "myApp/myApp") to bundle all the modules for the
-application. You can specify an alternate layer you want to target by passing -appConfigLayer "layer/name" on the command line.
+By default the extension uses the only layer in the profile (here "myApp/myApp") to bundle all the modules for the
+application. You can specify an alternate layer you want to target by passing -appConfigLayer=layer/name on the command line.
 
 Alternatively, you can make sure a layer per-view is built instead of a single layer for the entire application by having the `multipleAppConfigLayers` property set to true in your profile. This is useful if you have a lot of views that won't get navigated to in a typical usage of your application. In that case you might not want to load everything upfront. In this case the controller file of each view will be used as the layer for the view.
 
