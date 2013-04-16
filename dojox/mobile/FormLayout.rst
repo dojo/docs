@@ -13,20 +13,32 @@ Introduction
 ============
 
 FormLayout is a mobile widget which layouts form controls. Each control of the form is associated with a label. The layout is controlled by the 'columns' property:
+
 * columns = 'single': Labels and controls are stacked vertically.                                                                                                           
+
 * columns = 'two': Labels and controls are stacked horizontally, labels use 20% of the total width of the form. 
+
 * column = 'auto': This is the default value. In this case the layout is determined by the width of the screen: A single column if the screen width is lower than 500px, two columns otherwise.     
 
 Each element of a form is made of a <label> and a <fieldset> that contains one or more form widgets.
 Form controls are: 
+
 * dojox/mobile/Button
+
 * dojox/mobile/CheckBox
+
 * dojox/mobile/ComboBox
+
 * dojox/mobile/RadioButton
+
 * dojox/mobile/Slider
+
 * dojox/mobile/TextBox
+
 * dojox/mobile/SearchBox
+
 * dojox/mobile/ExpandingTextArea
+
 * dojox/mobile/ToggleButton
 
 Examples
