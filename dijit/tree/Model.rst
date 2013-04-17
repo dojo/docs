@@ -57,22 +57,22 @@ reference their parent rather than vice-versa.
 
 mayHaveChildren()
 -----------------
-For efficiency reasons, Tree doesn't want to query for the children of an item until it needs to display them.
-It doesn't want to query for children just to see if it should draw an expando (+) icon or not.
-
-Thus, the method mayHaveChildren() returning true indicates that either:
+mayHaveChildren() returning true indicates that either:
 
   * the item has children
+  * the item doesn't have children now, but might have children in the future (from DnD etc.)
   * the item may have children but we'd have to query to find out
 
-The default implementation of mayHaveChildren() checks for existence of the children attribute in the item
-(this assumes that parents point to their children rather than vice-versa), but it can and sometimes should be
-overridden to operate based on the type of item, for example:
+The third possibility is for efficiency reasons, if Tree doesn't want to query for the children of an item
+until it needs to display them.  Returning false means that
+Tree doesn't want to query for children just to see if it should draw an expando (+) icon or not.
 
+The default implementation of mayHaveChildren() just returns true, but it can and sometimes should be
+overridden to operate based on the type of item, for example:
 
 .. js ::
 
-         return myStore.getValue(item, 'type') == 'folder';
+    return item.type == 'folder';
 
 
 pasteItem()
