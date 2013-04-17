@@ -584,6 +584,13 @@ dojox/form/manager
 .. _#16289: http://bugs.dojotoolkit.org/ticket/16289
 .. _#13449: http://bugs.dojotoolkit.org/ticket/13449
 
+dojox/form/Uploader
+-------------------
+   * ``dojox/form/Uploader`` is now AMD compatible and works declaratively in HTML markup 
+   * The AMD update necessitated discarding the previously implemented plugin system. All dependencies are loaded by default. Using the deprecated plugin style should throw warnings in the console. The ``force`` parameter is still used to choose between HTML5, Flash or IFrame.
+
+.. _#16864: http://bugs.dojotoolkit.org/ticket/16864
+
 dojox/date
 ----------
 
