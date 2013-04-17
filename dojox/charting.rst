@@ -111,7 +111,7 @@ Working with Plots
 
 The addPlot() call is used to determine what type of chart you are going to produce, and there are a variety of options to select. Here are a few examples:
 
-TODO: Examples of Different Chart Plot Types
+.. image :: charts.png
 
 addPlot() accepts 2 parameters, a name and an arguments array. The name is important if you want to have more than one plot type on your chart. The arguments array contains your plot options, and these may vary depending on the type of plot you use. Note that your choice of plot type may define appropriate default options.
 
