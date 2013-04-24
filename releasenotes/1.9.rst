@@ -10,9 +10,7 @@ Dojo 1.9 Release Notes
 User Agent Support
 ==================
 
-The following user agents have been tested and are supported in this release. If a user agent version is not listed as
-supported, it still may work, especially on browsers with rapid release cycles (Chrome, Firefox). Future minor releases
-of Dojo might include fixes to support future releases of these browsers, but it is not guaranteed:
+The following user agents have been tested and are supported in this release. If a user agent version is not listed as supported, it still may work, especially on browsers with rapid release cycles (Chrome, Firefox). Future minor releases of Dojo might include fixes to support future releases of these browsers, but it is not guaranteed. Also please note that even if IE6 and 7 code paths have not been removed, Dojo 1.9 is removing official support  for those browsers.
 
 **Desktop**
 
