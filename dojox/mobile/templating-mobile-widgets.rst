@@ -25,14 +25,14 @@ The following dojox/mobile widgets support templating:
 * ``Button`` (mandatory attach point in the template for the property ``containerNode``)
 * ``CheckBox`` (no mandatory attach point)
 * ``Heading`` (optional attach points for the properties ``labelNode`` and ``labelDivNode``)
-* ``ListItem``: (mandatory attach point for the property ``labelNode``)
+* ``ListItem`` (mandatory attach point for the property ``labelNode``)
 * ``RadioButton`` (no mandatory attach point)
 * ``Slider`` (mandatory attach point for the properties ``focusNode``, ``valueNode``, 
   ``relativeParent``, ``progressBar``, ``touchBox``, ``handle``)
 * ``Switch`` (mandatory attach point for the properties ``inner``, ``left``, ``right``, 
   ``knob``, ``input``)
 * ``ToggleButton`` (mandatory attach point for the property ``containerNode``)
-* ``View``: (no mandatory attach point).
+* ``View`` (no mandatory attach point).
 
 Examples of templates for all the widgets which support templating can be found 
 in the directory ``dojox/mobile/tests/templates`` (these templates are used in 
