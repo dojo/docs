@@ -669,6 +669,9 @@ dijit Template Changes
 If you have subclasses of ``InlineEditBox``, ``ComboBox``, ``FilteringSelect``, or ``DateTextBox`` that have modified
 those templates, you may need to update your templates.
 
+Also, a number of widget templates were changed from using <img> nodes to <span> nodes for icons.  If you have custom
+CSS that depends on the img tag name, you probably need to change it.
+
 dijit/Editor
 ------------
 If you are creating Editor widgets programatically, be sure to call startup() on them.
