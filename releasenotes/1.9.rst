@@ -624,6 +624,9 @@ dijit/_Container::addChild()
 In 1.8, the behavior of ``dijit/_Container`` (and subclasses) ``.addChild()`` method was undefined if some of the 
 ``_Container.containerNode`` direct children were plain DOM nodes, rather than widgets.
 
+In practice though, when ``addChild(widget, n)`` would count to the *n*'th position, it would skip over the plain
+DOMNodes and only include the child widgets in the count.
+
 Further, if the existing child widgets were not direct children of ``this.containerNode``, then ``.addChild()`` would
 tend to place the new widget as a next or previous sibling of an existing child widget, rather than as a direct child of
 ``this.containerNode``.
@@ -633,9 +636,6 @@ In 1.9, ``parent.addChild(widget, n)`` places ``widget.domNode`` as the *n*'th D
 
 If your application was calling ``parent.addChild()`` on a widget that contained plain DOM nodes, and depending on the
 undefined behavior listed above, you may need to update your logic.
-
-In practice though, when ``addChild(widget, n)`` would count to the *n*'th position, it would skip over the plain
-DOMNodes and only include the child widgets in the count.
 
 dijit: keypress to keydown
 --------------------------
