@@ -991,11 +991,34 @@ There are two categories of themes:
 
 at the top of any HTML file the chart is displayed in.
 
+
+Zooming, Scrolling, and Panning APIs
+====================================
+
+Dojo Charting provides methods to control arbitrary zooming to drill down to the smallest details of your chart, scrolling, and panning (moving the chart with you mouse in two dimensions). Note that the latter functionality can be taxing on the browser, but the new generation of browsers (Firefox 3, Safari 3, Opera 9.5) are up to the task.
+
++-----------------------------------+---------------------------------------------------------------------------------------------------------------+
+| **Name**                          | **Description**                                                                                               |
++-----------------------------------+---------------------------------------------------------------------------------------------------------------+
+| setAxisWindow(name, scale, offset)|Defines a window on the named axis with a scale factor.                                                        |
+|                                   |**scale** must be >= 1.                                                                                        |
+|                                   |**offset** should be >= 0.                                                                                     |
+|                                   |For example if I have an array of 10 numeric values, and I want to show them ##3-8,                            |
+|                                   |chart.setWindow("x", 3, 2) will do the trick.                                                                  |
+|                                   |This call affects only plots attached to the named axis, other plots are unaffected.                           |
++-----------------------------------+---------------------------------------------------------------------------------------------------------------+
+| setWindow(sx, sy, dx, dy)         |Sets scale and offsets on all plots of the chart.                                                              |
+|                                   |**sx** specifies the magnification factor on horizontal axes. It should be >= 1.                               |
+|                                   |**sy** specifies the magnification factor on vertical axes. It should be >= 1.                                 |
+|                                   |**dx** specifies the offset of the horizontal axes in pixels. It should be >= 0.                               |
+|                                   |**dy** specifies the offset of the vertical axes. It should be >= 0.                                           |
+|                                   |All chart's axes (and, by extension, plots) will be affected)                                                  |
++-----------------------------------+---------------------------------------------------------------------------------------------------------------+
+
+Both methods on Chart perform sanity checks, and won't allow you to scroll outside of axis' boundaries, or zoom out too far. You can also zoom and pan using mouse and touch gestures, see Actions & Animated Effects section.
+
 Events Management
 =================
-
-Chart Events
-------------
 
 Chart events allow you to attach behavior to various chart features, such as markers in response to user actions.
 
@@ -1060,44 +1083,13 @@ The event handler receives one argument. While it tries to unify information for
 |                |                                         |Undefined for all other elements                                               |           |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 
-Updating Charts and Events
---------------------------
+See the following section for examples of predefined actions based on this eventing system.
 
-Charting was designed with periodic updating in mind. Say you have an application that remotely monitors something: the stock market, a database server, etc. With dojox.charting, you can set up a chart and then simply update the series on the charts--resulting in a fast, fluid monitoring experience. In fact, charting has been used for such things as remote CPU monitoring.
-
-TODO: please explain more. How does this work? Show an example.
-
-Coming with the Dojo 1.2 release, Charting will also support customized events, such as tooltip attachment and mouseover actions!
-
-Zooming, Scrolling, and Panning APIs
-====================================
-
-Dojo Charting provides methods to control arbitrary zooming to drill down to the smallest details of your chart, scrolling, and panning (moving the chart with you mouse in two dimensions). Note that the latter functionality can be taxing on the browser, but the new generation of browsers (Firefox 3, Safari 3, Opera 9.5) are up to the task.
-
-+-----------------------------------+---------------------------------------------------------------------------------------------------------------+
-| **Name**                          | **Description**                                                                                               |
-+-----------------------------------+---------------------------------------------------------------------------------------------------------------+
-| setAxisWindow(name, scale, offset)|Defines a window on the named axis with a scale factor.                                                        |
-|                                   |**scale** must be >= 1.                                                                                        |
-|                                   |**offset** should be >= 0.                                                                                     |
-|                                   |For example if I have an array of 10 numeric values, and I want to show them ##3-8,                            |
-|                                   |chart.setWindow("x", 3, 2) will do the trick.                                                                  |
-|                                   |This call affects only plots attached to the named axis, other plots are unaffected.                           |
-+-----------------------------------+---------------------------------------------------------------------------------------------------------------+
-| setWindow(sx, sy, dx, dy)         |Sets scale and offsets on all plots of the chart.                                                              |
-|                                   |**sx** specifies the magnification factor on horizontal axes. It should be >= 1.                               |
-|                                   |**sy** specifies the magnification factor on vertical axes. It should be >= 1.                                 |
-|                                   |**dx** specifies the offset of the horizontal axes in pixels. It should be >= 0.                               |
-|                                   |**dy** specifies the offset of the vertical axes. It should be >= 0.                                           |
-|                                   |All chart's axes (and, by extension, plots) will be affected)                                                  |
-+-----------------------------------+---------------------------------------------------------------------------------------------------------------+
-
-Both methods on Chart perform sanity checks, and won't allow you to scroll outside of axis' boundaries, or zoom out too far. Starting with Dojo Toolkit 1.7 you can also zoom and pan using mouse and touch gestures, see Actions & Animated Effects section.
 
 Actions & Animated Effects
 ==========================
 
-Actions are self-contained objects, which use events to implement certain effects when users interact with a chart. Actions are either interacting with a plot of the chart and inheriting from PlotAction interacting with the chart itself and inheriting ChartAction. The latter type of actions are available starting with Dojo Toolkit 1.7.
+Actions are self-contained objects, which use events to implement certain effects when users interact with a chart. Actions are either interacting with a plot of the chart and inheriting from PlotAction interacting with the chart itself and inheriting ChartAction. 
 
 In general plot actions they are designed to attract attention and indicate which charting element is selected, or to show additional information while chart actions usually modify charting properties such as the zoom level.
 
