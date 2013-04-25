@@ -851,7 +851,7 @@ Here is an example of using coordinate pairs with a scatter plot:
 
   .. html ::
 
-    <div id="satter" style="width: 400px; height: 240px; margin: 10px auto 0px auto;"></div>
+    <div id="scatter" style="width: 400px; height: 240px; margin: 10px auto 0px auto;"></div>
 
 
 With any of the stacked plot types each data set added with addSeries() is placed relative to the previous set. Here is a simple example that shows this concept. Instead of the second data set being a straight line across at 1, all the points are 1 above the point from the first data set.
