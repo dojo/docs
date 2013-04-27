@@ -147,6 +147,9 @@ Setting Width
 
 By default, the width of the select widget will be to fit the width of the selected option.
 However, you can specify a width on the select to force a fixed width.
+Note that the width specified should be as large or larger than the width of the biggest option.
+Otherwise, it will function as a minimum width setting, and the size of the Select will still
+change when the user picks certain long options.
 
 .. code-example::
   :djConfig: async: true, parseOnLoad: true
