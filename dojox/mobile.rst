@@ -405,28 +405,111 @@ This example uses synchronous loading, and loads all of Dojo core.  This results
 Themes
 ------
 
-Applying a Mobile Device Theme Using CSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Dojox Mobile provides a set of visual themes that can be applied dynamicaly to your application depending on the browser displaying the application in order to give it a native look, or that can be applied whatever the browser displaying the application in order to display a constant look whatever the device / browser in use.
 
-Selecting the CSS to apply (iphone, android, blackberry, windows or custom) is equally simple:
+To apply a native theme (ie a theme that makes your application look like a native application on the mobile device on wich it is displayed), you just need to include the following statement in your html pages:
+
+.. html ::
+
+  <script type="text/javascript" src="dojox/mobile/deviceTheme.js"></script>
+
+see dojox/mobile/deviceTheme for more information. When this approach is taken, you can also pass an additional query parameter string, theme={theme id} to force a specific theme from a browser url input (this feature is useful for creating samples and demos as well as testing what a page looks like on various devices). The theme id value is used instead of the navigator.userAgent property to determine the theme, possible values are: Android, Holodark, BlackBerry, iPhone, iPad, WindowsPhone or Custom (see the list of available themes below).
+
+To apply the same theme whatever the client browser, you just need to include the main css file for the theme. For example, to use the custom theme (more on available themes below), you just need to include the following statement in the header section of your html pages:
+
+.. html ::
+
+  <link rel="stylesheet" type="text/css" href="dojox/mobile/themes/custom/custom.css"></link>
+
+
+Themes currently available
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The themes that are currently available for a dojo mobile application are the following:
+
+iPhone
+
+[screenshot needed]
+
+this theme is modeled on the native iphone look and feel. When using dojox/mobile/deviceTheme.js, this theme is triggered for an iPhone user agent and for any other user agent that does not specificaly trigger another theme (the iPhone theme is the default theme). To load it whatever the user agent, use the following CSS link statement instead:
 
 .. html ::
 
   <link rel="stylesheet" type="text/css" href="dojox/mobile/themes/iphone/iphone.css"></link>
 
-Automatically Applying Mobile Device Themes Using CSS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-You can also use Dojo Mobile's automatic device detection and theme loading by adding the "dojox/mobile/deviceTheme" to your requires list.  When automatic device detection and theme loading is enabled, Dojo Mobile will insert appropriate stylesheet links dynamically into the header, based on user agent sniffing.
-
-When this approach is taken, you can also pass an additional query parameter string, theme={theme id} to force a specific theme from a browser url input (this feature is useful for creating samples and demos as well as testing what a page looks like on various devices). The theme id value is used instead of the navigator.userAgent property to determine the theme, possible values are: Android, Holodark, BlackBerry, iPhone, iPad, WindowsPhone or Custom.
-
-Note that the iPhone and iPad themes have different renderings on iOS5 and iOS6, as natives applications have. On iOS6, by default, there is no vertical stripes on the background of the pages. To display vertical stripes as in native iOS6 system properties pages, simply add the class mblIOS6Stripes to the body of your page:
+Note that the iPhone theme has different renderings on iOS5 and iOS6, as natives applications have. On iOS6, by default, there is no vertical stripes on the background of the pages. To display vertical stripes as in native iOS6 system properties pages, simply add the class mblIOS6Stripes to the body of your page:
 
 .. html ::
 
   <!-- On iOS6, displays vertical stripes on the background -->
   <body class="mblIOS6Stripes" style="visibility: hidden;">
 
+iPad
+
+[screenshot needed]
+
+this theme is modeled on the native ipad look and feel. When using dojox/mobile/deviceTheme.js, this theme is triggered for an iPad user agent. To load it whatever the user agent, use the following CSS link statement instead:
+
+.. html ::
+
+  <link rel="stylesheet" type="text/css" href="dojox/mobile/themes/iphone/ipad.css"></link>
+
+Note that the iPad theme has different renderings on iOS5 and iOS6, as natives applications have. On iOS6, by default, there is no vertical stripes on the background of the pages. To display vertical stripes as in native iOS6 system properties pages, simply add the class mblIOS6Stripes to the body of your page:
+
+.. html ::
+
+  <!-- On iOS6, displays vertical stripes on the background -->
+  <body class="mblIOS6Stripes" style="visibility: hidden;">
+
+Android
+
+[screenshot needed]
+
+this theme is modeled on the native Android 1.x and 2.x look and feel. When using dojox/mobile/deviceTheme.js, this theme is triggered for Android 1.x and 2.x user agents. To load it whatever the user agent, use the following CSS link statement instead:
+
+.. html ::
+
+  <link rel="stylesheet" type="text/css" href="dojox/mobile/themes/android/android.css"></link>
+
+Holodark
+
+[screenshot needed]
+
+this theme is modeled on the native Android 3.x and 4.x look and feel. When using dojox/mobile/deviceTheme.js, this theme is triggered for Android 3.x and 4.x user agents. To load it whatever the user agent, use the following CSS link statement instead:
+
+.. html ::
+
+  <link rel="stylesheet" type="text/css" href="dojox/mobile/themes/holodark/holodark.css"></link>
+
+Blackberry
+
+[screenshot needed]
+
+this theme is modeled on the native Balckberry look and feel.  When using dojox/mobile/deviceTheme.js, this theme is triggered for Blackberry user agents. To load it whatever the user agent, use the following CSS link statement instead:
+
+.. html ::
+
+  <link rel="stylesheet" type="text/css" href="dojox/mobile/themes/blackberry/blackberry.css"></link>
+
+WindowsPhone
+
+[screenshot needed]
+
+this theme is modeled on the native Windows 8 look and feel for touch devices.   When using dojox/mobile/deviceTheme.js, this theme is triggered for Windows Phones and Internet Explorer 10 user agents. To load it whatever the user agent, use the following CSS link statement instead:
+
+.. html ::
+
+  <link rel="stylesheet" type="text/css" href="dojox/mobile/themes/windows/windows.css"></link>
+
+Custom
+
+[screenshot needed]
+
+this theme is a generic grey theme that is not modeled on any existing native look and feel. As such, it is not triggered when using dojox/mobile/deviceTheme.js, but it can be loaded using hte following CSS link statement:
+
+.. html ::
+
+  <link rel="stylesheet" type="text/css" href="dojox/mobile/themes/custom/custom.css"></link>
 
 Generating Mobile Themes
 ~~~~~~~~~~~~~~~~~~~~~~~~
