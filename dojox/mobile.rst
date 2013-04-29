@@ -405,9 +405,9 @@ This example uses synchronous loading, and loads all of Dojo core.  This results
 Themes
 ------
 
-Dojox Mobile provides a set of visual themes that can be applied dynamicaly to your application depending on the browser displaying the application in order to give it a native look, or that can be applied whatever the browser displaying the application in order to display a constant look whatever the device / browser in use.
+Dojox Mobile provides a set of visual themes that can be applied dynamicaly to your application in order to give it a native look depending on the browser user agent, or that can be applied whatever the browser displaying the application in order to give it the same look whatever the device / browser in use.
 
-To apply a native theme (ie a theme that makes your application look like a native application on the mobile device on wich it is displayed), you just need to include the following statement in your html pages:
+To apply a native theme (ie a theme that makes your application look like a native application on the mobile device on which it is displayed), you just need to include the following statement in your html pages:
 
 .. html ::
 
