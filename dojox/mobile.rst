@@ -413,7 +413,7 @@ To apply a native theme (ie a theme that makes your application look like a nati
 
   <script type="text/javascript" src="dojox/mobile/deviceTheme.js"></script>
 
-see dojox/mobile/deviceTheme for more information. When this approach is taken, you can also pass an additional query parameter string, theme={theme id} to force a specific theme from a browser url input (this feature is useful for creating samples and demos as well as testing what a page looks like on various devices). The theme id value is used instead of the navigator.userAgent property to determine the theme, possible values are: Android, Holodark, BlackBerry, iPhone, iPad, WindowsPhone or Custom (see the list of available themes below).
+see :ref:`dojox/mobile/deviceTheme <dojox/mobile/deviceTheme>` for more information. When this approach is taken, you can also pass an additional query parameter string, theme={theme id} to force a specific theme from a browser url input (this feature is useful for creating samples and demos as well as testing what a page looks like on various devices). The theme id value is used instead of the navigator.userAgent property to determine the theme, possible values are: Android, Holodark, BlackBerry, iPhone, iPad, WindowsPhone or Custom (see the list of available themes below).
 
 To apply the same theme whatever the client browser, you just need to include the main css file for the theme. For example, to use the custom theme (more on available themes below), you just need to include the following statement in the header section of your html pages:
 
