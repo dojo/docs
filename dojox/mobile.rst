@@ -431,7 +431,7 @@ The themes that are currently available for a dojo mobile application are the fo
 
 .. image :: iPhone-theme.PNG
 
-this theme is modeled on the native iphone look and feel. When using dojox/mobile/deviceTheme.js, this theme is triggered for an iPhone user agent and for any other user agent that does not specificaly trigger another theme (the iPhone theme is the default theme). To apply it whatever the user agent, use the following CSS link statement instead:
+this theme is modeled on the native iphone look. When using dojox/mobile/deviceTheme.js, this theme is triggered for an iPhone user agent and for any other user agent that does not specificaly trigger another theme (the iPhone theme is the default theme). To apply it whatever the user agent, use the following CSS link statement instead:
 
 .. html ::
 
@@ -448,7 +448,7 @@ Note that the iPhone theme has different renderings on iOS5 and iOS6, as natives
 
 .. image :: iPad-theme.PNG
 
-this theme is modeled on the native ipad look and feel. When using dojox/mobile/deviceTheme.js, this theme is triggered for an iPad user agent. To apply it whatever the user agent, use the following CSS link statement instead:
+this theme is modeled on the native ipad look. When using dojox/mobile/deviceTheme.js, this theme is triggered for an iPad user agent. To apply it whatever the user agent, use the following CSS link statement instead:
 
 .. html ::
 
@@ -465,7 +465,7 @@ Note that the iPad theme has different renderings on iOS5 and iOS6, as natives a
 
 .. image :: Android-theme.png
 
-this theme is modeled on the native Android 1.x and 2.x look and feel. When using dojox/mobile/deviceTheme.js, this theme is triggered for Android 1.x and 2.x user agents. To apply it whatever the user agent, use the following CSS link statement instead:
+this theme is modeled on the native Android 1.x and 2.x look. When using dojox/mobile/deviceTheme.js, this theme is triggered for Android 1.x and 2.x user agents. To apply it whatever the user agent, use the following CSS link statement instead:
 
 .. html ::
 
@@ -475,7 +475,7 @@ this theme is modeled on the native Android 1.x and 2.x look and feel. When usin
 
 .. image :: Holodark-theme.png
 
-this theme is modeled on the native Android 3.x and 4.x look and feel. When using dojox/mobile/deviceTheme.js, this theme is triggered for Android 3.x and 4.x user agents. To apply it whatever the user agent, use the following CSS link statement instead:
+this theme is modeled on the native Android 3.x and 4.x look. When using dojox/mobile/deviceTheme.js, this theme is triggered for Android 3.x and 4.x user agents. To apply it whatever the user agent, use the following CSS link statement instead:
 
 .. html ::
 
@@ -485,7 +485,7 @@ this theme is modeled on the native Android 3.x and 4.x look and feel. When usin
 
 .. image :: Blackberry-theme.png
 
-this theme is modeled on the native Balckberry look and feel.  When using dojox/mobile/deviceTheme.js, this theme is triggered for Blackberry user agents. To apply it whatever the user agent, use the following CSS link statement instead:
+this theme is modeled on the native Balckberry look.  When using dojox/mobile/deviceTheme.js, this theme is triggered for Blackberry user agents. To apply it whatever the user agent, use the following CSS link statement instead:
 
 .. html ::
 
@@ -495,7 +495,7 @@ this theme is modeled on the native Balckberry look and feel.  When using dojox/
 
 .. image :: WindowsPhone-theme.png
 
-this theme is modeled on the native Windows 8 look and feel for touch devices.   When using dojox/mobile/deviceTheme.js, this theme is triggered for Windows Phones and Internet Explorer 10 user agents. To apply it whatever the user agent, use the following CSS link statement instead:
+this theme is modeled on the native Windows 8 look for touch devices.   When using dojox/mobile/deviceTheme.js, this theme is triggered for Windows Phones and Internet Explorer 10 user agents. To apply it whatever the user agent, use the following CSS link statement instead:
 
 .. html ::
 
@@ -505,7 +505,7 @@ this theme is modeled on the native Windows 8 look and feel for touch devices.  
 
 .. image :: Custom-theme.png
 
-this theme is a generic grey theme that is not modeled on any existing native look and feel. As such, it is not triggered when using dojox/mobile/deviceTheme.js, but it can be applied using hte following CSS link statement:
+this theme is a generic grey theme that is not modeled on any existing native look. As such, it is not triggered when using dojox/mobile/deviceTheme.js, but it can be applied using hte following CSS link statement:
 
 .. html ::
 
