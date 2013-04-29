@@ -427,7 +427,7 @@ Themes currently available
 
 The themes that are currently available for a dojo mobile application are the following:
 
-iPhone
+**iPhone**
 
 [screenshot needed]
 
@@ -444,7 +444,7 @@ Note that the iPhone theme has different renderings on iOS5 and iOS6, as natives
   <!-- On iOS6, displays vertical stripes on the background -->
   <body class="mblIOS6Stripes" style="visibility: hidden;">
 
-iPad
+**iPad**
 
 [screenshot needed]
 
@@ -461,7 +461,7 @@ Note that the iPad theme has different renderings on iOS5 and iOS6, as natives a
   <!-- On iOS6, displays vertical stripes on the background -->
   <body class="mblIOS6Stripes" style="visibility: hidden;">
 
-Android
+**Android**
 
 [screenshot needed]
 
@@ -471,7 +471,7 @@ this theme is modeled on the native Android 1.x and 2.x look and feel. When usin
 
   <link rel="stylesheet" type="text/css" href="dojox/mobile/themes/android/android.css"></link>
 
-Holodark
+**Holodark**
 
 [screenshot needed]
 
@@ -481,7 +481,7 @@ this theme is modeled on the native Android 3.x and 4.x look and feel. When usin
 
   <link rel="stylesheet" type="text/css" href="dojox/mobile/themes/holodark/holodark.css"></link>
 
-Blackberry
+**Blackberry**
 
 [screenshot needed]
 
@@ -491,7 +491,7 @@ this theme is modeled on the native Balckberry look and feel.  When using dojox/
 
   <link rel="stylesheet" type="text/css" href="dojox/mobile/themes/blackberry/blackberry.css"></link>
 
-WindowsPhone
+**WindowsPhone**
 
 [screenshot needed]
 
@@ -501,7 +501,7 @@ this theme is modeled on the native Windows 8 look and feel for touch devices.  
 
   <link rel="stylesheet" type="text/css" href="dojox/mobile/themes/windows/windows.css"></link>
 
-Custom
+**Custom**
 
 [screenshot needed]
 
