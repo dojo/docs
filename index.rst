@@ -44,6 +44,7 @@ One of the long term objectives of the Dojo Toolkit is to continue to make packa
 require packages to exist within DojoX. Some of the packages that are currently part of this community are:
 
 * `dgrid <http://dgrid.io/>`_ - A full featured, lightweight data grid.
+* `gridx <http://oria.github.io/gridx/>`_ - A fast rendering, modularized, plugin based grid.
 
 Reference Guide Structure
 =========================
