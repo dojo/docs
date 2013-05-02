@@ -175,32 +175,32 @@ If the fill="always" option is specified, each tab is resized so that they all f
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.TabBar" data-dojo-props='barType:"standardTab", fill:"always"'>
-    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+  <ul data-dojo-type="dojox/mobile/TabBar" data-dojo-props='barType:"standardTab", fill:"always"'>
+    <li data-dojo-type="dojox/mobile/TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Plan</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Main Event</li>
   </ul>
 
-  <ul data-dojo-type="dojox.mobile.TabBar"
+  <ul data-dojo-type="dojox/mobile/TabBar"
       data-dojo-props='barType:"standardTab", closable:true, center:false, fill:"always"'>
-    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Plan</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Main Event</li>
   </ul>
 
-  <ul data-dojo-type="dojox.mobile.TabBar"
+  <ul data-dojo-type="dojox/mobile/TabBar"
       data-dojo-props='barType:"standardTab",
                        center:false,
                        fill:"always",
                        iconBase:"images/tab-icons.png"'>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"images/tab-icon-16.png",
                          icon2:"images/tab-icon-16h.png",
                          selected:true'>Image</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='iconPos1:"0,29,29,29",
                          iconPos2:"29,29,29,29"'>Sprite</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"mblDomButtonGrayStar",
                          icon2:"mblDomButtonYellowStar"'>DOM Button</li>
   </ul>
@@ -249,32 +249,32 @@ If the fill="always" option is specified, each tab is resized so that they all f
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.TabBar" data-dojo-props='barType:"slimTab", fill:"always"'>
-    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+  <ul data-dojo-type="dojox/mobile/TabBar" data-dojo-props='barType:"slimTab", fill:"always"'>
+    <li data-dojo-type="dojox/mobile/TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Plan</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Main Event</li>
   </ul>
 
-  <ul data-dojo-type="dojox.mobile.TabBar"
+  <ul data-dojo-type="dojox/mobile/TabBar"
       data-dojo-props='barType:"slimTab", closable:true, center:false, fill:"always"'>
-    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Plan</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Main Event</li>
   </ul>
 
-  <ul data-dojo-type="dojox.mobile.TabBar"
+  <ul data-dojo-type="dojox/mobile/TabBar"
       data-dojo-props='barType:"slimTab",
                        center:false,
                        fill:"always",
                        iconBase:"images/tab-icons.png"'>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"images/tab-icon-16.png",
                          icon2:"images/tab-icon-16h.png",
                          selected:true'>Image</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='iconPos1:"0,29,29,29",
                          iconPos2:"29,29,29,29"'>Sprite</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"mblDomButtonGrayStar",
                          icon2:"mblDomButtonYellowStar"'>DOM Button</li>
   </ul>
@@ -322,30 +322,30 @@ If the fill="always" option is specified, each tab is resized so that they all f
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.TabBar" data-dojo-props='barType:"flatTab", fill:"always"'">
-    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+  <ul data-dojo-type="dojox/mobile/TabBar" data-dojo-props='barType:"flatTab", fill:"always"'">
+    <li data-dojo-type="dojox/mobile/TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Plan</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Main Event</li>
   </ul>
 
-  <ul data-dojo-type="dojox.mobile.TabBar" data-dojo-props='barType:"flatTab", fill:"always", closable:true, center:false'">
-    <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Plan</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton">Main Event</li>
+  <ul data-dojo-type="dojox/mobile/TabBar" data-dojo-props='barType:"flatTab", fill:"always", closable:true, center:false'">
+    <li data-dojo-type="dojox/mobile/TabBarButton" data-dojo-props='selected:true'>Dashboard</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Plan</li>
+    <li data-dojo-type="dojox/mobile/TabBarButton">Main Event</li>
     </ul>
 
-  <ul data-dojo-type="dojox.mobile.TabBar"
+  <ul data-dojo-type="dojox/mobile/TabBar"
       data-dojo-props='barType:"flatTab",
                        center:false,
                        fill:"always",
                        iconBase:"images/tab-icons.png"'">
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"images/tab-icon-16.png",
                          icon2:"images/tab-icon-16h.png"'>Image</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='iconPos1:"0,29,29,29",
                          iconPos2:"29,29,29,29"'>Sprite</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"mblDomButtonGrayStar",
                          icon2:"mblDomButtonYellowStar",
                          selected:true'>DOM Button</li>
@@ -378,16 +378,16 @@ If the fill="always" option is specified, each tab is resized so that they all f
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.TabBar"
+  <ul data-dojo-type="dojox/mobile/TabBar"
       data-dojo-props='barType:"tallTab", fill:"always", iconBase:"images/tab-icons.png"'>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"images/tab-icon-16.png",
                          icon2:"images/tab-icon-16h.png",
                          selected:true'>Image</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='iconPos1:"0,29,29,29",
                          iconPos2:"29,29,29,29"'>Sprite</li>
-    <li data-dojo-type="dojox.mobile.TabBarButton"
+    <li data-dojo-type="dojox/mobile/TabBarButton"
         data-dojo-props='icon1:"mblDomButtonGrayStar",
                          icon2:"mblDomButtonYellowStar"'>DOM Button</li>
   </ul>
