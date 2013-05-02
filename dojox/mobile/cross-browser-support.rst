@@ -31,7 +31,7 @@ and using the pre 1.7-style synchronous loader:
   dojo.require("dojox.mobile");
   dojo.requireIf(!dojo.isWebKit, "dojox.mobile.compat");
 
-Once dojox/mobile/compat is loaded, it replaces some of the methods of dojox.mobile widgets, 
+Once dojox/mobile/compat is loaded, it replaces some of the methods of Dojox Mobile widgets, 
 without any subclassing. This way your applications do not need to be changed, and HTML pages 
 remain the same regardless of whether this compatibility module is used or not.
 
