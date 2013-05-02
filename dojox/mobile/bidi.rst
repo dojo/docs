@@ -76,13 +76,13 @@ This usually solves the alignment of the component.
 .. html ::
 
   <body style="visibility:hidden;" dir="rtl">
-    <div id="settings" data-dojo-type="dojox.mobile.View" selected="true">
-      <h1 data-dojo-type="dojox.mobile.Heading">Settings</h1>
-      <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
-        <li data-dojo-type="dojox.mobile.ListItem" icon="images/a-icon-2-41x41.png" rightText="mac" moveTo="hello">
+    <div id="settings" data-dojo-type="dojox/mobile/View" selected="true">
+      <h1 data-dojo-type="dojox/mobile/Heading">Settings</h1>
+      <ul data-dojo-type="dojox/mobile/EdgeToEdgeList">
+        <li data-dojo-type="dojox/mobile/ListItem" icon="images/a-icon-2-41x41.png" rightText="mac" moveTo="hello">
         Wi-Fi
         </li>
-        <li data-dojo-type="dojox.mobile.ListItem" icon="images/a-icon-2-41x41.png" rightText="AcmePhone" moveTo="hello">
+        <li data-dojo-type="dojox/mobile/ListItem" icon="images/a-icon-2-41x41.png" rightText="AcmePhone" moveTo="hello">
         Carrier
         </li>
       </ul>
@@ -90,7 +90,7 @@ This usually solves the alignment of the component.
   </body>
 
 When it comes to mobile applications, the same approach is followed beside enabling the bidi support.
-Dojox.mobile widgets support mirroring, widgets that need special handling for mirroring have a separate style sheet with the name ``<widgetName>_rtl.css``.
+Dojox Mobile widgets support mirroring, widgets that need special handling for mirroring have a separate style sheet with the name ``<widgetName>_rtl.css``.
 This style sheet contains all the required styles to enable widget mirroring. 
 The code snippets below show how to load the required rtl style sheet manually or automatically.
 
@@ -118,13 +118,13 @@ And finally set the ``dir`` attribute of the widget  to rtl:
 .. html ::
 
   <body style="visibility:hidden;">
-    <div id="settings" data-dojo-type="dojox.mobile.View" selected="true">
-    <h1 data-dojo-type="dojox.mobile.Heading">الاعدادات</h1>
-      <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
-        <li data-dojo-type="dojox.mobile.ListItem" dir="rtl" icon="images/a-icon-2-41x41.png" rightText="مصر" moveTo="hello">
+    <div id="settings" data-dojo-type="dojox/mobile/View" selected="true">
+    <h1 data-dojo-type="dojox/mobile/Heading">الاعدادات</h1>
+      <ul data-dojo-type="dojox/mobile/EdgeToEdgeList">
+        <li data-dojo-type="dojox/mobile/ListItem" dir="rtl" icon="images/a-icon-2-41x41.png" rightText="مصر" moveTo="hello">
         الشبكة اللاسلكية
         </li>
-        <li data-dojo-type="dojox.mobile.ListItem" dir=”rtl” icon="images/a-icon-2-41x41.png" rightText="مصرية" moveTo="hello">
+        <li data-dojo-type="dojox/mobile/ListItem" dir=”rtl” icon="images/a-icon-2-41x41.png" rightText="مصرية" moveTo="hello">
         شبكة المحمول
         </li>
        </ul>
@@ -150,11 +150,11 @@ By adding the ``dir`` attribute in the widget tag itself, we specify the directi
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
-    <li data-dojo-type="dojox.mobile.ListItem" dir="rtl" icon="images/a-icon-2-41x41.png" rightText="مصر" moveTo="hello">
+  <ul data-dojo-type="dojox/mobile/EdgeToEdgeList">
+    <li data-dojo-type="dojox/mobile/ListItem" dir="rtl" icon="images/a-icon-2-41x41.png" rightText="مصر" moveTo="hello">
     الشبكة اللاسلكية
     </li>
-    <li data-dojo-type="dojox.mobile.ListItem" icon="images/a-icon-2-41x41.png" rightText="acmePhone" moveTo="hello">
+    <li data-dojo-type="dojox/mobile/ListItem" icon="images/a-icon-2-41x41.png" rightText="acmePhone" moveTo="hello">
     Carrier
     </li>
   </ul>
@@ -186,11 +186,11 @@ If the direction is not specified on the widget level, then widgets inherit the 
 
   <div dir="ltr">
     <div dir="rtl">
-      <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
-        <li data-dojo-type="dojox.mobile.ListItem" icon="images/a-icon-2-41x41.png" rightText="مصر" moveTo="hello">
+      <ul data-dojo-type="dojox/mobile/EdgeToEdgeList">
+        <li data-dojo-type="dojox/mobile/ListItem" icon="images/a-icon-2-41x41.png" rightText="مصر" moveTo="hello">
         الشبكة اللاسلكية
         </li>
-        <li data-dojo-type="dojox.mobile.ListItem" icon="images/a-icon-2-41x41.png" rightText="مصرية" moveTo="hello">
+        <li data-dojo-type="dojox/mobile/ListItem" icon="images/a-icon-2-41x41.png" rightText="مصرية" moveTo="hello">
         شبكة المحمول
         </li>
       </ul>
@@ -225,7 +225,7 @@ Control over text direction for text which appears on the screen as part of the 
 .. html ::
 
    <body>
-       <input data-dojo-type="dojox.mobile.TextBox" data-dojo-props='value:"Hello World !", textDir:"rtl"'>
+       <input data-dojo-type="dojox/mobile/TextBox" data-dojo-props='value:"Hello World !", textDir:"rtl"'>
    </body>
 
 
@@ -236,7 +236,7 @@ Control over text direction (via textDir) is provided independently from control
 .. html ::
 
    <body>
-       <input data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='value:"Hello עולם!", list:"values", textDir:"rtl",dir:"ltr"'>
+       <input data-dojo-type="dojox/mobile/ComboBox" data-dojo-props='value:"Hello עולם!", list:"values", textDir:"rtl",dir:"ltr"'>
    </body>
 
 
@@ -274,7 +274,7 @@ Notice that the upper list with caption "RTL RoundRectCategory!" has textDir set
       <ul data-dojo-type="dojox/mobile/EdgeToEdgeList" data-dojo-props='textDir:"rtl"'>
          <li id="first" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-1.png"'>
 	    <font style="font-style:italic; font-size: 16pt">Rtl </font>direction!!
-	    <div data-dojo-type="dojox.mobile.Switch"></div>
+	    <div data-dojo-type="dojox/mobile/Switch"></div>
 	 </li>
 	 <li id="second" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-2.png",rightText:"mac.", moveTo:"hello."'>
 				 Wi-Fi!  Internet!  Rtl direction! 			
@@ -287,7 +287,7 @@ Notice that the upper list with caption "RTL RoundRectCategory!" has textDir set
       <ul data-dojo-type="dojox/mobile/EdgeToEdgeList" data-dojo-props='textDir:"ltr"'>
 	 <li id="first_ltr" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-1.png"'>
            <font style="font-style:italic; font-size: 16pt">Ltr </font>direction!!
-	   <div data-dojo-type="dojox.mobile.Switch"></div>
+	   <div data-dojo-type="dojox/mobile/Switch"></div>
 	 </li>
 	 <li id="second_ltr" data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"../../images/i-icon-2.png",rightText:"mac.", moveTo:"hello."'>
 				Wi-Fi!  Internet!  Ltr direction!
@@ -314,16 +314,16 @@ Please note that textDir for first input field is set to "ltr" while for other w
 
   <body>
     <button onclick="show2()">Show Dialog</button>
-    <div id="dlg2" data-dojo-type="dojox.mobile.SimpleDialog" data-dojo-props='closeButton:true'>
+    <div id="dlg2" data-dojo-type="dojox/mobile/SimpleDialog" data-dojo-props='closeButton:true'>
       <div class="dlgTitle" >Dialog for Text dir test
-         <button data-dojo-type="dojox.mobile.Button" class="mblBlueButton" data-dojo-props='textDir:"rtl"'>שלום עולם !</button>
+         <button data-dojo-type="dojox/mobile/Button" class="mblBlueButton" data-dojo-props='textDir:"rtl"'>שלום עולם !</button>
       </div>
       <table>
          <tr>
            <td style="width:250px"><img alt="" src="../images/pic1.jpg" width="230" height="230"></td>
            <td style="vertical-align:top">
-              <input data-dojo-type="dojox.mobile.TextBox" data-dojo-props='value:"Hello World !", textDir:"ltr"'><br>
-              <input data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='value:"Hello שלום!", list:"values", textDir:"rtl"'>
+              <input data-dojo-type="dojox/mobile/TextBox" data-dojo-props='value:"Hello World !", textDir:"ltr"'><br>
+              <input data-dojo-type="dojox/mobile/ComboBox" data-dojo-props='value:"Hello שלום!", list:"values", textDir:"rtl"'>
            </td>
          </tr>
       </table>
