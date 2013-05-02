@@ -22,11 +22,11 @@ Usage of the url property is as follows.
 
 .. html ::
 
-  <ul data-dojo-type="dojox.mobile.RoundRectList">
-     <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='transition:"slide", url:"view1.html"'>
+  <ul data-dojo-type="dojox/mobile/RoundRectList">
+     <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='transition:"slide", url:"view1.html"'>
         External View #1 (sync)
      </li>
-     <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='transition:"flip", url:"view2.html", synch:false'>
+     <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='transition:"flip", url:"view2.html", synch:false'>
         External View #2 (async)
      </li>
   </ul>
@@ -34,22 +34,22 @@ Usage of the url property is as follows.
 Create a View from Html Fragment
 --------------------------------
 
-Below is an example of an html fragment that represents a view. A parser (dojo.parser or dojox.mobile.parser) is called to parse the html fragment. The top level widget must be dojox.mobile.View or its subclass, because the entire html fragment will become a new transition target view. The new view will be created as a sibling of the current view. <script> tags cannot be included in the html fragment.
+Below is an example of an html fragment that represents a view. A parser (dojo/parser or dojox/mobile/parser) is called to parse the html fragment. The top level widget must be dojox/mobile/View or its subclass, because the entire html fragment will become a new transition target view. The new view will be created as a sibling of the current view. <script> tags cannot be included in the html fragment.
 
 Example of view html fragment:
 
 .. html ::
 
-  <div data-dojo-type="dojox.mobile.View">
-      <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props='back:"Home", moveTo:"foo"'>view1.html</h1>
-      <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
-      <li data-dojo-type="dojox.mobile.ListItem">
+  <div data-dojo-type="dojox/mobile/View">
+      <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props='back:"Home", moveTo:"foo"'>view1.html</h1>
+      <ul data-dojo-type="dojox/mobile/EdgeToEdgeList">
+      <li data-dojo-type="dojox/mobile/ListItem">
           Jack Coleman
       </li>
-      <li data-dojo-type="dojox.mobile.ListItem">
+      <li data-dojo-type="dojox/mobile/ListItem">
           James Evans
       </li>
-      <li data-dojo-type="dojox.mobile.ListItem">
+      <li data-dojo-type="dojox/mobile/ListItem">
           Jason Griffin
       </li>
       </ul>
@@ -90,7 +90,7 @@ ListItem can have an action handler by simply adding an onclick event handler as
 
 .. html ::
 
-  <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='moveTo:"#", onClick:myAction'>
+  <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='moveTo:"#", onClick:myAction'>
      Update View
   </li>
 
@@ -111,10 +111,10 @@ In the action handler, you can update the transition target view, and then progr
 
 .. html ::
 
-  <div id="view1" data-dojo-type="dojox.mobile.View">
-     <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props='back:"Home", moveTo:"home"'>Current Status</h1>
-     <h2 data-dojo-type="dojox.mobile.RoundRectCategory">Local Time</h2>
-     <div id="rect1" data-dojo-type="dojox.mobile.RoundRect" data-dojo-props='shadow:true'></div>
+  <div id="view1" data-dojo-type="dojox/mobile/View">
+     <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props='back:"Home", moveTo:"home"'>Current Status</h1>
+     <h2 data-dojo-type="dojox/mobile/RoundRectCategory">Local Time</h2>
+     <div id="rect1" data-dojo-type="dojox/mobile/RoundRect" data-dojo-props='shadow:true'></div>
   </div>
 
 Load Content into Existing View and Perform Transition
@@ -148,7 +148,7 @@ In this example, the view content is loaded asynchronously, the destination view
 
 .. html ::
 
-  <div id="view2" data-dojo-type="dojox.mobile.View"></div>
+  <div id="view2" data-dojo-type="dojox/mobile/View"></div>
 
 Perform Transition and Load Content into Existing View
 ------------------------------------------------------
@@ -181,7 +181,7 @@ This example is almost the same as the previous one, but in this example, view t
 
 .. html ::
 
-  <div id="view3" data-dojo-type="dojox.mobile.View"></div>
+  <div id="view3" data-dojo-type="dojox/mobile/View"></div>
 
 Create a New View and Perform Transition
 ----------------------------------------
@@ -248,15 +248,15 @@ This example updates an existing RoundRectDataList via a dojo.data datastore, an
 
 .. html ::
 
-  <div id="view5" data-dojo-type="dojox.mobile.View">
-     <h1 data-dojo-type="dojox.mobile.Heading">RoundRectDataList</h1>
-     <ul id="list1" data-dojo-type="dojox.mobile.RoundRectDataList"></ul>
+  <div id="view5" data-dojo-type="dojox/mobile/View">
+     <h1 data-dojo-type="dojox/mobile/Heading">RoundRectDataList</h1>
+     <ul id="list1" data-dojo-type="dojox/mobile/RoundRectDataList"></ul>
   </div>
 
-Partial Update Using dojox.mobile.ContentPane
+Partial Update Using dojox/mobile/ContentPane
 ---------------------------------------------
 
-In this example, there is a dojox.mobile.ContentPane widget in the transition target view. dojox.mobile.ContentPane is a very simple container widget, so it can be thought of as a <div> with the "href" attribute. This example updates the ContentPane with an external html fragment, and then performs a transition.
+In this example, there is a dojox/mobile/ContentPane widget in the transition target view. dojox/mobile/ContentPane is a very simple container widget, so it can be thought of as a <div> with the "href" attribute. This example updates the ContentPane with an external html fragment, and then performs a transition.
 
 .. js ::
 
@@ -275,12 +275,12 @@ In this example, there is a dojox.mobile.ContentPane widget in the transition ta
 
 .. html ::
 
-  <div id="view6" data-dojo-type="dojox.mobile.ScrollableView">
-     <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props='back:"Home", moveTo:"home", fixed:"top"'>Partial Update</h1>
-     <h2 data-dojo-type="dojox.mobile.RoundRectCategory">Dynamic Content</h2>
-     <div id="pane1" data-dojo-type="dojox.mobile.ContentPane"></div>
-     <ul data-dojo-type="dojox.mobile.RoundRectList">
-         <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props='moveTo:"home", transitionDir:-1'>
+  <div id="view6" data-dojo-type="dojox/mobile/ScrollableView">
+     <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props='back:"Home", moveTo:"home", fixed:"top"'>Partial Update</h1>
+     <h2 data-dojo-type="dojox/mobile/RoundRectCategory">Dynamic Content</h2>
+     <div id="pane1" data-dojo-type="dojox/mobile/ContentPane"></div>
+     <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='moveTo:"home", transitionDir:-1'>
              Home
          </li>
      </ul>
