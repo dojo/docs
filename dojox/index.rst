@@ -50,7 +50,7 @@ Package/Module                                                                  
 :ref:`dojox/analytics <dojox/analytics>`                                           Experimental Analytics and client monitoring system.  Including the base 
                                                                                                 analytics system and any number of plugins enables logging of
                                                                                                 different system data back to the server.
-:ref:`dojox/app <dojox/app>`                                                       Experimental A small application framework providing a set of classes to 
+:ref:`dojox/app <dojox/app>`                                                       Mature       A small application framework providing a set of classes to
                                                                                                 manage the the life-cycle and behavior of a single page 
                                                                                                 application delivered to a mobile or desktop platform.
 :ref:`dojox/collections <dojox/collections>`                                       Mature       Modules used to provide more functionality around common types
