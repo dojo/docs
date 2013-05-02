@@ -50,7 +50,7 @@ Inherited from dojox/mobile/scrollable
 |                      |          |         |before a real drag operation starts.                                                   |
 +----------------------+----------+---------+---------------------------------------------------------------------------------------+
 |height                |String    |""       |Explicitly specified height of the widget (ex. "300px"). If "inherit" is specified,    |
-|                      |          |         |the height is inherited from its offset parent. If "auto" is specified, the content    |
+|                      |          |         |the height is inherited from its offset parent (which is the node parent if the position of the parent is not "static"). If "auto" is specified, the content    |
 |                      |          |         |height, which could be smaller than the entire screen height, is used. If nothing is   |
 |                      |          |         |specified, the entire screen height is used.                                           |
 +----------------------+----------+---------+---------------------------------------------------------------------------------------+
