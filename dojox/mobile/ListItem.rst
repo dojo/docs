@@ -118,9 +118,7 @@ Parameters from this widget
 |uncheckClass   |String    |""                 |An icon to display as an uncheck mark. The value can be either a path for an image file or a class name of |
 |               |          |                   |a DOM button.                                                                                              |
 +---------------+----------+-------------------+-----------------------------------------------------------------------------------------------------------+
-|variableHeight |Boolean   |false              |If true, the height of the item varies according to its content. In dojo 1.6 or older, the                 |
-|               |          |                   |"mblVariableHeight" class was used for this purpose. In dojo 1.7, adding the mblVariableHeight class still |
-|               |          |                   |works for backward compatibility.                                                                          |
+|variableHeight |Boolean   |false              |If true, the height of the item varies according to its content.                                           |
 +---------------+----------+-------------------+-----------------------------------------------------------------------------------------------------------+
 |rightIconTitle |String    |""                 |An alt text for the right icon.                                                                            |
 +---------------+----------+-------------------+-----------------------------------------------------------------------------------------------------------+

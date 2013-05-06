@@ -11,7 +11,8 @@ dojox/mobile/TabBar
 .. contents ::
     :depth: 2
 
-TabBar is a container widget that has typically multiple TabBarButtons which controls visibility of views. It can be used as a tab container. There was dojox/mobile/TabContainer in dojo-1.5, but it is obsolete. In dojo-1.6 or later, use TabBar instead of TabContainer.
+TabBar is a container widget that has typically multiple TabBarButtons which controls visibility of views. 
+It can be used as a tab container.
 
 .. image :: TabBar.png
 
