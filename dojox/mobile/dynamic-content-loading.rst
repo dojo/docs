@@ -233,7 +233,7 @@ The above three examples are examples of updating an existing view. In this exam
 Update DataList
 ---------------
 
-This example updates an existing RoundRectDataList via a dojo.data datastore, and then performs a transition.
+This example updates an existing RoundRectDataList via a dojo/data datastore, and then performs a transition.
 
 .. js ::
 

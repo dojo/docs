@@ -32,7 +32,8 @@ Example
 
   .. js ::
 
-    dojo.connect(view1, "onStartView", null, function(){
+    // 'connect' is the return value of the module dojo/_base/connect 
+    connect.connect(view1, "onStartView", null, function(){
         console.log("startView: view="+this);
     });
 
@@ -57,7 +58,8 @@ Example
 
   .. js ::
 
-    dojo.connect(view1, "onBeforeTransitionIn", null,
+    // 'connect' is the return value of the module dojo/_base/connect
+    connect.connect(view1, "onBeforeTransitionIn", null,
        function(moveTo, dir, transition, context, method){
            print("onBeforeTransitionIn");
     });
@@ -83,7 +85,8 @@ Example
 
   .. js ::
 
-    dojo.connect(view1, "onAfterTransitionIn", null,
+    // 'connect' is the return value of the module dojo/_base/connect
+    connect.connect(view1, "onAfterTransitionIn", null,
        function(moveTo, dir, transition, context, method){
           print("afterTransitionIn");
     });
@@ -109,7 +112,8 @@ Example
 
   .. js ::
 
-    dojo.connect(view1, "onBeforeTransitionOut", null,
+    // 'connect' is the return value of the module dojo/_base/connect
+    connect.connect(view1, "onBeforeTransitionOut", null,
        function(moveTo, dir, transition, context, method){
           print("onBeforeTransitionOut");
     });
@@ -135,7 +139,8 @@ Example
 
   .. js ::
 
-    dojo.connect(view1, "onAfterTransitionOut", null,
+    // 'connect' is the return value of the module dojo/_base/connect
+    connect.connect(view1, "onAfterTransitionOut", null,
        function(moveTo, dir, transition, context, method){
           print("afterTransitionOut");
     });
@@ -162,7 +167,8 @@ Example
 
   .. js ::
 
-    dojo.subscribe("/dojox/mobile/startView", function(view){
+    // 'connect' is the return value of the module dojo/_base/connect
+    connect.subscribe("/dojox/mobile/startView", function(view){
         console.log("startView: view="+view);
     });
 
@@ -188,7 +194,8 @@ Example
 
   .. js ::
 
-    dojo.subscribe("/dojox/mobile/beforeTransitionIn",
+    // 'connect' is the return value of the module dojo/_base/connect
+    connect.subscribe("/dojox/mobile/beforeTransitionIn",
         function(view, moveTo, dir, transition, context, method){
           print("onBeforeTransitionIn");
     });
@@ -215,7 +222,8 @@ Example
 
   .. js ::
 
-    dojo.subscribe("/dojox/mobile/afterTransitionIn",
+    // 'connect' is the return value of the module dojo/_base/connect
+    connect.subscribe("/dojox/mobile/afterTransitionIn",
         function(view, moveTo, dir, transition, context, method){
           print("afterTransitionIn");
     });
@@ -242,7 +250,8 @@ Example
 
   .. js ::
 
-    dojo.subscribe("/dojox/mobile/beforeTransitionOut",
+    // 'connect' is the return value of the module dojo/_base/connect
+    connect.subscribe("/dojox/mobile/beforeTransitionOut",
         function(view, moveTo, dir, transition, context, method){
            print("onBeforeTransitionOut");
     });
