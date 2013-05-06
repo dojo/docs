@@ -1,0 +1,65 @@
+.. _releasenotes/1.10:
+
+=======================
+Dojo 1.10 Release Notes
+=======================
+
+.. contents ::
+   :depth: 3
+
+User Agent Support
+==================
+
+The following user agents have been tested and are supported in this release. If a user agent version is not listed as 
+supported, it still may work, especially on browsers with rapid release cycles (Chrome, Firefox). Future minor releases
+of Dojo might include fixes to support future releases of these browsers, but it is not guaranteed.
+
+Also please note that even if IE6 and 7 code paths have not been removed, Dojo 1.10 is removing official support for
+those browsers.
+
+**Desktop**
+
+* Firefox 3.6-20
+
+* Safari 5-6
+
+* Chrome 13-26
+
+* IE 8-10
+
+* Opera 10.50-12 (Dojo core only)
+
+**Mobile (dojox/mobile)**
+
+* iOS 4.x, 5.x (Mobile Safari) and 6.x (including all Dijit widgets except Editor)
+
+* Android 2.2-2.3, 3.1-3.2, 4.0-4.2 (Platform browser)
+
+* BlackBerry 6-7 & 10 (Platform browser)
+
+* Windows Phone 8 (IE10)
+
+* Mobile compatibility on desktop browsers: IE 8-10, Firefox 4-20, Safari 5-6, Chrome 13-26
+
+
+**Server-Side User Agents**
+
+* Node 0.8.X, 0.10.X
+
+Dojo Core
+=========
+
+Dijit
+=====
+
+DojoX
+=====
+
+Util
+====
+
+Demos
+=====
+
+Migration Notes
+===============
