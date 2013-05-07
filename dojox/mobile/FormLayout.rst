@@ -1,7 +1,7 @@
 .. _dojox/mobile/FormLayout:
 
 =======================
-dojox.mobile.FormLayout
+dojox/mobile/FormLayout
 =======================
 
 :since: v1.9

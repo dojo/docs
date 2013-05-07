@@ -23,9 +23,9 @@ The spinning object is NOT an animated gif, but a collection of div elements. No
 Usage
 =====
 
-Until V1.7, ProgressIndicator was a singleton class and not a widget. From V1.8, however, it became a widget, and you can create a new instance with the new operator. It can still be used as a singleton as well. A singleton instance can be obtained by calling dojox/mobile/ProgressIndicator.getInstance().
+ProgressIndicator is a widget, and you can create a new instance with the 'new' operator. It can be used as a singleton as well. A singleton instance can be obtained by calling dojox/mobile/ProgressIndicator.getInstance().
 
-The start() method of ProgressIndicator starts the spinning, and the stop() method stops the spinning. You need to explicitly add ProgressIndicator.domNode to somewhere visible. The stop() method automatically removes ProgressIndicator.domNode from the dom tree for you.
+The start() method of ProgressIndicator starts the spinning, and the stop() method stops the spinning. You need to explicitly add ProgressIndicator.domNode to the DOM. The stop() method automatically removes ProgressIndicator.domNode from the DOM tree for you.
 
 Constructor Parameters
 ======================

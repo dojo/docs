@@ -28,7 +28,7 @@ dojo/i18n
 If you need to do internationalization on the client-side, dojo/i18n
 is the standard approach. Just like typical desktop dojo
 applications, dojox/mobile applications can also leverage
-dojo/i18n. From dojo 1.7+, you can load nls resources with the
+dojo/i18n. You can load nls resources with the
 dojo/i18n plugin as shown below. Once you get a resource bundle, you
 can use the localized strings to replace UI labels, to show messages,
 or whatever. In the example below, a localized text is used to replace
@@ -80,9 +80,9 @@ internationalization in such cases. It is a thin wrapper around
 dojo/i18n, and has ability to replace strings, such as CDATA or
 attribute values, in the dojo markup. You can use the
 dojox/mobile/i18n.load() method to load a resource bundle. The method
-signature is the same as that of the deprecated
-dojo.requireLocalization(). The return value is an array of localized
-string resources, which is returned from the dojo/i18n plugin.
+signature is the same as the signature of dojo/i18n.getLocalization().
+The return value is an array of localized string resources, which is returned 
+from the dojo/i18n plugin.
 
 .. js ::
 
