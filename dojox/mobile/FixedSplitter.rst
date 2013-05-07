@@ -22,8 +22,6 @@ FixedSplitter has no knowledge of its child widgets. :ref:`dojox/mobile/Containe
 - Use dojox/mobile/Pane if your content is an inline html fragment (may or may not include dojo widgets).
 - Use dojox/mobile/ContentPane if your content is an external html fragment (may or may not include dojo widgets).
 
-Note that, FixedSplitter.css was under the themes/common folder until V1.7, but in V1.8, it was moved to each device folder such as themes/iphone.
-
 .. image :: FixedSplitter.png
 
 Usage

@@ -14,7 +14,12 @@ dojox/mobile/SwapView
 Introduction
 ============
 
-SwapView is a container widget which represents an entire mobile device screen, and can be swiped horizontally. (In dojo-1.6, it was called 'FlippableView'.) SwapView is a subclass of :ref:`dojox/mobile/View <dojox/mobile/View>`. SwapView allows the user to swipe the screen left or right to move between the views. When SwapView is swiped, it finds an adjacent SwapView to open. When the transition is done, a topic "/dojox/mobile/viewChanged" is published.
+SwapView is a container widget which can be swiped horizontally. SwapView is a subclass of 
+:ref:`dojox/mobile/View <dojox/mobile/View>`. SwapView allows the user to swipe the screen 
+left or right to move between the views. When SwapView is swiped, it finds an adjacent 
+SwapView to open. When the transition is done, a topic "/dojox/mobile/viewChanged" is published.
+
+Note that, to behave properly, the SwapView needs to occupy the entire width of the screen.
 
 Constructor Parameters
 ======================
