@@ -14,7 +14,10 @@ dojox/mobile/View
 Introduction
 ============
 
-View is a container widget which represents an entire mobile device screen. One html page can have multiple Views, but only one View is visible at a time.  The user can navigate through views with animated transition effects.
+View is a container widget for any HTML element and/or Dojo widgets. As a Dojo widget container 
+it can itself contain View widgets forming a set of nested views. A Dojo Mobile application is 
+usually made  of multiple View widgets and the user can navigate through the views back and forth 
+with animated transition effects.
 
 Constructor Parameters
 ======================
@@ -31,9 +34,10 @@ Constructor Parameters
 
 Usage
 =====
-View is a container which represents the device screen. You should place all the contents in a View. There may be one or more Views in a page. In dojo-1.6 or older, one and only one view must have the selected=true parameter so that it is displayed at startup time. In dojo-1.7, if no views have selected=true, the first view is displayed at startup time.
 
-Views can be nested to form a group of views. In dojo-1.7 or older, view transitions should be performed between sibling views (on the same level). An exceptional case is to transition to a sibling of an ancestor. All other cases are invalid. However, such limitations have been removed in dojo-1.8. 
+When using several sibling views (direct children of the same element), you can use 
+the 'selected' attribute to define whether the view should be displayed when the application 
+is launched. If no view has selected=true, the first sibling view is displayed at startup time. 
 
 Examples
 ========

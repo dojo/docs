@@ -90,7 +90,7 @@ This usually solves the alignment of the component.
   </body>
 
 When it comes to mobile applications, the same approach is followed beside enabling the bidi support.
-Dojox Mobile widgets support mirroring, widgets that need special handling for mirroring have a separate style sheet with the name ``<widgetName>_rtl.css``.
+Dojo Mobile widgets support mirroring, widgets that need special handling for mirroring have a separate style sheet with the name ``<widgetName>_rtl.css``.
 This style sheet contains all the required styles to enable widget mirroring. 
 The code snippets below show how to load the required rtl style sheet manually or automatically.
 

@@ -19,13 +19,13 @@ What is the difference between dojox/mobile/parser and dojo.parser?
 
 Some of the advanced features of dojo.parser, such as <script type="dojo/method"> and <script type="dojo/connect">, are missing. Basic features are compatible with dojo.parser.
 
-How is the code size of dojox/mobile/parser compared to dojo.parser?
+How is the code size of dojox/mobile/parser compared to dojo/parser?
 --------------------------------------------------------------------
 
-In Dojo 1.7 the size of dojox/mobile/parser is 1KB (built and gzipped), while dojo.parser (plus its dependent modules that are not required by the dojox.mobile base) is 10KB.
+In Dojo 1.9 the size of dojox/mobile/parser is 2KB (built and gzipped), while dojo/parser (plus its dependent modules that are not required by the dojox/mobile base) is 5KB.
 
-Do I have to use dojox/mobile/parser for dojox.mobile applications?
--------------------------------------------------------------------
+Do I have to use dojox/mobile/parser for Dojo Mobile applications?
+------------------------------------------------------------------
 
 No, you don't have to. dojox/mobile/parser is a subset of dojo.parser. Usage and how it works are basically the same. It has no mobile specific features. dojox/mobile/parser's ONLY advantage over dojo.parser is its smaller code size. If your application unfortunately does not work with dojox/mobile/parser, you can replace it with dojo.parser.
 Also if you are embeding your mobile application in an hybrid container such as Cordova, the size might not matter
@@ -34,7 +34,12 @@ that much and you might prefer to pick the full parser.
 Can I use dojox/mobile/parser for desktop dojo applications?
 ------------------------------------------------------------
 
-Yes. Use of dojox/mobile/parser is not limited to mobile. It has enough capability to bootstrap simple dojo applications. This may sound strange, but dojox/mobile/parser has no dependency on dojox/mobile/ (And dojox.mobile has no dependency on dojox/mobile/parser either.) So you can pick up only dojox/mobile/parser and use it for your desktop applications. Actually, this parser was originally developed for very lightweight desktop dojo applications a few years before dojox.mobile was born.
+Yes. Use of dojox/mobile/parser is not limited to mobile. It has enough capability to 
+bootstrap simple dojo applications. This may sound strange, but dojox/mobile/parser has 
+no dependency on dojox/mobile/ (And dojox/mobile has no dependency on dojox/mobile/parser either.) 
+So you can pick up only dojox/mobile/parser and use it for your desktop applications. 
+Actually, this parser was originally developed for very lightweight desktop Dojo applications 
+a few years before Dojo Mobile was born.
 
 In 1.7 or older, however, dojox/mobile/parser cannot be used for applications that 
 contain ContentPane subclasses with nested widgets, since those nested widgets will 
@@ -48,7 +53,7 @@ try to be instantiated twice. For example:
     </div>
 
 You will get "Tried to register widget with id==btn1 but that id is already registered" error. 
-In 1.8, this problem does not exist.
+In 1.8+, this problem does not exist.
 
 Also note that loading some desktop widgets may implicitly load dojo/parser.
 
