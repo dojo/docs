@@ -17,7 +17,7 @@ Introduction
 The Dojo Mobile package provides a number of widgets that can be used to build web-based applications for mobile devices such as iPhone, Android, BlackBerry, or Windows Phone 8. These widgets work best with webkit-based browsers, such as Safari or Chrome, or with IE10, since CSS3 features are extensively used. However, the widgets should work in a "graceful degradation" manner even on non-CSS3 browsers, such as IE (before IE10) or (older) Firefox. In that case, fancy effects, such as animation, gradient color, or round corner rectangle, may not work, but you can still operate your application.
 Furthermore, as a separate file, a compatibility module, dojox/mobile/compat, is available, which simulates some of the CSS3 features used in this module. If you use the compatibility module, fancy visual effects work better even on non-CSS3 browsers.
 
-Dojo Mobile is designed to be as lightweight as possible to achieve a better user experience on mobile. It only has a few dependencies on other dojo/dijit modules. It has less dependency even on the dojo and dijit base modules, so many of the base modules can be eliminated at build time. Also, it has its own very small parser that is a subset of the core dojo.parser, but has enough capability to bootstrap your application.
+Dojo Mobile is designed to be as lightweight as possible to achieve a better user experience on mobile. It only has a few dependencies on other dojo/dijit modules. It has less dependency even on the dojo and dijit base modules, so many of the base modules can be eliminated at build time. Also, it has its own very small parser that is a subset of the core dojo/parser, but has enough capability to bootstrap your application.
 
 .. image :: settings-i-a.png
 
@@ -29,7 +29,7 @@ Views
 
 * :ref:`View <dojox/mobile/View>`
 
-  A container that represents a mobile device screen
+  A container widget for any HTML element and/or Dojo widgets
 
 * :ref:`ScrollableView <dojox/mobile/ScrollableView>`
 
@@ -37,7 +37,7 @@ Views
 
 * :ref:`SwapView <dojox/mobile/SwapView>`
 
-  A view that can be swiped horizontally (formerly known as FlippableView)
+  A view that can be swiped horizontally
 
 * :ref:`TreeView <dojox/mobile/TreeView>`
 
@@ -79,19 +79,19 @@ Lists
 
 * :ref:`RoundRectDataList <dojox/mobile/RoundRectDataList>`
 
-  RoundRectList with dojo.data support
+  RoundRectList with dojo/data support
 
 * :ref:`EdgeToEdgeDataList <dojox/mobile/EdgeToEdgeDataList>`
 
-  EdgeToEdgeList with dojo.data support
+  EdgeToEdgeList with dojo/data support
 
 * :ref:`RoundRectStoreList <dojox/mobile/RoundRectStoreList>`
 
-  RoundRectList with dojo.store support
+  RoundRectList with dojo/store support
 
 * :ref:`EdgeToEdgeStoreList <dojox/mobile/EdgeToEdgeStoreList>`
 
-  EdgeToEdgeList with dojo.store support
+  EdgeToEdgeList with dojo/store support
 
 * :ref:`ListItem <dojox/mobile/ListItem>`
 
@@ -121,7 +121,7 @@ TabBar
 
 * :ref:`TabBar <dojox/mobile/TabBar>`
 
-  A bar that can have TabBarButtons to control visibility of views
+  A bar that can contain TabBarButtons to control the visibility of views
 
 * :ref:`TabBarButton <dojox/mobile/TabBarButton>`
 
@@ -132,7 +132,7 @@ Panes
 
 * :ref:`RoundRect <dojox/mobile/RoundRect>`
 
-  A rounded-corner rectangle boxes
+  A rounded rectangle container for any HTML and/or widgets.
 
 * :ref:`ContentPane <dojox/mobile/ContentPane>`
 
@@ -155,11 +155,11 @@ Openers
 
 * :ref:`Opener <dojox/mobile/Opener>`
 
-  A component that encapsulates the mechanism for displaying secondary views such as dialogs.  Openers take screen sizes into account and can display the next view as a slide-in dialog (phone) or inside a tooltip dialog (tablet)
+  A component that encapsulates the mechanism for displaying secondary views such as dialogs. Openers take the screen size into account and can display the next view as a slide-in dialog (phone) or inside a tooltip dialog (tablet)
 
 * :ref:`Overlay <dojox/mobile/Overlay>`
 
-  A component that displays a secondary view which partially occludes the original using a slide in transition effect. Useful for displaying dialogs.
+  A component that displays a secondary view which partially occludes the original view using a slide-in transition effect. Useful for displaying dialogs.
 
 * :ref:`Tooltip <dojox/mobile/Tooltip>`
 
@@ -170,7 +170,7 @@ Form Controls
 
 * :ref:`Button <dojox/mobile/Button>`
 
-  A button that changes the color when pressed
+  A button that changes its color when pressed
 
 * :ref:`CheckBox <dojox/mobile/CheckBox>`
 
@@ -217,7 +217,7 @@ Layout
 
 * :ref:`FixedSplitter <dojox/mobile/FixedSplitter>`
 
-  A layout component that displays two content areas, with the position between the areas fixed at a given position.
+  A layout component that displays two content areas, with the separation between the areas fixed at a given position.
 
 * :ref:`FixedSplitterPane <dojox/mobile/FixedSplitterPane>`
 
@@ -241,7 +241,7 @@ Layout
 
 * :ref:`ScreenSizeAware <dojox/mobile/ScreenSizeAware>`
 
-  A module to make a screen size aware application. (Experimental)
+  A module to make a screen-size-aware application. (Experimental)
 
 * :ref:`SimpleDialog <dojox/mobile/SimpleDialog>`
 
@@ -271,7 +271,7 @@ Carousel
 
 * :ref:`Carousel <dojox/mobile/Carousel>`
 
-  A widget that manages a list of images or content, and displays a paging indicator.  Allows a user to flick left/right to move between content items.
+  A widget that manages a list of images or content, and displays a paging indicator. Allows the user to flick left/right to move between content items.
 
 * :ref:`CarouselItem <dojox/mobile/CarouselItem>`
 
@@ -279,11 +279,11 @@ Carousel
 
 * :ref:`DataCarousel <dojox/mobile/DataCarousel>`
 
-  An enhanced version of Carousel that supports dojo.data.
+  An enhanced version of Carousel that supports dojo/data.
 
 * :ref:`StoreCarousel <dojox/mobile/StoreCarousel>`
 
-  An enhanced version of Carousel that supports dojo.store.
+  An enhanced version of Carousel that supports dojo/store.
 
 Spin Wheel
 ----------
@@ -362,7 +362,7 @@ Utils
 
 * :ref:`pageTurningUtils <dojox/mobile/pageTurningUtils>`
 
-  Utilities to provide page turning effects just like turning a real book.
+  Utilities to provide page turning effects just like turning the pages of a real book.
 
 
 Getting Started
@@ -370,10 +370,10 @@ Getting Started
 
 Loading the basic Dojo Mobile codebase is extremely simple.  It's a couple requires and then selecting the CSS.  That's it.
 
-Loading Dojo Mobile (using Dojo 1.7+ preferred api's)
------------------------------------------------------
+Loading Dojo Mobile
+-------------------
 
-This example assumes Dojo script is being loaded asynchronously with "async:1" config property.  Using this approach
+This example assumes the Dojo script is being loaded asynchronously with "async:1" config property.  Using this approach
 helps to ensure that the bare minimum code is used, and loaded as fast as possible.
 
 .. js ::
@@ -388,26 +388,14 @@ helps to ensure that the bare minimum code is used, and loaded as fast as possib
 
 If you prefer to use "progressive enhancement" design techniques and not use Dojo's simple declarative programming model, you can choose not to specify the dojox/mobile/parser module, and instead script and construct widgets programmatically.
 
-If you don't need compatibility support for modern desktop browsers (FF, IE8+), you can choose not to specify the dojox/mobile/compat module.  In this case, mobile support will only work properly on Webkit-based mobile browsers (Dojo Mobile's default environment support).
-
-Loading Dojo Mobile (using Dojo pre-1.7 style api's)
-----------------------------------------------------
-
-This example uses synchronous loading, and loads all of Dojo core.  This results in more code being loaded than the bare minimum, and uses a synchronous loader which will be slower to load modules than the above async example (preferred).
-
-.. js ::
-
-    dojo.require("dojox.mobile"); // Load the basic mobile widget kernel and support code.
-    dojo.require("dojox.mobile.parser"); // (Optional) Load the lightweight parser.  dojo.parser can also be used, but it requires much more code to be loaded.
-    dojo.requireIf(!dojo.isWebKit, "dojox.mobile.compat"); // (Optional) Load the compat layer if the incoming browser isn't webkit based
-    // Do something with Dojo Mobile...
+If you don't need compatibility support for modern desktop browsers (FF, IE8+), you can choose not to specify the dojox/mobile/compat module. In this case, mobile support will only work properly on Webkit-based mobile browsers (Dojo Mobile's default environment support).
 
 Themes
 ------
 
-Dojox Mobile provides a set of visual themes that can be applied dynamicaly to your application in order to give it a native look depending on the browser user agent, or that can be applied whatever the browser displaying the application in order to give it the same look whatever the device / browser in use.
+Dojox Mobile provides a set of visual themes that can be applied dynamicaly to your application in order to give it a native look depending on the browser user agent, or that can be applied whatever the browser displaying the application in order to give it the same look whatever the device or browser in use.
 
-To apply a native theme (ie a theme that makes your application look like a native application on the mobile device on which it is displayed), you just need to include the following statement in your html pages:
+To apply a native theme (that is, a theme that makes your application look like a native application on the mobile device on which it is displayed), you just need to include the following statement in your HTML pages:
 
 .. html ::
 
@@ -415,7 +403,7 @@ To apply a native theme (ie a theme that makes your application look like a nati
 
 see :ref:`dojox/mobile/deviceTheme <dojox/mobile/deviceTheme>` for more information. When this approach is taken, you can also pass an additional query parameter string, theme={theme id} to force a specific theme from a browser url input (this feature is useful for creating samples and demos as well as testing what a page looks like on various devices). The theme id value is used instead of the navigator.userAgent property to determine the theme, possible values are: Android, Holodark, BlackBerry, iPhone, iPad, WindowsPhone or Custom (see the list of available themes below).
 
-To apply the same theme whatever the client browser, you just need to include the main css file for the theme. For example, to use the custom theme (more on available themes below), you just need to include the following statement in the header section of your html pages:
+To apply the same theme whatever the client browser, you just need to include the main css file for the theme. For example, to use the custom theme (more on available themes below), you just need to include the following statement in the header section of your HTML pages:
 
 .. html ::
 
@@ -431,13 +419,13 @@ The themes that are currently available for a dojo mobile application are the fo
 
 .. image :: iPhone-theme.PNG
 
-this theme is modeled on the native iphone look. When using dojox/mobile/deviceTheme.js, this theme is triggered for an iPhone user agent and for any other user agent that does not specificaly trigger another theme (the iPhone theme is the default theme). To apply it whatever the user agent, use the following CSS link statement instead:
+This theme is modeled on the native iphone look. When using dojox/mobile/deviceTheme.js, this theme is triggered for an iPhone user agent and for any other user agent that does not specifically trigger another theme (the iPhone theme is the default theme). To apply it whatever the user agent, use the following CSS link statement instead:
 
 .. html ::
 
   <link rel="stylesheet" type="text/css" href="dojox/mobile/themes/iphone/iphone.css"></link>
 
-Note that the iPhone theme has different renderings on iOS5 and iOS6, as natives applications have. On iOS6, by default, there is no vertical stripes on the background of the pages. To display vertical stripes as in native iOS6 system properties pages, simply add the class mblIOS6Stripes to the body of your page:
+Note that the iPhone theme has a different rendering on iOS5 than on iOS6, just as natives applications. On iOS6, by default, there are no vertical stripes on the background of the pages. To display vertical stripes as in native iOS6 system properties pages, simply add the class mblIOS6Stripes to the body of your page:
 
 .. html ::
 
@@ -448,13 +436,13 @@ Note that the iPhone theme has different renderings on iOS5 and iOS6, as natives
 
 .. image :: iPad-theme.PNG
 
-this theme is modeled on the native ipad look. When using dojox/mobile/deviceTheme.js, this theme is triggered for an iPad user agent. To apply it whatever the user agent, use the following CSS link statement instead:
+This theme is modeled on the native iPad look. When using dojox/mobile/deviceTheme.js, this theme is triggered for an iPad user agent. To apply it whatever the user agent, use the following CSS link statement instead:
 
 .. html ::
 
   <link rel="stylesheet" type="text/css" href="dojox/mobile/themes/iphone/ipad.css"></link>
 
-Note that the iPad theme has different renderings on iOS5 and iOS6, as natives applications have. On iOS6, by default, there is no vertical stripes on the background of the pages. To display vertical stripes as in native iOS6 system properties pages, simply add the class mblIOS6Stripes to the body of your page:
+Note that the iPad theme has a different rendering on iOS5 than on iOS6, just as natives applications. On iOS6, by default, there are no vertical stripes on the background of the pages. To display vertical stripes as in native iOS6 system properties pages, simply add the class mblIOS6Stripes to the body of your page:
 
 .. html ::
 
@@ -465,7 +453,7 @@ Note that the iPad theme has different renderings on iOS5 and iOS6, as natives a
 
 .. image :: Android-theme.png
 
-this theme is modeled on the native Android 1.x and 2.x look. When using dojox/mobile/deviceTheme.js, this theme is triggered for Android 1.x and 2.x user agents. To apply it whatever the user agent, use the following CSS link statement instead:
+This theme is modeled on the native Android 1.x and 2.x look. When using dojox/mobile/deviceTheme.js, this theme is triggered for Android 1.x and 2.x user agents. To apply it whatever the user agent, use the following CSS link statement instead:
 
 .. html ::
 
@@ -475,7 +463,7 @@ this theme is modeled on the native Android 1.x and 2.x look. When using dojox/m
 
 .. image :: Holodark-theme.png
 
-this theme is modeled on the native Android 3.x and 4.x look. When using dojox/mobile/deviceTheme.js, this theme is triggered for Android 3.x and 4.x user agents. To apply it whatever the user agent, use the following CSS link statement instead:
+This theme is modeled on the native Android 3.x and 4.x look. When using dojox/mobile/deviceTheme.js, this theme is triggered for Android 3.x and 4.x user agents. To apply it whatever the user agent, use the following CSS link statement instead:
 
 .. html ::
 
@@ -485,7 +473,7 @@ this theme is modeled on the native Android 3.x and 4.x look. When using dojox/m
 
 .. image :: Blackberry-theme.png
 
-this theme is modeled on the native Balckberry look.  When using dojox/mobile/deviceTheme.js, this theme is triggered for Blackberry user agents. To apply it whatever the user agent, use the following CSS link statement instead:
+This theme is modeled on the native BlackBerry look. When using dojox/mobile/deviceTheme.js, this theme is triggered for Blackberry user agents. To apply it whatever the user agent, use the following CSS link statement instead:
 
 .. html ::
 
@@ -495,7 +483,7 @@ this theme is modeled on the native Balckberry look.  When using dojox/mobile/de
 
 .. image :: WindowsPhone-theme.png
 
-this theme is modeled on the native Windows 8 look for touch devices.   When using dojox/mobile/deviceTheme.js, this theme is triggered for Windows Phones and Internet Explorer 10 user agents. To apply it whatever the user agent, use the following CSS link statement instead:
+This theme is modeled on the native Windows 8 look for touch devices. When using dojox/mobile/deviceTheme.js, this theme is triggered for Windows Phones and Internet Explorer 10 user agents. To apply it whatever the user agent, use the following CSS link statement instead:
 
 .. html ::
 
@@ -505,7 +493,7 @@ this theme is modeled on the native Windows 8 look for touch devices.   When usi
 
 .. image :: Custom-theme.png
 
-this theme is a generic grey theme that is not modeled on any existing native look. As such, it is not triggered when using dojox/mobile/deviceTheme.js, but it can be applied using hte following CSS link statement:
+This theme is a generic grey theme that is not modeled on any existing native look. As such, it is not triggered when using dojox/mobile/deviceTheme.js, but it can be applied using the following CSS link statement:
 
 .. html ::
 
@@ -521,7 +509,7 @@ Creating a new theme from the Custom theme
 
 The 'custom' theme (i.e. mobile/themes/custom folder) is a generic grey theme. It is a good starting point for creating a new theme. All colors of this theme are derived from 2 colors defined at the beginning of themes/custom/variables.less.
 
-To create a new theme, you can change these colors (i.e. @lightColor and @darkColor) as well as other part of variables.less and then run the compile script.
+To create a new theme, you can change these colors (i.e. @lightColor and @darkColor) as well as other parts of variables.less and then run the compile script.
 
 Example:
 
@@ -592,11 +580,11 @@ Example (using HTML5 validating declarative markup and mobile parser)
 
 * Line 6 loads a style sheet for iPhone theme. You may want to load a different theme instead.
 
-* Line 7 loads Dojo kernel API's with asynchronous AMD loader.
+* Line 7 loads the Dojo kernel APIs using the asynchronous AMD loader.
 
-* Line 10 loads lightweight mobile parser, since this example uses declarative markup.  The parser will automatically instantiate the mobile widgets associated with dom elements. You can of course use the default parser (dojo/parser) instead if your don't have size requirements (like in an hybrid application), but the mobile parser is much smaller and has enough capability to bootstrap simple dojo application pages like this example. The desktop browser compatibility module for non-CSS3 browsers is not used in this example, so it will likely only render properly on webkit-based browsers.
+* Line 10 loads the lightweight mobile parser, since this example uses declarative markup. The parser will automatically instantiate the mobile widgets associated with dom elements. You can of course use the default parser (dojo/parser) instead if your don't have size requirements (like in an hybrid application), but the mobile parser is much smaller and has enough capability to bootstrap simple dojo application pages like this example. The desktop browser compatibility module for non-CSS3 browsers is not used in this example, so it will likely only render properly on webkit-based browsers.
 
-* Line 16 through Line 22 is the first view. It contains a heading and a round rectangle list. This view will be shown at start up, since it is the first view and the selected:'true' property is not specified for the second view.
+* Line 16 through Line 22 is the first view. It contains a heading and a round rectangle list. This view will be shown at startup, since it is the first view and the selected:'true' property is not specified for the second view.
 
 * Line 24 through Line 30 is the second view, which will be shown when you tap on a list item in the first view.
 

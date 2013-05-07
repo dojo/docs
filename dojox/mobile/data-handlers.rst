@@ -9,17 +9,14 @@ Data Handlers
 .. contents ::
     :depth: 2
 
-Dojo Mobile 1.7 or later has the ability to load external view content and create a new target 
-view dynamically. The _ItemBase class, a base class of ListItem, IconItem, etc., has the "url" 
+Dojo Mobile has the ability to load external view content and create a new target 
+view dynamically. The _ItemBase class, a base class of ListItem, IconItem, etc., has the 'url' 
 property, which allows you to specify a URL of external data that will be a new view content 
 after performing a view transition. Two data formats, HTML and JSON, are supported, and their 
 content handlers are implemented in :ref:`dojox/mobile/ViewController <dojox/mobile/ViewController>`. 
-(See also `Dynamic Content Loading <dynamic-content-loading>`_ for details)
+(See also `Dynamic Content Loading <dynamic-content-loading>`_ for details.)
 
-In 1.7, unfortunately those handlers are not customizable. The user has no choice but 
-to use the existing content handlers which handle an html fragment or a particular JSON format.
-
-In 1.8, however, the ViewContoller was refactored to modularize the handlers to allow 
+The module dojox/mobile/ViewController modularizes the handlers to allow 
 the user to customize them. The data handlers are structured as follows:
 
 .. image :: data-handlers-class.png
@@ -179,17 +176,6 @@ method to register your entries.
       SuffixFileTypeMap.add("acme", "data"); // regard *.acme as "data" type
   });
 
-If you use the old dojo.require() API, you can register entries as follows.
-
-.. js ::
-
-  dojo.require("dojox/mobile/parser");
-  dojo.require("dojox/mobile");
-  dojo.require("dojox/mobile/compat");
-  dojo.require("dojox/mobile/dh/SuffixFileTypeMap");
-
-  dojox.mobile.dh.SuffixFileTypeMap.add("acme", "data");
-
 If a given suffix does not match any of the entries in the map, ViewController 
 uses "html" as the default content type.
 
@@ -212,24 +198,13 @@ and use the add() method to register your entries.
       ContentTypeMap.add("html", "dojox/mobile/dh/MyHtmlContentHandler");
   });
 
-If you use the old dojo.require() API, you can register entries as follows.
-
-.. js ::
-
-  dojo.require("dojox/mobile/parser");
-  dojo.require("dojox/mobile");
-  dojo.require("dojox/mobile/compat");
-  dojo.require("dojox/mobile/dh/ContentTypeMap");
-
-  dojox.mobile.dh.ContentTypeMap.add("html", "dojox/mobile/dh/MyHtmlContentHandler");
-
 Lazy-loading of widget code
 ---------------------------
 
-In Dojo Mobile 1.7, all the widget code used in external content had to be loaded 
+The widget code used in external content does not need to be loaded 
 and made available before creating the external view. Both HtmlContentHandler and 
-JsonContentHandler now support dynamic loading of the necessary widget code. You 
-no longer have to explicitly require widget code that will be used in external views.
+JsonContentHandler support the dynamic loading of the necessary widget code. You 
+do not have to explicitly require widget code that will be used in external views.
 
 Script execution
 ----------------

@@ -135,7 +135,8 @@ To listen to the changes of switch states, you can connect to the onStateChanged
 
 .. js ::
 
-  dojo.connect(dijit.byId("sw"), "onStateChanged", function(newState){
+  // 'connect' is the return value of the dojo/_base/connect module
+  connect.connect(dijit.byId("sw"), "onStateChanged", function(newState){
       alert("newState = "+newState); // newState is "on" or "off"
   });
 
@@ -146,5 +147,6 @@ To change the state of the switch programmatically, you can use a setter method 
 
 .. js ::
 
-  var widget = dijit.byId("sw");
+..// 'registry' is the return value of the dijit/registry module
+  var widget = registry.byId("sw");
   widget.set("value", "on"); // "on" or "off" can be set
