@@ -634,7 +634,7 @@ Finally another option is the enableCache parameter. If your axis are meant to b
           {plot: "other", stroke: {color:"blue"}, fill: "lightblue", enableCache: true, htmlLabels: false}
   );
   
-As doing this caching will slow down a little bit the first rendering you must enable it only if you the axis will change over time and that you will thus benefit from it. Note that if you keep HTML labels to true (the default) only the ticks will be cached not the labels. Indeed only GFX labels benefit from the caching mechanism. You have to explicitly set htmlLabels to false to be sure labels will be cached in addition to ticks.
+As doing this caching will slow down a little bit the first rendering you must enable it only if you know that the axis will change over time and that you will thus benefit from it. Note that if you keep HTML labels to true (the default) only the ticks will be cached not the labels. Indeed only GFX labels benefit from the caching mechanism. You have to explicitly set htmlLabels to false to be sure labels will be cached in addition to ticks.
 
 Multiple Axes
 -------------
