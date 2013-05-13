@@ -123,8 +123,6 @@ Immediate Child Elements
 .. js ::
 
   dojo.query('#main > *')
-  dojo.query('#main >')
-  dojo.query('.foo >')
   dojo.query('.foo > *')
 
 
@@ -179,7 +177,6 @@ Descendant selectors
 
 .. js ::
 
-  dojo.query('>', 'container')
   dojo.query('> *', 'container')
   dojo.query('> [qux]', 'container')
 
