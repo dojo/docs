@@ -314,8 +314,6 @@ Query                                     Description
 ``#main > h3``                            All ``<h3>`` nodes that are immediate children of a node with ``id="main"``
                                           [1]_
 ``#main > *``                             All immediate children of a node with ``id="main"`` [1]_
-``#main >``                               All immediate children of a node with ``id="main"`` [1]_
-``.foo >``                                All immediate children of a nodes with a ``class="foo"``
 ``.foo > *``                              All immediate children of a nodes with a ``class="foo"``
 ``.foo, .bar``                            All nodes with a ``class="foo"`` or a ``class="bar"``
 ``[foo]``                                 All nodes with an attribute of ``foo``
