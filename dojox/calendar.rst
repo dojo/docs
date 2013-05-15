@@ -1003,22 +1003,40 @@ Sub columns
 The column can display several sub columns in a column displaying a day.
 This is useful to show several calendar for example.
 
-To display sub column, the sub column values must be set on the **subColumns** property of the view which is an array of strings.
+.. image :: calendar/subColumns.png
+
+Definition
+''''''''''
+
+To display sub columns, the sub column values must be set on the **subColumns** property of the view which is an array of strings.
 
 Each data item **must** have a sub column specified otherwise it will not be displayed.
-The **subColumnAttr** property defines on which property the sub column value will be looked on the data item (default value is "calendar")
+The **subColumnAttr** property defines on which property the sub column value will be looked on the data item (default value is "calendar").
+
 If the sub column value of a data item is matching a sub column value defined in the **subColumns** property, the data item will appear on the sub column.
+
+Sub columns header
+''''''''''''''''''
+
+If sub columns are defined, a sub column header is displayed.
+
+By default the sub column values are displayed in the header.
+
+To defined a label, set the **subColumnLabelFunc** property.
+
+This property value is function that takes a string as parameter (the sub column value from the subColumns property) and returns a string (the label displayed on the sub column header)
 
 Item creation
 '''''''''''''
 
 The createItemFunc property fourth parameter is the sub column value when the mouse cursor was when the item creation was triggered.
+
 The newly created data item must have this value in its sub column property to be displayed in the correct sub column.
 
 Item editing
 ''''''''''''
 
-Move gesture allows to change the sub column of a data item unless the **allowSubColumnMove** property is set to false on the column view. 
+The move gestures allow to change the sub column of a data item unless the **allowSubColumnMove** property is set to false on the column view. 
 
 Layout
 ``````
