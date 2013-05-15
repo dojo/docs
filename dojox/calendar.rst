@@ -1001,7 +1001,8 @@ Sub columns
 ```````````
 
 The column can display several sub columns in a column displaying a day.
-This is useful to show several calendar for example.
+
+This is useful to show several calendars for example.
 
 .. image :: calendar/subColumns.png
 
