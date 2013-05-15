@@ -1044,8 +1044,8 @@ This property value is function that takes a string as parameter (the sub column
 .. js ::
 
   colView.set("subColumnLabelFunc", function(v){
-    if(v == "cal1){ return "Calendar 1"; }
-    if(v == "cal2){ return "Calendar 2"; }
+    if(v == "cal1"){ return "Calendar 1"; }
+    if(v == "cal2"){ return "Calendar 2"; }
     return null;
   });
 
