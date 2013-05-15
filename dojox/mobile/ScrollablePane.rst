@@ -29,6 +29,10 @@ Constructor Parameters
 +---------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |radius         |Number    |0        |Radius of the rounded corner mask.                                                                         |
 +---------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
+|height         |String    |""       |Explicitly specified height of the widget (ex. "300px"). If "inherit" is specified, the height is inherited|
+|               |          |         |from its offset parent. If "auto" is specified, the content height, which could be smaller than the entire |
+|               |          |         |screen height, is used. If nothing is specified, the entire screen height is used.                         |
++---------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
 Examples
 ========
@@ -102,30 +106,3 @@ Rounded corner mask example
   </div>
 
 .. image :: ScrollablePane-example2.png
-
-Inheriting height from a parent div
------------------------------------
-
-When setting the height of a ScrollablePane to the value "inherit", remember that the height is inherited from the offset parent. If you're using a wrapper DIV element as parent of a ScrollablePane in order to specify the height to inherit, remember that the position of the wrapper DIV element should be set to either relative, absolute of fixed for the wrapper to be the offset parent of the ScrollablePane.
-
-Here is an example with two scrollable panes, in a same View, that uses wrapper DIV elements for sizing:
-
-.. html::
-
-	<div data-dojo-type="dojox/mobile/View" data-dojo-props='selected:true'>
-		<h1 data-dojo-type="dojox/mobile/Heading">Test ScrollablePane</h1>
-		<div style="width:600px; height:250px; margin: 25px auto; position: relative;">
-			<div data-dojo-type="dojox/mobile/ScrollablePane" data-dojo-props="height:'inherit'">
-				<!-- Add content here -->
-			</div>
-		</div>
-		
-		<div style="width:600px; height:250px; margin: 25px auto; position: relative;">
-			<div data-dojo-type="dojox/mobile/ScrollablePane" data-dojo-props="height:'inherit'">
-				<!-- Add content here -->
-			</div>
-		</div>
-	
-	</div>
-
-
