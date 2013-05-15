@@ -1044,9 +1044,8 @@ This property value is function that takes a string as parameter (the sub column
 .. js ::
 
   colView.set("subColumnLabelFunc", function(v){
-    var label = null;
-    if(label == "cal1){ return "Calendar 1"; }
-    if(label == "cal2){ return "Calendar 2"; }
+    if(v == "cal1){ return "Calendar 1"; }
+    if(v == "cal2){ return "Calendar 2"; }
     return null;
   });
 
@@ -1054,7 +1053,7 @@ This property value is function that takes a string as parameter (the sub column
 Item creation
 '''''''''''''
 
-The createItemFunc property fourth parameter is the sub column value when the mouse cursor was when the item creation was triggered.
+The **createItemFunc** property fourth parameter is the sub column value when the mouse cursor was when the item creation was triggered.
 
 The newly created data item must have this value in its sub column property to be displayed in the correct sub column.
 
@@ -1087,7 +1086,7 @@ Example:
       startTime: start,
       endTime: end,
       allDay: view.viewKind == "matrix",
-      **calendar: subColumn**
+      calendar: subColumn
     };
 	
     id++;	
