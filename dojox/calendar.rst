@@ -347,6 +347,9 @@ To specify constructor parameters of the column view, set the columnViewProps pr
 
 The time of day displayed is defined by the minHours (8 by default) and maxHours (18 by default) properties. For example to show the entire day set minHours to 0 and maxHours to 24.
 
+MinHours value must be in [0, 23] range and maxHours in the [1, 36] range.
+To display a night working time, set minHours to 20 (8pm) and maxHours to 32 (8am, next day).
+
 Note: The ColumnView can be replaced by the SimpleColumnView widget which is a columns view without the secondary sheet. See advanced configuration to see how to use this alternate view.
 
 Matrix View
