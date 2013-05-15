@@ -557,12 +557,13 @@ This custom function is taking three arguments:
    * The current view,
    * The date of the clicked location,
    * The mouse event.
+   * The sub column (Column view only, can be null)
 
 The following example is showing an implementation of the createItemFunc that is creating a data item if and only if the control key only is pressed during the interaction. The created event initial position and duration is depending on the current view.
 
 .. js ::
 
-  var createItem = function(view, d, e){
+  var createItem = function(view, d, e, subColumn){
 
     // create item by maintaining control key
     if(!e.ctrlKey || e.shiftKey || e.altKey){
@@ -995,6 +996,29 @@ Using these properties, you can show a line every 15 minutes, a label every 30 m
     rowHeaderLabelSlotDuration: 30,
     rowHeaderLabelOffset: -7
   }, colViewNode);
+
+Sub columns
+```````````
+
+The column can display several sub columns in a column displaying a day.
+This is useful to show several calendar for example.
+
+To display sub column, the sub column values must be set on the **subColumns** property of the view which is an array of strings.
+
+Each data item **must** have a sub column specified otherwise it will not be displayed.
+The **subColumnAttr** property defines on which property the sub column value will be looked on the data item (default value is "calendar")
+If the sub column value of a data item is matching a sub column value defined in the **subColumns** property, the data item will appear on the sub column.
+
+Item creation
+'''''''''''''
+
+The createItemFunc property fourth parameter is the sub column value when the mouse cursor was when the item creation was triggered.
+The newly created data item must have this value in its sub column property to be displayed in the correct sub column.
+
+Item editing
+''''''''''''
+
+Move gesture allows to change the sub column of a data item unless the **allowSubColumnMove** property is set to false on the column view. 
 
 Layout
 ``````
