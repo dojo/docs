@@ -271,7 +271,7 @@ directly on the store:
 
 .. js ::
  
-  var store = new JsonRestStore({
+  var store = new JsonRest({
     target: "/FooObject/",
     headers: { "X-Custom-Header": "Foo" } // All calls to server will include X-Custom-Header: Foo
   });
