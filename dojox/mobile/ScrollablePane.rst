@@ -30,8 +30,9 @@ Constructor Parameters
 |radius         |Number    |0        |Radius of the rounded corner mask.                                                                         |
 +---------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |height         |String    |""       |Explicitly specified height of the widget (ex. "300px"). If "inherit" is specified, the height is inherited|
-|               |          |         |from its offset parent. If "auto" is specified, the content height, which could be smaller than the entire |
-|               |          |         |screen height, is used. If nothing is specified, the entire screen height is used.                         |
+|               |          |         |from its offset parent (see `Inheriting height from a parent div`_). If "auto" is specified, the content   |
+|               |          |         |height, which could be smaller than the entire screen height, is used. If nothing is specified, the entire |
+|               |          |         |screen height is used.                                                                                     |
 +---------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
 Examples
@@ -131,5 +132,4 @@ Here is an example with two scrollable panes, in a same View, that uses wrapper 
 		</div>
 	
 	</div>
-
 
