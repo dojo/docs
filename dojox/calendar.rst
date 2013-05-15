@@ -1015,6 +1015,21 @@ The **subColumnAttr** property defines on which property the sub column value wi
 
 If the sub column value of a data item is matching a sub column value defined in the **subColumns** property, the data item will appear on the sub column.
 
+.. js ::
+
+  colView.set("store", new Memory({data:[
+    {
+      summary: "My Event",
+      startTime: new Date(2013, 0, 1, 10, 0),
+      endTime: new Date(2013, 0, 1, 14, 0),
+      calendar: "cal1"
+    }
+  ]});
+
+  colView.set("subColumns", ["cal1", "cal2"]);
+
+
+
 Sub columns header
 ''''''''''''''''''
 
@@ -1024,7 +1039,17 @@ By default the sub column values are displayed in the header.
 
 To defined a label, set the **subColumnLabelFunc** property.
 
-This property value is function that takes a string as parameter (the sub column value from the subColumns property) and returns a string (the label displayed on the sub column header)
+This property value is function that takes a string as parameter (the sub column value from the subColumns property) and returns a string (the label displayed on the sub column header).
+
+.. js ::
+
+  colView.set("subColumnLabelFunc", function(v){
+    var label = null;
+    if(label == "cal1){ return "Calendar 1"; }
+    if(label == "cal2){ return "Calendar 2"; }
+    return null;
+  });
+
 
 Item creation
 '''''''''''''
@@ -1032,6 +1057,47 @@ Item creation
 The createItemFunc property fourth parameter is the sub column value when the mouse cursor was when the item creation was triggered.
 
 The newly created data item must have this value in its sub column property to be displayed in the correct sub column.
+
+Example:
+
+.. js ::
+
+  var createItem = function(view, d, e, subColumn){
+
+    // create item by maintaining control key
+    if(!e.ctrlKey || e.shiftKey || e.altKey){
+      return;
+    }
+
+    var start, end;
+    var colView = calendar.columnView;
+    var cal = calendar.dateModule;
+	
+    if(view == colView){
+      start = calendar.floorDate(d, "minute", colView.timeSlotDuration);
+      end = cal.add(start, "minute", colView.timeSlotDuration); 
+    }else{
+      start = calendar.floorToDay(d);
+      end = cal.add(start, "day", 1);
+    }
+	
+    var item = {
+      id: id,
+      summary: "New event " + id,
+      startTime: start,
+      endTime: end,
+      allDay: view.viewKind == "matrix",
+      **calendar: subColumn**
+    };
+	
+    id++;	
+	
+    return item;							
+  }
+
+  calendar.set("createOnGridClick", true);
+  calendar.set("createItemFunc", createItem);
+
 
 Item editing
 ''''''''''''
