@@ -1023,10 +1023,11 @@ If the sub column value of a data item is matching a sub column value defined in
       summary: "My Event",
       startTime: new Date(2013, 0, 1, 10, 0),
       endTime: new Date(2013, 0, 1, 14, 0),
-      calendar: "cal1"
+      calendar: "cal1" // sub column value.
     }
   ]});
 
+  // definition of the sub column values.
   colView.set("subColumns", ["cal1", "cal2"]);
 
 
@@ -1064,7 +1065,6 @@ Example:
 
   var createItem = function(view, d, e, subColumn){
 
-    // create item by maintaining control key
     if(!e.ctrlKey || e.shiftKey || e.altKey){
       return;
     }
@@ -1087,7 +1087,7 @@ Example:
       startTime: start,
       endTime: end,
       allDay: view.viewKind == "matrix",
-      calendar: subColumn
+      calendar: subColumn // setting of the clicked sub column value
     };
 	
     id++;	
@@ -1095,8 +1095,8 @@ Example:
     return item;							
   }
 
-  calendar.set("createOnGridClick", true);
-  calendar.set("createItemFunc", createItem);
+  colView.set("createOnGridClick", true);
+  colView.set("createItemFunc", createItem);
 
 
 Item editing
