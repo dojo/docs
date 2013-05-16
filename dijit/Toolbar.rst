@@ -6,7 +6,7 @@ dijit/Toolbar
 
 :Project owner: Bill Keese
 :since: V?
-x
+
 .. contents ::
     :depth: 2
 
