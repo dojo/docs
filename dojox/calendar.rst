@@ -1065,21 +1065,8 @@ Example:
 
   var createItem = function(view, d, e, subColumn){
 
-    if(!e.ctrlKey || e.shiftKey || e.altKey){
-      return;
-    }
-
-    var start, end;
-    var colView = calendar.columnView;
-    var cal = calendar.dateModule;
-	
-    if(view == colView){
-      start = calendar.floorDate(d, "minute", colView.timeSlotDuration);
-      end = cal.add(start, "minute", colView.timeSlotDuration); 
-    }else{
-      start = calendar.floorToDay(d);
-      end = cal.add(start, "day", 1);
-    }
+    // compute start and end
+    // see "Interactive data item creation" for more information
 	
     var item = {
       id: id,
@@ -1095,8 +1082,6 @@ Example:
     return item;							
   }
 
-  colView.set("createOnGridClick", true);
-  colView.set("createItemFunc", createItem);
 
 
 Item editing
