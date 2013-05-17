@@ -235,19 +235,19 @@ The following example shows how to define the time range from the 1st of January
        style="position:relative;width:500px;height:500px"></div>      
 
 
-To the limit the time range, the **minDate** and/or **maxDate** properties.
+To the limit the time range, set the **minDate** and/or **maxDate** properties.
 
 The behavior depends on the properties used to define the time range.
 
-  * **date** properties is set:
+  * date properties is set:
 
-    * **minDate**: The date that defines the minimum time range in the past,
-    * **maxDate**: The date that defined the maximum time range is the future.
+    * minDate: The date that defines the minimum time range in the past,
+    * maxDate: The date that defined the maximum time range is the future.
 
-  * **date** is not set, **startDate** and **endDate** are used:
+  * date is not set, startDate and endDate are used:
 
-    * **minDate**: The minimum value of the **startDate** property,
-    * **maxDate**: The maximum value of the **endDate** property.
+    * minDate: The minimum value of the startDate property,
+    * maxDate: The maximum value of the endDate property.
 
 
 
