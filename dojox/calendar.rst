@@ -242,7 +242,7 @@ The behavior depends on the properties used to define the time range.
   * date properties is set:
 
     * minDate: The date that defines the minimum time range in the past,
-    * maxDate: The date that defined the maximum time range is the future.
+    * maxDate: The date that defines the maximum time range is the future.
 
   * date is not set, startDate and endDate are used:
 
