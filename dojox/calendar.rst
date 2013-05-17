@@ -234,6 +234,23 @@ The following example shows how to define the time range from the 1st of January
        data-dojo-props="startDate: new Date(2012, 0, 1), endDate: new Date(2012, 0, 9)" 
        style="position:relative;width:500px;height:500px"></div>      
 
+
+To the limit the time range, the **minDate** and/or **maxDate** properties.
+
+The behavior depends on the properties used to define the time range.
+
+  * **date** properties is set:
+
+    * **minDate**: The date that defines the minimum time range in the past,
+    * **maxDate**: The date that defined the maximum time range is the future.
+
+  * **date** is not set, **startDate** and **endDate** are used:
+
+    * **minDate**: The minimum value of the **startDate** property,
+    * **maxDate**: The maximum value of the **endDate** property.
+
+
+
 Styling renderers
 =================
 
@@ -1023,11 +1040,10 @@ If the sub column value of a data item is matching a sub column value defined in
       summary: "My Event",
       startTime: new Date(2013, 0, 1, 10, 0),
       endTime: new Date(2013, 0, 1, 14, 0),
-      calendar: "cal1" // sub column value.
+      calendar: "cal1"
     }
   ]});
 
-  // definition of the sub column values.
   colView.set("subColumns", ["cal1", "cal2"]);
 
 
@@ -1065,8 +1081,22 @@ Example:
 
   var createItem = function(view, d, e, subColumn){
 
-    // compute start and end
-    // see "Interactive data item creation" for more information
+    // create item by maintaining control key
+    if(!e.ctrlKey || e.shiftKey || e.altKey){
+      return;
+    }
+
+    var start, end;
+    var colView = calendar.columnView;
+    var cal = calendar.dateModule;
+	
+    if(view == colView){
+      start = calendar.floorDate(d, "minute", colView.timeSlotDuration);
+      end = cal.add(start, "minute", colView.timeSlotDuration); 
+    }else{
+      start = calendar.floorToDay(d);
+      end = cal.add(start, "day", 1);
+    }
 	
     var item = {
       id: id,
@@ -1074,7 +1104,7 @@ Example:
       startTime: start,
       endTime: end,
       allDay: view.viewKind == "matrix",
-      calendar: subColumn // setting of the clicked sub column value
+      calendar: subColumn
     };
 	
     id++;	
@@ -1082,6 +1112,8 @@ Example:
     return item;							
   }
 
+  calendar.set("createOnGridClick", true);
+  calendar.set("createItemFunc", createItem);
 
 
 Item editing
