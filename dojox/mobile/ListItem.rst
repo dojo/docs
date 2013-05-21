@@ -67,7 +67,7 @@ Inherited from dojox/mobile/_ItemBase
 |urlTarget     |String    |""       |Node id under which a new view will be created according to the url parameter. If not specified, The new   |
 |              |          |         |view will be created as a sibling of the current view.                                                     |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|clickable     |Boolean   |false    |If true, this item becomes clickable even if a transition destination (moveTo, etc.) is not specified.   |
+|clickable     |Boolean   |false    |If true, this item becomes clickable even if a transition destination (moveTo, etc.) is not specified.    |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |callback      |Function  |         |A callback function that is called when the transition has been finished. A function reference, or name of |
 |              |String    |         |a function in context.                                                                                     |
