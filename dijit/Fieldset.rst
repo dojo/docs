@@ -56,10 +56,10 @@ Creation from markup is even easier.
 
   .. html ::
 
-    <div id="tp2" data-dojo-type="dijit/Fieldset">
+    <fieldset id="tp2" data-dojo-type="dijit/Fieldset">
         <legend>My legend</legend>
         Click legend to close me.
-    </div>
+    </fieldset>
 
 
 Accessibility
