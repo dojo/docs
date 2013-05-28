@@ -1,78 +1,129 @@
 .. _developer/github:
 
-===================================
-Dojo Development Workflow on GitHub
-===================================
+=================================
+Dojo Committer Workflow on GitHub
+=================================
 
 .. contents ::
-    :depth: 3
+    :depth: 2
 
-This document will provide guidelines for the Dojo Toolkit workflow on GitHub.  As we will no longer be using SVN, it
-is important to adjust our workflow to match to GitHub.
+This document will provide guidelines for the Dojo Toolkit workflow on GitHub for a committer.  As we will no longer be
+using SVN, it is important to adjust our workflow to match to GitHub.
 
 The Main Components
 ===================
 
 The main GitHub Repositories for the Dojo 1.X code are:
 
-  * `dojo/dojo <https://github.com/dojo/dojo>`_
-  * `dojo/dijit <https://github.com/dojo/dijit>`_
-  * `dojo/dojox <https://github.com/dojo/dojox>`_
-  * `dojo/util <https://github.com/dojo/util>`_
+* `dojo/dojo <https://github.com/dojo/dojo>`_
 
-You will need a valid GitHub user account.  This can be tied to your Dojo Foundation user account if not already by
-contacting the appropriate project lead.
+* `dojo/djijit <https://github.com/dojo/dijit>`_
 
-You will need the appropriate tools to manage your GitHub code.  There are a few choice, but the two main ones are the
+* `dojo/dojox <https://github.com/dojo/dojox>`_
+
+* `dojo/util <https://github.com/dojo/util>`_
+
+You will need a valid GitHub user account.  This should be tied to your Dojo Foundation user account and you should have
+appropriate access to the Dojo Toolkit repositories.  This can be done by contacting one of the Toolkit project leads.
+
+You will need the appropriate tools to manage your GitHub code.  There are a few choices, but the two main ones are the
 standard ``git`` command line or the GitHub GUI:
 
-  * `git <http://git-scm.com/downloads>`_
-  * `GitHub Mac <http://mac.github.com/>`_
-  * `GitHub Windows <http://windows.github.com/>`_
+* `git <http://git-scm.com/downloads>`_
+
+* `GitHub Mac <http://mac.github.com/>`_
+
+* `GitHub Windows <http://windows.github.com/>`_
 
 The examples in this document though will focus around using the ``git`` command line interface.  If you need help
 setting up ``git`` to work against your GitHub account, please see the
 `GitHub Help Article <https://help.github.com/articles/set-up-git>`_ about the topic.
 
-You also should be aware we continue to use `bugs.dojotoolkit.org <http://bugs.dojotoolkit.org>` for ticket management.
+You also should be aware we continue to use `bugs.dojotoolkit.org <http://bugs.dojotoolkit.org>`_ for ticket management.
 While GitHub issues have improved, they still do not give us sufficient features to be able to manage the code as we
 would like.
 
+Contributor Workflow
+--------------------
+
+This is documented in the `CONTRIBUTING.md <https://github.com/dojo/dojo/blob/master/CONTRIBUTING.md>`_ which provides
+the contribution guidelines for the Toolkit as well as a well defined workflow for submitting Pull Requests to the
+repositories.
+
+As a committer, you should use the contribution workflow for landing non-trival changes in areas which you are not
+directly responsible for, or you want/need to have a level of peer review prior to the change being merged.
+
+If all you are going to do is make your commits, there is no need to follow that workflow.  Instead you should just
+follow the `Accept a Pull Request Workflow`_ below.
+
+Accept a Pull Request Workflow
+------------------------------
+
+To accept a Pull Request, you should be working off a local repository who's remote ``origin`` is the ``github.com/dojo/``
+repository you will be accepting the Pull Request into.  Pull Requests should be merged into the `master` branch of
+code once you are comfortable the Pull Request applies cleanly, meets coding standards and passes appropriate tests.
+
+You will need to know the remote repository and branch that the Pull Request originates from.  This is identifiable
+via the Pull Request in GitHub by clicking the ``command line`` link in the "merge" box.
+
+First, create a new branch to accept the Pull Request into.  It is recommended you use ``[username]-[branch]`` as the
+name.  For example::
+
+  $ git checkout -b username-t12345 master
+
+Then you need to bring in the changes from the Pull Request::
+
+  $ git pull --squash --no-commit git://github.com/username/dojo.git t12345
+
+The commits will be pulled into your local repositories branch, staged for committing but not committed.  You can now
+review the changes and do whatever testing necessary before committing the changes.  Please ensure that in your commit
+message you reference the appropriate ticket(s) and acknowledge the contribution of others (as since their commits
+are squashed they will not appear as the committer).
+
+Once you have committed the changes, merge your "pull request" branch with the master branch (assuming that is the
+appropriate branch)::
+
+  $ git checkout master
+  $ git merge username-t12345
+  $ git push origin master
+
+You can then delete the "pull request" branch now::
+
+  $ git branch -d username-t12345
+
+Because GitHub won't see the commits, since they have "rolled up" into a single commit, GitHub won't auto-close the
+Pull Request, so ensure you that you have closed it down.
+
+Backporting Workflow
+--------------------
+
+You may find a need to apply commits to older branches of code.  If the change can be applied cleanly, it is often
+useful to "cherry-pick" commits from the other branch.  This provides the benefits of sharing the same commit message
+information without creating unnecessary "commit noise".
+
+For example if you were going to take a commit from the ``master`` branch and bring it into the ``1.7`` branch, it would
+look something like this::
+
+  $ git checkout -b 1.7 origin/1.7
+  $ git cherry-pick -x e7b779e5475633f51f2390aa19cc7f0a7cf42c89
+  $ git push origin 1.7
+
+This ``-x`` will modify the commit message so that it is clear that the commit has been cherry picked and will provide
+a reference in the commit message to the original commit.
+
 Individual Workflow
-===================
+-------------------
 
-As an individual contributor or committer, the workflow is as follow:
- * Fork the repository on GitHub
- * Clone your forked repository on your machine
- * Create a "feature" branch on your local repository
- * Make your changes and commit them to your local repository
- * Push your commits to your GitHub fork/remote repository
- * Issue a Pull Request to the "upstream" repository
- * Your Pull Request is reviewed by a committer and merged into the repository
+This is when you as a committer are making changes which you do not need additional feedback, are for areas of the code
+you are responsible for or are trivial in nature.  The "traditional" guidelines apply in these situations:
 
-Forking on GitHub
------------------
+* You should always reference the ticket in the commit message (using "fixes" and "refs" as appropriate).
 
-When logged into your GitHub account, and you are viewing one of the main repositories, you will see the *Fork* button:
+* Only defect-fixes go into release branches, new features go into the ``master`` branch.
 
-.. image :: Fork.png
+* The unnecessary commit noise should be avoided.  Rebase if needed.
 
-Clicking this button will show you which repositories your can fork to.  Choose your own account.  Once the process
-finishes, you will have your own repository that is "forked" from the GitHub one.
-
-Forking is a GitHub term and not a git term.  Git is a wholly distributed source control system and simply worries
-about local and remote repositories and allows you to manage your code against them.  GitHub then adds this additional
-layer of structure of how repositories can relate to each other.
-
-Cloning Your Fork
------------------
-
-Once you have successfully forked your repository, you will need to clone it locally to your machine::
-
-    $ git clone --recursive https://github.com/username/dojo.git
-
-You can also use the SSH URI for your repository (e.g. ``git@github.com:username/dojo.git``) if you have configured
-SSH properly with your command line git.  It is important that you clone recursively for ``dojox`` because some of the
-code is contained in submodules.  You won't be able to submit your changes to the repositories that way though.  If
-you are working on any of these sub-projects, you should contact those project leads to see if their workflow differs.
-
+If you are working locally and you have several commits now that you want to "squash" into a single commit to represent
+your changes, you can do so by using the interactive rebase feature of ``git``.  More information on this can be found
+in `Changing Multiple Commit Messages <http://git-scm.com/book/en/Git-Tools-Rewriting-History#Changing-Multiple-Commit-Messages>`_.  **Warning** do not rebase commits which you have already pushed to GitHub.  This will cause conflicts and if others
+have become dependent on your commits, it will cause no end of carnage and swearing.
