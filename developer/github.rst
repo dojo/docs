@@ -59,42 +59,33 @@ follow the `Accept a Pull Request Workflow`_ below.
 Accept a Pull Request Workflow
 ------------------------------
 
-To accept a Pull Request, you should be working off a local repository who's remote ``origin`` is the ``github.com/dojo/``
-repository you will be accepting the Pull Request into.  Pull Requests should be merged into the `master` branch of
-code once you are comfortable the Pull Request applies cleanly, meets coding standards and passes appropriate tests.
+To accept a pull request, you should be working off a local repository whose remote ``origin`` is the ``github.com/dojo/``
+repository you will be accepting the pull request into.  Pull requests should be merged into the `master` branch of
+code once you are comfortable the pull request applies cleanly, meets coding standards and passes appropriate tests.
 
-You will need to know the remote repository and branch that the Pull Request originates from.  This is identifiable
-via the Pull Request in GitHub by clicking the ``command line`` link in the "merge" box.
+You will need to know the remote repository and branch that the pull request originates from.  This is identifiable
+via the pull request in GitHub by clicking the ``command line`` link in the "merge" box.
 
-First, create a new branch to accept the Pull Request into.  It is recommended you use ``[username]-[branch]`` as the
-name.  For example::
+First, make sure you have checked out the correct branch that the pull request is going to land in (typically ``master``)
+and that it is up-to-date::
 
-  $ git checkout -b username-t12345 master
+  $ git checkout master && git pull origin master
 
-Then you need to bring in the changes from the Pull Request::
+Then, retrieve the pull request, squashing it into a single atomic changeset::
 
   $ git pull --squash --no-commit git://github.com/username/dojo.git t12345
 
-The commits will be pulled into your local repositories branch, staged for committing but not committed.  You can now
-review the changes and do whatever testing necessary before committing the changes.  Please ensure that in your commit
-message you reference the appropriate ticket(s).  You should also commit with the appropriate author attribution, like
-the following::
+The changes from the pull request will be pulled into your working directory, staged to be committed. You can now review the changes and do whatever testing and fix-ups are necessary before committing.
 
-  $ git commit --author="Some Contributor <some@example.com>" -m="Resolves a problem, fixes #t12345"
+When committing, please ensure that in your commit message you reference the appropriate ticket(s). You should also commit with the appropriate author attribution, like the following::
 
-Once you have committed the changes, merge your "pull request" branch with the master branch (assuming that is the
-appropriate branch)::
+  $ git commit --author="Some Contributor <some@example.com>"
 
-  $ git checkout master
-  $ git merge username-t12345
+Once you have committed the changes, push them upstream::
+
   $ git push origin master
 
-You can then delete the "pull request" branch now::
-
-  $ git branch -d username-t12345
-
-Because GitHub won't see the commits, since they have "rolled up" into a single commit, GitHub won't auto-close the
-Pull Request, so ensure you that you have closed it down.
+GitHub will not auto-close the pull request because the commits that landed do not match the ones in the pull request, so you will need to manually close it with a comment containing a reference to the real commit.
 
 Backporting Workflow
 --------------------
