@@ -77,8 +77,10 @@ Then you need to bring in the changes from the Pull Request::
 
 The commits will be pulled into your local repositories branch, staged for committing but not committed.  You can now
 review the changes and do whatever testing necessary before committing the changes.  Please ensure that in your commit
-message you reference the appropriate ticket(s) and acknowledge the contribution of others (as since their commits
-are squashed they will not appear as the committer).
+message you reference the appropriate ticket(s).  You should also commit with the appropriate author attribution, like
+the following::
+
+  $ git commit --author="Some Contributor <some@example.com>" -m="Resolves a problem, fixes #t12345"
 
 Once you have committed the changes, merge your "pull request" branch with the master branch (assuming that is the
 appropriate branch)::
