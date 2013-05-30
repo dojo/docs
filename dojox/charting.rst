@@ -1317,7 +1317,7 @@ Here is an example showing how to attach a MouseIndicator action to the chart an
 TouchZoomAndPan
 ---------------
 
-This action zooms and pans the chart on touch gestures. You can zoom out using pinch gesture and zoom in using spread gesture. You can pan the chart moving a single touch on the screen. Finally you can alternate between the fit mode and zoom mode using double tap gesture. This is particularly useful on mobile devices.
+This action zooms and pans the chart on touch gestures. You can zoom out using pinch gesture and zoom in using spread gesture. You can pan the chart moving a single touch on the screen. Finally you can alternate between the fit mode and zoom mode using double tap gesture. The pinch and spread gesture are only working on platforms that supports multiple touch events, it also does not work yet on Windows Phone. This is particularly useful on mobile devices.
 
 TouchZoomAndPan supports several additional parameters:
 
