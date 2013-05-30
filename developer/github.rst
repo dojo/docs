@@ -61,6 +61,14 @@ If you prefer the command line, there are several tools which can issue pull req
 feature rich appears to be `hub <https://github.com/defunkt/hub>`_ which also provide many other features that make
 command line integration with GitHub easier.
 
+Also, since generally you want to be rebasing to avoid merge commits, you may want to set it so that ``git pull`` is
+always a rebase pull::
+
+  $ git config --global --bool pull.rebase true
+
+What this will do though is make ``git`` complain when you have unstaged changes.  You will have to commit or stash them
+before you can do a ``git pull`` then.
+
 If all you are going to do is make your commits, there is no need to follow that workflow.  Instead you should just
 follow the `Accept a Pull Request Workflow`_ below.
 
