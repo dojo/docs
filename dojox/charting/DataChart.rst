@@ -141,5 +141,3 @@ Demos
 -----
 
 DojoX Test: http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/charting/tests/test_DataChart.html
-
-DataChart Property Demo: https://user.sitepen.com/~mwilcox/Chart/DataChart.html
