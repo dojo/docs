@@ -146,8 +146,8 @@ For a more explicit example, you should start with ensuring you are up to date::
 
   $ git checkout master && git pull origin master
 
-Even though you plan would to to push directly to the origin repository, you might still benefit from working on your
-code in a feature branch.  This could allow you to work on multiple things independently without have to worry about
+Even though your plan would be to push directly to the origin repository, you might still benefit from working on your
+code in a feature branch.  This could allow you to work on multiple things independently without having to worry about
 picking through the changes::
 
   $ git checkout -b t12345
