@@ -13,7 +13,7 @@ dojo/dom-prop
 This module defines the core dojo DOM properties API. The convention for the return variable for this module is
 ``domProp``. 
 
-DOM properties differ from DOM attributes in that they can be of various types (for example, the "checked" property of a checkbox is a Boolean), whereas attributes always contain string values.
+DOM properties differ from DOM attributes in that they can be of various types (for example, the "checked" property of a checkbox is a Boolean), whereas attributes always contain string values. If you would like to manipulate HTML code, you probably want to use this module instead of :ref:`dojo/dom-attr <dojo/dom-attr>`.
 
 The *deprecated* legacy features are set in :ref:`dojo/_base/html <dojo/_base/html>`.
 
