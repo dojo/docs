@@ -11,7 +11,9 @@ dojo/dom-prop
     :depth: 2
 
 This module defines the core dojo DOM properties API. The convention for the return variable for this module is
-``domProp``.
+``domProp``. 
+
+DOM properties differ from DOM attributes in that they can be of various types (for example, the "checked" property of a checkbox is a Boolean), whereas attributes always contain string values.
 
 The *deprecated* legacy features are set in :ref:`dojo/_base/html <dojo/_base/html>`.
 
