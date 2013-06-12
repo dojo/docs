@@ -58,6 +58,12 @@ DojoX
 Util
 ====
 
+**Builder**
+
+Added support for uglify-js 2.x builder. To use uglify-js 2.x, just upgrade from 1.x. If optimizeOptions is used, some of the options may need to be changed to match uglify-js 2.x naming, see `Uglilfy 2 documentation <https://github.com/mishoo/UglifyJS2>`_ on the new options available.
+
+In addition, multiple processes will be used while running uglify builder. In previous versions, only one CPU core is being used.
+
 Demos
 =====
 
