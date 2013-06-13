@@ -98,7 +98,7 @@ Programmatic example
         new ContentPane({
           content:"<p>Optionally set new content now</p>",
           style:"height:125px"
-        }, "targetID");
+        }, "targetID").startup();
     });
 
   .. html ::
@@ -118,7 +118,7 @@ Programmatic example
         new ContentPane({
           content:"<p>I am initial content</p>",
           style:"height:125px"
-        }).placeAt("targetID2");
+        }).placeAt("targetID2").startup();
     });
 
   .. html ::
