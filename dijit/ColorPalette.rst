@@ -51,7 +51,7 @@ Default color palette, created programmatically:
         var myPalette = new ColorPalette({
             palette: "7x10",
             onChange: function(val){ alert(val); }
-        }, "placeHolder");
+        }, "placeHolder").startup();
     });
 
   .. html ::
