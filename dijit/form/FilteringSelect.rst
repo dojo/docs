@@ -75,7 +75,7 @@ To get the text currently displayed in the textbox (the value of the currently s
                 value: "CA",
                 store: stateStore,
                 searchAttr: "name"
-            }, "stateSelect");
+            }, "stateSelect").startup();
         });
 
   .. html ::
@@ -177,7 +177,7 @@ In this example, the FilteringSelect has been set to display the ids for states 
                 store: stateStore,
                 searchAttr: "id"
             }, "stateSelect");
-            filteringSelect.placeAt(win.body());
+            filteringSelect.placeAt(win.body()).startup();
         });
 
 Codependent FilteringSelect/ComboBox widgets
@@ -496,7 +496,7 @@ and the state FilteringSelect filters the city ComboBox choices in this example.
                 console.log("combobox onchange ", city, this.item);
                 dijit.byId('state').set('value', this.item ? this.item.state : null);
             }
-        }, "city");
+        }, "city").startup();
 
         new dijit.form.FilteringSelect({
             id: "state",
@@ -506,7 +506,7 @@ and the state FilteringSelect filters the city ComboBox choices in this example.
             onChange: function(state){
                 dijit.byId('city').query.state = this.item.state || /.*/;
             }
-        }, "state");
+        }, "state").startup();
     });
 
   .. html ::
@@ -551,7 +551,7 @@ the autocompleted value in the textbox, as with other FilteringSelects, rather t
              name: "xyz",
              labelAttr: "label",
              labelType: "html"
-       }, dom.byId("dojoBox"));
+       }, dom.byId("dojoBox")).startup();
     });
 
   .. html ::
