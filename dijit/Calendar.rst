@@ -105,7 +105,7 @@ JavaScript declaration, with a restriction of +/- one week from the current date
                 var today = new Date(); today.setHours(0, 0, 0, 0);
                 return Math.abs(date.difference(d, today, "week")) > 0;
             }
-        }, "mycal");
+        }, "mycal").startup();
     });
 
   .. html ::
