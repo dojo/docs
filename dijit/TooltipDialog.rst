@@ -53,7 +53,7 @@ The first example shows how to create a TooltipDialog and DropDownButton program
         var myButton = new DropDownButton({
             label: "show tooltip dialog",
             dropDown: myDialog
-        });
+        }).startup();
         dom.byId("dropDownButtonContainer").appendChild(myButton.domNode);
     });
 
