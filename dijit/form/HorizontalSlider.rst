@@ -22,7 +22,7 @@ Usage
 .. js ::
  
     require(["dijit/form/HorizontalSlider", "dojo/domReady!"], function(HorizontalSlider){
-        var slider = new HorizontalSlider({}, "mySlider");
+        var slider = new HorizontalSlider({}, "mySlider").startup();
     });
 
 Here are some of the constructor parameters:
@@ -70,7 +70,7 @@ moves the slider.  The following code fills in a simple textbox called sliderVal
             onChange: function(value){
                 dom.byId("sliderValue").value = value;
             }
-        }, "slider");
+        }, "slider").startup();
     });
 
   .. html ::
