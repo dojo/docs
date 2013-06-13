@@ -45,9 +45,10 @@ In this example, we borrow some of the toolbar buttons from the Editor.
                 label: label,
                 showLabel: false,
                 iconClass: "dijitEditorIcon dijitEditorIcon"+label
-            });
+            }).startup();
             toolbar.addChild(button);
         });
+        toolbar.startup();
     });
 
   .. html ::
