@@ -68,7 +68,7 @@ Here, we'll use a programmatically-created NumberSpinner:
             constraints: { min:9, max:1550, places:0 },
             id: "integerspinner3",
             style: "width:100px"
-        }, "spinnerId" );
+        }, "spinnerId").startup();
     });
 
   .. html ::
@@ -121,7 +121,7 @@ If you'd like onChange to fire after every button click, set the attribute inter
             });
         </script>
     </div>
-    <span id="tempBox" >&nbsp;&nbsp;&nbsp;</span>
+    <span id="tempBox" >   </span>
 
 Accessibility
 =============
