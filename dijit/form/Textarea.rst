@@ -37,43 +37,9 @@ Notice how we pass the *name*, *style* and *value* parameters into the object cr
             name: "myarea",
             value: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
             style: "width:200px;"
-        }, "myarea").startup();;
+        }, "myarea").startup();
     });
 
   .. html ::
 
-    <textarea id="myarea"></textarea>
-
-Declarative example
--------------------
-
-Here we'll create a Textarea widget declaratively.
-In this instance, the initial *value* is the child text node of the textarea element.
-
-.. code-example ::
-  :djConfig: async: true, parseOnLoad: true
-
-  .. js ::
-
-      require(["dojo/parser", "dijit/form/Textarea"]);
-
-  .. html ::
-
-    <textarea id="textarea2" name="textarea2" data-dojo-type="dijit/form/Textarea" style="width:200px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</textarea>
-
-
-Accessibility
-=============
-
-Keyboard
---------
-
-The Textarea widget uses native HTML textarea controls.
-
-
-Known Issues (1.2 and before)
-=============================
-
-* On Firefox 2, the user must press the Tab key twice before keyboard focus moves to the next widget. (There is no problem when using Shift+Tab.)
-
-* The attribute "cols" was not supported, but the CSS style *width* could be used instead.
+    <textarea id="myarea">
