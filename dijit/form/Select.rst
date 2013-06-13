@@ -76,7 +76,7 @@ This example shows how you can set up the same select as the previous example, b
                 { label: "FL", value: "Florida" },
                 { label: "CA", value: "California" }
             ]
-        }).placeAt(win.body());
+        }).placeAt(win.body()).startup();
     });
 
 A Select Fed By A Store
@@ -139,7 +139,7 @@ When styling the entries of a Select widget, you must use div and span tags, ins
         <span value="AZ"><i>Arizona</i></span>
         <span value="AR"><span class="ark">Arkansas</span></span>
         <span value="CA"><span style="font-size:25%">C</span><span style="font-size:50%">a</span><span style="font-size:75%">l</span><span style="font-size:90%">i</span><span style="font-size:100%">f</span><span style="font-size:125%">o</span><span style="font-size:133%">r</span><span style="font-size:150%">n</span><span style="font-size:175%">i</span><span style="font-size:200%">a</span></span>
-        <span value="NM" disabled="disabled">New<br>&nbsp;&nbsp;Mexico</span>
+        <span value="NM" disabled="disabled">New<br>  Mexico</span>
     </div>
 
 Setting Width
