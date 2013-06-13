@@ -37,7 +37,7 @@ Let's create a ToggleButton widget programmatically, initially unchecked:
             checked: false,
             onChange: function(val){this.set('label',val);},
             label: "false"
-        }, "programmatic");
+        }, "programmatic").startup();
     });
 
   .. html ::
