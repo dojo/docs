@@ -117,7 +117,7 @@ Here's an example:
             value: "31-DEC-2009",
             name: "oracle",
             onChange: function(v){ setTimeout(showServerValue, 0)}
-        }, "oracle");
+        }, "oracle").startup();
         showServerValue();
     });
 
