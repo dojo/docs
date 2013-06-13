@@ -43,13 +43,14 @@ The first example shows how to create a menu and drop down button programmatical
             onClick: function(){ alert('cut'); }
         });
         menu.addChild(menuItem2);
+        menu.startup();
 
         var button = new DropDownButton({
             label: "hello!",
             name: "programmatic2",
             dropDown: menu,
             id: "progButton"
-        });
+        }).startup();
         dom.byId("dropDownButtonContainer").appendChild(button.domNode);
     });
 
