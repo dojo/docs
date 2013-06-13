@@ -43,7 +43,7 @@ Let's create a checkbox programmatically, initially unchecked:
             value: "agreed",
             checked: false,
             onChange: function(b){ alert('onChange called with parameter = ' + b + ', and widget value = ' + this.get('value') ); }
-        }, "checkBox");
+        }, "checkBox").startup();
     });
 
   .. html ::
