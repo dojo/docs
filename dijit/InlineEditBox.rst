@@ -25,7 +25,7 @@ Programmatic InlineEditBox
         var eb = new InlineEditBox({
             editor: Textarea,
             autoSave: false
-        }, "ieb");
+        }, "ieb").startup();
     });
 
   .. html ::
