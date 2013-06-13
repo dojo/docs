@@ -75,7 +75,7 @@ The fractional part can be 0 to 6 digits long.
         new NumberTextBox({
               name: "programmatic",
               constraints: {pattern: "0.######"}
-        }, "programmatic");
+        }, "programmatic").startup();
     });
 
   .. html ::
