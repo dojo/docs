@@ -39,12 +39,14 @@ This example shows how to create a menu and combo button programmatically.
             onClick: function(){ alert('ho'); }
         });
         menu.addChild(menuItem2);
+        menu.startup();
 
         var button = new ComboButton({
             label: "get all mail",
             dropDown: menu
         });
         button.placeAt(dojo.body());
+        button.startup();
     });
 
 
