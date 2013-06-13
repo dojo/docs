@@ -73,7 +73,7 @@ include the *value* attribute in the attribute list passed to the constructor.
                 value: "California",
                 store: stateStore,
                 searchAttr: "name"
-            }, "stateSelect");
+            }, "stateSelect").startup();
         });
 
   .. html ::
