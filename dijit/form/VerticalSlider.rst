@@ -18,7 +18,7 @@ Usage
 .. js ::
  
     require(["dijit/form/VerticalSlider", "dojo/domReady!"], function(VerticalSlider){
-        var slider = new VerticalSlider({}, "mySlider");
+        var slider = new VerticalSlider({}, "mySlider").startup();
     });
 
 Here are some of the constructor parameters:
@@ -63,7 +63,7 @@ vertical slider and a simple rule (tick marks) created programmatically.
         var sliderRules = new VerticalRule({
             count: 11,
             style: "width:5px;"
-        }, rulesNode);
+        }, rulesNode).startup();
 
         var slider = new VerticalSlider({
             name: "vertical",
@@ -75,7 +75,7 @@ vertical slider and a simple rule (tick marks) created programmatically.
             onChange: function(value){
                 dom.byId("sliderValue").value = value;
             }
-        }, "vertical");
+        }, "vertical").startup();
     });
 
   .. html ::
