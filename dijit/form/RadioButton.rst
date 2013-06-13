@@ -44,7 +44,7 @@ We'll wrap both inside a FORM to illustrate what happens on submit.
             checked: true,
             value: "tea",
             name: "drink",
-        }, "radioOne");
+        }, "radioOne").startup();
     });
 
   .. html ::
