@@ -23,7 +23,7 @@ Programmatic
         var i = 0;
         var myProgressBar = new ProgressBar({
             style: "width: 300px"
-        }).placeAt(win.body());
+        }).placeAt(win.body()).startup();
         setInterval(function(){
            myProgressBar.set("value", i++ % 100);
         }, 100);
