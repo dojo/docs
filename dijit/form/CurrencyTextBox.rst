@@ -69,7 +69,7 @@ In this example using euros with German formatting, the invalid message contains
             currency: "EUR",
             invalidMessage: "Invalid amount.  Example: " + example
         };
-        new CurrencyTextBox(props, "eurde");
+        new CurrencyTextBox(props, "eurde").startup();
     });
 
   .. html ::
