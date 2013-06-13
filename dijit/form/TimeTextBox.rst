@@ -57,7 +57,7 @@ Programmatic example
                 visibleIncrement: 'T00:15:00',
                 visibleRange: 'T01:00:00'
             }
-        }, "progval");
+        }, "progval").startup();
     });
 
   .. html ::
