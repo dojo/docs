@@ -41,7 +41,7 @@ The first example shows how to create a button programmatically.
                 // Do something:
                 dom.byId("result1").innerHTML += "Thank you! ";
             }
-        }, "progButtonNode");
+        }, "progButtonNode").startup();
     });
 
   .. html ::
