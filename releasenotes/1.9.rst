@@ -93,7 +93,7 @@ Example usage:
 
 .. js ::
 
-   define(["dojo/parser", "dojo/store/Memory", "dojo/domReady!], function(parser, Memory){
+   define(["dojo/parser", "dojo/store/Memory", "dojo/domReady!"], function(parser, Memory){
       // script code that needs to run before parse
       myMemoryStore = new Memory(...);
       ...
