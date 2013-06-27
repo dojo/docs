@@ -783,12 +783,20 @@ Bidi
 
 The calendar is also supporting the "textDir" property. 
 
-Import the dijit._BidiSupport class and set the "textDir" property to “rtl”, “ltr” or “auto” to set the contextual text direction.
+Enable bidi in dojo config and set the "textDir" property to “rtl”, “ltr” or “auto” to set the contextual text direction.
+
+.. html ::
+
+	<script type="text/javascript" 
+		data-dojo-config="has: { 'dojo-bidi': true }" 
+		src="../../../dojo/dojo.js"></script>
+
+
 
 Alternate calendars
 -------------------
 
-The calendar is using by default the gregorian calendar to display time, but the alternate calendars defined in dojox.date package can be set on the calendar.
+The calendar is using by default the Gregorian calendar to display time, but the alternate calendars defined in dojox.date package can be set on the calendar.
 
 In the constructor, set the datePackage to change the calendar. Remember to use the corresponding date object in the input data store.
 
