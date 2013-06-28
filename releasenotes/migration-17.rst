@@ -266,7 +266,7 @@ There is no need to duplicate modules in a ``dojo.require()`` call versus a ``do
 .. js ::
 
     define([
-        "dojo", "dijit", "dojox", "my/HotController", "dijit._Widget", "dojo/text!my/templates/HotApplication.html"
+        "dojo", "dijit", "dojox", "my/HotController", "dijit/_Widget", "dojo/text!my/templates/HotApplication.html"
     ], function(dojo, dijit, dojox, Controller, _Widget, template){
         
         return dojo.declare("my.HotApplication", Controller, {
@@ -277,3 +277,17 @@ There is no need to duplicate modules in a ``dojo.require()`` call versus a ``do
     
 Now we need to goto ``my/HotController.js`` and ensure it is properly using a ``define()`` call, and returning the class previously living at ``my.HotController`` (now referenced locally as ``Controller``)
 
+To move to the more modern AMD and Dojo approach, we then want to upgrade to using the smallest modules possible, rather than all of dojo, dijit, and dojox. We also want to remove any global identifiers. The above example would then become:
+
+.. js ::
+
+    define([
+        "dojo/_base/declare", "my/HotController", "dijit/_WidgetBase", "dojo/text!my/templates/HotApplication.html"
+    ], function(declareController, _WidgetBase, template){
+        
+        return declare(Controller, {
+            templateString: template
+        });
+        
+    });
+    
