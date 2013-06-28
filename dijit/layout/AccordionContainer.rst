@@ -7,7 +7,7 @@ dijit/layout/AccordionContainer
 :Authors: Becky Gibson, Nikolai Onken
 :Developers: ?-
 :since: V?
-:jsDoc: http://dojotoolkit.org/api/dijit.layout.AccordionContainer
+:jsDoc: http://dojotoolkit.org/api/dijit/layout/AccordionContainer
 
 .. contents ::
     :depth: 2
