@@ -291,3 +291,8 @@ To move to the more modern AMD and Dojo approach, we then want to upgrade to usi
         
     });
     
+
+Automation
+----------
+
+The `dojo-amd-converter <https://github.com/SitePen/dojo-amd-converter/>`_ may help you automate some or most of the conversion of your Dojo application from pre-AMD to AMD syntax.
