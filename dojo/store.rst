@@ -33,8 +33,8 @@ get(id)                                           Retrieves an object by its ide
 query(query, *options*)                           Queries the store using the provided query.
 
                                                   The returned value should be an array or a promise with ``forEach()``
-                                                  , ``map()``, ``filter()``, ``reduce()``, ``subscribe()``, and 
-                                                  optional ``close()`` and ``watch()`` methods, and a ``total`` 
+                                                  , ``map()``, ``filter()``, ``reduce()``, and 
+                                                  optional ``close()`` methods, and a ``total`` 
                                                   property (the ``total`` may be a promise). The ``options`` parameter 
                                                   may include the following properties (all are optional):
 
