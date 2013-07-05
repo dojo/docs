@@ -50,7 +50,7 @@ result   truthy, if the attribute is present, falsy otherwise
 Examples
 ~~~~~~~~
 
-Checking to see if a particular node as an attribute.
+Checking to see if a particular node has an attribute.
 
 .. code-example ::
   :djConfig: async: true, parseOnLoad: false
