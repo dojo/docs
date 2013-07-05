@@ -72,7 +72,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
 
   .. css ::
 
-        @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
+        <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
 
         /*Grid needs an explicit height by default*/
         #gridDiv {
@@ -330,9 +330,9 @@ Some style sheets supplied with the Dojo distribution are required:
 
 .. css ::
   
-    @import "/dojox/grid/resources/Grid.css";
-    @import "/dojox/grid/resources/claroGrid.css";
-
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/Grid.css" >
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
+        
     .dojoxGrid table {
       margin: 0;
     }
@@ -460,8 +460,8 @@ This example shows how to create a simple Grid programmatically.
 
   .. css ::
 
-        @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
-
+        <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
+        
         /*Grid needs an explicit height by default*/
         #gridDiv {
             height: 20em;
@@ -570,8 +570,8 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 
   .. css ::
 
-        @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
-
+        <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
+        
         /*Grid needs an explicit height by default*/
         #gridDiv {
             height: 15em;
@@ -657,8 +657,8 @@ First, you have to set a editor for each cell, you would like to edit:
 
   .. css ::
 
-        @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
-
+        <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
+        
         /*Grid needs an explicit height by default*/
         #gridDiv {
             height: 20em;
@@ -768,8 +768,8 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
   .. css ::
 
-        @import '{{baseUrl}}dojox/grid/resources/claroGrid.css';
-
+        <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
+        
         /*Grid needs an explicit height by default*/
         #gridDiv {
             height: 15em;
@@ -865,8 +865,8 @@ The Grid offers a filter() method, to filter data from the current query (client
 
   .. css ::
 
-        @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
-
+        <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
+        
         /*Grid needs an explicit height by default*/
         #gridDiv {
             height: 15em;
@@ -951,8 +951,8 @@ To use it, you just have to override default behavior by yours.
 
   .. css ::
 
-        @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
-
+        <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
+        
         /*Grid needs an explicit height by default*/
         #gridDiv {
             height: 20em;
@@ -1017,9 +1017,9 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
 
   .. css ::
 
-    @import "{{baseUrl}}/dojo/resources/dojo.css";
-    @import "{{baseUrl}}/dijit/themes/claro/claro.css";
-    @import "{{baseUrl}}/dojox/grid/resources/claroGrid.css";
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojo/resources/dojo.css" >
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dijit/themes/claro/claro.css" >
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
 
 
 
@@ -1079,9 +1079,9 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 
   .. css ::
 
-    @import "{{baseUrl}}/dojo/resources/dojo.css";
-    @import "{{baseUrl}}/dijit/themes/claro/claro.css";
-    @import "{{baseUrl}}/dojox/grid/resources/claroGrid.css";
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojo/resources/dojo.css" >
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dijit/themes/claro/claro.css" >
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
 
 
 
@@ -1148,9 +1148,9 @@ Using dijit.form.DateTextBox in editing mode will provide an improved user exper
 
   .. css ::
 
-    @import "{{baseUrl}}/dojo/resources/dojo.css";
-    @import "{{baseUrl}}/dijit/themes/claro/claro.css";
-    @import "{{baseUrl}}/dojox/grid/resources/claroGrid.css";
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojo/resources/dojo.css" >
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dijit/themes/claro/claro.css" >
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
 
 
 
@@ -1221,9 +1221,9 @@ Although ISO dates are recommended as a convenient and culturally neutral data f
 
   .. css ::
 
-    @import "{{baseUrl}}/dojo/resources/dojo.css";
-    @import "{{baseUrl}}/dijit/themes/claro/claro.css";
-    @import "{{baseUrl}}/dojox/grid/resources/claroGrid.css";
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojo/resources/dojo.css" >
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dijit/themes/claro/claro.css" >
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
 
 
 _`Inserting a dijit widget (Button) in a field`
@@ -1292,9 +1292,9 @@ _`Inserting a dijit widget (Button) in a field`
 
   .. css ::
 
-    @import "{{baseUrl}}/dojo/resources/dojo.css";
-    @import "{{baseUrl}}/dijit/themes/claro/claro.css";
-    @import "{{baseUrl}}/dojox/grid/resources/claroGrid.css";
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojo/resources/dojo.css" >
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dijit/themes/claro/claro.css" >
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
 
 
 
