@@ -72,7 +72,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
 
   .. css ::
 
-        <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
+        @import "{{dataUrl}}dojox/grid/resources/claroGrid.css";
 
         /*Grid needs an explicit height by default*/
         #gridDiv {
@@ -460,7 +460,7 @@ This example shows how to create a simple Grid programmatically.
 
   .. css ::
 
-        <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
+        @import "{{dataUrl}}dojox/grid/resources/claroGrid.css";
         
         /*Grid needs an explicit height by default*/
         #gridDiv {
@@ -570,7 +570,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 
   .. css ::
 
-        <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
+        @import "{{dataUrl}}dojox/grid/resources/claroGrid.css";
         
         /*Grid needs an explicit height by default*/
         #gridDiv {
@@ -657,7 +657,7 @@ First, you have to set a editor for each cell, you would like to edit:
 
   .. css ::
 
-        <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
+        @import "{{dataUrl}}dojox/grid/resources/claroGrid.css";
         
         /*Grid needs an explicit height by default*/
         #gridDiv {
@@ -768,7 +768,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
   .. css ::
 
-        <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
+        @import "{{dataUrl}}dojox/grid/resources/claroGrid.css";
         
         /*Grid needs an explicit height by default*/
         #gridDiv {
@@ -865,7 +865,7 @@ The Grid offers a filter() method, to filter data from the current query (client
 
   .. css ::
 
-        <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
+        @import "{{dataUrl}}dojox/grid/resources/claroGrid.css";
         
         /*Grid needs an explicit height by default*/
         #gridDiv {
@@ -951,7 +951,7 @@ To use it, you just have to override default behavior by yours.
 
   .. css ::
 
-        <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
+        @import "{{dataUrl}}dojox/grid/resources/claroGrid.css";
         
         /*Grid needs an explicit height by default*/
         #gridDiv {
