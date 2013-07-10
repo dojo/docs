@@ -39,7 +39,7 @@ return the query string.
   require(["dojo/io-query"], function(ioQuery){
     var uri = "http://some.server.org/somecontext/";
     var query = {
-      foo: ["bar", "baz"],
+      foo: ["bar", "bar2"],
       bit: "byte"
     };
 
@@ -76,7 +76,7 @@ return it in JavaScript object form.
 
     // The structure of queryObject will be:
     // {
-    //   foo: ["bar", "bar2],
+    //   foo: ["bar", "bar2"],
     //   bit: "byte"
     // }
   });
