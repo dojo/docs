@@ -41,7 +41,7 @@ the top of this main view when rendered.
 
 Normally, when using a BorderContainer, one would also have a data-app-constraint="center" section. In the case of a View however, the "center" region will be applied to the currently active view (the current tab for example).
 
-The application can also provide view definition modules to implement the View lifecycle APIs which include ( init(), beforeActivate(), afterActivate(), beforeDeactivate(), afterDeactivate(), and destroy(),...).
+The application can also provide view definition modules to implement the View lifecycle APIs which include ( init(), beforeActivate(), afterActivate(), beforeDeactivate(), afterDeactivate(), and destroy()).
 This module can act as a view controller, synchronizing the data between the model and the view.
 
 For example:
