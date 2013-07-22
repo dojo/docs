@@ -41,7 +41,7 @@ the top of this main view when rendered.
 
 Normally, when using a BorderContainer, one would also have a data-app-constraint="center" section. In the case of a View however, the "center" region will be applied to the currently active view (the current tab for example).
 
-The application can also provide view definition modules to implement the View lifecycle APIs (like init(), destroy(),...).
+The application can also provide view definition modules to implement the View lifecycle APIs which include ( init(), beforeActivate(), afterActivate(), beforeDeactivate(), afterDeactivate(), and destroy(),...).
 This module can act as a view controller, synchronizing the data between the model and the view.
 
 For example:
@@ -53,6 +53,7 @@ For example:
 
 	return {
 		init: function(){
+			console.log(this.name+" init called");
 			registry.byId("mywidget").on("widgetEvent", lang.hitch(this, function(evt){
 				// save the value back to the model
 				this.loadedModels.myModel.value = ...;
@@ -60,17 +61,22 @@ For example:
 		},
 
 		beforeActivate: function(previousView, data){
+			console.log(this.name+" beforeActivate called");
 			// set the model value on the view
 			var widget = registry.byId("mywidget");
 			widget.set("value", this.loadedModels.myModel.value);
 		},
 
-                beforeDeactivate: function(nextView, data){
-                },
+		afterActivate: function(previousView, data){
+			console.log(this.name+" afterActivate called");
+		},
 
-		destroy: function(){
-			// _WidgetBase.on listener is automatically destroyed when the Widget itself is.
-			this.inherited(arguments);
+		beforeDeactivate: function(nextView, data){
+			console.log(this.name+" beforeDeactivate called");
+		},
+
+		afterDeactivate: function(nextView, data){
+			console.log(this.name+" afterDeactivate called");
 		}
 	};
   });
