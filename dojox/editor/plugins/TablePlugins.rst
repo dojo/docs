@@ -39,51 +39,63 @@ Example
 Although the code for the Editor is complex, it is quite simple to implement:
 
 .. code-example ::
-
-  The CSS
-
-  .. css ::
-
-        @import "{{baseUrl}}dojox/editor/plugins/resources/editorPlugins.css";
+  :djConfig: parseOnLoad: false
 
   It's just a matter of using the proper *requires* in the JavaScript:
 
   .. js ::
 
-    dojo.require("dijit.Editor");
-    dojo.require("dojox.editor.plugins.TablePlugins");
-    dojo.require("dojox.editor.plugins.ResizeTableColumn");
+			require([
+				"dojo/parser",
+				"dijit/Editor",
+				"dojox/editor/plugins/TablePlugins",
+				"dojo/domReady!"
+			], function(parser) {
+				parser.parse();
+			});
 
-  Slightly more difficult is the HTML. The plugins are assigned within an array. Be sure to get commas correct or you will get a parse error:
+
+  Slightly more difficult is the HTML. The plugins are assigned within an array.
+  Be sure to get commas correct or you will get a parse error.
+  Also, you need to include the CSS or the icons won't show up in the toolbar.
 
   .. html ::
-  
-    <div class="tundra">
-    <div data-dojo-type="dijit/Editor" style="height:100px" data-dojo-props="plugins:[
-        'bold','italic',
-        {name: 'dojox.editor.plugins.TablePlugins', command: 'insertTable'},
-        {name: 'dojox.editor.plugins.TablePlugins', command: 'modifyTable'},
-        {name: 'dojox.editor.plugins.TablePlugins', command: 'InsertTableRowBefore'},
-        {name: 'dojox.editor.plugins.TablePlugins', command: 'InsertTableRowAfter'},
-        {name: 'dojox.editor.plugins.TablePlugins', command: 'insertTableColumnBefore'},
-        {name: 'dojox.editor.plugins.TablePlugins', command: 'insertTableColumnAfter'},
-        {name: 'dojox.editor.plugins.TablePlugins', command: 'deleteTableRow'},
-        {name: 'dojox.editor.plugins.TablePlugins', command: 'deleteTableColumn'},
-        {name: 'dojox.editor.plugins.TablePlugins', command: 'colorTableCell'},
-        {name: 'dojox.editor.plugins.TablePlugins', command: 'tableContextMenu'},
-        {name: 'dojox.editor.plugins.TablePlugins', command: 'ResizeTableColumn'}
-      ]">
-      Dojo Rocks with a fox in socks. Red socks.
-      <table width="200" border="2" align="center"
-        cellpadding="2" cellspacing="2" bordercolor="#00FFFF" bgcolor="#FF0000" id="myTable">
-        <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td bgcolor="#00FFFF">&nbsp;</td>
-        </tr>
-      </table>
-    </div>
-    </div>
+
+		    <link href="{{baseUrl}}dojox/editor/plugins/resources/editorPlugins.css"
+		            type="text/css" rel="stylesheet" />
+
+			<div id="editor" data-dojo-type="dijit/Editor"
+				 data-dojo-props="height: '200px', plugins: [
+				'undo', 'redo', 'bold','italic','|',
+				{name: 'insertTable'},
+				{name: 'modifyTable'},
+				{name: 'insertTableRowBefore'},
+				{name: 'insertTableRowAfter'},
+				{name: 'insertTableColumnBefore'},
+				{name: 'insertTableColumnAfter'},
+				{name: 'deleteTableRow'},
+				{name: 'deleteTableColumn'},
+				{name: 'colorTableCell'},
+				{name: 'tableContextMenu'}
+			]">
+				Dojo Rocks with a fox in socks. Red socks. In a box.
+				<br/><br/>
+			        <table width="200" border="2" cellpadding="2" cellspacing="2" id="myTable"
+						   style="border-color: #0ff; background-color: #f00">
+					<tr>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td id="myCell">&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td bgcolor="#00FFFF">Text</td>
+					</tr>
+				</table>
+			</div>
