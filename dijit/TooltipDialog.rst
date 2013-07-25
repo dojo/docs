@@ -18,9 +18,12 @@ Introduction
 
 The dijit/TooltipDialog displays a tooltip that contains form elements (like a dialog).
 
-Although both Dialog and TooltipDialog are modal, TooltipDialog can be closed by clicking anywhere on the screen, whereas for Dialog you must click on the [x] mark of the Dialog.
+Although both Dialog and TooltipDialog are modal,
+TooltipDialog can be closed by clicking anywhere on the screen,
+whereas for Dialog you must click on the [x] mark of the Dialog.
 
-A TooltipDialog can only be opened as a drop down from another widget, usually `dijit/form/DropDownButton`.
+A TooltipDialog is meant to be opened as a drop down from another widget, usually
+:ref:`dijit/form/DropDownButton <dijit/form/DropDownButton>`.
 
 
 Examples
@@ -61,40 +64,6 @@ The first example shows how to create a TooltipDialog and DropDownButton program
 
     <div id="dropDownButtonContainer"></div>
 
-A TooltipDialog may be popped up from any node.
-
-.. code-example ::
-
-  .. js ::
-
-    require([
-        "dijit/TooltipDialog",
-        "dijit/popup",
-        "dojo/on",
-        "dojo/dom",
-        "dojo/domReady!"
-    ], function(TooltipDialog, popup, on, dom){
-        var myTooltipDialog = new TooltipDialog({
-            id: 'myTooltipDialog',
-            style: "width: 300px;",
-            content: "<p>I have a mouse leave event handler that will close the dialog.",
-            onMouseLeave: function(){
-                popup.close(myTooltipDialog);
-            }
-        });
-
-        on(dom.byId('thenode'), 'mouseover', function(){
-            popup.open({
-                popup: myTooltipDialog,
-                around: dom.byId('thenode')
-            });
-        });
-    });
-
-  .. html ::
-
-    <div id="thenode">Move the mouse over me to pop up the dialog.</div>
-
 
 Declarative markup
 ------------------
@@ -121,6 +90,110 @@ Here's one displaying a TooltipDialog:
             <button data-dojo-type="dijit/form/Button" type="submit">Save</button>
         </div>
     </div>
+
+Low Level Programmatic example
+------------------------------
+
+When possible, your anchor widget should extend :ref:`dijit/_HasDropDown <dijit/_HasDropDown>`.
+However, a TooltipDialog may be popped up from any node, by calling the low level
+:ref:`dijit/popup <dijit/popup>`.open() API directly.
+
+
+In this case you should:
+
+1. Make sure the TooltipDialog gets focus when it's opened
+2. Setup an onCancel callback to close the popup when the user presses the ESC key.
+3. Setup an _onBlur handler to close the popup when the user clicks another part of the screen.
+
+
+For example:
+
+.. code-example ::
+
+  .. js ::
+
+    require([
+        "dijit/TooltipDialog",
+        "dijit/popup",
+        "dojo/on",
+        "dojo/dom",
+        "dojo/domReady!"
+    ], function(TooltipDialog, popup, on, dom){
+        var myTooltipDialog = new TooltipDialog({
+            id: 'myTooltipDialog',
+            style: "width: 300px;",
+            content:
+                "<p>Focus goes here: <input></p>" +
+                "<p>Press ESC or click a blank area of the screen to close.</p>",
+
+            onShow: function(){
+                // Focus the first element in the TooltipDialog
+                this.focus();
+            },
+
+            _onBlur: function(){
+                // User must have clicked a blank area of the screen, so close the TooltipDialog
+                popup.close(myTooltipDialog);
+            }
+        });
+
+        on(dom.byId('thenode'), 'click', function(){
+            popup.open({
+                popup: myTooltipDialog,
+                around: dom.byId('thenode'),
+
+                onCancel: function(){
+                    // User pressed escape, so close myself
+                    popup.close(myTooltipDialog);
+                }
+            });
+        });
+    });
+
+  .. html ::
+
+    <div id="thenode">Click to pop up the dialog.</div>
+
+
+Mouse over example
+------------------
+Here's a modified example where the TooltipDialog is controlled by mouse enter / mouse leave
+instead of by clicking or keyboard:
+
+.. code-example ::
+
+  .. js ::
+
+    require([
+        "dijit/TooltipDialog",
+        "dijit/popup",
+        "dojo/on",
+        "dojo/dom",
+        "dojo/domReady!"
+    ], function(TooltipDialog, popup, on, dom){
+        var myTooltipDialog = new TooltipDialog({
+            id: 'myTooltipDialog',
+            style: "width: 300px;",
+            content: "<p>I have a mouse leave event handler that will close the dialog.",
+            onMouseLeave: function(){
+                popup.close(myTooltipDialog);
+            }
+        });
+
+        var node = dom.byId('mouseovernode');
+        console.log(on, node);
+        on(node, 'mouseover', function(evt){
+            popup.open({
+                popup: myTooltipDialog,
+                around: node
+            });
+        });
+    });
+
+  .. html ::
+
+    <div id="mouseovernode">Move the mouse over me to pop up the dialog.</div>
+
 
 
 Accessibility
