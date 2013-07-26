@@ -36,11 +36,12 @@ Examples
               {id:1, name:"One"},
               {id:2, name:"Two"}
           ];
-          SimpleQueryEngine({name:"One"})(someData) -> // Returns an array with just the first object
+          SimpleQueryEngine({name:"One"})(someData); // Returns an array with just the first object
 
           SimpleQueryEngine(function(object){
-          return object.id > 1;
-  })(someData) // Returns an array with just the first object
+              return object.id > 1;
+          })(someData); // Returns an array with just the first object
+  });
 
 See Also
 ========
