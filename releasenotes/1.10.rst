@@ -52,6 +52,12 @@ Dojo Core
 Dijit
 =====
 
+Dialog
+------
+Added support for Dialog.resize(dimensions).  Previously it ignored the dimensions parameter.
+This means that Dialog now works with dojox/layout/ResizeHandle.
+Note though that you still cannot specify an initial size on the dialog.
+
 DojoX
 =====
 
