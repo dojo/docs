@@ -154,4 +154,4 @@ Having focus go to the ContentPane itself can be helpful for users of assistive 
 See also
 ========
 
-* `dojox/layout/ContentPane <../../dojox/layout/ContentPane>`_ - extension of dijit/layout/ContentPane
+* :ref:`dojox/layout/ContentPane <dojox/layout/ContentPane>` - extension of dijit/layout/ContentPane
