@@ -46,7 +46,7 @@ add(object, options)                              Create a new object. The (opti
 
 remove(id)                                        Delete the object by id.
 
-getIdentity(object)                               Returns an object's identity
+getIdentity(object)                               Returns an ``object``'s identity. This must always execute synchronously.
 
 queryEngine(query, options)                       This takes a query and query options and returns a function that can execute the provided query on a JavaScript array. The queryEngine may be replace to provide more sophisticated querying capabilities. The returned query function may have a "matches" property that can be used to determine if an object matches the query.
 
