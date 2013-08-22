@@ -37,12 +37,8 @@ Creating a Dojo Release/RC/Beta
 Creating a new DTK branch (for new major versions)
 ==================================================
 
-** Not updated for git yet **
-
-1. Run ``mk_branch.sh <version> <revision>``, where:
-
-   ``version`` is the new branch number, e.g. 1.7
-   ``revision`` is the revision of the version to branch from
-
-2. Check out the new branch and update ``build_release.sh`` to point to the release branch, not trunk.
-3. Have a beer.
+1. Run ``git checkout -b <version> <commit>`` where <version> is the new branch and <commit> is the commit that it should start from
+2. Update ``package.json`` and ``dojo/_base/kernel.js`` with the new version.
+3. Run ``git commit -a -m "Updating versions for <version> branch"``
+4. Run ``git push``
+5. Git is awesome. Have a beer.
