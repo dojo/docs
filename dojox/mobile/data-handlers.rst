@@ -43,11 +43,9 @@ data and create a new view. The DataHandler is called from ViewController.
 The FileTypeMap Interface
 -------------------------
 
-FileTypeMap provides a map for determining content-type from the URL of the content data. 
+FileTypeMap provides a map for determining the content-type from the URL of the content data. 
 Two actual modules are available: SuffixFileTypeMap and PatternFileTypeMap. 
-SuffixFileTypeMap, which is the default module, determines content-type from a suffix
- of the given URL. PatternFileTypeMap determines content-type by pattern-matching 
- against the given URL.
+SuffixFileTypeMap, which is the default module, determines the content-type from a suffix of the given URL. PatternFileTypeMap determines the content-type by pattern matching against the given URL.
 
 The DataSource Interface
 ------------------------
