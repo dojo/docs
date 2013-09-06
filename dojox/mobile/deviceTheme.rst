@@ -38,7 +38,7 @@ If the iPhone device is detected, for example, deviceTheme loads the iphone them
 
 You can also pass an additional query parameter string: theme={theme id} to force a specific 
 theme through the browser URL input. The available theme ids are Android, BlackBerry, Holodark, 
-Custom, iPhone, and iPad. The theme names are case sensitive. If the given id does not match, 
+Custom, iPhone, iPad and WindowsPhone. The theme names are case sensitive. If the given id does not match, 
 the iphone theme is used.
 
 .. html ::
@@ -50,6 +50,7 @@ the iphone theme is used.
   http://your.server.com/yourapp.html?theme=Custom // forces custom theme
   http://your.server.com/yourapp.html?theme=iPhone // forces iphone theme
   http://your.server.com/yourapp.html?theme=iPad // forces ipad theme
+  http://your.server.com/yourapp.html?theme=WindowsPhone // forces ipad theme
 
 To simulate a particular device from the application code, the user agent can be 
 forced by setting dojoConfig.mblUserAgent as follows:

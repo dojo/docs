@@ -1,4 +1,3 @@
-
 .. _dojox/mobile/SpinWheelDatePicker:
 
 ================================
@@ -73,7 +72,7 @@ Programmatic example
       "dojo/ready",
       "dojox/mobile/SpinWheelDatePicker",
       "dojox/mobile/parser"
-  ], function(win, ready, registry, SpinWheelDatePicker){
+  ], function(win, ready, SpinWheelDatePicker){
       ready(function(){
         var widget = new SpinWheelDatePicker({id:"spin1"});
         win.body().appendChild(widget.domNode);

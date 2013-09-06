@@ -74,16 +74,16 @@ Inherited from dojox/mobile/_DataListMixin
 Inherited from dojox/mobile/_DataMixin
 --------------------------------------
 
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|Parameter     |Type      |Default  |Description                                                                                                |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|store         |Object    |null     |Reference to data provider object used by this widget.                                                     |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|query         |Object    |null     |A query that can be passed to 'store' to initially filter the items. See `dojo/data <../../dojo/data>`_    |
-|              |          |         |for details.                                                                                               |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|queryOptions  |Object    |null     |An optional parameter for the query. See `dojo/data <../../dojo/data>`_ for details.                       |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
++--------------+----------+---------+-------------------------------------------------------------------------------------------------------------------+
+|Parameter     |Type      |Default  |Description                                                                                                        |
++--------------+----------+---------+-------------------------------------------------------------------------------------------------------------------+
+|store         |Object    |null     |Reference to data provider object used by this widget.                                                             |
++--------------+----------+---------+-------------------------------------------------------------------------------------------------------------------+
+|query         |Object    |null     |A query that can be passed to 'store' to initially filter the items. See `dojo/data <../../dojo/data/api.rst>`_    |
+|              |          |         |for details.                                                                                                       |
++--------------+----------+---------+-------------------------------------------------------------------------------------------------------------------+
+|queryOptions  |Object    |null     |An optional parameter for the query. See `dojo/data <../../dojo/data/api.rst>`_ for details.                       |
++--------------+----------+---------+-------------------------------------------------------------------------------------------------------------------+
 
 Examples
 ========
@@ -128,7 +128,7 @@ Programmatic example
 
   require([
       "dojo/ready",
-      "dojo/data/ItemReadStore",
+      "dojo/data/ItemFileReadStore",
       "dojox/mobile/EdgeToEdgeDataList",
       "dojox/mobile",
       "dojox/mobile/parser"
