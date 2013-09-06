@@ -38,7 +38,7 @@ If the iPhone device is detected, for example, deviceTheme loads the iphone them
 
 You can also pass an additional query parameter string: theme={theme id} to force a specific 
 theme through the browser URL input. The available theme ids are Android, BlackBerry, Holodark, 
-Custom, iPhone, iPad and windowsPhone. The theme names are case sensitive. If the given id does not match, 
+Custom, iPhone, iPad and WindowsPhone. The theme names are case sensitive. If the given id does not match, 
 the iphone theme is used.
 
 .. html ::
