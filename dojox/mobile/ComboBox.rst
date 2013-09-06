@@ -66,7 +66,7 @@ Using a dojo/store
   .. js ::
 
     require([
-      "dojo/store/Memory/",
+      "dojo/store/Memory",
       "dojox/mobile/ComboBox"
     ], function(Memory, ComboBox){
       colorMemoryStore = new Memory({ idProperty: "name", data: [
@@ -91,7 +91,7 @@ Using inline OPTION tags
 
   .. js ::
 
-     require(["dijit/form/DataList/", "dojox/mobile/ComboBox"]);
+     require(["dijit/form/DataList", "dojox/mobile/ComboBox"]);
 
   .. html ::
 
