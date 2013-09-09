@@ -147,6 +147,7 @@ To change the state of the switch programmatically, you can use a setter method 
 
 .. js ::
 
-..// 'registry' is the return value of the dijit/registry module
+  // 'registry' is the return value of the dijit/registry module
   var widget = registry.byId("sw");
   widget.set("value", "on"); // "on" or "off" can be set
+
