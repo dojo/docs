@@ -53,7 +53,7 @@ the button label.
               "dojox/mobile",
               "dojox/mobile/compat",
               "dojox/mobile/Button",
-              ], function(ready, sampleStrings){
+              ], function(ready, registry, sampleStrings){
               ready(function(){
                   registry.byId("btn1").set("label", sampleStrings["Sunday"]);
               });
