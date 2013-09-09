@@ -93,3 +93,26 @@ Setting the date with a number array
 .. js ::
 
   registry.byId("spin1").set("values", [2012, 10, 6]); // Oct 6, 2012
+
+Setting a date range
+--------------------
+
+.. js ::
+
+  require([
+      "dojo/_base/window",
+      "dojo/ready",
+      "dojox/mobile/SpinWheelDatePicker",
+      "dojox/mobile/parser"
+  ], function(win, ready, SpinWheelDatePicker){
+      ready(function(){
+        var widget = new SpinWheelDatePicker({id:"spin1", slotProps: [{labelFrom: 2011, labelTo: 2017},{},{}]});
+        win.body().appendChild(widget.domNode);
+        widget.startup();
+      });
+  });
+
+
+.. html ::
+
+  <div data-dojo-type="dojox/mobile/SpinWheelDatePicker" data-dojo-props="slotProps: [{labelFrom: 2011, labelTo: 2017},{},{}]"></div>
