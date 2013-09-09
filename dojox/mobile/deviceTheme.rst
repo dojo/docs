@@ -15,7 +15,7 @@ Introduction
 ============
 
 deviceTheme is a convenient utility module that automatically loads appropriate 
-theme CSS files according to the detected user agent of the browser.
+theme CSS files according to the detected user agent of the browser. See :ref:`dojox/mobile/deviceTheme <dojox/mobile>` for more information. 
 
 It can be enabled by simply including the dojox/mobile/deviceTheme script in 
 your application as follows:
