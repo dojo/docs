@@ -94,7 +94,7 @@ If the template defines data-dojo-attach-point="containerNode", the children fro
 For example:
 
 .. code-example::
-  :djConfig: parseOnLoad: false
+  :djConfig: parseOnLoad: true
   :width: 400
   :height: 250
   :toolbar: versions, dir
@@ -102,11 +102,10 @@ For example:
   .. js ::
 
     require([
-        "dojo/declare", "dojo/parser",
-        "dijit/_WidgetBase", "dijit/_TemplatedMixin", "dojo/domReady!"
-    ], function(declare, parser, _WidgetBase, _TemplatedMixin){
-         parser.parse();
-         return declare("MyButton", [dijit._WidgetBase, dijit._TemplatedMixin], {
+        "dojo/_base/declare", "dijit/_WidgetBase",
+        "dijit/_TemplatedMixin", "dojo/domReady!"
+    ], function(declare, _WidgetBase, _TemplatedMixin){
+         return declare("MyButton", [_WidgetBase, _TemplatedMixin], {
                 templateString:
                     "<button data-dojo-attach-point='containerNode' data-dojo-attach-event='onclick: onClick'></button>",
                 onClick: function(evt){
