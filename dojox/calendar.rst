@@ -340,7 +340,7 @@ It view is made of two sheets:
 
 See Advanced configuration section to see how to change this behavior.
 
-This view is accessible through the columnView property of  the calendar widget.
+This view is accessible through the **columnView** property of  the calendar widget.
 
 The main properties of the columns view are:
   * **startDate** * - The date of the first column,  
@@ -376,7 +376,7 @@ Matrix View
 
 The matrix view is displaying a matrix in which each day is a cell. Time is flowing horizontally.
 
-This view is accessible through the matrixView property of  the calendar widget.
+This view is accessible through the **matrixView** property of  the calendar widget.
 
 The main properties of the columns view are:
   * **startDate** * - The date of the first cell,
@@ -1019,7 +1019,7 @@ If the view is not used as a standalone, to set a property in constructor use th
 
   var calendar = new Calendar({
     columnViewsProps: {
-      **myColumnViewProperty: value**
+      myColumnViewProperty: value
     }
   });
 
@@ -1028,7 +1028,7 @@ If the calendar instance is already declared, use this syntax:
 
 .. js ::
   
-  calendar.columnView.set(**myColumnViewProperty, value**);
+  calendar.columnView.set(myColumnViewProperty, value);
 
 
 Properties
@@ -1207,8 +1207,6 @@ Styling
 
 The styling of a column view  is defined in the themes/claro/ColumnView.css and themes/claro/ColumnView_rtl.css. The base CSS class name is dojoxCalendarColumnView.
 
-The styling of a simple column view  is defined in the themes/claro/SimpleColumnView.css and themes/claro/SimpleColumnView_rtl.css. The base CSS class name is dojoxCalendarSimpleColumnView.
-
 Several functions are provided to style or set a style class on part of the view:
   * styleColumnHeaderCell(node, date, renderData): allows to style a column header cell. By default, it installs dojoxCalendarToday and dojoxCalendarWeekend CSS classes.
   * styleRowHeaderCell(node, hour, renderData): allows to style a row header cell. By default, does nothing.
@@ -1234,6 +1232,27 @@ column header cell columnHeaderDatePattern _formatColumnHeaderLabel()
 
 Matrix View
 -----------
+
+The matrix view is available by default in the **matrixView** property of a **Calendar** instance.
+
+If the view is not used as a standalone, to set a property in constructor use this syntax:
+
+.. js ::
+
+  var calendar = new Calendar({
+    matrixViewsProps: {
+      myMatrixViewProperty: value
+    }
+  });
+
+
+If the calendar instance is already declared, use this syntax:
+
+.. js ::
+  
+  calendar.matrixView.set(myMatrixViewProperty, value);
+
+
 
 Properties
 ``````````
