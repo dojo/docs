@@ -815,7 +815,7 @@ The formatter is using the CLDR (http://cldr.unicode.org/) to determine accordin
 
 The date format patterns can be specified by setting view specific properties or functions defined in following view sections.
 
-**See specific view section for a list of available date/time format properties.**
+**See specific view section for a list of available date/time format properties of this view.**
 
 The calendar exposes an formatItemTimeFunc property allowing to format the time displayed on renderers.
 
@@ -854,6 +854,7 @@ In that case, the time label on item renderers and the time displayed in the row
 if the calendar instance is already declared or in the calendar constructor:
 
 .. js ::
+
   new Calendar({
     formatItemTimeFunc: function(d, rd){
       return rd.dateLocaleModule.format(d, {
