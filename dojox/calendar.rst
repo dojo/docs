@@ -809,11 +809,13 @@ The following example shows to how to set the Hebrew calendar:
 Date/time formatting
 --------------------
 
-The displayed dates labels are formatted using dojo formatters. If no specific calendar is specified the dojo.date.locale object is used, otherwise it is the dojox.date.XXXX.locale.
+The displayed dates labels are formatted using dojo formatters. If no specific calendar is specified the dojo.date.locale object is used (formatting Gregorian calendar dates), otherwise it is the dojox.date.XXXX.locale (for other calendars).
 
 The formatter is using the CLDR (http://cldr.unicode.org/) to determine according to the current locale the correct date format to use and how to properly format the date.
 
 The date format patterns can be specified by setting view specific properties or functions defined in following view sections.
+
+**See specific view section for a list of available date/time format properties.**
 
 The calendar exposes an formatItemTimeFunc property allowing to format the time displayed on renderers.
 
@@ -827,12 +829,44 @@ We can define a function to have a more compact display:
     formatItemTimeFunc: function(d, rd){
       return rd.dateLocaleModule.format(d, {
         selector: 'time', 
-        timePattern: d.getMinutes() == 0 ? "ha":"h:mma"}
-      ).toLowerCase();
+        timePattern: d.getMinutes() == 0 ? "ha":"h:mma"
+      }).toLowerCase();
     }
   });
 
 This will result into “10am” and “8:15am” when using the previous examples.
+
+Another example is to force the calendar to display the time in **24h** instead of **AM/PM** for all locales.
+In that case, the time label on item renderers and the time displayed in the row header of the column view must be overridden.
+
+.. js ::
+
+  calendar.set("formatItemTimeFunc", 
+    function(d, rd){ 
+      return rd.dateLocaleModule.format(d, 
+      {  selector: 'time', 
+         timePattern: d.getMinutes() == 0 ? "H'h'":"H'h'mm"
+      } 
+    }
+  ); 
+  calendar.columnView.set("rowHeaderTimePattern", "H'h'");
+
+if the calendar instance is already declared or in the calendar constructor:
+
+.. js ::
+  new Calendar({
+    formatItemTimeFunc: function(d, rd){
+      return rd.dateLocaleModule.format(d, {
+        selector: 'time', 
+        timePattern: d.getMinutes() == 0 ? "ha":"h:mma"
+      }).toLowerCase();
+    },
+    columnViewProps:{
+      rowHeaderTimePattern: "H'h'"
+    }
+  });
+
+
 
 Common properties
 -----------------
