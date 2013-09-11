@@ -1011,6 +1011,26 @@ The calendar widget is setting the default renderers classes to the views. If a 
 Column View
 -----------
 
+The column view is available by default in the **columnView** property of a **Calendar** instance.
+
+If the view is not used as a standalone, to set a property in constructor use this syntax:
+
+.. js ::
+
+  var calendar = new Calendar({
+    columnViewsProps: {
+      **myColumnViewProperty: value**
+    }
+  });
+
+
+If the calendar instance is already declared, use this syntax:
+
+.. js ::
+  
+  calendar.columnView.set(**myColumnViewProperty, value**);
+
+
 Properties
 ``````````
 
