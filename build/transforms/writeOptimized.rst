@@ -72,7 +72,7 @@ Profile Knobs
   * ["shrinksafe"] All non-layer modules are processed by shrinksafe; new-lines are *not* preserved; the semantics of the
     ``stripConsole`` property are executed.
 
-  * ["closure.keepLines"] All non-layer modules are processed by the Google Closure compiler, simple-mode; new-lines are
+  * ["closure.keeplines"] All non-layer modules are processed by the Google Closure compiler, simple-mode; new-lines are
     preserved; the semantics of the ``stripConsole`` property are executed.
 
   * ["closure"] All non-layer modules are processed by the Google Closure compiler, simple-mode; new-lines are *not*
