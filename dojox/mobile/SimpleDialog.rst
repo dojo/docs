@@ -160,7 +160,7 @@ Programmatic example
 
       setTimeout(function(){
         /*
-         * write your task here
+         * Write your lengthy task here. Once finished, hide the dialog:
          */
         hideProgIndDlg(dlg);
       }, 0);
@@ -250,4 +250,10 @@ Large dialog example for Tablet
       </tr>
       <tr>
         <td colspan="2">
-          <textarea>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+          <textarea>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</textarea></td>
+      </tr>
+    </table>
+  </div>
+
+
+.. image :: SimpleDialog-example4.png
