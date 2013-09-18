@@ -353,7 +353,7 @@ An example of a column plot with outside labels:
 .. js ::
 
   require(["dojox/charting/plot2d/Columns", ...], function(Columns, ...){
-    chart.addPlot("default", { type: Columns, label: true, labelStyle: "outside", labelOffset: 25 });
+    chart.addPlot("default", { type: Columns, labels: true, labelStyle: "outside", labelOffset: 25 });
   });
 
 
