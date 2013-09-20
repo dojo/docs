@@ -233,3 +233,8 @@ How should I use dojox/mobile/deviceTheme? Are there changes in Dojo 1.8 with th
 
 Yes, Dojo 1.8 brings improvements that allow to safely load the deviceTheme with a script tag, and for overriding the theme styles.
 See :ref:`dojox/mobile/deviceTheme <dojox/mobile/deviceTheme>` for details.
+
+Address bar hiding does not work in Safari on iOS 7. What's going on?
+---------------------------------------------------------------------
+
+This is a consequence of the new behavior of Safari in iOS 7: it is no longer possible to force in Javascript the hiding of the address bar.
