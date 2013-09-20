@@ -14,14 +14,14 @@ when writing code.  It allows more maintainable code, better user experience, fo
 performant code.  The :ref:`dojo/has <dojo/has>` API is the main Dojo mechanism for accomplishing this and 
 ``dojo/sniff`` leverages this.
 
-When leveraged with :ref:`Dojo's Builder <build/index>` unused code, for non-targeted browsers, can be removed and 
-decrease the size and increase the performance of your code.
+When leveraged with :ref:`Dojo's Builder <build/index>`, unused code can be removed for non-targeted browsers. This 
+reduces the size and increases the performance of your code.
 
 Usage
 =====
 
-The module can be used two ways, because the module add features to ``dojo/has`` and it also returns ``dojo/has`` as 
-the return value of the module.  Both the examples below are functionally the same:
+The module can be used in two ways, because the module adds features to ``dojo/has`` and it returns ``dojo/has`` as 
+the return value of the module.  Both examples below are functionally equivalent:
 
 .. js ::
 
@@ -47,20 +47,20 @@ Feature     Notes
 ``air``     Detects Adobe AIR Environments
 ``khtml``
 ``webkit``  Detects Webkit based environments 1.3+
-``chrome``  Detects Google Chrome 1.3+
-``safari``
 ``mac``     Detects if the platform is Mac OSX
 ``quirks``  If the browser is running in "quirks" mode
-``ios``     Detects iOS based devices [1]_
-``android`` Detects Android based devices [1]_
-``opera``
-``mozilla``
-``ff``
-``ie``
+``ios``     Detects iOS devices
+``android`` Detects Android devices
+``bb``      Detects BlackBerry devices
+``chrome``  Detects Google Chrome 1.3+ browser
+``safari``  Detects Safari browser
+``opera``   Detects Opera browser
+``mozilla`` Detects Mozilla browser
+``ff``      Detects Firefox browser.
+``ie``      Detects Internet Explorer browser.
 ``wii``     Detects if running on a Nintendo Wii
+``svg``     Detects SVG support
 =========== ============================================
-
-.. [1] See :ref:`dojox/mobile/sniff <dojox/mobile/sniff>` for additional mobile platform detection.
 
 Each feature will only return a truthy value if the specified browser is being used.  For example if you are using 
 Internet Explorer ``has("ie")`` will only return a truthy value, where as ``has("chrome")`` will return false.
@@ -95,9 +95,9 @@ Examples
   .. js ::
 
     require(["dojo/has", // alias has API to "has"
-        "dojo/_base/array", // alias array api to "arrayUtil"
-        "dojo/dom", // alias DOM api to "dom"
-        "dojo/_base/sniff", // load browser-related has feature tests
+        "dojo/_base/array", // alias array API to "arrayUtil"
+        "dojo/dom", // alias DOM API to "dom"
+        "dojo/sniff", // load browser-related has features
         "dojo/domReady!" // wait until DOM is loaded
     ], function(has, array, dom){
 
@@ -153,5 +153,3 @@ See Also
 ========
 
 * :ref:`dojo/has <dojo/has>` - The main feature detection module of Dojo.
-
-* :ref:`dojox/mobile/sniff <dojox/mobile/sniff>` - Additional feature detection for mobile platforms.
