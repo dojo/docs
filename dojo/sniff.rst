@@ -9,12 +9,17 @@ dojo/sniff
 .. contents ::
     :depth: 2
 
-**dojo/sniff** is the main Dojo module for browser feature detection.  Feature detection is an important consideration 
-when writing code.  It allows more maintainable code, better user experience, forward-compatibility and more 
-performant code.  The :ref:`dojo/has <dojo/has>` API is the main Dojo mechanism for accomplishing this and 
-``dojo/sniff`` leverages this.
+You should always try to use feature detection (See general overview
+`Using Capability Detection <http://dev.opera.com/articles/view/using-capability-detection/>`_)
+whenever possible to write forward-compatible code branches.
+The `dojo/has <dojo/has>`_ API is designed to help in this endeavor.
 
-When leveraged with :ref:`Dojo's Builder <build/index>`, unused code can be removed for non-targeted browsers. This 
+For when feature detection is not an option, Dojo provides user agent sniffing code in the module,
+``dojo/sniff``.  The sniff module augments the basic set of has() tests (see :ref:`dojo/has <dojo/has>`)
+with additional user agent based tests, so you can use the base has() api to test for browser environment
+and versions, just like you do for other features.
+Using this approach in conjunction with an optimizing compiler at build time, it is possible to optimize
+out unwanted code paths for specific browsers. This
 reduces the size and increases the performance of your code.
 
 Usage
@@ -25,8 +30,8 @@ its return value. Both examples below are functionally equivalent:
 
 .. js ::
 
-  require(["dojo/sniff"], function(sniff){
-    if(sniff("ie"){
+  require(["dojo/sniff"], function(has){
+    if(has("ie"){
       // Do something specific for IE.
     });
   });
