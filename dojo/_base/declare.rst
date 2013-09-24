@@ -1132,7 +1132,7 @@ two (or more) objects, it will be annotated several times leading to wrong annot
 
     declare.safeMixin(y, {anotherName: fun});
     console.log(fun.nom);            // anotherName
-    console.log(y. anotherName.nom); // anotherName
+    console.log(y.anotherName.nom);  // anotherName
 
     console.log(x.doSomething.nom);  // anotherName
   });
