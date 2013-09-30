@@ -88,11 +88,10 @@ reject(error, strict)             Called by the async process to reject (error o
                                   which is optional, if ``true`` means it will throw an error if the promise is 
                                   fulfilled.  Defaults to ``false``.
 then(callback, errback, progback) Used to set the callbacks for a Deferred.  ``errback`` and ``progback`` are optional
-                                  arguments that will be called if there is a rejection or a progress update,
+                                  functions that will be called if there is a rejection or a progress update,
                                   respectively.  ``.then()`` returns a new promise that will be fulfilled when the
-                                  callback completes, and anything that is returned from the callback will be passed as 
-                                  the ``value`` to any callbacks to that promise.  This allows for chaining of 
-                                  callbacks.
+                                  callback completes.  Anything that is returned from ``progback`` will be passed as 
+                                  the ``value`` to any callbacks to that promise, and any errors thrown by ``errback`` will be passed as the ``error`` to any of its errbacks.  If the Deferred is rejected and ``errback`` is called, but it does not throw an error, the new promise will be resolved with ``value`` being what was returned by ``errback``.  This allows for chaining of callbacks, and for intermediate promises to handle errors for later ones.
 cancel(reason, strict)            Signal the deferred that we're no longer interested in the result. The deferred may 
                                   subsequently cancel its operation and reject the promise. Can affect other promises 
                                   that originate with the same deferred. Returns the rejection reason if the deferred
