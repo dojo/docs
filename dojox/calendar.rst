@@ -31,6 +31,41 @@ Creating a Calendar
 
 The calendar widget is available on the dojox.calendar package.
 
+First you need to include the dojox Calendar theme.
+
+To include a given theme on your page or application, first include the `dojox/calendar/themeName/Calendar.css` file
+(one of `claro`, `tundra`, `nihilo`, or `soria`):
+
+.. html ::
+
+    <link rel="stylesheet" href="dojo/dojox/calendar/themes/claro/Calendar.css" />
+
+Then, add a theme class name to the parent <body> element, like:
+
+.. html ::
+
+  <body class="claro">
+
+It is recommended you include the theme CSS file **before** ``dojo.js`` to avoid any potential race conditions
+where widgets start rendering before the theme has finished loading.
+
+.. html ::
+
+  <html>
+  <head>
+      <title>Hello, Dijit</title>
+      <link rel="stylesheet" href="lib/dojox/calendar/themes/claro/Calendar.css">
+      <script src="lib/dojo/dojo.js"></script>
+      <script type="text/javascript">
+        require("dojox/Calendar");
+      </script>
+  </head>
+  <body class="claro">
+    
+  </body>
+  </html>
+
+
 You can create a calendar widget either with markup or programmatically.
 
 The following example shows how to declare a calendar widget in markup:
@@ -82,7 +117,6 @@ The following example shows how to declare a calendar widget programmatically:
                                                                         
     <div id="someId" >
     </div>  
-    
 
 Configuring Calendar data
 =========================
