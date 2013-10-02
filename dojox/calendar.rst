@@ -56,7 +56,7 @@ where widgets start rendering before the theme has finished loading.
       <link rel="stylesheet" href="lib/dojox/calendar/themes/claro/Calendar.css">
       <script src="lib/dojo/dojo.js"></script>
       <script type="text/javascript">
-        require("dojox/Calendar");
+        require("dojox/calendar/Calendar");
       </script>
   </head>
   <body class="claro">
