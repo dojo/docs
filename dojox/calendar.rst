@@ -53,7 +53,6 @@ where widgets start rendering before the theme has finished loading.
 
   <html>
   <head>
-      <title>Hello, Dijit</title>
       <link rel="stylesheet" href="lib/dojox/calendar/themes/claro/Calendar.css">
       <script src="lib/dojo/dojo.js"></script>
       <script type="text/javascript">
