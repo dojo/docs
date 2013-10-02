@@ -389,6 +389,7 @@ The main properties of the columns view are:
   * **hourSize** - The desired size in pixels of one hour,
   * **timeSlotDuration** - The duration of minutes of the time slot (must be a divisor of 60),
   * **minColumnWidth** - The minumum width in pixels of a column. 
+
     * If set -1, the columns fill the width of the calendar. 
     * If set to a fixed value and if there's no enough room to show the columns using this value, the view becomes scrollable horizontally. Otherwise, the columns fill the width of the calendar.
 
