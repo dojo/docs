@@ -382,8 +382,8 @@ See Advanced configuration section to see how to change this behavior.
 This view is accessible through the **columnView** property of  the calendar widget.
 
 The main properties of the columns view are:
-  * **startDate**  - The date of the first column,  
-  * **columnCount**  - The number of column to display,
+  * **startDate** * - The date of the first column,  
+  * **columnCount** * - The number of column to display,
   * **minHours** - The first hour displayed by the main sheet,
   * **maxHours** - The last hour displayed (excluded),
   * **hourSize** - The desired size in pixels of one hour,
