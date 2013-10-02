@@ -49,18 +49,24 @@ Then, add a theme class name to the parent <body> element, like:
 It is recommended you include the theme CSS file **before** ``dojo.js`` to avoid any potential race conditions
 where widgets start rendering before the theme has finished loading.
 
+The skeleton of an application is like:
+
 .. html ::
 
+  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
   <html>
   <head>
       <link rel="stylesheet" href="lib/dojox/calendar/themes/claro/Calendar.css">
       <script src="lib/dojo/dojo.js"></script>
       <script type="text/javascript">
-        require(["dojox/calendar/Calendar"]);
+        require(["dojox/calendar/Calendar"], function(Calendar){
+          // javascript code
+        });
       </script>
   </head>
   <body class="claro">
-    
+    <!-- html code here -->
   </body>
   </html>
 
