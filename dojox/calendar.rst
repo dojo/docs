@@ -388,10 +388,11 @@ The main properties of the columns view are:
   * **maxHours** - The last hour displayed (excluded),
   * **hourSize** - The desired size in pixels of one hour,
   * **timeSlotDuration** - The duration of minutes of the time slot (must be a divisor of 60),
-  * **minColumnWidth** - The minumum width in pixels of a column. 
+  * **subColumns** - The definition of sub columns (See Advanced configuration).
+  * **minColumnWidth** - The minumum width in pixels of a column (or a sub column if sub columns are set). 
 
     * If set -1, the columns fill the width of the calendar. 
-    * If set to a fixed value and if there's no enough room to show the columns using this value, the view becomes scrollable horizontally. Otherwise, the columns fill the width of the calendar.
+    * If set to a fixed value and if there's not enough room to show the columns using this minimum width, the view becomes scrollable horizontally. Otherwise, the columns fill the width of the calendar.
 
 Properties with an (*) are computed by the calendar widget.
 
@@ -1152,6 +1153,9 @@ If the sub column value of a data item is matching a sub column value defined in
 
   colView.set("subColumns", ["cal1", "cal2"]);
 
+When several sub columns per column are displayed, each sub column width can be very small.
+In that case, the **minColumnWidth** property can be used to set the minimun width of a sub column.
+The view becomes hotizontally scrollable if there's not enough room/
 
 
 Sub columns header
