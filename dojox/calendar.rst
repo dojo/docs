@@ -66,7 +66,7 @@ The skeleton of an application is like:
       </script>
   </head>
   <body class="claro">
-    <!-- html code here -->
+    <!-- html code -->
   </body>
   </html>
 
