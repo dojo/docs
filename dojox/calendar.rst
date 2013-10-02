@@ -382,15 +382,15 @@ See Advanced configuration section to see how to change this behavior.
 This view is accessible through the **columnView** property of  the calendar widget.
 
 The main properties of the columns view are:
-  * **startDate** * - The date of the first column,  
-  * **columnCount** * - The number of column to display,
-  * **minHours** - The first hour displayed by the main sheet,
-  * **maxHours** - The last hour displayed (excluded),
-  * **hourSize** - The desired size in pixels of one hour,
-  * **timeSlotDuration** - The duration of minutes of the time slot (must be a divisor of 60),
-  * **minColumnWidth** - The minumum width in pixels of a column. 
-    * If set -1, the columns fill the width of the calendar. 
-    * If set to a fixed value and if there's no enough room to show the columns using this value, the view becomes scrollable horizontally. Otherwise, the columns fill the width of the calendar.
+   * **startDate** * - The date of the first column,  
+   * **columnCount** * - The number of column to display,
+   * **minHours** - The first hour displayed by the main sheet,
+   * **maxHours** - The last hour displayed (excluded),
+   * **hourSize** - The desired size in pixels of one hour,
+   * **timeSlotDuration** - The duration of minutes of the time slot (must be a divisor of 60),
+   * **minColumnWidth** - The minumum width in pixels of a column. 
+      * If set -1, the columns fill the width of the calendar. 
+      * If set to a fixed value and if there's no enough room to show the columns using this value, the view becomes scrollable horizontally. Otherwise, the columns fill the width of the calendar.
 
 Properties with an (*) are computed by the calendar widget.
 
