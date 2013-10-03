@@ -1178,6 +1178,20 @@ This property value is function that takes a string as parameter (the sub column
   });
 
 
+To customize the sub column header, the value of a sub column is set on the node.
+For example, using the two previous code sample, we can set the following CSS to style the sub columns header:
+
+.. css ::
+
+  .dojoxCalendarSubHeaderLabel.cal1 {
+    color: #8B0000 !important;
+  }
+			
+  .dojoxCalendarSubHeaderLabel.cal2 {
+    color: #253B91 !important;
+  }
+
+
 Item creation
 '''''''''''''
 
