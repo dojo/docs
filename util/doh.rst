@@ -12,7 +12,7 @@ D.O.H.: Dojo Objective Harness
 Overview
 ========
 
-Usually when people think of a scripting lfanguage, it's often in the context of ease of use, simple syntax,
+Usually when people think of a scripting language, it's often in the context of ease of use, simple syntax,
 and something those without traditional computer science educations can grasp and use.
 JavaScript unfortunately falls into this category.
 For a scripting language, though, is difficult to fully master.
@@ -103,7 +103,7 @@ or
 
    This starts a temporary web server, serving all the files in the current directory.
 
-   You can then launch your browser to http://localhost:8000/util/doh.runner.html to see the tests running.
+   You can then launch your browser to http://localhost:8000/util/doh/runner.html to see the tests running.
 
    Note, however, that some tests will fail because they rely on PHP scripts, which are not supported in this simple web server.
 
