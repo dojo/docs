@@ -41,9 +41,12 @@ The default size is defined by the theme used to display the Switch widget. If y
 .. html ::
 
   <div id="sw" data-dojo-type="dojox/mobile/Switch" style="width: 130px;"></div>
+  <div id="sw" data-dojo-type="dojox/mobile/Switch" style="width: 40%;"></div>
 
 
 .. image :: Switch-CustomSize1.png
+
+If you want to update the `width` **after** the widget is started you **must** call the widget 'resize' function, otherwise the internal layout of your switch will be broken.
 
 When Windows Phone theme is used, overriding the default size has no effect because the labels are displayed beside the switch, not inside:
 
