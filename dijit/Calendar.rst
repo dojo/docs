@@ -244,8 +244,8 @@ Action                                        Key
 Navigate between date cells                   Left, Right, Up, and down arrows
 Navigate to same day in next month            Page-down
 Navigate to same day in previous month        Page-up
-Navigate to same day in next year             Control+Page-down
-Navigate to same day in previous year         Control+Page-up
+Navigate to same day in next year             Alt+Page-down
+Navigate to same day in previous year         Alt+Page-up
 Navigate to first day in month                Home
 Navigate to last day in month                 End
 Select the date                               Enter, Space
