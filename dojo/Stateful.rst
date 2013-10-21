@@ -232,7 +232,7 @@ Examples
       
       // Creating a watch handler
       function watchCallback(name, oldValue, value){
-        domConst.place("<br />change: " + name + " from: " + oldValue + " to: " + value, "output");
+        domConst.place("<br>change: " + name + " from: " + oldValue + " to: " + value, "output");
       }
       
       // Setting watches
@@ -241,8 +241,8 @@ Examples
       
       // Setting "click" event handler
       on(dom.byId("startButton"), "click", function(){
-        domConst.place("aFoo.get('foo'): " + aFoo.get("foo"), "output");
-        domConst.place("<br />aFoo.get('bar'): " + aFoo.get("bar"), "output");
+        domConst.place("<br>aFoo.get('foo'): " + aFoo.get("foo"), "output");
+        domConst.place("<br>aFoo.get('bar'): " + aFoo.get("bar"), "output");
         aFoo.set("foo", 1);
         aFoo.set("bar", 2);
       });
@@ -267,11 +267,11 @@ Examples
       var FooClass = declare([Stateful], {
         foo: null,
         _fooGetter: function(){
-          domConst.place("<code>_fooGetter()</code> called<br />", "output");
+          domConst.place("<code>_fooGetter()</code> called<br>", "output");
           return this.foo;
         },
         _fooSetter: function(value){
-          domConst.place("<code>_fooSetter()</code> called<br />", "output");
+          domConst.place("<code>_fooSetter()</code> called<br>", "output");
           this.foo = value;
         }
       });
@@ -280,8 +280,8 @@ Examples
         var aFoo = new FooClass({
           foo: "bar"
         });
-        domConst.place("<code>aFoo.get('foo')</code>: " + aFoo.get("foo") + "<br />", "output");
-        domConst.place("<code>aFoo.set('foo', 'baz')</code>...<br />", "output");
+        domConst.place("<code>aFoo.get('foo')</code>: " + aFoo.get("foo") + "<br>", "output");
+        domConst.place("<code>aFoo.set('foo', 'baz')</code>...<br>", "output");
         aFoo.set("foo", "baz");
       });
       
@@ -307,7 +307,7 @@ Examples
       var FooClass = declare([Stateful], {
         foo: null,
         _fooSetter: function(value){
-          domConst.place("<code>_fooSetter()</code> called<br />", "output");
+          domConst.place("<code>_fooSetter()</code> called<br>", "output");
           var d = new Deferred();
           
           var self = this;
@@ -323,11 +323,11 @@ Examples
       var aFoo = new FooClass();
       
       aFoo.watch("foo", function(name, oldValue, value){
-        domConst.place("<code>" + name + "</code> changed from: " + oldValue + " to: " + value + "<br />", "output");
+        domConst.place("<code>" + name + "</code> changed from: " + oldValue + " to: " + value + "<br>", "output");
       });
       
       on(dom.byId("startButton"), "click", function(){
-        domConst.place("<code>aFoo.set('foo', 'bar')</code>...<br />", "output");
+        domConst.place("<code>aFoo.set('foo', 'bar')</code>...<br>", "output");
         aFoo.set("foo", "bar");
       });
     });
