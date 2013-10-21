@@ -12,7 +12,7 @@ D.O.H.: Dojo Objective Harness
 Overview
 ========
 
-Usually when people think of a scripting lfanguage, it's often in the context of ease of use, simple syntax,
+Usually when people think of a scripting language, it's often in the context of ease of use, simple syntax,
 and something those without traditional computer science educations can grasp and use.
 JavaScript unfortunately falls into this category.
 For a scripting language, though, is difficult to fully master.
