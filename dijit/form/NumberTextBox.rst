@@ -57,7 +57,8 @@ This example defines a ``min`` and ``max`` constraint and an initial value.
         required="true"
         value="3000"
         data-dojo-props="constraints:{min:-20000,max:20000,places:0},
-        invalidMessage:'Invalid elevation.'" />
+        invalidMessage:'Please enter a numeric value.',
+        rangeMessage:'Invalid elevation.'" />
 
 
 Programmatic example
