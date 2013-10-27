@@ -351,6 +351,11 @@ Transform: writeOptimized
   * ["closure"] All layer modules are processed by the Google Closure compiler, simple-mode; new-lines are *not*
     preserved; the semantics of the ``stripConsole`` property are executed.
 
+  * ["uglify.keeplines"] All layer modules are processed by the UglifyJS compiler (version 1 only), simple-mode; new-lines are
+    preserved; the semantics of the ``stripConsole`` property are executed.
+
+  * ["uglify"] All layer modules are processed by the UglifyJS compiler (version 1 only), simple-mode; new-lines are *not*
+    preserved; the semantics of the ``stripConsole`` property are executed.
 
 ``optimize`` (default = "undefined")
   * [*falsy*] Non-layer modules are not optimized; the ``stripConsole`` profile property, if any, is ignored.
@@ -373,8 +378,14 @@ Transform: writeOptimized
   * ["closure"] All non-layer modules are processed by the Google Closure compiler, simple-mode; new-lines are *not*
     preserved; the semantics of the ``stripConsole`` property are executed.
 
+  * ["uglify.keeplines"] All layer modules are processed by the UglifyJS compiler (version 1 only), simple-mode; new-lines are
+    preserved; the semantics of the ``stripConsole`` property are executed.
+
+  * ["uglify"] All layer modules are processed by the UglifyJS compiler (version 1 only), simple-mode; new-lines are *not*
+    preserved; the semantics of the ``stripConsole`` property are executed.
+
 **Important**: Dead code removal consequent to static has.js feature values and the hasFixup transform requires a Google
-  Closure compiler optimization switch setting
+  Closure or UglifyJS compiler optimization switch setting. To use UglifyJS, you will need to ``npm install uglify-js@1``, in a directory parallel to ``util``
 
 ``stripConsole`` (default = "normal")
   * ["none"] No console applications are stripped.
