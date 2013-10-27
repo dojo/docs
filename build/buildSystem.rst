@@ -950,7 +950,7 @@ for complete documentation.
 
 * :ref:`writeDojo <build/transforms/writeDojo>`: Outputs a module that includes the dojo loader; this transform is responsible for writing dojo.js.
 
-* :ref:`writeOptimized <build/transforms/writeOptimized>`: Processes a resource with shrinksafe or the closure compiler and writes the result to the file system.
+* :ref:`writeOptimized <build/transforms/writeOptimized>`: Processes a resource with shrinksafe, closure, or uglifyjs (version 1.x) compiler and writes the result to the file system.
 
 Applying Transforms
 ===================
@@ -982,7 +982,7 @@ below, in the order listed. The first test that passes indicates the transforms 
   * Find all has.js applications (hasFindAll)
   * Trim dead code branches as given by static, build-time has feature values (hasFixup)
   * Write the processed loader module to the destination with a configuration (writeDojo)
-  * Optimize the module with shrinksafe or the closure compiler and write the optimized module to the destination (writeOptimized).
+  * Optimize the module with shrinksafe, closure, or uglifyjs (version 1.x) compiler and write the optimized module to the destination (writeOptimized).
 
 6. Modules with the segment ``"/nls/"`` in their module identifier
 
@@ -1000,7 +1000,7 @@ below, in the order listed. The first test that passes indicates the transforms 
 
   * Find all dependencies for the module (depsScan)
   * Write the processed  module to the destination (writeAmd)
-  * Optimize the module with shrinksafe or the closure compiler and write the optimized module to the destination (writeOptimized).
+  * Optimize the module with shrinksafe, closure, or uglifyjs (version 1.x) compiler and write the optimized module to the destination (writeOptimized).
 
 9. Tagged ``"amd"``
 
@@ -1011,7 +1011,7 @@ below, in the order listed. The first test that passes indicates the transforms 
   * Trim dead code branches as given by static, build-time has feature values (hasFixup)
   * Find all dependencies for the module (depsScan)
   * Write the processed  module to the destination (writeAmd)
-  * Optimize the module with shrinksafe or the closure compiler and write the optimized module to the destination (writeOptimized).
+  * Optimize the module with shrinksafe, closure, or uglifyjs (version 1.x) compiler and write the optimized module to the destination (writeOptimized).
 
 
 10. Resource has a filetype of ".js" and is tagged ``"test"`` and ``profile.copyTests`` is build

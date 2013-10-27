@@ -80,7 +80,7 @@ for complete documentation.
   Outputs a module that includes the dojo loader; this transform is responsible for writing dojo.js.
 
 :ref:`writeOptimized <build/transforms/writeOptimized>`
-  Processes a resource with shrinksafe or the closure compiler and writes the result to the file system.
+  Processes a resource with shrinksafe, closure, or uglifyjs (version 1.x) compiler and writes the result to the file system.
 
 The Dojo Build System Prior to version 1.7
 ==========================================
