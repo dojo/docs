@@ -11,7 +11,7 @@ dojo/promise/all
     :depth: 2
 
 **dojo/promise/all** is a function that takes multiple promises and returns a new promise that is fulfilled when all
-promises have been fulfilled.
+promises have been resolved or one has been rejected.
 
 Introduction
 ============
