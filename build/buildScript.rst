@@ -100,6 +100,9 @@ optimize=
   closure
      Minify with the Google Closure compiler.  Requires Java 6.
 
+  uglify
+     Minify with the UglifyJS compiler (version 1.x).  Requires ``npm install uglify-js@1``, in a directory parallel to ``util``.
+
   packer
      Minify with Dean Edwards' Packer.
 
@@ -121,7 +124,7 @@ xdDojoPath=
 stripConsole=
   Strips console method calls from JS source. Applied to layers and individual modules resource files. Valid values are "normal" (strips all but console.warn and console.error calls), "all" (strips all console calls), "normal,warn" (strips all but console.error calls), "normal,error" (strips all but console.warn errors).
 
-version=0.0.0.dev
+version=0.0.0-dev
   The build will be stamped with this version string.  That is, the ``dojo.version`` value specified in the as built version will contain this version number.
 
   This parameter does not affect the names of the directories created by the build system.
