@@ -19,7 +19,7 @@ This section contains links to information useful to contributors or committers 
 
 * :ref:`Using Trac and Dojo / Notes for Committers <developer/bugs>`
 
-* :ref:`Projects <developer/projects>` - roadmap and planned future projects
+* :ref:`Projects <developer/projects>` - roadmap and planned future projects.
 
 * :ref:`Cutting a Dojo Release/RC/Beta <developer/release>`
 
