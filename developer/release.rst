@@ -27,18 +27,21 @@ Creating a Dojo Release/RC/Beta
 4. Follow the prompts
 5. Update download.dojotoolkit.org/index.html with the new version information. If it’s a new major release, make sure to list the previous release under “Releases”.
 6. If it is a new release of the current latest release branch, update dojotoolkit.org/download too.
-7. Add new version and milestone numbers to Trac.
-8. Bulk move all open tickets to the next release number in Trac.
-9. Send an email to dojo-contributors and dojo-interest mailing lists. If possible, include a picture of a puppy or
-   something.
-10. Send an email to your friendly CDN manager asking them to copy over the new CDN build.
-11. Celebrate!
+7. If you have access to publish on npm, check out the tag for the `dojo` package and `npm publish`.
+8. Add new version and milestone numbers to Trac.
+9. Bulk move all open tickets to the next release number in Trac.
+10. Send an email to dojo-contributors and dojo-interest mailing lists. If possible, include a picture of a puppy or
+    something.
+11. Send an email to your friendly CDN manager asking them to copy over the new CDN build.
+12. Celebrate!
 
 Creating a new DTK branch (for new major versions)
 ==================================================
 
-1. Run ``git checkout -b <version> <commit>`` where <version> is the new branch and <commit> is the commit that it should start from
-2. Update ``package.json`` and ``dojo/_base/kernel.js`` with the new version.
-3. Run ``git commit -a -m "Updating versions for <version> branch"``
-4. Run ``git push``
-5. Git is awesome. Have a beer.
+After performing the normal release, for each repo:
+
+1. Run `git checkout -b x.x` where `x.x` is the new major version
+2. `git push -u origin x.x` to push the new branch upstream
+3. `git checkout master`
+4. Update all the versioned files with the new major version of the next release;
+   see `VERSION_FILES` in `util/buildscripts/build_release.sh` for a list of versioned files in each repo
