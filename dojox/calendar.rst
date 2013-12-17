@@ -681,7 +681,7 @@ During the addition in the store, an identifier must be assigned to this data it
     }
   });
 
-The calendar is not changing the data item so it use the options to pass the temporary identifier.
+The calendar is not changing the data item so it uses the options to pass the temporary identifier.
 
 Calendar events
 ===============
@@ -910,7 +910,7 @@ In that case, the time label on item renderers and the time displayed in the row
 .. js ::
 
   calendar.set("formatItemTimeFunc", 
-    function(d, rd){ 
+    function(d, rd, view, item){ 
       return rd.dateLocaleModule.format(d, 
       {  selector: 'time', 
          timePattern: d.getMinutes() == 0 ? "H'h'":"H'h'mm"
