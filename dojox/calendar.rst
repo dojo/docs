@@ -659,6 +659,29 @@ The following example is showing an implementation of the createItemFunc that is
   calendar.set("createOnGridClick", true);
   calendar.set("createItemFunc", createItem);
 
+
+No identifier use case
+``````````````````````
+
+If the data item return by the createItemFunc does not have an identifier, the calendar will create a temporary one internally to be able to manage this data item. 
+
+During the addition in the store, an identifier must be assigned to this data item. The calendar must be able to link the temporary identifier to the real one. The data item must contain the **temporaryId** property to make this link and clean its internal state. An implementation is to subclass the store like in the following example.
+
+.. js ::
+  var ExtJsonStore = declare(JsonRest, {
+    add: function(object, options){
+      var tempId = options && options.temporaryId;
+      var def = new Deferred();
+      when(this.inherited(arguments), function(item){
+        item.temporaryId = tempId;
+        def.resolve(item);
+      });
+      return def;
+    }
+  });
+
+The calendar is not changing the data item so it use the options to pass the temporary identifier.
+
 Calendar events
 ===============
 
@@ -870,7 +893,7 @@ We can define a function to have a more compact display:
 .. js ::
 
   new Calendar({
-    formatItemTimeFunc: function(d, rd){
+    formatItemTimeFunc: function(d, rd, view, item){
       return rd.dateLocaleModule.format(d, {
         selector: 'time', 
         timePattern: d.getMinutes() == 0 ? "ha":"h:mma"
@@ -900,7 +923,7 @@ if the calendar instance is already declared or in the calendar constructor:
 .. js ::
 
   new Calendar({
-    formatItemTimeFunc: function(d, rd){
+    formatItemTimeFunc: function(d, rd, view, item){
       return rd.dateLocaleModule.format(d, {
         selector: 'time', 
         timePattern: d.getMinutes() == 0 ? "ha":"h:mma"
@@ -911,6 +934,8 @@ if the calendar instance is already declared or in the calendar constructor:
     }
   });
 
+This formatItemTimeFunc property can be set on the calendar or on a sub view.
+If the property is set on the calendar and on a view, the one set on the view takes precedence.
 
 
 Common properties
