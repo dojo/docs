@@ -668,6 +668,7 @@ If the data item return by the createItemFunc does not have an identifier, the c
 During the addition in the store, an identifier must be assigned to this data item. The calendar must be able to link the temporary identifier to the real one. The data item must contain the **temporaryId** property to make this link and clean its internal state. An implementation is to subclass the store like in the following example.
 
 .. js ::
+
   var ExtJsonStore = declare(JsonRest, {
     add: function(object, options){
       var tempId = options && options.temporaryId;
