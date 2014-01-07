@@ -243,7 +243,7 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
 
 
 If you want to handle the onSubmit event like a traditional <form> element, you will need to employ a <form> either as 
-a traditional HTML element or as a ''dijit.form.Form''.
+a traditional HTML element or as a ''dijit/form/Form''.
 This example shows a Dialog with an embedded Form which
 handles the onSubmit event, validation, and an xhrPost to the server.
 
@@ -360,13 +360,13 @@ External Dialog content using HREF attribute
 --------------------------------------------
 
 You can also load dialog content from another page by setting HREF attribute for the widget.
-Note that the dijit.Dialog doesn't execute script tags inline external content.
+Note that the dijit/Dialog doesn't execute script tags inline external content.
 However, it parses the page for widgets,
 so you can add functionality to widgets by connecting into widget extension points using declarative markup
 (DojoML; e.g. ``<script type="dojo/method" data-dojo-event="onClick">``).
 
-The :ref:`dojox.widget.DialogSimple <dojox/widget/DialogSimple>` provides the ``executeScripts`` functionality
-of :ref:`dojox.layout.ContentPane <dojox/layout/ContentPane>` into ``dijit.Dialog``.
+The :ref:`dojox/widget/DialogSimple <dojox/widget/DialogSimple>` provides the ``executeScripts`` functionality
+of :ref:`dojox/layout/ContentPane <dojox/layout/ContentPane>` into ``dijit/Dialog``.
 
 .. code-example ::
 
@@ -495,7 +495,7 @@ Known Issues
   * In IE 8 with JAWS 10 and JAWS 11 the dialog information and title is not spoken. This is due to the fact that IE 8 
     does not support the ARIA labelledby property that is used to assign the title to the dialog.
 * When loading Dialog content with the href property, there can be issues with scrolling in IE7: If the loaded content 
-  contains dijit.layout elements and the Dialog content is larger than the size of the dialog, the layout dijits do 
+  contains dijit/layout elements and the Dialog content is larger than the size of the dialog, the layout dijits do 
   not scroll properly in IE7. The workaround for this issue is to set the 'position:relative' style to the 
   dialog.containerNode:
 * Dialogs with an iframe as the contents will cause a focus trap and are not supported. This because the dialog code 
@@ -523,8 +523,8 @@ Known Issues
 See also
 ========
 
-* :ref:`dojox.widget.DialogSimple <dojox/widget/DialogSimple>` - mixin of dijit.Dialog and dojox.layout.ContentPane
-* :ref:`dojox.widget.Dialog <dojox/widget/Dialog>` - more flexible dialog allowing animations and different styles/theme support
-* :ref:`dojox.image.Lightbox <dojox/image/Lightbox>` - a dojo-based Lightbox implementation
-* :ref:`dojox.image.LightboxNano <dojox/image/LightboxNano>` - a simple "nano" version of the dojox.image.Lightbox (without captions, descriptions...)
+* :ref:`dojox/widget/DialogSimple <dojox/widget/DialogSimple>` - mixin of dijit/Dialog and dojox/layout/ContentPane
+* :ref:`dojox/widget/Dialog <dojox/widget/Dialog>` - more flexible dialog allowing animations and different styles/theme support
+* :ref:`dojox/image/Lightbox <dojox/image/Lightbox>` - a dojo-based Lightbox implementation
+* :ref:`dojox/image/LightboxNano <dojox/image/LightboxNano>` - a simple "nano" version of the dojox/image/Lightbox (without captions, descriptions...)
 * :ref:`dijit/TooltipDialog <dijit/TooltipDialog>` - modal tooltip with rich content for user interactions (forms ...)
