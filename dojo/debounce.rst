@@ -1,8 +1,8 @@
 .. _dojo/debounce:
 
-=======
+=============
 dojo/debounce
-=======
+=============
 
 :Authors: Benjamin Santalucia
 :Project owner: 
@@ -42,7 +42,7 @@ Examples
 ========
 
 debounce a topic callback
-----------------
+-------------------------
 
 .. code-example ::
   :djConfig: async: true

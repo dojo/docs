@@ -1,8 +1,8 @@
 .. _dojo/throttle:
 
-=======
+=============
 dojo/throttle
-=======
+=============
 
 :Authors: Benjamin Santalucia
 :Project owner: 
@@ -42,7 +42,7 @@ Examples
 ========
 
 throttle a topic callback
-----------------
+-------------------------
 
 .. code-example ::
   :djConfig: async: true
