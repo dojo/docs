@@ -813,6 +813,13 @@ See :ref:`Style on Lines, Areas, Bars, Columns, Bubble & Pie plots <dojox/charti
   chart.addSeries("Series 1", [1, 2, 4, 5, 5, 7], {stroke: {color: "blue", width: 2},
       fill: "lightblue"});
 
+You can also make sure a particular series is hidden (that means that chart will ignore initially but it might then be show using a SelectableLegend)
+
+.. js ::
+
+  chart.addSeries("Series 1", [1, 2, 4, 5, 5, 7], {hidden: true});
+
+
 The data array, is just an array of data. All plot types can accept a one dimensional array, but there are some additional format options available based on the type of chart. With a one-dimensional array for cartesian type graphs (lines, columns...) the X axis will be integers; 1,2,3... and the data will be mapped to the Y axis. For bar type plots the X and Y axis are inverted. Finally for pie type charts the sum of the array is your whole pie, each data point representing a slice. All the plot types except pie can have multiple series.
 
 .. js ::
@@ -1461,13 +1468,14 @@ Yes, it is that simple! just define a <div> with the class "action" and supply t
 
 The Chart Legend Widget
 -----------------------
-You can add a legend widget to your charts using dojox.charting.widget.Legend.  The legend automatically takes on the shape markers and colors of the chart to which it is attached. By default the Legend widget uses the "legend" parameter of a series. It reverts to the "name" parameter if legend is not specified.
+You can add a legend widget to your charts using dojox/charting/widget/Legend.  The legend automatically takes on the shape markers and colors of the chart to which it is attached. By default the Legend widget uses the "legend" parameter of a series. It reverts to the "name" parameter if legend is not specified.
 
 For a pie chart, the behavior of a Legend is different: if the chart was specified with an array of numbers, it will use numbers. Otherwise it will check object properties in the following order: "legend", "text", and the numeric value.
 
 Interactive Legend Widget
 -------------------------
-An interactive legend for all dojo charts that allows the end-user to click and select/deselect which of the chart series should be displayed on the chart. And series will be highlighted when corresponding legend icon is hovered. By default the border and the body of series vanished when series deselected, you can set "outline" as "true" to keep the border of vanished series. The declaration of interactive legend is as follows.
+An interactive legend for all dojo charts that allows the end-user to click and select/deselect which of the chart series should be displayed/hidden on the chart.
+With the legend series will also be highlighted when corresponding legend icon is hovered. By default the border and the body of series vanished when series deselected, you can set "outline" as "true" to keep the border of vanished series. The declaration of interactive legend is as follows:
 
 .. js ::
 
@@ -1475,6 +1483,8 @@ An interactive legend for all dojo charts that allows the end-user to click and 
     // ...
     var selectableLegend = new SelectableLegend({chart: chart, outline: true}, "selectableLegend");
   });
+
+One can use the SelectableLegend autoScale property in order to decide whether the chart will update its scales when displaying or hidding a series.
 
 
 Examples
