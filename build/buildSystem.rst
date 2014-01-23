@@ -330,7 +330,7 @@ When exercised with the ``check-args`` switch, you should see something like thi
 Configuration Resources
 ------------------------
 
-The command switch ``dojoConfig`` causes the build system read a configuration as given by a variable ``dojoConfig`` as
+The command switch ``dojoConfig`` causes the build system to read a configuration as given by a variable ``dojoConfig`` as
 if it was an ordinary profile. The next section describes how the build system consumes configurations. Also note that
 the dojo loader will simply ignore any configuration variable that it does not define. These two features combine to
 allow all or part of an application's build profile to be contained within the application configuration. For example,
