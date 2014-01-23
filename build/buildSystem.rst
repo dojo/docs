@@ -269,7 +269,7 @@ contain a file type. When a profile argument is given with no file type, *and* t
 segments, *and* the profile resource does not exist in the current working directory, then the build system will try to
 find the profile in the /util/buildscripts/profiles directory after appending the file type ".profile.js". It is
 possible to specify a profile with a file type different than ".profile.js" by including the file type in the profile
-argument. Or course your can give the ".profile.js" type explicitly as well.
+argument. Of course you can give the ".profile.js" type explicitly as well.
 
 Notice that the property ``basePath`` was automatically added to the profile object and set to the path at which the
 profile resides. If the profile contains the property ``basePath`` and the value of that property is a relative
