@@ -540,7 +540,7 @@ The calendar widget allows to move and resize a data item.
 
 Only one data item can be edited at a time. 
 
-Note: for more information on data item editing behavior and events, See dedicated section of advanced configuration: _`Data item editing`
+Note: for more information on data item editing behavior and events, See dedicated section of advanced configuration: `Editing flags`_
 
 Using the mouse
 ```````````````
@@ -1557,15 +1557,15 @@ There are some specifics depending on the device used:
 Editing flags
 `````````````
 
-The editable property allows to globally enable or disable the editing capability of the widget.
+The **editable** property allows to globally enable or disable the editing capability of the widget.
 
-If the editable property is true, the moveEnabled and resizeEnabled properties allow to control respectively if a data item can be moved or resized.
+If the editable property is true, the **moveEnabled** and **resizeEnabled** properties allow to control respectively if a data item can be moved or resized.
 
 To have a control of editing, move or resize at the data item level, override respectively the isItemEditable(), isItemMoveEnabled() or isItemResizeEnabled() functions of the Calendar class.
 
 The following example shows how to subclass the Calendar to override these functions to:
-  * allow resize of a data item if "editable" and "resizeEnabled" properties of the data item are resolved as *true*,
-  * allow move of a data item if "editable" and "moveEnabled" properties of the data item are resolved as *true*.
+  * allow resize of a data item if **editable** and **resizeEnabled** properties of the data item are resolved as *true*,
+  * allow move of a data item if **editable** and **moveEnabled** properties of the data item are resolved as *true*.
 
 .. css ::
 
