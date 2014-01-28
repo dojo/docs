@@ -540,7 +540,7 @@ The calendar widget allows to move and resize a data item.
 
 Only one data item can be edited at a time. 
 
-Note: for more information on data item editing behavior and events, See dedicated section of advanced configuration: _Data item editing
+Note: for more information on data item editing behavior and events, See dedicated section of advanced configuration: `Data item editing`_
 
 Using the mouse
 ```````````````
