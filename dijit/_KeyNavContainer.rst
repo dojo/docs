@@ -34,9 +34,9 @@ Examples
     .. js ::
 
         require([
-            "dojo/_base/declare", "dojo/keys", "dojo/parser", "dojo/query",
+            "dojo/_base/declare", "dojo/_base/array", "dojo/keys", "dojo/parser", "dojo/query",
             "dijit/_WidgetBase", "dijit/_KeyNavContainer", "dojo/domReady!"
-        ], function(declare, keys, parser, query,  _WidgetBase, _KeyNavContainer){
+        ], function(declare, array, keys, parser, query,  _WidgetBase, _KeyNavContainer){
             MyMenu = declare([_WidgetBase, _KeyNavContainer], {
                 buildRendering: function(){
                     // This is a behavioral widget so we'll just use the existing DOM.
@@ -51,11 +51,24 @@ Examples
                     // Don't forget the this.inherited() call
                     this.inherited(arguments);
 
-                    // Setup keyboard navigation
-                    this.connectKeyNavHandlers([keys.UP_ARROW], [keys.DOWN_ARROW]);
-
                     // Set tabIndex on the container <table> node, since by default it's not tab navigable
                     this.domNode.setAttribute("tabIndex", "0");
+                },
+
+                _focusedChildIndex: function(children){
+                    // summary:
+                    //      Helper method to return the index of the currently focused child in the array
+                    return array.indexOf(children, this.focusedChild);
+                },
+
+                _onDownArrow: function(){
+                    var children = this.getChildren();
+                    this.focusChild(children[(this._focusedChildIndex(children)+1) % children.length]);
+                },
+
+                _onUpArrow: function(){
+                    var children = this.getChildren();
+                    this.focusChild(children[(this._focusedChildIndex(children)-1 + children.length) % children.length]);
                 }
             });
 
