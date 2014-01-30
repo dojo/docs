@@ -128,13 +128,13 @@ The members of the ``version`` object are integers, and can be checked individua
     var v = kernel.version;
     if(v.major > 1){
       // this is Dojo 2.x or greater
-    }else{
-      // this id Dojo 1.x
+    }else if(v.major === 1){
+      // this is Dojo 1.x
       switch(v.minor){
        case 1: console.log("1.1.x specific code"); break;
        case 2: console.log("1.2.x specific code"); break;
-       case 9: console.log("this is 0.9, as major is less than 1, but not 1"); break;
-    }
+       case 8: console.log("1.8.x specific code"); break;
+      } 
     }
   });
 
