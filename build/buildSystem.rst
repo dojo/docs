@@ -49,7 +49,7 @@ own custom transforms and configuring the build system for other uses.
 Overview
 ========
 
-The design of the system is simple. It "discovers" a set of resources and then applies a synchronized, ordered set of
+The design of the system is somewhat complex. It "discovers" a set of resources and then applies a synchronized, ordered set of
 resource-dependent transforms to those resources. Both the discovery process and the transforms are controlled by a
 user-configurable JavaScript object termed a "profile".
 
@@ -920,7 +920,7 @@ for complete documentation.
 
 * :ref:`copy <build/transforms/copy>`: Copies a resource from a source location to a destination location.
 
-* :ref:`depsDeclarative <build/transforms/depsDeclarative>`: Scans declarative resrouces for dependencies and replaces the resource in any layer with any discovered dependencies.
+* :ref:`depsDeclarative <build/transforms/depsDeclarative>`: Scans declarative resources for dependencies and replaces the resource in any layer with any discovered dependencies.
 
 * :ref:`depsDump <build/transforms/depsDump>`: Prints the module dependency graph of one or more modules.
 
