@@ -49,7 +49,7 @@ own custom transforms and configuring the build system for other uses.
 Overview
 ========
 
-The design of the system is simple. It "discovers" a set of resources and then applies a synchronized, ordered set of
+The design of the system is somewhat complex. It "discovers" a set of resources and then applies a synchronized, ordered set of
 resource-dependent transforms to those resources. Both the discovery process and the transforms are controlled by a
 user-configurable JavaScript object termed a "profile".
 
