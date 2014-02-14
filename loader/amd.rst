@@ -539,7 +539,7 @@ being returned:
   define(["text"], function(text){ //...
   define(["dojo/text"], function(text){ //...
 
-There is one particular scenario where using aliases is the optimal solution.  Two different absolute module identifiers
+There is one particular scenario where using aliases is not the optimal solution.  Two different absolute module identifiers
 as calculated after Step 6 of the `Normalizing Module Identifiers`_ process will always result in two different modules
 being instantiated - even if they normalize to the same path. This means you can't solve this problem using
 ``paths``. For example, assuming ``baseUrl`` points to the dojo directory, you **can't** alias "text" to "dojo/text"
