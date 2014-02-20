@@ -26,7 +26,7 @@ customize the behavior of accessing the property by providing auto-magic getters
 Usage
 =====
 
-Usage of the class can be an instance of the class, although subclassing is recommended.
+You can create an instance of ``dojo/Stateful`` directly, but creating a subclass is recommended:
 
 .. js ::
 
