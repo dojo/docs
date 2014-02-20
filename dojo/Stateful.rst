@@ -323,14 +323,37 @@ constructor:
 
   var Person = declare([Stateful], {
 
+    // firstName: String?
+    //   The first name of this person.
+    //   Optional. Cannot be `undefined` or the empty string.
     firstName: null,
 
+    // lastName: String?
+    //   The last name of this person.
+    //   Optional. Cannot be `undefined` or the empty string.
     lastName: null,
 
+    // company: String?
+    //   The name of the company this person works at.
+    //   Optional. Cannot be `undefined` or the empty string.
     company: null,
 
+    _firstNameSetter: function(/*String?*/ str) {
+      this._set("firstName", str ? str.trim() : null);
+    },
+
+    _lastNameSetter: function(/*String?*/ str) {
+      this._set("lastName", str ? str.trim() : null);
+    },
+
+    _companySetter: function(/*String?*/ str) {
+      this._set("company", str ? str.trim() : null);
+    },
+
     getFullName: function() {
-      return this.get("firstName") + " " + this.get("lastName");
+      var firstName = this.get("firstName");
+      var lastName = this.get("lastName");
+      return (firstName ? firstName + " " : "") + (lastName || "");
     },
 
     // ...
@@ -338,6 +361,14 @@ constructor:
   });
 
 This leaves nothing to be done in the constructor as well.
+
+The added benefit of this idiom is that you only need to write any checks or transformations only once,
+in the setter, and you do not need to repeat this code in the constructor. The constructor always delivers
+an "empty" setting, and any changes will go through the setter code.
+
+In this example, we want to make sure that the "N/A" value is always ``null``. It is confusing if the names
+can be ``null``, as well as ``undefined``, as ``""``. This code makes sure that the names are either sensible
+strings (trimmed), or ``null``, and nothing else.
 
 The only real need to do something in the constructor using :ref:`dojo/_base/declare <dojo/_base/declare>`
 is when you have instance properties that are references, that you don't want to be ``null`` or ``undefined``
@@ -350,6 +381,7 @@ Suppose our Person has siblings:
 
     // ...
 
+    // _siblings: Person[]
     _siblings: undefined,
 
     constructor: function() {
