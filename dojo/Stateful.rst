@@ -216,39 +216,23 @@ resolved. If the promise is rejected, the watch will not be called. For example:
 Constructor and object initialization
 -------------------------------------
 
-Classes you ``declare`` with :ref:`dojo/_base/declare <dojo/_base/declare>` can have a `postscript` method that is
-executed immediately after all the chained constructors in the inheritance chain have finished. In ``Stateful``,
-this method is used to do `object initialization` if an instance is constructed with an Object argument:
+Constructing and initializing an instance
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You should always be able to construct an object of a subclass of ``Stateful`` without any arguments:
 
 .. js ::
 
     // Create an instance and initialize some property values:
-    var person = new Person({
-      firstName: "John",
-      lastName: "Doe",
-      company: "Acme"
-    });
+    var person = new Person();
 
-Your subclass can extend this method, but should not override it:
+This should give you an "empty" object, with all properties initialized to default values.
 
-.. js ::
+This means subclasses of ``Stateful`` `cannot have mandatory properties that do not have a sensible default`.
+Such properties require an initial value in the constructor, which violates the requirement for a no-arguments
+constructor.
 
-  require(["dojo/Stateful", "dojo/_base/declare"], function(Stateful, declare){
-
-    var Person = declare([Stateful], {
-
-      postscript: function(kwargs) {
-        this.inherited(arguments);
-        // do your postscript stuff
-        // ...
-      }
-
-    });
-
-The constructor in every subclass in the inheritance chain should do its bit to deliver an "empty" instance with
-default values for all properties. The constructor should `not` be used to set initial values for properties.
-
-Calling the constructor with an Object argument is only syntactic sugar.
+You can also call the constructor with an Object argument. This is merely syntactic sugar for `object initialization`:
 
 .. js ::
 
@@ -267,18 +251,23 @@ is completely equivalent to
     person.set("lastName", "Doe");
     person.set("company", "Acme");
 
-Note that this is exactly the same thing as C# `object initializers
-<http://msdn.microsoft.com/en-us/library/bb384062.aspx>`_. The C# equivalent of the example would be:
+Note that this is exactly the same thing as `object initializers
+<http://msdn.microsoft.com/en-us/library/bb384062.aspx>`_ in C# and some other languages.
+The C# equivalent of the example would be:
 
 .. js ::
 
+    /* C# code */
     Person person = new Person {
       firstName = "John",
       lastName = "Doe",
       company = "Acme"
     };
 
-There is a good reason for this. For classes in the model, viewmodel and view, that have state (i.e., are mutable),
+Why is a no-arguments constructor mandatory?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For classes in the model, viewmodel and view, that have state (i.e., are mutable),
 the only good programming idiom is to have `only a default, no-arguments constructor`. These are exactly the kinds of
 classes that would be `Stateful`.
 
@@ -291,21 +280,25 @@ Sure, every time you get an existing object from the server, it will have a `fir
 should also be able to create a new person in the UI, and for that he needs to be able to start out with an "empty"
 form. It makes things very difficult if you cannot bind a (view)model object to that empty form, so the (view)model
 object must allow even semantically mandatory fields to be empty. Such an object might not be "valid" for sending to
-the server, but it must be able to exist.
+the server, but it must be able to exist. A "correct" JavaScript object (i.e., the instance adheres to its invariants
+and will function correctly) is not necessarily a semantically valid object. A semantically valid object should always
+be a "correct" JavaScript object, though.
 
 In a language like Java or C#, you might then add further overloaded constructor methods, for convenience, but you
 quickly learn that you then have to write overloaded methods for all possible combinations, if that is possible at all.
 Each of these methods carries a slightly different version of initialisation semantics, needs to have its own unit
-tests, and needs to be maintained. The gain in a language like Java is being able to write:
+tests, and needs to be maintained. The gain of all this extra work in a language like Java would be being able to write:
 
 .. js ::
 
+  /* Java code */
   Person person = new Person ("John", "Doe", "Acme");
 
 instead of
 
 .. js ::
 
+  /* Java code */
   Person person = new Person();
   person.setFirstName("John");
   person.setLastName("Doe");
@@ -316,9 +309,37 @@ In C#, given the object initializer syntax, the gain is even smaller.
 All in all, it only makes sense for these kinds of classes to have only a default, no-arguments constructor,
 and ``Stateful`` builds on this.
 
-The constructor method then should only be used to set the state of a new instance to some sensible starting state,
-representing an "empty" instance, which most often resorts to doing ``NOP``, certainly in a prototypical language.
-In the example, we might choose to represent empty values by ``null`` for all 3 properties (alternatives are
+How does ``Stateful`` do this?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Classes you ``declare`` with :ref:`dojo/_base/declare <dojo/_base/declare>` can have a `postscript` method that is
+executed immediately after all the chained constructors in the inheritance chain have finished. In ``Stateful``,
+this method is used to do `object initialization` if an instance is constructed with an Object argument.
+
+Your subclass can extend the ``postscript`` method (you probably never need to), but should not override it:
+
+.. js ::
+
+  require(["dojo/Stateful", "dojo/_base/declare"], function(Stateful, declare) {
+
+    var Person = declare([Stateful], {
+
+      postscript: function(kwargs) {
+        this.inherited(arguments);
+        // do your postscript stuff
+        // ...
+      }
+
+    });
+
+Implementing constructors of subclasses of ``Stateful``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The constructor in every subclass in the inheritance chain should do its bit to deliver an "empty" instance with
+default values for all properties. Most often this resorts to doing nothing at all in Dojo, so you can leave out
+the constructor method entirely.
+
+In the example, we might choose to represent empty name values by ``null`` for all 3 properties (alternatives are
 ``undefined`` or the empty string ``""``). In a language like Java and C# this would require no work, since ``null``
 is the default value. In Dojo, the default is ``undefined``, but you set the default in the prototype, not in the
 constructor:
@@ -341,11 +362,12 @@ constructor:
 
   });
 
-This leaves nothing to be done in the constructor as well.
+As you can see, there is no need for a constructor.
 
-The only real need to do something in the constructor using :ref:`dojo/_base/declare <dojo/_base/declare>`
-is when you have instance properties that are references, that you don't want to be ``null`` or ``undefined``
-in the "empty" state. The best example is a to-many association that you need to maintain.
+The only real need to do something in the constructor is when you have instance properties that are `references`,
+that you don't want to be ``null`` or ``undefined`` in the "empty" state. The best example is a to-many association
+that you need to maintain:
+
 Suppose our Person has siblings:
 
 .. js ::
@@ -385,7 +407,7 @@ Suppose our Person has siblings:
       if (!sibling.isInstanceOf || !sibling.isInstanceOf(Person)) {
         throw new Error("sibling must be a Person");
       }
-      if (!sibling.get("lastName") === this.get("lastName")) {
+      if (sibling.get("lastName") !== this.get("lastName")) {
         throw new Error("sibling must have the same last name");
       }
 
@@ -406,7 +428,7 @@ Suppose our Person has siblings:
 
   });
 
-Here you need to create an distinct array in the constructor of each instance. Setting the prototype property to []
+Here you need to create a distinct array in the constructor of each instance. Setting the prototype property to ``[]``
 wouldn't do the trick, because then all instances would share the one array in the prototype, mixing up the siblings
 of all Person instances.
 
