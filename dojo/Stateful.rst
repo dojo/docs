@@ -143,9 +143,13 @@ value    Any    The value to change the property to.
 Custom Accessors
 ----------------
 
-``dojo/Stateful`` supports the ability to define custom accessors (getters and setters) that allow control over how values of properties are set and retrieved.  When a custom accessors is defined, a call to ``.get()`` or ``.set()`` will auto-magically use the custom accessor instead of accessing the property directly.
+``dojo/Stateful`` supports the ability to define custom accessors (getters and setters) that allow control over how
+values of properties are set and retrieved.  When a custom accessors is defined, a call to ``.get()`` or ``.set()``
+will auto-magically use the custom accessor instead of accessing the property directly.
 
-A custom getter is defined in the format of ``_xxxGetter`` and a custom setter is defined in the format of ``_xxxSetter`` where the name of the property is ``xxx``.  The name of the property is not mutated in any way.  For example, the following demonstrates several different examples of how custom accessors would be defined:
+A custom getter is defined in the format of ``_xxxGetter`` and a custom setter is defined in the format of ``_xxxSetter``
+where the name of the property is ``xxx``.  The name of the property is not mutated in any way.  For example,
+the following demonstrates several different examples of how custom accessors would be defined:
 
 .. js ::
 
