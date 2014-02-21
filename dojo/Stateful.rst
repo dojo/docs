@@ -549,5 +549,5 @@ See also
 
 * :ref:`dojo/Evented <dojo/Evented>` - A base class for classes that utilize events.
 
-* Introductory article on dojo.Stateful -
+* Introductory article on ``dojo/Stateful`` -
   http://www.sitepen.com/blog/2010/05/04/consistent-interaction-with-stateful-objects-in-dojo/
