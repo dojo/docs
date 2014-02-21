@@ -19,7 +19,7 @@ Introduction
 ============
 
 ``dojo/Stateful`` provides the ability to get and set named properties, including using custom accessors, in conjunction
-with the ability to monitor these properties for changes. ``dojo.Stateful`` is intended to be a base class that can be
+with the ability to monitor these properties for changes. ``dojo/Stateful`` is intended to be a base class that can be
 extended by other components that wish to support watchable properties. This can be very useful for creating live
 bindings that utilize current property states and must react to any changes in properties. It also allows a developer to
 customize the behavior of accessing the property by providing auto-magic getters and setters (accessors). Furthermore,
