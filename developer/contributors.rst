@@ -670,7 +670,7 @@ Corporations or Organizations with a CCLA on file
 * Laszlo Systems, Inc.
 * Leorent, GmbH: Michael Rasmussen
 * Livando.com
-* LUCIAD NV: Tom Makieu, Thomas Neiaynck
+* LUCIAD NV: Tom Mahieu, Thomas Neiaynck
 * Maastermedia: Peter Kokot
 * Media Hive
 * Media Distribution Solutions, LLC: Mike Wilcox
