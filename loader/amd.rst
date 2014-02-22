@@ -395,8 +395,9 @@ The following `Configuration`_ variables control how module identifiers are mapp
     starting from the beginning of a module identifier. *When matching paths, the most specific match wins.* For
     example, "a/b/c" is more specific than "a" or "a/b".
 
-  * ``aliases``: (object) a map from a module identifier to another module identifier.  See `Alias Modules`_ for more
-    information.
+  * ``aliases``: (object) a globally applied map from a module identifier to another module identifier.  See `Alias Modules`_ for more information.
+
+  * ``map``: (object) module mapping with the ability to be applied only to specific modules. See `Map Config`_ for more information.
 
   * the has feature ``config-tlmSiblingOfDojo``: if truthy, then non-package top-level modules not mentioned in
     ``paths`` are assumed to be siblings of the dojo package; otherwise, they are assumed to be relative to ``baseUrl``.
@@ -539,7 +540,7 @@ being returned:
   define(["text"], function(text){ //...
   define(["dojo/text"], function(text){ //...
 
-There is one particular scenario where using aliases is the optimal solution.  Two different absolute module identifiers
+There is one particular scenario where using aliases is not the optimal solution.  Two different absolute module identifiers
 as calculated after Step 6 of the `Normalizing Module Identifiers`_ process will always result in two different modules
 being instantiated - even if they normalize to the same path. This means you can't solve this problem using
 ``paths``. For example, assuming ``baseUrl`` points to the dojo directory, you **can't** alias "text" to "dojo/text"
@@ -558,6 +559,44 @@ In this case, assuming no reference module, "text" is normalized to ("text", "pa
 instances of that module, which is probably not what you want. The only way to get two different module identifiers to
 resolve to the same module value is to either write a module definition with an explicit module ID (not recommended) or
 provide an aliases configuration.
+
+Map Config
+==========
+
+The ``map`` loader configuration option is similar to the ``alias`` option in that it allows you to alias module 
+identifiers but with more flexibility in terms of context and matching capabilities. The value of the ``map`` option
+is an object whose keys define the context of the mapping and the values are the aliases. For example:
+
+.. js ::
+
+map: {
+  "app/ModuleA": {
+    "app/Widget": "app/Widget_NEW"
+  }
+}
+
+In this example, the request for ``app/Widget`` would load ``app/Widget_NEW`` from within ``app/ModuleA`` only. 
+Requests made for ``app/Widget`` from within any other module would continue to load ``app/Widget``. This allows for 
+more complex loading scenarios in which you might have multiple concurrent versions of the same module that you need to 
+use in different parts of your application. 
+
+If you want to add a mapping that applies to all modules, you just use "*" for the module value like this:
+
+.. js ::
+
+map: {
+  "*": {
+    "app/Widget": "app/WidgetB"
+  }
+}
+
+In this example all requests for ``app/Widget`` would load ``app/WidgetB`` regardless of which module the request 
+originated from. The "*" option can be used in conjunction with other mappings remembering that the most specific 
+mappings take precedence.
+
+In most cases, the ``map`` option in combination with ``packages`` is a better solution than ``alias`` because of its 
+flexibility. For more information on the ``map`` option, including it's partial matching capabilities, you can check 
+out `this SitePen blog post <http://www.sitepen.com/blog/2013/07/03/dojo-faq-what-is-the-map-config-option/>`_.
 
 
 Normalizing Module Identifiers
