@@ -242,7 +242,10 @@ This is a consequence of the new behavior of Safari in iOS 7: it is no longer po
 Why scrolling is fast and smooth on some devices/browsers but not on all?
 -------------------------------------------------------------------------
 
-Roughly speaking, the scrolling performance of dojox/mobile/ScrollableView and ScrollablePane depends on the browser and device performance. In practice, the scrolling is very fast and smooth on iOS devices, but for instance on some particular Android browsers/devices the performance may be poor. Some hints that may be helpful:
+Roughly speaking, the scrolling performance of dojox/mobile/ScrollableView and ScrollablePane 
+depends on the browser and device performance. In practice, the scrolling is very fast and smooth 
+on iOS devices, but for instance on some particular Android browsers/devices the performance may be poor. 
+Some hints that may be helpful:
 
 1. If possible, use a different browser. A worst-case example would be the (buggy) stock browser on Galaxy S3 since the latest Android 4.3 update: using Chrome instead of the stock browser is the way to go in this case.
 
@@ -257,18 +260,23 @@ Roughly speaking, the scrolling performance of dojox/mobile/ScrollableView and S
 .. js ::
 
 define(["dojo/_base/declare", "dojo/dom-style", "dojox/mobile/ScrollableView"],
-  function(declare, domStyle, ScrollableView) {                                                                     
+  function(declare, domStyle, ScrollableView) {
     return declare(ScrollableView, {
       postCreate: function() {
         this.inherited(arguments);
         domStyle.set(this.containerNode, "overflow", "auto");
-        /* enable momentum scrolling on mobile devices */
+        // enable momentum scrolling on mobile devices
         domStyle.set(this.containerNode, "webkitOverflowScrolling", "touch");
-        /* trigger hardware acceleration */
+        // trigger hardware acceleration
         domStyle.set(this.containerNode, “webkitTransform”, “translate3d(0,0,0)”);
-        this.disableTouchScroll = true;           
+        this.disableTouchScroll = true;
      }, 
-     init: function(){ /* nothing */ }           
+     init: function(){ 
+       // nothing
+     }
 })});
 
-6. In Cordova apps for Android, ensure the hardware-acceleration is enabled in the Android manifest (for details, see http://developer.android.com/guide/topics/manifest/application-element.html#hwaccel) and do not change the default layerType of the WebView (see http://developer.android.com/reference/android/view/View.html#setLayerType(int,%20android.graphics.Paint)).
+6. In Cordova apps for Android, ensure the hardware-acceleration is enabled in the Android manifest 
+(for details, see http://developer.android.com/guide/topics/manifest/application-element.html#hwaccel) 
+and do not change the default layerType of the WebView 
+(see http://developer.android.com/reference/android/view/View.html#setLayerType(int,%20android.graphics.Paint)).
