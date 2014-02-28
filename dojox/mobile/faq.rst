@@ -259,22 +259,20 @@ Some hints that may be helpful:
 
 .. js ::
 
-define(["dojo/_base/declare", "dojo/dom-style", "dojox/mobile/ScrollableView"],
-  function(declare, domStyle, ScrollableView) {
-    return declare(ScrollableView, {
-      postCreate: function() {
-        this.inherited(arguments);
-        domStyle.set(this.containerNode, "overflow", "auto");
-        // enable momentum scrolling on mobile devices
-        domStyle.set(this.containerNode, "webkitOverflowScrolling", "touch");
-        // trigger hardware acceleration
-        domStyle.set(this.containerNode, “webkitTransform”, “translate3d(0,0,0)”);
-        this.disableTouchScroll = true;
-     }, 
-     init: function(){ 
-       // nothing
-     }
-})});
+  define(["dojo/_base/declare", "dojo/dom-style", "dojox/mobile/ScrollableView"],
+    function(declare, domStyle, ScrollableView) {
+      return declare(ScrollableView, {
+        postCreate: function() {
+          this.inherited(arguments);
+          domStyle.set(this.containerNode, "overflow", "auto");
+          // enable momentum scrolling on mobile devices
+          domStyle.set(this.containerNode, "webkitOverflowScrolling", "touch");
+          // trigger hardware acceleration
+          domStyle.set(this.containerNode, “webkitTransform”, “translate3d(0,0,0)”);
+          this.disableTouchScroll = true;
+       }, 
+       init: function() { /* nothing */ }
+  })});
 
 6. In Cordova apps for Android, ensure the hardware-acceleration is enabled in the Android manifest 
 (for details, see http://developer.android.com/guide/topics/manifest/application-element.html#hwaccel) 
