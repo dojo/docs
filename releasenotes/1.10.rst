@@ -55,6 +55,15 @@ Added support for Dialog.resize(dimensions).  Previously it ignored the dimensio
 This means that Dialog now works with dojox/layout/ResizeHandle.
 Note though that you still cannot specify an initial size on the dialog.
 
+Charting
+--------
+ * Series can now be hidden without removing them
+ * SelectableLegend leverages this new feature to provide consistent approach to series visibility switch across the various plots
+
+
+Gfx
+---
+
 DojoX
 =====
 
