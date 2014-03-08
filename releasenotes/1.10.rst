@@ -45,6 +45,8 @@ of Dojo might include fixes to support future releases of these browsers, but it
 
 Dojo Core
 =========
+Added a cross-browser approach for getting textContent in dojo/dom-prop
+
 
 Dijit
 =====
