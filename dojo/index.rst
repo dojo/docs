@@ -166,7 +166,7 @@ Testing                       :ref:`dojo/robot <dojo/robot>`                    
                               :ref:`dojo/robotx <dojo/robotx>`
 Arrays                        :ref:`dojo/_base/array <dojo/_base/array>`             Array routine enhancements
 Strings                       :ref:`dojo/string <dojo/string>`                       String routine enhancements
-JSON                          :ref:`dojo/json <dojo/json>`                           JSON hanlding modules
+JSON                          :ref:`dojo/json <dojo/json>`                           JSON handling modules
 
                               :ref:`dojo/_base/json <dojo/_base/json>` [1]_
 Colors                        :ref:`dojo/_base/Color <dojo/_base/Color>`             Color classes/functions
