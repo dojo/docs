@@ -61,7 +61,7 @@ Charting
 --------
  * Series can now be hidden without removing them
  * SelectableLegend leverages this new feature to provide consistent approach to series visibility switch across the various plots
-
+ * All classes inheriting from Element, an in particular all type of plots can now be set SVG rendering options using the renderingOptions property. By default axis2d/Default, plot2d/Columns and plot2d/Bars are using shape-rendering: crispEdges.
 
 Gfx
 ---

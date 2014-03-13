@@ -336,6 +336,20 @@ Finally if you need to specify the style of your plot elements depending on a fu
     }});
   });
 
+*About SVG rendering*
+
+When rendering the chart with SVG, which happens by default on browsers support SVG if gfx is not configured to use
+an alternate render, you can specify in the plot options with the renderingOptions property some rendering hints that SVG will use:
+
+.. js ::
+
+  require(["dojox/charting/plot2d/Areas", ...],
+    function(Columns, ...){
+    chart.addPlot("default", { type: Areas, fill: "red", renderingOptions: { "shape-rendering": "crispEdges" });
+  });
+
+By default the Column and Bar plots are using crispEdges, other type of plots are using default values. See `SVG specification <http://www.w3.org/TR/SVG11/painting.html#RenderingProperties>`_ for details on the rendering options.
+
 *About labels*
 
 All these plots also have the ability to render labels for each of the data points. The feature can be disabled using the
