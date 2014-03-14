@@ -284,8 +284,7 @@ How do I prevent the bounce effect when scrolling my view on iOS/Cordova ?
 
 In an iOS Cordova application, scrolling a webview outside its edge triggers a bouncing effect. You can disable this effect by setting the DisallowOverscroll property to true in your cordova config.xml:
 
-.. xml ::
 
   <preference name="DisallowOverscroll" value="true"/>
 
-see https://cordova.apache.org/docs/en/3.0.0/guide_platforms_ios_config.md.html for more information. Note on android, this option disabled the glow effect.
+see https://cordova.apache.org/docs/en/3.0.0/guide_platforms_ios_config.md.html for more information. Note: on Android, this option disabled the glow effect.
