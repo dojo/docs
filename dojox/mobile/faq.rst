@@ -268,7 +268,7 @@ Some hints that may be helpful:
           // enable momentum scrolling on mobile devices
           domStyle.set(this.containerNode, "webkitOverflowScrolling", "touch");
           // trigger hardware acceleration
-          domStyle.set(this.containerNode, “webkitTransform”, “translate3d(0,0,0)”);
+          domStyle.set(this.containerNode, "webkitTransform", "translate3d(0,0,0)");
           this.disableTouchScroll = true;
        }, 
        init: function() { /* nothing */ }
