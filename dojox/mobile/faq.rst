@@ -271,7 +271,12 @@ Some hints that may be helpful:
           domStyle.set(this.containerNode, "webkitTransform", "translate3d(0,0,0)");
           this.disableTouchScroll = true;
        }, 
-       init: function() { /* nothing */ }
+       resize: function() {
+          this.inherited(arguments);
+          this.containerNode.style.height = this.fixedHeaderHeight > 0 ?
+             this.domNode.style.height.replace("px", "") - this.fixedHeaderHeight + "px" : 
+             this.domNode.style.height;
+       }
   })});
 
 6. In Cordova apps for Android, ensure the hardware-acceleration is enabled in the Android manifest 
