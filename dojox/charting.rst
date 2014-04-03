@@ -592,6 +592,9 @@ The animate parameter is itself an object that can takes several parameters incl
 
 Basically these are the same parameters than the ones passe to dojo.Animation. See :ref:`Animation quickstart <quickstart/Animation>` documentation for details.
 
+Note that all type of plots have animation disabled by default except the Spider plot for which **animate** must be set
+to **false** in order to disable the animation.
+
 See :ref:`Animated Chart <dojox/charting>` for a full example.
 
 
