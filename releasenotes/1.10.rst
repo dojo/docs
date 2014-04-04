@@ -70,6 +70,11 @@ Charting
 Gfx
 ---
 
+Mobile
+------
+ * The Carousel, Slider, SpinWheel, TimePicker and DatePicker widgets are now accessible.
+ * Enhance touch feedback for Buttons
+ * The width of a Switch widget can explicitely be set via css to support long label.
 
 Util
 ====
