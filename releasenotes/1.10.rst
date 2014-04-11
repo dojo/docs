@@ -45,8 +45,11 @@ of Dojo might include fixes to support future releases of these browsers, but it
 
 Dojo Core
 =========
-Added a cross-browser approach for getting textContent in dojo/dom-prop
-
+* Added a cross-browser approach for getting textContent in dojo/dom-prop
+* Added support for running non-DOM operations inside of WebWorkers
+* Added reusable HTML escape function
+* Various fixes for dojo/query
+* `dojo/on` now allows multiple events by using a comma separated list, or an array for multiple extension events
 
 Dijit
 =====
@@ -76,6 +79,10 @@ Mobile
  * Enhance touch feedback for Buttons
  * The width of a Switch widget can explicitely be set via css to support long label.
  * Improve performance of List with variable height items: the layout of variable height items is no longer updated on each resize by default. You can enable it back by setting the new ListItem.layoutOnResize property to true (false by default).
+
+Store
+-----
+* Added local `dojo/store` providers in dojox, with support for IndexedDB and WebSQL
 
 Util
 ====
