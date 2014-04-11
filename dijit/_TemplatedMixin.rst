@@ -102,18 +102,18 @@ For example:
   .. js ::
 
     require([
-        "dojo/declare", "dojo/parser",
+        "dojo/_base/declare", "dojo/parser",
         "dijit/_WidgetBase", "dijit/_TemplatedMixin", "dojo/domReady!"
     ], function(declare, parser, _WidgetBase, _TemplatedMixin){
-         parser.parse();
-         return declare("MyButton", [dijit._WidgetBase, dijit._TemplatedMixin], {
-                templateString:
-                    "<button data-dojo-attach-point='containerNode' data-dojo-attach-event='onclick: onClick'></button>",
-                onClick: function(evt){
-                        alert("Awesome!!");
-                }
-            });
+        var MyButton = declare("MyButton", [_WidgetBase, _TemplatedMixin], {
+            templateString:
+                "<button data-dojo-attach-point='containerNode' data-dojo-attach-event='onclick: onClick'></button>",
+            onClick: function(evt){
+                    alert("Awesome!!");
+            }
         });
+        parser.parse();
+    });
 
   .. html ::
 
