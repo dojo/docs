@@ -75,6 +75,7 @@ Mobile
  * The Carousel, Slider, SpinWheel, TimePicker and DatePicker widgets are now accessible.
  * Enhance touch feedback for Buttons
  * The width of a Switch widget can explicitely be set via css to support long label.
+ * Improve performance of List with variable height items: the layout of variable height items is no longer updated on each resize by default. You can enable it back by setting the new ListItem.layoutOnResize property to true (false by default).
 
 Util
 ====
