@@ -64,7 +64,7 @@ Requring in the module is all that is needed:
 
 * :ref:`dojo/NodeList-traverse <dojo/NodeList-traverse>` - Advanced node traversal functions.
 
-The first argument is the ``selector`` which is a CSS selector string that identifies the nodes that need to be retrieved.  The second argument is an optional ``context`` which limits the scope of the selector and only children of the will be considered.  This can either be a string representing the node ID or a DOM node.  For example:
+The first argument is the ``selector`` which is a CSS selector string that identifies the nodes that need to be retrieved.  The second argument is an optional ``context`` which limits the scope of the selector and only children of this context will be considered.  This can either be a string representing the node ID or a DOM node.  For example:
 
 .. js ::
 
@@ -91,31 +91,31 @@ Selector Engines
 
 ``dojo/query`` is responsible for loading the appropriate selector engine.  There are several different modes which ``dojo/query`` can run in:
 
-* ``css2`` (or ``lite``) - This will always use the lite engine, which delegates to the native selector engine if 
+* ``css2`` (or ``lite``) - This will always use the lite engine, which delegates to the native selector engine if
   available for anything but very simple queries (like id lookups). When a native selector engine is not available (
-  IE7 and below), this supports simple, basic CSS2 level queries, consisting of elemental selectors: ``.class``, 
-  ``#id``, ``tag``, and ``*``, attribute selectors, and child (``>``), descendant (space), and union (``,``) 
+  IE7 and below), this supports simple, basic CSS2 level queries, consisting of elemental selectors: ``.class``,
+  ``#id``, ``tag``, and ``*``, attribute selectors, and child (``>``), descendant (space), and union (``,``)
   combinators.  If the native selector engine is, the engine does not support pseudo classes.
 
-* ``css2.1`` - This will always use the ``lite`` engine when a native selector engine is available. When a native 
+* ``css2.1`` - This will always use the ``lite`` engine when a native selector engine is available. When a native
   selector engine is not available (IE7 and below), this will load ``acme``.
 
-* ``css3`` - This will always use the ``lite`` engine when a native selector engine with significant CSS3 support is 
+* ``css3`` - This will always use the ``lite`` engine when a native selector engine with significant CSS3 support is
   available. When a CSS3 capable (supporting most features) native selector engine is not available (IE8 and below), this will load ``acme``.
 
-* ``acme`` - The ``acme`` selector engine with full CSS3 features will be used. This supports certain features that 
+* ``acme`` - The ``acme`` selector engine with full CSS3 features will be used. This supports certain features that
   are not available in any native engine (albeit rarely used).
 
-When you are running Dojo in legacy mode (``async: false``), ``dojo/query`` will run in ``acme`` mode.  When you are 
+When you are running Dojo in legacy mode (``async: false``), ``dojo/query`` will run in ``acme`` mode.  When you are
 running with ``async: true`` the default selector engine level is ``css3``.
 
-The summarize, the two alternate selector engines included with Dojo have the following features (which can be 
+The summarize, the two alternate selector engines included with Dojo have the following features (which can be
 selected explicitly or by the module's CSS level needs):
 
 * ``acme`` - Designed to have full CSS3 support, it is about 14KB (minified).
 
-* ``lite`` - Basic CSS2 level queries, consisting of elemental selectors: ``.class``, ``#id``, ``tag``, and ``*``, 
-  attribute selectors, and child (``>``), descendant (space), and union (``,``) combinators. With a native selector 
+* ``lite`` - Basic CSS2 level queries, consisting of elemental selectors: ``.class``, ``#id``, ``tag``, and ``*``,
+  attribute selectors, and child (``>``), descendant (space), and union (``,``) combinators. With a native selector
   engine, the ``lite`` engine does not support pseudo classes.  It is about 2KB (minified).
 
 Specifying the Selector Level
@@ -140,7 +140,7 @@ Or:
   </script>
   <script src="dojo/dojo.js">
 
-The selector engine level can be specificed as a loader plugin for each module.  For example, if the module needed to 
+The selector engine level can be specificed as a loader plugin for each module.  For example, if the module needed to
 do a CSS3 level query, you could write:
 
 .. js ::
@@ -170,18 +170,18 @@ E                      an element of type E
 E F                    an F element descendant of an E element
 E > F                  an F element child of an E element
 E:link
-E:visited              an E element being the source anchor of a hyperlink of which the target is not yet visited 
+E:visited              an E element being the source anchor of a hyperlink of which the target is not yet visited
                        (:link) or already visited (:visited)
 E:active
 E:hover
 E:focus                an E element during certain user actions
 E[foo]                 an E element with a "foo" attribute
 E[foo="bar"]           an E element whose "foo" attribute value is exactly equal to "bar"
-E[foo~="bar"]          an E element whose "foo" attribute value is a list of space-separated values, one of which is 
+E[foo~="bar"]          an E element whose "foo" attribute value is a list of space-separated values, one of which is
                        exactly equal to "bar"
-E[hreflang|="en"]      an E element whose "hreflang" attribute has a hyphen-separated list of values beginning (from 
+E[hreflang|="en"]      an E element whose "hreflang" attribute has a hyphen-separated list of values beginning (from
                        the left) with "en"
-E:lang(fr)             an element of type E in language "fr" (the document language specifies how language is 
+E:lang(fr)             an element of type E in language "fr" (the document language specifies how language is
                        determined)
 E.warning              an E element whose class is "warning" (the document language specifies how class is determined).
 E#myid                 an E element with ID equal to "myid".
@@ -249,7 +249,7 @@ E:not(s)               an E element that does not match simple selector s
 Alternate Selector Engines
 --------------------------
 
-We can also use other selector engine levels.  Both Sizzle and Slick are excellent selector engines that work with 
+We can also use other selector engine levels.  Both Sizzle and Slick are excellent selector engines that work with
 ``dojo/query``.  AMD/Dojo compatible versions (just wrapped with AMD) are available here:
 
 * https://github.com/kriszyp/sizzle
@@ -276,9 +276,9 @@ Note for cross-domain legacy API usage
 
 This use case should be quite rare, but presents a wrinkle worth noting.
 
-When loading ``dojo.js`` cross-domain and electing to use an alternate selector engine not included in ``dojo.js`` 
-itself, legacy APIs will not immediately work, since Dojo base does not finish loading until the selector engine is 
-pulled in asynchronously.  In this case, it will be necessary to use ``require``.  In a pinch, legacy code can simply 
+When loading ``dojo.js`` cross-domain and electing to use an alternate selector engine not included in ``dojo.js``
+itself, legacy APIs will not immediately work, since Dojo base does not finish loading until the selector engine is
+pulled in asynchronously.  In this case, it will be necessary to use ``require``.  In a pinch, legacy code can simply
 be wrapped like so:
 
 .. js ::
@@ -307,7 +307,7 @@ Query                                     Description
 ``#main h3``                              All ``<h3>`` nodes that are contained by a node with ``id="main"`` [1]_
 ``div#main``                              Only select a node with ``id="main"`` if it is a ``<div>``
 ``div#main h3``                           All nodes that are ``<h3>`` contained in a ``<div>`` with an ``id="main"``
-``#main div > h3``                        All ``<h3>`` nodes that are immediate children of a ``<div>`` contained 
+``#main div > h3``                        All ``<h3>`` nodes that are immediate children of a ``<div>`` contained
                                           within a node that has ``id="main"`` [1]_
 ``.foo``                                  All nodes with a ``class="foo"``
 ``.foo.bar``                              All nodes that have both ``foo`` and ``bar`` classes
@@ -320,32 +320,32 @@ Query                                     Description
 ``[foo$=\"thud\"]``                       All nodes with an attribute of ``foo`` where the value ends in ``thud``
 ``[foo$=thud]``                           All nodes with an attribute of ``foo`` where the value ends in ``thud``
 ``[foo$=\"thudish\"]``                    All nodes with an attribute of ``foo`` where the value ends in ``thudish``
-``#main [foo$=thud]``                     All nodes with an attribute of ``foo`` where the value ends in ``thud`` that 
+``#main [foo$=thud]``                     All nodes with an attribute of ``foo`` where the value ends in ``thud`` that
                                           are contained within a node with an ``id="main"`` [1]_
-``#main [ title $= thud ]``               All nodes with an attribute of ``title`` where the value ends in ``thud`` 
+``#main [ title $= thud ]``               All nodes with an attribute of ``title`` where the value ends in ``thud``
                                           that are contained within a node with an ``id="main"`` [1]_
 ``#main span[ title $= thud ]``           All ``<span>`` nodes with an attribute of ``title`` where the value ends in ``thud`` that are contained within a node with an ``id="main"`` [1]_
-``[foo|=\"bar\"]``                        All nodes with an attribute of ``foo`` where the value contains ``bar`` in a 
+``[foo|=\"bar\"]``                        All nodes with an attribute of ``foo`` where the value contains ``bar`` in a
                                           dash seperated list (e.g. ``foo="baz-bar-qat"``)
-``[foo|=\"bar-baz\"]``                    All nodes with an attribute of ``foo`` where the value contains ``bar-baz`` 
+``[foo|=\"bar-baz\"]``                    All nodes with an attribute of ``foo`` where the value contains ``bar-baz``
                                           in a dash seperated list (e.g. ``foo="qat-bar-baz-qip"``)
 ``.foo:nth-child(2)``                     The 2nd children of nodes with a ``style="foo"``
 ``>``                                     All immediate childen
 ``> *``                                   All immediate children
 ``> [qux]``                               All immediate children that have an attribute of ``qux``
-``.foo + span``                           All nodes that are a ``<span>`` that are directly after a node with a 
+``.foo + span``                           All nodes that are a ``<span>`` that are directly after a node with a
                                           ``style="foo"``
-``.foo ~ span``                           All nodes that are a ``<span>`` that are siblings that follow a node with a 
+``.foo ~ span``                           All nodes that are a ``<span>`` that are siblings that follow a node with a
                                           ``style="foo"``
 ``#foo ~ *``                              All nodes that are siblings that follow a node with an ``id="foo"`` [1]_
 ``#foo ~``                                All nodes that are siblings that follow a node with an ``id="foo"`` [1]_
-``#main span.foo:not(span:first-child)``  All nodes that are a ``<span>`` with a ``class="foo"`` but not a ``<span>`` 
+``#main span.foo:not(span:first-child)``  All nodes that are a ``<span>`` with a ``class="foo"`` but not a ``<span>``
                                           and the first child of a node with an ``id="foo"``.
-``#main span.foo:not(:first-child)``      All nodes that are a ``<span>`` with a ``class="foo"`` but not the first 
+``#main span.foo:not(:first-child)``      All nodes that are a ``<span>`` with a ``class="foo"`` but not the first
                                           child of a node with an ``id="foo"``. [1]_
-``#main > h3:nth-child(odd)``             All nodes that are ``<h3>`` and the odd immediate children of a node with an 
+``#main > h3:nth-child(odd)``             All nodes that are ``<h3>`` and the odd immediate children of a node with an
                                           ``id="main"`` [1]_
-``#main h3:nth-child(odd)``               All nodes that are ``<h3>`` and are odd children contained within a node 
+``#main h3:nth-child(odd)``               All nodes that are ``<h3>`` and are odd children contained within a node
                                           with an ``id="main"`` [1]_
 ``#main h3:nth-child(2n+1)``              All nodes that are ``<h3>``
 ``#main h3:nth-child(even)``
@@ -360,17 +360,17 @@ Query                                     Description
 See Also
 ========
 
-* :ref:`dojo/NodeList-data <dojo/NodeList-data>` - Allows the association of arbitrary data with items of a 
+* :ref:`dojo/NodeList-data <dojo/NodeList-data>` - Allows the association of arbitrary data with items of a
   ``NodeList``.
 
-* :ref:`dojo/NodeList-dom <dojo/NodeList-dom>` - DOM related functions that are similiar functionality to the 
+* :ref:`dojo/NodeList-dom <dojo/NodeList-dom>` - DOM related functions that are similiar functionality to the
   ``dojo/dom-*`` related modules.
 
 * :ref:`dojo/NodeList-fx <dojo/NodeList-fx>` - Adds base and core FX support to ``NodeList``.
 
 * :ref:`dojo/NodeList-html <dojo/NodeList-html>` - Adds advanced content setting functionality.
 
-* :ref:`dojo/NodeList-manipulate <dojo/NodeList-manipulate>` - Functions that allow for manipulation of DOM nodes in 
+* :ref:`dojo/NodeList-manipulate <dojo/NodeList-manipulate>` - Functions that allow for manipulation of DOM nodes in
   similiar way to jQuery.
 
 * :ref:`dojo/NodeList-traverse <dojo/NodeList-traverse>` - Advanced node traversal functions.
