@@ -16,9 +16,9 @@ of Dojo might include fixes to support future releases of these browsers, but it
 
 **Desktop**
 
-* Firefox 3.6-28
+* Firefox 3.6-29
 
-* Safari 5-6
+* Safari 5-7
 
 * Chrome 13-33
 
@@ -36,7 +36,7 @@ of Dojo might include fixes to support future releases of these browsers, but it
 
 * Windows Phone 8 (IE10)
 
-* Mobile compatibility on desktop browsers: IE 8-11, Firefox 4-28, Chrome 13-33
+* Mobile compatibility on desktop browsers: IE 8-11, Firefox 4-29, Chrome 13-33
 
 
 **Server-Side User Agents**
