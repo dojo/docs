@@ -17,7 +17,7 @@ The main GitHub Repositories for the Dojo 1.X code are:
 
 * `dojo/dojo <https://github.com/dojo/dojo>`_
 
-* `dojo/djijit <https://github.com/dojo/dijit>`_
+* `dojo/dijit <https://github.com/dojo/dijit>`_
 
 * `dojo/dojox <https://github.com/dojo/dojox>`_
 
