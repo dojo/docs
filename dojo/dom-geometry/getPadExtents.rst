@@ -12,7 +12,7 @@ dojo/dom-geometry::getPadExtents()
 
 Returns object with special values specifically useful for node fitting.
 
-* ``l``/``t``/``r``/``b`` = the sum of left/top/right/bottom padding (respectively)
+* ``l``/``t``/``r``/``b`` = the left/top/right/bottom padding (respectively)
 * ``w`` = the sum of the left and right padding
 * ``h`` = the sum of the top and bottom padding
 
