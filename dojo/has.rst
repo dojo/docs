@@ -176,6 +176,7 @@ the name of the feature test.
  :ref:`dojo/sniff <dojo/sniff>`, quirks, "Browser is running in *Quirks-Mode*"
  :ref:`dojo/sniff <dojo/sniff>`, ios, "Environment is running on the iOS mobile operating system"
  :ref:`dojo/sniff <dojo/sniff>`, android, "Environment is running on the Android mobile operating system"
+ :ref:`dojo/sniff <dojo/sniff>`, trident, "Browser is running the Trident rendering engine"
  :ref:`dojo/sniff <dojo/sniff>`, opera, "Environment is running on the Opera browser platform"
  :ref:`dojo/sniff <dojo/sniff>`, mozilla, "Environment is running on the Mozilla browser platform"
  :ref:`dojo/sniff <dojo/sniff>`, ff, "Environment is running on the Firefox browser platform"
