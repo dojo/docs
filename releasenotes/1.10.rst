@@ -72,6 +72,7 @@ Charting
 
 Gfx
 ---
+ * Support for SVG masks (when using the SVG renderer). The Surface class has a new createMask method, which returns a group-like shape whose child shapes will define the geometry of the mask. Any shape can then use this mask using the setMask method.
 
 Mobile
 ------
