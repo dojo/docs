@@ -65,9 +65,6 @@ example:
 Examples
 ========
 
-Basic Usage
------------
-
 .. code-example::
     
   .. html ::
