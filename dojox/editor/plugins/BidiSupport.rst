@@ -43,15 +43,15 @@ Usage
 
 .. code-example ::
 
-First include the CSS for it:
+First include the CSS for it.
 
-.. css ::
+    .. css ::
 
     @import "dojox/editor/plugins/resources/css/BidiSupport.css";
 
-Then require it into the page where you're using the editor:
+Then require it into the page where you're using the editor.
 
-.. js ::
+    .. js ::
  
 		require([
 			"dijit/Editor",
@@ -61,9 +61,9 @@ Then require it into the page where you're using the editor:
 Now include it in the list of extraPlugins (or in the list of plugins if you're reorganizing the toolbar) for you want to load into the editor, for 
 example:
 
-.. html ::
+    .. html ::
 
-  <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:['bidisupport']"></div>
+    <div data-dojo-type="dijit/Editor" id="editor" data-dojo-props="extraPlugins:['bidisupport']"></div>
 
 Examples
 ========
