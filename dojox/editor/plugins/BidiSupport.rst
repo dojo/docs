@@ -27,18 +27,21 @@ sortcutonly
 
 User Interface
 ==============
+
 User activates commands,provided by this plugin, using additional left-to-right (LTR) and right-to-left (RTL) toolbar's buttons 
 
 .. image :: BidiButtons.png
 
 or/and using the following shotcuts:
  
--Ctrl + 0    Set RTL text direction
--Ctrl + 8    Set LTR text direction
--Ctrl + 9    Change text direction to opposite. 
+- Ctrl + 0    Set RTL text direction
+- Ctrl + 8    Set LTR text direction
+- Ctrl + 9    Change text direction to opposite. 
 
 Usage
 =====
+
+.. code-example::
 
 First include the CSS for it:
 
