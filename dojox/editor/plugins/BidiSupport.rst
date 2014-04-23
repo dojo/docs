@@ -53,10 +53,10 @@ Then require it into the page where you're using the editor.
 
     .. js ::
  
-		require([
-			"dijit/Editor",
-			"dojox/editor/plugins/BidiSupport",
-			......
+    require([
+        "dijit/Editor",
+        "dojox/editor/plugins/BidiSupport"
+    ]);
 
 Now include it in the list of extraPlugins (or in the list of plugins if you're reorganizing the toolbar) for you want to load into the editor, for 
 example:
@@ -69,35 +69,39 @@ Examples
 ========
 
 .. code-example ::
+
+Adding Bidi plugin using command.
     
-  .. html ::
+    .. html ::
 
-	<!-- Adding Bidi plugin using command -->
-	
-	<div data-dojo-type="dijit/Editor" 
-	        data-dojo-props='plugins: ["bold","italic","|","justifyLeft","justifyCenter","justifyRight","|","formatBlock"], 
-			extraPlugins: ["|","insertOrderedList","insertUnorderedList","|","indent","outdent","|","bidiSupport","|",
-			"dijit/_editor/plugins/ViewSource"], height: "230px", disableSpellCheck:true'>		
-	</div>
+    <div data-dojo-type="dijit/Editor" 
+      data-dojo-props='plugins: ["bold","italic","|","justifyLeft","justifyCenter","justifyRight","|","formatBlock"], 
+      extraPlugins: ["|","insertOrderedList","insertUnorderedList","|","indent","outdent","|","bidiSupport","|",
+      "dijit/_editor/plugins/ViewSource"], height: "230px", disableSpellCheck:true'>		
+    </div>
 
-	<!-- Adding Bidi plugin without buttons -->
+Adding Bidi plugin without buttons.
 
-	<div data-dojo-type="dijit/Editor" 
-	        data-dojo-props='plugins: ["bold","italic","|","justifyLeft","justifyCenter","justifyRight","|","formatBlock"], 
-			extraPlugins: ["|","insertOrderedList","insertUnorderedList","|","indent","outdent","|",
-			{name: "dojox/editor/plugins/BidiSupport", shortcutonly: true}, 
-			"dijit/_editor/plugins/ViewSource", "collapsibletoolbar"], height: "230px", disableSpellCheck:true'>
-	</div>
+    .. html ::
 
-	<!-- Adding Bidi plugin with specified blockMode -->
+    <div data-dojo-type="dijit/Editor" 
+      data-dojo-props='plugins: ["bold","italic","|","justifyLeft","justifyCenter","justifyRight","|","formatBlock"], 
+      extraPlugins: ["|","insertOrderedList","insertUnorderedList","|","indent","outdent","|",
+      {name: "dojox/editor/plugins/BidiSupport", shortcutonly: true}, 
+      "dijit/_editor/plugins/ViewSource", "collapsibletoolbar"], height: "230px", disableSpellCheck:true'>
+    </div>
 
-	<div data-dojo-type="dijit/Editor"
-	        data-dojo-props='plugins: ["bold","italic","|","justifyRight","justifyCenter","justifyLeft","|","formatBlock",
-			"dijit/_editor/plugins/EnterKeyHandling"], 
-			extraPlugins: ["|","insertOrderedList","insertUnorderedList","|","indent","outdent","|",
-			{name: "dojox/editor/plugins/BidiSupport", blockMode: "P"}, "|",
-			"dijit/_editor/plugins/ViewSource"], height: "230px", disableSpellCheck:true'>
-	</div>
+Adding Bidi plugin with specified blockMode.
+
+    .. html ::
+
+    <div data-dojo-type="dijit/Editor"
+      data-dojo-props='plugins: ["bold","italic","|","justifyRight","justifyCenter","justifyLeft","|","formatBlock",
+      "dijit/_editor/plugins/EnterKeyHandling"], 
+      extraPlugins: ["|","insertOrderedList","insertUnorderedList","|","indent","outdent","|",
+      {name: "dojox/editor/plugins/BidiSupport", blockMode: "P"}, "|",
+      "dijit/_editor/plugins/ViewSource"], height: "230px", disableSpellCheck:true'>
+    </div>
 	
 See Also
 ========
