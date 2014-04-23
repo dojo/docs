@@ -41,7 +41,7 @@ or/and using the following shotcuts:
 Usage
 =====
 
-.. code-example::
+.. code-example ::
 
 First include the CSS for it:
 
@@ -68,7 +68,7 @@ example:
 Examples
 ========
 
-.. code-example::
+.. code-example ::
     
   .. html ::
 
