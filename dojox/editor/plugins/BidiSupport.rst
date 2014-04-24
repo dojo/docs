@@ -53,10 +53,10 @@ Then require it into the page where you're using the editor.
 
     .. js ::
  
-    require([
-        "dijit/Editor",
-        "dojox/editor/plugins/BidiSupport"
-    ]);
+   require([
+      "dijit/Editor",
+      "dojox/editor/plugins/BidiSupport"
+   ]);
 
 Now include it in the list of extraPlugins (or in the list of plugins if you're reorganizing the toolbar) for you want to load into the editor, for 
 example:
