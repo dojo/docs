@@ -153,7 +153,7 @@ There are currently a small set of nice features that can be plugged into the di
 
 * :ref:`dojox.editor.plugins.BidiSupport <dojox/editor/plugins/BidiSupport>` -- **EXPERIMENTAL**
 
-  A plugin + associated buttons icon and keybinds for 
+  A plugin + associated buttons icon and keybinds for advanced bidirectional (bidi) support. It adds several bidi-specific commands, which are not released in native RTE's ('set text direction to left-to-right', 'set text direction to right-to-left', 'change text direction to opposite'). 
   
   **This plugin is new to the Dojo Toolkit 1.10.**
 
