@@ -91,7 +91,7 @@ First, make sure you have checked out the correct branch that the pull request i
 
 Then, retrieve the Pull Request, squashing it into a single atomic changeset::
 
-  $ git pull --squash --no-commit git://github.com/username/dojo.git t12345
+  $ git pull --no-rebase --squash --no-commit git://github.com/username/dojo.git t12345
 
 The changes from the pull request will be pulled into your working directory, staged to be committed. You can now review
 the changes and do whatever testing and fix-ups are necessary before committing.
