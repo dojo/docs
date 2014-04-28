@@ -70,6 +70,7 @@ Calendar
  * A minimal width of a column (or a sub column if sub columns are configured) can now be by setting the minColumnWidth property on the column view. If columns or, if sub columns are specified, sub columns, are smaller than this property value, this property value is set and a horizontal scroll bar is displayed. Otherwise all the available space is used.
  * Columns view is now supporting overnight display. The column view maxHours property can now go up to 36 (=12h the next day). To display the night simply set minHours to 12 and maxHours to 36.
  * Constraints to limit the time range accessible through navigation has beed added. Set the minDate and maxDate properties to specify the range.
+ * A current time indicator was added to the column view.
 
 Charting
 --------
