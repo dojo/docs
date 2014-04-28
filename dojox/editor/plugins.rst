@@ -151,6 +151,11 @@ There are currently a small set of nice features that can be plugged into the di
 
   A plugin that extends the PasteFromWord plugin and adds basic content filtering and script tag removal to the dijit.Editor.  It opens a dialog where content from Word or similar programs can be pasted in, then filters are run against the input to remove extraneous HTML that causes the editor difficulty or may be security threats, leaving the injected content cleaner HTML.   It also supports a user specified list of tags that can should be stripped from the content before injecting it into the editor body.
 
+* :ref:`dojox.editor.plugins.BidiSupport <dojox/editor/plugins/BidiSupport>` -- **EXPERIMENTAL**
+
+  A plugin + associated buttons icon and keybinds for advanced bidirectional (bidi) support. It adds several bidi-specific commands, which are not released in native RTE's ('set text direction to left-to-right', 'set text direction to right-to-left', 'change text direction to opposite'). 
+  
+  **This plugin is new to the Dojo Toolkit 1.10.**
 
 See Also
 ========
