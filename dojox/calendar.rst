@@ -950,6 +950,7 @@ If sub columns are set, the decoration data items needs to have a sub column ass
 To set the decoration, set a dojo.store.api.Store to the decorationStore property like the data item store.
 
 .. js ::
+
   new Calendar({
     decorationStore: new Memory(
       {data: 
@@ -963,6 +964,7 @@ The default renderer for a decoration is dojox.calendar.DecorationRenderer. This
 The cssClassFunc function is also applied to decoration renderers. So styling of a decoration renderer can be customize by associating a CSS class to the decoration item renderer and use CSS on the page to specify the style to use.
 
 .. css ::
+
   .dojoxCalendarDecoration.Calendar1 {
     background-color: red !important;
   }
@@ -971,6 +973,7 @@ The cssClassFunc function is also applied to decoration renderers. So styling of
   } 
 
 .. js :: 
+
   calendar.set("cssClassFunc",
     function(item){
       return item.calendar == "cal1" ? "Calendar1" : "Calendar2"
