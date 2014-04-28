@@ -954,7 +954,7 @@ To set the decoration, set a dojo.store.api.Store to the decorationStore propert
   new Calendar({
     decorationStore: new Memory(
       {data: 
-        [{startTime: "2014-01-10T00:00:00Z", endTime: "2014-01-13T00:00:00Z", calendar: "calendar1"}]
+        [{startTime: "2014-01-10T00:00:00Z", endTime: "2014-01-13T00:00:00Z", calendar: "cal1"}]
       }
     )
   });
@@ -968,6 +968,7 @@ The cssClassFunc function is also applied to decoration renderers. So styling of
   .dojoxCalendarDecoration.Calendar1 {
     background-color: red !important;
   }
+
   .dojoxCalendarDecoration.Calendar1 {
     background-color: blue !important;
   } 
@@ -979,7 +980,7 @@ The cssClassFunc function is also applied to decoration renderers. So styling of
       return item.calendar == "cal1" ? "Calendar1" : "Calendar2"
     });
 
-This code is associating a CSS class (Calendar1 or Calendar2) to a decoration data item according to the value store in the calendar property of this decoration data item.
+This code is associating a CSS class (Calendar1 or Calendar2) to a decoration data item according to the value stored in the calendar property of this decoration data item.
 The CSS code is changing the background color of the decoration renderer according to the CSS class applied.
 
 
