@@ -954,7 +954,13 @@ To set the decoration, set a dojo.store.api.Store to the decorationStore propert
   new Calendar({
     decorationStore: new Memory(
       {data: 
-        [{startTime: "2014-01-10T00:00:00Z", endTime: "2014-01-13T00:00:00Z", calendar: "cal1"}]
+        [
+          {
+            startTime: "2014-01-10T00:00:00Z", 
+            endTime: "2014-01-13T00:00:00Z", 
+            calendar: "cal1"
+          }
+        ]
       }
     )
   });
