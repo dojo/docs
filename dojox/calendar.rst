@@ -938,6 +938,47 @@ if the calendar instance is already declared or in the calendar constructor:
 This formatItemTimeFunc property can be set on the calendar or on a sub view.
 If the property is set on the calendar and on a view, the one set on the view takes precedence.
 
+Decorations
+-----------
+
+Decoration data items are items like data items that have a start and end time.
+They are displayed in the calendar above the grid but below the data item renderers.
+Decorations can be used to display free or busy times, vacations, etc.
+
+If sub columns are set, the decoration data items needs to have a sub column associated. the property to determine the sub column of a data item is also used for decoration data items (by default "calendar").
+
+To set the decoration, set a dojo.store.api.Store to the decorationStore property like the data item store.
+
+.. js ::
+  new Calendar({
+    decorationStore: new Memory(
+      {data: 
+        [{startTime: "2014-01-10T00:00:00Z", endTime: "2014-01-13T00:00:00Z", calendar: "calendar1"}]
+      }
+    )
+  });
+
+The default renderer for a decoration is dojox.calendar.DecorationRenderer. This is a simple DIV element with a semi transparent green background.
+
+The cssClassFunc function is also applied to decoration renderers. So styling of a decoration renderer can be customize by associating a CSS class to the decoration item renderer and use CSS on the page to specify the style to use.
+
+.. css ::
+  .dojoxCalendarDecoration.Calendar1 {
+    background-color: red !important;
+  }
+  .dojoxCalendarDecoration.Calendar1 {
+    background-color: blue !important;
+  } 
+
+.. js :: 
+  calendar.set("cssClassFunc",
+    function(item){
+      return item.calendar == "cal1" ? "Calendar1" : "Calendar2"
+    });
+
+This code is associating a CSS class (Calendar1 or Calendar2) to a decoration data item according to the value store in the calendar property of this decoration data item.
+The CSS code is changing the background color of the decoration renderer according to the CSS class applied.
+
 
 Common properties
 -----------------
