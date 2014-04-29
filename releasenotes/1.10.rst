@@ -98,6 +98,12 @@ Editor BidiSupport plugin
 -------------------------
  * This plugin provides advanced bidirectional (bidi) support for the rich text editing widget. It adds several bidi-specific commands, which are not released in native RTE's ('set text direction to left-to-right', 'set text direction to right-to-left', 'change text direction to opposite'). Commands are executed for selected block-level elements by changing their styles.
 
+App
+-------------------------
+ * dojox/app was updated to have the default Layout controller order view domNodes based upon the view constraints, in order to work correctly with iOS VoiceOver support.
+ * By default, the domNodes will be placed in order of the constraints (top,left,center,right,bottom or for RTL top,right,center,left,bottom) compared to the sibling nodes.
+ * A new config option was also added to avoid the overhead of ordering the domNodes by  constraints, the config option is "useConfigOrder". When it is set to true the views are added to the dom without consideration of the constraints.
+
 
 Util
 ====
