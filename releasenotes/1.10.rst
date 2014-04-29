@@ -92,7 +92,12 @@ Mobile
 
 Store
 -----
-* Added local `dojo/store` providers in dojox, with support for IndexedDB and WebSQL
+ * Added local `dojo/store` providers in dojox, with support for IndexedDB and WebSQL
+
+Editor BidiSupport plugin
+-------------------------
+ * This plugin provides advanced bidirectional (bidi) support for the rich text editing widget. It adds several bidi-specific commands, which are not released in native RTE's ('set text direction to left-to-right', 'set text direction to right-to-left', 'change text direction to opposite'). Commands are executed for selected block-level elements by changing their styles.
+
 
 Util
 ====
