@@ -27,7 +27,7 @@ The module includes an after function that provides after advice to a method. Th
 
   after(target, methodName, advisingFunction, receiveArguments);
 
-The target is the object with the method. The methodName is the name of the method to advice. The advisingFunction is the function that will be called after the original method is called. The return value from the method will be provided as the first argument to the advising function. The advising function must return a value to replace the final return value of the method call. For example:
+The target is the object with the method. The methodName is the name of the method to advice. The advisingFunction is the function that will be called after the original method is called. The return value from the method will be provided as the first argument to the advising function. The advising function can return a value to replace the final return value of the method call. For example:
 
 .. js ::
 
@@ -48,7 +48,7 @@ We can also load dojo/aspect with dojo.require("dojo.aspect") to make it availab
     ...
   });
 
-The advising function can return a value to replace the final return value of the method call. For example:
+The advising function must return a value to replace the final return value of the method call. For example:
 
 .. js ::
 
