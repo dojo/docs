@@ -85,6 +85,7 @@ Charting
  * SelectableLegend leverages this new feature to provide consistent approach to series visibility switch across the various plots
  * All classes inheriting from Element, an in particular all type of plots can now be set SVG rendering options using the renderingOptions property. By default axis2d/Default, plot2d/Columns and plot2d/Bars are using shape-rendering: crispEdges.
  * Spider plot now accepts an animate property. If set to false it prevents animation from running. Like animate properties of other plot types, it allows to customize the animation duration and other animation properties. 
+ * Axis can now be drawn at the center of the chart. For this, use the new "position" argument and set it to "center". The position argument can be set to "leftOrBottom", "center" or "rightOrTop". It replaces the deprecated "leftOrBottom" argument.
 
 Gfx
 ---
