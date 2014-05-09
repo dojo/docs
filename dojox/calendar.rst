@@ -945,7 +945,9 @@ Decoration data items are items like data items that have a start and end time.
 They are displayed in the calendar above the grid but below the data item renderers.
 Decorations can be used to display free or busy times, vacations, etc.
 
-If sub columns are set, the decoration data items can have a sub column associated. If set, the decoration will be displayed in the sub column if no sub column is set, the decoration will be displayed in all sub columns.
+If sub columns are set, the decoration data items can have a sub column associated. 
+If set, the decoration will be displayed in the sub column. 
+If no sub column is set, the decoration will be displayed in all sub columns.
 The property to determine the sub column of a data item is also used for decoration data items (by default "calendar").
 
 To set the decoration items, set a dojo.store.api.Store to the decorationStore property like the data item store.
