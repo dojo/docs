@@ -51,6 +51,13 @@ Dojo Core
 * Various fixes for dojo/query
 * `dojo/on` now allows multiple events by using a comma separated list, or an array for multiple extension events
 
+request
+-------
+
+* Fixed `Content-Type` header when using `FormData`
+* Added `arraybuffer`, `blob`, and `document` response types where natively supported
+* Added progress events for chunked encoding
+
 Dijit
 =====
 
