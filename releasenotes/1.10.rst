@@ -49,6 +49,24 @@ those browsers.
 Dojo Core
 =========
 
+dojo/debounce
+-------------
+Provides support for debouncing functions. Debouncing prevent repeted execution of a function by delaying it.
+:ref:`dojo/debounce <dojo/debounce>`
+An extension event is also available: :ref:`dojo/on/debounce <dojo/on/debounce>`
+
+dojo/throttle
+-------------
+Provides support for throttling functions. Throttling ensure that only one execution a function is done during a predefined interval.
+:ref:`dojo/throttle <dojo/throttle>`
+An extension event is also available: :ref:`dojo/on/throttle <dojo/on/throttle>`
+
+dojo/on/asyncEventListener
+--------------------------
+asyncEventListener helps using asynchronous event listeners by ensuring the received event is properly forwarded.
+In some browser the event object can be invalid when reached from an asynchronous function (like a debounce).
+:ref:`dojo/on/asyncEventListener <dojo/on/asyncEventListener>`
+
 Dijit
 =====
 
