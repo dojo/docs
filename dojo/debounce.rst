@@ -12,8 +12,8 @@ dojo/debounce
   :depth: 2
 
 This module provide a function debouncer.
-Debouncing prevent repeted execution of a function by delaying it.
-If another call arrive before the execution starts, the previous execution is canceled and a new one is scheduled.
+Debouncing prevents repeated execution of a function by delaying it.
+If another call arrives before the execution starts, the previous execution is canceled and a new one is scheduled.
 
 Usage
 =====
