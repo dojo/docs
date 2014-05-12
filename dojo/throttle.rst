@@ -12,7 +12,7 @@ dojo/throttle
   :depth: 2
 
 This module provide a function throttler.
-Throttling ensure that only one execution a function is done during a predefined interval. 
+Throttling ensures that a function is only executed once during a predefined interval.
 After an execution, any call of the function during this interval will be ignored.
 
 Usage
@@ -52,10 +52,10 @@ throttling a topic callback
   .. js ::
 
     require([
-      'dojo/topic',
-      'dojo/dom',
-      'dojo/throttle'
-      'dojo/domReady!'
+      "dojo/topic",
+      "dojo/dom",
+      "dojo/throttle"
+      "dojo/domReady!"
     ], function(topic, dom, throttle) {
   
       var normalCount = 0;

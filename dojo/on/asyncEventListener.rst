@@ -11,16 +11,14 @@ dojo/on/asyncEventListener
 .. contents ::
   :depth: 2
 
-This module provide a utility function that helps to use asynchronous event listener.
-In some browser the event object can be invalid when reached from an asynchronous function (like a debounce).
-This utility accepts a function as parameter.
-It evaluates if the browser support asynchronous event listener and returns and appropriate listener, where the event will be valid.
-
+In old browsers (such as IE 8 and bellow) the event object can be invalid when reached from an asynchronous function (like a debounce).
+This utility accepts a function as its parameter.
+It evaluates if the browser supports asynchronous event listener and returns an appropriate listener, where the event will be valid.
 
 Usage
 =====
 
-The module's return value is a function that can be used as event listener:
+The module's return value is a function that can be used as an event listener:
 
 .. js ::
 
@@ -48,23 +46,23 @@ Asynchronous click event
 .. code-example ::
   :djConfig: async: true
 
-  Using asyncEventListener to prevent invalid event object
+  Using asyncEventListener to prevent an invalid event object
 
   .. js ::
 
     require([
-      'dojo/_base/lang',
-      'dojo/dom',
-      'dojo/on',
-      'dojo/on/asyncEventListener',
-      'dojo/domReady!'
+      "dojo/_base/lang",
+      "dojo/dom",
+      "dojo/on",
+      "dojo/on/asyncEventListener",
+      "dojo/domReady!"
     ], function(lang, dom, on, asyncEventListener) {
       var asyncListener = function(e) {
           console.log(e);
       }
       asyncListener = asyncEventListener(asyncListener);
   
-      on(dom.byId('test'), 'click', function(e) {
+      on(dom.byId("test"), "click", function(e) {
           setTimeout(lang.hitch(null, asyncListener, e), 100);
       });
   

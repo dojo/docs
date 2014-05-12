@@ -11,15 +11,14 @@ dojo/on/debounce
 .. contents ::
   :depth: 2
 
-This module provide an extension event to use with dojo/on.
-This extension event allows to debounce an event.
-More information on debouncing are available in dojo/debounce.
+This module provides an extension event to use with :ref:`dojo/on <dojo/on>` to allow the debouncing of an event.
+More information on debouncing is available in :ref:`dojo/debounce <dojo/debounce>`.
 
 
 Usage
 =====
 
-The module's return value is a function that can be used as event listener:
+The module's return value is a function that can be used as an event listener:
 
 .. js ::
 
@@ -53,10 +52,10 @@ Debouncing a mousemouve event
   .. js ::
 
     require([
-      'dojo/dom',
-      'dojo/on',
-      'dojo/on/debounce',
-      'dojo/domReady!'
+      "dojo/dom",
+      "dojo/on",
+      "dojo/on/debounce",
+      "dojo/domReady!"
     ], function(dom, on, debounce) {
       var listener = function(e) {
           console.log(e);
@@ -64,7 +63,7 @@ Debouncing a mousemouve event
       var delay = 1000; //1 second
       debounceListener = debounce(listener, delay);
   
-      on(dom.byId('test'), 'mousemove', debounceListener);
+      on(dom.byId("test"), "mousemove", debounceListener);
   
     });
 
@@ -73,4 +72,4 @@ Debouncing a mousemouve event
 
   .. html ::
 
-    <div id="test">mouve the mouse over me</div>
+    <div id="test">move the mouse over me</div>

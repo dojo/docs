@@ -52,10 +52,10 @@ debouncing a topic callback
   .. js ::
 
     require([
-      'dojo/topic',
-      'dojo/dom',
-      'dojo/debounce'
-      'dojo/domReady!'
+      "dojo/topic",
+      "dojo/dom",
+      "dojo/debounce"
+      "dojo/domReady!"
     ], function(topic, dom, debounce) {
   
       var normalCount = 0;
