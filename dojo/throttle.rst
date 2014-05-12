@@ -6,19 +6,19 @@ dojo/throttle
 
 :Authors: Benjamin Santalucia
 :Project owner: 
-:since: 1.9.3
+:since: 1.10
 
 .. contents ::
   :depth: 2
 
 This module provide a function throttler.
-Throttle ensure that only one execution a function is done during a predefined interval. 
-After an execution, any of call of the function during this interval will be ignored.
+Throttling ensure that only one execution a function is done during a predefined interval. 
+After an execution, any call of the function during this interval will be ignored.
 
 Usage
 =====
 
-The module's return value is an on function that can be directly called to add an event listener:
+The module's return value is a function that can be directly invoked:
 
 .. js ::
 
@@ -41,8 +41,8 @@ The signature of the function is:
 Examples
 ========
 
-throttle a topic callback
--------------------------
+throttling a topic callback
+---------------------------
 
 .. code-example ::
   :djConfig: async: true

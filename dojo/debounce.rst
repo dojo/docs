@@ -6,19 +6,19 @@ dojo/debounce
 
 :Authors: Benjamin Santalucia
 :Project owner: 
-:since: 1.9.3
+:since: 1.10
 
 .. contents ::
   :depth: 2
 
 This module provide a function debouncer.
-debounce prevent repeted execution of a function by delaying it.
+Debouncing prevent repeted execution of a function by delaying it.
 If another call arrive before the execution starts, the previous execution is canceled and a new one is scheduled.
 
 Usage
 =====
 
-The module's return value is an on function that can be directly called to add an event listener:
+The module's return value is a function that can be directly invoked:
 
 .. js ::
 
@@ -41,8 +41,8 @@ The signature of the function is:
 Examples
 ========
 
-debounce a topic callback
--------------------------
+debouncing a topic callback
+---------------------------
 
 .. code-example ::
   :djConfig: async: true
