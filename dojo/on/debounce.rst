@@ -55,9 +55,9 @@ Debouncing a mousemouve event
     require([
       'dojo/dom',
       'dojo/on',
-      'dojo/on/throttle',
+      'dojo/on/debounce',
       'dojo/domReady!'
-    ], function(dom, on, throttle) {
+    ], function(dom, on, debounce) {
       var listener = function(e) {
           console.log(e);
       }
