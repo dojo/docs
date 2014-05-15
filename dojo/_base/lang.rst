@@ -454,6 +454,8 @@ mixin()
 overwriting the left-most object, and returning the newly mixed object for use. ``mixin()`` is very similar to 
 `extend()`_ but only works on objects, whereas extend explicitly extends an object's prototype.
 
+Note: In case of nested objects and arrays, mixin does not combine, only overwrite.
+
 The signature of the method is:
 
 .. api-doc :: dojo/_base/lang
