@@ -69,6 +69,27 @@ Example 1
 
 .. image :: Heading-general.png
 
+Programmatic:
+
+.. js ::
+
+  require([
+    "dojo/dom",
+    "dojo/ready",
+    "dojox/mobile/Heading"
+  ], function(dom, ready, Heading){
+    ready(function(){
+      var heading = new Heading({
+                       id: "viewHeading",
+                       label: "General",
+                       back: "Settings",
+                       moveTo: "settings"
+                    });
+      heading.placeAt(document.body);
+      heading.startup();
+    });
+  });
+
 Example 2
 ---------
 
@@ -82,6 +103,34 @@ Example 2
   </div>
 
 .. image :: Heading-world.png
+
+Programmatic:
+
+.. js ::
+
+  require([
+    "dojo/dom",
+    "dojo/ready",
+    "dojox/mobile/Heading",
+    "dojox/mobile/ToolBarButton"
+  ], function(dom, ready, Heading, ToolBarButton){
+    ready(function(){
+      var heading = new Heading({
+        id: "viewHeading",
+        label: "World Clock"
+      });
+      heading.addChild(new ToolBarButton({label:"Edit"}));
+      var tb = new ToolBarButton({
+        icon:"mblDomButtonWhitePlus",
+        style:"float:right;"
+      });
+      tb.on("click", function(){ console.log('+ was clicked'); });
+      heading.addChild(tb);
+      heading.placeAt(document.body);
+      heading.startup();
+    });
+  });
+
 
 Example 3
 ---------

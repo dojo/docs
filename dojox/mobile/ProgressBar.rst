@@ -44,3 +44,20 @@ Declarative example
        data-dojo-props='value:"30%", label:"30/100"'></div>
 
 .. image :: ProgressBar-example1.png
+
+Programmatic example
+--------------------
+.. js ::
+
+  require([
+    "dojo/dom",
+    "dojo/ready",
+    "dojox/mobile/ProgressBar"
+  ], function(dom, ready, ProgressBar){
+    ready(function(){
+      var pb = new ProgressBar({value:"30%", label:"30/100", style:{width:"200px"}});
+      pb.placeAt(dom.byId("foo"));
+      pb.startup();
+    });
+  });
+

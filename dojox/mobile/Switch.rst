@@ -66,6 +66,23 @@ Declarative example 1
 
 .. image :: Switch-example1.png
 
+Programmatic example 1
+----------------------
+
+.. js ::
+
+  require([
+    "dojo/dom",
+    "dojo/ready",
+    "dojox/mobile/Switch"
+  ], function(dom, ready, Switch){
+    ready(function(){
+      var sw = new Switch({id:"sw", value:"off"});
+      sw.placeAt(document.body); // e.g add the switch to body
+      sw.startup();
+    });
+  });
+
 Declarative example 2
 ---------------------
 
@@ -156,8 +173,9 @@ To listen to the changes of switch states, you can connect to the onStateChanged
 
 .. js ::
 
-  // 'connect' is the return value of the dojo/_base/connect module
-  connect.connect(dijit.byId("sw"), "onStateChanged", function(newState){
+  // 'registry' is the return value of the dijit/registry amd module
+  var sw = registry.byId("sw");
+  sw.on("stateChanged", function(newState){
       alert("newState = "+newState); // newState is "on" or "off"
   });
 
