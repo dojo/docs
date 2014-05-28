@@ -163,9 +163,13 @@ Programmatic example
          * Write your lengthy task here. Once finished, hide the dialog:
          */
         hideProgIndDlg(dlg);
-      }, 0);
+      }, 3000);
     }
   });
+
+.. html ::
+
+  <button onclick="showProgIndDlg();">Show Dialog</button>
 
 .. image :: SimpleDialog-example2.png
 
