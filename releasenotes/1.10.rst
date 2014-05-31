@@ -20,11 +20,11 @@ of Dojo might include fixes to support future releases of these browsers, but it
 
 * Safari 5-7
 
-* Chrome 13-33
+* Chrome 13-35
 
 * IE 8-11
 
-* Opera 10.50-12 (Dojo core only)
+* Opera 10.50-12 (Dojo core only). Blink-based versions of Opera should work like Chrome, but are not officially tested or supported for this release.
 
 **Mobile (dojox/mobile)**
 
@@ -36,7 +36,7 @@ of Dojo might include fixes to support future releases of these browsers, but it
 
 * Windows Phone 8 (IE10)
 
-* Mobile compatibility on desktop browsers: IE 8-11, Firefox 4-29, Chrome 13-33
+* Mobile compatibility on desktop browsers: IE 8-11, Firefox 4-29, Chrome 13-35
 
 
 **Server-Side User Agents**
