@@ -46,14 +46,6 @@ version of that *something* will be made:
     var newarray = lang.clone(["a", "b", "c"]);
   });
 
-The signature of the method is:
-
-.. api-doc :: dojo/_base/lang
-  :methods: clone
-  :no-headers:
-  :sig:
-  :returns:
-
 Usage
 ~~~~~
 
@@ -177,13 +169,6 @@ can use it to root the path in a different window object, or a particular namesp
     }
   });
 
-The signature of the method is:
-
-.. api-doc :: dojo/_base/lang
-  :methods: exists
-  :no-headers:
-  :sig:
-  :returns:
 
 .. _dojo/_base/lang#extend:
 
@@ -214,13 +199,6 @@ call, this sample would not recognize the follow markup:
 After the extend, any new instances of a ``dijit/TitlePane`` will have the ``randomAttribute`` member mixed into the 
 instance. ``extend()`` affects all future instances of a class or prototyped Object.
 
-The signature of the function is:
-
-.. api-doc :: dojo/_base/lang
-  :methods: extend
-  :no-headers:
-  :sig:
-  :returns:
 
 Extending dijit/_WidgetBase
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -323,14 +301,6 @@ By default, the context is :ref:`dojo/_base/kernel::global <dojo/_base/kernel#gl
     lang.getObject("bar", false, foo); // returns "some value"
   });
 
-The signature of the method is:
-
-.. api-doc :: dojo/_base/lang
-  :methods: getObject
-  :no-headers:
-  :sig:
-  :returns:
-
 .. _dojo/_base/lang#hitch:
 
 hitch()
@@ -365,14 +335,6 @@ Only to have it fail with a cryptic error about an unresolved variable? Why does
   });
 
 And now when the event fires and runs the function, ``this`` will refer to the context that is expected.
-
-The signature of the the method is:
-
-.. api-doc :: dojo/_base/lang
-  :methods: hitch
-  :no-headers:
-  :sig:
-  :returns:
 
 Examples
 ~~~~~~~~
@@ -453,14 +415,6 @@ mixin()
 ``mixin()`` is a simple utility function for mixing objects together. Mixin combines two objects from right to left, 
 overwriting the left-most object, and returning the newly mixed object for use. ``mixin()`` is very similar to 
 `extend()`_ but only works on objects, whereas extend explicitly extends an object's prototype.
-
-The signature of the method is:
-
-.. api-doc :: dojo/_base/lang
-  :methods: mixin
-  :no-headers:
-  :sig:
-  :returns:
 
 Simple Mixes
 ~~~~~~~~~~~~
@@ -603,13 +557,6 @@ What that does is create a new function that wraps dataLoaded and affixes the fi
 ``firstValue``.  Note that ``partial()`` allows you to do *n* parameters, so you can keep defining as many values as 
 you want for fixed-value parameters of a function.
 
-The signature of the method is:
-
-.. api-doc :: dojo/_base/lang
-  :methods: partial
-  :no-headers:
-  :sig:
-
 Example
 ~~~~~~~
 
@@ -642,15 +589,6 @@ replace()
 
 This function provides a light-weight foundation for substitution-based templating. It is a sane alternative to string 
 concatenation technique, which is brittle and doesn't play nice with localization.
-
-The signature of the method is:
-
-.. api-doc :: dojo/_base/lang
-  :methods: replace
-  :no-headers:
-  :sig:
-
-The method returns a ``String``.
 
 With Dictionary
 ~~~~~~~~~~~~~~~
@@ -935,13 +873,6 @@ Wheras with `setObject()`, we can shorten that to:
     lang.setObject("parent.child.prop", "some value", obj);
   });
 
-The signature of the function is:
-
-.. api-doc :: dojo/_base/lang
-  :methods: setObject
-  :no-headers:
-  :sig:
-
 .. _dojo/_base/lang#trim:
 
 trim()
@@ -977,13 +908,6 @@ more speed, check out :ref:`dojo/string::trim() <dojo/string#trim>`, which imple
     <p id="output3"></p>
     <p id="output4"></p>
     <p id="output5"></p>
-
-The method has the following signature:
-
-.. api-doc :: dojo/_base/lang
-  :methods: trim
-  :no-headers:
-  :sig:
 
 Deprecated Methods
 ==================

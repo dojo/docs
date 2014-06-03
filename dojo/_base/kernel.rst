@@ -40,12 +40,6 @@ This function logs a warning message to the console, alerting developers a metho
 
 This means the "SplitContainer" widget still works, but has been replaced by the :ref:`BorderContainer <dijit/layout/BorderContainer>` widget, and will be removed in Dojo 2.0.
 
-The signature of the method is:
-
-.. api-doc :: dojo/_base/kernel
-  :methods: deprecated
-  :no-headers:
-  :sig:
 
 .. _dojo/_base/kernel#experimental:
 
@@ -60,13 +54,6 @@ This function logs a warning message to the console, alerting developers a metho
   require(["dojo/_base/kernel"], function(kernel){
     kernel.experimental("acme.MyClass");
   });
-
-The signature of the method is:
-
-.. api-doc :: dojo/_base/kernel
-  :methods: experimental
-  :no-headers:
-  :sig:
 
 .. _dojo/_base/kernel#global:
 

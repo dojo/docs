@@ -30,13 +30,6 @@ The module's return value is an on function that can be directly called to add a
     });
   });
 
-The signature of the function is:
-
-.. api-doc :: dojo/on
-  :topfunc:
-  :sig:
-  :returns:
-  :no-headers:
 
 Removing an Event Handler
 -------------------------

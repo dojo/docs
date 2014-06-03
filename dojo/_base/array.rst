@@ -39,12 +39,6 @@ passed array. If the value is not found, ``-1`` is returned.
     array.indexOf(arrayObject, valueToFind, fromIndex, findLast);
   });
 
-The signature of the function is:
-
-.. api-doc :: dojo/_base/array
-  :methods: indexOf
-  :no-headers:
-  :sig:
 
 Examples
 ~~~~~~~~
@@ -89,13 +83,6 @@ in the passed array. If the value is not found, ``-1`` is returned.
   require(["dojo/_base/array"], function(array){
     array.lastIndexOf(arrayObject, valueToFind, fromIndex);
   });
-
-The signature of the function is:
-
-.. api-doc :: dojo/_base/array
-  :methods: lastIndexOf
-  :no-headers:
-  :sig:
 
 *Note*: Calling ``indexOf()`` with the ``findLast`` parameter set to ``true`` is the same as calling ``lastIndexOf()``.
 
@@ -143,12 +130,6 @@ forEach()
     array.forEach(arrayObject, callback, thisObject);
   });
 
-The signature of the function is:
-
-.. api-doc :: dojo/_base/array
-  :methods: forEach
-  :no-headers:
-  :sig:
 
 Using the third argument ``thisObject``, ``forEach()`` is capable of scoping:
 
@@ -252,12 +233,6 @@ values from ``unfilteredArray`` for which the ``callback`` returns a truthy valu
     filteredArray = array.filter(unfilteredArray, callback, thisObject);
   });
 
-The signature of the function is:
-
-.. api-doc :: dojo/_base/array
-  :methods: filter
-  :no-headers:
-  :sig:
 
 Examples
 ~~~~~~~~
@@ -331,13 +306,6 @@ array with any of the modified results.
   require(["dojo/_base/array"], function(array){
     array.map(arrayObject, callback, thisObject);
   });
-
-The signature of the function is:
-
-.. api-doc :: dojo/_base/array
-  :methods: map
-  :no-headers:
-  :sig:
 
 Examples
 ~~~~~~~~
@@ -463,13 +431,6 @@ as it encouters an item for which the provided callback returns a truthy value. 
     var a = array.some(arrayObject, callback, thisObject);
   });
 
-The signature of the function is:
-
-.. api-doc :: dojo/_base/array
-  :methods: some
-  :no-headers:
-  :sig:
-
 *Note*: Because of the short circuiting, ``some()`` can be more efficient than ``forEach()`` when the loop is used for 
 comparison purposes.
 
@@ -523,13 +484,6 @@ items, ``every()`` returns ``true``.
   require(["dojo/_base/array"], function(array){
     array.every(arrayObject, callback, thisObject);
   });
-
-The signature of the function is:
-
-.. api-doc :: dojo/_base/array
-  :methods: every
-  :no-headers:
-  :sig:
 
 *Note*: Because of the short circuiting, ``every()`` can be more efficient than ``forEach()`` when the loop is used 
 for comparison purposes.
