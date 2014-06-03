@@ -141,10 +141,6 @@ Features
 
   ServiceStore and it's subclasses are a generalized dojo.data implementation for any webservice
 
-* :ref:`dojox.data.SnapLogicStore <dojox/data/SnapLogicStore>`
-
-  A data store interface to use the SnapLogic framework
-
 * :ref:`dojox.data.WikipediaStore <dojox/data/WikipediaStore>`
 
   An extension of :ref:`dojox.data.ServiceStore <dojox/data/ServiceStore>` to use Wikipedia's search service

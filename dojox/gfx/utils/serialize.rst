@@ -47,7 +47,7 @@ TODO: example
 See also
 ========
 
-* :ref:`dojox.gfx.utils.deserialize <dojox/gfx/utils/deserialize>`
+* `dojox/gfx/utils/deserialize`
 
   Rebuild the dojox.gfx.Surface object from the provided JS representation.
 

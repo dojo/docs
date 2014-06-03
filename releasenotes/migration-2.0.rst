@@ -164,8 +164,7 @@ URLs
 Most of the time you use the ``dojo/text!`` plugin to load text from a specific URL, but if you need an actual URL in 
 your classes you should use ``require.toUrl()``.
 
-See :ref:`require.toUrl() <loader/amd#utility-functions>` and 
-:ref:`context sensitive require <loader/amd#context-sensitive-require>` for details.
+See :ref:`require.toUrl() <loader/amd#utility-functions>` for details.
 
 Quick Reference
 ---------------
