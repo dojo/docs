@@ -31,15 +31,6 @@ features:
     // connect now has the module's features
   });
 
-Features
-========
-
-.. api-doc :: dojo/_base/connect
-  :methods:
-  :no-headers:
-  :table:
-  :summary:
-  :description:
 
 See Also
 ========

@@ -38,12 +38,7 @@ Requiring in the module is all that is needed to leverage the functionality:
 subscribe()
 -----------
 
-Subscribes to a particular topic.  It has a signature of:
-
-.. api-doc :: dojo/topic
-  :methods: subscribe
-  :no-headers:
-  :sig:
+Subscribes to a particular topic.
 
 ``subscribe()`` returns a handle that has a ``remove()`` method that can be used to remove the listener.
 
@@ -52,12 +47,7 @@ Subscribes to a particular topic.  It has a signature of:
 publish()
 ---------
 
-Publishes a topic, which the arguments are then sent to every listener.  It has a signature of:
-
-.. api-doc :: dojo/topic
-  :methods: publish
-  :no-headers:
-  :sig:
+Publishes a topic, which the arguments are then sent to every listener.
 
 Globbing
 --------
