@@ -23,6 +23,17 @@ features:
     // event now contains the modules features
   });
 
+.. _dojo/_base/event#stop:
+
+stop(evt)
+---------
+Simply calls evt.preventDefault() and evt.StopPropagation().
+
+.. _dojo/_base/event#fix:
+
+fix(evt)
+--------
+Performs various normalization on event object.
 
 See also
 ========

@@ -148,7 +148,7 @@ A function that handles normalized setting of attributes on DOM Nodes. When pass
 will not be directly assigned to slots on the node, but rather the default behavior will be removed and the new behavior
 will be added using ``dojo.connect()``, meaning that event handler properties will be normalized and that some caveats
 with regards to non-standard behaviors for ``onsubmit`` apply. Namely that you should cancel form submission using
-:ref:`event.stop() <dojo/_base/event#dojo-stopevent>` on the passed event object instead of returning a boolean value
+`evt.preventDefault()` on the passed event object instead of returning a boolean value
 from the handler itself. It returns the DOM node.
 
 Usage
@@ -268,10 +268,12 @@ Here is an example of removing the ``disabled`` attribute from a DOM node:
     <input id="model" name="model" disabled="disabled" type="text" baz="foo" /> &mdash; our model node <br/>
     <button onclick="removeDisabled();">Remove Disabled</button>
 
+.. _dojo/dom-attr#getNodeProp:
+
 getNodeProp()
 -------------
 
-Is a companion function for :ref:`domAttr.get <dojo/domAttr#domattr-get>`. Unlike the latter it favors properties
+Is a companion function for :ref:`domAttr.get <dojo/dom-attr#get>`. Unlike the latter it favors properties
 falling back on attributes, if a property was not present.
 
 It is useful when you don't care if somebody set an attribute on a node in HTML, or not, but you want to read a

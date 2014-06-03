@@ -130,6 +130,8 @@ Selection mode example
 
 .. image :: RoundRectList-check.png
 
+.. _dojox/mobile/RoundRectList#editable-list-example:
+
 Editable list example
 ---------------------
 

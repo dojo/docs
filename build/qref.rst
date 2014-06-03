@@ -328,7 +328,7 @@ Transform: writeDojo
 Transform: writeOptimized
 =========================
 
-:ref:`writeOptimize transform reference... <build/transforms/writeOptimize>`
+:ref:`writeOptimized transform reference... <build/transforms/writeOptimized>`
 
 ``layerOptimize`` (default = "shrinksafe")
   * [*falsy*] Layer modules are not optimized; the ``stripConsole`` profile property, if any, is ignored.

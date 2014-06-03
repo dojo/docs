@@ -99,4 +99,4 @@ See Also
 
 * :ref:`dojo/string <dojo/string>` - String handling enhancements
 
-* :ref:`dojo/_base/array <dojo/array>` - Array handling enhancements
+* :ref:`dojo/_base/array <dojo/_base/array>` - Array handling enhancements
