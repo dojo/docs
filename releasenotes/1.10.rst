@@ -102,7 +102,7 @@ Mobile
  * A new iOS 7 theme has been added
  * The Carousel, Slider, SpinWheel, TimePicker and DatePicker widgets are now accessible.
  * Enhanced touch feedback for Buttons.
- * The width of a Switch widget can explicitely be set via css to support long label.
+ * The width of a Switch widget can explicitly be set via css to support long label.
  * Improved performance of lists with variable height items: the layout of variable height items is no longer updated on each resize by default. You can enable it back by setting the new ListItem.layoutOnResize property to true (false by default).
  * The css class of a TabBarButton Badge can now be specified on the TabBarButton via the badgeClass property.
 

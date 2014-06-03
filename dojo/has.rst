@@ -37,7 +37,7 @@ The basic tests defined within the ``dojo/has`` module can be enhanced with othe
 features and tests.  One frequently used module that extends ``dojo/has`` with additional tests and features is 
 :ref:`dojo/sniff <dojo/sniff>`.
 
-Using ``staticHasFeatures`` in a build configuration, along with the closure JavaScript complier can produce a build 
+Using ``staticHasFeatures`` in a build configuration, along with the closure JavaScript compiler can produce a build
 where dead code paths are removed.  See the :ref:`builder <build/index>` documentation for more information.
 
 Usage

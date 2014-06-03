@@ -173,7 +173,7 @@ Arguments
 ======== ============== ==========================================
 Argument Type           Description
 ======== ============== ==========================================
-node     DomNode|String The node you want to check is a descendent
+node     DomNode|String The node you want to check is a descendant
 ancestor DomNode|String The node you think might be the ancestor
 ======== ============== ==========================================
 

@@ -113,7 +113,7 @@ Return Results
 
 Because certain features introduced in Dojo 1.8 can cause the parser to run in an asynchronous fashion, but in Dojo 1.X
 there is a need to maintain backwards compatibility, ``dojo/parser::parse()`` returns a combined object that is an array
-combined with a promise. When running in synch mode, the array part of the object will contain the instantiated objects.
+combined with a promise. When running in sync mode, the array part of the object will contain the instantiated objects.
 When running in async mode, the promise part of the object will resolve with an array of instantiated objects when the
 parse is finished.
 

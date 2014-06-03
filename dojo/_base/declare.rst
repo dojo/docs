@@ -366,7 +366,7 @@ coupled with AMD make the creation of classes more manageable and portable:
 
 * The class name (first argument of ``declare()``) is omitted in new development.  This ensures that the global 
   namespace does not become polluted with classes and reduces the chances of name collisions.  Classes in Dojo Toolkit 
-  introduced prior to Dojo 1.7 will include the class name for backwards compatability reasons.
+  introduced prior to Dojo 1.7 will include the class name for backwards compatibility reasons.
 
 * The AMD Module ID (MID) becomes the commonly referred to class name.  This name is implied from the path to the file.
   For example ``package/Class.js`` would make the MID ``package/Class``.

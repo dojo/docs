@@ -24,18 +24,19 @@ features:
     // Instances of NodeList will contain legacy features
   });
 
-As stated above, these are legacy features and generally shouldn't be used for new development.  Utilising :ref:`dojo/query <dojo/query>` and the ``NodeList`` extension modules are more approprate.  See:
+As stated above, these are legacy features and generally shouldn't be used for new development.
+Utilising :ref:`dojo/query <dojo/query>` and the ``NodeList`` extension modules are more appropriate.  See:
 
 * :ref:`NodeList <dojo/NodeList>` - The base NodeList supplied by ``dojo/query``.
 
 * :ref:`dojo/NodeList-data <dojo/NodeList-data>` - Allows the association of arbitrary data with items of a ``NodeList``.
 
-* :ref:`dojo/NodeList-dom <dojo/NodeList-dom>` - DOM related functions that are similiar functionality to the ``dojo/dom-*`` related modules.
+* :ref:`dojo/NodeList-dom <dojo/NodeList-dom>` - DOM related functions that are similar functionality to the ``dojo/dom-*`` related modules.
 
 * :ref:`dojo/NodeList-fx <dojo/NodeList-fx>` - Adds base and core FX support to ``NodeList``.
 
 * :ref:`dojo/NodeList-html <dojo/NodeList-html>` - Adds advanced content setting functionality.
 
-* :ref:`dojo/NodeList-manipulate <dojo/NodeList-manipulate>` - Functions that allow for manipulation of DOM nodes in similiar way to jQuery.
+* :ref:`dojo/NodeList-manipulate <dojo/NodeList-manipulate>` - Functions that allow for manipulation of DOM nodes in similar way to jQuery.
 
 * :ref:`dojo/NodeList-traverse <dojo/NodeList-traverse>` - Advanced node traversal functions.

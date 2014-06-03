@@ -16,7 +16,11 @@ dojo/html
 Introduction
 ============
 
-``dojo/html`` is a module that provides a single public function ``set()``.  It is used to safely and conviently replace an element's content, while providing some hooks and options for how the replacement should be handled.  This is generally only applicable to "complex" replacement, (e.g. where the options parameters are needed, or you are inserting a NodeList).  If you are just placing strings of HTML in a DOM node, it is preferable to use :ref:`dojo/dom-construct::place() <dojo/dom-construct#place>`.
+``dojo/html`` is a module that provides a single public function ``set()``.  It is used to safely and
+conveniently replace an element's content, while providing some hooks and options for how the replacement
+should be handled.  This is generally only applicable to "complex" replacement, (e.g. where the options parameters
+are needed, or you are inserting a NodeList).  If you are just placing strings of HTML in a DOM node,
+it is preferable to use :ref:`dojo/dom-construct::place() <dojo/dom-construct#place>`.
 
 Also, while designed as a private class, the ``_ContentSetter()`` object is used in the toolkit for complex setting operations as well.  In the early days of Dojo, the ContentPane contained all this functionality directly, but it was moved as a separate module to make it easier to use by the rest of the toolkit.
 

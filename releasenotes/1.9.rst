@@ -438,7 +438,7 @@ dojox/app
        * respectively the previousView or nextView for the current view at its position
        * a raw data object that can be passed from one view to another by specifying a data attribute in the transition options.
    * Support was added to allow multiple views to be included in the DefaultViews in the config as well as on transitions and the url used in the transition. This allows multiple views to be displayed with different constraints (or regions) at the same time.  It is also now possible to transition views in regions other than the center.  To specify multiple views the view names would listed separated by a "+" for example "view1+view2" or "view1,subviewA+view2".  Support has also been added to be able to use a "-" to hide a view.  So if "view1+view2" are displayed and a transition is requested for "view3-view1" then view3 would be displayed (replacing view2 assuming they have the same constraint) and view1 would be hidden.
-   * Support was added to allow view specific params.  To specify params for a specific view the params must contain the view name with the view specfiic params set with the view name, for example: 
+   * Support was added to allow view specific params.  To specify params for a specific view the params must contain the view name with the view specific params set with the view name, for example:
 
 .. js ::
 

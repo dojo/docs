@@ -225,7 +225,7 @@ It might be a good idea to turn ``stripConsole`` off as well. Running this build
     define("my/HotApplication", [
         "dojo", "dijit", "dojox", "dojo/require!my/HotController", "dijit/_Widget",
         "dojo/text!my/templates/HotApplication.html"
-    ], function(dojo, dijix, dojox){
+    ], function(dojo, dijit, dojox){
     dojo.provide("my.HotApplication");
     dojo.require("my.HotController");
     dojo.require("dijit._Widget");

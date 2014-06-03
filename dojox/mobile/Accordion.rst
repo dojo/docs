@@ -28,7 +28,7 @@ lazy-load the content modules.
 Parameters for Child Widgets
 ============================
 
-Child widgets of an Accordion take the following parameters, which are refereced by the Accordion widget.
+Child widgets of an Accordion take the following parameters, which are referenced by the Accordion widget.
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default  |Description                                                                                                |
@@ -319,7 +319,7 @@ Lazy loading
 
 If you would like to instantiate the widgets inside a child pane lazily, you can do so 
 by specifying "lazy:true" property to the child widget.
-In this example, the CalendarLite widget is instanciated when you open the child pane first time.
+In this example, the CalendarLite widget is instantiated when you open the child pane first time.
 
 .. html ::
 
@@ -344,7 +344,7 @@ In this example, the CalendarLite widget is instanciated when you open the child
       <div data-dojo-type="dojox/mobile/ContentPane" 
            data-dojo-props='label:"Calendar (Lazy)", lazy:true' height="304px">
           <div style="padding:10px">
-              <!-- This widget is instanciated lazily -->
+              <!-- This widget is instantiated lazily -->
               <div data-dojo-type="dijit/CalendarLite"></div>
           </div>
       </div>

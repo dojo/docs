@@ -17,7 +17,7 @@ Usage
 
 .. js ::
 
-  require(["dojo/dom-geomtry"], function(domGeom){
+  require(["dojo/dom-geometry"], function(domGeom){
     domGeom.normalizeEvent(e);
     // e now has normalized geometry properties
   });
