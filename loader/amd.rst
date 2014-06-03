@@ -572,11 +572,11 @@ is an object whose keys define the context of the mapping and the values are the
 
 .. js ::
 
-map: {
-  "app/ModuleA": {
-    "app/Widget": "app/Widget_NEW"
-  }
-}
+  map: {
+    "app/ModuleA": {
+      "app/Widget": "app/Widget_NEW"
+    }
+ }
 
 In this example, the request for ``app/Widget`` would load ``app/Widget_NEW`` from within ``app/ModuleA`` only. 
 Requests made for ``app/Widget`` from within any other module would continue to load ``app/Widget``. This allows for 
@@ -587,11 +587,11 @@ If you want to add a mapping that applies to all modules, you just use "*" for t
 
 .. js ::
 
-map: {
-  "*": {
-    "app/Widget": "app/WidgetB"
+  map: {
+    "*": {
+      "app/Widget": "app/WidgetB"
+    }
   }
-}
 
 In this example all requests for ``app/Widget`` would load ``app/WidgetB`` regardless of which module the request 
 originated from. The "*" option can be used in conjunction with other mappings remembering that the most specific 
@@ -632,8 +632,8 @@ resulting path or URL (``result``).
   configuration variable, append "/" and the value of the ``main`` configuration variable for the package to
   ``moduleId``. (For example, "dojo" would be resolved to "dojo/main".)
 
-At this point, ``moduleId`` has been fully normalized to an absolute module identifier known to the loader (that is, the
-reference module has no further influence on the absolute module identifier).
+  At this point, ``moduleId`` has been fully normalized to an absolute module identifier known to the loader (that is, the
+  reference module has no further influence on the absolute module identifier).
 
   7. Find the longest module identifier fragment in ``paths`` that matches from the start of ``moduleId``. If a match is
   found, let ``result`` be equal to ``moduleId`` with the matched section replaced with the corresponding value from
