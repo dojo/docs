@@ -62,7 +62,7 @@ Available Widgets
 
   A widget that simplifies the "Old/New/Verify" password construct used on many web pages
 
-* :ref:`dojox.form.RadioStack <dojox/form/RadioStack>`
+* `dojox.form.RadioStack`
 
   A widget for enabling/disabling parts of a form based on a selection
 

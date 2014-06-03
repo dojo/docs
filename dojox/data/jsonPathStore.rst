@@ -18,7 +18,7 @@ A local (in memory) store which can attach a dojo.data interface to each JavaScr
 Introduction
 ============
 
-JsonPathStore is intended to allow any Object data structure to easily be accessed and controlled by various widgets. It uses :ref:`JsonPath <dojox/JsonPath>` as a query language. It is a very lightweight server, yet it is flexible enough to allow you to define a single store maintaining several unrelated data sets in a single store. Furthermore, it implements a synchronous mode which makes manipulation of the store possible when appropriate for an application.
+JsonPathStore is intended to allow any Object data structure to easily be accessed and controlled by various widgets. It uses `dojox/jsonPath` as a query language. It is a very lightweight server, yet it is flexible enough to allow you to define a single store maintaining several unrelated data sets in a single store. Furthermore, it implements a synchronous mode which makes manipulation of the store possible when appropriate for an application.
 
 
 Supported APIs

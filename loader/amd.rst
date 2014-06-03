@@ -1082,11 +1082,9 @@ Plugins can be used to extend the loader to support loading resources other than
 
   * :ref:`dojo/has <dojo/has>`: allows has.js expressions to be used to conditionally load modules.
 
-  * :ref:`dojo/load <dojo/load>`: a convenience plugin for loading dependencies computed at runtime.
-
   * :ref:`dojo/require <dojo/require>`: downloads a legacy module without loading it. This allows the legacy code path to be guaranteed.
 
-  * :ref:`dojo/loadInit <dojo/loadInit>`: causes dojo.loadInit callbacks then other legacy API functions to be executed--in particular
+  * `dojo/loadInit`: causes dojo.loadInit callbacks then other legacy API functions to be executed--in particular
     dojo.require[After]If--that are associated with a module
 
 

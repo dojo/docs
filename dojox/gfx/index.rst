@@ -25,17 +25,17 @@ Features
 
 * Individual graphics objects:
 
-  * :ref:`Surface <dojox/gfx/surface>`
-  * :ref:`Group <dojox/gfx/group>`
-  * :ref:`Rectangle <dojox/gfx/rectangle>`
-  * :ref:`Circle <dojox/gfx/circle>`
-  * :ref:`Ellipse <dojox/gfx/ellipse>`
-  * :ref:`Line <dojox/gfx/line>`
-  * :ref:`Polyline <dojox/gfx/polyline>`
-  * :ref:`Path <dojox/gfx/path>`
-  * :ref:`Image <dojox/gfx/image>`
-  * :ref:`Text <dojox/gfx/text>`
-  * :ref:`TextPath <dojox/gfx/textPath>`
+  * `Surface`
+  * `Group`
+  * `Rectangle`
+  * `Circle`
+  * `Ellipse`
+  * `Line`
+  * `Polyline`
+  * `Path`
+  * `Image`
+  * `Text`
+  * `TextPath`
 
 * Shape Properties:
 
