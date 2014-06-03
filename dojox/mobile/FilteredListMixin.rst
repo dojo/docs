@@ -110,6 +110,8 @@ The mixin adds to the list widget the following methods:
 Examples
 ========
 
+.. _dojox/mobile/FilteredListMixin#declarative-example-filtered-roundrectlist:
+
 Declarative example: filtered RoundRectList
 -------------------------------------------
 
@@ -156,7 +158,9 @@ hence the SearchBox and the ScrollableView are automatically created by the mixi
 			<li data-dojo-type="dojox/mobile/ListItem">Pineapple</li>
 		</ul>
 	</div>
-	
+
+.. _dojox/mobile/FilteredListMixin#declarative-example-filtered-edgetoedgelist:
+
 Declarative example: filtered EdgeToEdgeList
 --------------------------------------------
 
@@ -203,6 +207,8 @@ hence the SearchBox and the ScrollableView are automatically created by the mixi
 			<li data-dojo-type="dojox/mobile/ListItem">Pineapple</li>
 		</ul>
 	</div>
+
+.. _dojox/mobile/FilteredListMixin#declarative-example-filtered-edgetoedgestorelist:
 
 Declarative example: filtered EdgeToEdgeStoreList
 -------------------------------------------------
@@ -271,6 +277,8 @@ such that it is styled consistently with the list widget itself.
 		</div>
 	</div>
 
+
+.. _dojox/mobile/FilteredListMixin#declarative-example-filtered-edgetoedgedatalist:
 
 Declarative example: filtered EdgeToEdgeDataList
 ------------------------------------------------

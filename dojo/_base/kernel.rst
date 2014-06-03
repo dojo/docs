@@ -99,7 +99,7 @@ locale
 
 ``locale`` contains the locale for loading localized resources, specified according to
 `RFC 3066 <http://www.ietf.org/rfc/rfc3066.txt>`_.
-This string can be specified with the help of :ref:`dojo/_base/config::locale <dojo/_base/config#locale`.
+This string can be specified with the help of :ref:`dojo/_base/config::locale <dojo/_base/config#locale>`.
 
 A simple reference of locale:
 

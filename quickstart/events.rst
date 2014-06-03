@@ -223,9 +223,9 @@ Dojo has three functions recommended for registering code to run on page load an
 
 * :ref:`ready(func) <dojo/ready>` - Runs the specified function after the page has finished loading, require() calls have completed, and the parser (if enabled) has instantiated widgets.
 
-* :ref:`dojo/_basekernel#addOnWindowUnload(func) <dojo/_basekernel#addOnWindowUnload>` - Runs on page unload.   Useful for tear-down releasing resources (destroying widgets, etc.), but some browsers limit what operations can be done at this stage, especially DOM access / manipulation.
+* :ref:`dojo/_base/unload#addOnWindowUnload(func) <dojo/_base/unload#addOnWindowUnload>` - Runs on page unload.   Useful for tear-down releasing resources (destroying widgets, etc.), but some browsers limit what operations can be done at this stage, especially DOM access / manipulation.
 
-* :ref:`dojo/_basekernel#addOnUnload(func) <dojo/_base/kernel#addOnUnload>` - This also runs on page unload, but earlier than :ref:`dojo/_basekernel#addOnWindowUnload(func) <dojo/_basekernel#addOnWindowUnload>`, avoiding the restrictions mentioned above.   However, the function specified to `addOnUnload(func)` may be called even when the page isn't unloading, just because a user (for example) clicked a hyperlink to download a file.    Useful for idempotent operations like saving state.
+* :ref:`dojo/_base/unload#addOnUnload(func) <dojo/_base/unload#addOnUnload>` - This also runs on page unload, but earlier than :ref:`dojo/_base/unload#addOnWindowUnload(func) <dojo/_base/unload#addOnWindowUnload>`, avoiding the restrictions mentioned above.   However, the function specified to `addOnUnload(func)` may be called even when the page isn't unloading, just because a user (for example) clicked a hyperlink to download a file.    Useful for idempotent operations like saving state.
 
 Like on(), these methods are useful because multiple pieces of code calling `ready()` etc. won't overwrite each other.
 

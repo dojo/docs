@@ -892,6 +892,8 @@ That's pretty verbose and not very convenient, but this is also a highly unusual
 ever, need.
 
 
+.. _loader/amd#relocating-module-namespaces:
+
 Relocating Module Namespaces
 ============================
 
