@@ -23,7 +23,7 @@ Modules
 
   Array handling functions
 
-* :ref:`dojo/_base/browser <dojo/_base/browser>`
+* `dojo/_base/browser`
 
   This module causes the browser-only base modules to be loaded.
 

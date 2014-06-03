@@ -91,16 +91,8 @@ Extra Features
 
 These are discussed in separate documents as follows:
 
-* :ref:`Generating a Profile from HTML files <build/htmlToProfile>` describes how to scan HTML files to automatically create
-  a profile.
-
 * :ref:`Transform writeDojo <build/transforms/writeDojo>` describes how to build a custom dojo.js with a nonstandard set of
   modules.
-
-* :ref:`Relocating Packages <build/relocatingPackages>` describes how to build packages that relocate module namespaces
-  (this feature replaces the so-called multi-version feature available with the legacy loader and builder).
-
-* For a description of backward compatibility features see :ref:`Processing Legacy Build Profiles <build/legacyBackCompat>`.
 
 Assumptions for Examples
 ========================
@@ -437,7 +429,7 @@ As each package.json resource is processed, a profile object is manufactured wit
     }
 
 Notice that the package.json object is embedded in a package configuration object that the package.json object
-represents. Also notice that the property :ref:`selfFilename` is set the absolute path at which the package.Json file
+represents. Also notice that the property `selfFilename` is set the absolute path at which the package.Json file
 resides and is added to the package.Json object. This gives the reference path for any relative paths found in the
 package.json object, the ``directories.lib`` path in particular.
 
@@ -945,8 +937,6 @@ for complete documentation.
 * :ref:`write <build/transforms/write>`: Writes a resource to the file system.
 
 * :ref:`writeAmd <build/transforms/writeAmd>`: Writes an AMD module to the file system.
-
-* :ref:`writeCss <build/transforms/writeCss>`: Writes a CSS style sheet to the file system
 
 * :ref:`writeDojo <build/transforms/writeDojo>`: Outputs a module that includes the dojo loader; this transform is responsible for writing dojo.js.
 
