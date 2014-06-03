@@ -34,7 +34,7 @@ The module's return value is an on function that can be directly called to add a
 Removing an Event Handler
 -------------------------
 
-The return value of ``on()`` provides a method that can be used to remove the event listner from the event:
+The return value of ``on()`` provides a method that can be used to remove the event listener from the event:
 
 .. js ::
 

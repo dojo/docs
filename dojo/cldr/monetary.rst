@@ -25,7 +25,7 @@ The following example prints out the monetary data (places and round) for EUR (E
         // print out places:
         dom.byId("places").innerHTML = "Places: " + cldrMonetaryData.places;
       
-        // proint out round:
+        // print out round:
         dom.byId("round").innerHTML = "Round: " + cldrMonetaryData.round;
       });
     });

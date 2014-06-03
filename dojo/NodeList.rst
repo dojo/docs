@@ -53,13 +53,13 @@ Beyond the basic functionality defined in ``dojo/query``, there are also several
 
 * :ref:`dojo/NodeList-data <dojo/NodeList-data>` - Allows the association of arbitrary data with items of a ``NodeList``.
 
-* :ref:`dojo/NodeList-dom <dojo/NodeList-dom>` - DOM related functions that are similiar functionality to the ``dojo/dom-*`` related modules.
+* :ref:`dojo/NodeList-dom <dojo/NodeList-dom>` - DOM related functions that are similar in functionality to the ``dojo/dom-*`` related modules.
 
 * :ref:`dojo/NodeList-fx <dojo/NodeList-fx>` - Adds base and core FX support to ``NodeList``.
 
 * :ref:`dojo/NodeList-html <dojo/NodeList-html>` - Adds advanced content setting functionality.
 
-* :ref:`dojo/NodeList-manipulate <dojo/NodeList-manipulate>` - Functions that allow for manipulation of DOM nodes in similiar way to jQuery.
+* :ref:`dojo/NodeList-manipulate <dojo/NodeList-manipulate>` - Functions that allow for manipulation of DOM nodes in similar way to jQuery.
 
 * :ref:`dojo/NodeList-traverse <dojo/NodeList-traverse>` - Advanced node traversal functions.
 
@@ -159,7 +159,7 @@ Returns the index of the first occurance of a node in a ``NodeList``.  If not fo
 instantiate()
 -------------
 
-Instantiates objects for each class, passing the optional configuration object to the constructor.  This is similiar 
+Instantiates objects for each class, passing the optional configuration object to the constructor.  This is similar
 to the functionality of the :ref:``dojo/parser <dojo/parser>`` but instead of scanning the DOM for marked up nodes, it 
 uses the nodes in the ``NodeList``.
 
@@ -185,7 +185,7 @@ returned.
   require(["dojo/query", "dojo/dom"], function(query, dom){
     var node = dom.byId("someId");
     var idx = query(".someClass").lastIndexOf(node);
-    // if idx >= 0 then the value is the last occurance of node
+    // if idx >= 0 then the value is the last occurrence of node
     // if idx = -1 then node was not found in the NodeList
   });
 
@@ -240,7 +240,7 @@ For example:
     // Listens for onclick events on list items in the list with an ID of "myList"
   });
 
-Because ``on()`` supports CSS selector syntax, comma deliminated events can be used as well:
+Because ``on()`` supports CSS selector syntax, comma delimited events can be used as well:
 
 .. js ::
 
@@ -377,13 +377,13 @@ See Also
 
 * :ref:`dojo/NodeList-data <dojo/NodeList-data>` - Allows the association of arbitrary data with items of a ``NodeList``.
 
-* :ref:`dojo/NodeList-dom <dojo/NodeList-dom>` - DOM related functions that are similiar functionality to the ``dojo/dom-*`` related modules.
+* :ref:`dojo/NodeList-dom <dojo/NodeList-dom>` - DOM related functions that are similar functionality to the ``dojo/dom-*`` related modules.
 
 * :ref:`dojo/NodeList-fx <dojo/NodeList-fx>` - Adds base and core FX support to ``NodeList``.
 
 * :ref:`dojo/NodeList-html <dojo/NodeList-html>` - Adds advanced content setting functionality.
 
-* :ref:`dojo/NodeList-manipulate <dojo/NodeList-manipulate>` - Functions that allow for manipulation of DOM nodes in similiar way to jQuery.
+* :ref:`dojo/NodeList-manipulate <dojo/NodeList-manipulate>` - Functions that allow for manipulation of DOM nodes in similar way to jQuery.
 
 * :ref:`dojo/NodeList-traverse <dojo/NodeList-traverse>` - Advanced node traversal functions.
 

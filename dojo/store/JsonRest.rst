@@ -63,7 +63,7 @@ perform your operations:
     store.remove(3);
   });
 
-``dojo/store/JsonRest`` impliments the following standard Store API methods:
+``dojo/store/JsonRest`` implements the following standard Store API methods:
 
 ================================================  =====================================================================
 Method                                            Description
@@ -167,7 +167,7 @@ With ``dojo/store/JsonRest`` the methods map logically to the appropriate HTTP v
 ========================= =============================================================================================
 Method                    Result
 ========================= =============================================================================================
-``get(id)``               This will trigger a GET request to ``{target}/{id}``.  The service shoud return a JSON 
+``get(id)``               This will trigger a GET request to ``{target}/{id}``.  The service should return a JSON
                           object if the id exists or ``404`` if it does not.
 ``query(query, options)`` This will trigger a GET request to ``{target}?{query}``. If ``query`` is an object, it will 
                           be serialized using :ref:`dojo/io-query::objectToQuery() <dojo/io-query#objecttoquery>`. If 
@@ -175,7 +175,7 @@ Method                    Result
                           property, it will be serialized as a query parameter as well; see `Sorting`_ for more 
                           information.  The service should return a JSON array of objects.  If no matches are found, 
                           it should return an empty array.
-``remove(id)``            This will trigger a DELETE request to ``{target}/{id}``.  The service should repsond with a 
+``remove(id)``            This will trigger a DELETE request to ``{target}/{id}``.  The service should respond with a
                           ``204`` if successful, a ``404`` if not found or another appropriate HTTP status code.
 ``put(object, options)``  If object includes an identity property, or ``options`` includes an ``id``, this will 
                           trigger a PUT request to ``{target}/{id}`` with the request body being the provided object 

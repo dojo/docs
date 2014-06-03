@@ -51,7 +51,7 @@ trim()
 
 ``trim()`` trims whitespace off both ends of a string.
 
-This will default to the ES5 String.prototpye.trim if available, otherwise it will utilise a more performant, but not 
+This will default to the ES5 String.prototype.trim if available, otherwise it will utilise a more performant, but not
 very compact version of the ``trim()``, which is different than the ``trim()`` which is included in 
 :ref:`dojo/_base/lang`.
 

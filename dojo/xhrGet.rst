@@ -142,7 +142,9 @@ There are times where knowing of a request was 'good' or 'bad' isn't really enou
 * 203: (Non-Authoritative Information)
 * 204: (No Content).
 
-There are also many status codes in the 3XX range that have specific meaning as well.  So ... can dojo.xhrGet (And the others dojo.xhrPut, dojo.xhrDelete, etcera), provide the status code so a 'load' function can do something based on the status code?
+There are also many status codes in the 3XX range that have specific meaning as well.
+So ... can dojo.xhrGet (And the others dojo.xhrPut, dojo.xhrDelete, etc.), provide the status code so a 'load'
+function can do something based on the status code?
 
   **The answer is:  Yes.**
 

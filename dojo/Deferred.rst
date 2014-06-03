@@ -81,7 +81,7 @@ isCanceled()                      Returns ``true`` if the Deferred is cancelled
 progress(update, strict)          Called by the async process to provide progress updates.  The second argument, which
                                   is optional, if ``true`` means it will throw an error if the promise is fulfilled. 
                                   Defaults to ``false``.
-resolve(value, strict)            Called by the asnyc process, when complete, providing any results to be passed to the
+resolve(value, strict)            Called by the async process, when complete, providing any results to be passed to the
                                   callback.  The second argument, which is optional, if ``true`` means it will throw an 
                                   error if the promise is fulfilled.  Defaults to ``false``.
 reject(error, strict)             Called by the async process to reject (error out) the deferred.  The second argument,

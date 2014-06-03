@@ -9,7 +9,8 @@ dojo/_base/lang
 .. contents ::
     :depth: 2
 
-**dojo/_base/lang** contains functions for supporting Polymorphism and other language constructs that are fundemental to the rest of the toolkit.
+**dojo/_base/lang** contains functions for supporting Polymorphism and other language constructs that are
+fundamental to the rest of the toolkit.
 
 Usage
 =====
@@ -865,7 +866,7 @@ Without ``setObject()``, it is often handle like this:
   // now we can safely set the property
   obj.parent.child.prop = "some value";
 
-Wheras with `setObject()`, we can shorten that to:
+Whereas with `setObject()`, we can shorten that to:
 
 .. js ::
 

@@ -51,7 +51,7 @@ localized convention by passing in an option of ``pattern``:
     // num = "00123"
   });
 
-The pattern string is constructed according to the Unicode CLDR specifications, which uses a convention similiar to Java's 
+The pattern string is constructed according to the Unicode CLDR specifications, which uses a convention similar to Java's
 NumberFormat.
 
 parse()

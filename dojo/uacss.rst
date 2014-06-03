@@ -32,7 +32,7 @@ Then provide CSS rules that leverage the classes:
   }
 
 *Note* If you are relying on the styles to be set before running code, just using the 
-:ref:`dojo/domReady! <dojo/domReady>` loader plugin is not necessairly sufficient and you should wrap any code that 
+:ref:`dojo/domReady! <dojo/domReady>` loader plugin is not necessarily sufficient and you should wrap any code that
 relies upon the styles in a :ref:`dojo/ready <dojo/ready>` callback.  This is because ``dojo/uacss`` also has to load 
 after the DOM is ready and registers itself to load before other ``dojo/ready`` callbacks.  For example:
 
