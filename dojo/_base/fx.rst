@@ -224,9 +224,9 @@ Property Type        Default  Description
 ======== =========== ======== ==========================================================================================
 duration Integer     350      How long in milliseconds the animation should take to play.
 curve    _Line|Array ``null`` A two element array of start and end values, or a 
-                              :ref:`dojo/_base/fx::_Line <dojo/_base/fx#line>` instance to be used in the Animation.
+                              :ref:`dojo/_base/fx::_Line <dojo/_base/fx#_Line>` instance to be used in the Animation.
 easing   Function    ``null`` A Function to adjust the acceleration (or deceleration) of the progress across a 
-                              :ref:`dojo/_base/fx::_Line <dojo/_base/fx#line>`
+                              :ref:`dojo/_base/fx::_Line <dojo/_base/fx#_Line>`
 repeat   Integer     0        The number of times the animation should repeat (loop).
 rate     Integer     20       The rate in milliseconds the Animation should attempt to update.  20ms = 50fps.
 delay    Integer     ``null`` The time in milliseconds to wait before starting animation after it has been 
@@ -285,6 +285,8 @@ status()
 
 This method returns a string token representation of the status of the animation, one of: ``paused``, ``playing``,
 ``stopped``.
+
+.. _dojo/_base/fx#_Line:
 
 _Line
 =====

@@ -12,7 +12,7 @@ Dojo.global was originally created to either:
      (i.e for code to run on browsers and server side), see :ref:`dojo/_base/kernel::global <dojo/_base/kernel#global>`
 
    - (for browser only code) access the window object such that other code could redirect the window object to point
-     to a different frame (see :ref:`dojo/_base/window::global <dojo/_base/window#global>` and
+     to a different frame (see :ref:`dojo/_base/kernel::global <dojo/_base/kernel#global>` and
      :ref:`dojo/_base/window::setContext <dojo/_base/window#setContext>`).
 
 
@@ -40,4 +40,4 @@ For strict modules, a slightly more complicated syntax is required:
    });
 
 As for accessing the window object (to control scrolling, setup handlers, etc.), most application code can simply
-access the ``window`` global, rather than accessing :ref:`dojo/_base/window::global <dojo/_base/window#global>`.
+access the ``window`` global, rather than accessing :ref:`dojo/_base/kernel::global <dojo/_base/kernel#global>`.

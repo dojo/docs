@@ -390,6 +390,9 @@ If you prefer to use "progressive enhancement" design techniques and not use Doj
 
 If you don't need compatibility support for modern desktop browsers (FF, IE8+), you can choose not to specify the dojox/mobile/compat module. In this case, mobile support will only work properly on Webkit-based mobile browsers (Dojo Mobile's default environment support).
 
+
+.. _dojox/mobile#themes:
+
 Themes
 ------
 

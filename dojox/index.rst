@@ -122,7 +122,7 @@ Package/Module                                                                  
 :ref:`dojox/fx/split <dojox/fx/split>`                                             Maintained   Various animations that take a node, split it and animated it.
 :ref:`dojox/fx/style <dojox/fx/style>`                                             Experimental Allows for animations based on normalized CSS definitions.
 :ref:`dojox/fx/text <dojox/fx/text>`                                               Maintained   A set of animations used for animating text blocks.
-:ref:`dojox/fx/Timeline <dojox/fx/Timeline>`                                       Maintained   Allow for a complex animations based on an array of 
+:ref:`dojox/fx/Timeline <dojox/fx/Timeline>`                                       Maintained   Allow for a complex animations based on an array of
                                                                                                 "keyframes".
 :ref:`dojox/gfx <dojox/gfx>`                                                       Mature       The platform independent Dojo graphics libraries.
 :ref:`dojox/gfx3d <dojox/gfx3d>`                                                   Experimental A simple portable 3D graphics library.
@@ -301,7 +301,7 @@ Package/Module                                                                  
                                                                                                 are placed in a kind of grid.
 :ref:`dojox/layout/RadioGroup <dojox/layout/RadioGroup>`                           Experimental An enhancement to the ``dijit/layout/StackContainer``
 :ref:`dojox/layout/ResizeHandle <dojox/layout/ResizeHandle>`                       Experimental A draggable handle used to resize an attached node.
-:ref:`dojox/layout/RotatorContainer <dojox/layout/RotatorContainer>`               Maintained   An enhanced StackContainer that automatically transitions 
+:ref:`dojox/layout/RotatorContainer <dojox/layout/RotatorContainer>`               Maintained   An enhanced StackContainer that automatically transitions
                                                                                                 between its ContentPanes.
 :ref:`dojox/layout/ScrollPane <dojox/layout/ScrollPane>`                           Experimental A pane that "scrolls" its content based on the mouse 
                                                                                                 position inside.
@@ -316,7 +316,7 @@ Package/Module                                                                  
 :ref:`dojox/widget/Calendar <dojox/widget/Calendar>`                               Maintained   The standard Calendar. It includes day and month/year views.
 :ref:`dojox/widget/Calendar2Pane <dojox/widget/Calendar2Pane>`                     Maintained   A Calendar with two panes, the second one containing both 
                                                                                                 month and year.
-:ref:`dojox/widget/Calendar3Pane <dojox/widget/Calendar3Pane>`                     Maintained   A Calendar with three panes, includes day, month, and year 
+:ref:`dojox/widget/Calendar3Pane <dojox/widget/Calendar3Pane>`                     Maintained   A Calendar with three panes, includes day, month, and year
                                                                                                 views.
 :ref:`dojox/widget/CalendarFisheye <dojox/widget/CalendarFisheye>`                 Maintained   The standard Calendar. It includes day, month and year views.
                                                                                                 FisheyeLite effects are included.
@@ -335,7 +335,7 @@ Package/Module                                                                  
                                                                                                 file
 :ref:`dojox/widget/FisheyeList <dojox/widget/FisheyeList>`                         Maintained   Menu similar to the fish eye menu on the Mac OS.
 :ref:`dojox/widget/FisheyeListItem <dojox/widget/FisheyeListItem>`                 Maintained   Menu item inside of a FisheyeList.
-:ref:`dojox/widget/FisheyeLite <dojox/widget/FisheyeLite>`                         Experimental A Light-weight Fisheye Component, or an enhanced version of 
+:ref:`dojox/widget/FisheyeLite <dojox/widget/FisheyeLite>`                         Experimental A Light-weight Fisheye Component, or an enhanced version of
                                                                                                 ``dojo/fx/Toggler``.
 :ref:`dojox/widget/Iterator <dojox/widget/Iterator>`                               Abandoned    A widget that iterates the contents of a datastore.
 :ref:`dojox/widget/Loader <dojox/widget/Loader>`                                   Abandoned    A configurable global XHR-listener to display a loading 
@@ -345,7 +345,7 @@ Package/Module                                                                  
 :ref:`dojox/widget/MonthlyCalendar <dojox/widget/MonthlyCalendar>`                 Maintained   A calendar with only a month view.
 :ref:`dojox/widget/MultiSelectCalendar <dojox/widget/MultiSelectCalendar>`         Experimental A simple GUI for choosing several dates in the context of a 
                                                                                                 monthly calendar.
-:ref:`dojox/widget/Pager <dojox/widget/Page>`                                      Experimental A Pager, displaying a list of sized nodes
+:ref:`dojox/widget/Pager <dojox/widget/Pager>`                                     Experimental A Pager, displaying a list of sized nodes
 :ref:`dojox/widget/PlaceholderMenuItem <dojox/widget/PlaceholderMenuItem>`         Experimental A menu item that can be used as a placeholder.
 :ref:`dojox/widget/Portlet <dojox/widget/Portlet>`                                 Maintained   A container widget that is designed to be contained in a 
                                                                                                 ``dojox/layout/GridContainer``.
@@ -383,7 +383,7 @@ Package/Module                                                                  
 :ref:`dojox/date/buddhist <dojox/date/buddhist>`                                   Mature       Provides support for Buddhist dates.
 :ref:`dojox/date/hebrew <dojox/date/hebrew>`                                       Mature       Provides support for Hebrew dates.
 :ref:`dojox/date/islamic <dojox/date/islamic>`                                     Mature       Provides support for Islamic dates.
-:ref:`dojox/date/umalqura <dojox/date/umalqura>`                                    Mature       Provides support for Um AlQura dates.
+:ref:`dojox/date/umalqura <dojox/date/umalqura>`                                   Mature       Provides support for Um AlQura dates.
 :ref:`dojox/date/php <dojox/date/php>`                                             Experimental Utilities for handling PHP styled dates.
 :ref:`dojox/date/posix <dojox/date/posix>`                                         Experimental Utilities for handling POSIX strftime formatted dates.
 :ref:`dojox/date/relative <dojox/date/relative>`                                   Experimental Utilities for handling relative dates.

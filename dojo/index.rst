@@ -178,7 +178,7 @@ URL and Query Strings         :ref:`dojo/_base/url <dojo/_base/url>`            
                               :ref:`dojo/io-query <dojo/io-query>`
 Internationalization          :ref:`dojo/i18n <dojo/i18n>`                           Modules for handling 
                                                                                      internationalization of 
-                              :ref:`dojo/nls <dojo/nls>`                             applications
+                                                                                     applications
                               
                               :ref:`dojo/cldr <dojo/cldr>`
 

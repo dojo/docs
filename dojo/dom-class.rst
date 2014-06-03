@@ -19,8 +19,6 @@ Features
 
 .. _dojo/dom-class#contains:
 
-.. _dojo/dom-class#contains-function:
-
 contains()
 ----------
 
@@ -152,8 +150,6 @@ Here is an example of how to add a class to a node:
     <button id="button1" type="button">Add class</button>
 
 .. _dojo/dom-class#remove:
-
-.. _dojo/dom-class#remove-function:
 
 remove()
 --------
@@ -508,8 +504,8 @@ the class for multiple nodes. The following example toggles the class for each n
 Technical Information
 ~~~~~~~~~~~~~~~~~~~~~
 
-This function is a simple convenience wrapper for :ref:`contains() <dojo/dom-class#contains-function>`, 
-:ref:`add() <dojo/dom-class#add-function>` and :ref:`remove() <dojo/dom-class#remove-function>`. A simplified version
+This function is a simple convenience wrapper for :ref:`contains() <dojo/dom-class#contains>`,
+:ref:`add() <dojo/dom-class#add>` and :ref:`remove() <dojo/dom-class#remove>`. A simplified version
 would look something like this:
 
 .. js ::
