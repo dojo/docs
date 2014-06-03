@@ -24,10 +24,3 @@ Usage
     // Add a group match to an expression
     var str = regexp.group(someString);
   });
-
-.. api-doc :: dojo/regexp
-  :methods:
-  :summary:
-  :description:
-  :sig:
-  :returns:

@@ -290,16 +290,6 @@ Only the first class passed for multiple inheritance is a true superclass. The r
 the child class to produce the inheritance chain we need. On a practical level, this means that the ``instanceof`` 
 operator cannot be used for mixins, only for base classes. Instead, use the `isInstanceOf()`_ function.
 
-Signature
----------
-
-The signature of ``dojo/declare()`` is:
-
-.. api-doc :: dojo/_base/declare
-  :topfunc:
-  :no-headers:
-  :sig:
-
 .. _dojo/_base/declare#safemixin:
 
 safeMixin()

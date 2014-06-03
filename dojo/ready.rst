@@ -27,12 +27,6 @@ Usage
     });
   });
 
-The signature of ``dojo/ready()`` is:
-
-.. api-doc :: dojo/ready
-  :topfunc:
-  :no-headers:
-  :sig:
 
 Examples
 ========
