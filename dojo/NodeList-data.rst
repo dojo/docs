@@ -14,7 +14,7 @@ Introduction
 ============
 
 ``dojo/NodeList-data`` is a module that extends the :ref:`NodeList <dojo/NodeList>` by adding a simple data 
-abstraction API.  This allows you to bind data items to individual nodes, allowing retrievial of the data later by 
+abstraction API.  This allows you to bind data items to individual nodes, allowing retrieval of the data later by
 reference to the node.
 
 The module exposes the API by extending ``NodeList`` with two methods: ``data()`` and ``removeData()``.
@@ -23,7 +23,7 @@ Usage
 =====
 
 To utilise the module, require it in.  It does not need to be provided a return variable.  It is normally used in 
-conjuction with the :ref:`dojo/query <dojo/query>` module:
+conjunction with the :ref:`dojo/query <dojo/query>` module:
 
 .. js ::
 
@@ -35,7 +35,7 @@ data()
 ------
 
 Adds or retrieves arbitrary data to ``NodeList`` nodes.  When passed two arguments the function acts as a setter, the 
-first arugment specifies the key of the data and the second is the value.  The function then will set that data on 
+first argument specifies the key of the data and the second is the value.  The function then will set that data on
 each node that is a member of the ``NodeList``.  When passed only a single argument, it acts as a getter and returns a 
 zero based array of the values for the specified key.
 

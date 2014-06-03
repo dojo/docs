@@ -122,7 +122,7 @@ Some existing Dojo <1.7 modules were designed such that they only work in sync l
   |                              | upper, urlencode, urlize, urlizetrunc, wordcount, wordwrap                                        |
   +------------------------------+---------------------------------------------------------------------------------------------------+
 
-**Note** Also because of the way the dependencies are done for Dijit, if you do a build of code that includes a legacy layer that includes Dijits, you must explressly include ``dijit._base``.  For example, your layer should look something like this:
+**Note** Also because of the way the dependencies are done for Dijit, if you do a build of code that includes a legacy layer that includes Dijits, you must explicitly include ``dijit._base``.  For example, your layer should look something like this:
 
 .. js ::
 

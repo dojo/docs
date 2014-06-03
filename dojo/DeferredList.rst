@@ -15,7 +15,7 @@ Introduction
 ============
 
 *dojo/DeferredList* builds on :ref:`Deferred <dojo/_base/Deferred>`. ``Deferred`` objects make asynchronous programming
-as easy as can be reasonably expected and ``DeferrledList`` class builds on the "one answer to one question" contract of
+as easy as can be reasonably expected and ``DeferredList`` class builds on the "one answer to one question" contract of
 ``Deferred`` to provide a "one answer to many questions" system.
 
 Usage
@@ -43,7 +43,7 @@ Attributes
 ================= ========= ===========================================================================================
 Argument          Type      Description
 ================= ========= ===========================================================================================
-list              Array     The list of ``Deferreds`` to be synchronizied with this ``DeferredList``
+list              Array     The list of ``Deferreds`` to be synchronized with this ``DeferredList``
 fireOnOneCallback Boolean?  *Optional* Will cause the ``DeferredList`` callback to be fired as soon as any of the
                             ``Deferreds`` in its list have been fired instead of waiting until the entire list has
                             finished

@@ -26,7 +26,7 @@ Usage of the url property is as follows.
      <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='transition:"slide", url:"view1.html"'>
         External View #1 (sync)
      </li>
-     <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='transition:"flip", url:"view2.html", synch:false'>
+     <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='transition:"flip", url:"view2.html", sync:false'>
         External View #2 (async)
      </li>
   </ul>

@@ -43,7 +43,7 @@ the web browser, coupled with the available translations by language and return 
 .. js ::
 
   require(["dojo/i18n!myApp/nls/myResources"], function(myResources){
-    // myResources will contain the appopriate strings
+    // myResources will contain the appropriate strings
   });
 
 The localized content is simply an Object with properties.  Where the root file (in the case above would be 

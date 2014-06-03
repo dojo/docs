@@ -124,7 +124,7 @@ The last example shows how one can use the Color object directly to change the p
 
 .. js ::
 
-  require(["dojo/_base/Color", "dom-stlye"], function(Color, style){
+  require(["dojo/_base/Color", "dojo/dom-style"], function(Color, style){
     var myColor = Color.fromString("red");
     style.set("someId", "backgroundColor", myColor);
     // This changes the background-color of the element "someId" to the color specified in myColor
