@@ -713,7 +713,15 @@ Creating reference guide for Web site
 
 12. ``svn add reference-guide && svn ci -m "Adding new reference guide"``
 
-13. Done, finally!
+13. Done, finally!  But see next section...
+
+Creating new version of reference guide for Web site
+====================================================
+1. In rstwiki, update _static/package.json and export/source/_templates/layout.html to contain the new version number
+
+2. Repeat instructions above for every version, starting with 1.7 and ending with the newest version.
+This is necessary so the drop downs on each page (ex: https://dojotoolkit.org/reference-guide/1.7/)
+contain the new version.
 
 Updating rstWiki on livedocs
 ============================
