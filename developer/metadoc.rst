@@ -702,7 +702,7 @@ Creating reference guide for Web site
 
 7. ``mkdir build``
 
-8. ``export LC_CTYPE=""`` (not sure why this is necessary, but it was in the original docs!)
+8. ``export LC_CTYPE=""`` (this is necessary because if LC_CTYPE="UTF8", the build fails immediately)
 
 9. ``make clean dojo data html``
 
