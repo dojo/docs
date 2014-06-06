@@ -73,11 +73,44 @@ Miscellaneous
 Dijit
 =====
 
-Dialog
+Dialog, Tooltip, and TooltipDialog
+----------------------------------
+* New :ref:`ConfirmDialog <dijit/ConfirmDialog>` class that extends :ref:`dijit/Dialog <dijit/Dialog>`
+  by automatically adding OK and Cancel buttons.
+* New :ref:`ConfirmTooltipDialog <dijit/ConfirmTooltipDialog>` class that extends
+  :ref:`dijit/TooltipDialog <dijit/TooltipDialog>` by automatically adding OK and Cancel buttons.
+* Added support for ``Dialog.resize(dimensions)``.  Previously it ignored the dimensions parameter.
+  This means that ``dijit/Dialog`` now works with ``dojox/layout/ResizeHandle``.
+  Note though that you still cannot specify an initial size on the dialog.
+* Made ``Dialog.show()`` and ``Dialog.hide()`` return a Promise even if the Dialog is already
+  opened/closed (respectively).
+* Tooltip now supports a ``hideDelay`` property.  This allows the user to move the mouse
+  from the anchor node to the tooltip without the tooltip disappearing.
+
+
+Editor
 ------
-Added support for Dialog.resize(dimensions).  Previously it ignored the dimensions parameter.
-This means that Dialog now works with dojox/layout/ResizeHandle.
-Note though that you still cannot specify an initial size on the dialog.
+* The Editor now supports a textdir property, to control the initial direction for the Editor contents
+  independently from the direction of the GUI (i.e. the flow of buttons in the toolbar).
+* The TextColor plugin (foreColor and hiliteColor) now supports specifying a custom color picker.
+
+Form Widgets
+------------
+* Select now supports ``.set('store', ...)``, ``.set('query', ...)``, and ``.set('queryOptions', ...)``.
+  Previously those values had to be set when the widget was created.
+* ComboBox and FilteringSelect now also support dynamically setting the store.
+
+Tree
+----
+* The ``.pasteItem()`` method of :ref:`dijit/tree/ObjectStoreModel <dijit/tree/ObjectStoreModel>` now passes an
+  ``oldParent`` property to ``store.put()``, for DnD operations where the store needs to know where the node
+  was dragged from.
+
+Widget
+------
+* ``this.own()`` can now handle Promises.  It will ``.cancel()`` registered Promises when the widget is destroyed,
+  unless the Promises have already been fulfilled (i.e. either resolved or rejected).
+
 
 DojoX
 =====
