@@ -54,19 +54,19 @@ dom
 on
 --
 
-* `dojo/on` now allows multiple events by using a comma separated list, or an array for multiple extension events
-* Added `dojo/on/debounce` and `dojo/on/throttle`
+* ``dojo/on`` now allows multiple events by using a comma separated list, or an array for multiple extension events
+* Added ``dojo/on/debounce`` and ``dojo/on/throttle``
 
 request
 -------
 
 * Fixed `Content-Type` header when using `FormData`
-* Added `arraybuffer`, `blob`, and `document` response types where natively supported
+* Added ``arraybuffer``, ``blob``, and ``document``` response types where natively supported
 * Added progress events for chunked encoding
 
 Miscellaneous
 -------------
-* Added reusable HTML escape function
+* Added reusable HTML ``escape()`` function to :ref:`dojo/string <dojo/string>`
 * Added a configuration setting for a custom cache busting URL
 * Added support for running non-DOM operations inside of WebWorkers
 
