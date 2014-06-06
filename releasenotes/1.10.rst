@@ -82,6 +82,12 @@ Note though that you still cannot specify an initial size on the dialog.
 DojoX
 =====
 
+App
+---
+* dojox/app was updated to have the default Layout controller order view domNodes based upon the view constraints, in order to work correctly with iOS VoiceOver support.
+* By default, the domNodes will be placed in order of the constraints (top,left,center,right,bottom or for RTL top,right,center,left,bottom) compared to the sibling nodes.
+* A new config option was also added to avoid the overhead of ordering the domNodes by  constraints, the config option is "useConfigOrder". When it is set to true the views are added to the dom without consideration of the constraints.
+
 Calendar
 --------
 * Decoration items support has been added. The calendar views are now supporting a decorationStore property to set a store to specify decoration items that will be displayed in the background below the data item renderers. A decoration item has the same major properties as regular data item especially start and end time.
@@ -99,6 +105,10 @@ Charting
 * Spider plot now accepts an animate property. If set to false it prevents animation from running. Like animate properties of other plot types, it allows to customize the animation duration and other animation properties.
 * 2D axis can now be drawn at the center of the chart. For this, use the new "position" argument of a dojox/charting/axis2d/Default and set it to "center". The position argument can be set to "leftOrBottom", "center" or "rightOrTop". It replaces the deprecated "leftBottom" argument.
 
+Editor BidiSupport plugin
+-------------------------
+* This plugin provides advanced bidirectional (bidi) support for the rich text editing widget. It adds several bidi-specific commands, which are not released in native RTE's ('set text direction to left-to-right', 'set text direction to right-to-left', 'change text direction to opposite'). Commands are executed for selected block-level elements by changing their styles.
+
 Gfx
 ---
 * Support for SVG masks (when using the SVG renderer). The Surface class has a new createMask method, which returns a group-like shape whose child shapes will define the geometry of the mask. Any shape can then use this mask using the setMask method.
@@ -115,16 +125,6 @@ Mobile
 Store
 -----
 * Added local `dojo/store` providers in dojox, with support for IndexedDB and WebSQL
-
-Editor BidiSupport plugin
--------------------------
-* This plugin provides advanced bidirectional (bidi) support for the rich text editing widget. It adds several bidi-specific commands, which are not released in native RTE's ('set text direction to left-to-right', 'set text direction to right-to-left', 'change text direction to opposite'). Commands are executed for selected block-level elements by changing their styles.
-
-App
----
-* dojox/app was updated to have the default Layout controller order view domNodes based upon the view constraints, in order to work correctly with iOS VoiceOver support.
-* By default, the domNodes will be placed in order of the constraints (top,left,center,right,bottom or for RTL top,right,center,left,bottom) compared to the sibling nodes.
-* A new config option was also added to avoid the overhead of ordering the domNodes by  constraints, the config option is "useConfigOrder". When it is set to true the views are added to the dom without consideration of the constraints.
 
 
 Util
