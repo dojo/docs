@@ -174,3 +174,5 @@ Demos
 
 Migration Notes
 ===============
+
+* In IE 9 and 10 with standards mode, you can no longer focus input’s inside a region where you called setSelectable(reg, false)
