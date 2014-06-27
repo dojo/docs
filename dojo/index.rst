@@ -62,7 +62,7 @@ Feature Detection             :ref:`dojo/has <dojo/has>`                        
                               :ref:`dojo/uacss <dojo/uacss>`
                               
                               :ref:`dojo/_base/sniff <dojo/_base/sniff>` [1]_
-Language                      :ref:`dojo/_base/lang <dojo/_base/lang>`               The foundation language extentions 
+Language                      :ref:`dojo/_base/lang <dojo/_base/lang>`               The foundation language extensions 
                                                                                      for Dojo
 Classes                       :ref:`dojo/_base/declare <dojo/_base/declare>`         Dojo's class system
 Deferreds and Promises        :ref:`dojo/promise <dojo/promise>`                     Asynchronous process management 
