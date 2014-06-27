@@ -93,12 +93,12 @@ concerns.
 delegate()
 ----------
 
-Returns a new object which "looks" to the passed object for properties which it does not have a value for, or takes a 
+Returns a new object which "looks" at the passed object for properties which it does not have a value for, or takes a 
 set of properties to seed the returned object with initially.
 
 This is a subset of implementation of the Boodman/Crockford delegation pattern in JavaScript. An intermediate object 
 constructor mediates the prototype chain for the returned object, using it to delegate down to the supplied object for 
-property lookup when object-local lookup fails. This can be thought of similarly to ES4's ``wrap()``, save that it 
+property lookup when object-local lookup fails. This can be thought of similarly to ES4's ``wrap()``, except that it 
 does not act on types but rather on pure objects.
 
 .. js ::
