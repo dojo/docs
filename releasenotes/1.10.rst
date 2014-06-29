@@ -75,9 +75,9 @@ Dijit
 
 Dialog, Tooltip, and TooltipDialog
 ----------------------------------
-* New :ref:`ConfirmDialog <dijit/ConfirmDialog>` class that extends :ref:`dijit/Dialog <dijit/Dialog>`
+* New :ref:`dijit/ConfirmDialog <dijit/ConfirmDialog>` class that extends :ref:`dijit/Dialog <dijit/Dialog>`
   by automatically adding OK and Cancel buttons.
-* New :ref:`ConfirmTooltipDialog <dijit/ConfirmTooltipDialog>` class that extends
+* New :ref:`dijit/ConfirmTooltipDialog <dijit/ConfirmTooltipDialog>` class that extends
   :ref:`dijit/TooltipDialog <dijit/TooltipDialog>` by automatically adding OK and Cancel buttons.
 * Added support for ``Dialog.resize(dimensions)``.  Previously it ignored the dimensions parameter.
   This means that ``dijit/Dialog`` now works with ``dojox/layout/ResizeHandle``.

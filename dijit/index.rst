@@ -132,6 +132,14 @@ Miscellaneous Widgets
 
 * :ref:`dijit/ColorPalette <dijit/ColorPalette>`
 
+* :ref:`dijit/ConfirmDialog <dijit/ConfirmDialog>`
+
+  **1.10+** A version of :ref:`dijit/Dialog <dijit/Dialog>` with built-in OK and cancel buttons.
+
+* :ref:`dijit/ConfirmTooltipDialog <dijit/ConfirmTooltipDialog>`
+
+  **1.10+** A version of :ref:`dijit/TooltipDialog <dijit/TooltipDialog>` with built-in OK and cancel buttons.
+
 * :ref:`dijit/Declaration <dijit/Declaration>`
 
 * :ref:`dijit/Dialog <dijit/Dialog>`
