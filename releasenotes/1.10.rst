@@ -46,6 +46,24 @@ of Dojo might include fixes to support future releases of these browsers, but it
 Dojo Core
 =========
 
+dojo/debounce
+-------------
+Provides support for debouncing functions. Debouncing prevent repeted execution of a function by delaying it.
+:ref:`dojo/debounce <dojo/debounce>`
+An extension event is also available: :ref:`dojo/on/debounce <dojo/on/debounce>`
+
+dojo/throttle
+-------------
+Provides support for throttling functions. Throttling ensures that a function is only executed once during a predefined interval.
+:ref:`dojo/throttle <dojo/throttle>`
+An extension event is also available: :ref:`dojo/on/throttle <dojo/on/throttle>`
+
+dojo/on/asyncEventListener
+--------------------------
+asyncEventListener helps using asynchronous event listeners by ensuring the received event will not be invalid when accessed from an asynchronous function.
+In old browsers (such as IE 8 and bellow) the event object can be invalid when reached from an asynchronous function (like a debounce).
+:ref:`dojo/on/asyncEventListener <dojo/on/asyncEventListener>`
+
 dom
 ---
 * Added a cross-browser approach for getting textContent in dojo/dom-prop
