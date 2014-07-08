@@ -14,32 +14,29 @@ The following user agents have been tested and are supported in this release. If
 supported, it still may work, especially on browsers with rapid release cycles (Chrome, Firefox). Future minor releases
 of Dojo might include fixes to support future releases of these browsers, but it is not guaranteed.
 
-Also please note that even if IE6 and 7 code paths have not been removed, Dojo 1.10 is removing official support for
-those browsers.
-
 **Desktop**
 
-* Firefox 3.6-25
+* Firefox 3.6-29
 
-* Safari 5-6
+* Safari 5-7
 
-* Chrome 13-31
+* Chrome 13-35
 
 * IE 8-11
 
-* Opera 10.50-12 (Dojo core only)
+* Opera 10.50-12 (Dojo core only). Blink-based versions of Opera should work like Chrome, but are not officially tested or supported for this release.
 
 **Mobile (dojox/mobile)**
 
-* iOS 4.x, 5.x (Mobile Safari) and 6.x (including all Dijit widgets except Editor)
+* iOS 5.x (Mobile Safari), 6.x and 7.x (including all Dijit widgets except Editor)
 
-* Android 2.2-2.3, 3.1-3.2, 4.0-4.2 (Platform browser)
+* Android 2.3, 4.0-4.4 (Platform browser) (including all Dijit widgets for Android 4.0-4.4 except Editor)
 
 * BlackBerry 6-7 & 10 (Platform browser)
 
 * Windows Phone 8 (IE10)
 
-* Mobile compatibility on desktop browsers: IE 8-10, Firefox 4-20, Safari 5-6, Chrome 13-26
+* Mobile compatibility on desktop browsers: IE 8-11, Firefox 4-29, Chrome 13-35
 
 
 **Server-Side User Agents**
@@ -67,23 +64,125 @@ asyncEventListener helps using asynchronous event listeners by ensuring the rece
 In old browsers (such as IE 8 and bellow) the event object can be invalid when reached from an asynchronous function (like a debounce).
 :ref:`dojo/on/asyncEventListener <dojo/on/asyncEventListener>`
 
+dom
+---
+* Added a cross-browser approach for getting textContent in dojo/dom-prop
+* Various fixes for dojo/query
+
+on
+--
+
+* ``dojo/on`` now allows multiple events by using a comma separated list, or an array for multiple extension events
+* Added ``dojo/on/debounce`` and ``dojo/on/throttle``
+
+request
+-------
+
+* Fixed `Content-Type` header when using `FormData`
+* Added ``arraybuffer``, ``blob``, and ``document``` response types where natively supported
+* Added progress events for chunked encoding
+
+Miscellaneous
+-------------
+* Added reusable HTML ``escape()`` function to :ref:`dojo/string <dojo/string>`
+* Added a configuration setting for a custom cache busting URL
+* Added support for running non-DOM operations inside of WebWorkers
+
 Dijit
 =====
 
-Dialog
+Dialog, Tooltip, and TooltipDialog
+----------------------------------
+* New :ref:`dijit/ConfirmDialog <dijit/ConfirmDialog>` class that extends :ref:`dijit/Dialog <dijit/Dialog>`
+  by automatically adding OK and Cancel buttons.
+* New :ref:`dijit/ConfirmTooltipDialog <dijit/ConfirmTooltipDialog>` class that extends
+  :ref:`dijit/TooltipDialog <dijit/TooltipDialog>` by automatically adding OK and Cancel buttons.
+* Added support for ``Dialog.resize(dimensions)``.  Previously it ignored the dimensions parameter.
+  This means that ``dijit/Dialog`` now works with ``dojox/layout/ResizeHandle``.
+  Note though that you still cannot specify an initial size on the dialog.
+* Made ``Dialog.show()`` and ``Dialog.hide()`` return a Promise even if the Dialog is already
+  opened/closed (respectively).
+* Tooltip now supports a ``hideDelay`` property.  This allows the user to move the mouse
+  from the anchor node to the tooltip without the tooltip disappearing.
+
+
+Editor
 ------
-Added support for Dialog.resize(dimensions).  Previously it ignored the dimensions parameter.
-This means that Dialog now works with dojox/layout/ResizeHandle.
-Note though that you still cannot specify an initial size on the dialog.
+* The Editor now supports a textdir property, to control the initial direction for the Editor contents
+  independently from the direction of the GUI (i.e. the flow of buttons in the toolbar).
+* The TextColor plugin (foreColor and hiliteColor) now supports specifying a custom color picker.
+
+Form Widgets
+------------
+* Select now supports ``.set('store', ...)``, ``.set('query', ...)``, and ``.set('queryOptions', ...)``.
+  Previously those values had to be set when the widget was created.
+* ComboBox and FilteringSelect now also support dynamically setting the store.
+
+Tree
+----
+* The ``.pasteItem()`` method of :ref:`dijit/tree/ObjectStoreModel <dijit/tree/ObjectStoreModel>` now passes an
+  ``oldParent`` property to ``store.put()``, for DnD operations where the store needs to know where the node
+  was dragged from.
+
+Widget
+------
+* ``this.own()`` can now handle Promises.  It will ``.cancel()`` registered Promises when the widget is destroyed,
+  unless the Promises have already been fulfilled (i.e. either resolved or rejected).
+
 
 DojoX
 =====
 
+App
+---
+* dojox/app was updated to have the default Layout controller order view domNodes based upon the view constraints, in order to work correctly with iOS VoiceOver support.
+* By default, the domNodes will be placed in order of the constraints (top,left,center,right,bottom or for RTL top,right,center,left,bottom) compared to the sibling nodes.
+* A new config option was also added to avoid the overhead of ordering the domNodes by  constraints, the config option is "useConfigOrder". When it is set to true the views are added to the dom without consideration of the constraints.
+
+Calendar
+--------
+* Decoration items support has been added. The calendar views are now supporting a decorationStore property to set a store to specify decoration items that will be displayed in the background below the data item renderers. A decoration item has the same major properties as regular data item especially start and end time.
+* In columns view, each column representing a day can be divided into sub columns for categories, persons etc. See corresponding on the documentation for more information on this feature.
+* A minimal width of a column (or a sub column if sub columns are configured) can now be by setting the minColumnWidth property on the column view. If columns or, if sub columns are specified, sub columns, are smaller than this property value, this property value is set and a horizontal scroll bar is displayed. Otherwise all the available space is used.
+* Columns view is now supporting overnight display. The column view maxHours property can now go up to 36 (=12h the next day). To display the night simply set minHours to 12 and maxHours to 36.
+* Constraints to limit the time range accessible through navigation has beed added. Set the minDate and maxDate properties to specify the range.
+* A current time indicator was added to the column view.
+
+Charting
+--------
+* Series can now be hidden without removing them
+* SelectableLegend leverages this new feature to provide consistent approach to series visibility switch across the various plots
+* All classes inheriting from Element, an in particular all type of plots can now be set SVG rendering options using the renderingOptions property. By default axis2d/Default, plot2d/Columns and plot2d/Bars are using shape-rendering: crispEdges.
+* Spider plot now accepts an animate property. If set to false it prevents animation from running. Like animate properties of other plot types, it allows to customize the animation duration and other animation properties.
+* 2D axis can now be drawn at the center of the chart. For this, use the new "position" argument of a dojox/charting/axis2d/Default and set it to "center". The position argument can be set to "leftOrBottom", "center" or "rightOrTop". It replaces the deprecated "leftBottom" argument.
+
+Editor BidiSupport plugin
+-------------------------
+* This plugin provides advanced bidirectional (bidi) support for the rich text editing widget. It adds several bidi-specific commands, which are not released in native RTE's ('set text direction to left-to-right', 'set text direction to right-to-left', 'change text direction to opposite'). Commands are executed for selected block-level elements by changing their styles.
+
+Gfx
+---
+* Support for SVG masks (when using the SVG renderer). The Surface class has a new createMask method, which returns a group-like shape whose child shapes will define the geometry of the mask. Any shape can then use this mask using the setMask method.
+
+Mobile
+------
+* A new iOS 7 theme has been added
+* The Carousel, Slider, SpinWheel, TimePicker and DatePicker widgets are now accessible.
+* Enhanced touch feedback for Buttons.
+* The width of a Switch widget can explicitly be set via css to support long label.
+* Improved performance of lists with variable height items: the layout of variable height items is no longer updated on each resize by default. You can enable it back by setting the new ListItem.layoutOnResize property to true (false by default).
+* The css class of a TabBarButton Badge can now be specified on the TabBarButton via the badgeClass property.
+
+Store
+-----
+* Added local `dojo/store` providers in dojox, with support for IndexedDB and WebSQL
+
+
 Util
 ====
 
-**Builder**
-
+Builder
+-------
 Added support for uglify-js 2.x builder. To use uglify-js 2.x, just upgrade from 1.x. If optimizeOptions is used, some of the options may need to be changed to match uglify-js 2.x naming, see `Uglilfy 2 documentation <https://github.com/mishoo/UglifyJS2>`_ on the new options available.
 
 In addition, multiple processes will be used while running uglify builder. In previous versions, only one CPU core is being used.
@@ -93,3 +192,5 @@ Demos
 
 Migration Notes
 ===============
+
+* In IE 9 and 10 with standards mode, you can no longer focus input’s inside a region where you called setSelectable(reg, false)
