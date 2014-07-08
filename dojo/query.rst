@@ -64,7 +64,7 @@ Requring in the module is all that is needed:
 
 * :ref:`dojo/NodeList-traverse <dojo/NodeList-traverse>` - Advanced node traversal functions.
 
-The first argument is the ``selector`` which is a CSS selector string that identifies the nodes that need to be retrieved.  The second argument is an optional ``context`` which limits the scope of the selector and only children of the will be considered.  This can either be a string representing the node ID or a DOM node.  For example:
+The first argument is the ``selector`` which is a CSS selector string that identifies the nodes that need to be retrieved.  The second argument is an optional ``context`` which limits the scope of the selector and only children of ``context`` will be considered.  This can either be a string representing the node ID or a DOM node.  For example:
 
 .. js ::
 
