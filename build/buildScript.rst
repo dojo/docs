@@ -56,7 +56,7 @@ action=help
   The build action(s) to run. Can be a comma-separated list, like action=clean,release. The possible build actions are: clean, release.
 
   clean
-     Remove the releaseDir and any contents it may have.
+     Remove the releaseDir and any contents it may have. **Due to increased flexibility in the new loader, the “clean” action is now a no-op in order to avoid any unintentional file deletion. Cleaning the destination directory before a build must now be done manually.**
 
   release
      Build the release directories.
