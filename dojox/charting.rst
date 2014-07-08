@@ -336,6 +336,20 @@ Finally if you need to specify the style of your plot elements depending on a fu
     }});
   });
 
+*About SVG rendering*
+
+When rendering the chart with SVG, which happens by default on browsers support SVG if gfx is not configured to use
+an alternate render, you can specify in the plot options with the renderingOptions property some rendering hints that SVG will use:
+
+.. js ::
+
+  require(["dojox/charting/plot2d/Areas", ...],
+    function(Columns, ...){
+    chart.addPlot("default", { type: Areas, fill: "red", renderingOptions: { "shape-rendering": "crispEdges" });
+  });
+
+By default the Column and Bar plots are using crispEdges, other type of plots are using default values. See `SVG specification <http://www.w3.org/TR/SVG11/painting.html#RenderingProperties>`_ for details on the rendering options.
+
 *About labels*
 
 All these plots also have the ability to render labels for each of the data points. The feature can be disabled using the
@@ -578,6 +592,9 @@ The animate parameter is itself an object that can takes several parameters incl
 
 Basically these are the same parameters than the ones passe to dojo.Animation. See :ref:`Animation quickstart <quickstart/Animation>` documentation for details.
 
+Note that all type of plots have animation disabled by default except the Spider plot for which **animate** must be set
+to **false** in order to disable the animation.
+
 See :ref:`Animated Chart <dojox/charting>` for a full example.
 
 
@@ -812,6 +829,13 @@ See :ref:`Style on Lines, Areas, Bars, Columns, Bubble & Pie plots <dojox/charti
   
   chart.addSeries("Series 1", [1, 2, 4, 5, 5, 7], {stroke: {color: "blue", width: 2},
       fill: "lightblue"});
+
+You can also make sure a particular series is hidden (that means that chart will ignore initially but it might then be show using a SelectableLegend)
+
+.. js ::
+
+  chart.addSeries("Series 1", [1, 2, 4, 5, 5, 7], {hidden: true});
+
 
 The data array, is just an array of data. All plot types can accept a one dimensional array, but there are some additional format options available based on the type of chart. With a one-dimensional array for cartesian type graphs (lines, columns...) the X axis will be integers; 1,2,3... and the data will be mapped to the Y axis. For bar type plots the X and Y axis are inverted. Finally for pie type charts the sum of the array is your whole pie, each data point representing a slice. All the plot types except pie can have multiple series.
 
@@ -1461,13 +1485,14 @@ Yes, it is that simple! just define a <div> with the class "action" and supply t
 
 The Chart Legend Widget
 -----------------------
-You can add a legend widget to your charts using dojox.charting.widget.Legend.  The legend automatically takes on the shape markers and colors of the chart to which it is attached. By default the Legend widget uses the "legend" parameter of a series. It reverts to the "name" parameter if legend is not specified.
+You can add a legend widget to your charts using dojox/charting/widget/Legend.  The legend automatically takes on the shape markers and colors of the chart to which it is attached. By default the Legend widget uses the "legend" parameter of a series. It reverts to the "name" parameter if legend is not specified.
 
 For a pie chart, the behavior of a Legend is different: if the chart was specified with an array of numbers, it will use numbers. Otherwise it will check object properties in the following order: "legend", "text", and the numeric value.
 
 Interactive Legend Widget
 -------------------------
-An interactive legend for all dojo charts that allows the end-user to click and select/deselect which of the chart series should be displayed on the chart. And series will be highlighted when corresponding legend icon is hovered. By default the border and the body of series vanished when series deselected, you can set "outline" as "true" to keep the border of vanished series. The declaration of interactive legend is as follows.
+An interactive legend for all dojo charts that allows the end-user to click and select/deselect which of the chart series should be displayed/hidden on the chart.
+With the legend series will also be highlighted when corresponding legend icon is hovered. By default the border and the body of series vanished when series deselected, you can set "outline" as "true" to keep the border of vanished series. The declaration of interactive legend is as follows:
 
 .. js ::
 
@@ -1475,6 +1500,8 @@ An interactive legend for all dojo charts that allows the end-user to click and 
     // ...
     var selectableLegend = new SelectableLegend({chart: chart, outline: true}, "selectableLegend");
   });
+
+One can use the SelectableLegend autoScale property in order to decide whether the chart will update its scales when displaying or hidding a series.
 
 
 Examples

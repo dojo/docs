@@ -53,13 +53,13 @@ Beyond the basic functionality defined in ``dojo/query``, there are also several
 
 * :ref:`dojo/NodeList-data <dojo/NodeList-data>` - Allows the association of arbitrary data with items of a ``NodeList``.
 
-* :ref:`dojo/NodeList-dom <dojo/NodeList-dom>` - DOM related functions that are similiar functionality to the ``dojo/dom-*`` related modules.
+* :ref:`dojo/NodeList-dom <dojo/NodeList-dom>` - DOM related functions that are similar in functionality to the ``dojo/dom-*`` related modules.
 
 * :ref:`dojo/NodeList-fx <dojo/NodeList-fx>` - Adds base and core FX support to ``NodeList``.
 
 * :ref:`dojo/NodeList-html <dojo/NodeList-html>` - Adds advanced content setting functionality.
 
-* :ref:`dojo/NodeList-manipulate <dojo/NodeList-manipulate>` - Functions that allow for manipulation of DOM nodes in similiar way to jQuery.
+* :ref:`dojo/NodeList-manipulate <dojo/NodeList-manipulate>` - Functions that allow for manipulation of DOM nodes in similar way to jQuery.
 
 * :ref:`dojo/NodeList-traverse <dojo/NodeList-traverse>` - Advanced node traversal functions.
 
@@ -80,13 +80,6 @@ Returns a new ``NodeList`` with the items specified by index assuming a 0 based 
     // nodelist contains first and last nodes of an unordered list
   });
 
-The method has the following signature:
-
-.. api-doc :: dojo/NodeList
-  :methods: at
-  :no-headers:
-  :sig:
-
 concat()
 --------
 
@@ -98,13 +91,6 @@ Returns a new ``NodeList`` which contains the original list in addition to any p
     var nodelist = query("h1").concat(query("h2"));
     // nodelist contains all the documents headers that are level 1 and 2
   }
-
-The signature of the method is:
-
-.. api-doc :: dojo/NodeList
-  :methods: concat
-  :no-headers:
-  :sig:
 
 end()
 -----
@@ -143,13 +129,6 @@ Returns ``true`` if every node of the ``NodeList`` returns ``true`` for the supp
     }
   });
 
-The function has the following signature:
-
-.. api-doc :: dojo/NodeList
-  :methods: every
-  :no-headers:
-  :sig:
-
 forEach()
 ---------
 
@@ -162,13 +141,6 @@ Iterates over every node of the ``NodeList`` passing the nodes to a function.  T
       // node will be each node in the list.
     });
   });
-
-The function has the following signature:
-
-.. api-doc :: dojo/NodeList
-  :methods: forEach
-  :no-headers:
-  :sig:
 
 indexOf()
 ---------
@@ -184,17 +156,10 @@ Returns the index of the first occurance of a node in a ``NodeList``.  If not fo
     // if idx = -1 then node doesn't have class of someClass
   });
 
-The function has the following signature:
-
-.. api-doc :: dojo/NodeList
-  :methods: indexOf
-  :no-headers:
-  :sig:
-
 instantiate()
 -------------
 
-Instantiates objects for each class, passing the optional configuration object to the constructor.  This is similiar 
+Instantiates objects for each class, passing the optional configuration object to the constructor.  This is similar
 to the functionality of the :ref:``dojo/parser <dojo/parser>`` but instead of scanning the DOM for marked up nodes, it 
 uses the nodes in the ``NodeList``.
 
@@ -207,19 +172,12 @@ uses the nodes in the ``NodeList``.
     });
   });
 
-The function has the following signature:
-
-.. api-doc :: dojo/NodeList
-  :methods: instantiate
-  :no-headers:
-  :sig:
-
 The function returns a ``NodeList`` where the members are the instantiated objects.
 
 lastIndexOf()
 -------------
 
-Returns the index of the last occurance of a node in a ``NodeList``.  If the node is not found, the value of ``-1`` is 
+Returns the index of the last occurrence of a node in a ``NodeList``.  If the node is not found, the value of ``-1`` is
 returned.
 
 .. js ::
@@ -227,16 +185,9 @@ returned.
   require(["dojo/query", "dojo/dom"], function(query, dom){
     var node = dom.byId("someId");
     var idx = query(".someClass").lastIndexOf(node);
-    // if idx >= 0 then the value is the last occurance of node
+    // if idx >= 0 then the value is the last occurrence of node
     // if idx = -1 then node was not found in the NodeList
   });
-
-The function has the following signature:
-
-.. api-doc :: dojo/NodeList
-  :methods: lastIndexOf
-  :no-headers:
-  :sig:
 
 map()
 -----
@@ -289,7 +240,7 @@ For example:
     // Listens for onclick events on list items in the list with an ID of "myList"
   });
 
-Because ``on()`` supports CSS selector syntax, comma deliminated events can be used as well:
+Because ``on()`` supports CSS selector syntax, comma delimited events can be used as well:
 
 .. js ::
 
@@ -298,13 +249,6 @@ Because ``on()`` supports CSS selector syntax, comma deliminated events can be u
       console.log("hello!");
     });
   });
-
-The function has the following signature:
-
-.. api-doc :: dojo/NodeList
-  :methods: on
-  :no-headers:
-  :sig:
 
 This function returns a ``NodeList`` where each node has a ``remove()`` function that can be used to remove any 
 listeners.
@@ -320,13 +264,6 @@ Returns a new ``NodeList`` that is a "slice" of the source ``NodeList``.  Like a
     var nodelist = query("div").slice(0, 3);
     // nodelist contains the first 4 <div> elements
   });
-
-The function has the following signature:
-
-.. api-doc :: dojo/NodeList
-  :methods: slice
-  :no-headers:
-  :sig:
 
 some()
 ------
@@ -345,13 +282,6 @@ Returns ``true`` if any node of the ``NodeList`` returns ``true`` for the suppli
     }
   });
 
-The function has the following signature:
-
-.. api-doc :: dojo/NodeList
-  :methods: some
-  :no-headers:
-  :sig:
-
 splice()
 --------
 
@@ -364,13 +294,6 @@ Returns a new ``NodeList`` that is a manipulated version based on the passed arg
     // nodelist contains a list with the first 3 elements spliced out
     // from the source
   });
-
-The function has the following signature:
-
-.. api-doc :: dojo/NodeList
-  :methods: splice
-  :no-headers:
-  :sig:
 
 Other
 -----
@@ -454,13 +377,13 @@ See Also
 
 * :ref:`dojo/NodeList-data <dojo/NodeList-data>` - Allows the association of arbitrary data with items of a ``NodeList``.
 
-* :ref:`dojo/NodeList-dom <dojo/NodeList-dom>` - DOM related functions that are similiar functionality to the ``dojo/dom-*`` related modules.
+* :ref:`dojo/NodeList-dom <dojo/NodeList-dom>` - DOM related functions that are similar functionality to the ``dojo/dom-*`` related modules.
 
 * :ref:`dojo/NodeList-fx <dojo/NodeList-fx>` - Adds base and core FX support to ``NodeList``.
 
 * :ref:`dojo/NodeList-html <dojo/NodeList-html>` - Adds advanced content setting functionality.
 
-* :ref:`dojo/NodeList-manipulate <dojo/NodeList-manipulate>` - Functions that allow for manipulation of DOM nodes in similiar way to jQuery.
+* :ref:`dojo/NodeList-manipulate <dojo/NodeList-manipulate>` - Functions that allow for manipulation of DOM nodes in similar way to jQuery.
 
 * :ref:`dojo/NodeList-traverse <dojo/NodeList-traverse>` - Advanced node traversal functions.
 

@@ -38,72 +38,72 @@ Utility Classes
 
 Utility methods and classes used by widgets or by applications with widgets.
 
-* :ref:`dijit.a11y <dijit/a11y>` - functions about tab index
+* :ref:`dijit/a11y <dijit/a11y>` - functions about tab index
 
-* :ref:`dijit.focus <dijit/focus>` - keeps track of focused node and active widgets
+* :ref:`dijit/focus <dijit/focus>` - keeps track of focused node and active widgets
 
-* :ref:`dijit.place <dijit/place>` - low level code for positioning popups / drop downs
+* :ref:`dijit/place <dijit/place>` - low level code for positioning popups / drop downs
 
-* :ref:`dijit.popup <dijit/popup>` - high level library routines for positioning popups / drop downs
+* :ref:`dijit/popup <dijit/popup>` - high level library routines for positioning popups / drop downs
 
-* :ref:`dijit.registry <dijit/registry>` - registry of all widgets on the page
+* :ref:`dijit/registry <dijit/registry>` - registry of all widgets on the page
 
-* :ref:`dijit.typematic <dijit/typematic>` - for normalizing key-repeat across browsers, plus simulation "mouse-repeat"
+* :ref:`dijit/typematic <dijit/typematic>` - for normalizing key-repeat across browsers, plus simulation "mouse-repeat"
 
-* :ref:`dijit.Destroyable <dijit/Destroyable>` - for tracking handles and releasing them when an object is destroyed
+* :ref:`dijit/Destroyable <dijit/Destroyable>` - for tracking handles and releasing them when an object is destroyed
 
 Infrastructure Widgets
 ======================
 
-* :ref:`dijit._WidgetBase <dijit/_WidgetBase>` (and also deprecated :ref:`dijit._Widget <dijit/_Widget>`)
+* :ref:`dijit/_WidgetBase <dijit/_WidgetBase>` (and also deprecated :ref:`dijit/_Widget <dijit/_Widget>`)
 
-* :ref:`dijit._AttachMixin <dijit/_AttachMixin>`
+* :ref:`dijit/_AttachMixin <dijit/_AttachMixin>`
 
-* :ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>` (and also deprecated :ref:`dijit._Templated <dijit/_Templated>`)
+* :ref:`dijit/_TemplatedMixin <dijit/_TemplatedMixin>` (and also deprecated :ref:`dijit/_Templated <dijit/_Templated>`)
 
-* :ref:`dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`
+* :ref:`dijit/_WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`
 
-* :ref:`dijit._CssStateMixin <dijit/_CssStateMixin>`
+* :ref:`dijit/_CssStateMixin <dijit/_CssStateMixin>`
 
-* :ref:`dijit._FocusMixin <dijit/_FocusMixin>`
+* :ref:`dijit/_FocusMixin <dijit/_FocusMixin>`
 
-* :ref:`dijit._HasDropDown <dijit/_HasDropDown>`
+* :ref:`dijit/_HasDropDown <dijit/_HasDropDown>`
 
-* :ref:`dijit._OnDijitClickMixin <dijit/_OnDijitClickMixin>`
+* :ref:`dijit/_OnDijitClickMixin <dijit/_OnDijitClickMixin>`
 
-* :ref:`dijit._BidiSupport <dijit/_BidiSupport>`
+* :ref:`dijit/_BidiSupport <dijit/_BidiSupport>`
 
-* :ref:`dijit._Contained <dijit/_Contained>`
+* :ref:`dijit/_Contained <dijit/_Contained>`
 
-* :ref:`dijit._Container <dijit/_Container>`
+* :ref:`dijit/_Container <dijit/_Container>`
 
-* :ref:`dijit._DialogMixin <dijit/_DialogMixin>`
+* :ref:`dijit/_DialogMixin <dijit/_DialogMixin>`
 
-* :ref:`dijit._KeyNavMixin <dijit/_KeyNavMixin>`
+* :ref:`dijit/_KeyNavMixin <dijit/_KeyNavMixin>`
 
-* :ref:`dijit._KeyNavContainer <dijit/_KeyNavContainer>`
+* :ref:`dijit/_KeyNavContainer <dijit/_KeyNavContainer>`
 
-* :ref:`dijit._MenuBase <dijit/_MenuBase>`
+* :ref:`dijit/_MenuBase <dijit/_MenuBase>`
 
-* :ref:`dijit._PaletteMixin <dijit/_PaletteMixin>`
+* :ref:`dijit/_PaletteMixin <dijit/_PaletteMixin>`
 
-* :ref:`dijit._TimePicker <dijit/_TimePicker>`
+* :ref:`dijit/_TimePicker <dijit/_TimePicker>`
 
 Menu Widgets
 ============
 These are the main Menu widgets:
 
-* :ref:`dijit.DropDownMenu <dijit/DropDownMenu>`
+* :ref:`dijit/DropDownMenu <dijit/DropDownMenu>`
 
-* :ref:`dijit.Menu <dijit/Menu>`
+* :ref:`dijit/Menu <dijit/Menu>`
 
-* :ref:`dijit.MenuBar <dijit/MenuBar>`
+* :ref:`dijit/MenuBar <dijit/MenuBar>`
 
-There are also supporting widgets such as :ref:`dijit.MenuItem <dijit/MenuItem>` which are discussed on the pages above.
+There are also supporting widgets such as :ref:`dijit/MenuItem <dijit/MenuItem>` which are discussed on the pages above.
 
 Tree Widgets
 ============
-* :ref:`dijit.Tree <dijit/Tree>`
+* :ref:`dijit/Tree <dijit/Tree>`
 
   * :ref:`Model <dijit/tree/Model>` interface
 
@@ -121,218 +121,226 @@ Tree Widgets
 Miscellaneous Widgets
 =====================
 
-* :ref:`dijit.BackgroundIframe <dijit/BackgroundIframe>` **STUB**
+* :ref:`dijit/BackgroundIframe <dijit/BackgroundIframe>` **STUB**
 
-* :ref:`dijit.Calendar <dijit/Calendar>`
+* :ref:`dijit/Calendar <dijit/Calendar>`
 
-* :ref:`dijit.CalendarLite <dijit/CalendarLite>`
+* :ref:`dijit/CalendarLite <dijit/CalendarLite>`
 
-  **1.7+** A lighter version of :ref:`dijit.Calendar <dijit/Calendar>`, more geared for mobile devices (e.g. does not 
+  **1.7+** A lighter version of :ref:`dijit/Calendar <dijit/Calendar>`, more geared for mobile devices (e.g. does not 
   have keyboard navigation)
 
-* :ref:`dijit.ColorPalette <dijit/ColorPalette>`
+* :ref:`dijit/ColorPalette <dijit/ColorPalette>`
 
-* :ref:`dijit.Declaration <dijit/Declaration>`
+* :ref:`dijit/ConfirmDialog <dijit/ConfirmDialog>`
 
-* :ref:`dijit.Dialog <dijit/Dialog>`
+  **1.10+** A version of :ref:`dijit/Dialog <dijit/Dialog>` with built-in OK and cancel buttons.
 
-* :ref:`dijit.DialogUnderlay <dijit/DialogUnderlay>` **STUB**
+* :ref:`dijit/ConfirmTooltipDialog <dijit/ConfirmTooltipDialog>`
 
-* :ref:`dijit.Editor <dijit/Editor>`
+  **1.10+** A version of :ref:`dijit/TooltipDialog <dijit/TooltipDialog>` with built-in OK and cancel buttons.
 
-* :ref:`dijit.Fieldset <dijit/Fieldset>`
+* :ref:`dijit/Declaration <dijit/Declaration>`
 
-* :ref:`dijit.InlineEditBox <dijit/InlineEditBox>`
+* :ref:`dijit/Dialog <dijit/Dialog>`
 
-* :ref:`dijit.ProgressBar <dijit/ProgressBar>`
+* :ref:`dijit/DialogUnderlay <dijit/DialogUnderlay>` **STUB**
 
-* :ref:`dijit.TitlePane <dijit/TitlePane>`
+* :ref:`dijit/Editor <dijit/Editor>`
 
-* :ref:`dijit.Toolbar <dijit/Toolbar>`
+* :ref:`dijit/Fieldset <dijit/Fieldset>`
 
-* :ref:`dijit.ToolbarSeparator <dijit/ToolbarSeparator>`
+* :ref:`dijit/InlineEditBox <dijit/InlineEditBox>`
 
-* :ref:`dijit.Tooltip <dijit/Tooltip>`
+* :ref:`dijit/ProgressBar <dijit/ProgressBar>`
 
-* :ref:`dijit.TooltipDialog <dijit/TooltipDialog>`
+* :ref:`dijit/TitlePane <dijit/TitlePane>`
+
+* :ref:`dijit/Toolbar <dijit/Toolbar>`
+
+* :ref:`dijit/ToolbarSeparator <dijit/ToolbarSeparator>`
+
+* :ref:`dijit/Tooltip <dijit/Tooltip>`
+
+* :ref:`dijit/TooltipDialog <dijit/TooltipDialog>`
 
 Form Widgets and Handling
 =========================
 
-* :ref:`dijit.form <dijit/form>`
+* :ref:`dijit/form <dijit/form>`
 
   * Text Boxes
 
-    * :ref:`dijit.form.CurrencyTextBox <dijit/form/CurrencyTextBox>`
+    * :ref:`dijit/form/CurrencyTextBox <dijit/form/CurrencyTextBox>`
 
       A specialized input widget for monetary values, much like the currency type in spreadsheet programs
 
-    * :ref:`dijit.form.DateTextBox <dijit/form/DateTextBox>`
+    * :ref:`dijit/form/DateTextBox <dijit/form/DateTextBox>`
 
       An easy-to-use date entry control which allows either typing or choosing a date from any calendar widget
 
-    * :ref:`dijit.form.MappedTextBox <dijit/form/MappedTextBox>`
+    * :ref:`dijit/form/MappedTextBox <dijit/form/MappedTextBox>`
 
-      A subclass of :ref:`dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>` that is designed to be a base
+      A subclass of :ref:`dijit/form/ValidationTextBox <dijit/form/ValidationTextBox>` that is designed to be a base
       class for widgets that have a visible formatted display value, and a serializable value in a hidden input field
       which is actually sent to the server.
 
-    * :ref:`dijit.form.NumberSpinner <dijit/form/NumberSpinner>`
+    * :ref:`dijit/form/NumberSpinner <dijit/form/NumberSpinner>`
 
       An input widget which restricts input to numeric input and offers down and up arrow buttons to "spin" the number
       up and down
 
-    * :ref:`dijit.form.NumberTextBox <dijit/form/NumberTextBox>`
+    * :ref:`dijit/form/NumberTextBox <dijit/form/NumberTextBox>`
 
       A input widget which restricts input to numeric input
 
-    * :ref:`dijit.form.RangeBoundTextBox <dijit/form/RangeBoundTextBox>`
+    * :ref:`dijit/form/RangeBoundTextBox <dijit/form/RangeBoundTextBox>`
 
       A base class for textbox form widgets which define a range of valid values.
 
-    * :ref:`dijit.form.SimpleTextarea <dijit/form/SimpleTextarea>`
+    * :ref:`dijit/form/SimpleTextarea <dijit/form/SimpleTextarea>`
 
       A simple wrapper of <textarea>; equivalent functionality
 
-    * :ref:`dijit.form.Textarea <dijit/form/Textarea>`
+    * :ref:`dijit/form/Textarea <dijit/form/Textarea>`
 
       An auto expanding/contracting <textarea>
 
-    * :ref:`dijit.form.TextBox <dijit/form/TextBox>`
+    * :ref:`dijit/form/TextBox <dijit/form/TextBox>`
 
       A basic <input type="text">-style form control
 
-    * :ref:`dijit.form.TimeTextBox <dijit/form/TimeTextBox>`
+    * :ref:`dijit/form/TimeTextBox <dijit/form/TimeTextBox>`
 
       A time input control which allows either typing or choosing a time from any time-picker widget
 
-    * :ref:`dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`
+    * :ref:`dijit/form/ValidationTextBox <dijit/form/ValidationTextBox>`
 
       A class for textbox widgets with the ability to validate various types of content and to provide user feedback.
 
   * Select Type Widgets
 
-    * :ref:`dijit.form.Select <dijit/form/Select>`
+    * :ref:`dijit/form/Select <dijit/form/Select>`
 
       A styleable drop-down select box (similar to ``<select>``)
 
-    * :ref:`dijit.form.ComboBox <dijit/form/ComboBox>`
+    * :ref:`dijit/form/ComboBox <dijit/form/ComboBox>`
 
       An "auto complete", which allows the user to type any value and just gives suggested completions
 
-    * :ref:`dijit.form.FilteringSelect <dijit/form/FilteringSelect>`
+    * :ref:`dijit/form/FilteringSelect <dijit/form/FilteringSelect>`
 
       Similar to a ``<select>`` but with type-ahead filtering of the drop down list
 
-    * :ref:`dijit.form.MultiSelect <dijit/form/MultiSelect>`
+    * :ref:`dijit/form/MultiSelect <dijit/form/MultiSelect>`
 
       Allows the selection of multiple items (similar to ``<select multiple>``)
 
-    * :ref:`dijit.form._FormSelectWidget <dijit/form/_FormSelectWidget>`
+    * :ref:`dijit/form/_FormSelectWidget <dijit/form/_FormSelectWidget>`
 
-      Base class for widgets like :ref:`dijit.form.Select <dijit/form/Select>`
+      Base class for widgets like :ref:`dijit/form/Select <dijit/form/Select>`
 
 
   * Buttons
 
-    * :ref:`dijit.form.Button <dijit/form/Button>`
+    * :ref:`dijit/form/Button <dijit/form/Button>`
 
       A representation of a normal <button> or <input type="submit/reset/button" />
 
-    * :ref:`dijit.form.ComboButton <dijit/form/ComboButton>`
+    * :ref:`dijit/form/ComboButton <dijit/form/ComboButton>`
 
       A button with an arrow to show a drop down (often a menu)
 
-    * :ref:`dijit.form.DropDownButton <dijit/form/DropDownButton>`
+    * :ref:`dijit/form/DropDownButton <dijit/form/DropDownButton>`
 
       A button which displays a menu or some other popup when you press it
 
-    * :ref:`dijit.form.ToggleButton <dijit/form/ToggleButton>`
+    * :ref:`dijit/form/ToggleButton <dijit/form/ToggleButton>`
 
       A cross between a Button and a Checkbox widget
 
   * Slider
 
-    * :ref:`dijit.form.HorizontalRule <dijit/form/HorizontalRule>`
+    * :ref:`dijit/form/HorizontalRule <dijit/form/HorizontalRule>`
 
-      Horizontal ruler to use with a :ref:`dijit.form.HorizontalSlider <dijit/form/HorizontalSlider>`.
+      Horizontal ruler to use with a :ref:`dijit/form/HorizontalSlider <dijit/form/HorizontalSlider>`.
 
-    * :ref:`dijit.form.HorizontalRuleLabels <dijit/form/HorizontalRuleLabels>`
+    * :ref:`dijit/form/HorizontalRuleLabels <dijit/form/HorizontalRuleLabels>`
 
-      Horizontal ruler labels to use with a :ref:`dijit.form.HorizontalSlider <dijit/form/HorizontalSlider>`.
+      Horizontal ruler labels to use with a :ref:`dijit/form/HorizontalSlider <dijit/form/HorizontalSlider>`.
 
-    * :ref:`dijit.form.HorizontalSlider <dijit/form/HorizontalSlider>`
+    * :ref:`dijit/form/HorizontalSlider <dijit/form/HorizontalSlider>`
 
       A scale with a handle you can drag left or right to select a value.
 
-    * :ref:`dijit.form.VerticalRule <dijit/form/VerticalRule>`
+    * :ref:`dijit/form/VerticalRule <dijit/form/VerticalRule>`
 
-      Vertical ruler to use with a :ref:`dijit.form.VerticalSlider <dijit/form/VerticalSlider>`.
+      Vertical ruler to use with a :ref:`dijit/form/VerticalSlider <dijit/form/VerticalSlider>`.
 
-    * :ref:`dijit.form.VerticalRuleLabels <dijit/form/VerticalRuleLabels>`
+    * :ref:`dijit/form/VerticalRuleLabels <dijit/form/VerticalRuleLabels>`
 
-      Vertical ruler labels to use with a :ref:`dijit.form.VerticalSlider <dijit/form/VerticalSlider>`.
+      Vertical ruler labels to use with a :ref:`dijit/form/VerticalSlider <dijit/form/VerticalSlider>`.
 
-    * :ref:`dijit.form.VerticalSlider <dijit/form/VerticalSlider>`
+    * :ref:`dijit/form/VerticalSlider <dijit/form/VerticalSlider>`
 
       A vertical scale with a handle you can drag up or down to select a value.
 
   * Other form widgets
 
-    * :ref:`dijit.form.CheckBox <dijit/form/CheckBox>`
+    * :ref:`dijit/form/CheckBox <dijit/form/CheckBox>`
 
       Nearly the same as an HTML checkbox, but with fancy styling
 
-    * :ref:`dijit.form.Form <dijit/form/Form>`
+    * :ref:`dijit/form/Form <dijit/form/Form>`
 
       Corresponds to a <form> itself; wraps other widgets
 
-    * :ref:`dijit.form.RadioButton <dijit/form/RadioButton>`
+    * :ref:`dijit/form/RadioButton <dijit/form/RadioButton>`
 
       To select one choice from a list
 
   * Base classes and mixins
 
-    * :ref:`dijit.form._FormWidget <dijit/form/_FormWidget>`
+    * :ref:`dijit/form/_FormWidget <dijit/form/_FormWidget>`
 
       Base class for all form widgets
 
-    * :ref:`dijit.form._FormValueWidget <dijit/form/_FormValueWidget>`
+    * :ref:`dijit/form/_FormValueWidget <dijit/form/_FormValueWidget>`
 
       Base class for form widgets with a value
 
-    * :ref:`dijit.form._FormValueMixin <dijit/form/_FormValueMixin>`
+    * :ref:`dijit/form/_FormValueMixin <dijit/form/_FormValueMixin>`
 
-    * :ref:`dijit.form._FormWidgetMixin <dijit/form/_FormWidgetMixin>`
+    * :ref:`dijit/form/_FormWidgetMixin <dijit/form/_FormWidgetMixin>`
 
-    * :ref:`dijit.form._ListBase <dijit/form/_ListBase>` **STUB**
+    * :ref:`dijit/form/_ListBase <dijit/form/_ListBase>` **STUB**
 
-    * :ref:`dijit.form._ListMouseMixin <dijit/form/_ListMouseMixin>` **STUB**
+    * :ref:`dijit/form/_ListMouseMixin <dijit/form/_ListMouseMixin>` **STUB**
 
 Layout
 ======
 
-* :ref:`dijit.layout <dijit/layout>`
+* :ref:`dijit/layout <dijit/layout>`
 
-  * :ref:`dijit.layout._LayoutWidget <dijit/layout/_LayoutWidget>`
+  * :ref:`dijit/layout/_LayoutWidget <dijit/layout/_LayoutWidget>`
 
-  * :ref:`dijit.layout.AccordionContainer <dijit/layout/AccordionContainer>`
+  * :ref:`dijit/layout/AccordionContainer <dijit/layout/AccordionContainer>`
 
-  * :ref:`dijit.layout.BorderContainer <dijit/layout/BorderContainer>`
+  * :ref:`dijit/layout/BorderContainer <dijit/layout/BorderContainer>`
 
-  * :ref:`dijit.layout.ContentPane <dijit/layout/ContentPane>`
+  * :ref:`dijit/layout/ContentPane <dijit/layout/ContentPane>`
 
-  * :ref:`dijit.layout.LinkPane <dijit/layout/LinkPane>`
+  * :ref:`dijit/layout/LinkPane <dijit/layout/LinkPane>`
 
-  * :ref:`dijit.layout.StackContainer <dijit/layout/StackContainer>`
+  * :ref:`dijit/layout/StackContainer <dijit/layout/StackContainer>`
 
-  * :ref:`dijit.layout.TabContainer <dijit/layout/TabContainer>`
+  * :ref:`dijit/layout/TabContainer <dijit/layout/TabContainer>`
 
   * :ref:`dijit/layout/utils <dijit/layout/utils>` **STUB**
 
-  * :ref:`dijit.layout.StackController <dijit/layout/StackController>`
+  * :ref:`dijit/layout/StackController <dijit/layout/StackController>`
 
-  * :ref:`dijit.layout.TabController <dijit/layout/TabController>`
+  * :ref:`dijit/layout/TabController <dijit/layout/TabController>`
 
 Note about programmatic instantiation
 =====================================
@@ -348,7 +356,7 @@ should use :ref:`parser.instantiate() <dojo/parser>`:
     var myNode = dom.byId("myNode");
     // All attributes of myNode will be preserved in the widget
     parser.instantiate([ myNode ], {
-      data-dojo-type: "dijit.form.ValidationTextBox",
+      data-dojo-type: "dijit/form/ValidationTextBox",
       dojoSpecificAttr1: value,
       dojoSpecificAttr2: value
     });

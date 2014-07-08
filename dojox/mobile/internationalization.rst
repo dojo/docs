@@ -42,18 +42,18 @@ the button label.
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <link href="../themes/iphone/iphone.css" rel="stylesheet">
 
-      <script src="../../../dojo/dojo.js" data-dojo-config="parseOnLoad: true"></script>
+      <script src="../../../dojo/dojo.js" data-dojo-config="locale:'it', parseOnLoad:true"></script>
 
       <script language="JavaScript" type="text/javascript">
           require([
               "dojo/ready",
               "dijit/registry",
-              "dojo/i18n!dojox/mobile/tests/nls/sample"
+              "dojo/i18n!dojox/mobile/tests/nls/sample",
               "dojo/parser",
               "dojox/mobile",
               "dojox/mobile/compat",
               "dojox/mobile/Button",
-              ], function(ready, sampleStrings){
+              ], function(ready, registry, sampleStrings){
               ready(function(){
                   registry.byId("btn1").set("label", sampleStrings["Sunday"]);
               });

@@ -19,10 +19,10 @@ Introduction
 dragged and then dropped in another location. ``dojo/dnd`` uses an "avatar" to represent objects that are being dragged
 from one location to another. As the avatar is shifted, it is designed to not obscure objects under the mouse giving
 better visibility. Additionally, it is possible to represent objects in the Avatar_ differently, which is described in
-detail below. A special sub-package ``dojo/dnd/move`` accommodates direct movement of elements in the *old style* of
+detail below. A special sub-package ``dojo/dnd/Moveable`` accommodates direct movement of elements in the *old style* of
 Dojo Drag and Drop (version 0.4).
 
-DnD (both :ref:`dojo.dnd <dojo/dnd>` and :ref:`dojo.dnd.move <dojo/dnd/move>` packages) is implemented as a state
+DnD (both :ref:`dojo.dnd <dojo/dnd>` and :ref:`dojo.dnd.Moveable <dojo/dnd/Moveable>` packages) is implemented as a state
 machine, which reflects its state by adding and removing CSS classes to relevant objects, which gives the ultimate
 flexibility over customizing the look-and-feel.
 
@@ -471,7 +471,7 @@ Following event handlers are overloaded: ``onMouseDown``, ``onMouseUp``, and ``o
 additional actions required by Source_.
 
 Following local events are defined by Source_, which are meant to be overridden or connected with
-:ref:`dojo/on <dojo/on>` or :ref:`dojo.connect() <dojo/_base/connect>`:
+:ref:`dojo/on <dojo/on>` or `dojo.connect()`:
 
 ``onDrop(source, nodes, copy)``
   this method is called when DnD items is dropped in this target. The default implementation calls ``onDropExternal()`` 
@@ -808,7 +808,7 @@ Following public methods are defined:
 Event processors
 ~~~~~~~~~~~~~~~~
 
-Following public methods/events are defined. They can be used with :ref:`dojo.connect()` or overridden:
+Following public methods/events are defined. They can be used with `dojo.connect()` or overridden:
 
 ``onDragDetected(evt)``
   called when the drag is detected. The default implementation creates a Mover_. Parameters:

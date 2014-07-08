@@ -290,16 +290,6 @@ Only the first class passed for multiple inheritance is a true superclass. The r
 the child class to produce the inheritance chain we need. On a practical level, this means that the ``instanceof`` 
 operator cannot be used for mixins, only for base classes. Instead, use the `isInstanceOf()`_ function.
 
-Signature
----------
-
-The signature of ``dojo/declare()`` is:
-
-.. api-doc :: dojo/_base/declare
-  :topfunc:
-  :no-headers:
-  :sig:
-
 .. _dojo/_base/declare#safemixin:
 
 safeMixin()
@@ -376,7 +366,7 @@ coupled with AMD make the creation of classes more manageable and portable:
 
 * The class name (first argument of ``declare()``) is omitted in new development.  This ensures that the global 
   namespace does not become polluted with classes and reduces the chances of name collisions.  Classes in Dojo Toolkit 
-  introduced prior to Dojo 1.7 will include the class name for backwards compatability reasons.
+  introduced prior to Dojo 1.7 will include the class name for backwards compatibility reasons.
 
 * The AMD Module ID (MID) becomes the commonly referred to class name.  This name is implied from the path to the file.
   For example ``package/Class.js`` would make the MID ``package/Class``.

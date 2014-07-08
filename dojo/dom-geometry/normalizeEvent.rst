@@ -17,12 +17,12 @@ Usage
 
 .. js ::
 
-  require(["dojo/dom-geomtry"], function(domGeom){
+  require(["dojo/dom-geometry"], function(domGeom){
     domGeom.normalizeEvent(e);
     // e now has normalized geometry properties
   });
 
-*Note*: While :ref:`dojo/_base/event::fix() <dojo/_base/event#fix>` will automatically normalize the geometry of an 
+*Note*: While :ref:`dojo/_base/event::fix() <dojo/_base/event#fix>` will automatically normalize the geometry of an
 event, when :ref:`dojo/on <dojo/on>` automatically normalizes DOM events, it does not do this (as it is expensive and 
 not always necessary) and you will have to normalize these yourself.
 

@@ -238,3 +238,58 @@ Address bar hiding does not work in Safari on iOS 7. What's going on?
 ---------------------------------------------------------------------
 
 This is a consequence of the new behavior of Safari in iOS 7: it is no longer possible to force in Javascript the hiding of the address bar.
+
+Why scrolling is fast and smooth on some devices/browsers but not on all?
+-------------------------------------------------------------------------
+
+Roughly speaking, the scrolling performance of dojox/mobile/ScrollableView and ScrollablePane 
+depends on the browser and device performance. In practice, the scrolling is very fast and smooth 
+on iOS devices, but for instance on some particular Android browsers/devices the performance may be poor. 
+Some hints that may be helpful:
+
+1. If possible, use a different browser. A worst-case example would be the (buggy) stock browser on Galaxy S3 since the latest Android 4.3 update: using Chrome instead of the stock browser is the way to go in this case.
+
+2. Update your Dojo version to the latest available. Dojo 1.9.2 brought scrolling performance enhancements for Android and BlackBerry (https://bugs.dojotoolkit.org/ticket/17454). 
+
+3. Avoid unnecessary complexity of the DOM elements inside the ScrollableView. In practice, if the scrolling is slow on a given device or browser, a quick test with a simplified scrollable content can tell whether the problem is due to the complexity of the content.
+
+4. Optimize the CSS of your app: if possible, avoid :hover or :active psuedo-classes, and set -webkit-user-select: none for your list items; avoid CSS settings that can be heavy to render on some browsers/devices (background images, alpha transparency...). In practice, if the scrolling is slow on a given device or browser, a quick test with a simplified CSS can tell whether the problem is due to the complexity of the CSS.
+
+5. An alternate solution is to force dojox/mobile/ScrollableView to use "native" scroll based on the CSS property overflow: auto (or scroll) instead of its own JS-CSS scrolling machinery. This should provide superior performance on browsers or devices where the default scrolling machinery has poor performances, but cannot be guaranteed to work for any dojox/mobile app, because some dojox/mobile features (LongListMixin, scroll events...) are incompatible. So this solution should be used only after careful testing. Note also that when using this solution the desktop browsers show scrollbars, while some mobile browsers (stock browser on Android and IE on WP8) do not show a transient scroll indicator during scrolling. One way to implement this solution is to use a subclass of ScrollableView as follows:
+
+.. js ::
+
+  define(["dojo/_base/declare", "dojo/dom-style", "dojox/mobile/ScrollableView"],
+    function(declare, domStyle, ScrollableView) {
+      return declare(ScrollableView, {
+        postCreate: function() {
+          this.inherited(arguments);
+          domStyle.set(this.containerNode, "overflow", "auto");
+          // enable momentum scrolling on mobile devices
+          domStyle.set(this.containerNode, "webkitOverflowScrolling", "touch");
+          // trigger hardware acceleration
+          domStyle.set(this.containerNode, "webkitTransform", "translate3d(0,0,0)");
+          this.disableTouchScroll = true;
+       }, 
+       resize: function() {
+          this.inherited(arguments);
+          this.containerNode.style.height = this.fixedHeaderHeight > 0 ?
+             this.domNode.style.height.replace("px", "") - this.fixedHeaderHeight + "px" : 
+             this.domNode.style.height;
+       }
+  })});
+
+6. In Cordova apps for Android, ensure the hardware-acceleration is enabled in the Android manifest 
+(for details, see http://developer.android.com/guide/topics/manifest/application-element.html#hwaccel) 
+and do not change the default layerType of the WebView 
+(see http://developer.android.com/reference/android/view/View.html#setLayerType(int,%20android.graphics.Paint)).
+
+How do I prevent the bounce effect when scrolling my view on iOS/Cordova ?
+--------------------------------------------------------------------------
+
+In an iOS Cordova application, scrolling a webview outside its edge triggers a bouncing effect. You can disable this effect by setting the DisallowOverscroll property to true in your cordova config.xml:
+
+
+  <preference name="DisallowOverscroll" value="true"/>
+
+see https://cordova.apache.org/docs/en/3.0.0/guide_platforms_ios_config.md.html for more information. Note: on Android, this option disabled the glow effect.

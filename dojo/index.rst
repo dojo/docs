@@ -62,7 +62,7 @@ Feature Detection             :ref:`dojo/has <dojo/has>`                        
                               :ref:`dojo/uacss <dojo/uacss>`
                               
                               :ref:`dojo/_base/sniff <dojo/_base/sniff>` [1]_
-Language                      :ref:`dojo/_base/lang <dojo/_base/lang>`               The foundation language extentions 
+Language                      :ref:`dojo/_base/lang <dojo/_base/lang>`               The foundation language extensions 
                                                                                      for Dojo
 Classes                       :ref:`dojo/_base/declare <dojo/_base/declare>`         Dojo's class system
 Deferreds and Promises        :ref:`dojo/promise <dojo/promise>`                     Asynchronous process management 
@@ -166,19 +166,19 @@ Testing                       :ref:`dojo/robot <dojo/robot>`                    
                               :ref:`dojo/robotx <dojo/robotx>`
 Arrays                        :ref:`dojo/_base/array <dojo/_base/array>`             Array routine enhancements
 Strings                       :ref:`dojo/string <dojo/string>`                       String routine enhancements
-JSON                          :ref:`dojo/json <dojo/json>`                           JSON hanlding modules
+JSON                          :ref:`dojo/json <dojo/json>`                           JSON handling modules
 
                               :ref:`dojo/_base/json <dojo/_base/json>` [1]_
 Colors                        :ref:`dojo/_base/Color <dojo/_base/Color>`             Color classes/functions
 
                               :ref:`dojo/colors <dojo/colors>`
 Dates                         :ref:`dojo/date <dojo/date>`                           Date routine enhancements
-URL and Query Strings         :ref:`dojo/_base/url <dojo/_base/url>`                 URL and URL query string managment
+URL and Query Strings         :ref:`dojo/_base/url <dojo/_base/url>`                 URL and URL query string management
 
                               :ref:`dojo/io-query <dojo/io-query>`
 Internationalization          :ref:`dojo/i18n <dojo/i18n>`                           Modules for handling 
                                                                                      internationalization of 
-                              :ref:`dojo/nls <dojo/nls>`                             applications
+                                                                                     applications
                               
                               :ref:`dojo/cldr <dojo/cldr>`
 

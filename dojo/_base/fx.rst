@@ -167,11 +167,11 @@ A simple animation changing both background color and text color.
           width: 100px;
       }
 
-How can I change the framerate of an animation?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How can I change the frame rate of an animation?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By default dojo runs its animations with 50 frames/second. This can be too fast in certain use scenarios and you want the whole animation to run lots slower.
-To change the framerate you use the rate attribute which defines the pause between each frame. So if you want 5 frames per second you need a rate of 200 (milliseconds between each frame)
+To change the frame rate you use the rate attribute which defines the pause between each frame. So if you want 5 frames per second you need a rate of 200 (milliseconds between each frame)
 
 .. code-example ::
 
@@ -224,9 +224,9 @@ Property Type        Default  Description
 ======== =========== ======== ==========================================================================================
 duration Integer     350      How long in milliseconds the animation should take to play.
 curve    _Line|Array ``null`` A two element array of start and end values, or a 
-                              :ref:`dojo/_base/fx::_Line <dojo/_base/fx#line>` instance to be used in the Animation.
+                              :ref:`dojo/_base/fx::_Line <dojo/_base/fx#_Line>` instance to be used in the Animation.
 easing   Function    ``null`` A Function to adjust the acceleration (or deceleration) of the progress across a 
-                              :ref:`dojo/_base/fx::_Line <dojo/_base/fx#line>`
+                              :ref:`dojo/_base/fx::_Line <dojo/_base/fx#_Line>`
 repeat   Integer     0        The number of times the animation should repeat (loop).
 rate     Integer     20       The rate in milliseconds the Animation should attempt to update.  20ms = 50fps.
 delay    Integer     ``null`` The time in milliseconds to wait before starting animation after it has been 
@@ -285,6 +285,8 @@ status()
 
 This method returns a string token representation of the status of the animation, one of: ``paused``, ``playing``,
 ``stopped``.
+
+.. _dojo/_base/fx#_Line:
 
 _Line
 =====

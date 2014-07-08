@@ -80,6 +80,27 @@ To make a bar widget (Heading, TabBar, or perhaps your custom bar widget) fixed-
     <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props='fixed:"bottom"'>View Footer Bar</h1>
   </div>
 
+Programmatic:
+
+.. js ::
+
+        require([
+            "dojo/ready",
+            "dijit/registry",
+            "dojox/mobile/ScrollableView",
+            "dojox/mobile/Heading"
+        ], function(ready, registry, ScrollableView, Heading){
+            var sv = new ScrollableView({id:"view1"});
+            var h = new Heading({fixed:"top", label:"View Header Bar"});
+            sv.addChild(h);
+            // Add contents here...
+            // ...
+            var f = new Heading({fixed:"bottom", label:"View Footer Bar"});
+            sv.addChild(f);
+            sv.placeAt(document.body);
+            sv.startup();
+        });
+
 .. image :: ScrollableView-example1-anim.gif
 
 Application header/footer bar example

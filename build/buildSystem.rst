@@ -49,7 +49,7 @@ own custom transforms and configuring the build system for other uses.
 Overview
 ========
 
-The design of the system is simple. It "discovers" a set of resources and then applies a synchronized, ordered set of
+The design of the system is somewhat complex. It "discovers" a set of resources and then applies a synchronized, ordered set of
 resource-dependent transforms to those resources. Both the discovery process and the transforms are controlled by a
 user-configurable JavaScript object termed a "profile".
 
@@ -91,16 +91,8 @@ Extra Features
 
 These are discussed in separate documents as follows:
 
-* :ref:`Generating a Profile from HTML files <build/htmlToProfile>` describes how to scan HTML files to automatically create
-  a profile.
-
 * :ref:`Transform writeDojo <build/transforms/writeDojo>` describes how to build a custom dojo.js with a nonstandard set of
   modules.
-
-* :ref:`Relocating Packages <build/relocatingPackages>` describes how to build packages that relocate module namespaces
-  (this feature replaces the so-called multi-version feature available with the legacy loader and builder).
-
-* For a description of backward compatibility features see :ref:`Processing Legacy Build Profiles <build/legacyBackCompat>`.
 
 Assumptions for Examples
 ========================
@@ -269,7 +261,7 @@ contain a file type. When a profile argument is given with no file type, *and* t
 segments, *and* the profile resource does not exist in the current working directory, then the build system will try to
 find the profile in the /util/buildscripts/profiles directory after appending the file type ".profile.js". It is
 possible to specify a profile with a file type different than ".profile.js" by including the file type in the profile
-argument. Or course your can give the ".profile.js" type explicitly as well.
+argument. Of course you can give the ".profile.js" type explicitly as well.
 
 Notice that the property ``basePath`` was automatically added to the profile object and set to the path at which the
 profile resides. If the profile contains the property ``basePath`` and the value of that property is a relative
@@ -330,7 +322,7 @@ When exercised with the ``check-args`` switch, you should see something like thi
 Configuration Resources
 ------------------------
 
-The command switch ``dojoConfig`` causes the build system read a configuration as given by a variable ``dojoConfig`` as
+The command switch ``dojoConfig`` causes the build system to read a configuration as given by a variable ``dojoConfig`` as
 if it was an ordinary profile. The next section describes how the build system consumes configurations. Also note that
 the dojo loader will simply ignore any configuration variable that it does not define. These two features combine to
 allow all or part of an application's build profile to be contained within the application configuration. For example,
@@ -437,7 +429,7 @@ As each package.json resource is processed, a profile object is manufactured wit
     }
 
 Notice that the package.json object is embedded in a package configuration object that the package.json object
-represents. Also notice that the property :ref:`selfFilename` is set the absolute path at which the package.Json file
+represents. Also notice that the property `selfFilename` is set the absolute path at which the package.Json file
 resides and is added to the package.Json object. This gives the reference path for any relative paths found in the
 package.json object, the ``directories.lib`` path in particular.
 
@@ -920,7 +912,7 @@ for complete documentation.
 
 * :ref:`copy <build/transforms/copy>`: Copies a resource from a source location to a destination location.
 
-* :ref:`depsDeclarative <build/transforms/depsDeclarative>`: Scans declarative resrouces for dependencies and replaces the resource in any layer with any discovered dependencies.
+* :ref:`depsDeclarative <build/transforms/depsDeclarative>`: Scans declarative resources for dependencies and replaces the resource in any layer with any discovered dependencies.
 
 * :ref:`depsDump <build/transforms/depsDump>`: Prints the module dependency graph of one or more modules.
 
@@ -945,8 +937,6 @@ for complete documentation.
 * :ref:`write <build/transforms/write>`: Writes a resource to the file system.
 
 * :ref:`writeAmd <build/transforms/writeAmd>`: Writes an AMD module to the file system.
-
-* :ref:`writeCss <build/transforms/writeCss>`: Writes a CSS style sheet to the file system
 
 * :ref:`writeDojo <build/transforms/writeDojo>`: Outputs a module that includes the dojo loader; this transform is responsible for writing dojo.js.
 

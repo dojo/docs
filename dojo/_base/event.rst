@@ -23,38 +23,17 @@ features:
     // event now contains the modules features
   });
 
-Features
-========
-
 .. _dojo/_base/event#stop:
 
-.. _dojo/_base/event#dojo-stopevent:
-
-stop()
-------
-
-.. api-doc :: dojo/_base/event
-  :methods: stop
-  :summary:
-  :description:
-  :sig:
-  :no-headers:
+stop(evt)
+---------
+Simply calls evt.preventDefault() and evt.StopPropagation().
 
 .. _dojo/_base/event#fix:
 
-fix()
------
-
-.. api-doc :: dojo/_base/event
-  :methods: fix
-  :summary:
-  :description:
-  :sig:
-  :no-headers:
-
-*Note*: ``fix()`` also invokes :ref:`dojo/dom-geometry::normalizeEvent() <dojo/dom-geometry/normalizeEvent>` in 
-addition to normal event fixing that is performaned by :ref:`dojo/on <dojo/on>`.  This is because it is expensive and 
-can be handled directly if needed.
+fix(evt)
+--------
+Performs various normalization on event object.
 
 See also
 ========

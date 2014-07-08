@@ -8,4 +8,4 @@ dijit.form._Spinner
 :since: 1.7
 
 _Spinner is a base class for :ref:`dijit/form/NumberSpinner <dijit/form/NumberSpinner>` and
-:ref:`dojox/mobile/TimeSpinner <dojox/mobile/TimeSpinner>`.  It's not meant to be used directly.
+`dojox/mobile/TimeSpinner`.  It's not meant to be used directly.

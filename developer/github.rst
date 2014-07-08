@@ -17,7 +17,7 @@ The main GitHub Repositories for the Dojo 1.X code are:
 
 * `dojo/dojo <https://github.com/dojo/dojo>`_
 
-* `dojo/djijit <https://github.com/dojo/dijit>`_
+* `dojo/dijit <https://github.com/dojo/dijit>`_
 
 * `dojo/dojox <https://github.com/dojo/dojox>`_
 
@@ -91,7 +91,7 @@ First, make sure you have checked out the correct branch that the pull request i
 
 Then, retrieve the Pull Request, squashing it into a single atomic changeset::
 
-  $ git pull --squash --no-commit git://github.com/username/dojo.git t12345
+  $ git pull --no-rebase --squash --no-commit git://github.com/username/dojo.git t12345
 
 The changes from the pull request will be pulled into your working directory, staged to be committed. You can now review
 the changes and do whatever testing and fix-ups are necessary before committing.

@@ -14,7 +14,11 @@ dojox/mobile/ContentPane
 Introduction
 ============
 
-ContentPane is a very simple and lightweight content pane to embed an HTML fragment. It can be regarded as a <div> element, but has ability to embed an HTML fragment and run the parser. The onLoad() handler is called when parsing is done and the content is ready. Compared with dijit/layout/ContentPane, this widget provides only basic fuctionality, but it is much smaller than dijit/layout/ContentPane.
+ContentPane is a very simple and lightweight content pane to embed an HTML fragment.
+It can be regarded as a <div> element, but has ability to embed an HTML fragment and run the parser.
+The onLoad() handler is called when parsing is done and the content is ready.
+Compared with dijit/layout/ContentPane, this widget provides only basic functionality,
+but it is much smaller than dijit/layout/ContentPane.
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default  |Description                                                                                                |

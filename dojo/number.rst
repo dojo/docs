@@ -51,15 +51,8 @@ localized convention by passing in an option of ``pattern``:
     // num = "00123"
   });
 
-The pattern string is constructed according to the Unicode CLDR specifications, which uses a convention similiar to Java's 
+The pattern string is constructed according to the Unicode CLDR specifications, which uses a convention similar to Java's
 NumberFormat.
-
-The signature of ``format()`` is:
-
-.. api-doc :: dojo/number
-  :methods: format
-  :no-headers:
-  :sig:
 
 parse()
 -------
@@ -75,13 +68,6 @@ parse()
     });
   });
 
-The signature of ``parse()`` is:
-
-.. api-doc :: dojo/number
-  :methods: parse
-  :no-headers:
-  :sig:
-
 round()
 -------
 
@@ -95,22 +81,8 @@ quirks.  In addition ``round()`` works around a bug in Internet Explorer (throug
   // Outputs "1.0" in other browsers
   console.log((0.9).toFixed());
 
-The signature of ``round()`` is:
-
-.. api-doc :: dojo/number
-  :methods: round
-  :no-headers:
-  :sig:
-
 regexp()
 --------
-
-.. api-doc :: dojo/number
-  :methods: regexp
-  :no-headers:
-  :description:
-  :sig:
-  :returns:
 
 Examples
 ========

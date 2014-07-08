@@ -90,7 +90,7 @@ IE7 sample:
 
 The visual style of Claro is clear, light, luminous, and translucent.
 
-See `Claro <http://download.dojotoolkit.org/release-1.7.0/dojo-release-1.7.0/dijit/themes/themeTester.html?theme=claro>`_ rendered in the themeTester.html page.
+See `Claro <http://download.dojotoolkit.org/release-1.9.3/dojo-release-1.9.3/dijit/themes/themeTester.html?theme=claro>`_ rendered in the themeTester.html page.
 
 Tundra
 ------
@@ -98,7 +98,7 @@ Tundra
 .. image :: tundra.png
    :alt: tundra screen shot
 
-See `Tundra <http://download.dojotoolkit.org/release-1.7.0/dojo-release-1.7.0/dijit/themes/themeTester.html?theme=tundra>`_ rendered in the themeTester.html page.
+See `Tundra <http://download.dojotoolkit.org/release-1.9.3/dojo-release-1.9.3/dijit/themes/themeTester.html?theme=tundra>`_ rendered in the themeTester.html page.
 
 
 Tundra is accessibility and globalization compliant.
@@ -110,7 +110,7 @@ Soria
 .. image :: soria.png
    :alt: soria screen shot
 
-See `Soria <http://download.dojotoolkit.org/release-1.7.0/dojo-release-1.7.0/dijit/themes/themeTester.html?theme=soria>`_ rendered in the themeTester.html page.
+See `Soria <http://download.dojotoolkit.org/release-1.9.3/dojo-release-1.9.3/dijit/themes/themeTester.html?theme=soria>`_ rendered in the themeTester.html page.
 
 
 
@@ -120,7 +120,7 @@ Nihilo
 .. image :: nihilo.png
    :alt: nihilo screen shot
 
-See `Nihilo <http://download.dojotoolkit.org/release-1.7.0/dojo-release-1.7.0/dijit/themes/themeTester.html?theme=nihilo>`_ rendered in the themeTester.html page.
+See `Nihilo <http://download.dojotoolkit.org/release-1.9.3/dojo-release-1.9.3/dijit/themes/themeTester.html?theme=nihilo>`_ rendered in the themeTester.html page.
 
 
 
@@ -809,7 +809,7 @@ The loadingAnimation.gif is used in the following widgets:
 
 
 See the animation in action in the
-`Claro <http://download.dojotoolkit.org/release-1.7.0/dojo-release-1.7.0/dijit/themes/themeTester.html?theme=claro>`_
+`Claro <http://download.dojotoolkit.org/release-1.9.3/dojo-release-1.9.3/dijit/themes/themeTester.html?theme=claro>`_
 theme rendered in the themeTester.html page, on the slow loading Dialog example
 
 See more on :ref:`Animations and Effects with Dojo. <quickstart/Animation>`.

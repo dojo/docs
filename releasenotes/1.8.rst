@@ -23,7 +23,7 @@ of Dojo might include fixes to support future releases of these browsers, but we
 
 * Chrome 13-21
 
-* IE 6-9 (Dojo 1.8.4+ also support IE10)
+* IE 6-9 (Dojo 1.8.4+ also support IE10, 1.8.6+ also support IE11)
 
 * Opera 10.50-12 (Dojo core only)
 

@@ -679,41 +679,54 @@ This syntax will *not* merge commit0, it starts at the commit *after* commit0.
 
 Caution: once we run cherry-pick on the branch we can't go back to using rebase for merging changes.
 
-Creating reference guide for Web site
+Updating reference guide for Web site
 =====================================
 
 1. ``git clone --recursive git@github.com:phiggins42/rstwiki.git`` (recursive is important, build will not work if  
    submodules are not checked out)
 
-2. Inside there, ``git clone git@github.com:dojo/docs.git dojodocs`` (edit the Makefile in ``export`` if you want these 
+2. Inside rstwiki, ``git clone git@github.com:dojo/docs.git dojodocs`` (edit the Makefile in ``export`` if you want these
    docs to come from somewhere else)
 
-3. Go into ``dojodocs`` and ``git checkout 1.7`` (or whatever the latest RELEASE branch is; this repo tracks trunk by 
-   default!)
+3. Go into ``dojodocs`` and ``git checkout 1.7`` (or whatever version you are generating documentation for)
 
-4. Go into each of ``_static/{dojo,dijit,dojox,util}`` and ``git checkout 1.7.1`` (or whatever the latest RELEASE 
-   version of DTK is; rstwiki tracks some version of trunk by default!)  Also it maybe more appropriate to copy in 
-   an SVN copy of DTK, as ``svn:external`` links are not mirrored on GitHub.  In particular, you will not have certain
-   parts of DojoX available in version 1.8 and later if you just use the GitHub mirror.
+4. Go into each of ``_static/{dojo,dijit,dojox,util}`` and ``git checkout 1.7`` (or whatever version you are
+   generating documentation for)
 
-5. ``cd export``
+5. ``cd export`` (in the rstwiki/ directory)
 
-6. Edit ``Makefile`` to contain the correct Dojo version
+6. If you are adding reference doc for a new version of dojo (ex: 1.11), then update
+``export/source/_templates/layout.html`` to set it to default to the new version.
 
-7. ``mkdir build``
+7. Edit ``Makefile`` to contain the Dojo version you are generating documentation for
 
-8. ``export LC_CTYPE=""`` (not sure why this is necessary, but it was in the original docs!)
+8. ``mkdir build``
 
-9. ``make clean dojo data html``
+9. ``export LC_CTYPE=""`` (this is necessary because if LC_CTYPE="UTF8", the build fails immediately)
 
-10. In the DTK repo, ``svn rm reference-guide/1.7 && svn ci -m "Replacing old reference guide"`` (noting that you 
-    change it to the version of the documentation you actually built).
+10. ``make clean dojo data html``
 
-11. Move the ``export/build/html`` directory to ``reference-guide/1.7`` in the DTK repo
+11. To check in documentation for a new dojo version (ex: 1.11):
 
-12. ``svn add reference-guide && svn ci -m "Adding new reference guide"``
+    - Move the ``export/build/html`` directory to ``/website-repo-path/reference-guide/1.11``
+    - ``cd /website-repo-path/reference-guide/1.11``
+    - Tell SVN about new files: ``find . -type f -print |xargs svn add``.  This complex command is to continue
+      adding all the files after an SVN error adding ``dojox/editor/plugins/nls/th/SafePaste.js``.
+    - Commit: ``svn ci -m "Add reference guide for version 1.11"``
 
-13. Done, finally!
+12. To update the reference guide for an existing dojo version:
+
+    - Copy over new and updated files: ``cd build/html; find . |cpio -p /website-repo-path/reference-guide/1.7``
+    - ``cd /website-repo-path/reference-guide/1.7``
+    - Tell SVN about new files, if any: ``svn add .``
+    - Commit: ``svn ci -m "Updating reference guide for version 1.7"``
+
+13. If you've checked in documentation for a new version of dojo (ex: 1.11), then you need to update the documentation
+for all the previous versions of dojo, starting with 1.7.
+This is necessary so the drop downs on each page (ex: ``https://dojotoolkit.org/reference-guide/1.7/``)
+contain the new version.   Repeat these instructions for every old version of dojo.
+
+14. Done, finally!
 
 Updating rstWiki on livedocs
 ============================

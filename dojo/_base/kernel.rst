@@ -45,12 +45,6 @@ or otherwise has been changed, and they are using an "older" version of the meth
 This means the "SplitContainer" widget still works, but has been replaced by the
 :ref:`BorderContainer <dijit/layout/BorderContainer>` widget, and will be removed in Dojo 2.0.
 
-The signature of the method is:
-
-.. api-doc :: dojo/_base/kernel
-  :methods: deprecated
-  :no-headers:
-  :sig:
 
 .. _dojo/_base/kernel#experimental:
 
@@ -65,13 +59,6 @@ This function logs a warning message to the console, alerting developers a metho
   require(["dojo/_base/kernel"], function(kernel){
     kernel.experimental("acme.MyClass");
   });
-
-The signature of the method is:
-
-.. api-doc :: dojo/_base/kernel
-  :methods: experimental
-  :no-headers:
-  :sig:
 
 .. _dojo/_base/kernel#global:
 
@@ -112,7 +99,7 @@ locale
 
 ``locale`` contains the locale for loading localized resources, specified according to
 `RFC 3066 <http://www.ietf.org/rfc/rfc3066.txt>`_.
-This string can be specified with the help of :ref:`dojo/_base/config::locale <dojo/_base/config#locale`.
+This string can be specified with the help of :ref:`dojo/_base/config::locale <dojo/_base/config#locale>`.
 
 A simple reference of locale:
 
@@ -143,13 +130,13 @@ The members of the ``version`` object are integers, and can be checked individua
     var v = kernel.version;
     if(v.major > 1){
       // this is Dojo 2.x or greater
-    }else{
-      // this id Dojo 1.x
+    }else if(v.major === 1){
+      // this is Dojo 1.x
       switch(v.minor){
        case 1: console.log("1.1.x specific code"); break;
        case 2: console.log("1.2.x specific code"); break;
-       case 9: console.log("this is 0.9, as major is less than 1, but not 1"); break;
-    }
+       case 9: console.log("1.9.x specific code"); break;
+      } 
     }
   });
 

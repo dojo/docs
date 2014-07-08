@@ -354,7 +354,7 @@ Tips
 See also
 ========
 
-* :ref:`dojo/dom-geomtetry <dojo/dom-geometry>` - Dojo DOM Geometry API
+* :ref:`dojo/dom-geometry <dojo/dom-geometry>` - Dojo DOM Geometry API
 
 * :ref:`dojo/dom <dojo/dom>` - Core DOM API
 

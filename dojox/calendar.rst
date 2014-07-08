@@ -540,7 +540,7 @@ The calendar widget allows to move and resize a data item.
 
 Only one data item can be edited at a time. 
 
-Note: for more information on data item editing behavior and events, See dedicated section of advanced configuration.
+Note: for more information on data item editing behavior and events, See dedicated section of advanced configuration: `Editing flags`_
 
 Using the mouse
 ```````````````
@@ -937,6 +937,60 @@ if the calendar instance is already declared or in the calendar constructor:
 
 This formatItemTimeFunc property can be set on the calendar or on a sub view.
 If the property is set on the calendar and on a view, the one set on the view takes precedence.
+
+Decorations
+-----------
+
+Decoration data items are items like data items that have a start and end time.
+They are displayed in the calendar above the grid but below the data item renderers.
+Decorations can be used to display free or busy times, vacations, etc.
+
+If sub columns are set, the decoration data items can have a sub column associated. 
+If set, the decoration will be displayed in the sub column. 
+If no sub column is set, the decoration will be displayed in all sub columns.
+The property to determine the sub column of a data item is also used for decoration data items (by default "calendar").
+
+To set the decoration items, set a dojo.store.api.Store to the decorationStore property like the data item store.
+
+.. js ::
+
+  new Calendar({
+    decorationStore: new Memory(
+      {data: 
+        [
+          {
+            startTime: "2014-01-10T00:00:00Z", 
+            endTime: "2014-01-13T00:00:00Z", 
+            calendar: "cal1"
+          }
+        ]
+      }
+    )
+  });
+
+The default renderer for a decoration is dojox.calendar.DecorationRenderer. This is a simple DIV element with a semi transparent green background.
+
+The cssClassFunc function is also applied to decoration renderers. So styling of a decoration renderer can be customize by associating a CSS class to the decoration item renderer and use CSS on the page to specify the style to use.
+
+.. css ::
+
+  .dojoxCalendarDecoration.Calendar1 {
+    background-color: red !important;
+  }
+
+  .dojoxCalendarDecoration.Calendar1 {
+    background-color: blue !important;
+  } 
+
+.. js :: 
+
+  calendar.set("cssClassFunc",
+    function(item){
+      return item.calendar == "cal1" ? "Calendar1" : "Calendar2"
+    });
+
+This code is associating a CSS class (Calendar1 or Calendar2) to a decoration data item according to the value stored in the calendar property of this decoration data item.
+The CSS code is changing the background color of the decoration renderer according to the CSS class applied.
 
 
 Common properties
@@ -1557,15 +1611,15 @@ There are some specifics depending on the device used:
 Editing flags
 `````````````
 
-The editable property allows to globally enable or disable the editing capability of the widget.
+The **editable** property allows to globally enable or disable the editing capability of the widget.
 
-If the editable property is true, the moveEnabled and resizeEnabled properties allow to control respectively if a data item can be moved or resized.
+If the editable property is true, the **moveEnabled** and **resizeEnabled** properties allow to control respectively if a data item can be moved or resized.
 
 To have a control of editing, move or resize at the data item level, override respectively the isItemEditable(), isItemMoveEnabled() or isItemResizeEnabled() functions of the Calendar class.
 
 The following example shows how to subclass the Calendar to override these functions to:
-  * allow resize of a data item if "editable" and "resizeEnabled" properties of the data item are resolved as *true*,
-  * allow move of a data item if "editable" and "moveEnabled" properties of the data item are resolved as *true*.
+  * allow resize of a data item if **editable** and **resizeEnabled** properties of the data item are resolved as *true*,
+  * allow move of a data item if **editable** and **moveEnabled** properties of the data item are resolved as *true*.
 
 .. css ::
 

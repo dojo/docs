@@ -30,29 +30,6 @@ features:
     // Color contains functions
   });
 
-Features
-========
-
-Methods
--------
-
-.. api-doc :: dojo/_base/Color
-  :methods:
-  :table:
-  :summary:
-  :description:
-
-Properties
-----------
-
-.. api-doc :: dojo/_base/Color
-  :properties: named
-  :table:
-  :summary:
-  :description:
-
-*Note*: ``named`` only contains the 16 named colors defined by the HTML4 standard.  If you need all named colors from 
-the CSS3 standard you have to require :ref:`dojo/colors <dojo/colors>`.
 
 Examples
 ========
@@ -70,7 +47,7 @@ of using the constructor with different arguments:
 
     // Creates an empty color object for later use
     var emptyColor = new Color();
-  
+
     // Constructor accepts named colors
     var namedColor = new Color("purple");
   
@@ -147,7 +124,7 @@ The last example shows how one can use the Color object directly to change the p
 
 .. js ::
 
-  require(["dojo/_base/Color", "dom-stlye"], function(Color, style){
+  require(["dojo/_base/Color", "dojo/dom-style"], function(Color, style){
     var myColor = Color.fromString("red");
     style.set("someId", "backgroundColor", myColor);
     // This changes the background-color of the element "someId" to the color specified in myColor

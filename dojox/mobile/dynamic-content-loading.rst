@@ -26,7 +26,7 @@ Usage of the url property is as follows.
      <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='transition:"slide", url:"view1.html"'>
         External View #1 (sync)
      </li>
-     <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='transition:"flip", url:"view2.html", synch:false'>
+     <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='transition:"flip", url:"view2.html", sync:false'>
         External View #2 (async)
      </li>
   </ul>
@@ -133,16 +133,14 @@ In this example, the view content is loaded asynchronously, the destination view
       view2.destroyDescendants();
 
       var url = "http://..."; // or var url = listItem.url;
-      dojo.xhrGet({
-          url: url,
-          handleAs: "text",
-          load: function(response, ioArgs){
-              var container = view2.containerNode;
-              container.innerHTML = response;
-              parser.parse(container);
-              prog.stop();
-              listItem.transitionTo("view2");
-          }
+      xhr(url, {
+          handleAs: "text"
+      }).then(function(response) {
+          var container = view2.containerNode;
+          container.innerHTML = response;
+          parser.parse(container);
+          prog.stop();
+          listItem.transitionTo("view2");
       });
   }
 
@@ -167,15 +165,13 @@ This example is almost the same as the previous one, but in this example, view t
       listItem.transitionTo("view3");
 
       var url = "http://..."; // or var url = listItem.url;
-      dojo.xhrGet({
-          url: url,
-          handleAs: "text",
-          load: function(response, ioArgs){
-              var container = view3.containerNode;
-              container.innerHTML = response;
-              parser.parse(container);
-              prog.stop();
-          }
+      xhr(url, {
+          handleAs: "text"
+      }).then(function(response) {
+          var container = view3.containerNode;
+          container.innerHTML = response;
+          parser.parse(container);
+          prog.stop();
       });
   }
 
@@ -192,13 +188,13 @@ The above three examples are examples of updating an existing view. In this exam
 
   myAction4 = function(){
       if(!registry.byId("view4")){
-          var view4 = new dojox.mobile.View({
+          var view4 = new View({
               id: "view4",
               selected: true
           }, domConstruct.create("DIV", null, win.body()));
           view4.startup();
 
-          var heading1 = new dojox.mobile.Heading({
+          var heading1 = new Heading({
               label: "Dynamic View",
               back: "Home",
               moveTo: "home"
@@ -206,19 +202,19 @@ The above three examples are examples of updating an existing view. In this exam
           heading1.placeAt(view4.containerNode);
           heading1.startup();
 
-          var categ1 = new dojox.mobile.RoundRectCategory({
+          var categ1 = new RoundRectCategory({
               label: "Documents"
           });
           categ1.placeAt(view4.containerNode);
           categ1.startup();
 
-          var list1 = new dojox.mobile.RoundRectList();
+          var list1 = new RoundRectList();
           list1.placeAt(view4.containerNode);
           list1.startup();
 
           var counter = 4;
           for(var i = 1; i <= 3; i++){
-              var item1 = new dojox.mobile.ListItem({
+              var item1 = new ListItem({
                   icon: "images/i-icon-"+i+".png",
                   label: "Document 000"+counter
               });
@@ -263,10 +259,10 @@ In this example, there is a dojox/mobile/ContentPane widget in the transition ta
   myAction6 = function(){
       var pane1 = registry.byId("pane1");
       if(!pane1.domNode.innerHTML){ // nothing has been loaded yet
-          connect.connect(pane1, "onLoad", this, function(){
+          pane1.on("load", lang.hitch(this, function(){
               // onLoad fires when the content is ready
               this.transitionTo("view6");
-          });
+          }));
           pane1.set("href", "fragment1.html");
       }else{
           this.transitionTo("view6");

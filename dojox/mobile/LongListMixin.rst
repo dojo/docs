@@ -1,4 +1,4 @@
-.. _dojox/mobile/FilteredListMixin:
+.. _dojox/mobile/LongListMixin:
 
 ==============================
 dojox/mobile/LongListMixin

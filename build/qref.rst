@@ -328,7 +328,7 @@ Transform: writeDojo
 Transform: writeOptimized
 =========================
 
-:ref:`writeOptimize transform reference... <build/transforms/writeOptimize>`
+:ref:`writeOptimized transform reference... <build/transforms/writeOptimized>`
 
 ``layerOptimize`` (default = "shrinksafe")
   * [*falsy*] Layer modules are not optimized; the ``stripConsole`` profile property, if any, is ignored.
@@ -386,6 +386,10 @@ Transform: writeOptimized
 
 **Important**: Dead code removal consequent to static has.js feature values and the hasFixup transform requires a Google
   Closure or UglifyJS compiler optimization switch setting. To use UglifyJS, you will need to ``npm install uglify-js@1``, in a directory parallel to ``util``
+
+``optimizeOptions`` (default = "undefined")
+    This object is passed to the JavaScript optimizer to allow for compiler specific settings. Settings for UglifyJS and closure 
+    compiler can be set using this object.
 
 ``stripConsole`` (default = "normal")
   * ["none"] No console applications are stripped.

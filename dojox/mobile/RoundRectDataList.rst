@@ -128,7 +128,7 @@ Programmatic example
 
   require([
       "dojo/ready",
-      "dojo/data/ItemReadStore",
+      "dojo/data/ItemFileReadStore",
       "dojox/mobile/RoundRectDataList",
       "dojox/mobile",
       "dojox/mobile/parser"

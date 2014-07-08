@@ -27,6 +27,6 @@ Examples
               {id:1, name:"One"},
               {id:2, name:"Two"}
           ];
-          var results = QueryResults(someData);
+          var results = new QueryResults(someData);
           results.forEach(objectHandler); // works in all browsers
   });
