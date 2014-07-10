@@ -26,25 +26,24 @@ Usage
 
 The following attributes can be specified when you create a ValidationTextBox:
 
-================  =============  ======================================================================
-Parameter         Type           Description
-================  =============  ======================================================================
-required          boolean        Whether the field is required or not. false by default.
-promptMessage     String         Tooltip text that appears when the text box is empty and on focus. Null by default.
-invalidMessage    String         Tooltip text that appears when the content of the text box is invalid.
-missingMessage    String         Tooltip text that appears when the content of the text box is empty and the field is required.
-constraints       Object         Holds constraints (like min and max values) for use in subclasses of ValidationTextBox.
-regExp            RegExp         Regular expression pattern to be used for validation. If this is used, do not use regExpGen.
-regExpGen         function       Function that should return a string representing the body of a regular expression; see the String.replace() format. If this is used, do not use regExp.
-tooltipPosition   String         Define where Tooltip will appear.
-================  =============  ======================================================================
+================  ==============================  ======================================================================
+Parameter         Type                            Description
+================  ==============================  ======================================================================
+required          boolean                         Whether the field is required or not. false by default.
+promptMessage     String                          Tooltip text that appears when the text box is empty and on focus. Null by default.
+invalidMessage    String                          Tooltip text that appears when the content of the text box is invalid.
+missingMessage    String                          Tooltip text that appears when the content of the text box is empty and the field is required.
+constraints       Object                          Holds constraints (like min and max values) for use in subclasses of ValidationTextBox.
+pattern           String | function               Regular expression pattern to be used for validation or a function that should return a string representing the body of a regular expression. '^' and '$' are automatically added to the regular expression.
+tooltipPosition   String                          Define where Tooltip will appear.
+================  ==============================  ======================================================================
  
 Methods:
 
 isValid()
     Method that calls validator function.
 validator()
-    Method that determines whether the content of the text box is valid. Called at these events: onblur, oninit, onkeypress. See also: :ref:`tips <dijit/form/ValidationTextBox-tricks>`.
+    Method that determines whether the content of the text box is valid. Called at these events: onblur, oninit, onkeypress.
 displayMessage()
     Method that displays validation errors or prompt messages. Uses dijit/Tooltip by default.
 
@@ -52,31 +51,14 @@ displayMessage()
 Examples
 ========
 
-Declarative example
--------------------
-
-ValidationTextBox widgets usually use Regular Expression validation, as in the following example:
-
-.. code-example ::
-  :djConfig: async: true, parseOnLoad: true
-
-  .. js ::
-
-    require(["dojo/parser", "dijit/form/ValidationTextBox"]);
-
-  .. html ::
-
-    <label for="phone">Phone number, no spaces:</label>
-    <input type="text" name="phone" id="phone" value="someTestString" required="true"
-        data-dojo-type="dijit/form/ValidationTextBox"
-        data-dojo-props="regExp:'[\\w]+', invalidMessage:'Invalid Non-Space Text.'" />
-
 Using regular expressions
 -------------------------
 
-The regular expression syntax comes directly from JavaScript.
+When using the 'pattern' property, regular expressions are used to validate input.
 The start and ending qualifiers of the regular expression, ^ and $, are implicit - you do not need to include them.
-This code demonstrates a ValidationTextBox that only accepts a 5 digit zip code.
+
+Declarative example
+-------------------
 
 .. code-example ::
   :djConfig: async: true, parseOnLoad: true
@@ -87,41 +69,111 @@ This code demonstrates a ValidationTextBox that only accepts a 5 digit zip code.
 
   .. html ::
 
-    <label for="zip">Also 5-Digit U.S. Zipcode only:</label>
-    <input type="text" name="zip" value="00000" required="true"
+    <label for="zipCode">Zip code:</label>
+    <input type="text" name="zipCode" id="zipCodeTextBox" value="" required="true"
         data-dojo-type="dijit/form/ValidationTextBox"
-        data-dojo-props="regExp:'\\d{5}', invalidMessage:'Invalid zip code.'" />
+        data-dojo-props="pattern:'\\d{5}', invalidMessage:'Not a valid zipcode.'" />
+
+
+Programmatic example
+--------------------
+
+.. code-example ::
+  :djConfig: async: true, parseOnLoad: false
+
+  .. js ::
+
+    require(["dijit/form/ValidationTextBox", "dojo/domReady!"], function(ValidationTextBox) {
+      var ipAddrTextBox = new ValidationTextBox({
+        pattern: "(\\d{1,3}\\.){3}\\d{1,3}",
+        required: true,
+        invalidMessage: "Not a valid IP address"
+      }, "ipAddress");
+    });
+
+  .. html ::
+
+    <label for="ipAddress">IP Address:</label>
+    <input type="text" name="ipAddress" id="ipAddress" value="" />
+
 
 Generate regular expressions
 ----------------------------
 
-ValidationTextBox also supports functions that generate regular expressions.
-Having a generating function enables you to write much more dynamic Web applications.
-ValidationTextBox passes its constraints object to the generating function.
-The following code demonstrates a dynamic ValidationTextBox that only accepts a 5 digit zip code after 5:00PM, and only accepts a county name before then.
+The pattern property also accepts a function that generates the body of a regular expression. In the example below the function will return a pattern validating IPv4 or IPv6 addresses depending on the value of a drop-down.
 
 .. code-example ::
-  :djConfig: async: true, parseOnLoad: true
+  :djConfig: async: true, parseOnLoad: false
 
   .. js ::
 
-    require(["dojo/parser", "dijit/form/ValidationTextBox"]);
+    require([
+      "dijit/form/ValidationTextBox",
+      "dijit/form/Select",
+      "dojo/domReady!"
+    ], function(ValidationTextBox, Select) {
+      var addressTypeSelect = new Select({}, "ipType");
+      var ipAddrTextBox = new ValidationTextBox({
+        required: true,
+        pattern: function () {
+          if (addressTypeSelect.get("value") === "v4") {
+            return "(\\d{1,3}\\.){3}\\d{1,3}";
+          } else {
+            return "([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}"
+          }
+        },
+        invalidMessage: "Not a valid IP address."
+      }, "ipAddress");
+      addressTypeSelect.on("change", function() {
+        ipAddrTextBox.validate();
+      });
+    });
 
-    var after5 = function(constraints){
-        var date = new Date();
-        if(date.getHours() >= 17){
-            return "\\d{5}";
-        }else{
-            return "\\D+";
-        }
-    }
+
 
   .. html ::
 
-    <label for="zip2">Also 5-Digit U.S. Zipcode only:</label>
-    <input type="text" name="zip" value="00000" id="zip2" required="true"
-        data-dojo-type="dijit/form/ValidationTextBox"
-        data-dojo-props="regExpGen:after5, invalidMessage:'Zip codes after 5, county name before then.'" />
+    <label for="ipAddress">IP Address:</label>
+    <select id="ipType" name="ipType">
+      <option value="v4" selected>IPv4</option>
+      <option value="v6">IPv6</option>
+    </select>
+    <input type="text" name="ipAddress" value="" id="ipAddress" />
+
+Using a validator function
+--------------------------
+Input can also be validated by providing a custom validator function. The example below is a less naive IP address validator than the example above.
+Because the validator function is called on every key press, it should not contain resource or time intensive logic.
+
+.. code-example ::
+  :djConfig: async: true, parseOnLoad: false
+
+  .. js ::
+
+    require(["dijit/form/ValidationTextBox", "dojo/domReady!"], function(ValidationTextBox) {
+      var ipAddressTextBox = new ValidationTextBox({
+        validator: function(value) {
+          var isValid = true;
+          if (/^(\d{1,3}\.){3}\d{1,3}$/.test(value)) {
+            value.split(".").forEach(function(octet) {
+              if (parseInt(octet) > 255) {
+                isValid = false;
+              }
+            });
+          } else {
+            isValid = false;
+          }
+          return isValid;
+        },
+        required: true,
+        invalidMessage: "Not a valid IP address."
+      }, "ipAddress");
+    });
+
+  .. html ::
+
+    <label for="ipAddress">IP Address:</label>
+    <input type="text" name="ipAddress" id="ipAddress" value="" />
 
 
 Accessibility
@@ -153,8 +205,3 @@ but keep in mind that good labels and instructions are still necessary for acces
 i.e. if the invalid popup will not be displayed then there must be clear instructional text indicating the field is required.
 
 As of the Dojo 1.0 release and beyond: Window-Eyes 6.1 speaks "read only" for fields that have been marked with the ARIA property invalid=true even though the field is still editable.
-
-See also
-========
-
-* :ref:`Tips, tricks and edge cases for dijit/form/ValidationTextBox <dijit/form/ValidationTextBox-tricks>`.
