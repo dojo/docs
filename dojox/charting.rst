@@ -16,9 +16,8 @@ Dojo comes with an amazing charting library, in the form of dojox/charting. A la
 
   .. js ::
 
-    require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/StackedAreas", "dojox/charting/themes/Wetland" , "dojo/ready"],
-      function(Chart, Default, StackedAreas, Wetland, ready){
-        ready(function(){
+    require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/StackedAreas", "dojox/charting/themes/Wetland" , "dojo/domReady!"],
+      function(Chart, Default, StackedAreas, Wetland){
           var c = new Chart("chartOne");
           c.addPlot("default", {type: StackedAreas, tension:3})
             .addAxis("x", {fixLower: "major", fixUpper: "major"})
@@ -28,7 +27,6 @@ Dojo comes with an amazing charting library, in the form of dojox/charting. A la
             .addSeries("Series B", [2.6, 1.8, 2, 1, 1.4, 0.7, 2])
             .addSeries("Series C", [6.3, 1.8, 3, 0.5, 4.4, 2.7, 2])
             .render();
-        });
     });
 
   .. html ::
@@ -61,16 +59,14 @@ more details on AMD.
 
   .. js ::
 
-      require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Lines", "dojo/ready"],
-        function(Chart, Default, Lines, ready){
-        ready(function(){
+      require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Lines", "dojo/domReady!"],
+        function(Chart, Default, Lines){
           var chart1 = new Chart("simplechart");
           chart1.addPlot("default", {type: Lines});
           chart1.addAxis("x");
           chart1.addAxis("y", {vertical: true});
           chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
           chart1.render();
-        });
       });
 
 As you can see from the source it is simple to create charts.
@@ -94,8 +90,7 @@ And here comes an example:
 
 .. js ::
 
-  require(["dojox/charting/Chart", "dojo/ready"], function(Chart, ready){
-    ready(function(){
+  require(["dojox/charting/Chart", "dojo/domReady!"], function(Chart){
       var chart = new dojox.charting.Chart("test", {
         title: "Production(Quantity)",
         titlePos: "bottom",
@@ -103,8 +98,7 @@ And here comes an example:
         titleFont: "normal normal normal 15pt Arial",
         titleFontColor: "orange"
       });
-    }
-  }));
+  });
 
 Working with Plots
 ==================
@@ -858,9 +852,8 @@ Here is an example of using coordinate pairs with a scatter plot:
 
   .. js ::
 
-    require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Scatter", "dojox/charting/themes/Julie", "dojo/ready"],
-      function(Chart, Default, Scatter, Julie, ready){
-        ready(function(){
+    require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Scatter", "dojox/charting/themes/Julie", "dojo/domReady!"],
+      function(Chart, Default, Scatter, Julie){
           var c = new Chart("scatter");
           c.addPlot("default", {type: Scatter})
             .addAxis("x", {fixLower: "major", fixUpper: "major"})
@@ -870,7 +863,6 @@ Here is an example of using coordinate pairs with a scatter plot:
             .addSeries("Series B", [2.6, 1.8, 2, 1, 1.4, 0.7, 2])
             .addSeries("Series C", [6.3, 1.8, 3, 0.5, 4.4, 2.7, 2])
             .render();
-        });
     });
 
   .. html ::
@@ -886,9 +878,8 @@ With any of the stacked plot types each data set added with addSeries() is place
 
   .. js ::
 
-    require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/StackedLines", "dojox/charting/themes/Julie", "dojo/ready"],
-      function(Chart, Default, StackedLines, Julie, ready){
-        ready(function(){
+    require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/StackedLines", "dojox/charting/themes/Julie", "dojo/domReady!"],
+      function(Chart, Default, StackedLines, Julie){
           var c = new Chart("stacked");
           c.addPlot("default", {type: StackedLines})
             .addAxis("x", {fixLower: "major", fixUpper: "major"})
@@ -897,7 +888,6 @@ With any of the stacked plot types each data set added with addSeries() is place
             .addSeries("Series 1", [1, 2, 3, 4, 5])
             .addSeries("Series 2", [1, 1, 1, 1, 1], {stroke: {color: "red"}})
             .render();
-        });
     });
 
   .. html ::
@@ -1517,9 +1507,8 @@ Here is a very simple example of a stacked area chart.
   .. js ::
 
     require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/StackedAreas",
-       "dojox/charting/themes/Wetland" , "dojo/ready"],
-      function(Chart, Default, StackedAreas, Wetland, ready){
-      ready(function(){
+       "dojox/charting/themes/Wetland" , "dojo/domReady!"],
+      function(Chart, Default, StackedAreas, Wetland){
         var c = new Chart("chartOne");
         c.addPlot("default", {type: StackedAreas, tension:3})
           .addAxis("x", {fixLower: "major", fixUpper: "major"})
@@ -1529,7 +1518,6 @@ Here is a very simple example of a stacked area chart.
           .addSeries("Series B", [2.6, 1.8, 2, 1, 1.4, 0.7, 2])
           .addSeries("Series C", [6.3, 1.8, 3, 0.5, 4.4, 2.7, 2])
           .render();
-      });
     });
  
   .. html ::
@@ -1547,9 +1535,8 @@ Here is a pie chart, with slice information shown onmouseover and a legend:
 
     require(["dojox/charting/Chart", "dojox/charting/plot2d/Pie", "dojox/charting/action2d/Highlight",
              "dojox/charting/action2d/MoveSlice" , "dojox/charting/action2d/Tooltip",
-             "dojox/charting/themes/MiamiNice", "dojox/charting/widget/Legend", "dojo/ready"],
-      function(Chart, Pie, Highlight, MoveSlice, Tooltip, MiamiNice, Legend, ready){
-      ready(function(){
+             "dojox/charting/themes/MiamiNice", "dojox/charting/widget/Legend", "dojo/domReady!"],
+      function(Chart, Pie, Highlight, MoveSlice, Tooltip, MiamiNice, Legend){
         var chartTwo = new Chart("chartTwo");
         chartTwo.setTheme(MiamiNice)
          .addPlot("default", {
@@ -1569,7 +1556,6 @@ Here is a pie chart, with slice information shown onmouseover and a legend:
         var anim_c = new Tooltip(chartTwo, "default");
         chartTwo.render();
         var legendTwo = new Legend({chart: chartTwo}, "legendTwo");
-      });
     });
 
   .. html ::
@@ -1587,9 +1573,8 @@ Here is a clustered bar chart with a rendering animation:
   .. js ::
 
     require(["dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/ClusteredColumns",
-             "dojo/fx/easing" , "dojox/charting/themes/Tufte", "dojo/ready"],
-      function(Chart, Default, ClusteredColumns, easing, Tufte, ready){
-      ready(function(){
+             "dojo/fx/easing" , "dojox/charting/themes/Tufte", "dojo/domReady!"],
+      function(Chart, Default, ClusteredColumns, easing, Tufte){
         var animChart = new Chart("animChart");
         animChart.setTheme(Tufte).
           addAxis("x", { fixLower: "minor", fixUpper: "minor", natural: true }).
@@ -1600,7 +1585,6 @@ Here is a clustered bar chart with a rendering animation:
           addSeries("Series C", [ 1, 0.5, -1, -2, -3 ] ).
           addSeries("Series D", [ 0.7, 1.5, -1.2, -1.25, 3 ] ).
           render();
-      });
     });
     
   .. html ::
@@ -1617,9 +1601,8 @@ See :ref:`Plots Animation <dojox/charting>` for more details.
 
   .. js ::
 
-    require(["dojox/charting/Chart3D", "dojox/charting/plot3d/Bars", "dojox/gfx3d/matrix", "dojo/ready"],
-      function(Chart3D, Bars, m, ready){
-        ready(function(){
+    require(["dojox/charting/Chart3D", "dojox/charting/plot3d/Bars", "dojox/gfx3d/matrix", "dojo/domReady!"],
+      function(Chart3D, Bars, m,){
             var chart3d = new Chart3D("chart3d",
                 {
                     lights:   [{direction: {x: 5, y: 5, z: -5}, color: "white"}],
@@ -1642,7 +1625,6 @@ See :ref:`Plots Animation <dojox/charting>` for more details.
             chart3d.addPlot(bars3d_c);
 
             chart3d.generate().render();
-        });
     });
 
   .. html ::
