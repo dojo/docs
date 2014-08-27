@@ -1602,7 +1602,7 @@ See :ref:`Plots Animation <dojox/charting>` for more details.
   .. js ::
 
     require(["dojox/charting/Chart3D", "dojox/charting/plot3d/Bars", "dojox/gfx3d/matrix", "dojo/domReady!"],
-      function(Chart3D, Bars, m,){
+      function(Chart3D, Bars, m){
             var chart3d = new Chart3D("chart3d",
                 {
                     lights:   [{direction: {x: 5, y: 5, z: -5}, color: "white"}],
