@@ -58,6 +58,7 @@ DojoX
 
 Store
 ---
+
 * A new dojox/store/OData store has been added.
 
 
