@@ -1,7 +1,7 @@
 .. _dijit/form/FilteringSelect:
 
 ==========================
-dijit.form.FilteringSelect
+dijit/form/FilteringSelect
 ==========================
 
 :Authors: Doug Hays, Nikolai Onken
@@ -50,8 +50,9 @@ To get the text currently displayed in the textbox (the value of the currently s
   .. js ::
 
         require([
-            "dojo/store/Memory", "dijit/form/FilteringSelect", "dojo/domReady!"
-        ], function(Memory, FilteringSelect){
+            "dojo/store/Memory", "dijit/form/FilteringSelect",
+            "dijit/registry", "dojo/domReady!"
+        ], function(Memory, FilteringSelect, registry){
             var stateStore = new Memory({
                 data: [
                     {name:"Alabama", id:"AL"},
@@ -82,8 +83,8 @@ To get the text currently displayed in the textbox (the value of the currently s
 
     <input id="stateSelect">
     <p>
-        <button onclick="alert(dijit.byId('stateSelect').get('value'))">Get value</button>
-        <button onclick="alert(dijit.byId('stateSelect').get('displayedValue'))">Get displayed value</button>
+        <button onclick="alert(registry.byId('stateSelect').get('value'))">Get value</button>
+        <button onclick="alert(registry.byId('stateSelect').get('displayedValue'))">Get displayed value</button>
     </p>
 
 Declarative markup using native select and option tags
@@ -102,7 +103,7 @@ If you want the FilteringSelect to start blank, use a different method to create
 
   .. js ::
 
-    require(["dojo/parser", "dijit/form/FilteringSelect"]);
+    require(["dojo/parser", "dijit/form/FilteringSelect", "dojo/domReady!"]);
 
   .. html ::
 
@@ -113,7 +114,7 @@ If you want the FilteringSelect to start blank, use a different method to create
     </select>
 
 
-Declarative markup using a dojo.store
+Declarative markup using a dojo/store
 -------------------------------------
 
 To set the default value for this example, specify the *value* attribute (the hidden text value to be submitted) in the markup.
@@ -123,7 +124,7 @@ To set the default value for this example, specify the *value* attribute (the hi
 
   .. js ::
 
-    require(["dojo/parser", "dijit/form/FilteringSelect", "dojo/store/Memory"]);
+    require(["dojo/parser", "dijit/form/FilteringSelect", "dojo/store/Memory", "dojo/domReady!"]);
 
   .. html ::
 
@@ -481,10 +482,10 @@ and the state FilteringSelect filters the city ComboBox choices in this example.
     require([
         "dojo/store/Memory",
         "dijit/form/ComboBox", "dijit/form/FilteringSelect",
-        "dojo/domReady!"
-    ], function(Memory, ComboBox, FilteringSelect){
+        "dijit/registry", "dojo/domReady!"
+    ], function(Memory, ComboBox, FilteringSelect, registry){
 
-        new dijit.form.ComboBox({
+        new ComboBox({
             id: "city",
             store: new Memory({ data: cities }),
             autoComplete: true,
@@ -494,17 +495,17 @@ and the state FilteringSelect filters the city ComboBox choices in this example.
             searchAttr: "name",
             onChange: function(city){
                 console.log("combobox onchange ", city, this.item);
-                dijit.byId('state').set('value', this.item ? this.item.state : null);
+                registry.byId('state').set('value', this.item ? this.item.state : null);
             }
         }, "city").startup();
 
-        new dijit.form.FilteringSelect({
+        new FilteringSelect({
             id: "state",
             store: new Memory({ idProperty: "state", data: states }),
             autoComplete: true,
             style: "width: 150px;",
             onChange: function(state){
-                dijit.byId('city').query.state = this.item.state || /.*/;
+                registry.byId('city').query.state = this.item.state || /.*/;
             }
         }, "state").startup();
     });
@@ -598,4 +599,4 @@ This appears to be an issue with IE 8 and list items (which are uses to implemen
 See Also
 ========
 
-* There's a :ref:`Select <dijit/form/Select>` widget in the :ref:`dijit.form <dijit/form>` project that's similar to FilteringSelect but without the search ability. It can support rich text in both the drop down and in a closed state (to display the selected item).
+* There's a :ref:`Select <dijit/form/Select>` widget in the :ref:`dijit/form <dijit/form>` project that's similar to FilteringSelect but without the search ability. It can support rich text in both the drop down and in a closed state (to display the selected item).
