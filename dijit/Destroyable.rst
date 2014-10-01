@@ -44,3 +44,8 @@ Usage
             }
         });
     });
+
+Handles
+=======
+``own()``'s arguments can be either Promises with ``cancel()`` methods, or any handles
+with ``destroy()``, ``remove()``, or ``destroyRecursive()`` methods.
