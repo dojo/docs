@@ -16,11 +16,11 @@ of Dojo might include fixes to support future releases of these browsers, but it
 
 **Desktop**
 
-* Firefox 3.6-29
+* Firefox 3.6-32
 
-* Safari 5-7
+* Safari 6-8
 
-* Chrome 13-35
+* Chrome 13-37
 
 * IE 8-11
 
@@ -28,15 +28,15 @@ of Dojo might include fixes to support future releases of these browsers, but it
 
 **Mobile (dojox/mobile)**
 
-* iOS 5.x (Mobile Safari), 6.x and 7.x (including all Dijit widgets except Editor)
+* iOS (Mobile Safari), 6.x, 7.x, and 8.x (including all Dijit widgets except Editor)
 
-* Android 2.3, 4.0-4.4 (Platform browser) (including all Dijit widgets for Android 4.0-4.4 except Editor)
+* Android 2.3, 4.0-4.4 (Platform browser and Chrome browser) (including all Dijit widgets for Android 4.0-4.4 except Editor)
 
 * BlackBerry 6-7 & 10 (Platform browser)
 
 * Windows Phone 8 (IE10)
 
-* Mobile compatibility on desktop browsers: IE 8-11, Firefox 4-29, Chrome 13-35
+* Mobile compatibility on desktop browsers: IE 8-11, Firefox 4-32, Chrome 13-37
 
 
 **Server-Side User Agents**
@@ -56,6 +56,11 @@ Dijit
 DojoX
 =====
 
+dtl
+---
+
+* Enable looping over objects with {% for key, value in object %}, https://bugs.dojotoolkit.org/ticket/17251 . This will break existing templates that treats objects as array of values (ie discarding keys).
+
 Store
 -----
 
@@ -73,3 +78,4 @@ Demos
 Migration Notes
 ===============
 
+* If using `dojox/dtl`, the change to looping may impact you.
