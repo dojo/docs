@@ -79,7 +79,7 @@ copyTests
   all resources tagged as tests.
 
 mini
-  If truthy ignore all resources tagged as excludeMini; if copyTests is falsy or missing, also ignore all resources
+  If truthy ignore all resources tagged as miniExclude; if copyTests is falsy or missing, also ignore all resources
   tagged as tests.
 
 Transform: copy
