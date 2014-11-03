@@ -13,16 +13,17 @@ see the Release Notes for it.
 Current Stable
 ==============
 
-* :ref:`Dojo Toolkit v1.9 Release Notes <releasenotes/1.9>`
+* :ref:`Dojo Toolkit v1.10 Release Notes <releasenotes/1.10>`
 
 Current Development
 ===================
 
-* :ref:`Dojo Toolkit v1.10 Release Notes <releasenotes/1.10>`
+* :ref:`Dojo Toolkit v1.10 Release Notes <releasenotes/1.11>`
 
 Archive
 =======
 
+* :ref:`Dojo Toolkit v1.9 Release Notes <releasenotes/1.9>`
 * :ref:`Dojo Toolkit v1.8 Release Notes <releasenotes/1.8>`
 * :ref:`Dojo Toolkit v1.7 Release Notes <releasenotes/1.7>`
 * :ref:`Dojo Toolkit v1.6 Release Notes <releasenotes/1.6>`
