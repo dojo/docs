@@ -128,7 +128,7 @@ Configuring Calendar data
 
 The calendar widget is populated with a list of data items using a store set on its store property.
 
-The Calendar can connect to any implementation of the dojo.store.api.Store interface that implements get/query and id management (getIdentity).
+The Calendar can connect to any implementation of the dojo.store.api.Store interface that implements get/query and id management (getIdentity). **A data item must have an unique identifier.**
 
 If the Calendar is displaying live data (ie. data that can be edited by the Calendar itself or data that can change outside of the Calendar), the store must be a dojo.store.Observable.
 
