@@ -1617,6 +1617,7 @@ The following example applies a mask to a group of shapes:
     group.setMask(mask);
   });
 
+
 .. image :: ./gfx/maskgradient.png
 
 Utilities
