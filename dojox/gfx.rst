@@ -1599,6 +1599,7 @@ In dojox/gfx/svg_mask, masks are Group-like objects defined by the structure and
 Shapes can be added and removed from a mask the same way they are for a Group.
 
 The following example applies a mask to a group of shapes:
+
 .. js ::
 
   require(["dojox/gfx", "dojox/gfx/svg_mask", ...], function(gfx){
