@@ -1574,6 +1574,49 @@ and the result is:
 
 .. image :: ./gfx/dropshadow.png
 
+SVG Masks (module: dojox/gfx/svg_mask)
+--------------------------------------
+
+The dojox/gfx/svg_mask module adds SVG mask support via the following APIs:
+
+Surface
+~~~~~~~
+  createMask(mask)
+    Creates an SVG mask based on an argument defining the properties of the mask.
+
+Shape
+~~~~~
+  getMask()
+    Returns the mask applied to the shape or "null" if the shape has no mask.
+
+  setMask(mask)
+    Sets the specified SVG mask on the shape. If "null" is specified, the current mask is removed from the shape.
+
+Using masks
+~~~~~~~~~~~
+SVG masks are used in compositing to determine which parts of a shape should be visible and with what transparency.
+In dojox/gfx/svg_mask, masks are Group-like objects defined by the structure and color of their child shapes.
+Shapes can be added and removed from a mask the same way they are for a Group.
+
+The following example applies a mask to a group of shapes:
+.. js ::
+
+  require(["dojox/gfx", "dojox/gfx/svg_mask", ...], function(gfx){
+    var group = ...;
+
+    var mask = surface.createMask({ maskContentUnits: "objectBoundingBox" });
+    var linearGradient = {
+      type: "linear", x1: 0, y1: 0, x2: 1, y2: 1, colors: [
+        { offset: 0, color: "#fff" },
+        { offset: 0.75, color: "#000" }
+      ]
+    };
+    mask.createRect({ x: 0, y: 0, width: 1, height: 1 }).setFill(linearGradient);
+
+    group.setMask(mask);
+  });
+
+.. image :: ./gfx/maskgradient.png
 
 Utilities
 =========
