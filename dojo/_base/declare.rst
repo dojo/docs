@@ -920,7 +920,7 @@ it. It is up to the user to call it with proper arguments.
 The method accepts up to two arguments:
 
 * Optional name of the method to call. If it is specified it must match the name of the caller. Generally it should be 
-  specified when calling this method from an un-annotated method (the same rule as for `inherited()`_).
+  specified when calling this method from an unannotated method (the same rule as for `inherited()`_).
 
 * ``arguments`` - literally ``arguments`` pseudo-variable, which is used for introspection.
 
