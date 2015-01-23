@@ -56,7 +56,7 @@ which itself interfaces with the powerful :ref:`dojo.store <dojo/store>` API.
 
 It's important to note that the tree is merely a **view** onto the model.
 The model is in charge of tasks like connecting to the data source (often on the server), lazy loading, and notifying the tree of changes to the data.
-It's also in charge of handle drop operations, when someone drags and drops an item onto the tree.
+It's also in charge of handling drop operations, when someone drags and drops an item onto the tree.
 
 To put it another way, you cannot "delete data from the tree" or "insert data into the tree" directly, but rather you must update the model.
 
