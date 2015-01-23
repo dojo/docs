@@ -392,7 +392,7 @@ For example:
 
 Thus the filter definition will be sent to the server along with the request.
   
-If you'd like to use a stateful server, which means the filter definition will only be sent when it is defined, and it should be remembered at serverside until it is changed, you can set the '''isStateful''' property:
+If you'd like to use a stateful server, which means the filter definition will only be sent when it is defined, and it should be remembered at serverside until it is changed, you can set the **isStateful** property:
 
 .. js ::
   

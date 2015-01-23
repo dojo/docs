@@ -54,7 +54,7 @@ Tree can interface to any class implementing the model API,
 but typically interfaces through the :ref:`ObjectStoreModel <dijit/tree/ObjectStoreModel>`,
 which itself interfaces with the powerful :ref:`dojo.store <dojo/store>` API.
 
-It's important to note that the tree is merely a '''view''' onto the model.
+It's important to note that the tree is merely a **view** onto the model.
 The model is in charge of tasks like connecting to the data source (often on the server), lazy loading, and notifying the tree of changes to the data.
 It's also in charge of handle drop operations, when someone drags and drops an item onto the tree.
 
