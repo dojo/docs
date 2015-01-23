@@ -19,7 +19,7 @@ Checkstyle is a command line tool that generates a report of all JavaScript file
 Usage of Command Line
 =====================
 
-Open a command window in the util/checkstyle folder.  The commands listed below all use '''checkstyle.bat''', which is for MS Windows, but users of Linux and Macs can use '''checkstyle.sh'''.
+Open a command window in the util/checkstyle folder.  The commands listed below all use **checkstyle.bat**, which is for MS Windows, but users of Linux and Macs can use **checkstyle.sh**.
 
 Run Checkstyle on all Dojo folders
 ----------------------------------

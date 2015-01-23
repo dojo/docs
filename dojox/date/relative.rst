@@ -23,6 +23,6 @@ Options
 dojox.date.relative.format takes a JavaScript Date object, and an optional kwArgs parameter.
 
 Possible values for the kwArgs are:
- * '''locale''': Set if you want to specify a locale.  Defaults to current locale.
- * '''relativeDate''': Set if you want to calculate relative to a different date.  Defaults to the current date and time.
- * '''weekCheck''': Set to false if you do not want to do the week-based check (the second condition above)
+ * **locale**: Set if you want to specify a locale.  Defaults to current locale.
+ * **relativeDate**: Set if you want to calculate relative to a different date.  Defaults to the current date and time.
+ * **weekCheck**: Set to false if you do not want to do the week-based check (the second condition above)

@@ -342,7 +342,7 @@ the displayed error location will now be correct:
 .. image :: debugging7.png
    :alt: Debugging with debugAtAllCosts
 
-'''Important!''' you should always remove debugAtAllCosts from production code. It slows down the client unnecessarily. Rather than manually inserting and removing them, I like to delegate that job to a server side language like PHP:
+**Important!** you should always remove debugAtAllCosts from production code. It slows down the client unnecessarily. Rather than manually inserting and removing them, I like to delegate that job to a server side language like PHP:
 
 .. html ::
   
