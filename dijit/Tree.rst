@@ -750,6 +750,7 @@ The pertinent lines from tundra are:
   .tundra .dijitTreeIsLast {
     background: url('images/i_half.gif') no-repeat;
     ...
+  }
   
   .tundra .dijitTreeExpandoLeaf {
        background-image:url(images/treeExpand_leaf.gif);
