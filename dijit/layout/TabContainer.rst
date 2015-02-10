@@ -337,7 +337,7 @@ To monitor when children are added/deleted, use dojo/aspect or dojo.connect:
 
 
 It is worth noting: if you need a function to be called *absolutely every* time a child is added to a TabContainer
-(or StackContainer), you need to listen to the :ref:``setupChild`` function
+(or StackContainer), you need to listen to the :ref:`setupChild` function
 to ensure you are notified of the children already existing in markup.
 This is only relevant if you are subclassing, for example:
 

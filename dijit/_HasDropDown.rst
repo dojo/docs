@@ -33,7 +33,7 @@ First, mixin dijit/_HasDropDown when you create your widget:
       });
   });
 
-Then, either set the value of :ref:``HasDropDown.dropDown`` to an existing widget:
+Then, either set the value of :ref:`HasDropDown.dropDown` to an existing widget:
 
 .. js ::
  
@@ -43,39 +43,39 @@ Then, either set the value of :ref:``HasDropDown.dropDown`` to an existing widge
       }, "myDropDownWidget");
   });
 
-Or, override the :ref:``HasDropDown.loadDropDown`` and :ref:``HasDropDown.isLoaded`` functions to allow for lazy instantiation of the drop-down (see `Dynamic & lazy-loading drop-downs`_, below).
+Or, override the :ref:`HasDropDown.loadDropDown` and :ref:`HasDropDown.isLoaded` functions to allow for lazy instantiation of the drop-down (see `Dynamic & lazy-loading drop-downs`_, below).
 
 Optional node properties
 ========================
 
 .. note ::
-   All of these properties can only be set *before* :ref:``Widget.buildRendering`` is called.
+   All of these properties can only be set *before* :ref:`Widget.buildRendering` is called.
 
 _buttonNode
 -----------
 
 By default, dijit/_HasDropDown will use either ``focusNode`` or ``domNode`` as the element to click to display the drop-down.
-If you want to use a specific element to click to display the drop-down instead, attach that element to :ref:``buttonNode``.
+If you want to use a specific element to click to display the drop-down instead, attach that element to :ref:`buttonNode`.
 
 _arrowWrapperNode
 -----------------
 
 When a dijit/_HasDropDown is instantiated, a CSS class ``dijit(Up|Down|Right|Left)ArrowButton`` is added to specify which direction the pop-up appears by default relative to the widget.
-By default, these classes are set on :ref:``buttonNode``.
-Attaching an element to :ref:``arrowWrapperNode`` will cause these classes to be applied to that element instead.
+By default, these classes are set on :ref:`buttonNode`.
+Attaching an element to :ref:`arrowWrapperNode` will cause these classes to be applied to that element instead.
 
 _popupStateNode
 ---------------
 
 When a drop-down is opened, a CSS class ``dijitHasDropDownOpen`` and a ``popupActive`` attribute are added to indicate that the drop-down is open.
-By default, these changes apply to ``focusNode``, or :ref:``buttonNode`` if there is no ``focusNode``.
-Attaching an element to :ref:``popupStateNode`` will cause these changes to occur on that element instead.
+By default, these changes apply to ``focusNode``, or :ref:`buttonNode` if there is no ``focusNode``.
+Attaching an element to :ref:`popupStateNode` will cause these changes to occur on that element instead.
 
 _aroundNode
 -----------
 
 When the drop-down is opened, it is positioned based on the location of ``domNode``.
-Attaching an element to :ref:``aroundNode`` will cause the drop-down to be positioned relative to that element instead.
+Attaching an element to :ref:`aroundNode` will cause the drop-down to be positioned relative to that element instead.
 
 
 
@@ -85,12 +85,12 @@ Attaching an element to :ref:``aroundNode`` will cause the drop-down to be posit
 Dynamic & lazy-loading drop-downs
 =================================
 
-By default, _HasDropDown assumes that a dijit widget has been created and assigned to :ref:``HasDropDown.dropDown``
+By default, _HasDropDown assumes that a dijit widget has been created and assigned to :ref:`HasDropDown.dropDown`
 before the widget starts up.
 This works well for drop-downs that always contain the same content and are available immediately,
 but it may reduce startup performance and it makes it impossible to create dynamically populated/asynchronous drop-downs.
 In order to work around these limitations, more advanced drop-down widgets can implement
-:ref:``HasDropDown.loadDropDown`` and :ref:``HasDropDown.isLoaded`` instead:
+:ref:`HasDropDown.loadDropDown` and :ref:`HasDropDown.isLoaded` instead:
 
 .. js ::
  
