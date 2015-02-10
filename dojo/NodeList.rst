@@ -160,7 +160,7 @@ instantiate()
 -------------
 
 Instantiates objects for each class, passing the optional configuration object to the constructor.  This is similar
-to the functionality of the :ref:``dojo/parser <dojo/parser>`` but instead of scanning the DOM for marked up nodes, it 
+to the functionality of the :ref:`dojo/parser <dojo/parser>` but instead of scanning the DOM for marked up nodes, it 
 uses the nodes in the ``NodeList``.
 
 .. js ::

@@ -18,7 +18,7 @@ Introduction
 ============
 
 ``dojo/Evented`` is designed to provide a class that allows a developer to emit events and provide an easy way to allow
-those events to be connected to by downstream users. It leverages the API concepts of :ref:``dojo/on <dojo/on>``. It
+those events to be connected to by downstream users. It leverages the API concepts of :ref:`dojo/on <dojo/on>`. It
 should be noted though that this is for what is commonly referred to as "synthetic" events, which are different than DOM
 events, which ``dojo/on`` normalises.
 

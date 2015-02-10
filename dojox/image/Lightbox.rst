@@ -146,7 +146,7 @@ LightboxDialog extends :ref:`dijit.Dialog <dijit/Dialog>`, so the same 'rule' ap
 
     #dojoxLightboxDialog_underlay { background-color:blue }
 
-The part :ref:``underlay`` is added to whatever id the LightboxDialog is created with, so if you create an additional LightboxDialog (not reusing the 'Master'), you can color it by using the id you define.
+The part :ref:`underlay` is added to whatever id the LightboxDialog is created with, so if you create an additional LightboxDialog (not reusing the 'Master'), you can color it by using the id you define.
 
 
 a11y

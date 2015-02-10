@@ -128,7 +128,7 @@ The animations can do whatever your creativity will permit. Just name the "show 
     this._setupConnects();
   }
 
-Remember to only *create* the Animation object, as ``.play()`` is called by the Widget based on the timings in :ref:``setupConnects()``. The container Node for the Roller is named ``this.domNode``, and the single child (and container for the visible label) is named ``this._roller``.
+Remember to only *create* the Animation object, as ``.play()`` is called by the Widget based on the timings in :ref:`setupConnects()`. The container Node for the Roller is named ``this.domNode``, and the single child (and container for the visible label) is named ``this._roller``.
 
 Custom Styles
 =============

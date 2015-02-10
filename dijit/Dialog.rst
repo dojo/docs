@@ -134,7 +134,7 @@ Coloring the Underlay
 ---------------------
 
 If you wish to alter the default color for the underlay, you do so in CSS.
-The underlay receives an ID to match the Dialog, suffixed with :ref:``underlay``, which you can define a CSS class for:
+The underlay receives an ID to match the Dialog, suffixed with :ref:`underlay`, which you can define a CSS class for:
 
 .. code-example ::
 
