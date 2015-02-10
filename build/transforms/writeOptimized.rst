@@ -38,7 +38,7 @@ Profile Knobs
 ``layerOptimize`` (default = "shrinksafe")
   * [*falsy*] Layer modules are not optimized; the ``stripConsole`` profile property, if any, is ignored.
 
-  * ["comments.keeplines"] All comments are removed fromm all layer modules; new-lines are preserved; the ``stripConsole``
+  * ["comments.keeplines"] All comments are removed from all layer modules; new-lines are preserved; the ``stripConsole``
     profile property, if any, is ignored.
 
   * ["comments"] All comments are removed form all layer modules; new-lines are *not* preserved; the ``stripConsole``
@@ -66,7 +66,7 @@ Profile Knobs
 ``optimize`` (default = "undefined")
   * [*falsy*] Non-layer modules are not optimized; the ``stripConsole`` profile property, if any, is ignored.
 
-  * ["comment.keeplines"] All comments are removed fromm all non-layer modules; new-lines are preserved; the ``stripConsole``
+  * ["comment.keeplines"] All comments are removed from all non-layer modules; new-lines are preserved; the ``stripConsole``
     profile property, if any, is ignored.
 
   * ["comment"] All comments are removed form all non-layer modules; new-lines are *not* preserved; the ``stripConsole``
