@@ -215,3 +215,18 @@ letters can also be used to search.  Typing the 2 letters 'a' and 'b' within 1 s
 with 'ab'.  However, pausing between letters would result in searching for an option that begins with 'a', and then subsequently an option
 that begins with 'b'.  While usually not necessary, the pause timing can be controlled via the ``multiCharSearchDuration`` (integer)
 attribute which defaults to 1000 (milliseconds).
+
+Label
+-----
+To label a Select, rather than using the `<label>` tag you should use the `aria-labelledby` property, like:
+
+.. js ::
+
+   <span id="foo_label">My Select:</span>
+   <select id="foo" data-dojo-type="dijit/form/Select" aria-labelledby="foo_label">
+      ...
+   </select>
+
+Although `<label>` works with the JAWS screen reader, it doesn't work with iOS VoiceOver, and further,
+it violates the HTML spec which says that `<label>` should only be used with true form elements (whereas
+Select is implemented as a `<table>`).
