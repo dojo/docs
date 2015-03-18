@@ -62,8 +62,14 @@ dtl
 * Enable looping over objects with {% for key, value in object %}, https://bugs.dojotoolkit.org/ticket/17251 . This will break existing templates that treats objects as array of values (ie discarding keys).
 
 
-layout
+form
 ----
+
+* BusyButton, BusyDropDownButton, and BusyComboButton refactored so they can be loaded over AMD.
+
+
+layout
+------
 
 * Fixed `dojox/layout/GridContainerLite` to work in apps using more than one instance or version of Dojo.
 
@@ -91,3 +97,6 @@ Migration Notes
 ===============
 
 * If using `dojox/dtl`, the change to looping may impact you.
+* BusyDropDownButton and BusyComboButton were split into separate files, so they need to be required explicitly,
+rather than just loading dojox/form/BusyButton.
+
