@@ -26,18 +26,19 @@ Usage
 
 The following attributes can be specified when you create a ValidationTextBox:
 
-================  =============  ======================================================================
-Parameter         Type           Description
-================  =============  ======================================================================
-required          boolean        Whether the field is required or not. false by default.
-promptMessage     String         Tooltip text that appears when the text box is empty and on focus. Null by default.
-invalidMessage    String         Tooltip text that appears when the content of the text box is invalid.
-missingMessage    String         Tooltip text that appears when the content of the text box is empty and the field is required.
-constraints       Object         Holds constraints (like min and max values) for use in subclasses of ValidationTextBox.
-regExp            RegExp         Regular expression pattern to be used for validation. If this is used, do not use regExpGen.
-regExpGen         function       Function that should return a string representing the body of a regular expression; see the String.replace() format. If this is used, do not use regExp.
-tooltipPosition   String         Define where Tooltip will appear.
-================  =============  ======================================================================
+================  =============      ======================================================================
+Parameter         Type               Description
+================  =============      ======================================================================
+required          boolean            Whether the field is required or not. false by default.
+promptMessage     String             Tooltip text that appears when the text box is empty and on focus. Null by default.
+invalidMessage    String             Tooltip text that appears when the content of the text box is invalid.
+missingMessage    String             Tooltip text that appears when the content of the text box is empty and the field is required.
+constraints       Object             Holds constraints (like min and max values) for use in subclasses of ValidationTextBox.
+regExp            RegExp             (Deprecated) Regular expression pattern to be used for validation. If this is used, do not use regExpGen.
+regExpGen         function           (Deprecated) Function that should return a string representing the body of a regular expression; see the String.replace() format. If this is used, do not use regExp.
+pattern           String or function String pattern used to construct a regexp for validation or a function that returns a string representation of the pattern.
+tooltipPosition   String             Define where Tooltip will appear.
+================  =============      ======================================================================
  
 Methods:
 
@@ -69,7 +70,7 @@ ValidationTextBox widgets usually use Regular Expression validation, as in the f
     <label for="phone">Phone number, no spaces:</label>
     <input type="text" name="phone" id="phone" value="someTestString" required="true"
         data-dojo-type="dijit/form/ValidationTextBox"
-        data-dojo-props="regExp:'[\\w]+', invalidMessage:'Invalid Non-Space Text.'" />
+        data-dojo-props="pattern:'[\\w]+', invalidMessage:'Invalid Non-Space Text.'" />
 
 Using regular expressions
 -------------------------
@@ -90,7 +91,7 @@ This code demonstrates a ValidationTextBox that only accepts a 5 digit zip code.
     <label for="zip">Also 5-Digit U.S. Zipcode only:</label>
     <input type="text" name="zip" value="00000" required="true"
         data-dojo-type="dijit/form/ValidationTextBox"
-        data-dojo-props="regExp:'\\d{5}', invalidMessage:'Invalid zip code.'" />
+        data-dojo-props="pattern:'\\d{5}', invalidMessage:'Invalid zip code.'" />
 
 Generate regular expressions
 ----------------------------
@@ -121,7 +122,7 @@ The following code demonstrates a dynamic ValidationTextBox that only accepts a 
     <label for="zip2">Also 5-Digit U.S. Zipcode only:</label>
     <input type="text" name="zip" value="00000" id="zip2" required="true"
         data-dojo-type="dijit/form/ValidationTextBox"
-        data-dojo-props="regExpGen:after5, invalidMessage:'Zip codes after 5, county name before then.'" />
+        data-dojo-props="pattern:after5, invalidMessage:'Zip codes after 5 PM, county name before then.'" />
 
 
 Accessibility
