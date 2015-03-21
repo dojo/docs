@@ -654,7 +654,7 @@ Corporations or Organizations with a CCLA on file
 * Defence Science &amp; Technology Organisation
 * DoYouSoft
 * Easy!Designs: Aaron Gustafson, Matt Harris, Daniel Ryan
-* EasyESI, Inc.: AJ Shakar
+* Everlaw, Inc.: AJ Shakar
 * Elastic Path Software, Inc.
 * Emerald Hand, Inc.
 * Engineering Solutions &amp; Products, Inc.
