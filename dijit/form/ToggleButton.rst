@@ -32,12 +32,13 @@ Let's create a ToggleButton widget programmatically, initially unchecked:
   .. js ::
 
     require(["dijit/form/ToggleButton", "dojo/domReady!"], function(ToggleButton){
-        new ToggleButton({
+        var tb = new ToggleButton({
             showLabel: true,
             checked: false,
             onChange: function(val){this.set('label',val);},
             label: "false"
-        }, "programmatic").startup();
+        }, "programmatic");
+        tb.startup();
     });
 
   .. html ::

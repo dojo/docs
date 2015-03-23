@@ -73,7 +73,8 @@ include the *value* attribute in the attribute list passed to the constructor.
                 value: "California",
                 store: stateStore,
                 searchAttr: "name"
-            }, "stateSelect").startup();
+            }, "stateSelect");
+            comboBox.startup();
         });
 
   .. html ::
@@ -126,7 +127,7 @@ To set the default value for this example, specify the *value* attribute in the 
         value="yes"
         data-dojo-props="store:stateStore, searchAttr:'name'"
         name="state"
-        id="stateInput" />
+        id="stateInput">
 
 
 Codependent FilteringSelect/ComboBox widgets

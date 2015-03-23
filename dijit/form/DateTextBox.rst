@@ -73,7 +73,7 @@ Declarative example
     <label for="date1">Drop down Date box:</label>
     <input type="text" name="date1" id="date1" value="2005-12-30"
         data-dojo-type="dijit/form/DateTextBox"
-        required="true" />
+        required="true">
 
 
 
@@ -113,22 +113,23 @@ Here's an example:
         function showServerValue(){
             dom.byId('toServerValue').value = document.getElementsByName('oracle')[0].value;
         }
-        new OracleDateTextBox({
+        var oracleDateTextBox = new OracleDateTextBox({
             value: "31-DEC-2009",
             name: "oracle",
             onChange: function(v){ setTimeout(showServerValue, 0)}
-        }, "oracle").startup();
+        }, "oracle");
+        oracleDateTextBox.startup();
         showServerValue();
     });
 
   .. html ::
 
     <label for="fromServerValue">Oracle date coming from server:</label>
-    <input id="fromServerValue" readonly="readonly" disabled="disabled" value="31-DEC-2009" /><br />
+    <input id="fromServerValue" readonly="readonly" disabled="disabled" value="31-DEC-2009"><br>
     <label for="oracle">Client date:</label>
-    <input id="oracle" /><br/>
+    <input id="oracle"><br>
     <label for="toServerValue">Oracle date going back to server:</label>
-    <input id="toServerValue" readonly="readonly" disabled="disabled" />
+    <input id="toServerValue" readonly="readonly" disabled="disabled">
 
 
 Changing Constraints on the Fly
@@ -149,10 +150,10 @@ and the second widget sets the `min` constraint of the first widget.
 
     <label for="fromDate">From:</label>
     <input data-dojo-id="myFromDate" type="text" name="fromDate" data-dojo-type="dijit/form/DateTextBox" required="true"
-        onChange="myToDate.constraints.min = arguments[0];" />
+        onChange="myToDate.constraints.min = arguments[0];">
     <label for="toDate">To:</label>
     <input data-dojo-id="myToDate" type="text" name="toDate" data-dojo-type="dijit/form/DateTextBox" required="true"
-        onChange="myFromDate.constraints.max = arguments[0];" />
+        onChange="myFromDate.constraints.max = arguments[0];">
 
 
 Working with Two-Digit Years
@@ -177,7 +178,7 @@ The catch is that this can only be set after the widget has been created.
   .. html ::
 
     <label for="myShortYear">From:</label>
-    <input data-dojo-id="myShortYear" type="text" name="shortYear" data-dojo-type="dijit/form/DateTextBox" data-dojo-props="constraints:{fullYear: false}" value="1999-12-31" required="true" />
+    <input data-dojo-id="myShortYear" type="text" name="shortYear" data-dojo-type="dijit/form/DateTextBox" data-dojo-props="constraints:{fullYear: false}" value="1999-12-31" required="true">
 
 Accessibility
 =============

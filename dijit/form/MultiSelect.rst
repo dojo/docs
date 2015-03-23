@@ -85,11 +85,12 @@ Programmatic example
         }
         var myMultiSelect = new MultiSelect({ name: 'dynamic' }, sel).startup();
 
-        new Button({
+        var myButton = new Button({
             onClick: function(){
                 alert(myMultiSelect.get('value'));
             }
-        }, "progbutton").startup();
+        }, "progbutton");
+        myButton.startup();
     });
 
   .. html ::

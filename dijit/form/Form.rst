@@ -54,7 +54,7 @@ Try opening this example and immediately clicking Submit, and compare the behavi
                     <label for="name">Name:</label>
                 </td>
                 <td>
-                    <input type="text" id="name" name="name" required="true" data-dojo-type="dijit/form/ValidationTextBox"/>
+                    <input type="text" id="name" name="name" required="true" data-dojo-type="dijit/form/ValidationTextBox">
                 </td>
             </tr>
             <tr>
@@ -62,7 +62,7 @@ Try opening this example and immediately clicking Submit, and compare the behavi
                     <label for="dob">Date of birth:</label>
                 </td>
                 <td>
-                    <input type="text" id="dob" name="dob" data-dojo-type="dijit/form/DateTextBox"/>
+                    <input type="text" id="dob" name="dob" data-dojo-type="dijit/form/DateTextBox">
                 </td>
             </tr>
         </table>
@@ -123,7 +123,7 @@ AND when you have selected 1 of the native HTML radio buttons.
                     <label for="name">Name:</label>
                 </td>
                 <td>
-                    <input type="text" name="name" required="true" data-dojo-type="dijit/form/ValidationTextBox"/>
+                    <input type="text" name="name" required="true" data-dojo-type="dijit/form/ValidationTextBox">
                 </td>
             </tr>
             <tr>

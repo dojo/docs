@@ -58,7 +58,7 @@ This example defines a ``min`` and ``max`` constraint and an initial value.
         value="3000"
         data-dojo-props="constraints:{min:-20000,max:20000,places:0},
         invalidMessage:'Please enter a numeric value.',
-        rangeMessage:'Invalid elevation.'" />
+        rangeMessage:'Invalid elevation.'">
 
 
 Programmatic example
@@ -73,16 +73,17 @@ The fractional part can be 0 to 6 digits long.
   .. js ::
 
     require(["dijit/form/NumberTextBox", "dojo/domReady!"], function(NumberTextBox){
-        new NumberTextBox({
+        var myNumberTextBox = new NumberTextBox({
               name: "programmatic",
               constraints: {pattern: "0.######"}
-        }, "programmatic").startup();
+        }, "programmatic");
+        myNumberTextBox.startup();
     });
 
   .. html ::
 
      <label for="programmatic">Input any number with up to 6 fractional digits:</label>
-     <input id="programmatic" type="text" />
+     <input id="programmatic" type="text">
 
 
 
@@ -107,7 +108,7 @@ Try entering a simple value like "-3" and then tab away to see the effect.
         name= "decimal"
         value="0"
         constraints="{pattern: '+0.000;-0.000'}"
-        required="true" />
+        required="true">
     <button>dummy button (tab to here)</button>
 
 Accessibility

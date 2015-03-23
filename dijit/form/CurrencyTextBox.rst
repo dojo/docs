@@ -46,7 +46,7 @@ In this example using USD, both dollars and cents are required.
         data-dojo-type="dijit/form/CurrencyTextBox"
         data-dojo-props="constraints:{fractional:true},
         currency:'USD',
-        invalidMessage:'Invalid amount. Cents are required.'" />
+        invalidMessage:'Invalid amount. Cents are required.'">
 
 
 
@@ -63,19 +63,19 @@ In this example using euros with German formatting, the invalid message contains
     require(["dijit/form/CurrencyTextBox", "dojo/currency", "dojo/i18n!dojo/cldr/nls/de/currency", "dojo/i18n!dojo/cldr/nls/de/number", "dojo/domReady!"
     ], function(CurrencyTextBox, currency){
         var example = currency.format(54775.53, {locale: 'de-de', currency: "EUR"});
-        var props = {
+        var myCurrencyTextBox = new CurrencyTextBox({
             value: 54775.53,
             lang: 'de-de',
             currency: "EUR",
             invalidMessage: "Invalid amount.  Example: " + example
-        };
-        new CurrencyTextBox(props, "eurde").startup();
+        }, "eurde");
+        myCurrencyTextBox.startup();
     });
 
   .. html ::
 
     <label for="eurde">euros (lang: de-de):</label>
-    <input id="eurde" />EUR
+    <input id="eurde">EUR
         
 
 Accessibility

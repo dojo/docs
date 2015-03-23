@@ -22,7 +22,8 @@ Usage
 .. js ::
  
     require(["dijit/form/HorizontalSlider", "dojo/domReady!"], function(HorizontalSlider){
-        var slider = new HorizontalSlider({}, "mySlider").startup();
+        var slider = new HorizontalSlider({}, "mySlider");
+        slider.startup();
     });
 
 Here are some of the constructor parameters:
@@ -70,13 +71,14 @@ moves the slider.  The following code fills in a simple textbox called sliderVal
             onChange: function(value){
                 dom.byId("sliderValue").value = value;
             }
-        }, "slider").startup();
+        }, "slider");
+        slider.startup();
     });
 
   .. html ::
 
     <div id="slider"></div>
-    <p><input type="text" id="sliderValue" data-dojo-type="dijit/form/TextBox" /></p>
+    <p><input type="text" id="sliderValue" data-dojo-type="dijit/form/TextBox"></p>
 
 
 Declarative markup example with discrete values

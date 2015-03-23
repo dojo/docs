@@ -15,7 +15,7 @@ dijit/form/Button
 Introduction
 ============
 
-The dijit/form/Button widget is a representation of a normal <button> or <input type="submit/reset/button"/>.
+The dijit/form/Button widget is a representation of a normal <button> or <input type="submit/reset/button">.
 The default value for the `type` attribute is `button`.
 
 **When creating dijit Buttons declaratively from a <button> element, you *must* specify a type attribute or it will not work consistently across browsers (in IE8, the type will incorrectly default to "submit").**
@@ -41,7 +41,8 @@ The first example shows how to create a button programmatically.
                 // Do something:
                 dom.byId("result1").innerHTML += "Thank you! ";
             }
-        }, "progButtonNode").startup();
+        }, "progButtonNode");
+        myButton.startup();
     });
 
   .. html ::
