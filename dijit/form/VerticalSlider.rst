@@ -18,7 +18,8 @@ Usage
 .. js ::
  
     require(["dijit/form/VerticalSlider", "dojo/domReady!"], function(VerticalSlider){
-        var slider = new VerticalSlider({}, "mySlider").startup();
+        var slider = new VerticalSlider({}, "mySlider");
+        slider.startup();
     });
 
 Here are some of the constructor parameters:
@@ -63,7 +64,8 @@ vertical slider and a simple rule (tick marks) created programmatically.
         var sliderRules = new VerticalRule({
             count: 11,
             style: "width:5px;"
-        }, rulesNode).startup();
+        }, rulesNode);
+        sliderRules.startup();
 
         var slider = new VerticalSlider({
             name: "vertical",
@@ -75,13 +77,14 @@ vertical slider and a simple rule (tick marks) created programmatically.
             onChange: function(value){
                 dom.byId("sliderValue").value = value;
             }
-        }, "vertical").startup();
+        }, "vertical");
+        slider.startup();
     });
 
   .. html ::
 
     <div id="vertical"></div>
-    <p><input type="text" id="sliderValue" data-dojo-type="dijit/form/TextBox" /></p>
+    <p><input type="text" id="sliderValue" data-dojo-type="dijit/form/TextBox"></p>
 
 
 Declarative markup example with discrete values

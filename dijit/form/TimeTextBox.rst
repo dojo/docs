@@ -50,20 +50,21 @@ Programmatic example
   .. js ::
 
     require(["dijit/form/TimeTextBox", "dojo/domReady!"], function(TimeTextBox){
-        new TimeTextBox({name: "progval", value: new Date(),
+        var timeTextBox = new TimeTextBox({name: "progval", value: new Date(),
             constraints: {
                 timePattern: 'HH:mm:ss',
                 clickableIncrement: 'T00:15:00',
                 visibleIncrement: 'T00:15:00',
                 visibleRange: 'T01:00:00'
             }
-        }, "progval").startup();
+        }, "progval");
+        timeTextBox.startup();
     });
 
   .. html ::
 
      <label for="progval">Drop down Time box:</label>
-     <input id="progval" />
+     <input id="progval">
 
 Declarative example
 -------------------
@@ -80,8 +81,8 @@ Declarative example
     <input type="text" name="date1" id="time1" value="T15:00:00"
         data-dojo-type="dijit/form/TimeTextBox"
         onChange="require(['dojo/dom'], function(dom){dom.byId('val').value=dom.byId('time1').value.toString().replace(/.*1970\s(\S+).*/,'T$1')})"
-        required="true" />
-    <br>string value: <input id="val" value="value not changed" readonly="readonly" disabled="disabled" />
+        required="true">
+    <br>string value: <input id="val" value="value not changed" readonly="readonly" disabled="disabled">
 
 Accessibility
 =============

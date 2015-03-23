@@ -46,7 +46,7 @@ You have all the options available in the :ref:`Dojo constraint language <quicks
         value="1000"
         data-dojo-props="smallDelta:10, constraints:{min:9,max:1550,places:0}"
         name="someNumber"
-        />
+    >
 
 
 Sizing the Box
@@ -68,7 +68,8 @@ Here, we'll use a programmatically-created NumberSpinner:
             constraints: { min:9, max:1550, places:0 },
             id: "integerspinner3",
             style: "width:100px"
-        }, "spinnerId").startup();
+        }, "spinnerId");
+        mySpinner.startup();
     });
 
   .. html ::

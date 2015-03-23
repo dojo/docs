@@ -44,14 +44,15 @@ We'll wrap both inside a FORM to illustrate what happens on submit.
             checked: true,
             value: "tea",
             name: "drink",
-        }, "radioOne").startup();
+        }, "radioOne");
+        radioOne.startup();
     });
 
   .. html ::
 
     <form id="myform">
-        <input type="radio" name="drink" id="radioOne" checked value="tea"/> <label for="radioOne">Tea</label> <br />
-        <input type="radio" data-dojo-type="dijit/form/RadioButton" name="drink" id="radioTwo" value="coffee"/> <label for="radioTwo">Coffee</label> <br />
+        <input type="radio" name="drink" id="radioOne" checked value="tea"> <label for="radioOne">Tea</label> <br>
+        <input type="radio" data-dojo-type="dijit/form/RadioButton" name="drink" id="radioTwo" value="coffee"> <label for="radioTwo">Coffee</label> <br>
         
         <button data-dojo-type="dijit/form/Button" type="button">
             Show form submit value

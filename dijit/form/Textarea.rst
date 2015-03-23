@@ -37,7 +37,8 @@ Notice how we pass the *name*, *style* and *value* parameters into the object cr
             name: "myarea",
             value: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
             style: "width:200px;"
-        }, "myarea").startup();
+        }, "myarea");
+        textarea.startup();
     });
 
   .. html ::

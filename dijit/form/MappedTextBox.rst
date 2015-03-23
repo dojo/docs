@@ -68,10 +68,11 @@ In this example, the user enters a query to a service that expects the query to 
                 // parse user input to send canonical value to server
                 return displayedValue.toUpperCase();
             }
-        }, "textBox").startup();
+        }, "textBox");
+        textbox.startup();
         textbox.set("value", "HI");
     });
 
   .. html ::
 
-    <div id="textBox" />
+    <div id="textBox"></div>

@@ -72,7 +72,7 @@ Declarative example
     <label for="zipCode">Zip code:</label>
     <input type="text" name="zipCode" id="zipCodeTextBox" value="" required="true"
         data-dojo-type="dijit/form/ValidationTextBox"
-        data-dojo-props="pattern:'\\d{5}', invalidMessage:'Not a valid zipcode.'" />
+        data-dojo-props="pattern:'\\d{5}', invalidMessage:'Not a valid zipcode.'">
 
 
 Programmatic example
@@ -94,7 +94,7 @@ Programmatic example
   .. html ::
 
     <label for="ipAddress">IP Address:</label>
-    <input type="text" name="ipAddress" id="ipAddress" value="" />
+    <input type="text" name="ipAddress" id="ipAddress" value="">
 
 
 Generate regular expressions
@@ -138,7 +138,7 @@ The pattern property also accepts a function that generates the body of a regula
       <option value="v4" selected>IPv4</option>
       <option value="v6">IPv6</option>
     </select>
-    <input type="text" name="ipAddress" value="" id="ipAddress" />
+    <input type="text" name="ipAddress" value="" id="ipAddress">
 
 Using a validator function
 --------------------------
@@ -173,7 +173,7 @@ Because the validator function is called on every key press, it should not conta
   .. html ::
 
     <label for="ipAddress">IP Address:</label>
-    <input type="text" name="ipAddress" id="ipAddress" value="" />
+    <input type="text" name="ipAddress" id="ipAddress" value="">
 
 
 Accessibility

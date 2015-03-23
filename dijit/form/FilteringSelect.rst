@@ -76,7 +76,8 @@ To get the text currently displayed in the textbox (the value of the currently s
                 value: "CA",
                 store: stateStore,
                 searchAttr: "name"
-            }, "stateSelect").startup();
+            }, "stateSelect");
+            filteringSelect.startup();
         });
 
   .. html ::
@@ -135,7 +136,7 @@ To set the default value for this example, specify the *value* attribute (the hi
         value="y"
         data-dojo-props="store:stateStore, searchAttr:'name'"
         name="state"
-        id="stateInput" />
+        id="stateInput">
 
 Custom displayed value/search text
 ----------------------------------
@@ -178,7 +179,8 @@ In this example, the FilteringSelect has been set to display the ids for states 
                 store: stateStore,
                 searchAttr: "id"
             }, "stateSelect");
-            filteringSelect.placeAt(win.body()).startup();
+            filteringSelect.placeAt(win.body());
+            filteringSelect.startup();
         });
 
 Codependent FilteringSelect/ComboBox widgets
@@ -485,7 +487,7 @@ and the state FilteringSelect filters the city ComboBox choices in this example.
         "dijit/registry", "dojo/domReady!"
     ], function(Memory, ComboBox, FilteringSelect, registry){
 
-        new ComboBox({
+        var combobox = new ComboBox({
             id: "city",
             store: new Memory({ data: cities }),
             autoComplete: true,
@@ -497,9 +499,10 @@ and the state FilteringSelect filters the city ComboBox choices in this example.
                 console.log("combobox onchange ", city, this.item);
                 registry.byId('state').set('value', this.item ? this.item.state : null);
             }
-        }, "city").startup();
+        }, "city");
+        combobox.startup();
 
-        new FilteringSelect({
+        var fs = new FilteringSelect({
             id: "state",
             store: new Memory({ idProperty: "state", data: states }),
             autoComplete: true,
@@ -507,15 +510,16 @@ and the state FilteringSelect filters the city ComboBox choices in this example.
             onChange: function(state){
                 registry.byId('city').query.state = this.item.state || /.*/;
             }
-        }, "state").startup();
+        }, "state");
+        fs.startup();
     });
 
   .. html ::
 
     <label for="city">City:</label>
-    <input id="city" />
+    <input id="city">
     <label for="state">State:</label>
-    <input id="state" />
+    <input id="state">
 
 Displaying rich text menu labels with labelAttr and labelType
 -------------------------------------------------------------
@@ -535,13 +539,12 @@ the autocompleted value in the textbox, as with other FilteringSelects, rather t
   .. js ::
 
     require([
-        "dojo/dom", "dojo/store/Memory", "dijit/form/FilteringSelect",
-        "dojo/domReady!"
-    ], function(dom, Memory, FilteringSelect){
+        "dojo/store/Memory", "dijit/form/FilteringSelect", "dojo/domReady!"
+    ], function(Memory, FilteringSelect){
         var dojoStore = new Memory({data: [
-            {id: 1, name:"we", label:"<i>we</i> <img src='http://placekitten.com/50/70' />"},
-            {id: 2, name:"are", label:"<u>are</u> <img src='http://placekitten.com/50/60' />"},
-            {id: 3, name:"kittens", label:"<b>kittens</b> <img src='http://placekitten.com/50/50' />"}
+            {id: 1, name:"we", label:"<i>we</i> <img src='http://placekitten.com/50/70'>"},
+            {id: 2, name:"are", label:"<u>are</u> <img src='http://placekitten.com/50/60'>"},
+            {id: 3, name:"kittens", label:"<b>kittens</b> <img src='http://placekitten.com/50/50'>"}
         ]});
 
        var fs = new FilteringSelect({
@@ -552,12 +555,13 @@ the autocompleted value in the textbox, as with other FilteringSelects, rather t
              name: "xyz",
              labelAttr: "label",
              labelType: "html"
-       }, dom.byId("dojoBox")).startup();
+       }, "dojoBox");
+       fs.startup();
     });
 
   .. html ::
 
-    <input id="dojoBox" />
+    <input id="dojoBox">
 
 
 
