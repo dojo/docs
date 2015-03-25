@@ -180,7 +180,7 @@ The dojox.collections.Queue class implements a first-in first-out collection of 
     The number of elements in this collection.
 
 
-SorteList
+SortedList
 ~~~~~~~~~
 
 The dojox.collections.SortedList class implements a collection that acts like a dictionary but is also internally sorted. Note that the act of adding any elements forces an internal resort, making this object potentially slow.

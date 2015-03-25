@@ -99,7 +99,7 @@ Usage
   
     require(["dojo/dom-construct"], function(domConstruct){
       domConstruct.place("someNode", "refNode", "after");
-    };
+    });
 
 ``place()`` returns the node it placed. In case of an HTML fragment, if it has just one root element, that element is
 returned directly. Otherwise a document fragment is returned. The returned node can be:

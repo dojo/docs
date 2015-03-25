@@ -31,7 +31,7 @@ Usage
     locale.parse("Tuesday, 13 January 2010 12:43:06 GMT-0:00");
     
     // Parse a short date in a specific locale
-    locale.parser("13/01/2010", {
+    locale.parse("13/01/2010", {
       locale: "en-gb",
       formatLength: "short",
       selector: "date"

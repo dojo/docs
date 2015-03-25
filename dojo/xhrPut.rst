@@ -26,9 +26,9 @@ The limitations are the same as :ref:`dojo.xhrGet <dojo/xhrGet>`
 Usage
 =====
 
-The xhrPut() function takes an object as its parameter.  This object defines how the xhrPost should operate.  All the :ref:`dojo.xhrGet parameters <dojo/xhrGet>` are valid, including how to set the load and errors handlers.  So, for specific information about those parameters, please refer to dojo.xhrGet.  This page only lists out the parameters which are usually only used in conjunction with with a PUT.
+The xhrPut() function takes an object as its parameter.  This object defines how the xhrPut should operate.  All the :ref:`dojo.xhrGet parameters <dojo/xhrGet>` are valid, including how to set the load and errors handlers.  So, for specific information about those parameters, please refer to dojo.xhrGet.  This page only lists out the parameters which are usually only used in conjunction with with a PUT.
 
-dojo.xhrPost supported object properties
+dojo.xhrPut supported object properties
 ----------------------------------------
 
 All of the dojo.xhrGet :ref:`object properties <dojo/xhrGet>`
@@ -49,7 +49,7 @@ The return type is the same as dojo.xhrGet.  Please refer to the :ref:`return ty
 Handling Status Codes
 ---------------------
 
-Handling status codes for xhrPost is the same as handling them for xhrGet.  Please refer to the dojo.xhrGet :ref:`status code documentation <dojo/xhrGet>` for details.
+Handling status codes for xhrPut is the same as handling them for xhrGet.  Please refer to the dojo.xhrGet :ref:`status code documentation <dojo/xhrGet>` for details.
 
 Examples
 ========
@@ -85,7 +85,7 @@ Example 1: dojo.xhrPut call to send some text data
             }
           }
           dojo.byId("response2").innerHTML = "Message being sent..."
-          // Call the asynchronous xhrPost
+          // Call the asynchronous xhrPut
           var deferred = dojo.xhrPut(xhrArgs);
         });
       }
