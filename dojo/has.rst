@@ -30,7 +30,7 @@ the same feature.
 Dojo Core and Dijit modules make use of ``dojo/has`` feature detection.  There are still a number of DojoX projects 
 that continue to use ``dojo.isXXX`` user agent sniffing.  This conversion is an ongoing process.
 
-``dojo/has`` can be used a loader plugin with a ternary conditional expression so that modules can be loaded 
+``dojo/has`` can be used as a loader plugin with a ternary conditional expression so that modules can be loaded 
 conditionally.
 
 The basic tests defined within the ``dojo/has`` module can be enhanced with other modules registering additional 

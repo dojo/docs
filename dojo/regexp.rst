@@ -14,7 +14,7 @@ Usage
 
 .. js ::
 
-  require["dojo/rexexp"], function(regexp){
+  require["dojo/regexp"], function(regexp){
     // Escape regular expression strings
     var str = regexp.escapeString(someString);
 
