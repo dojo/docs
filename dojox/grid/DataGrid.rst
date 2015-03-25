@@ -657,7 +657,7 @@ First, you have to set a editor for each cell, you would like to edit:
 
   .. css ::
 
-        @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
+        @import "/_static/dojox/grid/resources/claroGrid.css";
         
         /*Grid needs an explicit height by default*/
         #gridDiv {
