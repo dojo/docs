@@ -647,7 +647,7 @@ First, you have to set a editor for each cell, you would like to edit:
       });
 
   .. html ::
-
+<link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/grid/resources/claroGrid.css" >
     <p class="info">
         This example shows how to make columns editable. Please double click any of column 2, column 3 or column 4 to change the cell value.
     </p>
@@ -657,7 +657,7 @@ First, you have to set a editor for each cell, you would like to edit:
 
   .. css ::
 
-        @import "{{dataUrl}}dojox/grid/resources/claroGrid.css";
+        //@import "{{dataUrl}}dojox/grid/resources/claroGrid.css";
         
         /*Grid needs an explicit height by default*/
         #gridDiv {
