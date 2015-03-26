@@ -10,16 +10,17 @@ To use it, you just have to override default behavior by yours.
 
   .. js ::
 
-        dojo.require("dojox.grid.DataGrid");
-        dojo.require("dojo.data.ItemFileWriteStore");
+        require(["dojo/parser", 
+            "dojox/grid/DataGrid",
+            "dojo/data/ItemFileWriteStore"]);
 
   .. html ::
 
-    <span data-dojo-type="dojo.data.ItemFileWriteStore"
+    <span data-dojo-type="dojo/data/ItemFileWriteStore"
         data-dojo-id="store3" data-dojo-props="url:'{{ dataUrl }}dijit/tests/_data/countries.json'">
     </span>
 
-    <table data-dojo-type="dojox.grid.DataGrid"
+    <table data-dojo-type="dojox/grid/DataGrid"
         data-dojo-id="grid6"
         data-dojo-props="store:store3,
         query:{ name: '*' },
