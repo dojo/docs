@@ -1,7 +1,7 @@
 .. _dojox/layout/TableContainer:
 
 ===========================
-dojox.layout.TableContainer
+dojox/layout/TableContainer
 ===========================
 
 :Project owner: Shane O'Sullivan
@@ -16,7 +16,7 @@ The TableContainer is a simple layout widget that displays the contained child w
 Introduction
 ============
 
-The dojox.layout.TableContainer is a simple layout widget that displays the contained child widgets in a Table element. It provides a number of useful features.
+The dojox/layout/TableContainer is a simple layout widget that displays the contained child widgets in a Table element. It provides a number of useful features.
 
 * It can be configured to use any number of columns, using the "cols" attribute.
 * It is fully stylable. A custom class can be set on it, using the "customClass" attribute, which makes it easy to style every row and cell.
@@ -78,21 +78,24 @@ Simple Example, one column and no styling
 
   .. js ::
 
-      dojo.require("dijit.dijit");
-      dojo.require("dojox.layout.TableContainer");
-      dojo.require("dijit.form.TextBox");
-      dojo.require("dijit.form.CheckBox");
-      dojo.require("dijit.form.NumberSpinner");
+    require(["dojo/parser",
+        "dojox/layout/TableContainer",
+        "dijit/form/TextBox",
+        "dijit/form/CheckBox",
+        "dijit/form/NumberSpinner"
+    ], require(parser) {
+        parser.parse();
+    });
 
   Declare the required HTML. Note that each contained widget is given a 'title' attribute.  This is the simplest type of TableContainer, with just one column, and no special CSS added
 
   .. html ::
 
-    <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:1" id="tc1">
-      <div data-dojo-type="dijit.form.TextBox" title="First Name:" value="Michael"></div>
-      <div data-dojo-type="dijit.form.TextBox" title="Last Name:" value="Collins"></div>
-      <div data-dojo-type="dijit.form.CheckBox" title="Employed"></div>
-      <div data-dojo-type="dijit.form.NumberSpinner" title="Age" value="25"></div>
+    <div data-dojo-type="dojox/layout/TableContainer" data-dojo-props="cols:1" id="tc1">
+      <div data-dojo-type="dijit/form/TextBox" title="First Name:" value="Michael"></div>
+      <div data-dojo-type="dijit/form/TextBox" title="Last Name:" value="Collins"></div>
+      <div data-dojo-type="dijit/form/CheckBox" title="Employed"></div>
+      <div data-dojo-type="dijit/form/NumberSpinner" title="Age" value="25"></div>
     </div>
 
 Two Columns, Label Styling
@@ -105,21 +108,25 @@ Two Columns, Label Styling
 
   .. js ::
 
-      dojo.require("dijit.dijit");
-      dojo.require("dojox.layout.TableContainer");
-      dojo.require("dijit.form.TextBox");
-      dojo.require("dijit.form.CheckBox");
-      dojo.require("dijit.form.NumberSpinner");
+    require(["dojo/parser",
+        "dojox/layout/TableContainer",
+        "dijit/form/TextBox",
+        "dijit/form/CheckBox",
+        "dijit/form/NumberSpinner"
+    ], function(parser) {
+        parser.parse();
+    });
+
 
   Declare the required HTML. Note that each contained widget is given a 'title' attribute.  Note the 'customClass' attribute added to the TableContainer.  This is used in the CSS declaration to add a style to all label cells.
 
   .. html ::
 
-    <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:2, customClass:'justLabels'" id="tc1">
-      <div data-dojo-type="dijit.form.TextBox" title="First Name:" value="Eamonn"></div>
-      <div data-dojo-type="dijit.form.TextBox" title="Last Name:" value="De Valera"></div>
-      <div data-dojo-type="dijit.form.CheckBox" title="Employed"></div>
-      <div data-dojo-type="dijit.form.NumberSpinner" title="Age" value="40"></div>
+    <div data-dojo-type="dojox/layout/TableContainer" data-dojo-props="cols:2, customClass:'justLabels'" id="tc1">
+      <div data-dojo-type="dijit/form/TextBox" title="First Name:" value="Eamonn"></div>
+      <div data-dojo-type="dijit/form/TextBox" title="Last Name:" value="De Valera"></div>
+      <div data-dojo-type="dijit/form/CheckBox" title="Employed"></div>
+      <div data-dojo-type="dijit/form/NumberSpinner" title="Age" value="40"></div>
     </div>
 
   Apply a custom class that colors the labels.
@@ -142,21 +149,24 @@ Two Columns, Label and Value cell Styling
 
   .. js ::
 
-      dojo.require("dijit.dijit");
-      dojo.require("dojox.layout.TableContainer");
-      dojo.require("dijit.form.TextBox");
-      dojo.require("dijit.form.CheckBox");
-      dojo.require("dijit.form.NumberSpinner");
+    require(["dojo/parser",
+        "dojox/layout/TableContainer",
+        "dijit/form/TextBox",
+        "dijit/form/CheckBox",
+        "dijit/form/NumberSpinner"
+    ], function(parser) {
+        parser.parse();
+    });
 
   Declare the required HTML. Note that each contained widget is given a 'title' attribute.  Note the 'customClass' attribute added to the TableContainer.  This is used in the CSS declaration to add a style to all label and value cells.
 
   .. html ::
 
-    <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:2, customClass:'labelsAndValues'" id="tc1">
-      <div data-dojo-type="dijit.form.TextBox" title="First Name:" value="Patrick"></div>
-      <div data-dojo-type="dijit.form.TextBox" title="Last Name:" value="Pearse"></div>
-      <div data-dojo-type="dijit.form.CheckBox" title="Employed"></div>
-      <div data-dojo-type="dijit.form.NumberSpinner" title="Age" value="30"></div>
+    <div data-dojo-type="dojox/layout/TableContainer" data-dojo-props="cols:2, customClass:'labelsAndValues'" id="tc1">
+      <div data-dojo-type="dijit/form/TextBox" title="First Name:" value="Patrick"></div>
+      <div data-dojo-type="dijit/form/TextBox" title="Last Name:" value="Pearse"></div>
+      <div data-dojo-type="dijit/form/CheckBox" title="Employed"></div>
+      <div data-dojo-type="dijit/form/NumberSpinner" title="Age" value="30"></div>
     </div>
 
   Apply a custom class that styles both the label and value cells.
@@ -185,25 +195,28 @@ Using Colspan
 
   .. js ::
 
-      dojo.require("dijit.dijit");
-      dojo.require("dojox.layout.TableContainer");
-      dojo.require("dijit.form.TextBox");
-      dojo.require("dijit.form.CheckBox");
-      dojo.require("dijit.form.Textarea");
+    require(["dojo/parser",
+        "dojox/layout/TableContainer",
+        "dijit/form/TextBox",
+        "dijit/form/CheckBox",
+        "dijit/form/Textarea"
+    ], function(parser) {
+        parser.parse();
+    });
 
   Declare the required HTML. Note that each contained widget is given a 'title' attribute.  Note that the first three widgets are given a 'colspan' attribute, which makes them take up multiple columns. To accommodate these extra columns, the TableContainer is given the attribute cols='4'. This is useful when you have a widget that requires more room. Since the CheckBox widgets along the bottom have no 'colspan' attribute, they each occupy a single column
 
   .. html ::
 
-    <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:4, customClass:'labelsAndValues'" id="tc1">
-      <div data-dojo-type="dijit.form.TextBox" title="First Name:" colspan="2" value="Tom"></div>
-      <div data-dojo-type="dijit.form.TextBox" title="Last Name:" colspan="2" value="Clarke"></div>
-      <textarea data-dojo-type="dijit.form.Textarea" id="texteditor" style="width:100%;" colspan="4" title="Personal Details">Hi, I'm a hacker, I have no  personal details to speak of, but I can write a widget in under a minute!
+    <div data-dojo-type="dojox/layout/TableContainer" data-dojo-props="cols:4, customClass:'labelsAndValues'" id="tc1">
+      <div data-dojo-type="dijit/form/TextBox" title="First Name:" colspan="2" value="Tom"></div>
+      <div data-dojo-type="dijit/form/TextBox" title="Last Name:" colspan="2" value="Clarke"></div>
+      <textarea data-dojo-type="dijit/form/Textarea" id="texteditor" style="width:100%;" colspan="4" title="Personal Details">Hi, I'm a hacker, I have no  personal details to speak of, but I can write a widget in under a minute!
       </textarea>
-     <div data-dojo-type="dijit.form.CheckBox" title="Employed"></div>
-     <div data-dojo-type="dijit.form.CheckBox" title="Is Married"></div>
-     <div data-dojo-type="dijit.form.CheckBox" title="Has Children"></div>
-     <div data-dojo-type="dijit.form.CheckBox" title="Loves Dojo" checked="true"></div>
+     <div data-dojo-type="dijit/form/CheckBox" title="Employed"></div>
+     <div data-dojo-type="dijit/form/CheckBox" title="Is Married"></div>
+     <div data-dojo-type="dijit/form/CheckBox" title="Has Children"></div>
+     <div data-dojo-type="dijit/form/CheckBox" title="Loves Dojo" checked="true"></div>
       
     </div>
 
@@ -234,14 +247,17 @@ Programmatic example
 
   .. js ::
 
-      dojo.require("dijit.dijit");
-      dojo.require("dojox.layout.TableContainer");
-      dojo.require("dijit.form.TextBox");
+    require(["dojo/parser",
+        "dojox/layout/TableContainer",
+        "dijit/form/TextBox"
+    ], function(parser) {
+        parser.parse();
+    });
 
 
       // Create the TableContainer, and insert it into the DOM node with id "putWidgetHere".
       // Add the custom class "labelsAndValues"
-      var programmatic = new dojox.layout.TableContainer(
+      var programmatic = new TableContainer(
       {
         cols: 2,
         customClass:"labelsAndValues",
@@ -249,10 +265,10 @@ Programmatic example
       }, dojo.byId("putWidgetHere"));
 
       // Create four text boxes
-      var text1 = new dijit.form.TextBox({label: "ProgText 1"});
-      var text2 = new dijit.form.TextBox({label: "ProgText 2"});
-      var text3 = new dijit.form.TextBox({label: "ProgText 3"});
-      var text4 = new dijit.form.TextBox({label: "ProgText 4"});
+      var text1 = new TextBox({label: "ProgText 1"});
+      var text2 = new TextBox({label: "ProgText 2"});
+      var text3 = new TextBox({label: "ProgText 3"});
+      var text4 = new TextBox({label: "ProgText 4"});
 
       // Add the four text boxes to the TableContainer
       programmatic.addChild(text1);
@@ -297,19 +313,22 @@ Setting the Label Width
 
   .. js ::
 
-      dojo.require("dijit.dijit");
-      dojo.require("dojox.layout.TableContainer");
-      dojo.require("dijit.form.TextBox");
+    require(["dojo/parser",
+        "dojox/layout/TableContainer",
+        "dijit/form/TextBox"
+    ], function(parser) {
+        parser.parse();
+    });
 
   Declare the required HTML. Note the 'labelWidth' attribute on the TableContainer, which specifies the width of the labels in pixels.
 
   .. html ::
 
-    <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:2, customClass:'labelsAndValues', labelWidth:10" id="tc1">
-      <div data-dojo-type="dijit.form.TextBox" title="1" value="United States"></div>
-      <div data-dojo-type="dijit.form.TextBox" title="2" value="Ireland"></div>
-      <div data-dojo-type="dijit.form.TextBox" title="3" value="Italy"></div>
-      <div data-dojo-type="dijit.form.TextBox" title="4" value="Faroe Islands"></div>
+    <div data-dojo-type="dojox/layout/TableContainer" data-dojo-props="cols:2, customClass:'labelsAndValues', labelWidth:10" id="tc1">
+      <div data-dojo-type="dijit/form/TextBox" title="1" value="United States"></div>
+      <div data-dojo-type="dijit/form/TextBox" title="2" value="Ireland"></div>
+      <div data-dojo-type="dijit/form/TextBox" title="3" value="Italy"></div>
+      <div data-dojo-type="dijit/form/TextBox" title="4" value="Faroe Islands"></div>
       
     </div>
 
