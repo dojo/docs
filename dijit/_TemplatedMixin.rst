@@ -29,7 +29,7 @@ Mixin dijit/_TemplatedMixin when you declare your widget:
 
 .. js ::
 
-   require(["dojo/declare", "dijit/_WidgetBase", "dijit/_TemplatedMixin"], function(_WidgetBase, _TemplatedMixin)
+   require(["dojo/_base/declare", "dijit/_WidgetBase", "dijit/_TemplatedMixin"], function(_WidgetBase, _TemplatedMixin)
       declare("MyWidget", [_WidgetBase, _TemplatedMixin], {
          templateString: "<div>hello world</div>"
       });
@@ -48,7 +48,7 @@ It can either be specified as a literal string:
 
 .. js ::
  
-   require(["dojo/declare", "dijit/_WidgetBase", "dijit/_TemplatedMixin"], function(_WidgetBase, _TemplatedMixin)
+   require(["dojo/_base/declare", "dijit/_WidgetBase", "dijit/_TemplatedMixin"], function(_WidgetBase, _TemplatedMixin)
       declare("MyWidget", [_WidgetBase, _TemplatedMixin], {
          templateString: "<div>hello world</div>"
       });
@@ -60,7 +60,7 @@ or pulled in from a file using the :ref:`dojo/text! <dojo/text>` plugin.
 .. js ::
  
     require([
-        "dojo/declare",
+        "dojo/_base/declare",
         "dijit/_WidgetBase", "dijit/_TemplatedMixin", "dojo/text!myNameSpace/templates/MyWidget.html"
     ], function(declare, _WidgetBase, _TemplatedMixin, template){
         declare("MyWidget", [_WidgetBase, _TemplatedMixin], {
