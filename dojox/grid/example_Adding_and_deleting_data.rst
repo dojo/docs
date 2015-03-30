@@ -32,7 +32,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
         query:{ name: '*' },
         rowsPerPage:20,
         clientSort:true,
-        rowSelector:'20px'
+        rowSelector:'20px'"
         style="width: 400px; height: 200px;">
         <thead>
             <tr>
