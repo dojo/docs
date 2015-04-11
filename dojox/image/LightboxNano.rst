@@ -98,9 +98,9 @@ Create the LightboxNano on an <img> element:
             }, "myImg");
         });
 
-    .. css ::
+  .. css ::
 
-        @import "resources/Lightbox.css";
+    @import "resources/Lightbox.css";
 
   .. html ::
 
