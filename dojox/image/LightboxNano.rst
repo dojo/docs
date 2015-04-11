@@ -188,49 +188,6 @@ There's always things that can be done to improve LightboxNano. Here's a couple 
 * Add support for displaying a caption.
 * Add support for :ref:`dojox/embed <dojox/embed>` to play Flash or QuickTime movies.
 
-A 1.6 workaround
-================
-
-*This problem will most likely go away in 1.7, which I am told will mix source node attributes and data-dojo-props attributes and thus negate the discussion here.*
-
-Dojo 1.6 introduced the use of data-dojo-type instead of data-dojo-type, and changed the way markup attributes are passed in to the dijits being constructed.  This means that the following examples are not the same:
-
-.. html ::
-  
- <a dojoType="dojox.image.LightboxNano" href="/path/to/large/image.jpg">
-     <img src="/path/to/small/image.jpg">
- </a>
- 
- <a data-dojo-type="dojox.image.LightboxNano" href="/path/to/large/image.jpg">
-     <img src="/path/to/small/image.jpg">
- </a>
-
-The second, using data-dojo-type, will break because the 'href' attribute on the source node is not passed in to the LightboxNano constructor.  The 'correct' way to approach this is to duplicate the href attribute in data-dojo-props (as discussed in the 1.6 release notes).
-
-.. html ::
-  
- <a data-dojo-type="dojox.image.LightboxNano" data-dojo-props="href: '/path/to/large/image.jpg'" href="/path/to/large/image.jpg">
-     <img src="/path/to/small/image.jpg">
- </a>
-
-This makes a dijit attribute 'href' available inside the constructor.  However, many might consider this long winded.  A solution is to declare a LightboxNanoHelper dijit, and use it instead of the LightboxNano:
-
-.. js ::
-  
- dojo.require("dojox.image.LightboxNano");
- 
- dojo.declare("mydijits.LightboxNanoHelper", null, {
-   constructor: function(/*Object?*/ p, /*DomNode?*/ n){
-     new dojox.image.LightboxNano({ href: n.href }, n);
-   }
- });
- 
- <a data-dojo-type="mydijits.LightboxNanoHelper" href="/path/to/large/image.jpg">
-     <img src="/path/to/small/image.jpg">
- </a>
-
-In this way, the LightboxNanoHelper knows to look on the source node 'n's attribute for href, and use it to create a LightboxNano.  This retains all the good behaviour of LightboxNano (preloading of large image etc.) without having to specify data-dojo-props and duplicate the href attribute.
-
 See also
 ========
 
