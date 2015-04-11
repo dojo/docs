@@ -1,27 +1,27 @@
 .. _dojox/image/LightboxNano:
 
 ========================
-dojox.image.LightboxNano
+dojox/image/LightboxNano
 ========================
 
 :Project owner: Chris Barber
 :since: V1.3
 
 .. contents ::
-   :depth: 2
+    :depth: 2
 
-A simple "nano" version of the lightbox.
+A simple "nano" version of the :ref:`Lightbox <dojox/image/Lightbox>`.
 
 Introduction
 ============
 
-The LightboxNano is a very lightweight lightbox which only displays a larger image. There is no support for a caption or description. The lightbox can be closed by clicking any where or pressing any key. It is not a dijit._Widget, but behaves similar to a dijit._Widget.
+The LightboxNano is a very lightweight lightbox which only displays a larger image. There is no support for a caption or description. The lightbox can be closed by clicking anywhere or pressing any key. It is not a dijit._Widget, but behaves similar to a dijit._Widget.
 
-After the LightboxNano loads, it waits preloadDelay (default of 5000ms) before caching the larger image. When the user clicks the thumbnail image to launch the LightboxNano, hopefully the larger image will be downloaded and the animation will play smoothly. If the user clicks the thumbnail image before the larger version could be preloaded, a loading indicator is displayed prior to the animation beginning. Subsequent clicking of the larger image is instant since the larger image is already cached.
+After the LightboxNano loads, it waits `preloadDelay` (default of 5000ms) before caching the larger image. When the user clicks the thumbnail image to launch the LightboxNano, hopefully the larger image will be downloaded and the animation will play smoothly. If the user clicks the thumbnail image before the larger version could be preloaded, a loading indicator is displayed prior to the animation beginning. Subsequent clicking of the larger image is instant since the larger image is already cached.
 
 For being so small, it packs a handful of features:
 
-* Automatically resizes large images to fit in browser window.
+* Automatically resizes large images to fit in the browser window.
 * Preloads the larger image to make loading faster.
 * Keyboard accessible.
 * Instantly makes your website awesome.
@@ -29,41 +29,55 @@ For being so small, it packs a handful of features:
 Usage
 =====
 
+First you need to require the LightboxNano module:
+
+.. js ::
+
+    require(["dojox/image/LightboxNano"]);
+
+You will also need to include the relevant Lightbox CSS:
+
+.. css ::
+
+    @import "dojox/image/resources/LightboxNano.css";
+
+The lightbox can then be configured with the following (optional) properties:
+
 ============  ======  ======================================================================
 Parameter     Type    Description
 ============  ======  ======================================================================
-href          String  URL to the large image to show in the lightbox.
+href          String  URL to the large image to be shown in the lightbox.
 duration      int     The delay in milliseconds of the LightboxNano open and close animation.
 preloadDelay  int     The delay in milliseconds after the LightboxNano is created before preloading the larger image.
 ============  ======  ======================================================================
 
-The LightboxNano is intended to be used on <a> and <img> tags. Upon creation, if the domNode is <img> tag, then it is wrapped in an <a> tag. It will also add two <div> tags inside the <a> tag: one to display a enlarge icon and another to show a loading icon. To style the enlarge icon and the loading icon, you need to create some CSS that looks like the following:
+The LightboxNano is intended to be used on <a> and <img> tags. Upon creation, if the domNode is an <img> tag, then it is wrapped in an <a> tag. It will also add two <div> tags inside the <a> tag: one to display an enlarge icon and another to show a loading icon. To style the enlarge icon and the loading icon, you need to create some CSS that looks like the following:
 
 .. css ::
  
- a:hover .dojoxEnlarge {
-     display: block !important;
- }
- .dojoxEnlarge {
-     background: url(images/enlarge.png) no-repeat 0 0;
-     top: -5px;
-     left: -5px;
-     margin: 0 !important;
-     width: 16px;
-     height: 16px;
- }
- .dojoxLoading {
-     background: #333 url(images/loading-dark.gif) no-repeat center center;
-     border-radius: 5px;
-     -moz-border-radius: 5px;
-     -webkit-border-radius: 5px;
-     border: 2px solid #000;
-     height: 24px;
-     opacity: 0.8;
-     filter: alpha(opacity=80);
-     padding: 6px;
-     width: 24px;
- }
+    a:hover .dojoxEnlarge {
+        display: block !important;
+    }
+    .dojoxEnlarge {
+        background: url(images/enlarge.png) no-repeat 0 0;
+        top: -5px;
+        left: -5px;
+        margin: 0 !important;
+        width: 16px;
+        height: 16px;
+    }
+     .dojoxLoading {
+        background: #333 url(images/loading-dark.gif) no-repeat center center;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border: 2px solid #000;
+        height: 24px;
+        opacity: 0.8;
+        filter: alpha(opacity=80);
+        padding: 6px;
+        width: 24px;
+    }
 
 
 Examples
@@ -76,15 +90,13 @@ Create the LightboxNano on an <img> element:
 
 .. code-example ::
 
-  .. js ::
+    .. js ::
   
-      dojo.require("dojox.image.LightboxNano");
-    
-      dojo.ready(function(){
-          new dojox.image.LightboxNano({
-              href: "/path/to/large/image.jpg"
-          }, "myImg");
-      });
+        require(["dojox/image/LightboxNano", "dojo/domReady!"], function(LightboxNano) {
+            var lightbox = new LightboxNano({
+                href: "/path/to/large/image.jpg"
+            }, "myImg");
+        });
 
   .. html ::
 
@@ -94,19 +106,21 @@ Create the LightboxNano on an <a> element:
 
 .. code-example ::
 
-  .. js ::
+    .. js ::
 
-      dojo.require("dojox.image.LightboxNano");
+        require(["dojox/image/LightboxNano", "dojo/domReady!"], function(LightboxNano) {
+            var lightbox = new LightboxNano({}, "myLink");
+        });
 
-      dojo.ready(function(){
-          new dojox.image.LightboxNano({}, "myLink");
-      });
+    .. css ::
 
-  .. html ::
+        @import "resources/Lightbox.css";
 
-      <a id="myLink" href="/path/to/large/image.jpg">
-          <img src="/path/to/small/image.jpg">
-      </a>
+    .. html ::
+
+        <a id="myLink" href="/path/to/large/image.jpg">
+            <img src="/path/to/small/image.jpg">
+        </a>
 
 Declarative example
 -------------------
@@ -115,52 +129,53 @@ Standard way to declaratively create the LightboxNano
 
 .. code-example ::
 
-  .. js ::
+    .. js ::
 
-     dojo.require("dojox.image.LightboxNano");
-     dojo.require("dojo.parser");
+        require(["dojo/parser", "dojox.image.LightboxNano"]);
 
-  .. html ::
+    .. css ::
 
-     <a data-dojo-type="dojox.image.LightboxNano" href="/path/to/large/image.jpg">
-         <img src="/path/to/small/image.jpg">
-     </a>
+        @import "resources/Lightbox.css";
+
+    .. html ::
+
+        <a data-dojo-type="dojox/image/LightboxNano" href="/path/to/large/image.jpg">
+            <img src="/path/to/small/image.jpg">
+        </a>
 
 Should you want to destroy the LightboxNano, you'll need to use the data-dojo-id. You can view more info about using the data-dojo-id on :ref:`data-dojo-id, dijit.byId() and dojo.byId() <dijit/byId>`.
 
 .. code-example ::
 
-  .. js ::
+    .. js ::
 
-     dojo.require("dojox.image.LightboxNano");
-     dojo.require("dojo.parser");
+        require(["dojo/parser", "dojox.image.LightboxNano"]);
 
-  .. html ::
+    .. html ::
 
-     <a data-dojo-type="dojox.image.LightboxNano" data-dojo-id="myLightboxNano" href="/path/to/large/image.jpg">
-         <img src="/path/to/small/image.jpg">
-     </a>
-
-     <button onclick="myLightboxNano.destroy();">Destroy the LightboxNano</button>
+        <a data-dojo-type="dojox/image/LightboxNano" data-dojo-id="myLightboxNano" href="/path/to/large/image.jpg">
+            <img src="/path/to/small/image.jpg">
+        </a>
+        <button onclick="myLightboxNano.destroy();">Destroy the LightboxNano</button>
 
 File Sizes
 ==========
 
-The LightboxNano is pretty small, but it relies on several other core Dojo components. If you do a custom Dojo build containing the LightboxNano and dojo.parser, the dojo.js is 96KB. If you enable HTTP compression on the web server, you can get that down to a nice 32KB.
+The LightboxNano is pretty small, but it relies on several other core Dojo components. If you do a custom Dojo build containing the LightboxNano and the dojo/parser, the dojo.js is 96KB. If you enable HTTP compression on the web server, you can get that down to a nice 32KB.
 
 Limitations
 ===========
 
-* The LightboxNano does not reposition itself when the browser window is resize or scrolled.
-* In IE6, drop down select lists bleed through the LighboxNano layer. This can be fixed with an iframe shim. This was skipped to keep the size down and because we all want IE6 to just go away.
+* The LightboxNano does not reposition itself when the browser window is resized or scrolled.
+* In IE6, drop down select lists bleed through the LightboxNano layer. This can be fixed with an iframe shim. This was skipped to keep the size down and because we all want IE6 to just go away.
 
 Future Improvements
 ===================
 
-There's always things that can be done to improve the LightboxNano. Here's a couple ideas and you're welcome to make suggestions in the comments.
+There's always things that can be done to improve LightboxNano. Here's a couple ideas and you're welcome to make suggestions in the comments.
 
 * Add support for displaying a caption.
-* Add support for dojox.embed to play Flash or Quicktime movies.
+* Add support for :ref:`dojox/embed <dojox/embed>` to play Flash or Quicktime movies.
 
 A 1.6 workaround
 ================
