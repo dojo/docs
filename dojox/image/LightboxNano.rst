@@ -92,19 +92,19 @@ Create the LightboxNano on an <img> element:
 
   .. js ::
 
-        require(["dojox/image/LightboxNano", "dojo/domReady!"], function(LightboxNano) {
-            var lightbox = new LightboxNano({
-                href: "{{baseUrl}}dojox/image/tests/images/chris3_lg.jpg"  // path to large image
-            }, "myImg");
-        });
+    require(["dojox/image/LightboxNano", "dojo/domReady!"], function(LightboxNano) {
+        var lightbox = new LightboxNano({
+            href: "{{baseUrl}}dojox/image/tests/images/chris3_lg.jpg"  // path to large image
+        }, "myImg");
+    });
 
   .. css ::
 
-        @import "{{baseUrl}}dojox/image/resources/Lightbox.css";
+    @import "{{baseUrl}}dojox/image/resources/Lightbox.css";
 
   .. html ::
 
-      <img id="myImg" src="{{baseUrl}}dojox/image/tests/images/chris3_sm.jpg">
+    <img id="myImg" src="{{baseUrl}}dojox/image/tests/images/chris3_sm.jpg">
 
 Create the LightboxNano on an <a> element:
 
@@ -112,19 +112,19 @@ Create the LightboxNano on an <a> element:
 
   .. js ::
 
-        require(["dojox/image/LightboxNano", "dojo/domReady!"], function(LightboxNano) {
-            var lightbox = new LightboxNano({}, "myLink");
-        });
+    require(["dojox/image/LightboxNano", "dojo/domReady!"], function(LightboxNano) {
+        var lightbox = new LightboxNano({}, "myLink");
+    });
 
   .. css ::
 
-        @import "resources/Lightbox.css";
+    @import "{{baseUrl}}dojox/image/resources/Lightbox.css";
 
   .. html ::
 
-        <a id="myLink" href="/path/to/large/image.jpg">
-            <img src="/path/to/small/image.jpg">
-        </a>
+    <a id="myLink" href="{{baseUrl}}dojox/image/tests/images/chris3_lg.jpg">
+        <img src="{{baseUrl}}dojox/image/tests/images/chris3_sm.jpg">
+    </a>
 
 Declarative example
 -------------------
@@ -135,51 +135,55 @@ Standard way to declaratively create the LightboxNano
 
   .. js ::
 
-        require(["dojo/parser", "dojox.image.LightboxNano"]);
+    require(["dojo/parser", "dojox.image.LightboxNano"]);
 
   .. css ::
 
-        @import "resources/Lightbox.css";
+    @import "{{baseUrl}}dojox/image/resources/Lightbox.css";
 
   .. html ::
 
-        <a data-dojo-type="dojox/image/LightboxNano" href="/path/to/large/image.jpg">
-            <img src="/path/to/small/image.jpg">
-        </a>
+    <a data-dojo-type="dojox/image/LightboxNano" href="{{baseUrl}}dojox/image/tests/images/chris3_lg.jpg">
+        <img src="{{baseUrl}}dojox/image/tests/images/chris3_sm.jpg">
+    </a>
 
-Should you want to destroy the LightboxNano, you'll need to use the data-dojo-id. You can view more info about using the data-dojo-id on :ref:`data-dojo-id, dijit.byId() and dojo.byId() <dijit/byId>`.
+Should you want to destroy LightboxNano, you'll need to use the data-dojo-id. You can view more info about using the data-dojo-id on :ref:`data-dojo-id, dijit.byId() and dojo.byId() <dijit/byId>`.
 
 .. code-example ::
 
   .. js ::
 
-        require(["dojo/parser", "dojox.image.LightboxNano"]);
+    require(["dojo/parser", "dojox.image.LightboxNano"]);
 
-    .. html ::
+  .. css ::
 
-        <a data-dojo-type="dojox/image/LightboxNano" data-dojo-id="myLightboxNano" href="/path/to/large/image.jpg">
-            <img src="/path/to/small/image.jpg">
-        </a>
-        <button onclick="myLightboxNano.destroy();">Destroy the LightboxNano</button>
+    @import "{{baseUrl}}dojox/image/resources/Lightbox.css";
+
+  .. html ::
+
+    <a data-dojo-type="dojox/image/LightboxNano" data-dojo-id="myLightboxNano" href="{{baseUrl}}dojox/image/tests/images/chris3_lg.jpg">
+        <img src="{{baseUrl}}dojox/image/tests/images/chris3_sm.jpg">
+    </a>
+    <button onclick="myLightboxNano.destroy();">Destroy the LightboxNano</button>
 
 File Sizes
 ==========
 
-The LightboxNano is pretty small, but it relies on several other core Dojo components. If you do a custom Dojo build containing the LightboxNano and the dojo/parser, the dojo.js is 96KB. If you enable HTTP compression on the web server, you can get that down to a nice 32KB.
+The LightboxNano is pretty small, but it relies on several other core Dojo components. If you do a custom Dojo build containing LightboxNano and the dojo/parser, the dojo.js file size is 96KB. If you enable HTTP compression on the web server, you can get that down to a nice 32KB.
 
 Limitations
 ===========
 
 * The LightboxNano does not reposition itself when the browser window is resized or scrolled.
-* In IE6, drop down select lists bleed through the LightboxNano layer. This can be fixed with an iframe shim. This was skipped to keep the size down and because we all want IE6 to just go away.
+* In IE6, drop-down select lists bleed through the LightboxNano layer. This can be fixed with an iframe shim. This was skipped to keep the size down and because we all want IE6 to just go away.
 
 Future Improvements
 ===================
 
-There's always things that can be done to improve LightboxNano. Here's a couple ideas and you're welcome to make suggestions in the comments.
+There's always things that can be done to improve LightboxNano. Here's a couple of ideas. You're welcome to make suggestions in the comments.
 
 * Add support for displaying a caption.
-* Add support for :ref:`dojox/embed <dojox/embed>` to play Flash or Quicktime movies.
+* Add support for :ref:`dojox/embed <dojox/embed>` to play Flash or QuickTime movies.
 
 A 1.6 workaround
 ================
