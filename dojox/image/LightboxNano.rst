@@ -54,7 +54,7 @@ preloadDelay  int     The delay in milliseconds after the LightboxNano is create
 The LightboxNano is intended to be used on <a> and <img> tags. Upon creation, if the domNode is an <img> tag, then it is wrapped in an <a> tag. It will also add two <div> tags inside the <a> tag: one to display an enlarge icon and another to show a loading icon. To style the enlarge icon and the loading icon, you need to create some CSS that looks like the following:
 
 .. css ::
- 
+
     a:hover .dojoxEnlarge {
         display: block !important;
     }
@@ -90,7 +90,7 @@ Create the LightboxNano on an <img> element:
 
 .. code-example ::
 
-    .. js ::
+  .. js ::
 
         require(["dojox/image/LightboxNano", "dojo/domReady!"], function(LightboxNano) {
             var lightbox = new LightboxNano({
@@ -98,7 +98,7 @@ Create the LightboxNano on an <img> element:
             }, "myImg");
         });
 
-    .. css ::
+  .. css ::
 
         @import "resources/Lightbox.css";
 
@@ -110,17 +110,17 @@ Create the LightboxNano on an <a> element:
 
 .. code-example ::
 
-    .. js ::
+  .. js ::
 
         require(["dojox/image/LightboxNano", "dojo/domReady!"], function(LightboxNano) {
             var lightbox = new LightboxNano({}, "myLink");
         });
 
-    .. css ::
+  .. css ::
 
         @import "resources/Lightbox.css";
 
-    .. html ::
+  .. html ::
 
         <a id="myLink" href="/path/to/large/image.jpg">
             <img src="/path/to/small/image.jpg">
@@ -133,15 +133,15 @@ Standard way to declaratively create the LightboxNano
 
 .. code-example ::
 
-    .. js ::
+  .. js ::
 
         require(["dojo/parser", "dojox.image.LightboxNano"]);
 
-    .. css ::
+  .. css ::
 
         @import "resources/Lightbox.css";
 
-    .. html ::
+  .. html ::
 
         <a data-dojo-type="dojox/image/LightboxNano" href="/path/to/large/image.jpg">
             <img src="/path/to/small/image.jpg">
@@ -151,7 +151,7 @@ Should you want to destroy the LightboxNano, you'll need to use the data-dojo-id
 
 .. code-example ::
 
-    .. js ::
+  .. js ::
 
         require(["dojo/parser", "dojox.image.LightboxNano"]);
 
