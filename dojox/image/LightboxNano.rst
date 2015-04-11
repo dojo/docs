@@ -35,7 +35,7 @@ First you need to require the LightboxNano module:
 
     require(["dojox/image/LightboxNano"]);
 
-You will also need to include the relevant Lightbox CSS:
+You will also need to include the relevant LightboxNano CSS:
 
 .. css ::
 
@@ -113,7 +113,10 @@ Create the LightboxNano on an <a> element:
   .. js ::
 
     require(["dojox/image/LightboxNano", "dojo/domReady!"], function(LightboxNano) {
-        var lightbox = new LightboxNano({}, "myLink");
+        var lightbox = new LightboxNano({
+           // note: you still need the href property. It's not read from the anchor tag attribute.
+           href: "{{baseUrl}}dojox/image/tests/images/chris3_lg.jpg"  // path to large image
+}, "myLink");
     });
 
   .. css ::
@@ -135,7 +138,7 @@ Standard way to declaratively create the LightboxNano
 
   .. js ::
 
-    require(["dojo/parser", "dojox.image.LightboxNano"]);
+    require(["dojo/parser", "dojox/image/LightboxNano"]);
 
   .. css ::
 
@@ -153,7 +156,7 @@ Should you want to destroy LightboxNano, you'll need to use the data-dojo-id. Yo
 
   .. js ::
 
-    require(["dojo/parser", "dojox.image.LightboxNano"]);
+    require(["dojo/parser", "dojox/image/LightboxNano"]);
 
   .. css ::
 
