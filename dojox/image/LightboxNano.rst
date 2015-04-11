@@ -116,7 +116,7 @@ Create the LightboxNano on an <a> element:
         var lightbox = new LightboxNano({
            // note: you still need the href property. It's not read from the anchor tag attribute.
            href: "{{baseUrl}}dojox/image/tests/images/chris3_lg.jpg"  // path to large image
-}, "myLink");
+        }, "myLink");
     });
 
   .. css ::
