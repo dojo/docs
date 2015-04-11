@@ -90,13 +90,17 @@ Create the LightboxNano on an <img> element:
 
 .. code-example ::
 
-    .. js ::
+  .. js ::
 
         require(["dojox/image/LightboxNano", "dojo/domReady!"], function(LightboxNano) {
             var lightbox = new LightboxNano({
                 href: "/path/to/large/image.jpg"
             }, "myImg");
         });
+
+    .. css ::
+
+        @import "resources/Lightbox.css";
 
   .. html ::
 
