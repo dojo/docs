@@ -54,8 +54,7 @@ Programmatic example
             constraints: {
                 timePattern: 'HH:mm:ss',
                 clickableIncrement: 'T00:15:00',
-                visibleIncrement: 'T00:15:00',
-                visibleRange: 'T01:00:00'
+                visibleIncrement: 'T00:15:00'
             }
         }, "progval");
         timeTextBox.startup();
