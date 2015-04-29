@@ -9,14 +9,14 @@ dojox.calendar
 dojox.calendar allows to display events in time and edit them.
 
 .. contents ::
-  :depth: 3
+:depth: 3
 
 Introduction
 =============
 
-The dojox calendar widget displays events from a data store along time using widespread representation and allows to interactively edit the position in time and duration of these events.
+The dojox calendar widget displays events from a data store, and has several standard visual representations that allow the user to interactively edit the position the time and duration of these events.
 
-**Note**: On a supported version of Internet Explorer a standard doctype must be set on the page that includes the calendar for the calendar to be supported (see http://www.w3.org/QA/2002/04/valid-dtd-list.html).
+**Note**: On supported versions of Internet Explorer, a standard doctype must be set on the page that includes the calendar for the calendar to be supported (see http://www.w3.org/QA/2002/04/valid-dtd-list.html).
 
 **Terminology:** The "event" word can be interpreted in several ways in a calendar application context. So in this documentation we will use the following words to prevent confusion:
    * **data item**: item from the data store. A data item is the data representation of an event (e.g. Meeting at 9am to 10am).
@@ -31,9 +31,7 @@ Creating a Calendar
 
 The calendar widget is available on the dojox.calendar package.
 
-First you need to include the dojox Calendar theme.
-
-To include a given theme on your page or application, first include the `dojox/calendar/themeName/Calendar.css` file
+First you need to include the dojox Calendar theme by including the `dojox/calendar/themeName/Calendar.css` file
 (one of `claro`, `tundra`, `nihilo`, or `soria`):
 
 .. html ::
@@ -76,10 +74,10 @@ You can create a calendar widget either with markup or programmatically.
 The following example shows how to declare a calendar widget in markup:
 
 .. code-example::
-  :width: 620
-  :height: 620
+:width: 620
+      :height: 620
 
-  .. js ::
+      .. js ::
 
     require(["dojo/ready", "dojox/calendar/Calendar"]);
 
@@ -88,22 +86,22 @@ The following example shows how to declare a calendar widget in markup:
     <style type="text/css">
       .dojoxCalendar{ font-size: 12px; font-family:Myriad,Helvetica,Tahoma,Arial,clean,sans-serif; }
     </style>
-                                                                  
-    <div data-dojo-type="dojox/calendar/Calendar" 
-         data-dojo-props="dateInterval:'day'" 
+
+    <div data-dojo-type="dojox/calendar/Calendar"
+         data-dojo-props="dateInterval:'day'"
          style="position:relative;width:600px;height:600px">
     </div>
-    
+
 
 The following example shows how to declare a calendar widget programmatically:
 
 .. code-example::
-  :width: 620
-  :height: 620
+:width: 620
+      :height: 620
 
-  .. js ::
+      .. js ::
 
-      require(["dojo/parser", "dojo/ready", "dojox/calendar/Calendar"], 
+      require(["dojo/parser", "dojo/ready", "dojox/calendar/Calendar"],
         function(parser, ready, Calendar){
           ready(function(){
             calendar = new Calendar({
@@ -113,24 +111,24 @@ The following example shows how to declare a calendar widget programmatically:
                     }
                 )}
         );
-  
+
   .. html::
 
     <style type="text/css">
       .dojoxCalendar{ font-size: 12px; font-family:Myriad,Helvetica,Tahoma,Arial,clean,sans-serif; }
     </style>
-                                                                        
+
     <div id="someId" >
-    </div>  
+    </div>
 
 Configuring Calendar data
 =========================
 
 The calendar widget is populated with a list of data items using a store set on its store property.
 
-The Calendar can connect to any implementation of the dojo.store.api.Store interface that implements get/query and id management (getIdentity). **A data item must have an unique identifier.**
+The Calendar can connect to any implementation of the `dojo.store.api.Store` interface that implements get/query and id management (getIdentity). **A data item must have an unique identifier.**
 
-If the Calendar is displaying live data (ie. data that can be edited by the Calendar itself or data that can change outside of the Calendar), the store must be a dojo.store.Observable.
+If the Calendar is displaying live data (ie. data that can be edited by the Calendar itself or data that can change outside of the Calendar), the store must be a `dojo.store.Observable`.
 
 Manage store errors
 -------------------
@@ -151,11 +149,11 @@ Data mapping
 In order to display the data items, the widget must determine for each data item its start and end time.
 It will look by default at the "startTime" and "endTime" properties.
 
- 
+
 .. js ::
 
   var someData = [
-    {  
+    {
       id: 0,
       summary: "Event 1",
       startTime: new Date(2012, 0, 1, 10, 0),
@@ -194,7 +192,7 @@ The property names can be configured by setting the "startTimeAttr" and "endTime
   }, "someId");
 
 The value retrieved can be a date directly usable by the calendar or must converted into a date.
-Since Dojo 1.9, the calendar is using Date instances or directly converts from ISO format in a similar way than the following example.
+Since Dojo 1.9, the calendar uses Date instances or directly converts from ISO format in a similar way than the following example.
 
 In the latter case, the **decodeDate()** and **encodeDate()** functions must be set to respectively decode the object into a date and encode the date into a custom object after an editing.
 
@@ -206,7 +204,7 @@ The encodeDate() will allow to sent back a date in the ISO format after a data i
 
 
  var someData = [
-   { 
+   {
      id: 0,
      summary: "Event 1",
      startTime: "2012-01-01T10:00",
@@ -231,10 +229,10 @@ The encodeDate() will allow to sent back a date in the ISO format after a data i
 In addition to the start and end time, a summary is retrieved on the data item, by default using the "summary" property name (use summaryAttr property to change the property name).
 
 
-The data item can also be flagged "all day". An all-day data item is representing a particular event that spans over one or several days and that starts at the beginning of a day to finish at the beginning of another day.
+The data item can also be flagged "all day". An all-day data item represents a particular event that spans over one or several days and that starts at the beginning of a day to finish at the beginning of another day.
 
-All-day data items can be displayed differently: for example by default they are displayed in the secondary sheet of a column view. The editing behavior of an all-day data item is also different to keep the all-day constraint.
-The calendar is looking to the "allDay" property of a data item to determine if it is an all day or not (boolean value expected). The property name can be configured by setting the allDayAttr property.
+    All-day data items can be displayed differently: for example by default they are displayed in the secondary sheet of a column view. The editing behavior of an all-day data item is also different to keep the all-day constraint.
+    The calendar looks at the "allDay" property of a data item to determine if it is an all day or not (boolean value expected). The property name can be configured by setting the allDayAttr property.
 
 
 Time range definition
@@ -248,7 +246,7 @@ The date property defines the reference date.
 
 The dateInterval property defines the interval (day, week, month) and dateIntervalSteps the number of intervals.
 
-So, depending of these dateInterval values, if ‘n’ is the dateIntervalSteps value, the time range will be:
+So, depending on the value of dateInterval, if ‘n’ is the dateIntervalSteps value, the time range will be:
   * **"day"** - n days from the reference date,
   * **"week"** - n week from the first day of week that contains the reference date,
   * **"month"** - n months from the first day of the month that contains the reference date.
@@ -257,11 +255,11 @@ The following example shows how to display 2 weeks, whose first week contains th
 
 .. html ::
 
-  <div data-dojo-type="dojox/calendar/Calendar" 
-       data-dojo-props="date: new Date(2012, 0, 1), dateInterval:'week', dateIntervalSteps:2" 
-       style="position:relative;width:500px;height:500px"></div>    
+  <div data-dojo-type="dojox/calendar/Calendar"
+       data-dojo-props="date: new Date(2012, 0, 1), dateInterval:'week', dateIntervalSteps:2"
+       style="position:relative;width:500px;height:500px"></div>
 
-When using the definition using the startDate and endDate properties, the date property must be explicitly null. 
+When using the definition using the startDate and endDate properties, the date property must be explicitly null.
 The time of day of these date are not taken into account and the date defined by endDate is included in the time range.
 
 
@@ -269,9 +267,9 @@ The following example shows how to define the time range from the 1st of January
 
 .. html ::
 
-  <div data-dojo-type="dojox/calendar/Calendar" 
-       data-dojo-props="startDate: new Date(2012, 0, 1), endDate: new Date(2012, 0, 9)" 
-       style="position:relative;width:500px;height:500px"></div>      
+  <div data-dojo-type="dojox/calendar/Calendar"
+       data-dojo-props="startDate: new Date(2012, 0, 1), endDate: new Date(2012, 0, 9)"
+       style="position:relative;width:500px;height:500px"></div>
 
 
 To the limit the time range, set the **minDate** and/or **maxDate** properties.
@@ -303,7 +301,7 @@ For example, we can use this feature to change the color of an item renderer dep
     background-color: #00AA00;
   }
   .claro .dojoxCalendarEvent.Calendar1.Hovered .bg {
-    background-color: #00FF00;        
+    background-color: #00FF00;
   }
   .claro .dojoxCalendarEvent.Calendar1.Selected .bg {
     background-color: #004400;
@@ -312,23 +310,23 @@ For example, we can use this feature to change the color of an item renderer dep
     background-color: #0000AA;
   }
   .claro .dojoxCalendarEvent.Calendar2.Hovered .bg {
-    background-color: #0000FF;        
+    background-color: #0000FF;
   }
   .claro .dojoxCalendarEvent.Calendar2.Selected .bg {
     background-color: #000044;
-  }                
-         
+  }
+
 .. js ::
 
   var someData = [
-    { 
+    {
       id: 0,
       summary: "Event 1",
       startTime:  new Date(2012,0, 1, 10),
       endTime: new Date(2012,0, 1, 12),
       calendar: "Calendar1"
     },
-    { 
+    {
       id: 1,
       summary: "Event 2",
       startTime:  new Date(2012,0, 1, 14),
@@ -354,11 +352,7 @@ For further customization, custom item renderers can be created. See dedicated s
 Views
 =====
 
-The calendar is embedding by defaults two views: the columns view and the matrix view.
-
-The views are displaying time and events differently and are more adapted for a given time range to display.
-
-The calendar is using (by default):
+By default the calendar embeds two views:
   * the columns view for time ranges that last from one day to seven days.
   * the matrix view for time ranges that last more than seven days.
 
@@ -371,7 +365,7 @@ Columns View
 
 .. image :: calendar/columnView.png
 
-The columns view is displaying one column per day.
+The columns view displays one column per day.
 
 It view is made of two sheets:
   * A main sheet that shows all non all-day data items vertically.
@@ -382,16 +376,16 @@ See Advanced configuration section to see how to change this behavior.
 This view is accessible through the **columnView** property of  the calendar widget.
 
 The main properties of the columns view are:
-  * **startDate** * - The date of the first column,  
-  * **columnCount** * - The number of column to display,
+  * **startDate** * - The date of the first column,
+  * **columnCount** * - The number of columns to display,
   * **minHours** - The first hour displayed by the main sheet,
   * **maxHours** - The last hour displayed (excluded),
   * **hourSize** - The desired size in pixels of one hour,
   * **timeSlotDuration** - The duration of minutes of the time slot (must be a divisor of 60),
   * **subColumns** - The definition of sub columns (See Advanced configuration).
-  * **minColumnWidth** - The minumum width in pixels of a column (or a sub column if sub columns are set). 
+  * **minColumnWidth** - The minumum width in pixels of a column (or a sub column if sub columns are set).
 
-    * If set -1, the columns fill the width of the calendar. 
+    * If set -1, the columns fill the width of the calendar.
     * If set to a fixed value and if there's not enough room to show the columns using this minimum width, the view becomes scrollable horizontally. Otherwise, the columns fill the width of the calendar.
 
 Properties with an (*) are computed by the calendar widget.
@@ -402,8 +396,8 @@ To specify constructor parameters of the column view, set the columnViewProps pr
 
 .. html ::
 
-  <div data-dojo-type="dojox/calendar/Calendar" 
-       data-dojo-props="dateInterval:'day',columnViewProps:{minHours:6}" 
+  <div data-dojo-type="dojox/calendar/Calendar"
+       data-dojo-props="dateInterval:'day',columnViewProps:{minHours:6}"
        style="position:relative;width:500px;height:500px"></div>
 
 The time of day displayed is defined by the minHours (8 by default) and maxHours (18 by default) properties. For example to show the entire day set minHours to 0 and maxHours to 24.
@@ -418,7 +412,7 @@ Matrix View
 
 .. image :: calendar/matrixView.png
 
-The matrix view is displaying a matrix in which each day is a cell. Time is flowing horizontally.
+The matrix view displays a matrix in which each day is a cell. Time flows horizontally.
 
 This view is accessible through the **matrixView** property of  the calendar widget.
 
@@ -439,18 +433,18 @@ To specify constructor parameters of the matrix view, set the matrixViewProps pr
 
 .. html ::
 
-  <div data-dojo-type="dojox/calendar/Calendar" 
-       data-dojo-props="matrixViewProps:{expandDuration:0}" 
+  <div data-dojo-type="dojox/calendar/Calendar"
+       data-dojo-props="matrixViewProps:{expandDuration:0}"
        style="position:relative;width:500px;height:500px"></div>
 
 
-The item renderers that are overlapping are stacked vertically. 
+Overlapping item renderers are stacked vertically.
 
 Sometimes there is not enough room to show all item renderers. In that case, an expand renderer (by default an arrow) is displayed at the bottom of the cell to indicate that some item renderers are not visible.
 
-The matrix view allows to expand a row to see more events. 
+The matrix view is able to expand a row to see more events.
 
-By default the calendar is using this feature when an expand renderer is clicked or when an row header cell is clicked.
+By default the calendar uses this feature when an expand renderer is clicked or when a row header cell is clicked.
 
 .. image :: calendar/expandRenderer.png
 
@@ -463,20 +457,20 @@ Month Columns View
 
 .. image :: calendar/monthColumnView.png
 
-The month columns view is displaying one column per month.
+The month columns view displays one column per month.
 
-This view is not in the calendar by default but it can be added, see tests/ExtendedCalendar sample class and advanced configuration for more information.
+This view is not in the calendar by default. See tests/ExtendedCalendar sample class and Advanced configuration for more information.
 
 The main properties of the columns view are:
-  * **startDate** * - The date of the first column,  
-  * **columnCount** * - The number of column to display,
+  * **startDate** * - The date of the first column,
+  * **columnCount** * - The number of columns to display,
   * **daySize** - The desired size in pixels of one day.
 
 Properties with an (*) are computed by the calendar widget.
 
-By default, this is view is using vertical item renderers to show all-day data items and data items longer than one day.
+By default, this view uses vertical item renderers to show all-day data items and data items longer than one day.
 
-If a day is containing one or several hidden data items (i.e. short data items by default), a decoration is displayed on the grid cell.
+If a day contains one or several hidden data items (i.e. short data items by default), a decoration is displayed on the grid cell.
 
 .. image :: calendar/monthColumnViewHidden.png
 
@@ -491,7 +485,7 @@ There are two widget classes:
    * Calendar: allows mouse and keyboard interactions,
    * MobileCalendar: allows touch interactions.
 
-For advanced developer, views (see class diagram) can be mixed with Mouse and Keyboard or Touch classes to enable respective interactions.
+For advanced development, views (see class diagram) can be mixed with Mouse and Keyboard or Touch classes to enable respective interactions.
 
 Selection
 ---------
@@ -524,21 +518,21 @@ Using the keyboard
 
 If the calendar widget has the focus, press the left or right arrow keys to select a data item.
 
-To move only the focus on a data item and not select it at the same time, press left or right arrow keys while maintaining the control key.
+To move only the focus on a data item and not select it at the same time, press left or right arrow keys while holding the control key.
 
-To deselect a data item or extend selection (if selection mode is "multiple"), move the focus to an item renderer and press the space bar while maintaining the control key.
+To deselect a data item or extend selection (if selection mode is "multiple"), move the focus to an item renderer and press the space bar while holding the control key.
 
 Using a touch device
 ````````````````````
 
-To select a data item, simply tap on it. 
+To select a data item, simply tap on it.
 
 Data item editing
 -----------------
 
 The calendar widget allows to move and resize a data item.
 
-Only one data item can be edited at a time. 
+Only one data item can be edited at a time.
 
 Note: for more information on data item editing behavior and events, See dedicated section of advanced configuration: `Editing flags`_
 
@@ -559,7 +553,7 @@ If a data item has the focus (see selection section), press the enter key to edi
 In editing mode:
 
   * press the arrow keys to move the data item,
-  * press the up or down arrow keys while maintaining the control key to resize it by moving the end of this data item.
+  * press the up or down arrow keys while holding the control key to resize it by moving the end of this data item.
   * press the enter key to validate the changes and leaving the edit mode.
   * press the escape key to cancel the changes and leaving the edit mode.
 
@@ -591,7 +585,7 @@ Today      Show the current day.
 Day        Shows the day defined by the "date" property or the current day if the date property is null.
 Four days  Shows four days from the the day defined by the day property of  the current day if the date property is null.
 Week       shows the week that contains the day defined by the "date" property.
-Month      shows the month that contains the day defined by the "date" property.    
+Month      shows the month that contains the day defined by the "date" property.
 ========== ======
 
 The following functions are also exposed to help navigation:
@@ -607,26 +601,26 @@ Interactive data item creation
 
 Data items are retrieved in the data store. To programmatically add a new data item, the developer can use the store add() method (and *remove()* to delete it). If the store is an dojo.store.Observable store, the Calendar will automatically update its rendering.
 
-The calendar is allowing to interactively create a data item by pressing the mouse button on the grid and dragging the mouse to set the duration of the event.
+The calendar lets you to interactively create a data item by pressing the mouse button on the grid and dragging the mouse to set the duration of the event.
 
-Since Dojo 1.9, this interactive creation is working with asynchronous stores, the newly created data item is added at the end of the gesture.
+Since Dojo 1.9, this interactive creation works with asynchronous stores, with the newly created data item being added at the end of the gesture.
 
 To enable the creation, the createOnGridClick property of the calendar must be set to true (false by default).
 Furthermore, a custom function creating the data item must be set on the createItemFunc property.
 
-This custom function is taking three arguments:
+This custom function takes four arguments:
    * The current view,
    * The date of the clicked location,
    * The mouse event.
    * The sub column (Column view only, can be null)
 
-The following example is showing an implementation of the createItemFunc that is creating a data item if and only if the control key only is pressed during the interaction. The created event initial position and duration is depending on the current view.
+The following example shows an implementation of `createItemFunc` that creates a data item if and only if the control key only is pressed during the interaction. The created event's initial position and duration depends on the current view.
 
 .. js ::
 
   var createItem = function(view, d, e, subColumn){
 
-    // create item by maintaining control key
+    // create item by holding control key
     if(!e.ctrlKey || e.shiftKey || e.altKey){
       return;
     }
@@ -634,15 +628,15 @@ The following example is showing an implementation of the createItemFunc that is
     var start, end;
     var colView = calendar.columnView;
     var cal = calendar.dateModule;
-	
+
     if(view == colView){
       start = calendar.floorDate(d, "minute", colView.timeSlotDuration);
-      end = cal.add(start, "minute", colView.timeSlotDuration); 
+      end = cal.add(start, "minute", colView.timeSlotDuration);
     }else{
       start = calendar.floorToDay(d);
       end = cal.add(start, "day", 1);
     }
-	
+
     var item = {
       id: id,
       summary: "New event " + id,
@@ -650,10 +644,10 @@ The following example is showing an implementation of the createItemFunc that is
       endTime: end,
       allDay: view.viewKind == "matrix"
     };
-	
-    id++;	
-	
-    return item;							
+
+    id++;
+
+    return item;
   }
 
   calendar.set("createOnGridClick", true);
@@ -663,7 +657,7 @@ The following example is showing an implementation of the createItemFunc that is
 No identifier use case
 ``````````````````````
 
-If the data item return by the createItemFunc does not have an identifier, the calendar will create a temporary one internally to be able to manage this data item. 
+If the data item return by the createItemFunc does not have an identifier, the calendar will create a temporary one internally to be able to manage this data item.
 
 During the addition in the store, an identifier must be assigned to this data item. The calendar must be able to link the temporary identifier to the real one. The data item must contain the **temporaryId** property to make this link and clean its internal state. An implementation is to subclass the store like in the following example.
 
@@ -705,16 +699,16 @@ rowHeaderClick          (Matrix view) a cell of the row header has been clicked 
 expandRendererClick     (Matrix view) an expand renderer has been clicked            rowIndex, columnIndex Yes
 onExpandAnimationEnd    (Matrix view) an expand or collapse row animation has ended  null                  Yes
 columnHeaderClick       (Column views) a cell of the column header has been clicked  index, date           Yes
-onItemEditBegin         The calendar is entering in editing mode                     item                  Yes
-onItemEditBeginGesture  An editing gesture of data item is beginning                 item,editKind         Yes
+onItemEditBegin         The calendar enters into editing mode                        item                  Yes
+onItemEditBeginGesture  An editing gesture of data item begins                       item,editKind         Yes
 onItemEditMoveGesture   A data item is being moved                                   item                  Yes
 onItemEditResizeGesture	A data item is being resized                                 item                  Yes
 onItemEditEndGesture    An editing gesture has been finished                         item, editKind        Yes
-onItemEditEnd           The calendar is leaving editing mode                         item, completed       Yes
+onItemEditEnd           The calendar leaves editing mode                             item, completed       Yes
 ======================= ============================================================ ===================== ===========
-	
+
 Note: The change event is different than the itemClick event:
-  * A change event with a null item value is sent if the grid is clicked. 
+  * A change event with a null item value is sent if the grid is clicked.
   * If an already selected data item is clicked the change event is not dispatched but the itemClick event is.
 
 To react on a calendar event use the on() method to register a listener as shown in the following event:
@@ -739,7 +733,7 @@ Class diagram
 Class                    Description
 ======================== ===========
 ViewBase                 The base class of calendar views.
-CalendarBase             The base calendar class that is managing a set of calendar views and exposes time range definition properties.
+CalendarBase             The base calendar class that manages a set of calendar views and exposes time range definition properties.
 Calendar                 The desktop specific calendar that defines a column view and a matrix view with keyboard and mouse interactions enabled and default renderers
 MobileCalendar           The mobile specific calendar that defines a column view and a matrix view with touch interactions enabled and specific default renderers.
 
@@ -756,8 +750,8 @@ Class                    Description
 ======================== ===========
 MatrixView               The view that displays days as a matrix of days.
 SimpleColumnView         The view that displays each day as a column.
-ColumnView               A SimpleColumnView with a secondary sheet that is showing all day events.
-ColumnViewSecondarySheet A MatrixView designed to be integrated as a secondary sheet of a ColumnView. 
+ColumnView               A SimpleColumnView with a secondary sheet that shows all-day events.
+ColumnViewSecondarySheet A MatrixView designed to be integrated as a secondary sheet of a ColumnView.
 MonthColumnView          The view that displays each month as a column.
 Mouse                    A mixin that enables interactions on events using the mouse.
 Keyboard                 A mixin that enables interactions on events using the keyboard.
@@ -777,15 +771,15 @@ Calendar
 Calendar views animations
 `````````````````````````
 
-On modern browsers, the calendar is performing an animation when:
-   * The displayed time interval is changing and/or
-   * The current view is changing to display the time interval.
+On modern browsers, the calendar performs an animation when:
+   * The displayed time interval changes and/or
+   * The current view changes to display the time interval.
 
 To disable this animation set the calendar animateRange property to false (true by default).
 
 To change the duration of the animation set the animationRangeDuration property (400 by default).
 
-For the most skillful developers, subclass the _animateRange() method to implement your own animation. 
+For advanced customization, subclass the _animateRange() method to implement your own animation.
 
 View management
 ```````````````
@@ -795,7 +789,7 @@ To specify the views to use instead of the default views, set the views property
 
 The view switching is determined according to the displayed time interval.
 
-The calendar is going through the following steps:
+The calendar goes through the following steps:
 
   * One or several properties that are defining the displayed time range are changed,
   * The new displayed time interval is computed,
@@ -815,13 +809,13 @@ The following example shows the creation of custom views and a change the defaul
     secondarySheetClass: secondarySheetClass,
     secondarySheetProps: {
       horizontalRendererHeight: 16
-    },        
+    },
     verticalRenderer: VerticalRenderer,
     horizontalRenderer: HorizontalRenderer,
     expandRenderer: ExpandRenderer
   });
 
-  var matrixView = declare([MatrixView, Keyboard, Mouse])({                                                        
+  var matrixView = declare([MatrixView, Keyboard, Mouse])({
     horizontalRenderer: HorizontalRenderer,
     labelRenderer: LabelRenderer,
     expandRenderer: ExpandRenderer,
@@ -839,7 +833,7 @@ The following example shows the creation of custom views and a change the defaul
     dateIntervalSteps: 2
   }, "calendarNode");
 
-Right-to-left 
+Right-to-left
 -------------
 
 See http://dojotoolkit.org/reference-guide/quickstart/internationalization/bi-directional-text.html
@@ -849,14 +843,14 @@ To have a correct rendering in right-to-left display, you must import the calend
 Bidi
 ----
 
-The calendar is also supporting the "textDir" property. 
+The calendar is also supporting the "textDir" property.
 
 Enable bidi in dojo config and set the "textDir" property to “rtl”, “ltr” or “auto” to set the contextual text direction.
 
 .. html ::
 
-	<script type="text/javascript" 
-		data-dojo-config="has: { 'dojo-bidi': true }" 
+	<script type="text/javascript"
+		data-dojo-config="has: { 'dojo-bidi': true }"
 		src="../../../dojo/dojo.js"></script>
 
 
@@ -864,22 +858,22 @@ Enable bidi in dojo config and set the "textDir" property to “rtl”, “ltr�
 Alternate calendars
 -------------------
 
-The calendar is using by default the Gregorian calendar to display time, but the alternate calendars defined in dojox.date package can be set on the calendar.
+The calendar uses, by default, the Gregorian calendar to display time. However, alternate calendars defined in dojox.date package can be set on the calendar.
 
 In the constructor, set the datePackage to change the calendar. Remember to use the corresponding date object in the input data store.
 
 The following example shows to how to set the Hebrew calendar:
 
 .. js ::
- 
-  new Calendar({datePackage: "dojox.date.hebrew"}, "calendarNode");        
+
+new Calendar({datePackage: "dojox.date.hebrew"}, "calendarNode");
 
 Date/time formatting
 --------------------
 
 The displayed dates labels are formatted using dojo formatters. If no specific calendar is specified the dojo.date.locale object is used (formatting Gregorian calendar dates), otherwise it is the dojox.date.XXXX.locale (for other calendars).
 
-The formatter is using the CLDR (http://cldr.unicode.org/) to determine according to the current locale the correct date format to use and how to properly format the date.
+The formatter uses the CLDR (http://cldr.unicode.org/) to determine according to the current locale the correct date format to use and how to properly format the date.
 
 The date format patterns can be specified by setting view specific properties or functions defined in following view sections.
 
@@ -896,7 +890,7 @@ We can define a function to have a more compact display:
   new Calendar({
     formatItemTimeFunc: function(d, rd, view, item){
       return rd.dateLocaleModule.format(d, {
-        selector: 'time', 
+        selector: 'time',
         timePattern: d.getMinutes() == 0 ? "ha":"h:mma"
       }).toLowerCase();
     }
@@ -909,14 +903,14 @@ In that case, the time label on item renderers and the time displayed in the row
 
 .. js ::
 
-  calendar.set("formatItemTimeFunc", 
-    function(d, rd, view, item){ 
-      return rd.dateLocaleModule.format(d, 
-      {  selector: 'time', 
+  calendar.set("formatItemTimeFunc",
+    function(d, rd, view, item){
+      return rd.dateLocaleModule.format(d,
+      {  selector: 'time',
          timePattern: d.getMinutes() == 0 ? "H'h'":"H'h'mm"
-      } 
+      }
     }
-  ); 
+  );
   calendar.columnView.set("rowHeaderTimePattern", "H'h'");
 
 if the calendar instance is already declared or in the calendar constructor:
@@ -926,7 +920,7 @@ if the calendar instance is already declared or in the calendar constructor:
   new Calendar({
     formatItemTimeFunc: function(d, rd, view, item){
       return rd.dateLocaleModule.format(d, {
-        selector: 'time', 
+        selector: 'time',
         timePattern: d.getMinutes() == 0 ? "ha":"h:mma"
       }).toLowerCase();
     },
@@ -945,8 +939,8 @@ Decoration data items are items like data items that have a start and end time.
 They are displayed in the calendar above the grid but below the data item renderers.
 Decorations can be used to display free or busy times, vacations, etc.
 
-If sub columns are set, the decoration data items can have a sub column associated. 
-If set, the decoration will be displayed in the sub column. 
+If sub columns are set, the decoration data items can have a sub column associated.
+If set, the decoration will be displayed in the sub column.
 If no sub column is set, the decoration will be displayed in all sub columns.
 The property to determine the sub column of a data item is also used for decoration data items (by default "calendar").
 
@@ -956,11 +950,11 @@ To set the decoration items, set a dojo.store.api.Store to the decorationStore p
 
   new Calendar({
     decorationStore: new Memory(
-      {data: 
+      {data:
         [
           {
-            startTime: "2014-01-10T00:00:00Z", 
-            endTime: "2014-01-13T00:00:00Z", 
+            startTime: "2014-01-10T00:00:00Z",
+            endTime: "2014-01-13T00:00:00Z",
             calendar: "cal1"
           }
         ]
@@ -980,17 +974,17 @@ The cssClassFunc function is also applied to decoration renderers. So styling of
 
   .dojoxCalendarDecoration.Calendar1 {
     background-color: blue !important;
-  } 
+  }
 
-.. js :: 
+.. js ::
 
   calendar.set("cssClassFunc",
     function(item){
       return item.calendar == "cal1" ? "Calendar1" : "Calendar2"
     });
 
-This code is associating a CSS class (Calendar1 or Calendar2) to a decoration data item according to the value stored in the calendar property of this decoration data item.
-The CSS code is changing the background color of the decoration renderer according to the CSS class applied.
+This code associates a CSS class (Calendar1 or Calendar2) to a decoration data item according to the value stored in the calendar property of this decoration data item.
+The CSS code changes the background color of the decoration renderer according to the CSS class applied.
 
 
 Common properties
@@ -1021,12 +1015,12 @@ For example, to show all-day data item and all the data items whose duration is 
 
   new ColumnView({
     itemToRendererKindFunc: function(item){
-      return item.allDay || 
+      return item.allDay ||
         this.dateFuncObj.difference(item.startTime, item.endTime, "minute") > 1440 ? "null" : "vertical";
       },
     secondarySheetProps: {
       itemToRendererKindFunc: function(item){
-        return item.allDay || 
+        return item.allDay ||
           this.dateFuncObj.difference(item.startTime, item.endTime, "minute") > 1440 ? "horizontal" : null;
       }
     }
@@ -1054,13 +1048,13 @@ The grid cells can be customized either by using CSS or programmatically.
 Each cell of the calendar has some CSS classes depending on the date/time it displays:
    * "Sun", "Mon", "Tue", "Wed", "Thu", "Fri" or "Sat", depending on the day of week,
    * "H0" to "H23" according to the time of day (Column view only).
-   * "Mxx" where *xx* is the minutes part of the time of day (Column view, depends on the the slot duration). 
+   * "Mxx" where *xx* is the minutes part of the time of day (Column view, depends on the the slot duration).
 
 The following example specifies CSS classes to grey out Wednesdays and the time range between 12pm and 2pm for other days of week:
 
 .. css ::
 
-  .dojoxCalendar .dojoxCalendarGrid .Wed, 
+  .dojoxCalendar .dojoxCalendarGrid .Wed,
   .dojoxCalendar .dojoxCalendarGrid .H12,
   .dojoxCalendar .dojoxCalendarGrid .H13	{
     background-color: #F8F8F8 !important;
@@ -1073,7 +1067,7 @@ The following example show how to install a CSS class to grey out Wednesdays and
 .. css ::
 
   .greyCell{
-    background-color: #F8F8F8 !important;				
+    background-color: #F8F8F8 !important;
   }
 
 .. js ::
@@ -1093,15 +1087,15 @@ The following example show how to install a CSS class to grey out Wednesdays and
     }
     this.defaultStyleGridCell(node, date);
   };
-  calendar.columnView.secondarySheet.set("styleGridCellFunc", func);				
-  calendar.matrixView.set("styleGridCellFunc", func);						
+  calendar.columnView.secondarySheet.set("styleGridCellFunc", func);
+  calendar.matrixView.set("styleGridCellFunc", func);
   calendar.monthColumnView.set("styleGridCellFunc", func);
 
 
 Item renderer overlap
 `````````````````````
 
-When two item renderers are overlapping in time, the item renderers can either be displayed side by side (no overlap) or can overlap visually horizontally (vertical item renderers) or vertically (horizontal item renderers). 
+When two item renderers are overlapping in time, the item renderers can either be displayed side by side (no overlap) or can overlap visually horizontally (vertical item renderers) or vertically (horizontal item renderers).
 
 Note that the label item renderers cannot overlap visually.
 
@@ -1128,9 +1122,9 @@ If you want to change this data item layout priority management, set a sorting f
 Renderers
 `````````
 
-The renderer classes (item renderer and others) are not set by default on the views. 
+The renderer classes (item renderer and others) are not set by default on the views.
 
-The calendar widget is setting the default renderers classes to the views. If a view is used alone, the renderers must be set explicitly.
+The calendar widget sets the default renderers classes to the views. If a view is used alone, the renderers must be set explicitly.
 
 Column View
 -----------
@@ -1151,8 +1145,8 @@ If the view is not used as a standalone, to set a property in constructor use th
 If the calendar instance is already declared, use this syntax:
 
 .. js ::
-  
-  calendar.columnView.set(myColumnViewProperty, value);
+
+calendar.columnView.set(myColumnViewProperty, value);
 
 
 Properties
@@ -1179,7 +1173,7 @@ For example to programmatically scroll the view to 9 am using an animation, use 
 
   columnView.set("startTimeOfDay", {hours:9, duration:1000});
 
-The columns view is using a scroll bar, in right-to-left display, you can define the position of the scroll bar with respect to the sheet by setting the scrollBarRTLPosition property. Values are “left” (default) and “right”.
+The columns view uses a scroll bar, in right-to-left display, you can define the position of the scroll bar with respect to the sheet by setting the scrollBarRTLPosition property. Values are “left” (default) and “right”.
 
 
 Row Header
@@ -1218,7 +1212,7 @@ To display sub columns, the sub column values must be set on the **subColumns** 
 Each data item **must** have a sub column specified otherwise it will not be displayed.
 The **subColumnAttr** property defines on which property the sub column value will be looked on the data item (default value is "calendar").
 
-If the sub column value of a data item is matching a sub column value defined in the **subColumns** property, the data item will appear on the sub column.
+If the sub column value of a data item matches a sub column value defined in the **subColumns** property, the data item will appear on the sub column.
 
 .. js ::
 
@@ -1266,7 +1260,7 @@ For example, using the two previous code sample, we can set the following CSS to
   .dojoxCalendarSubHeaderLabel.cal1 {
     color: #8B0000 !important;
   }
-			
+
   .dojoxCalendarSubHeaderLabel.cal2 {
     color: #253B91 !important;
   }
@@ -1285,7 +1279,7 @@ Example:
 
   var createItem = function(view, d, e, subColumn){
 
-    // create item by maintaining control key
+    // create item by holding control key
     if(!e.ctrlKey || e.shiftKey || e.altKey){
       return;
     }
@@ -1293,15 +1287,15 @@ Example:
     var start, end;
     var colView = calendar.columnView;
     var cal = calendar.dateModule;
-	
+
     if(view == colView){
       start = calendar.floorDate(d, "minute", colView.timeSlotDuration);
-      end = cal.add(start, "minute", colView.timeSlotDuration); 
+      end = cal.add(start, "minute", colView.timeSlotDuration);
     }else{
       start = calendar.floorToDay(d);
       end = cal.add(start, "day", 1);
     }
-	
+
     var item = {
       id: id,
       summary: "New event " + id,
@@ -1310,10 +1304,10 @@ Example:
       allDay: view.viewKind == "matrix",
       calendar: subColumn
     };
-	
-    id++;	
-	
-    return item;							
+
+    id++;
+
+    return item;
   }
 
   calendar.set("createOnGridClick", true);
@@ -1323,19 +1317,19 @@ Example:
 Item editing
 ''''''''''''
 
-The move gestures allow to change the sub column of a data item unless the **allowSubColumnMove** property is set to false on the column view. 
+The move gestures allow to change the sub column of a data item unless the **allowSubColumnMove** property is set to false on the column view.
 
 Layout
 ``````
 
-In addition to the properties defined in the common section, the column view also exposes the horizontalGap property (default is 4). 
+In addition to the properties defined in the common section, the column view also exposes the horizontalGap property (default is 4).
 
 This value is used to specify the gap in pixels between each overlapping renderer if percentOverlap is 0.
 
 Renderers
 `````````
 
-The column view is using several renderers:
+The column view uses several renderers:
   * vertical item renderers to show the data items in the main sheet.
   * horizontal item renderers and expand renderers for secondary sheet.
 
@@ -1390,8 +1384,8 @@ If the view is not used as a standalone, to set a property in constructor use th
 If the calendar instance is already declared, use this syntax:
 
 .. js ::
-  
-  calendar.matrixView.set(myMatrixViewProperty, value);
+
+calendar.matrixView.set(myMatrixViewProperty, value);
 
 
 
@@ -1411,7 +1405,7 @@ The following functions are available on the matrix view to manage this feature:
 
 ===================== ===========
 Method	              Description
-===================== ===========	
+===================== ===========
 expandRow()           Expands a row with an optional animation.
 collapseRow()         Collapses a row with an optional animation.
 getExpandedRowIndex() Returns the expanded row index if any, -1 otherwise.
@@ -1420,7 +1414,7 @@ getExpandedRowIndex() Returns the expanded row index if any, -1 otherwise.
 Renderers
 `````````
 
-The matrix view is using several renderers:
+The matrix view uses several renderers:
 
   * horizontal item renderers (horizontalRenderer property) to display data items that last at least a day,
   * label item renderers (labelRenderer property) to display the other data items.
@@ -1454,7 +1448,7 @@ horizontal horizontalRendererHeight 17
 label      labelRendererHeight      14
 expand     expandRendererHeight     15
 ========== ======================== =============
-	
+
 In addition all the renderers shifted vertically of the value of the cellPaddingTop property (16 by default) to show the cell header.
 
 Styling
@@ -1483,9 +1477,9 @@ The properties and function used by the column view are described in the followi
 ================== ========================== ========
 Label              Formatting function        Property
 ================== ========================== ========
-row header cell	   _formatRowHeaderLabel()    none 
-column header cell _formatColumnHeaderLabel() columnHeaderLabelLength 
-grid cell header   _formatGridCellLabel()     cellHeaderLongPattern (first visible day of month) and/or cellHeaderShortPattern (other days of month) 
+row header cell	   _formatRowHeaderLabel()    none
+column header cell _formatColumnHeaderLabel() columnHeaderLabelLength
+grid cell header   _formatGridCellLabel()     cellHeaderLongPattern (first visible day of month) and/or cellHeaderShortPattern (other days of month)
 ================== ========================== ========
 
 Month Column View
@@ -1496,7 +1490,7 @@ Properties
 
 The displayed time interval is defined by the startDate and columnCount properties. It is columnCount months from the first day of month defined by the startDate.
 
-The desired size of a day is defined by the daySize property (30 by default). 
+The desired size of a day is defined by the daySize property (30 by default).
 
 The scroll position can be retrieved or set using the scrollPosition property. The value is an objet containing the following properties:
 
@@ -1510,12 +1504,12 @@ For example to programmatically scroll the view to the 10th using an animation, 
 
   monthColumnView.set("scrollPosition", {position:10, duration:1000});
 
-The month columns view is using a scroll bar, in right-to-left display, you can define the position of the scroll bar with respect to the sheet by setting the scrollBarRTLPosition property. Values are “left” (default) and “right”.
+The month columns view uses a scroll bar, in right-to-left display, you can define the position of the scroll bar with respect to the sheet by setting the scrollBarRTLPosition property. Values are “left” (default) and “right”.
 
 Layout
 ``````
 
-In addition to the properties defined in the common section, the month column view also exposes the horizontalGap property (default is 4). 
+In addition to the properties defined in the common section, the month column view also exposes the horizontalGap property (default is 4).
 
 This value is used to specify the gap in pixels between each overlapping renderer if percentOverlap is 0.
 
@@ -1571,13 +1565,13 @@ The main property is of course the item property. The item is an object that con
   * **range** - the part of the event displayed by this item renderer. Sometimes several item renderers are needed to display one data item,
   * other layout properties.
 
-The owner property contains a reference to the view that is using this item renderer.
+The owner property contains a reference to the view that uses this item renderer.
 
 This class provides the state management of the displayed item renderer. The values are computed by the view and passed to the renderer.
 
 The state properties are: edited, focused, hovered, selected. If a state is set, a custom CSS class is added (same name with upper case first letter for example “Selected”).
 
-Additional CSS classed are used to describe the data item state with respect to the store: 
+Additional CSS classed are used to describe the data item state with respect to the store:
 
   * "Storing": The data item is being added/updated to the store.
   * "Unstored": The data item is not in the store yet (interactive data item create use case)
@@ -1599,10 +1593,10 @@ The calendar allows to interactively move or resize a data item.
 Steps
 `````
 
-The data item editing process is going through the following steps:
-  * The editing is initialized by a user interaction, the widget is entering in edit mode.
-  * The user is doing some move gestures or/and some resize gestures.
-  * The user validate or cancel the changes, the widget is leaving edit mode.
+The data item editing process goes through the following steps:
+  * The editing is initialized by a user interaction, the widget enters into edit mode.
+  * The user does some move gestures or/and some resize gestures.
+  * The user validate or cancel the changes, the widget leaves edit mode.
 
 There are some specifics depending on the device used:
   * Using the mouse: only one gesture (move or resize) per editing.
@@ -1636,10 +1630,10 @@ The following example shows how to subclass the Calendar to override these funct
   // subclass Calendar class
   var ECalendar = declare("extended.Calendar", Calendar, {
 
-    isItemEditable: function(item, rendererKind){  
+    isItemEditable: function(item, rendererKind){
       return item.editable;
     },
-    
+
     isItemResizeEnabled: function(item, rendererKind){
       return this.isItemEditable(item, rendererKind) && item.resizeEnabled;
     },
@@ -1653,7 +1647,7 @@ The following example shows how to subclass the Calendar to override these funct
 
 .. html ::
 
-  <div id="calendarNode"></div> 
+  <div id="calendarNode"></div>
 
 
 Editing behavior properties
@@ -1733,7 +1727,7 @@ The following example is cancelling the editing gesture when the data item has a
     if(e.storeItem.calendar == "cal2" && e.item.startTime.getHours() >= 13){
       // cancel default behavior (i.e. applying changes to store)
       e.preventDefault();
-		
+
       // set the previously values to revert changes on the render item
       e.item.startTime = ss;
       e.item.endTime = se;
@@ -1744,4 +1738,4 @@ The following example is cancelling the editing gesture when the data item has a
 See also
 ========
 
- * A demo is leveraging the Dojo calendar. Check it out `here <http://demos.dojotoolkit.org/demos/calendar/>`_.
+* A demo leveraging the Dojo calendar `here <http://demos.dojotoolkit.org/demos/calendar/>`_.
