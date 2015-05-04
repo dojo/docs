@@ -9,7 +9,7 @@ dojox.calendar
 dojox.calendar allows to display events in time and edit them.
 
 .. contents ::
-:depth: 3
+  :depth: 3
 
 Introduction
 =============
@@ -74,10 +74,10 @@ You can create a calendar widget either with markup or programmatically.
 The following example shows how to declare a calendar widget in markup:
 
 .. code-example::
-:width: 620
-      :height: 620
+  :width: 620
+  :height: 620
 
-      .. js ::
+  .. js ::
 
     require(["dojo/ready", "dojox/calendar/Calendar"]);
 
@@ -96,8 +96,8 @@ The following example shows how to declare a calendar widget in markup:
 The following example shows how to declare a calendar widget programmatically:
 
 .. code-example::
-:width: 620
-      :height: 620
+  :width: 620
+  :height: 620
 
       .. js ::
 
@@ -1146,7 +1146,7 @@ If the calendar instance is already declared, use this syntax:
 
 .. js ::
 
-calendar.columnView.set(myColumnViewProperty, value);
+  calendar.columnView.set(myColumnViewProperty, value);
 
 
 Properties
@@ -1385,7 +1385,7 @@ If the calendar instance is already declared, use this syntax:
 
 .. js ::
 
-calendar.matrixView.set(myMatrixViewProperty, value);
+  calendar.matrixView.set(myMatrixViewProperty, value);
 
 
 
