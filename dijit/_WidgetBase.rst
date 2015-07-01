@@ -1,7 +1,7 @@
 .. _dijit/_WidgetBase:
 
 =================
-dijit._WidgetBase
+dijit/_WidgetBase
 =================
 
 .. contents ::
@@ -10,9 +10,9 @@ dijit._WidgetBase
 Introduction
 ============
 
-dijit._WidgetBase is the base class for all widgets in dijit,
+dijit/_WidgetBase is the base class for all widgets in dijit,
 and in general is the base class for all dojo based widgets.
-Usually widgets also extend other mixins such as :ref:`dijit._TemplatedMixin <dijit/_TemplatedMixin>`.
+Usually widgets also extend other mixins such as :ref:`dijit/_TemplatedMixin <dijit/_TemplatedMixin>`.
 
 Note that the underscore in the name implies not that _WidgetBase is a private class, but rather that it's a base 
 class, rather than a widget directly usable.
@@ -20,12 +20,13 @@ class, rather than a widget directly usable.
 Usage
 =====
 
-All widgets are created by calling :ref:`dojo.declare() <dojo/declare>`, extending from _WidgetBase:
+All widgets are created by calling :ref:`dojo/_base/declare <dojo/declare>`, extending from _WidgetBase:
 
 .. js ::
- 
-   dojo.declare("MyWidget", dijit._WidgetBase, { ... });
-
+   define(['dojo/_base/declare'], function (declare) {
+       return declare(_WidgetBase, { ... });
+   });
+   
 and then redefining a number of methods for the widget `lifecycle`_...
 
 Lifecycle
@@ -35,8 +36,8 @@ The lifecycle of a widget describes the phases of its creation and destruction w
 It's useful to understand exactly what happens when.
 Whether you are sub-classing an existing widget, using dojo/method script blocks, or passing in method overrides to the constructor, these are your entry points for making a widget do what you want it to do.
 
-Widgets are classes, created with dojo.declare.
-All widgets inherit from dijit._WidgetBase, and most get the _Templated mixin.
+Widgets are classes, created with dojo/_base/declare.
+All widgets inherit from dijit/_WidgetBase, and most get the _TemplatedMixin.
 That provides you the following extension points (methods) you can override and provide implementation for:
 
 - constructor
@@ -46,7 +47,7 @@ That provides you the following extension points (methods) you can override and 
 - parameters are mixed into the widget instance
      This is when attributes in the markup (ex: <button iconClass=...>) are mixed in or,
      if you are instantiating directly, the properties object you passed into the constructor
-     (ex: new dijit.form.Button({label: "hi"})).
+     (ex: new Button({label: "hi"})).
      This step itself is not overridable, but you can play with the result in...
 
 - postMixInProperties
@@ -55,11 +56,11 @@ That provides you the following extension points (methods) you can override and 
      If you need to add or change the instance's properties before the widget is rendered - this is the place to do it.
 
 - buildRendering
-     :ref:`dijit._Templated <dijit/_Templated>` provides an implementation of buildRendering
+     :ref:`dijit/_TemplatedMixin <dijit/_TemplatedMixin>` provides an implementation of buildRendering
      that most times will do what you need.
      The template is fetched/read, nodes created and events hooked up during buildRendering.
      The end result is assigned to this.domNode.
-     If you don't mixin :ref:`dijit._Templated <dijit/_Templated>` (and most OOTB dijits do)
+     If you don't mixin :ref:`dijit/_TemplatedMixin <dijit/_TemplatedMixin>` (and most OOTB dijits do)
      and want to handle rendering yourself
      (e.g. to really streamline a simple widget, or even use a different templating system) this is where you'd do it.
 
@@ -83,13 +84,13 @@ That provides you the following extension points (methods) you can override and 
      Examples on how to destroy a widget:
 
   .. js ::
-    
-    var widget = new dijit.form.TextBox({name: "firstname"}, "inputId");
+    // assumes you have loaded dijit/form/TextBox using AMD
+    var widget = new TextBox({name: "firstname"}, "inputId");
     widget.destroy();
 
   .. js ::
-    
-    dijit.byId("dijitId").destroy();
+    // assumes you have loaded dijit/registry using AMD
+    registry.byId("dijitId").destroy();
 
 
 Other methods
@@ -98,7 +99,7 @@ Other methods
 - resize
     All widgets that do JS sizing should have a method called resize(), that lays out the widget.
     Resize() should be called from startup() and will also be called by parent widgets like
-    :ref:`dijit.layout.ContentPane <dijit/layout/ContentPane>`.
+    :ref:`dijit/layout/ContentPane <dijit/layout/ContentPane>`.
 
 this.inherited()
 ----------------
@@ -122,7 +123,7 @@ Attributes
 Perhaps the most important feature of _WidgetBase is the ability to set attributes at widget initialization,
 or to change their values later on in the widget's lifecycle.
 
-dijit._WidgetBase has implemented the set() method to do this.
+dijit/_WidgetBase has implemented the set() method to do this.
 For example, this call will set a DateTextBox's value to the current date:
 
 .. js ::
