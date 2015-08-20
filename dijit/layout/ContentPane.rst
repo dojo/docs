@@ -95,10 +95,11 @@ Programmatic example
   .. js ::
 
     require(["dijit/layout/ContentPane", "dojo/domReady!"], function(ContentPane){
-        new ContentPane({
+        var cp = new ContentPane({
           content:"<p>Optionally set new content now</p>",
           style:"height:125px"
-        }, "targetID").startup();
+        }, "targetID");
+        cp.startup();
     });
 
   .. html ::
@@ -115,10 +116,12 @@ Programmatic example
   .. js ::
 
     require(["dijit/layout/ContentPane"], function(ContentPane){
-        new ContentPane({
+        var cp = new ContentPane({
           content:"<p>I am initial content</p>",
           style:"height:125px"
-        }).placeAt("targetID2").startup();
+        })
+        cp.placeAt("targetID2");
+        cp.startup();
     });
 
   .. html ::
