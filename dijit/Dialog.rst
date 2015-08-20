@@ -120,7 +120,8 @@ Now let's create a dialog programmatically, and change the dialog's content dyna
                 myDialog.set("content", "Hey, I wasn't there before, I was added at " + new Date() + "!");
                 myDialog.show();
             }
-        }, "progbutton").startup();
+        }, "progbutton");
+        myButton.startup();
     });
 
   .. html ::

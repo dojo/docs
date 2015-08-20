@@ -67,7 +67,7 @@ This example shows how you can set up the same select as the previous example, b
   .. js ::
 
     require(["dijit/form/Select", "dojo/_base/window", "dojo/domReady!"], function(Select, win){
-        new Select({
+        var select = new Select({
             name: "select2",
             options: [
                 { label: "TN", value: "Tennessee" },
@@ -76,7 +76,9 @@ This example shows how you can set up the same select as the previous example, b
                 { label: "FL", value: "Florida" },
                 { label: "CA", value: "California" }
             ]
-        }).placeAt(win.body()).startup();
+        });
+        select.placeAt(win.body());
+        select.startup();
     });
 
 A Select Fed By A Store
@@ -112,7 +114,7 @@ A Select can take its data from a data store, which must currently conform to th
     
       s.on("change", function(){
           console.log("my value: ", this.get("value"))
-      })
+      });
     })
   
   .. html ::

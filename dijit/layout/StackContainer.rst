@@ -101,10 +101,9 @@ Here's an example of a programmatically created StackContainer, and associated S
             content: "page 2 content"
         });
         sc.addChild(cp2);
+        sc.startup();
 
         var controller = new StackController({containerId: "myProgStackContainer"}, "scontroller-prog");
-
-        sc.startup();
         controller.startup();
     });
 

@@ -41,7 +41,7 @@ Mixin `dijit/_AttachMixin` when you declare your dijit and direct it to use DOM 
         }
     });
     // instantiate the dijit instance, which will attach to the 'somenode' div.
-    var mydijit = new MyDijit({}, dom.byId('somenode'));
+    var mydijit = new MyDijit({}, 'somenode');
     mydijit.startup();
 
 You may also want to use :ref:`dijit/_WidgetsInTemplateMixin` to cause dijits in your DOM content, identified by having a `data-dojo-type` property, be parsed while your dijit is instantiated.
@@ -73,7 +73,7 @@ For example, here is a working sample of the above example:
             clicked: function(e) { this.field.value = "I was clicked"; }
         })
 
-        var mydijit = new MyDijit({}, dom.byId('somenode'));
+        var mydijit = new MyDijit({}, 'somenode');
         mydijit.startup();
     })
 
@@ -172,18 +172,17 @@ In this simple example, the outer dijit has the event handler for a field that i
         
         // Create the outer dijit instance, and then the inner one with
         //  its attachScope referencing the outer dijit.
-        var outerdijit = new OuterDijit({}, dom.byId('somenode')),
+        var outerdijit = new OuterDijit({}, 'somenode'),
             innerdijit = new InnerDijit({
                 attachScope: outerdijit
             });
         // The outer dijit is already in the DOM.  Place the inner dijit and
         //  start them both up.
         innerdijit.placeAt(outerdijit.domNode);
-        innerdijit.startup();
         outerdijit.startup();
     })
 
-Thus we achieve efficient delagation of events to the outer dijit instance.
+Thus we achieve efficient delegation of events to the outer dijit instance.
 
 Destruction and other lifecycle issues are not addressed in this example.
 
