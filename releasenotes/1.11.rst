@@ -51,6 +51,10 @@ dojo/on
 
 Added selectorTarget property from on.selector as property of event object, https://bugs.dojotoolkit.org/ticket/18355
 
+dojo/string
+-----------
+
+You can now escape $ in expessions, making it possible to specify a queryExpr: '*-bash*' inside a template without having to modify the caller or widget (for example, within a FilteringSelect Dijit https://bugs.dojotoolkit.org/ticket/18207
 
 Dijit
 =====
