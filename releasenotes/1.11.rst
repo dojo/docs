@@ -46,6 +46,11 @@ of Dojo might include fixes to support future releases of these browsers, but it
 Dojo Core
 =========
 
+dojo/html
+---------
+
+Previously, if a number is passed as the second argument to the dojo/html.set method, it resulted in a "Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'" error. In this situation, numbers should be synonymous with strings for setting content in nodes, so we have fixed this to allow the content to be numeric. https://bugs.dojotoolkit.org/ticket/18703
+
 dojo/on
 -------
 
