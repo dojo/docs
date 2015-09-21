@@ -33,13 +33,13 @@ However, loading deviceTheme using the script tag has the drawback that
 deviceTheme.js cannot be included in a build.
 
 deviceTheme detects the user agent of the browser and loads the appropriate theme files.
-dojox/mobile provides five predefined themes, android, holodark, blackberry, iphone, ipad, and custom.
-If the iPhone device is detected, for example, deviceTheme loads the iphone theme.
+dojox/mobile provides five predefined themes, android, holodark, blackberry, iphone, ios7, ipad, and custom.
+If the iPhone device is detected, for example, deviceTheme loads the ios7 theme.
 
 You can also pass an additional query parameter string: theme={theme id} to force a specific 
 theme through the browser URL input. The available theme ids are Android, BlackBerry, Holodark, 
-Custom, iPhone, iPad and WindowsPhone. The theme names are case sensitive. If the given id does not match, 
-the iphone theme is used.
+Custom, iPhone, ios7, iPad and WindowsPhone. The theme names are case sensitive. If the given id does not match, 
+the ios7 theme is used.
 
 .. html ::
 
@@ -49,6 +49,7 @@ the iphone theme is used.
   http://your.server.com/yourapp.html?theme=BlackBerry // forces blackberry theme
   http://your.server.com/yourapp.html?theme=Custom // forces custom theme
   http://your.server.com/yourapp.html?theme=iPhone // forces iphone theme
+  http://your.server.com/yourapp.html?theme=ios7 // forces ios7 theme
   http://your.server.com/yourapp.html?theme=iPad // forces ipad theme
   http://your.server.com/yourapp.html?theme=WindowsPhone // forces ipad theme
 
@@ -65,7 +66,7 @@ forced by setting dojoConfig.mblUserAgent as follows:
 Loading specific files
 ======================
 
-By default, an all-in-one theme file (e.g. themes/iphone/iphone.css) is
+By default, an all-in-one theme file (e.g. themes/ios7/iphone.css) is
 loaded. The all-in-one theme files contain style sheets for all the
 dojox/mobile widgets regardless of whether they are used in your
 application or not.
@@ -85,8 +86,8 @@ following files will be loaded:
 
 .. html ::
 
-  dojox/mobile/themes/iphone/base.css
-  dojox/mobile/themes/iphone/Button.css
+  dojox/mobile/themes/ios7/base.css
+  dojox/mobile/themes/ios7/Button.css
 
 If you want to load style sheets for your own custom widgets, you can
 specify a package name along with a theme file name in an array.
@@ -99,11 +100,11 @@ In this case, the following files will be loaded:
 
 .. html ::
 
-  dojox/mobile/themes/iphone/base.css
-  com/acme/themes/iphone/MyWidget.css
+  dojox/mobile/themes/ios7/base.css
+  com/acme/themes/ios7/MyWidget.css
 
 If you specify '@theme' as a theme file name, it will be replaced with
-the theme folder name (e.g. 'iphone'). For example,
+the theme folder name (e.g. 'ios7'). For example,
 
 .. html ::
 
@@ -113,8 +114,8 @@ will load the following files:
 
 .. html ::
 
-  dojox/mobile/themes/iphone/iphone.css
-  com/acme/themes/iphone/MyWidget.css
+  dojox/mobile/themes/ios7/iphone.css
+  com/acme/themes/ios7/MyWidget.css
 
 
 Overriding the theme styles
