@@ -25,8 +25,16 @@ your application as follows:
   <script src="dojox/mobile/deviceTheme.js"></script>
   <script src="dojo/dojo.js" data-dojo-config="parseOnLoad: true"></script>
 
-Using the script tag as above is the recommended way to load the deviceTheme. 
-Trying to load it using the AMD loader can lead to styles being applied too late, because the 
+or using the nested require approach:
+
+.. js ::
+
+  require(["dojox/mobile/deviceTheme"], function() {
+      require([ // the dojox mobile widgets dependencies
+
+Using the script tag or the nested require statement as above is the recommended way to load the deviceTheme.
+Trying to load it using the AMD loader in the same require() call as your dojox mobile widgets dependencies
+can lead to styles being applied too late, because the
 loading of the theme files would be performed asynchronously by the browser, so you could 
 not assume that the loading has been completed when your widgets are initialized.
 However, loading deviceTheme using the script tag has the drawback that 
