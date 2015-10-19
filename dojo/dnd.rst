@@ -15,7 +15,7 @@ The drag and drop (DnD) package/system of Dojo.
 Introduction
 ============
 
-**dojo/dnd** provides the basic user interface concepts of "drag and drop" where a user interface element it clicked,
+**dojo/dnd** provides the basic user interface concepts of "drag and drop" where a user interface element is clicked,
 dragged and then dropped in another location. ``dojo/dnd`` uses an "avatar" to represent objects that are being dragged
 from one location to another. As the avatar is shifted, it is designed to not obscure objects under the mouse giving
 better visibility. Additionally, it is possible to represent objects in the Avatar_ differently, which is described in
