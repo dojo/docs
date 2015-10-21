@@ -100,7 +100,7 @@ data-dojo-attach-event
 ----------------------
 (before Dojo 1.6 a.k.a. dojoAttachEvent)
 
-``data-dojo-attach-event`` will automatically setup a connection from an event on the DOM node (onclick in this case) to call a method in the widget (in this case ``increment()``.
+``data-dojo-attach-event`` will automatically setup a connection from an event on the DOM node (onclick in this case) to call a method in the widget (in this case ``increment()``. Multiple connections can be specified by separating them with a comma (e.g. ``keyup: validate, input: validate``).
 
 Here's an example of data-dojo-attach-point and data-dojo-attach-event:
 
