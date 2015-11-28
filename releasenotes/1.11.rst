@@ -103,6 +103,7 @@ Store
 Util
 ====
 
+* Add support for ES language version for Closure Compiler. https://bugs.dojotoolkit.org/ticket/16601
 
 Demos
 =====
