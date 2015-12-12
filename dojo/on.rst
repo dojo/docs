@@ -85,6 +85,8 @@ event    Object This is an object with the properties of the event to be dispatc
                 * cancelable - This indicates that the event's default action can be cancelled. The default action is 
                   cancelled by a listener by calling ``event.preventDefault()``. The emit method does not perform any 
                   default action, it returns a value allowing the calling code to perform any default action.
+                * detail - When an event is emitted using ``widget.emit()``, this object is added and contains useful
+                  information such as a reference to the widget instance that emitted the event.
 ======== ====== =======================================================================================================
 
 ``emit()`` returns the event object unless the event is cancelable and is cancelled by one of the listeners, in which 
