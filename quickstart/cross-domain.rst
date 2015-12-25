@@ -34,31 +34,12 @@ In the examples below, 'VERSION' is the Dojo version you want to use, e.g. "1.2"
 
 Google
 ~~~~~~
-Google `hosts a cross-domain Dojo distribution <http://code.google.com/apis/ajaxlibs/documentation/#dojo>`_ and makes it available via `Google Ajax Libraries API <http://code.google.com/apis/ajaxlibs/>`_. You can use it either by direct loading:
+Google `hosts a cross-domain Dojo distribution <http://code.google.com/apis/ajaxlibs/documentation/#dojo>`_ and makes it available via `Google Ajax Libraries API <http://code.google.com/apis/ajaxlibs/>`_. You can use it by direct loading:
 
 .. html ::
 
   <script src="http://ajax.googleapis.com/ajax/libs/dojo/VERSION/dojo/dojo.js"></script>
 
-or by using Google API:
-
-.. html ::
-
-  <script src="http://www.google.com/jsapi"></script>
-  <script>
-      google.load("dojo", "VERSION");
-  </script>
-
-Note that if you use the Google API, google.load must reside within its own <script> tag, if you intend to do any immediate Dojo manipulations, such as setting configuration parameters. See the code example below. Also, if you are using Google API, you still have to import CSS files explicitly.
-
-
-AOL
-~~~
-AOL `also hosts a cross-domain Dojo distribution <http://dev.aol.com/dojo>`_. To use it, include the following script tag in your page:
-
-.. html ::
-
-  <script type="text/javascript" src="http://o.aolcdn.com/dojo/VERSION/dojo/dojo.js"></script>
 
 Making a custom build
 ---------------------
@@ -89,14 +70,14 @@ Usage example
 .. html ::
 
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.2/dijit/themes/tundra/tundra.css" />
-  <script src="http://www.google.com/jsapi"></script>
-  <script>google.load("dojo", "1.2");</script>
   <script>
       var dojoConfig = {
           parseOnLoad = true,
           dojoBlankHtmlUrl = '/blank.html'
       };
-      
+  </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js"></script>
+  <script>
       function loader(){
           dojo.require("dijit.Editor");
           dojo.ready(callback);
@@ -136,11 +117,10 @@ in the ``packages`` array via ``dojoConfig``:
     
     <!-- Bootstrap Dojo From Google's CDN -->
     <script
-        type="text/javascript"
         src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js">
     </script>
 
-    <script type="text/javascript">
+    <script>
         require(["my/FooModule"], function(FooModule){
             // ...
         });
@@ -165,7 +145,7 @@ via ``dojoConfig``:
 
 .. html ::
   
-    <script type="text/javascript">
+    <script>
         var dojoConfig = {
             baseUrl: "./",
             modulePaths: { my: "relative/path/to/local/modules" }
@@ -174,11 +154,10 @@ via ``dojoConfig``:
     
     <!-- Bootstrap Dojo From Google's CDN -->
     <script
-        type="text/javascript"
         src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojo/dojo.xd.js">
     </script>
 
-    <script type="text/javascript">
+    <script>
         dojo.require("my.FooModule");
         // ...
     </script>
