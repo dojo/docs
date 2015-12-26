@@ -17,6 +17,8 @@ API with a simple, easy to implement and extend API, based on
 `HTML5/W3C's IndexedDB object store API <http://www.w3.org/TR/IndexedDB/#object-store-sync>`_. The ``dojox/storage`` 
 API is already a compatible subset of the Dojo object store API.
 
+Note that the newer `dstore <http://dstorejs.io/>`_ implementation is now available, and should be considered for new efforts. dstore has a compatibility interface with dojo/store.
+
 API
 ===
 
@@ -123,6 +125,8 @@ getMetadata(object)                               Returns any metadata about the
                                                   This may include attribution, cache directives, history, or version 
                                                   information.
 ================================================  =====================================================================
+
+An example of transaction is found in dojox/store/transaction.
 
 Properties
 ----------
@@ -244,6 +248,60 @@ There are also a couple of utility modules:
   This utility will take an array or a promise for an array and return a result set object with all the standard 
   iterative methods that should be available on a result set (``forEach()``, ``map()``, and ``filter()``).
 
+Additional modules for working with transactions, OData, LocalDB (e.g. IndexedDB and WebSQL) are available in dojox/store. Further dojo/store compatible modules can also be found in `smore <https://github.com/SitePen/dojo-smore/>`_ . And as noted earlier, the newer `dstore <http://dstorejs.io/>`_ implementation is now available, and should be considered for new efforts. dstore has a compatibility interface with dojo/store.
+
+Hierarchy
+=========
+
+Working with hierarchical data sets either relies on children items having a reference to their parent, or parent items having a reference to their children. The rationale for this is discussed in length in `ticket 16599 <https://bugs.dojotoolkit.org/ticket/16599>`_ . Two examples are provided here:
+
+.. js ::
+
+  define([
+  	'dojo/_base/array',
+  	'dojo/_base/declare'
+  ], function (array, declare) {
+  
+  	return declare(null, {
+  		childrenProperty: 'children',
+  
+  		getChildren: function (object) {
+  			// hierarchy strategy: parent has an array of child ids
+  			var store = this,
+  				children = object[this.childrenProperty];
+  
+  			return this.query(function (item) {
+  				var id = store.getIdentity(item);
+  				return array.indexOf(children, id) > -1;
+  			});
+  		}
+  	});
+  
+  });
+
+.. js ::
+
+  define([
+  	'dojo/_base/declare'
+  ], function (declare) {
+  
+  	return declare(null, {
+  		parentProperty: 'parent',
+  
+  		getChildren: function (object) {
+  			// hierarchy strategy: children reference parent
+  			var parentId = this.getIdentity(object),
+  				parentProperty = this.parentProperty;
+  
+  			return this.query(function (item) {
+  				return item[parentProperty] === parentId;
+  			}, this);
+  		}
+  	});
+  
+  });
+
+
 Design
 ======
 
@@ -299,6 +357,6 @@ See Also
 ========
 
 * `SitePen Blog Post on Object Stores <http://www.sitepen.com/blog/2011/02/15/dojo-object-stores/>`_
-
 * `Dojo Store Tutorial <http://dojotoolkit.org/documentation/tutorials/1.7/intro_dojo_store/>`_
-
+* `smore <https://github.com/SitePen/dojo-smore/>`_
+* `dstore <http://dstorejs.io/>`_
