@@ -16,11 +16,13 @@ of Dojo might include fixes to support future releases of these browsers, but it
 
 **Desktop**
 
-* Firefox 3.6-32
+* Edge 12
 
-* Safari 6-8
+* Firefox 3.6-43
 
-* Chrome 13-37
+* Safari 6-9
+
+* Chrome 13-47
 
 * IE 8-11
 
@@ -28,23 +30,28 @@ of Dojo might include fixes to support future releases of these browsers, but it
 
 **Mobile (dojox/mobile)**
 
-* iOS (Mobile Safari), 6.x, 7.x, and 8.x (including all Dijit widgets except Editor)
+* iOS (Mobile Safari), 6.x, 7.x, 8.x, and 9.x (including all Dijit widgets except Editor)
 
-* Android 2.3, 4.0-4.4 (Platform browser and Chrome browser) (including all Dijit widgets for Android 4.0-4.4 except Editor)
+* Android (Android Browser and Chrome) 2.3, 4.0-4.4, 5.0-5.1, and  6.0 (Platform browser and Chrome browser) (including all Dijit widgets for Android 4.0-4.4 except Editor)
 
 * BlackBerry 6-7 & 10 (Platform browser)
 
 * Windows Phone 8 (IE10)
 
-* Mobile compatibility on desktop browsers: IE 8-11, Firefox 4-32, Chrome 13-37
+* Mobile compatibility on desktop browsers: Edge 12, IE 8-11, Firefox 4-43, Chrome 13-47
 
 
 **Server-Side User Agents**
 
-* Node 0.8.X, 0.10.X
+* Node 0.10.X, 0.12.x, 4.x, 5.x
 
 Dojo Core
 =========
+
+csp
+---
+
+A feature test, 'has("csp=restrictions")' was added for non-csp compliant code. Please set this feature test to true in order to run code that must be csp compliant.
 
 dojo/html
 ---------
