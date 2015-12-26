@@ -63,6 +63,11 @@ dojo/on
 
 Added selectorTarget property from on.selector as property of event object, https://bugs.dojotoolkit.org/ticket/18355
 
+dojo/sniff
+---------
+
+Added feature tests for Edge, 'has("edge")', and modern Opera, 'has("opr")'. That said, usage of this is strongly discourated. Whenever possible, you should not use sniffing and should instead use feature detection.
+
 dojo/string
 -----------
 
