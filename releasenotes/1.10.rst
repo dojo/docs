@@ -64,6 +64,12 @@ request
 * Added ``arraybuffer``, ``blob``, and ``document``` response types where natively supported
 * Added progress events for chunked encoding
 
+dojo/sniff
+---------
+
+* Added feature tests for Edge, 'has("edge")', and modern Opera, 'has("opr")' in 1.10.5. Note also that 'has("ie")' is false for IE11 as it was replaced with 'has("trident")' per request from Microsoft http://mail.dojotoolkit.org/pipermail/dojo-interest/2013-December/079827.html
+* Usage of browser sniffing is strongly discourated. Whenever possible, you should not use sniffing and should instead use feature detection
+
 Miscellaneous
 -------------
 * Added reusable HTML ``escape()`` function to :ref:`dojo/string <dojo/string>`
