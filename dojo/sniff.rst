@@ -47,17 +47,22 @@ Feature     Notes
 ``air``     Detects Adobe AIR Environments
 ``khtml``
 ``webkit``  Detects Webkit based environments 1.3+
-``chrome``  Detects Google Chrome 1.3+
-``safari``
 ``mac``     Detects if the platform is Mac OSX
 ``quirks``  If the browser is running in "quirks" mode
-``ios``     Detects iOS based devices [1]_
-``android`` Detects Android based devices [1]_
-``opera``
-``mozilla``
-``ff``
-``ie``
+``ios``     Detects iOS devices
+``android`` Detects Android devices
+``bb``      Detects BlackBerry devices
+``chrome``  Detects Google Chrome 1.3+ browser
+``safari``  Detects Safari browser
+``opera``   Detects Opera browser through version 14
+``opr``     Detects Opera browser version 15+ (Dojo 1.9.8+ or 1.10.5+)
+``mozilla`` Detects Mozilla browser
+``ff``      Detects Firefox browser.
+``ie``      Detects Internet Explorer browser through version 10.
+``trident`` Detects Internet Explorer browser through version 11 (trident 7 is IE 11, Dojo 1.9.2+).
+``edge``    Detects Edge browser version 12+. (Dojo 1.9.8+ or 1.10.5+)
 ``wii``     Detects if running on a Nintendo Wii
+``svg``     Detects SVG support
 =========== ============================================
 
 .. [1] See :ref:`dojox/mobile/sniff <dojox/mobile/sniff>` for additional mobile platform detection.
