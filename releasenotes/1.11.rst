@@ -117,6 +117,7 @@ Util
 ====
 
 * Add support for ES language version for Closure Compiler. https://bugs.dojotoolkit.org/ticket/16601
+* Build system will leave intentionally undefined staticHasFeatures as undefined, making it possible to easier to create builds that can run in multiple environments (e.g. Electron and web workers). https://bugs.dojotoolkit.org/ticket/17193
 
 Demos
 =====
