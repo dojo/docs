@@ -73,6 +73,13 @@ same.)   Some of the fixes are:
     - dojoClick property: DOMNodes with the dojoClick property will get click events instantly rather than
       after 300ms, and won't get phantom mousedown/mouseup events 300ms after the touchend event
 
+dojo/sniff
+---------
+
+Added feature tests for Edge, 'has("edge")', and modern Opera, 'has("opr")' in 1.9.8. Note also that 'has("ie")' is false for IE11 as it was replaced with 'has("trident")' per request from Microsoft http://mail.dojotoolkit.org/pipermail/dojo-interest/2013-December/079827.html as of Dojo 1.9.2.
+
+Usage of browser sniffing is strongly discourated. Whenever possible, you should not use sniffing and should instead use feature detection
+
 Dijit
 =====
 
