@@ -59,10 +59,13 @@ Feature     Notes
 ``bb``      Detects BlackBerry devices
 ``chrome``  Detects Google Chrome 1.3+ browser
 ``safari``  Detects Safari browser
-``opera``   Detects Opera browser
+``opera``   Detects Opera browser through version 14
+``opr``     Detects Opera browser version 15+
 ``mozilla`` Detects Mozilla browser
 ``ff``      Detects Firefox browser.
-``ie``      Detects Internet Explorer browser.
+``ie``      Detects Internet Explorer browser through version 10.
+``trident`` Detects Internet Explorer browser through version 11 (trident 7 is IE 11).
+``edge``    Detects Edge browser version 12+.
 ``wii``     Detects if running on a Nintendo Wii
 ``svg``     Detects SVG support
 =========== ============================================
