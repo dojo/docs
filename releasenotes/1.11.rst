@@ -53,6 +53,13 @@ csp
 
 A feature test, 'has("csp=restrictions")' was added for non-csp compliant code. Please set this feature test to true in order to run code that must be csp compliant.
 
+
+dojo/_base/kernel
+-----------------
+
+Added 'has("console-as-object")' for IE9 console quirks. http://bugs.dojotoolkit.org/ticket/18197
+
+
 dojo/html
 ---------
 
@@ -68,6 +75,11 @@ dojo/sniff
 
 Added feature tests for Edge, 'has("edge")', and modern Opera, 'has("opr")'. Note also that 'has("ie")' is false for IE11 as it was replaced with 'has("trident")' per request from Microsoft http://mail.dojotoolkit.org/pipermail/dojo-interest/2013-December/079827.html .
 Usage of browser sniffing is strongly discourated. Whenever possible, you should not use sniffing and should instead use feature detection.
+
+dojo/store
+----------
+
+null queries with JsonRest that provide parameters after ? will no longer include the string null in the query. https://bugs.dojotoolkit.org/ticket/17628
 
 dojo/string
 -----------
