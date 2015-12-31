@@ -174,6 +174,19 @@ change when the user picks certain long options.
 
 The above example also demonstrates using type="separator" to get dividing lines between groups of options.
 
+Note also that there are some inconsistencies between setting inline styles vs. styles via CSS for this widget for its arrow icon. When setting an inline style, the Select changes the 'baseClass' from 'dijitSelect' to 'dijitSelectFixedWidth', which sets 'width:100%' on the '.dijitButtonContents'. So you may want to set style as follows (with the width being whatever value you want for the overall Select:
+
+.. css ::
+
+   .select {
+           width : 8.8em; 
+   }
+   
+   .select .dijitButtonContents {
+   	width: 100%;
+   }
+
+
 Setting Height
 --------------
 
