@@ -45,6 +45,12 @@ of Dojo might include fixes to support future releases of these browsers, but it
 
 * Node 0.10.X, 0.12.x, 4.x, 5.x
 
+General
+=========
+
+* The dojo, dijit, dojox, util, and themes packages now have a bower.json file
+* The dojo, dijit, dojox, and themes packages will exclude node_modules installed within these packages. This is to prevent breaking the build when installing development tools such as Intern or Stylus within a package.
+
 Dojo Core
 =========
 
