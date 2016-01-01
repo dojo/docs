@@ -96,7 +96,7 @@ delegate()
 Returns a new object which "looks" at the passed object for properties which it does not have a value for, or takes a 
 set of properties to seed the returned object with initially.
 
-This is a subset of implementation of the Boodman/Crockford delegation pattern in JavaScript. An intermediate object 
+This implementation is a subset of the Boodman/Crockford delegation pattern in JavaScript. An intermediate object 
 constructor mediates the prototype chain for the returned object, using it to delegate down to the supplied object for 
 property lookup when object-local lookup fails. This can be thought of similarly to ES4's ``wrap()``, except that it 
 does not act on types but rather on pure objects.
@@ -189,22 +189,23 @@ This can be used to extend functionality into existing classes. Consider the fol
     });
   });
 
-The way the :ref:`dojo/parser <dojo/parser>` works, a custom attribute on the node will be recognized, as in the 
-interest of performance, only declared members are mixed as part of the parsing process. Before the above ``extend()``
-call, this sample would not recognize the follow markup:
+The :ref:`dojo/parser <dojo/parser>` scans for custom attributes on a refernce DOM node. In the 
+interest of performance, only declared members of the widget's JavaScript are mixed into the widget
+constructor as part of the parsing process. Without the above ``extend()`` call, this sample would not
+copy the ``randomAttribute`` property from the following markup:
 
 .. html ::
 
   <div data-dojo-type="dijit/TitlePane" data-dojo-props="randomAttribute:'newValue'"></div>
 
-After the extend, any new instances of a ``dijit/TitlePane`` will have the ``randomAttribute`` member mixed into the 
+After the extend, any new instances of a ``dijit/TitlePane`` will have the ``randomAttribute`` property mixed into the 
 instance. ``extend()`` affects all future instances of a class or prototyped Object.
 
 
 Extending dijit/_WidgetBase
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A potentially confusing result of the above actually provides us a lot of flexibility. All Dijit widgets inherit from 
+A potentially confusing result of the previous example actually provides us a lot of flexibility. All Dijit widgets inherit from 
 :ref:`dijit/_WidgetBase <dijit/_WidgetBase>` in one way or another. Some widgets, like the 
 :ref:`dijit/layout/BorderContainer <dijit/layout/BorderContainer>` can contain arbitrary widgets, though require a 
 ``region`` parameter on the contained widget, though rather than manually adding a ``region`` parameter to each 
@@ -219,7 +220,7 @@ any widget within a BorderContainer can specify a ``region``:
     });
   });
 
-The side-effect of this is a documentation nightmare. Now *every* widget appears to have a region variable, when in 
+The side-effect of this is a documentation headache. Now *every* widget appears to have a region variable, when in 
 fact it is just there for the benefit of BorderContainer.  As a side note, this has been addressed in the API Viewer 
 and other documentation as "extension" properties, methods and events and can be easily identified and filtered out.
 
