@@ -65,6 +65,10 @@ dojo/_base/kernel
 
 Added 'has("console-as-object")' for IE9 console quirks. http://bugs.dojotoolkit.org/ticket/18197
 
+dojo/dom
+--------
+
+Added 'has("dom-contains")'. Browsers that natively support 'DOMNode.contains()' will now use this directly.
 
 dojo/html
 ---------
