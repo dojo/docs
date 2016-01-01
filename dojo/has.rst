@@ -136,6 +136,8 @@ the name of the feature test.
  :ref:`dojo/dojo <dojo/dojo>`,dojo-gettext-api, Dojo provides API for retrieving text resource contents from a URL.
  :ref:`dojo/dojo <dojo/dojo>`,dojo-loader-eval-hint-url, Module location should be used as source hint during eval rather than module identifier.
  :ref:`dojo/dojo <dojo/dojo>`,ie-event-behavior, Browser supports legacy IE event behaviour API (attachEvent versus attachEventListener).
+ :ref:`dojo/dom <dojo/dom>`, dom-contains, Existence of 'DOMNode.contains()' API
+ :ref:`dojo/dom <dojo/dom>`, css-user-select, Existence of CSS 'user-select' property
  :ref:`dojo/has <dojo/has>`, host-browser, Environment is running on the browser platform
  :ref:`dojo/has <dojo/has>`, dom, Document Object Module API supported on the current platform
  :ref:`dojo/has <dojo/has>`, dojo-dom-ready-api, "DOMReady API supported on the current platform, allowing listeners to be notified when the DOM has loaded"
