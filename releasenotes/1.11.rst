@@ -133,6 +133,8 @@ Store
 -----
 
 * A new dojox/store/OData store has been added.
+* A new dojox/store/DynamoDB store has been added.
+* New tests for dojox/store now use Intern.
 
 
 Util
