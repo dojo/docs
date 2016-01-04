@@ -104,7 +104,7 @@ When creating a custom build it is possible to bake the dojoConfig object into t
 dojoConfig Parameters
 ---------------------
 
-So now that you know *how* to set global parameters for dojo using dojoConfig, you'd probably like to know *what* parameters are available for setting. For a quick reference, check out the `dojo.config API page <http://dojotoolkit.org/api/dojo/config>`_.
+So now that you know *how* to set global parameters for dojo using dojoConfig, you'd probably like to know *what* parameters are available for setting. For a quick reference, check out the `dojo.config API page <http://dojotoolkit.org/api/dojo/_base/config>`_.
 
 The parameters you specify in dojoConfig are meant to **override** the default settings and do several basic things:
 
