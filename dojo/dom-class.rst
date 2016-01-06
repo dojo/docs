@@ -162,7 +162,7 @@ Usage
 .. js ::
 
   require(["dojo/dom-class"], function(domClass){
-      // Add a class to some node:
+      // Remove a class from some node:
       domClass.remove("someNode", "someClass");
   });
 
