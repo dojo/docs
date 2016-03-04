@@ -109,7 +109,7 @@ In order to work around these limitations, more advanced drop-down widgets can i
               var dropDown = this.dropDown;
               if(!dropDown){ return; }
               if(!this.isLoaded()){
-                  var handler = dropDown.on("load", this, function(){
+                  var handler = dropDown.on("load", function(){
                       handler.remove();
                       callback();
                   });
