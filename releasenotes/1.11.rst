@@ -57,7 +57,7 @@ Dojo Core
 csp
 ---
 
-A feature test, 'has("csp=restrictions")' was added for non-csp compliant code. Please set this feature test to true in order to run code that must be csp compliant.
+A feature test, 'has("csp-restrictions")' was added for non-csp compliant code. Please set this feature test to true in order to run code that must be csp compliant.
 
 
 dojo/_base/kernel
