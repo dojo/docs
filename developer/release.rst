@@ -62,7 +62,8 @@ Because `dojox` and `util` contain submodules, the workflow is slightly differen
 1. Make sure you are on the current, up-to-date `master` branch via `git`.
 2. Run `git submodule foreach git pull origin master` (which ensure you have current information for each submodule)
 3. Run `git checkout x.x.x` where `x.x.x` is the release tag you want to publish.
-4. Run `git submodule update --init --recursive` which will ensure that the submodule is checked out to the commit associated with the current tag.
+4. Run `git submodule update --init --recursive` which will ensure that the
+   submodule is checked out to the commit associated with the current tag.
 5. Run `npm publish` (you will need to be logged into `npm` as an authorized
-    maintainer of the package.
-4. Validate that the package is published as you expect via `npm view`.
+   maintainer of the package.
+6. Validate that the package is published as you expect via `npm view`.
