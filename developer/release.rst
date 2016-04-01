@@ -49,21 +49,21 @@ After performing the normal release, for each repo:
 Publishing on NPM
 =================
 
-After having a release properly tagged, it can be published on NPM.  For `dojo`, `dijit` and `themes` the workflow is:
+After having a release properly tagged, it can be published on NPM.  For ``dojo``, ``dijit`` and ``themes`` the workflow is:
 
-1. Make sure you are on the current, up-to-date `master` branch via `git`.
-2. Run `git checkout x.x.x` where `x.x.x` is the release tag you want to publish.
-3. Run `npm publish` (you will need to be logged into `npm` as an authorized
+1. Make sure you are on the current, up-to-date ``master`` branch via ``git``.
+2. Run ``git checkout x.x.x`` where ``x.x.x`` is the release tag you want to publish.
+3. Run ``npm publish`` (you will need to be logged into ``npm`` as an authorized
    maintainer of the package.
-4. Validate that the package is published as you expect via `npm view`.
+4. Validate that the package is published as you expect via ``npm view``.
 
-Because `dojox` and `util` contain submodules, the workflow is slightly different:
+Because ``dojox`` and ``util`` contain submodules, the workflow is slightly different:
 
-1. Make sure you are on the current, up-to-date `master` branch via `git`.
-2. Run `git submodule foreach git pull origin master` (which ensure you have current information for each submodule)
-3. Run `git checkout x.x.x` where `x.x.x` is the release tag you want to publish.
-4. Run `git submodule update --init --recursive` which will ensure that the
+1. Make sure you are on the current, up-to-date ``master`` branch via ``git``.
+2. Run ``git submodule foreach git pull origin master`` (which ensure you have current information for each submodule)
+3. Run ``git checkout x.x.x`` where ``x.x.x`` is the release tag you want to publish.
+4. Run ``git submodule update --init --recursive`` which will ensure that the
    submodule is checked out to the commit associated with the current tag.
-5. Run `npm publish` (you will need to be logged into `npm` as an authorized
+5. Run ``npm publish`` (you will need to be logged into ``npm`` as an authorized
    maintainer of the package.
-6. Validate that the package is published as you expect via `npm view`.
+6. Validate that the package is published as you expect via ``npm view``.
