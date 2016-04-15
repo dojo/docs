@@ -22,7 +22,7 @@ of Dojo might include fixes to support future releases of these browsers, but it
 
 * Safari 6-9
 
-* Chrome 13-49
+* Chrome 13-50
 
 * IE 8-11
 
