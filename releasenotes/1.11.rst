@@ -18,11 +18,11 @@ of Dojo might include fixes to support future releases of these browsers, but it
 
 * Edge 12
 
-* Firefox 3.6-43
+* Firefox 3.6-45
 
 * Safari 6-9
 
-* Chrome 13-47
+* Chrome 13-49
 
 * IE 8-11
 
