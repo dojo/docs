@@ -21,6 +21,8 @@ Formatting patterns are implemented using the `syntax described at unicode.org <
 chosen according to a sliding window of 80 years before and 20 years after present year, for both ``yy`` and ``yyyy``
 patterns. Dates prior to year 100CE requires strict mode.
 
+It is important to note that the locale specified must be the browser locale or a locale passed to `dojo-config` via the `extraLocale` array. ie. If you wish to set the browser locale to `de-de` but parse a date as `en-gb` you would have to pass `extraLocale: [ 'en-gb' ]` via `dojo-config` so that the appropriate locale settings can be loaded.
+
 Usage
 =====
 
@@ -29,7 +31,7 @@ Usage
   require(["dojo/date/locale"], function(locale){
     // Parse a full date time in the current locale
     locale.parse("Tuesday, 13 January 2010 12:43:06 GMT-0:00");
-    
+
     // Parse a short date in a specific locale
     locale.parse("13/01/2010", {
       locale: "en-gb",
@@ -45,7 +47,7 @@ Attributes
 Arguments Type                               Description
 ========= ================================== ====================================================
 value     String                             The string to be parsed into a date
-options   dojo/date/locale::__FormatOptions? *Optional* This follows the format options of 
+options   dojo/date/locale::__FormatOptions? *Optional* This follows the format options of
                                              :ref:`format() <dojo/date/locale/format#attributes>`
 ========= ================================== ====================================================
 
