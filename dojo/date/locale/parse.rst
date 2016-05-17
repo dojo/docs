@@ -21,7 +21,7 @@ Formatting patterns are implemented using the `syntax described at unicode.org <
 chosen according to a sliding window of 80 years before and 20 years after present year, for both ``yy`` and ``yyyy``
 patterns. Dates prior to year 100CE requires strict mode.
 
-It is important to note that the locale specified must be the browser locale or a locale passed to `dojo-config` via the `extraLocale` array. ie. If you wish to set the browser locale to `de-de` but parse a date as `en-gb` you would have to pass `extraLocale: [ 'en-gb' ]` via `dojo-config` so that the appropriate locale settings can be loaded.
+It is important to note that the locale specified must be the browser locale or a locale passed to ``dojo-config`` via the ``extraLocale`` array. ie. If you wish to set the browser locale to ``de-de`` but parse a date as ``en-gb`` you would have to pass ``extraLocale: [ 'en-gb' ]`` via ``dojo-config`` so that the appropriate locale settings can be loaded.
 
 Usage
 =====
