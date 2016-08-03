@@ -388,9 +388,95 @@ Transform: writeOptimized
   Closure or UglifyJS compiler optimization switch setting. To use UglifyJS, you will need to ``npm install uglify-js@1``, in a directory parallel to ``util``
 
 ``optimizeOptions`` (default = "undefined")
-    This object is passed to the JavaScript optimizer to allow for compiler specific settings. Settings for UglifyJS and closure 
+    This object is passed to the JavaScript optimizer to allow for compiler specific settings. Settings for UglifyJS and closure
     compiler can be set using this object.
 
+    When using the closure compiler the following keys can be used, to modify the `default compilerOptions <https://github.com/google/closure-compiler/blob/master/src/com/google/javascript/jscomp/CompilationLevel.java#L124>`_.
+
+    * ["compilationLevel"] (default = "SIMPLE_OPTIMIZATIONS")
+        - ["WHITESPACE_ONLY"] Removes comments and extra whitespace in the input JS.
+        - ["SIMPLE_OPTIMIZATIONS"] Sets all options that won't break the JavaScript code even if no symbols are exported and no coding convention is used.
+        - ["ADVANCED_OPTIMIZATIONS"] Aggressively reduces code size by renaming functionnames and variables, removing code which is never called, etc.
+
+    * ["languageIn"] (default = "ECMASCRIPT3")
+    * ["languageOut"] (default = "NO_TRANSPILE")
+        The following language options can be used:
+
+        - ["ECMASCRIPT3"], ["ES3"] 90's JavaScript
+        - ["ECMASCRIPT5"], ["ES5"] Traditional JavaScript
+        - ["ECMASCRIPT5_STRICT"], ["ES5_STRICT"] Nitpicky, traditional JavaScript
+        - ["ECMASCRIPT6"], ["ES6"] Shiny new JavaScript
+        - ["ECMASCRIPT6_STRICT"], ["ES6_STRICT"] Nitpicky, shiny new JavaScript
+        - ["ECMASCRIPT6_TYPED"], ["ES6_TYPED"] A superset of ES6 which adds Typescript-style type declarations. Always strict.
+        - ["ECMASCRIPT7"], ["ES7"] A superset of ES6 which adds the exponent operator (**).
+        - ["ECMASCRIPT8"], ["ES8"] A superset of ES7 which adds async functions.
+        - ["NO_TRANSPILE"] For ``languageOut`` only. The same language mode as the input.
+
+        For more details about transpilation see:
+
+        * https://github.com/google/closure-compiler/wiki/ECMAScript6
+        * https://developers.google.com/closure/compiler/docs/limitations
+
+
+    * ["variableRenaming"] (default = "LOCAL")
+        - ["OFF"]
+        - ["LOCAL"]
+        - ["ALL"]
+
+    * ["propertyRenaming"] (default = "OFF")
+        - ["OFF"]
+        - ["ALL_UNQUOTED"]
+
+    * ["checkGlobalThisLevel"] (default = "OFF")
+        - ["ERROR"]
+        - ["WARNING"]
+        - ["OFF"]
+
+    * ["removeUnusedVariables"] (default = "LOCAL_ONLY")
+        - ["ALL"]
+        - ["LOCAL_ONLY"]
+        - ["NONE"]
+
+    * ["inlineVariables"] (default = "LOCAL_ONLY")
+        - ["ALL"]
+        - ["LOCAL_ONLY"]
+        - ["NONE"]
+
+    * ["inlineFunctions"] (default = "LOCAL_ONLY")
+        - ["ALL"]
+        - ["LOCAL_ONLY"]
+        - ["NONE"]
+
+    * The following options can be set to ``true`` or ``false``, defaults listed are applied with SIMPLE_OPTIMIZATIONS
+        - ["assumeClosuresOnlyCaptureReferences"] (default = ``false``)
+        - ["closurePass"] (default = ``true``)
+        - ["coalesceVariableNames"] (default = ``true``)
+        - ["collapseAnonymousFunctions"]
+        - ["collapseObjectLiterals"] (default = ``true``)
+        - ["collapseProperties"]
+        - ["collapseVariableDeclarations"] (default = ``true``)
+        - ["computeFunctionSideEffects"]
+        - ["convertToDottedProperties"] (default = ``true``)
+        - ["crossModuleCodeMotion"]
+        - ["crossModuleMethodMotion"]
+        - ["deadAssignmentElimination"] (default = ``true``)
+        - ["dependencySorting"] (default = ``true``)
+        - ["devirtualizePrototypeMethods"]
+        - ["extractPrototypeMemberDeclarations"]
+        - ["flowSensitiveInlineVariables"]
+        - ["foldConstants"] (default = ``true``)
+        - ["inlineConstantVars"]
+        - ["labelRenaming"] (default = ``true``)
+        - ["optimizeArgumentsArray"] (default = ``true``)
+        - ["protectHiddenSideEffects"] (default = ``true``)
+        - ["removeDeadCode"] (default = ``true``)
+        - ["removeUnusedClassProperties"]
+        - ["removeUnusedPrototypeProperties"]
+        - ["removeUnusedPrototypePropertiesInExterns"]
+        - ["replaceIdGenerators"] (default = ``false``)
+        - ["rewriteFunctionExpressions"]
+        - ["shadowVariables"] (default = ``true``)
+        - ["smartNameRemoval"]
 ``stripConsole`` (default = "normal")
   * ["none"] No console applications are stripped.
 
