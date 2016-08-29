@@ -106,7 +106,14 @@ Once you have committed the changes, push them upstream::
   $ git push origin master
 
 GitHub will not auto-close the pull request because the commits that landed do not match the ones in the pull request,
-so you will need to manually close it with a comment containing a reference to the real commit.
+so you will need to manually close it. When doing this, please add an additional comment to the pull request's discussion
+that links to the commit that was used to merge the change into the master branch. The format for this comment should be
+in the form: "Fixed via xxx" where xxx is a link to the commit. Additionally, if the change was backported to other
+branches (see below), then the comment should also contain links to the commits that were used to add the change onto
+those branches. These comments should be in the form: "Backported as xxx (yyy)" where xxx is a link to the commit and
+yyy is the version that was backported to. An example commit message that illustrates both of these scenarios is:
+
+  "Closed via ea80b71. Backported as 68886c4 (1.10)"
 
 Backporting Workflow
 --------------------
