@@ -1,0 +1,181 @@
+.. _releasenotes/1.12:
+
+=======================
+Dojo 1.12 Release Notes
+=======================
+
+.. contents ::
+   :depth: 3
+
+User Agent Support
+==================
+
+The following user agents have been tested and are supported in this release. If a user agent version is not listed as
+supported, it still may work, especially on browsers with rapid release cycles (Chrome, Firefox). Future minor releases
+of Dojo might include fixes to support future releases of these browsers, but it is not guaranteed.
+
+**Desktop**
+
+* Edge 12
+
+* Firefox 3.6-50
+
+* Safari 6-10
+
+* Chrome 13-54
+
+* IE 8-11
+
+* Opera 10.50-12 (Dojo core only). Blink-based versions of Opera should work like Chrome, but are not officially tested or supported for this release.
+
+**Mobile (dojox/mobile)**
+
+* iOS (Mobile Safari), 6.x, 7.x, 8.x, 9.x, and 10.x (including all Dijit widgets except Editor)
+
+* Android (Android Browser and Chrome) 2.3, 4.0-4.4, 5.0-5.1, 6.0, and 7.0 (Platform browser and Chrome browser) (including all Dijit widgets for Android 4.0-4.4 except Editor)
+
+* BlackBerry 6-7 & 10 (Platform browser)
+
+* Windows Phone 8 (IE10)
+
+* Mobile compatibility on desktop browsers: Edge 12, IE 8-11, Firefox 4-50, Chrome 13-54
+
+
+**Server-Side User Agents**
+
+* Node 0.10.X, 0.12.x, 4.x, 5.x, 6.x
+
+General
+=======
+
+* Update language in documentation to reflect Dojo Foundation being superseded by the JS Foundation.
+* Upgraded Trac to 1.0.9, fixing issues with tickets that threw a ``UnicodeEncodeError``.
+
+Dojo Core
+=========
+
+csp
+---
+
+* Fixed unsafe-eval violation in CSP mode.
+
+declare
+-------
+
+* Fixed declare only merges "-chains-" in mixins (not superclasses).
+
+dnd
+---
+
+* Fixed an issue where Drag n Drop did not work only on Windows 10 IE11.
+* Updated autoscroll to allow scrolling in one direction.
+
+dom-construct
+-------------
+
+* Fixed test that would previously hang in the dom-construct suite.
+
+i18n
+----
+
+* Fixed an issue that executed ``getLocalization`` before the nls bundle is completely preloaded.
+* Fixed month parsing for locales with spaces in their month names (such as Vietnamese).
+* Fixed i18n's ``evalBundle`` from causing unsafe-eval errors when used with ``async: true`` and ``has("csp-restrictions")``.
+* Fixed module preloading nls resources from a build cache when ``dojo-preload-i18n-Api`` is disabled in the Dojo config.
+
+number
+------
+
+* Fixed an issue where dojo would delete a local variable.
+
+parser
+------
+
+* Fixed an error that would cause Dojo to not load in an iframe in Firefox when ``display: none;`` was set.
+
+request
+-------
+
+* Fixed inconsistent request handling of ``{ data: undefined }`` on IE11/Chrome/Firefox.
+
+Dijit
+=====
+
+* Fixed regexp in the interactive benchmark tool.
+* Enabled ``BackgroundIframe`` in IE11 on both Windows 8.1 and 10.
+* Added ``aria-label`` for each grid cell in :ref:`dijit/Calendar <dijit/Calendar>`.
+* Enabled :ref:`dijit/CalendarLite <dijit/CalendarLite>` to accept January 1, 1970 00:00:00 as a valid date.
+
+Editor
+------
+
+* Fixed an issue in Firefox where a notification to use the keyboard with cut/copy/paste depended on a specific exception being thrown.
+
+Form
+----
+
+* Enhanced :ref:`dijit/form/TextBox <dijit/form/TextBox>` to allow masking of password.
+
+Layout
+------
+
+* Fixed an issue where the 'dijitTabPane' class was not removed from child when removed from
+  :ref:`dijit/layout/TabContainer <dijit/layout/TabContainer>`.
+
+Tree
+----
+
+* Fixed a bug that caused an error to occur when deleting a mouse-focused tree node.
+
+DojoX
+=====
+
+* Fixed an improperly scoped global function ``index`` in dojox/rpc/Rest.
+* Fixed a possible XSS attack vector within analytics/logger/dojoxAnalytics.php.
+* Updated a regexp within dojox.validate.creditCard to extend MasterCard range validation.
+* Allow setting a DOM node as the target of a Standby.
+
+Charting
+--------
+
+* Improved pie chart rendering, particularly when column labels are used.
+* Fix text node dimensions in Firefox when ``dojo-bidi`` is set to true.
+
+DTL
+---
+
+* Fixed a regression in the dtl rendering.
+
+Grid
+----
+
+* Fixed a regression with declarative grids and stores not rendering since 1.10.5.
+* Fixed declarative dojox.grid.DataGrid column declaration rendering errors.
+
+Mobile
+------
+
+* Aligned selected and unselected checkboxes in dojox/mobile in Edge.
+* Fixed horizontal dojox/mobile/Slider event propogation, resulting in becoming unusable in a horizontal dojox/mobile/ScrollablePane.
+
+Util
+====
+
+Build System
+------------
+
+* Updated Closure Compiler to v20160713 to support ES6 grammar. Added ``compilationLevel`` option to ``optimizeOptions``. Added all compilation level set functions to ``optimizeOptions``. Added ``languageOut`` option to ``optimizeOptions``. Updated ``languageIn`` and ``languageOut`` options to use ``fromString`` enum function. Updated documentation accordingly.
+* Fixed hardcoded ``./util/..`` paths so they don't break scripts elsewhere within Dojo when installed via NPM.
+* Fixed build profiles including themes package.
+
+Test Framework
+--------------
+
+* Fixed a context error that caused doh to crash if ``doh.Deferred`` was returned from ``runTest`` AND an error was thrown in ``tearDown``.
+* Add the ability for the doh runner to specify .html tests in the URL.
+
+Demos
+=====
+
+Migration Notes
+===============
