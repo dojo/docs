@@ -164,7 +164,7 @@ Util
 Build System
 ------------
 
-* Updated Closure Compiler to v20160713 to support ES6 grammar. Added ``compilationLevel`` option to ``optimizeOptions``. Added all compilation level set functions to ``optimizeOptions``. Added ``languageOut`` option to ``optimizeOptions``. Updated ``languageIn`` and ``languageOut`` options to use ``fromString`` enum function. Updated documentation accordingly.
+* Updated Closure Compiler to v20160911 to support ES6 grammar. Added ``compilationLevel`` option to ``optimizeOptions``. Added all compilation level set functions to ``optimizeOptions``. Added ``languageOut`` option to ``optimizeOptions``. Updated ``languageIn`` and ``languageOut`` options to use ``fromString`` enum function. Updated documentation accordingly.
 * Fixed hardcoded ``./util/..`` paths so they don't break scripts elsewhere within Dojo when installed via NPM.
 * Fixed build profiles including themes package.
 
