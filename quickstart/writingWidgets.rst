@@ -70,7 +70,7 @@ This kind of behavioral widget is useful in some cases, but it has severe limita
 there isn't even a DOM node to replace at all.
 
 
-Here's a simple example of a widget that creates it's own DOM tree:
+Here's a simple example of a widget that creates its own DOM tree:
 
 
 .. code-example::
@@ -550,13 +550,13 @@ or alternately this:
      press me
   </div>
 
-Now, whenever someone in the browser clicks on the widget (ok, specifically inside it's top-level div in this case), _onButtonClick and _onClick will execute, but so will the extra alert() statement.
+Now, whenever someone in the browser clicks on the widget (ok, specifically inside its top-level div in this case), _onButtonClick and _onClick will execute, but so will the extra alert() statement.
 
 4. What if you don't want to override the extension point, but want it to execute and then have something custom execute? Just use type="dojo/connect" instead of type="dojo/method".
 
 Closing words:
 
-1) Despite the name of the attribute "data-dojo-event", as in data-dojo-event="onClick", it's value is not a DOM event. Remember: onClick is just a plain old js method. (Dojo is misleading here).
+1) Despite the name of the attribute "data-dojo-event", as in data-dojo-event="onClick", its value is not a DOM event. Remember: onClick is just a plain old js method. (Dojo is misleading here).
 
 2) How can you find the plain old js methods to override or "connect" to (in the dojo sense of dojo.connect)? Well, that can be painful. First, you have to look inside the widget. Or inside its ancestors/superclasses. Or theirs. Or theirs. Not fun. Second, they aren't named consistently. Sometimes _ means private, sometimes it means protected. (TODO: move to separate page?)
 
