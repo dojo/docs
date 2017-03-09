@@ -237,7 +237,7 @@ See :ref:`dojox/mobile/deviceTheme <dojox/mobile/deviceTheme>` for details.
 Address bar hiding does not work in Safari on iOS 7. What's going on?
 ---------------------------------------------------------------------
 
-This is a consequence of the new behavior of Safari in iOS 7: it is no longer possible to force in Javascript the hiding of the address bar.
+This is a consequence of the new behavior of Safari in iOS 7: it is no longer possible to force in JavaScript the hiding of the address bar.
 
 Why scrolling is fast and smooth on some devices/browsers but not on all?
 -------------------------------------------------------------------------

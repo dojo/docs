@@ -61,7 +61,7 @@ For example, here is a working sample of the above example:
          data-dojo-attach-event="click: clicked">Click me</span><br>
          <input data-dojo-attach-point="field"></div>
 
-  Javascript to declare a dijit using _AttachMixin.
+  JavaScript to declare a dijit using _AttachMixin.
 
   .. js ::
     
