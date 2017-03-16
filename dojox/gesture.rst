@@ -75,6 +75,8 @@ The common parental class for all gesture implementations. It takes most routine
 
 3. Fire and bubble gesture events.
 
+Caution: to ensure that gestures work properly across all supported devices, dojox/gesture/Base prevents the default action on events, with the exception being events fired on form elements. As a result, it is best to apply gestures to specific elements, rather than to their ancestor nodes.
+
 
 dojox/gesture/tap
 =================
