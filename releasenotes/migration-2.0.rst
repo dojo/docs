@@ -7,6 +7,17 @@ Dojo 1.x to 2.0 migration guide
 .. contents::
    :depth: 3
 
+
+Note that because of substantial changes to the JS ecosystem (ES6, TypeScript, reactive programming, etc.), and the changes coming in Dojo 2, *this guide is no longer accurate*.
+
+The migration from Dojo 1.x to 2.0 will not be trivial. We suggest two primary co-existence approaches with a gradual migration:
+
+* Start adding Dojo 2.0 features into a Dojo 1.x application
+* Create a new Dojo 2.0 application, and leverage some Dojo 1.x widgets and features as modules.
+
+We strongly suggest learning the features of ES6 and TypeScript. And we suggest starting with the tutorials found on the Dojo 2 website at https://dojo.io/tutorials/ .
+
+
 Currently, many parts of Dojo 2.0 are under development.  As with any major software that is under-development, it is 
 hard to predict that the final solution will look like.  These notes provide guidance though on how to try to "future
 proof" your application to make it easier to transition to Dojo 2.0 when it release.
