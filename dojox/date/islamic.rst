@@ -28,7 +28,8 @@ Code snippet below illustrates most common usage of Islamic calendar.
       <script type="text/javascript">
         dojo.require("dojox.date.islamic");
         dojo.require("dojox.date.islamic.Date");
-        dojo.require("dojox.date islamic.locale");
+        dojo.require("dojox.date.islamic.locale");
+        dojo.require("dijit.form.DateTextBox");
       </script>
       <title> Islamic calendar </title>
   </head>
