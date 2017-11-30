@@ -262,6 +262,7 @@ The following table provides a list of options that are leveraged within the loa
   dojo-publish-privates, True
   dojo-built, False
   dojo-loader, True
+  foreign-loader, False, Used for built loaders to omit module loading machinery when handled by a foreign loader (e.g. webpack). 
   host-node, *Detected*, Environment is running on the the NodeJS platform
   host-rhino, *Detected*, Environment is running on the Rhino platform
   dojo-xhr-factory,  *Detected*
@@ -1549,7 +1550,8 @@ At the time this document was written, this was the default configuration for th
             "dojo-sniff":1,
             "dojo-sync-loader":1,
             "dojo-test-sniff":1,
-            "config-tlmSiblingOfDojo":1
+            "config-tlmSiblingOfDojo":1,
+            "foreign-loader":0
         },
         packages:[{
             // note: like v1.6-, this bootstrap computes baseUrl to be the dojo directory
