@@ -11,7 +11,7 @@ The migration from Dojo 1.x to 2.0 will not be trivial. We suggest two primary c
 * Start adding Dojo 2.0 features into a Dojo 1.x application
 * Create a new Dojo 2.0 application, and leverage some Dojo 1.x widgets and features as modules.
 
-We strongly suggest learning the features of ES6 and TypeScript. And we suggest starting with the tutorials found on the Dojo 2 website at https://dojo.io/tutorials/ , and in particular, the tutorial on  `leveraging Dojo 1 Dijits within your Dojo 2 application <https://dojo.io/tutorials/1040_dojo1_dijits/>`_ .
+We strongly suggest learning the features of ES6 and TypeScript. And we suggest starting with the tutorials found on the Dojo 2 website at https://dojo.io/tutorials/ .
 
 .. contents::
    :depth: 3
