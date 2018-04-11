@@ -13,7 +13,7 @@ Before you say "yes", there are some things you should know.
 
 Process
 =======
-**IP policy**: as you know, Dojo is one of the few OSS JavaScript projects which uses a CLA process to ensure that contributions to the toolkit are "clean" from an IP perspective. The policies which we follow are outlined in the IP policies (TODO: add link) and as a committer you are expected to help us observe them. Long story short, if you didn't write it or are unsure of the CLA status of the contribution, don't commit it. The list of people and companies with CLAs on file :ref:`is public <developer/contributors>`, so be sure to consult it when in doubt. Artwork can be particularly problematic from an IP cleanliness perspective, and difficult to judge. There are also times when integrating some chunk of code which you find out on the net somewhere seems a reasonable thing to do. In each of these cases, it's best to ask the Project Lead for guidance.
+**IP policy**: as you know, Dojo is one of the few OSS JavaScript projects which uses a CLA process to ensure that contributions to the toolkit are "clean" from an IP perspective. The policies which we follow are outlined in the IP policies (TODO: add link) and as a committer you are expected to help us observe them. Long story short, if you didn't write it or are unsure of the CLA status of the contribution, don't commit it. Artwork can be particularly problematic from an IP cleanliness perspective, and difficult to judge. There are also times when integrating some chunk of code which you find out on the net somewhere seems a reasonable thing to do. In each of these cases, it's best to ask the Project Lead for guidance.
 
 **Quality**: committers are expected to observe the :ref:`style guidelines for code <developer/styleguide>`, consult with the :ref:`accessibility requirements <developer/a11y-requirements>` when making visual and interaction changes, provide :ref:`unit tests <util/dohrobot>`, and write :ref:`inline documentation <developer/markup>` for the code they touch. As a contributor all of these things were also expected, but now it becomes your responsibility as a committer to ensure that your checkins meet the high standards of the project, even when you're merging patches that others might be contributing.
 
@@ -21,7 +21,7 @@ Process
 
 Community
 =========
-**Voting**: As a committer on Dojo you will have a vote in both project-level and Foundation-level issues. Every project at the Dojo Foundation is potentially run differently, but most have some sort of "Benevolent Dictator For Live" or "Project Lead" who sets the agenda. Dojo as a project is organized in this style, but most decision making is made by consensus. That said, voting is part of the Dojo culture and your participation as a committer is required.
+**Voting**: As a committer on Dojo you will have a vote in both project-level and Foundation-level issues. Every project at the JS Foundation is potentially run differently, but most have some sort of "Benevolent Dictator For Live" or "Project Lead" who sets the agenda. Dojo as a project is organized in this style, but most decision making is made by consensus. That said, voting is part of the Dojo culture and your participation as a committer is required.
 
 Any committer can start a vote on matters relating to Dojo (the project) or the Foundation as a whole at any time.
 Only committers on Dojo itself may vote in project-level issues.

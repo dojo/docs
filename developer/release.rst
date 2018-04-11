@@ -20,7 +20,7 @@ Creating a Dojo Release/RC/Beta
 
    ``-b <branch>`` is the branch to use as the source for the release (e.g. 1.7). If unspecified, the master branch will be used
 
-   ``-u <username>`` is your Dojo Foundation username. If unspecified, auto-loading to the downloads server will be unavailable
+   ``-u <username>`` is your Dojo projects username. If unspecified, auto-loading to the downloads server will be unavailable
 
    ``<version>`` is the version number for the new release (e.g. 1.7.1rc1)
 

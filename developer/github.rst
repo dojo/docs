@@ -23,8 +23,12 @@ The main GitHub Repositories for the Dojo 1.X code are:
 
 * `dojo/util <https://github.com/dojo/util>`_
 
-You will need a valid GitHub user account.  This should be tied to your Dojo Foundation user account and you should have
+You will need a valid GitHub user account.  This should be tied to your Dojo projects user account and you should have
 appropriate access to the Dojo Toolkit repositories.  This can be done by contacting one of the Toolkit project leads.
+
+You will need to have signed the `JS Foundation's CLA <http://js.foundation/CLA>`_. If your GitHub user id you are
+submitting your pull request from differs from the e-mail address which you have signed your CLA under, you should
+specifically note what you have your CLA filed under.
 
 You will need the appropriate tools to manage your GitHub code.  There are a few choices, but the two main ones are the
 standard ``git`` command line or the GitHub GUI:

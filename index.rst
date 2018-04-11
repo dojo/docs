@@ -11,8 +11,8 @@ Welcome
 =======
 
 The Dojo Toolkit Reference Guide is designed to be an in-depth resource regarding the Dojo Toolkit. The Reference Guide
-is a community effort and can be contributed to by anyone who has a `CLA <http://dojofoundation.org/about/cla>`_ in
-place with the Dojo Foundation.
+is a community effort and can be contributed to by anyone who has a `CLA <http://js.foundation/CLA>`_ in
+place with the JS Foundation.
 
 If you are looking for an introduction to the Dojo Toolkit, it is better to utilize the 
 `tutorials <http://dojotoolkit.org/documentation>`_, and then use this reference guide.  If you are looking for 
