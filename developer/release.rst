@@ -14,15 +14,17 @@ Creating a Dojo Release/RC/Beta
 
 1. Log into your shell account at <username>.dojotoolkit.org
 2. ``git clone https://github.com/dojo/util.git``
-3. Run ``util/buildscripts/build_release.sh -c -b <branch> -u <username> <version>``, where:
+3. Run ``util/buildscripts/build_release.sh -c -t -b <branch> -u <username> <version>``, where:
 
    ``-c`` should be used ONLY if you want to include a build for CDN (e.g. final release)
 
+   ``-t`` ONLY for 1.11 and newer; this includes the themes package as part of the release
+
    ``-b <branch>`` is the branch to use as the source for the release (e.g. 1.7). If unspecified, the master branch will be used
 
-   ``-u <username>`` is your Dojo Foundation username. If unspecified, auto-loading to the downloads server will be unavailable
+   ``-u <username>`` is your Dojo Foundation username. If unspecified, auto-loading to the downloads server will be unavailable   TODO: This is no longer accurate, needs to be updated
 
-   ``<version>`` is the version number for the new release (e.g. 1.7.1rc1)
+   ``<version>`` is the version number for the new release (e.g. 1.14.1)
 
 4. Follow the prompts
 5. Update download.dojotoolkit.org/index.html with the new version information. If it’s a new major release, make sure to list the previous release under “Releases”.
